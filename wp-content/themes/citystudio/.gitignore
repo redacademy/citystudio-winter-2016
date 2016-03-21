@@ -9,6 +9,14 @@ ehthumbs.db
 *[Tt]humbs.db
 *.Trashes
 
+# Ignore logs and databases #
+# ========================= #
+*.log
+*.sql
+*.sqlite
+error_log
+access_log
+
 # Ignore packages #
 # =============== #
 *.7z
@@ -20,6 +28,33 @@ ehthumbs.db
 *.tar
 *.zip
 
-# Ignore packages #
+# Ignore npm packages #
 # =============== #
-node_modules/
+wp-content/themes/citystudio/node_modules/
+
+# Ignore everything in the root except the "wp-content" directory.
+# =============== #
+/*
+!.gitignore
+!wp-content/
+!README.md
+
+# Ignore everything in "wp-content" except the "plugins" and "themes".
+# =============== #
+wp-content/*
+!wp-content/plugins/
+!wp-content/themes/
+!wp-content/uploads/
+
+# Ignore everything in "plugins" except certain plugins.
+# =============== #
+wp-content/plugins/*
+
+# Ignore everything in "themes" except the active theme.
+# =============== #
+wp-content/themes/*
+!wp-content/themes/citystudio/
+
+# Ignore npm packages #
+# =================== #
+wp-content/themes/citystudio/node_modules/
