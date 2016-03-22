@@ -60,11 +60,7 @@ gulp.task('browser-sync', function() {
    ];
 
     browserSync.init(files, {
-<<<<<<< HEAD
-        proxy: './',
-=======
-        proxy: 'citystudio.dev/citystudio',
->>>>>>> front-page
+        proxy: 'citystudio.dev',
     });
 });
 
