@@ -48,7 +48,17 @@
 	display: block;
 }
 
-
 .container{
 	align-items: center;
 }
+
+.site-footer{
+  width: 100vw;
+  background-color: $footer-dark-blue;
+
+}
+
+.social-icons ul{
+	list-style: none;
+}
+>>>>>>> Footer styles
