@@ -1,0 +1,32 @@
+.site-footer{
+  width: 100vw;
+  background-color: $footer-dark-blue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.social-icons-div {
+  display: flex;
+  flex-direction: row;
+  ul{
+	  list-style: none;
+    display: flex;
+    margin: 2rem 3rem 0 0;
+  }
+}
+
+.social-icons{
+  height: 2rem;
+  width: 2rem;
+  margin: 2rem;
+  &:hover{
+  cursor: pointer;
+  }
+}
+
+.twitter{
+  height: 2.5rem;
+  width: 2.5rem;
+  margin: 1.8rem;
+}
