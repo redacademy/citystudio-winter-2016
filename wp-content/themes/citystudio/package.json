@@ -1,7 +1,7 @@
 {
-  "name": "redstarter",
+  "name": "citystudio",
   "version": "1.0.0",
-  "description": "Le Red Bread theme.",
+  "description": "City Studio theme.",
   "main": "gulpfile.js",
   "dependencies": {},
   "devDependencies": {
@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redacademy/redstarter.git"
+    "url": "git+https://github.com/redacademy/citystudio-winter-2016"
   },
   "author": "mandiwise",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/redacademy/redstarter/issues"
+    "url": "https://github.com/redacademy/citystudio-winter-2016/issues"
   },
-  "homepage": "https://github.com/redacademy/redstarter#readme"
+  "homepage": "https://github.com/redacademy/citystudio-winter-2016#readme"
 }
