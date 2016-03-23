@@ -11,11 +11,20 @@
 
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
 
-  			<?php get_template_part( 'template-parts/project', 'sum' ); ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
+          <ul id="slider2">
+            <li>
+              <?php get_template_part( 'template-parts/project', 'sum' ); ?>
+            </li>
 
-        <?php get_template_part( 'template-parts/project', 'credits' ); ?>
+            <li>
+              <?php get_template_part( 'template-parts/project', 'credits' ); ?>
+            </li>
 
-        <?php get_template_part( 'template-parts/project', 'details' ); ?>
+            <li>
+              <?php get_template_part( 'template-parts/project', 'details' ); ?>
+            </li>
+          </ul>
 
       </article><!-- #post-## -->
 
