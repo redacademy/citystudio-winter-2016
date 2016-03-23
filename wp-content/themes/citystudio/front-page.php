@@ -29,3 +29,5 @@ get_header(); ?>
 	<?php endwhile; ?>
 </section>
 </div>
+
+<?php get_footer(); ?>
