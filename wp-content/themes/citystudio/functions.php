@@ -99,8 +99,6 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0', false );
 
-}
-
 	wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'click-function', get_template_directory_uri() . '/js/click-function.js', array('jquery'), false);

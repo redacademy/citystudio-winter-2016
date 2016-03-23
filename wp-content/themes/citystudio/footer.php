@@ -7,6 +7,9 @@
 			</div><!-- #content -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="nav-div">
+
+					
+
 				</div>
 				<div class="social-icons-div">
 					<ul>
