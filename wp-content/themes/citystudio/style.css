@@ -42,6 +42,70 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Page Templates
 	## Front page
 --------------------------------------------------------------*/
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* Add Box-Sizing to make margins and padding more friendly. Includes the padding in the total width of the element */
+* {
+  box-sizing: border-box;
+  outline: none; }
+
+/* Image and Video proportional resizing */
+img, video {
+  max-width: 100%;
+  /* adhere to container width */
+  height: auto;
+  /* make sure height scales correctly */ }
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -318,6 +382,9 @@ mark, ins {
 
 big {
   font-size: 125%; }
+
+h3 {
+  font-weight: 700; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -723,3 +790,69 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Front page */
+<<<<<<< HEAD
+=======
+.content-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1070px; }
+
+.section-header {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .section-header .proj-subtitle {
+    font-size: 2em;
+    height: auto;
+    margin: .67em 0; }
+
+.section-credits.content-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%; }
+
+.page-two-title {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: center; }
+
+.col-one, .col-two {
+  -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%; }
+
+.col-one {
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.col-two {
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
