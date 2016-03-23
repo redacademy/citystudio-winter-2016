@@ -684,9 +684,8 @@ object {
 --------------------------------------------------------------*/
 /* Front page */
 .container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex; }
+  display: block;
+  height: 50vw; }
 
 .hero {
   width: 100vw;
@@ -711,7 +710,8 @@ object {
   background-size: 45px 45px;
   border: 0;
   margin: 0 auto;
-  padding: 4% 4%; }
+  padding: 4% 4%;
+  outline: 0; }
 
 .loader {
   opacity: 0.1;
@@ -719,3 +719,27 @@ object {
   float: center;
   margin-left: 900px;
   padding: 2rem 2rem; }
+
+.bxslider li {
+  border: .25rem solid white; }
+
+.featured-square {
+  height: 40vw;
+  width: 400px !important;
+  background-color: #0082b9;
+  overflow-y: hidden; }
+
+.upper-mini {
+  height: 40vw;
+  width: 300px !important;
+  background-color: #0198d5; }
+
+.lower-regular {
+  height: 40vw;
+  width: 300px !important;
+  background-color: #76d6ff; }
+
+.yimby {
+  background: url("../../images/YIMBY-featureshot.png") center center no-repeat;
+  background-size: contain;
+  overflow-y: none; }
