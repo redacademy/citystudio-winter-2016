@@ -13,3 +13,49 @@
 //     width: 100vw!important;
 //   }
 // }
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1070px;
+}
+
+.section-header {
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  .proj-subtitle {
+    font-size: 2em;
+    height: auto;
+    margin: .67em 0;
+  }
+}
+
+.section-credits.content-wrapper{
+  display: flex;
+  flex-basis: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.page-two-title {
+  flex: 0 0 100%;
+  text-align: center;
+}
+
+.col-one, .col-two {
+  flex: 0 0 40%;
+}
+
+.col-one {
+  order: 1;
+}
+
+.col-two {
+  order: 2;
+}
