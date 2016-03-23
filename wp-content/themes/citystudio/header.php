@@ -15,6 +15,7 @@
 
 	<?php wp_head(); ?>
 
+
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -39,11 +40,7 @@
 						<span class="icon-gallery">
 							<img  src="<?php bloginfo('template_directory'); ?>/images/gallery-blue.png" width="45" height="45" class="gallery-image" alt="Gallery logo">
 
-
-
 </div>
-
-
 
 				</div>
 			</header><!-- #masthead -->
