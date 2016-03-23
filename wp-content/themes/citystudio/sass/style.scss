@@ -1,5 +1,5 @@
 /*!
-Theme Name: RED Starter Theme
+Theme Name: City Studio Theme
 Theme URI: http://underscores.me/
 Author: RED Academy
 Author URI: http://www.redacademy.com
@@ -54,7 +54,6 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "reset";
 @import "normalize";
 @import "fonts";
-@import "front-page";
 @import "typography";
 @import "elements";
 @import "forms";
@@ -65,3 +64,5 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 @import "footer";
 @import "media";
 @import "page-templates";
+@import "front-page";
+

@@ -46,9 +46,9 @@ wp-content/themes/citystudio/node_modules/
 wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
-!wp-content/uploads/
+wp-content/uploads/
 
-# Ignore everything in "plugins" except certain plugins.
+# Ignore everythi	ng in "plugins" except certain plugins.
 # =============== #
 wp-content/plugins/*
 !wp-content/plugins/citystudio-custom-funcs/

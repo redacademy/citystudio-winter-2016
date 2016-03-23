@@ -1,6 +1,5 @@
 .container{
 	display: flex;
-	visibility: hidden;
 }
 
 .hero{
@@ -24,14 +23,13 @@
 
 .toggle-class{
 	background: url(../../assets/noun.png) no-repeat;
-    background-size: 65px 65px;
-	border: none;
+    background-size: 45px 45px;
+    border: 0;
 	margin: 0 auto;
-	padding: 2% 2%;
+	padding: 4% 4%;
     outline: 0;
 
 }
-
 
 .loader{
 	opacity: 0.1;
@@ -39,5 +37,4 @@
 	float: center;
   	margin-left: 900px;
 	padding: 2rem 2rem;
-	visibility: hidden;
 }
