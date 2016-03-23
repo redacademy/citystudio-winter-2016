@@ -105,6 +105,11 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'click-function', get_template_directory_uri() . '/js/click-function.js', array('jquery'), false);
 
+	wp_enqueue_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+
+	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
+	}
 }
 
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );

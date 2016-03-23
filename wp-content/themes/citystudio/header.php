@@ -21,15 +21,29 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
 			<header id="masthead" class="site-header" role="banner">
+				<div class="header-container">
+
 				<div class="site-branding">
-					<h1 class="site-title screen-reader-text"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'Le Red Bread' ); ?></a></h1>
-					<p class="site-description"><?php bloginfo( 'description' ); ?></p>
+					<img width="250" height="52" src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" width="300" heightt="60" alt="Le Red Bread logo">
 				</div><!-- .site-branding -->
 
-				<nav id="site-navigation" class="main-navigation" role="navigation">
-					<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html( 'Primary Menu' ); ?></button>
-					<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-				</nav><!-- #site-navigation -->
-			</header><!-- #masthead -->
+<div class="search-gallery">
 
+
+						<span class="icon-search" aria-hidden="true">
+							<i class="fa fa-search"></i>
+						</span>
+
+
+						<span class="icon-gallery">
+							<img  src="<?php bloginfo('template_directory'); ?>/images/gallery-blue.png" width="45" height="45" class="gallery-image" alt="Gallery logo">
+
+
+
+</div>
+
+
+
+				</div>
+			</header><!-- #masthead -->
 			<div id="content" class="site-content">
