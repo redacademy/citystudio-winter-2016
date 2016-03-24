@@ -6,10 +6,28 @@
 ?>
 			</div><!-- #content -->
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				<div class="nav-div">
+				<div class="nav">
+					<div class="nav-div" id="sort">
+						<div class="sort">
+							<span>Sort</span>
+						</div>
 
-					
+						<div class="neighbourhood menu-item" id="neighbourhood">
+							<span></span>
+						</div>
 
+						<div class="partners menu-item">
+							<span></span>
+						</div>
+
+						<div class="in-progress menu-item">
+							<span></span>
+						</div>
+
+						<div class="refresh menu-item">
+							<span></span>
+						</div>
+					</div>
 				</div>
 				<div class="social-icons-div">
 					<ul>

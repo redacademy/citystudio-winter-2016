@@ -106,6 +106,10 @@ function red_starter_scripts() {
 
 	wp_enqueue_script( 'click-function', get_template_directory_uri() . '/js/click-function.js', array('jquery') );
 
+	wp_enqueue_script( 'click-function', get_template_directory_uri() . '/js/click-function.js', array('jquery'), false);
+
+	wp_enqueue_script( 'sort-function', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), false);
+	
 }
 
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
