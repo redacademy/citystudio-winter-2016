@@ -1,5 +1,6 @@
 <ul class="bxslider">
-      
+
+
       <li class="featured-square yimby">
       </li>
       <li class="upper-mini">
