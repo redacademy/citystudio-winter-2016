@@ -1,6 +1,6 @@
 <ul class="bxslider">
+      
       <li class="featured-square yimby">
-
       </li>
       <li class="upper-mini">
         <img src="<?php echo get_template_directory_uri().'/images/colouring-mini.png';?>" class="" alt="Colouring Program Shot" />
