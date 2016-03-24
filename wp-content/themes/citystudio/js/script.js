@@ -6,6 +6,11 @@ jQuery(document).ready(function($){
     autoControls: true,
     pause: 3000,
     slideMargin: 20
+    pause: 5000,
+    slideMargin: 0,
+    slideWidth: 1800,
+    autoControlsCombine: true,
+    controls: false
   });
 });
 
