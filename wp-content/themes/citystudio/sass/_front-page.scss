@@ -1,5 +1,6 @@
 .container{
-	display: flex;
+	display: block;
+	height: 50vw;
 }
 
 .hero{
@@ -8,7 +9,7 @@
 	background-color: #0082b9;
 	  -webkit-background-size: cover;
 	  -moz-background-size: cover;
-	  -o-background-size: cover;	
+	  -o-background-size: cover;
 	  background-size: cover;
 	display: flex;
 	flex-direction: column;
@@ -37,4 +38,37 @@
 	float: center;
   	margin-left: 900px;
 	padding: 2rem 2rem;
+}
+
+//-----------------------------------------
+// BX-SLIDER STYLES------------------------
+
+
+.bxslider li{
+	border: .25rem solid white;
+}
+
+.featured-square {
+	height: 40vw;
+	width: 400px !important;
+	background-color: #0082b9;
+	overflow-y: hidden;
+}
+
+.upper-mini{
+	height: 40vw;
+	width: 300px !important;
+	background-color: #0198d5;
+}
+
+.lower-regular{
+	height: 40vw;
+	width: 300px !important;
+	background-color: #76d6ff;
+}
+
+.yimby{
+	background: url("../../images/YIMBY-featureshot.png") center center no-repeat;
+	background-size: contain;
+	overflow-y: none;
 }
