@@ -951,7 +951,11 @@ object {
   background-size: 65px 65px;
   border: 0;
   margin: 0 auto;
+<<<<<<< HEAD
   padding: 4% 4%;
+=======
+  padding: 3% 3%;
+>>>>>>> footer-nav-bar
   outline: 0; }
 
 .loader {
