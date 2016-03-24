@@ -4,8 +4,11 @@ jQuery(document).ready(function($){
   $('#slider2').bxSlider({
     auto: true,
     autoControls: true,
-    pause: 3000,
-    slideMargin: 20
+    pause: 5000,
+    slideMargin: 0,
+    slideWidth: 1800,
+    autoControlsCombine: true,
+    controls: false
   });
 
 });
