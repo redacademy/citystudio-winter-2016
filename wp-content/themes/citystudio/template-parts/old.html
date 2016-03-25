@@ -1,0 +1,17 @@
+
+ <?php $args = array( 'post_type' => 'project', 'posts_per_page' => 10 );
+      $loop = new WP_Query( $args );
+      while ( $loop->have_posts() ) : $loop->the_post();
+      ?>
+ <?php
+          $thumbnail = '';
+          if (function_exists('has_post_thumbnail')) {
+             if ( has_post_thumbnail() ) {
+           $thumbnail = get_the_post_thumbnail($post_id, 'large');
+          ?>
+           <li class="upper-mini" style="background: url('<?php echo $thumbnail ?>')" >
+            </li>
+        <?php     } 
+          } ?>
+
+                <?php endwhile; ?>
