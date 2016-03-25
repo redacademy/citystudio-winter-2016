@@ -26,7 +26,7 @@
 			<div class="header-container">
 
 			<div class="site-branding">
-				<img width="250" height="52" src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" width="300" heightt="60" alt="Le Red Bread logo">
+				<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
 			</div><!-- .site-branding -->
 
 			<div class="search-gallery">
@@ -34,10 +34,8 @@
 					<i class="fa fa-search"></i>
 				</span>
 
-
-				<span class="icon-gallery">
-					<a href="<?php echo esc_url( home_url ( '/' )); ?>"><img src="<?php echo get_template_directory_uri() . '/images/gallery-blue.png'; ?>" width="45" height="45" class="gallery-image" alt="Gallery logo"></a>
-				</span>
+				<div class="icon-gallery">
+				</div>
 			</div>
 		</div>
 	</header><!-- #masthead -->

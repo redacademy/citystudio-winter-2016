@@ -1,7 +1,7 @@
 
-jQuery(document).ready(function($){
+jQuery(document).ready(function(){
   // Project Content Slider
-  $('#slider2').bxSlider({
+  jQuery('#slider2').bxSlider({
     auto: true,
     autoControls: true,
     pause: 3000,
@@ -12,9 +12,7 @@ jQuery(document).ready(function($){
     autoControlsCombine: true,
     controls: false
   });
-});
 
-jQuery(document).ready(function(){
   jQuery('.bxslider').bxSlider({
     mode: 'horizontal',
     infiniteLoop: true,
@@ -24,4 +22,5 @@ jQuery(document).ready(function(){
     pager: false,
     controls: true
   });
+
 });

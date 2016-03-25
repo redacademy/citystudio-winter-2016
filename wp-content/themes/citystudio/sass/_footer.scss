@@ -12,14 +12,14 @@
   ul{
 	  list-style: none;
     display: flex;
-    margin: 3rem 5rem 0 0;
+    margin: auto 0;
   }
 }
 
 .social-icons{
   height: 2rem;
   width: 2rem;
-  margin: 1rem;
+  margin: 1rem 1.5rem 1rem 1rem;
   &:hover{
   cursor: pointer;
   }
@@ -28,7 +28,7 @@
 .twitter{
   height: 2.5rem;
   width: 2.5rem;
-  margin: 1rem;
+  margin-top: .8rem;
 }
 
 .nav{
@@ -72,7 +72,7 @@
 }
 
 .open .menu-item{
-    opacity: 1; 
+    opacity: 1;
 }
 
 
