@@ -45,9 +45,10 @@
 
 .bxslider li{
 	border: .25rem solid white;
+	height: 40vh;
 }
 
-.featured-square {
+.featured-square{
 	height: 40vw;
 	width: 400px !important;
 	background-color: #0082b9;
@@ -55,7 +56,7 @@
 }
 
 .upper-mini{
-	height: 40vh;
+	height: 20vh;
 	width: 300px !important;
 	background-color: #0198d5;
 }
@@ -66,8 +67,3 @@
 	background-color: #76d6ff;
 }
 
-.yimby{
-	background: url("../../images/YIMBY-featureshot.png") center center no-repeat;
-	background-size: contain;
-	overflow-y: none;
-}

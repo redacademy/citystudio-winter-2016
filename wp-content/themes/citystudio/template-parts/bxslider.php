@@ -1,4 +1,5 @@
 <ul class="bxslider">
+<<<<<<< HEAD
 
 
       <li class="featured-square yimby">
@@ -21,5 +22,17 @@
       <li class="lower-regular">
         <img src="<?php echo get_template_directory_uri().'/images/raining-lower.png';?>" class="" alt="YIMBY Program Shot" />
       </li>
+=======
+		<?php query_posts(array('post_type' => 'project', 'posts_per_page' => 10));
+    	 if(have_posts()) : while(have_posts()) : the_post(); ?>
+    	<?php $background = wp_get_attachment_url( get_post_thumbnail_id( $page->ID[0] )); ?>
 
+        <li style="background: url('<?php echo $background; ?>') no-repeat">
+        </li>
+  
+>>>>>>> feature-branch
+
+       <?php endwhile; endif; wp_reset_query(); ?>
+
+	
 </ul>
