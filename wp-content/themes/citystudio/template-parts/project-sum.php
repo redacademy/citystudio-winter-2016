@@ -4,7 +4,6 @@
  *
  * @package RED_Starter_Theme
  */
-
 ?>
 
 	<!-- The Header will be the gallery/banner image-->
@@ -18,7 +17,9 @@
 	<div class="content-wrapper">
 		<div class="section-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<span class="proj-subtitle"><?php echo CFS()->get( 'subtitle' ); ?></span>
+
 		</div>
 		<span class="	excerpt"><?php echo CFS()->get( 'excerpt' ); ?></span>
 	</div>
+
+		<!-- <span class="proj-subtitle"><?php echo CFS()->get( 'subtitle' ); ?></span> -->

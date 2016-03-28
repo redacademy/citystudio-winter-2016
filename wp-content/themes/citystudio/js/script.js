@@ -4,11 +4,8 @@ jQuery(document).ready(function($){
 $('#slider2').bxSlider({
     auto: true,
     autoControls: true,
-    pause: 3000,
-    slideMargin: 20,
-    pause: 5000,
-    slideMargin: 0,
-    slideWidth: 1800,
+    pause: 10000,
+    slideMargin: 20,  
     autoControlsCombine: true,
     controls: false
   });
@@ -17,34 +14,36 @@ $('#slider2').bxSlider({
     mode: 'horizontal',
     infiniteLoop: true,
     speed: 2000,
-    pause: 8000,
+    pause: 6000,
     auto: true,
     pager: false,
     controls: true
   });
 
   var gallery = [
-    'featured-square-1', 
-    'upper-mini-1', 
-    'upper-mini-2', 
-    'featured-square-2', 
-    'featured-square-3', 
-    'featured-square-4', 
-    'lower-regular-1', 
-    'lower-regular-2', 
-    'lower-regular-3', 
-    'lower-regular-4', 
+    'featured-square-1',
+    'upper-mini-1',
+    'upper-mini-2',
+    'featured-square-2',
+    'featured-square-3',
+    'featured-square-4',
+    'lower-regular-1',
+    'lower-regular-2',
+    'lower-regular-3',
+    'lower-regular-4',
     'lower-regular-5'
     ];
-  $('gallery-anchor').each(function(){
+  $('.gallery-anchor').each(function(){
     var i = $(this).index();
     if( i === 0 ){
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
+      $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
+      $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -74,8 +73,10 @@ $('#slider2').bxSlider({
 
   });
 
-  $('.gallery-anchor').hover(
-    function() {
-      $('.description').css({"opacity": "1"});
-    });
+// jQuery(document).ready(function($) {
+//   $('.description').hide();
+//   $('.gallery-anchor').hover(function() {
+//     $('.description').show();
+// });
+// });
 });

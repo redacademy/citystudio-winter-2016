@@ -4,8 +4,29 @@
 
 /* Project Page Slider */
 
+#page header#masthead.site-header{
+display: block !important;
+}
+
 .project .bx-wrapper .bx-viewport{
   box-shadow: none !important;
+}
+
+.bx-wrapper img {
+  width: 100vw !important;
+  height: 75vh;
+}
+
+.entry-header img{
+  width: 100vw;
+  height: 75vh;
+  margin:0;
+}
+
+img.wp-post-image{
+  width: 100vw;
+  height: 75vh;
+margin:0;
 }
 
 .bx-viewport {
