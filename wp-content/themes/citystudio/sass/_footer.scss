@@ -1,9 +1,11 @@
 .site-footer{
   width: 100vw;
-  background-color: $footer-dark-blue;
+  background-color: $dark-blue;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  position: absolute;
+  z-index: 1;
 }
 
 .social-icons-div {
@@ -30,6 +32,8 @@
   width: 2.5rem;
   margin-top: .8rem;
 }
+
+/* Footer Navigation */
 
 .nav{
   width: 70vw;
@@ -63,7 +67,7 @@
 }
 
 .open{
-  width: 50%
+  width: 70%
 }
 
 .menu-item{
@@ -73,6 +77,7 @@
 
 .open .menu-item{
     opacity: 1;
+    margin: 0 1em;
 }
 
 
@@ -117,5 +122,117 @@
   border: 2px solid white;
   background-color: #0082b9;
   transition: all 1.8s ease-in;
+}
 
+/* Footer Navigation Menu */
+
+.foot-sub-menu input[type=checkbox]{
+  display: none;
+}
+
+.foot-sub-menu {
+  background-color: #fff;
+  padding: 1em 0.8em;
+  display: inline-block;
+  border-radius: 8px;
+  border: 0.5px solid $dark-blue;
+  display: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    .sub-menu-neigh span, .sub-menu-part span {
+      color: $medium-blue;
+    }
+    .sub-menu-neigh span:hover, .sub-menu-part span:hover {
+      color: $light-blue;
+      cursor: pointer;
+    }
+}
+
+.menu-item {
+  position: relative;
+}
+
+.neigh {
+  position: absolute;
+  bottom: 100px;
+  left: -35px;
+
+    &::after {
+      content: '';
+    	width: 0;
+    	height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      bottom: -13px;
+      left: 38%;
+    }
+}
+
+.part {
+  position: absolute;
+  bottom: 100px;
+  left: -4px;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      bottom: -13px;
+      left: 28%;
+    }
+}
+
+.current-menu {
+  display: block;
+}
+
+.menu-title {
+  font-weight: bold;
+  color: $dark-blue;
+}
+
+.show-label {
+  display: block;
+  color: $dark-blue;
+  background: #fff;
+  padding: 1em;
+}
+
+.neigh-labels, .part-labels {
+  display: inline-block;
+  position: relative;
+  background-color: #fff;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  border: 0.5px solid $dark-blue;
+  bottom: 53px;
+  right: 16px;
+  min-width: 142px;
+  text-align: center;
+
+
+    label {
+      color: $medium-blue;
+
+      &::after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 20px 20px 0;
+        border-color: #fff transparent transparent;
+        position: absolute;
+        bottom: -13px;
+        left: 28%;
+      }
+    }
 }

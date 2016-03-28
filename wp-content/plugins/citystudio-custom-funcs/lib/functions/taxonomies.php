@@ -45,7 +45,7 @@
  		'show_tagcloud'              => true,
  		'rewrite'                    => $rewrite,
  	);
- 	register_taxonomy( 'project_tags', array( 'project' ), $args );
+ 	register_taxonomy( 'project-tags', array( 'project' ), $args );
 
  }
  add_action( 'init', 'project_taxonomy', 0 );

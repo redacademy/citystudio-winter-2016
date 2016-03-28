@@ -13,18 +13,50 @@
 						</div>
 
 						<div class="neighbourhood menu-item" id="neighbourhood">
-							<span></span>
+							<ul class="foot-sub-menu neigh">
+								<li><span class="menu-title">Neighbourhood</span></li>
+								<li class="sub-menu-neigh" id="kitsilano">
+									<input type="checkbox" name="neighbourhood" value="kitsilano" />
+									<span>Kitsilano</span>
+								</li>
+								<li class="sub-menu-neigh" id="pleasant">
+									<input type="checkbox" name="neighbourhood" value="pleasant" />
+									<span>Mt. Pleasant</span>
+								</li>
+								<li class="sub-menu-neigh" id="commercial">
+									<input type="checkbox" name="neighbourhood" value="commercial" />
+									<span>Commercial Dr.</span>
+								</li>
+							</ul>
+							<div class="neigh-labels">
+							</div>
 						</div>
 
 						<div class="partners menu-item">
+							<ul class="foot-sub-menu part">
+								<li><span class="menu-title">Partners</span></li>
+								<li class="sub-menu-part" id="SFU">
+									<input type="checkbox" name="partners" value="sfu" />
+									<span>SFU</span>
+								</li>
+								<li class="sub-menu-part" id="ubc">
+									<input type="checkbox" name="partners" value="ubc" />
+									<span>UBC</span>
+								</li>
+								<li class="sub-menu-part" id="bcit">
+									<input type="checkbox" name="partners" value="bcit" />
+									<span>BCIT</label>
+								</li>
+							</ul>
+							<div class="part-labels">
+							</div>
+						</div>
+
+						<div class="in-progress menu-item show-sub">
 							<span></span>
 						</div>
 
-						<div class="in-progress menu-item">
-							<span></span>
-						</div>
-
-						<div class="refresh menu-item">
+						<div class="refresh menu-item" id="refresh">
 							<span></span>
 						</div>
 					</div>

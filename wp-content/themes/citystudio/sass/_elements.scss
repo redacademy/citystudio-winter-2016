@@ -38,7 +38,8 @@ ul, ol {
 }
 
 ul {
-	list-style: disc;
+	list-style: none;
+	margin: 0px;
 }
 
 ol {
@@ -68,4 +69,3 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
-
