@@ -26,12 +26,14 @@
 			<div class="header-container">
 
 			<div class="site-branding">
-				<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				<a href="<?php echo esc_url(home_url());?>">
+					<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				</a>
 			</div><!-- .site-branding -->
 
 			<div class="search-gallery">
 				<span class="icon-search" aria-hidden="true">
-					<i class="fa fa-search"></i>
+					<a href="<?php echo esc_url(home_url('/search'));?>"><i class="fa fa-search"></i></a>
 				</span>
 
 				<div class="icon-gallery">

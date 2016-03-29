@@ -4,11 +4,8 @@ jQuery(document).ready(function($){
 $('#slider2').bxSlider({
     auto: true,
     autoControls: true,
-    pause: 3000,
+    pause: 10000,
     slideMargin: 20,
-    pause: 5000,
-    slideMargin: 0,
-    slideWidth: 1800,
     autoControlsCombine: true,
     controls: false
   });
@@ -17,7 +14,7 @@ $('#slider2').bxSlider({
     mode: 'horizontal',
     infiniteLoop: true,
     speed: 2000,
-    pause: 8000,
+    pause: 6000,
     auto: true,
     pager: false,
     controls: true
@@ -36,7 +33,6 @@ $('#slider2').bxSlider({
     'lower-regular-4',
     'lower-regular-5'
     ];
-
   $('.gallery-anchor').each(function(){
     var i = $(this).index();
 
@@ -44,9 +40,11 @@ $('#slider2').bxSlider({
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
+      $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
+      $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -76,10 +74,12 @@ $('#slider2').bxSlider({
 
   });
 
-  $('.gallery-anchor').hover(
-    function() {
-      $('.description').css({"opacity": "1"});
-    });
+// jQuery(document).ready(function($) {
+//   $('.description').hide();
+//   $('.gallery-anchor').hover(function() {
+//     $('.description').show();
+// });
+// });
 });
 
 
