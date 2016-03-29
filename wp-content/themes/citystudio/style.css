@@ -1107,8 +1107,7 @@ object {
   left: 0;
   top: 0;
   color: white;
-  font-family: sans-serif;
-}
+  font-family: sans-serif; }
   .description:hover {
     opacity: 1;
     background-color: rgba(3, 100, 140, 0.9);
@@ -1120,7 +1119,6 @@ object {
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 2rem; }
-
 
 /*--------------------------------------------------------------
 # Slider Styles
