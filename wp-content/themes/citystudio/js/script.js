@@ -82,7 +82,7 @@ $('#slider2').bxSlider({
     });
 });
 
-
+/* Jquery for Footer Navigation -- should go in own file soon */
 
 jQuery(document).ready(function($) {
 
@@ -114,15 +114,13 @@ jQuery(document).ready(function($) {
     });
 
 
-    //
-
-
-
-
-
     // $('.sub-menu-item span').click(function(){
     //     $('.foot-sub-menu').hide();
     //     $('').show();
     // });
 
+
+    /* Jquery for header and footer display*/
+
+  
 });

@@ -14,24 +14,50 @@
   </div>
 
   <div class="col-one">
-  	<h3>School &amp; Course:</h3><span class="proj-partners"><?php echo CFS()->get( 'partners' ); ?></span>
+  	<span class="proj-partners proj-detail-wrap">
+      <h3>School &amp; Course:</h3>
+      <?php echo CFS()->get( 'partners' ); ?>
+    </span>
 
-    <h3>Faculty Member:</h3><span class="proj-faculty"><?php echo CFS()->get( 'faculty_member' ); ?></span>
+    <span class="proj-faculty proj-detail-wrap">
+      <h3>Faculty Member:</h3>
+      <?php echo CFS()->get( 'faculty_member' ); ?>
+    </span>
 
-    <h3>Staff &amp; Partners</h3><span class="proj-staff"><?php echo CFS()->get( 'staff_partners' ); ?></span>
+    <span class="proj-staff proj-detail-wrap">
+      <h3>Staff &amp; Partners:</h3>
+      <?php echo CFS()->get( 'staff_partners' ); ?>
+    </span>
 
-    <h3>Student Team:</h3><span class="proj-subtitle"><?php echo CFS()->get( 'student_team' ); ?></span>
+    <span class="proj-subtitle proj-detail-wrap">
+      <h3>Student Team:</h3>
+      <?php echo CFS()->get( 'student_team' ); ?>
+    </span>
+
   </div> <!-- end .col-one -->
 
   <div class="col-two">
 
-    <h3>Date Completed:</h3><span class="proj-date"><?php echo CFS()->get( 'season_completed' ); ?><?php echo CFS()->get( 'date' ); ?></span>
+    <span class="proj-date proj-detail-wrap">
+      <h3>Date Completed:</h3>
+      <?php echo CFS()->get( 'season_completed' ); ?>
+      <?php echo CFS()->get( 'date' ); ?>
+    </span>
 
-    <h3>Initiative:</h3><span class="proj-subtitle"><?php echo CFS()->get( 'initiative' ); ?></span>
+    <span class="proj-subtitle proj-detail-wrap">
+      <h3>Initiative:</h3>
+      <?php echo CFS()->get( 'initiative' ); ?>
+    </span>
 
-    <h3>Neighbourhood:</h3><span class="proj-subtitle"><?php echo CFS()->get( 'neighbourhood' ); ?></span>
+    <span class="proj-subtitle proj-detail-wrap">
+      <h3>Neighbourhood:</h3>
+      <?php echo CFS()->get( 'neighbourhood' ); ?>
+    </span>
 
-    <h3>Media:</h3><span class="proj-subtitle"><?php echo CFS()->get( 'media' ); ?></span>
+    <span class="proj-subtitle proj-detail-wrap">
+      <h3>Media:</h3>
+      <?php echo CFS()->get( 'media' ); ?>
+    </span>
 
   </div> <!-- end .col-two -->
 </div>

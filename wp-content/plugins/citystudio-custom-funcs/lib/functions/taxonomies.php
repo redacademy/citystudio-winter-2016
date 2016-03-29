@@ -10,7 +10,7 @@
 
  	$labels = array(
  		'name'                       => _x( 'Project Tags', 'Taxonomy General Name', 'text_domain' ),
- 		'singular_name'              => _x( 'Project Tag', 'Taxonomy Singular Name', 'text_domain' ),
+ 		'singular_name'              => _x( 'Tag', 'Taxonomy Singular Name', 'text_domain' ),
  		'menu_name'                  => __( 'Project Tags', 'text_domain' ),
  		'all_items'                  => __( 'Project Tags', 'text_domain' ),
  		'parent_item'                => __( 'Project Tag', 'text_domain' ),

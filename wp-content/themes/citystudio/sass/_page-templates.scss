@@ -2,13 +2,12 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Front page */
+/* Single Project page */
 
-.content-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1070px;
+.type-project header {
+  background-size: cover !important;
+  background-position: top center !important;
+  min-height: 500px;
 }
 
 .section-header {
@@ -19,9 +18,8 @@
   width: 100%;
 
   .proj-subtitle {
-    font-size: 2em;
     height: auto;
-    margin: .67em 0;
+    margin: .67em 0 0.67em 0.3em;
   }
 }
 
@@ -48,4 +46,38 @@
 
 .col-two {
   order: 2;
+}
+
+
+.proj-detail-wrap {
+  display: inline-block;
+  margin: 0 0 1.5em;
+}
+
+
+/* Tag Archive Page */
+
+.tag-archive {
+
+  header {
+    flex-basis: 100%;
+  }
+
+  article {
+    display: flex;
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.product-type-page {
+  background-color: $medium-blue;
+  padding-top: 2em;
+}
+
+.single-product-category {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
 }

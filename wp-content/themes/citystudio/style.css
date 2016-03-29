@@ -288,6 +288,10 @@ th {
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+html body {
+  font-size: 16px;
+  color: #2D2D2D; }
+
 body,
 button,
 input,
@@ -343,8 +347,25 @@ mark, ins {
 big {
   font-size: 125%; }
 
+h1, .proj-subtitle {
+  color: #2D2D2D;
+  font-size: 3em;
+  font-weight: bold; }
+
+h2 {
+  font-size: 3em; }
+
 h3 {
-  font-weight: 700; }
+  color: #2D2D2D;
+  font-size: 1em;
+  font-weight: bold; }
+
+p {
+  color: #949A9F; }
+
+.archive h2 {
+  color: #006496;
+  text-transform: uppercase; }
 
 /*--------------------------------------------------------------
 # Elements
@@ -405,6 +426,18 @@ img {
 table {
   margin: 0 0 1.5em;
   width: 100%; }
+
+/* Content Wrapper for All Pages */
+.content-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1070px;
+  padding: 0 2em; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -685,14 +718,14 @@ a {
 
 .site-footer {
   width: 100vw;
-  background-color: #03648c; }
+  background-color: #006496; }
 
 .social-icons ul {
   list-style: none; }
 
 .site-footer {
   width: 100vw;
-  background-color: #03648c;
+  background-color: #006496;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -821,14 +854,14 @@ a {
   padding: 1em 0.8em;
   display: inline-block;
   border-radius: 8px;
-  border: 0.5px solid #03648c;
+  border: 0.5px solid #006496;
   display: none; }
   .foot-sub-menu:hover {
     cursor: pointer; }
   .foot-sub-menu .sub-menu-neigh span, .foot-sub-menu .sub-menu-part span {
     color: #0082b9; }
   .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover {
-    color: #00b4ef;
+    color: #00A0DC;
     cursor: pointer; }
 
 .menu-item {
@@ -869,11 +902,11 @@ a {
 
 .menu-title {
   font-weight: bold;
-  color: #03648c; }
+  color: #006496; }
 
 .show-label {
   display: block;
-  color: #03648c;
+  color: #006496;
   background: #fff;
   padding: 1em; }
 
@@ -883,7 +916,7 @@ a {
   background-color: #fff;
   padding: 0.5em 0.8em;
   border-radius: 8px;
-  border: 0.5px solid #03648c;
+  border: 0.5px solid #006496;
   bottom: 53px;
   right: 16px;
   min-width: 142px;
@@ -964,16 +997,11 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Front page */
-.content-wrapper {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  margin: 0 auto;
-  max-width: 1070px; }
+/* Single Project page */
+.type-project header {
+  background-size: cover !important;
+  background-position: top center !important;
+  min-height: 500px; }
 
 .section-header {
   display: -webkit-flex;
@@ -990,9 +1018,8 @@ object {
           justify-content: center;
   width: 100%; }
   .section-header .proj-subtitle {
-    font-size: 2em;
     height: auto;
-    margin: .67em 0; }
+    margin: .67em 0 0.67em 0.3em; }
 
 .section-credits.content-wrapper {
   display: -webkit-flex;
@@ -1030,11 +1057,44 @@ object {
       -ms-flex-order: 2;
           order: 2; }
 
-.container {
+.proj-detail-wrap {
+  display: inline-block;
+  margin: 0 0 1.5em; }
+
+/* Tag Archive Page */
+.tag-archive header {
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%; }
+
+.tag-archive article {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.product-type-page {
+  background-color: #0082b9;
+  padding-top: 2em; }
+
+.single-product-category {
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1em 2em; }
+
+tag-archive.container {
   display: block;
   height: 50vh;
   margin-bottom: 10px solid white; }
-  .container .bx-viewport {
+  tag-archive.container .bx-viewport {
     margin-top: 0;
     margin-bottom: 5px; }
 

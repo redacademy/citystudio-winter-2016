@@ -12,19 +12,18 @@
       <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
 
         <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> >
-          <ul id="slider2">
-            <li>
+            <div>
               <?php get_template_part( 'template-parts/project', 'sum' ); ?>
-            </li>
+            </div>
 
-            <li>
+            <div>
               <?php get_template_part( 'template-parts/project', 'credits' ); ?>
-            </li>
+            </div>
 
-            <li>
+            <div>
               <?php get_template_part( 'template-parts/project', 'details' ); ?>
-            </li>
-          </ul>
+            </div>
+
 
       </article><!-- #post-## -->
 
