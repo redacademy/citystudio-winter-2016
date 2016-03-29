@@ -69,3 +69,13 @@ table {
 	margin: 0 0 $base__space-unit;
 	width: 100%;
 }
+
+/* Content Wrapper for All Pages */
+
+.content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 1070px;
+  padding: 0 2em;
+}

@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/
+html body {
+	font-size: 16px;
+	color: $citystudio-black;
+}
 
 body,
 button,
@@ -67,14 +71,27 @@ big {
 	font-size: 125%;
 }
 
-h1 {
-
+h1, .proj-subtitle {
+	color: $citystudio-black;
+	font-size: 3em;
+	font-weight: bold;
 }
 
 h2 {
-
+	font-size: 3em;
 }
 
 h3 {
-	font-weight: 700;
+	color: $citystudio-black;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+p {
+	color: $citystudio-grey;
+}
+
+.archive h2 {
+	color: $dark-blue;
+	text-transform: uppercase;
 }
