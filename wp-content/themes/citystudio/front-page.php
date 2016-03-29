@@ -19,6 +19,7 @@ get_header(); ?>
         <button id="button" class="toggle-class"></button>
     </div>
 </div>
+
 <div class="container">
 
 	<ul class="home-slider">
@@ -32,6 +33,8 @@ get_header(); ?>
 	      <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
 						<?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
+	<?php while (have_posts()) : the_post(); ?>
+
 						<li style="background: url('<?php echo $background; ?>') no-repeat center; background-size: cover; border: 1px solid lightgrey;">
 							<div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
 	             <div class="subtitle"><?php echo CFS()->get( 'subtitle' ); ?></div>
@@ -42,9 +45,7 @@ get_header(); ?>
 						</li>
 	  		</a>
 
-			<?php endforeach; wp_reset_postdata(); ?>
-
-
+		<?php endforeach; wp_reset_postdata(); ?>
 
 	</ul>
 </div>
