@@ -1,14 +1,5 @@
 
 jQuery(document).ready(function($){
-  // Project Content Slider
-$('#slider2').bxSlider({
-    auto: true,
-    autoControls: true,
-    pause: 10000,
-    slideMargin: 20,
-    autoControlsCombine: true,
-    controls: false
-  });
 
   $('.bxslider').bxSlider({
     mode: 'horizontal',
@@ -40,11 +31,11 @@ $('#slider2').bxSlider({
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
-      $(this).addClass('flex');
+      // $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
-      $(this).addClass('flex');
+      // $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -122,5 +113,5 @@ jQuery(document).ready(function($) {
 
     /* Jquery for header and footer display*/
 
-  
+
 });

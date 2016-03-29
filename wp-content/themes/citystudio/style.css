@@ -1090,10 +1090,10 @@ object {
   border-radius: 5px;
   padding: 1em 2em; }
 
-tag-archive.container {
+.container {
   display: block;
   margin-bottom: 10px solid white; }
-  tag-archive.container .bx-viewport {
+  .container .bx-viewport {
     margin-top: 0;
     margin-bottom: 5px; }
 
