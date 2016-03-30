@@ -112,6 +112,18 @@ function red_starter_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'red_starter_scripts' );
 
+function filter_scritps() {
+	$script_url = get_template_directory_uri(). '/scripts.js';
+
+	wp_enqueue_script('jquery');
+
+	wp_enqueue_script( 'filter_gallery', $script_url, array ( 'jquery' ), false, true);
+
+	wp_localize_script( 'filter_gallery', 'filter_url', array (
+
+	));
+
+}
 
 
 /**

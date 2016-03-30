@@ -4,26 +4,19 @@
  *
  * Template Name: Front-page
  */
-
 get_header(); ?>
-
 <div class="front-page-main">
-	<div class="hero">
-		<div class="hero-logo">
-
-		</div>
-		<div class="site-description">
-			<p>
-				CitySudio is an innovation and leadership hub inside City Hall where staff, citizens and students from 6 universities and colleges co-create experiments and solutions for the City.
-			</p>
-		</div>
-		<button id="button" class="toggle-class"></button>
-
-	</div>
+    <div class="hero">
+        <div class="hero-logo">
+        </div>
+        <div class="site-description">
+            <p>
+                CitySudio is an innovation and leadership hub inside City Hall where staff, citizens and students from 6 universities and colleges co-create experiments and solutions for the City.
+            </p>
+        </div>
+        <button id="button" class="toggle-class"></button>
+    </div>
 </div>
-
-
-
 <div class="container">
 	<?php while ( have_posts() ) : the_post(); ?>
 
@@ -53,8 +46,5 @@ get_header(); ?>
 
 
 	</ul>
-
 </div>
-
-
 <?php get_footer(); ?>
