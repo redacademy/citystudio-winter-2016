@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($){
 
   $('.bxslider').bxSlider({
@@ -113,7 +112,6 @@ jQuery(document).ready(function($) {
       }
     });
     console.log(queryFilter);
-
 
     function reloadProjects(){
 
