@@ -65,15 +65,8 @@ jQuery(document).ready(function($){
 
   });
 
-// jQuery(document).ready(function($) {
-//   $('.description').hide();
-//   $('.gallery-anchor').hover(function() {
-//     $('.description').show();
-// });
-// });
 });
 
-/* Jquery for Footer Navigation -- should go in own file soon */
 jQuery(document).ready(function($) {
     var queryFilter = {
       checkedNeigh: '',
@@ -96,7 +89,6 @@ jQuery(document).ready(function($) {
            $('.neigh-labels').show().append('<label>'+queryFilter.checkedNeigh+'</label>');
            $(this).parent().hide();
            reloadProjects();
-
            // Take action to query Database
       }
     });
@@ -133,7 +125,6 @@ jQuery(document).ready(function($) {
           console.log(data);
         },
           error: function(data){
-             alert("Error:" + data);
       }
       // make ajax request
       // query Database - reqgiester the AJAX and write query in PHP

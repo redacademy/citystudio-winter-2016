@@ -801,6 +801,9 @@ a {
 .open {
   width: 70%; }
 
+.close {
+  width: 80px; }
+
 .menu-item {
   opacity: 0; }
 
