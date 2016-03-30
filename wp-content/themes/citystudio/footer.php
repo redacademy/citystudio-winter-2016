@@ -11,7 +11,6 @@
 						<div class="sort">
 							<span>Sort</span>
 						</div>
-
 						<div class="neighbourhood menu-item" id="neighbourhood">
 							<ul class="foot-sub-menu neigh">
 								<li><span class="menu-title">Neighbourhood</span></li>
@@ -52,7 +51,6 @@
 							</div>
 						</div>
 
-
 						<div class="years menu-item">
 							<ul class="foot-sub-menu year">
 								<li><span class="menu-title">Year</span></li>
@@ -72,7 +70,6 @@
 							<div class="year-labels">
 							</div>
 						</div>
-
 						<div class="refresh menu-item" id="refresh">
 							<span></span>
 						</div>
