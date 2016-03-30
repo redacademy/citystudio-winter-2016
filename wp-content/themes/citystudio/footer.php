@@ -52,8 +52,25 @@
 							</div>
 						</div>
 
-						<div class="in-progress menu-item show-sub">
-							<span></span>
+
+						<div class="years menu-item">
+							<ul class="foot-sub-menu year">
+								<li><span class="menu-title">year</span></li>
+								<li class="sub-menu-year" id="SFU">
+									<input type="checkbox" name="year" value="2014" />
+									<span>2014</span>
+								</li>
+								<li class="sub-menu-year" id="ubc">
+									<input type="checkbox" name="year" value="2015" />
+									<span>2015</span>
+								</li>
+								<li class="sub-menu-year" id="bcit">
+									<input type="checkbox" name="year" value="2016" />
+									<span>2016</label>
+								</li>
+							</ul>
+							<div class="year-labels">
+							</div>
 						</div>
 
 						<div class="refresh menu-item" id="refresh">
