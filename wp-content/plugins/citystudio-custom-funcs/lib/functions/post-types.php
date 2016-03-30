@@ -47,7 +47,7 @@ function register_project_post_type() {
 		'description'           => __( 'City Studio projects', 'text_domain' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields', ),
-		'taxonomies'            => array( 'category', 'post_tag' ),
+	
 		'hierarchical'          => false,
 		'public'                => true,
 		'show_ui'               => true,

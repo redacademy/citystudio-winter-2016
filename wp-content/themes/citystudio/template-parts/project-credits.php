@@ -9,15 +9,23 @@
 
 <div class="section-credits content-wrapper">
 
-  <div class="page-two-title">
+  <div class="page-title">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
   </div>
 
   <div class="col-one">
-  	<span class="proj-partners proj-detail-wrap">
+    <?php
+        $terms = get_terms('product-type');
+    ?>
+
+    <span class="proj-partners proj-detail-wrap">
       <h3>School &amp; Course:</h3>
-      <?php echo CFS()->get('partners'); ?>
+      <?php if (!empty($partner)) : ?>
+      <?php foreach ($partners as $partner) : ?>
+      <?php echo $partner->name; ?>
+      <?php endforeach; ?>
     </span>
+      <?php endif; ?>
 
     <span class="proj-faculty proj-detail-wrap">
       <h3>Faculty Member:</h3>
@@ -42,6 +50,11 @@
       <h3>Date Completed:</h3>
       <?php echo CFS()->get( 'season_completed' ); ?>
       <?php echo CFS()->get( 'date' ); ?>
+    </span>
+
+    <span class="proj-subtitle proj-detail-wrap">
+      <h3>City Strategy:</h3>
+      <?php echo CFS()->get( 'city_strategy' ); ?>
     </span>
 
     <span class="proj-subtitle proj-detail-wrap">
