@@ -16,7 +16,7 @@
   <div class="col-one">
   	<span class="proj-partners proj-detail-wrap">
       <h3>School &amp; Course:</h3>
-      <?php echo CFS()->get( 'partners' ); ?>
+      <?php echo CFS()->get('partners'); ?>
     </span>
 
     <span class="proj-faculty proj-detail-wrap">

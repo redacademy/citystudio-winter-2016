@@ -7,7 +7,7 @@
 ?>
 
 	<!-- The Header will be the gallery/banner image-->
-	<?php $background = wp_get_attachment_url( get_post_thumbnail_id( $page->ID[0] )); ?>
+	<?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
 	<header class="entry-header" style="background: url('<?php echo $background; ?>') no-repeat; ">
 	</header><!-- .entry-header -->

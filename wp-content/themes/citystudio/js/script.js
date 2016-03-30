@@ -4,8 +4,8 @@ jQuery(document).ready(function($){
   $('.bxslider').bxSlider({
     mode: 'horizontal',
     infiniteLoop: true,
-    speed: 2000,
-    pause: 6000,
+    speed: 3000,
+    pause: 4000,
     auto: true,
     pager: false,
     controls: true
@@ -24,18 +24,20 @@ jQuery(document).ready(function($){
     'lower-regular-4',
     'lower-regular-5'
     ];
+
+  var flexContainer = $('<div class="flex-container"></div>');
+
   $('.gallery-anchor').each(function(){
     var i = $(this).index();
+
 
     if( i === 0 ){
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
-      // $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
-      // $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -64,13 +66,6 @@ jQuery(document).ready(function($){
     }
 
   });
-
-// jQuery(document).ready(function($) {
-//   $('.description').hide();
-//   $('.gallery-anchor').hover(function() {
-//     $('.description').show();
-// });
-// });
 });
 
 /* Jquery for Footer Navigation -- should go in own file soon */
