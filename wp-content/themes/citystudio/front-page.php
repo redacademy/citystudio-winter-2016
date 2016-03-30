@@ -37,23 +37,20 @@ get_header(); ?>
 		?>
 		<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
 
-
 	      <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
 						<?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
-						<div class="project-img-div">
-
-						<li style="background: url('<?php echo $background; ?>') no-repeat center; background-size: cover; border: 1px solid lightgrey;"></li>
-
-						</div>
-
-						<div class="description">
-	        		<span class="home-description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>	<?php echo CFS()->get( 'subtitle' ); ?>
-	        		</span>
-						</div>
+						<li style="background: url('<?php echo $background; ?>') no-repeat center; background-size: cover; border: 1px solid lightgrey;">
+							<div class="description">
+								<span class="home-description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>	<?php echo CFS()->get( 'subtitle' ); ?>
+								</span>
+							</div>
+						</li>
 	  		</a>
 
 			<?php endforeach; wp_reset_postdata(); ?>
+
+
 
 	</ul>
 
