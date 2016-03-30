@@ -31,11 +31,11 @@ jQuery(document).ready(function($){
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
-      // $(this).addClass('flex');
+      $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
-      // $(this).addClass('flex');
+      $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -77,6 +77,8 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($) {
 
+
+
     var checkedNeigh = '';
     var checkedPart = '';
 
@@ -85,14 +87,14 @@ jQuery(document).ready(function($) {
     $('.part-labels').hide();
 
     $('.menu-item').hover(function(){
-      	  $(this).children('.foot-sub-menu').toggleClass('current-menu');
+      	$(this).children('.foot-sub-menu').toggleClass('current-menu');
     });
 
     $('.sub-menu-neigh').click(function() {
         if($(this.checked)){
            checkedNeigh += ($(this).text());
            $('.neigh-labels').show().append('<label>'+checkedNeigh+'</label>');
-           $('.foot-sub-menu').hide();
+           $(this).parent().hide();
       }
     });
 
@@ -100,7 +102,7 @@ jQuery(document).ready(function($) {
         if($(this.checked)){
            checkedPart += ($(this).text());
            $('.part-labels').show().append('<label>'+checkedPart+'</label>');
-           $('.foot-sub-menu').hide();
+           $(this).parent().hide();
       }
     });
 
