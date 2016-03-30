@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($){
 
   $('.bxslider').bxSlider({
@@ -29,8 +28,6 @@ jQuery(document).ready(function($){
 
   $('.gallery-anchor').each(function(){
     var i = $(this).index();
-
-
     if( i === 0 ){
       $(this).addClass(gallery[0]);
     }
@@ -69,44 +66,70 @@ jQuery(document).ready(function($){
 });
 
 /* Jquery for Footer Navigation -- should go in own file soon */
-
 jQuery(document).ready(function($) {
-
-    var checkedNeigh = '';
-    var checkedPart = '';
+    var queryFilter = {
+      checkedNeigh: '',
+      checkedPart: '',
+      checkedYear: ''
+    };
 
     $('.foot-sub-menu label').hide();
     $('.neigh-labels').hide();
     $('.part-labels').hide();
-
+    $('.year-labels').hide();
+    
     $('.menu-item').hover(function(){
-      	  $(this).children('.foot-sub-menu').toggleClass('current-menu');
+          $(this).children('.foot-sub-menu').toggleClass('current-menu');
     });
-
     $('.sub-menu-neigh').click(function() {
         if($(this.checked)){
-           checkedNeigh += ($(this).text());
-           $('.neigh-labels').show().append('<label>'+checkedNeigh+'</label>');
-           $('.foot-sub-menu').hide();
+           inputValue = $(this).find('input').val();
+           queryFilter.checkedNeigh = ($(this).text()).trim();
+           $('.neigh-labels').show().append('<label>'+queryFilter.checkedNeigh+'</label>');
+           $(this).parent().hide();
+           reloadProjects();
+
+           // Take action to query Database
       }
     });
-
     $('.sub-menu-part').click(function() {
         if($(this.checked)){
-           checkedPart += ($(this).text());
-           $('.part-labels').show().append('<label>'+checkedPart+'</label>');
-           $('.foot-sub-menu').hide();
+           inputValue = $(this).find('input').val();
+           queryFilter.checkedPart = ($(this).text()).trim();
+           $('.part-labels').show().append('<label>'+queryFilter.checkedPart+'</label>');
+           $(this).parent().hide();
+           reloadProjects();
+           // Take action to query Database
       }
     });
+    $('.sub-menu-year').click(function() {
+        if($(this.checked)){
+           inputValue = $(this).find('input').val();
+           queryFilter.checkedYear = ($(this).text()).trim();
+           $('.year-labels').show().append('<label class="visible">'+queryFilter.checkedYear+'</label>');
+           $(this).parent().hide();
+           reloadProjects();
+      }
+    });
+    console.log(queryFilter);
 
+    function reloadProjects(){
 
-    // $('.sub-menu-item span').click(function(){
-    //     $('.foot-sub-menu').hide();
-    //     $('').show();
-    // });
-
-
-    /* Jquery for header and footer display*/
-
+      $.ajax({
+        type: 'GET',
+        dataType: 'json',
+        url: '/wp-json/wp/v2/posts/' + inputValue,
+        success: function(data){
+  
+          console.log(data);
+        },
+          error: function(data){
+             alert("Error:" + data);
+      }
+      // make ajax request
+      // query Database - reqgiester the AJAX and write query in PHP
+      //relaoad the UI
+    });
+    }
 
 });

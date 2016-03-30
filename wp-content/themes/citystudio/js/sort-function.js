@@ -4,7 +4,4 @@ jQuery(document).ready(function($) {
       	  $('#sort').addClass('open');
     });
 
-      $('#refresh').click(function(){
-        	  $(this).removeClass('open');
-      });
 });
