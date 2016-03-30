@@ -77,7 +77,7 @@
 
 .open .menu-item{
     opacity: 1;
-    margin: 0 1em;
+    margin: 0;
 }
 
 
@@ -103,7 +103,7 @@
 
 }
 
-.in-progress{
+.years{
   background: url(../../assets/in-progress-icon.png) no-repeat center;
   background-size: 45px 50px;
   width: 88px;
@@ -132,7 +132,7 @@
 
 .foot-sub-menu {
   background-color: #fff;
-  padding: 1em 0.8em;
+  padding: 0.8em;
   display: inline-block;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
@@ -191,6 +191,24 @@
     }
 }
 
+.year {
+  position: absolute;
+  bottom: 100px;
+  left: 0px;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      bottom: -13px;
+      left: 28%;
+    }
+}
+
 .current-menu {
   display: block;
 }
@@ -207,7 +225,7 @@
   padding: 1em;
 }
 
-.neigh-labels, .part-labels {
+.neigh-labels, .part-labels, .year-labels {
   display: inline-block;
   position: relative;
   background-color: #fff;
@@ -235,4 +253,9 @@
         left: 28%;
       }
     }
+
+}
+
+.hide-label{
+  display: none !important;
 }

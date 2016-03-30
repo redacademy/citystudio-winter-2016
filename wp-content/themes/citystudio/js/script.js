@@ -92,7 +92,7 @@ jQuery(document).ready(function($) {
 
     $('.sub-menu-neigh').click(function() {
         if($(this.checked)){
-           checkedNeigh += ($(this).text());
+           checkedNeigh = ($(this).text());
            $('.neigh-labels').show().append('<label>'+checkedNeigh+'</label>');
            $(this).parent().hide();
       }
@@ -100,7 +100,7 @@ jQuery(document).ready(function($) {
 
     $('.sub-menu-part').click(function() {
         if($(this.checked)){
-           checkedPart += ($(this).text());
+           checkedPart = ($(this).text());
            $('.part-labels').show().append('<label>'+checkedPart+'</label>');
            $(this).parent().hide();
       }

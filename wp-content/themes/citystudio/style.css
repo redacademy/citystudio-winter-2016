@@ -806,7 +806,7 @@ a {
 
 .open .menu-item {
   opacity: 1;
-  margin: 0 1em; }
+  margin: 0; }
 
 .neighbourhood {
   background: url(../../assets/neighbourhood-icon.png) no-repeat center;
@@ -826,7 +826,7 @@ a {
   background-color: #03648c;
   transition: all 1.6s ease-in; }
 
-.in-progress {
+.years {
   background: url(../../assets/in-progress-icon.png) no-repeat center;
   background-size: 45px 50px;
   width: 88px;
@@ -851,7 +851,7 @@ a {
 
 .foot-sub-menu {
   background-color: #fff;
-  padding: 1em 0.8em;
+  padding: 0.8em;
   display: inline-block;
   border-radius: 8px;
   border: 0.5px solid #006496;
@@ -897,6 +897,21 @@ a {
     bottom: -13px;
     left: 28%; }
 
+.year {
+  position: absolute;
+  bottom: 100px;
+  left: 0px; }
+  .year::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #fff transparent transparent;
+    position: absolute;
+    bottom: -13px;
+    left: 28%; }
+
 .current-menu {
   display: block; }
 
@@ -910,7 +925,7 @@ a {
   background: #fff;
   padding: 1em; }
 
-.neigh-labels, .part-labels {
+.neigh-labels, .part-labels, .year-labels {
   display: inline-block;
   position: relative;
   background-color: #fff;
@@ -921,9 +936,9 @@ a {
   right: 16px;
   min-width: 142px;
   text-align: center; }
-  .neigh-labels label, .part-labels label {
+  .neigh-labels label, .part-labels label, .year-labels label {
     color: #0082b9; }
-    .neigh-labels label::after, .part-labels label::after {
+    .neigh-labels label::after, .part-labels label::after, .year-labels label::after {
       content: '';
       width: 0;
       height: 0;
@@ -933,6 +948,9 @@ a {
       position: absolute;
       bottom: -13px;
       left: 28%; }
+
+.hide-label {
+  display: none !important; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1142,7 +1160,7 @@ object {
   padding: 2rem 2rem; }
 
 .bxslider a {
-  max-width: 300px; }
+  max-width: 400px; }
 
 .bxslider a li {
   border: .25rem solid white;
@@ -1151,12 +1169,18 @@ object {
   width: auto;
   z-index: 1;
   left: 0;
-  top: 0;
-  background-position: center top;
-  background-size: contain;
+  top: 0; }
+
+.flex-container {
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
 
 .featured-square-1 {
   height: 60vh;
@@ -1195,21 +1219,48 @@ object {
           order: 6; }
 
 .upper-mini-1 {
-  height: 15vh;
+  height: 30vh !important;
   width: 250px !important;
   background-color: #0198d5;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2;
-  border: 5px solid red; }
+  z-index: 1;
+  left: 0;
+  top: 0; }
+  .upper-mini-1 li {
+    background-size: 300px 400px !important;
+    height: 30vh !important;
+    width: 250px !important;
+    background-color: #0198d5;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
+    z-index: 1;
+    left: 0;
+    top: 0; }
 
 .upper-mini-2 {
-  height: 15vh;
+  height: 30vh !important;
   width: 250px !important;
   background-color: #0198d5;
   -webkit-order: 3;
       -ms-flex-order: 3;
-          order: 3; }
+          order: 3;
+  z-index: 1;
+  left: 0;
+  top: 0; }
+  .upper-mini-2 li {
+    background-size: 300px 400px !important;
+    height: 30vh !important;
+    width: 250px !important;
+    background-color: #0198d5;
+    -webkit-order: 3;
+        -ms-flex-order: 3;
+            order: 3;
+    z-index: 1;
+    left: 0;
+    top: 0; }
 
 .lower-regular-1 {
   height: 60vh;
@@ -1260,7 +1311,8 @@ object {
   left: 0;
   top: 0;
   color: white;
-  font-family: sans-serif; }
+  font-family: sans-serif;
+  overflow: hidden; }
   .description:hover {
     opacity: 1;
     background-color: rgba(0, 100, 150, 0.9);
@@ -1277,9 +1329,6 @@ object {
 # Slider Styles
 --------------------------------------------------------------*/
 /* Project Page Slider */
-#page header#masthead.site-header {
-  display: block !important; }
-
 .project .bx-wrapper .bx-viewport {
   box-shadow: none !important; }
 
