@@ -62,7 +62,7 @@ jQuery(document).ready(function($){
     if( i === 10 ){
       $(this).addClass(gallery[10]);
     }
-=======
+
 jQuery(document).ready(function($) {
 
     $('.bxslider').bxSlider({
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
         pager: false,
         controls: true
     });
->>>>>>> rest-api
+
 
     var gallery = ['featured-square-1', 'upper-mini-1', 'upper-mini-2', 'featured-square-2', 'featured-square-3', 'featured-square-4', 'lower-regular-1', 'lower-regular-2', 'lower-regular-3', 'lower-regular-4', 'lower-regular-5'];
 
@@ -156,9 +156,9 @@ jQuery(document).ready(function($) {
             // Take action to query Database
         }
     });
-<<<<<<< HEAD
+
     function reloadProjects(){
-=======
+
     $('.sub-menu-year').click(function() {
         if ($(this.checked)) {
             yearValue = $(this).find('input').val();
