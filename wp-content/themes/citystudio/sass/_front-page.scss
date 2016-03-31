@@ -32,7 +32,7 @@
 	width: 56vw;
 	margin-bottom: 5rem;
 	p{
-	font-family: 'Open Sans', sans-serif;
+	font-family: $fontfamily;
 	font-size: 1.5rem;
 text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
 	color: white;
@@ -59,14 +59,17 @@ text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
 //-----------------------------------------
 // BX-SLIDER STYLES------------------------
 
+.home-slider .flickity-page-dots{
+	display: none;
+}
 
-.bxslider {
+.flickity-slider {
 	a {
 		max-width: 400px;
 	}
 }
 
-.bxslider a li {
+.flickity-slider a li {
 	border: .25rem solid white;
 	height: 60vh;
 	margin: 0;
@@ -95,7 +98,7 @@ flex-wrap: wrap;
 	width: 400px !important;
 	background-color: #0082b9;
 	overflow-y: hidden;
-	order: 4;
+	order: 2;
 }
 
 .featured-square-3{
@@ -103,7 +106,7 @@ flex-wrap: wrap;
 	width: 400px !important;
 	background-color: #0082b9;
 	overflow-y: hidden;
-	order: 5;
+	order: 3;
 }
 
 .featured-square-4{
@@ -111,48 +114,66 @@ flex-wrap: wrap;
 	width: 400px !important;
 	background-color: #0082b9;
 	overflow-y: hidden;
-	order: 6;
+	order: 4;
 }
 
 .upper-mini-1{
-	height: 30vh !important;
-	width: 250px !important;
-	background-color: #0198d5;
-	order: 2;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	li {
-	background-size: 300px 400px !important;
-	height: 30vh !important;
-	width: 250px !important;
-	background-color: #0198d5;
-	order: 2;
-	z-index: 1;
-	left: 0;
-	top: 0;
-}
+	height: 60vh;
+	width: 400px !important;
+	background-color: #0082b9;
+	overflow-y: hidden;
+	order: 5;
 }
 
 .upper-mini-2{
-	height: 30vh !important;
-	width: 250px !important;
-	background-color: #0198d5;
-	order: 3;
-	z-index: 1;
-	left: 0;
-	top: 0;
-	li {
-	background-size: 300px 400px !important;
-	height: 30vh !important;
-	width: 250px !important;
-	background-color: #0198d5;
-	order: 3;
-	z-index: 1;
-	left: 0;
-	top: 0;
+	height: 60vh;
+	width: 400px !important;
+	background-color: #0082b9;
+	overflow-y: hidden;
+	order: 6;
 }
-}
+
+
+//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
+// .upper-mini-1{
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 5;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// 	li {
+// 	background-size: 300px 400px !important;
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 5;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// }
+// }
+//
+// .upper-mini-2{
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 6;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// 	li {
+// 	background-size: 300px 400px !important;
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 6;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// }
+// }
 
 .lower-regular-1{
 	height: 60vh;
@@ -190,6 +211,13 @@ flex-wrap: wrap;
 	order: 11;
 }
 
+.lower-regular-6{
+	height: 60vh;
+	width: 400px !important;
+	background-color: #76d6ff;
+	order: 12;
+}
+
 //setting description to opacity 0 at first
 .description{
 	width: 100%;
@@ -202,6 +230,7 @@ flex-wrap: wrap;
 	color: white;
 	font-family: sans-serif;
 	overflow: hidden;
+	font-family: $fontfamily;
 &:hover{
 	opacity: 1;
 	background-color: transparentize($dark-blue, .1);
@@ -215,4 +244,15 @@ flex-wrap: wrap;
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-bottom: 2rem;
+font-family: $fontfamily;
+}
+
+.subtitle{
+font-weight: bold;
+}
+
+.home-description{
+	text-overflow: ellipsis;
+	overflow: hidden;
+	font-family: $fontfamily;
 }

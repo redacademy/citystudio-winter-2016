@@ -1,109 +1,121 @@
 /*--------------------------------------------------------------
-# Slider Styles
+# Project Page Slider Styles
 --------------------------------------------------------------*/
-
-/* Project Page */
-
-.single-projects{
-border-top: 1px solid $light-blue;
-}
-
-.project .bx-wrapper .bx-viewport{
-  box-shadow: none !important;
-}
-
-.entry-header{
-  margin-top: 1rem;
- img{
-  width: 100vw;
-  height: 75vh;
-  margin: .5rem 0 0 0;
+.single-projects {
+  border-top: 1px solid $light-blue;
+   .carousel-cell {
+    width: 100vw;
   }
 }
-
-img.wp-post-image{
+.project .bx-wrapper .bx-viewport {
+  box-shadow: none !important;
+}
+.entry-header {
+  margin-top: 1rem;
+  img {
+    width: 100vw;
+    height: 75vh;
+    margin: 0.5rem 0 0;
+  }
+}
+img.wp-post-image {
   width: 100vw;
   height: 75vh;
-  margin:.5rem 0 0 0;
+  margin: 0.5rem 0 0;
 }
 
-.carousel-cell{
-width: 100vw;
+span.excerpt{
+margin: 0 auto;
+font-family: $fontfamily;
 }
-
 .type-project header {
   background-size: cover !important;
   background-position: top center !important;
   min-height: 500px;
-}
+  font-family: $fontfamily;
 
+}
 .section-header {
   display: flex;
   flex-basis: 100%;
   flex-wrap: wrap;
   justify-content: center;
   width: 100%;
+  font-family: $fontfamily;
+
   .proj-subtitle {
     height: auto;
-    margin: .67em 0 0.67em 0.3em;
-  h1{
-  font-size: 1rem !important;
-}
+    margin: 0.67em 0 0.67em 0.3em;
+    font-family: $fontfamily;
+
+    h1 {
+      font-size: 1rem !important;
+      font-family: $fontfamily;
+
+    }
   }
 }
-
-.section-credits.content-wrapper{
+.section-credits.content-wrapper {
   display: flex;
   justify-content: space-between;
   width: 80vw;
   position: relative;
   height: 100%;
-  h3{
-line-height: 1rem;
+  h3 {
+    line-height: 1rem;
+  }
 }
-}
-
 .page-title {
   flex: 0 0 100%;
   text-align: left;
-  h1{
-margin: 1rem 0 1rem 0;
-text-transform: uppercase;
-}
-}
+  h1 {
+    margin: 1rem 0;
+    text-transform: uppercase;
+    font-family: $fontfamily;
 
-.col-one, .col-two {
+  }
+}
+.col-one,
+.col-two {
   width: 35vw;
 }
-
 .col-one {
   order: 1;
 }
-
 .col-two {
   order: 2;
-  img{
-  height: 40vh;
-  width: 35vw;
-  margin-bottom: .75rem;
+  img {
+    height: 40vh;
+    width: 35vw;
+    margin-bottom: 0.75rem;
   }
+  h3{
+    font-family: $fontfamily;
 }
-
-.proj-description p{
-color: black;
 }
+.proj-description p {
+  color: black;
+  font-family: $fontfamily;
 
+}
 .proj-detail-wrap {
   display: block;
   margin: 0 0 1.5em;
   font-size: 1rem;
   font-weight: normal;
+  font-family: $fontfamily;
+
+}
+.full-width-col {
+  margin: 1rem 0 9rem;
+  font-family: $fontfamily;
+  display: block;
+
+}
+.tags-wrapper {
+  margin-top: 0.75rem;
 }
 
-.full-width-col{
-margin: 1rem 0 10rem 0;
-}
-
-.tags-wrapper{
-margin-top: .75rem;
+.proj-scalability{
+  font-family: $fontfamily;
 }
