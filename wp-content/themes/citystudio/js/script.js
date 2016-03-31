@@ -73,7 +73,6 @@ jQuery(document).ready(function($){
         checkedPart: '',
         checkedYear: ''
     };
-
     $('.foot-sub-menu label').hide();
     $('.neigh-labels').hide();
     $('.part-labels').hide();
@@ -84,7 +83,6 @@ jQuery(document).ready(function($){
       }, function() {
         $(this).removeClass('current-menu');
     });
-
 //     $( "td" ).hover(
 //  function() {
 //    $( this ).addClass( "hover" );
@@ -130,9 +128,7 @@ jQuery(document).ready(function($){
             reloadProjects();
         } // close if
     }); // close sub-menu-year
-​
     function reloadProjects() {
-​
         $.ajax({
           type: 'GET',
           dataType: 'json',
@@ -147,5 +143,4 @@ jQuery(document).ready(function($){
               //relaoad the UI
           }); // close ajax call
   } // close reload projects})
-​
 });
