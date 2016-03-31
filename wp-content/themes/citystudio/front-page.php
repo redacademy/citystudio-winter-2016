@@ -22,7 +22,7 @@ get_header(); ?>
 
 	<?php endwhile; ?>
 
-	<ul class="bxslider">
+	<ul class="home-slider">
 
 		<?php
 			 $args = array( 'post_type' => 'project', 'numberposts' => 10 );
@@ -34,8 +34,10 @@ get_header(); ?>
 						<?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
 						<li style="background: url('<?php echo $background; ?>') no-repeat center; background-size: cover; border: 1px solid lightgrey;">
-							<div class="description">
-								<span class="home-description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>	<?php echo CFS()->get( 'subtitle' ); ?>
+							<div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
+	             <div class="subtitle"><?php echo CFS()->get( 'subtitle' ); ?></div>
+                <br>
+								<span class="home-description"><?php echo CFS()->get( 'excerpt' ); ?>
 								</span>
 							</div>
 						</li>

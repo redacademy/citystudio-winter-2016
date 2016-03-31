@@ -1,14 +1,12 @@
 
 jQuery(document).ready(function($){
 
-  $('.bxslider').bxSlider({
-    mode: 'horizontal',
-    infiniteLoop: true,
-    speed: 2000,
-    pause: 6000,
-    auto: true,
-    pager: false,
-    controls: true
+  $('.home-slider').flickity({
+    cellAlign: 'left',
+    contain: true,
+    initialIndex: 0,
+    accessibility: true,
+    wrapAround: true
   });
 
   $('.main-carousel').flickity({
@@ -30,21 +28,19 @@ jQuery(document).ready(function($){
     'lower-regular-2',
     'lower-regular-3',
     'lower-regular-4',
-    'lower-regular-5'
-  ];
+    'lower-regular-5',
+    'lower-regular-6'
+    ];
 
   $('.gallery-anchor').each(function(){
     var i = $(this).index();
-
     if( i === 0 ){
       $(this).addClass(gallery[0]);
     }
     if( i === 1 ){
-      $(this).addClass('flex');
       $(this).addClass(gallery[1]);
     }
     if( i === 2 ){
-      $(this).addClass('flex');
       $(this).addClass(gallery[2]);
     }
     if( i === 3 ){
@@ -71,22 +67,49 @@ jQuery(document).ready(function($){
     if( i === 10 ){
       $(this).addClass(gallery[10]);
     }
-  }); //close each funtciont
 
-  var queryFilter = {
-    checkedNeigh: '',
-    checkedPart: '',
-    checkedYear: ''
-  };
-
-  $('.foot-sub-menu label').hide();
-  $('.neigh-labels').hide();
-  $('.part-labels').hide();
-  $('.year-labels').hide();
-
-  $('.menu-item').hover(function() {
-    $(this).children('.foot-sub-menu').toggleClass('current-menu');
   });
+});
+
+/* Jquery for Footer Navigation -- should go in own file soon */
+
+jQuery(document).ready(function($) {
+
+    var checkedNeigh = '';
+    var checkedPart = '';
+
+    $('.foot-sub-menu label').hide();
+    $('.neigh-labels').hide();
+    $('.part-labels').hide();
+
+    $('.menu-item').hover(function(){
+      	  $(this).children('.foot-sub-menu').toggleClass('current-menu');
+    });
+
+    $('.sub-menu-neigh').click(function() {
+        if($(this.checked)){
+           checkedNeigh += ($(this).text());
+           $('.neigh-labels').show().append('<label>'+checkedNeigh+'</label>');
+           $('.foot-sub-menu').hide();
+      }
+    });
+
+    $('.sub-menu-part').click(function() {
+        if($(this.checked)){
+           checkedPart += ($(this).text());
+           $('.part-labels').show().append('<label>'+checkedPart+'</label>');
+           $('.foot-sub-menu').hide();
+      }
+    });
+
+
+    // $('.sub-menu-item span').click(function(){
+    //     $('.foot-sub-menu').hide();
+    //     $('').show();
+    // });
+
+
+    /* Jquery for header and footer display*/
 
   $('.sub-menu-neigh').click(function() {
     if ($(this.checked)) {
@@ -127,8 +150,9 @@ jQuery(document).ready(function($){
         $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]=' + queryFilter.neighValue + '+' + queryFilter.yearValue + '+' + queryFilter.partValue,
+          url: api_vars.rest_url + 'wp/v2/project?filter[neighbourhood]=' + queryFilter.neighValue + '+?filter[partner]=' + queryFilter.partValue + '+?filter[year]=' + queryFilter.partValue,
           success: function(response) {
+            debugger;
             // alert('Got the Values' + partValue + yearValue + neighValue);
             console.log(response);
           }, // close success
@@ -137,4 +161,5 @@ jQuery(document).ready(function($){
               //relaoad the UI
           }); // close ajax call
   } // close reload projects})
+
 });
