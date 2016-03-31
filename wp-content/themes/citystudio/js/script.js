@@ -10,6 +10,14 @@ jQuery(document).ready(function($){
     controls: true
   });
 
+  $('.main-carousel').flickity({
+    cellAlign: 'left',
+    contain: true,
+    initialIndex: 0,
+    accessibility: true,
+    prevNextButtons: false
+  });
+
   var gallery = [
     'featured-square-1',
     'upper-mini-1',

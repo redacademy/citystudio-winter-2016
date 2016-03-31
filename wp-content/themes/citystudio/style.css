@@ -437,7 +437,7 @@ table {
           flex-wrap: wrap;
   margin: 0 auto;
   max-width: 1070px;
-  padding: 0 2em; }
+  padding: 0 .75em; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -1015,70 +1015,6 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* Single Project page */
-.type-project header {
-  background-size: cover !important;
-  background-position: top center !important;
-  min-height: 500px; }
-
-.section-header {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%; }
-  .section-header .proj-subtitle {
-    height: auto;
-    margin: .67em 0 0.67em 0.3em; }
-
-.section-credits.content-wrapper {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%; }
-
-.page-two-title {
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  text-align: center; }
-
-.col-one, .col-two {
-  -webkit-flex: 0 0 40%;
-      -ms-flex: 0 0 40%;
-          flex: 0 0 40%; }
-
-.col-one {
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
-
-.col-two {
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
-
-.proj-detail-wrap {
-  display: inline-block;
-  margin: 0 0 1.5em; }
-
 /* Tag Archive Page */
 .tag-archive header {
   -webkit-flex-basis: 100%;
@@ -1328,28 +1264,103 @@ object {
 /*--------------------------------------------------------------
 # Slider Styles
 --------------------------------------------------------------*/
-/* Project Page Slider */
+/* Project Page */
+.single-projects {
+  border-top: 1px solid #00A0DC; }
+
 .project .bx-wrapper .bx-viewport {
   box-shadow: none !important; }
 
-.bx-wrapper img {
-  width: 100vw !important;
-  height: 75vh; }
-
-.entry-header img {
-  width: 100vw;
-  height: 75vh;
-  margin: 0; }
+.entry-header {
+  margin-top: 1rem; }
+  .entry-header img {
+    width: 100vw;
+    height: 75vh;
+    margin: .5rem 0 0 0; }
 
 img.wp-post-image {
   width: 100vw;
   height: 75vh;
-  margin: 0; }
+  margin: .5rem 0 0 0; }
 
-.bx-viewport {
-  margin-top: 2em; }
+.carousel-cell {
+  width: 100vw; }
 
-.project .bx-wrapper {
+.type-project header {
+  background-size: cover !important;
+  background-position: top center !important;
+  min-height: 500px; }
+
+.section-header {
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%; }
+  .section-header .proj-subtitle {
+    height: auto;
+    margin: .67em 0 0.67em 0.3em; }
+    .section-header .proj-subtitle h1 {
+      font-size: 1rem !important; }
+
+.section-credits.content-wrapper {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 80vw;
+  position: relative;
+  height: 100%; }
+  .section-credits.content-wrapper h3 {
+    line-height: 1rem; }
+
+.page-title {
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  text-align: left; }
+  .page-title h1 {
+    margin: 1rem 0 1rem 0;
+    text-transform: uppercase; }
+
+.col-one, .col-two {
+  width: 35vw; }
+
+.col-one {
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
+
+.col-two {
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
+  .col-two img {
+    height: 40vh;
+    width: 35vw;
+    margin-bottom: .75rem; }
+
+.proj-description p {
+  color: black; }
+
+.proj-detail-wrap {
+  display: block;
+  margin: 0 0 1.5em;
+  font-size: 1rem;
+  font-weight: normal; }
+
+.full-width-col {
+  margin: 1rem 0 10rem 0; }
+
+.tags-wrapper {
+  margin-top: .75rem; }

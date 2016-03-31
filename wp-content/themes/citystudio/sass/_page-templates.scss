@@ -2,59 +2,6 @@
 # Page Templates
 --------------------------------------------------------------*/
 
-/* Single Project page */
-
-.type-project header {
-  background-size: cover !important;
-  background-position: top center !important;
-  min-height: 500px;
-}
-
-.section-header {
-  display: flex;
-  flex-basis: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 100%;
-
-  .proj-subtitle {
-    height: auto;
-    margin: .67em 0 0.67em 0.3em;
-  }
-}
-
-.section-credits.content-wrapper{
-  display: flex;
-  flex-basis: 100%;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.page-two-title {
-  flex: 0 0 100%;
-  text-align: center;
-}
-
-.col-one, .col-two {
-  flex: 0 0 40%;
-}
-
-.col-one {
-  order: 1;
-}
-
-.col-two {
-  order: 2;
-}
-
-
-.proj-detail-wrap {
-  display: inline-block;
-  margin: 0 0 1.5em;
-}
-
-
 /* Tag Archive Page */
 
 .tag-archive {
