@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($){
 
   $('.bxslider').bxSlider({
@@ -105,15 +104,6 @@ jQuery(document).ready(function($) {
            $(this).parent().hide();
       }
     });
-
-
-    // $('.sub-menu-item span').click(function(){
-    //     $('.foot-sub-menu').hide();
-    //     $('').show();
-    // });
-
-
-    /* Jquery for header and footer display*/
-
+    function reloadProjects(){
 
 });
