@@ -84,8 +84,22 @@ jQuery(document).ready(function($) {
     $('.year-labels').hide();
 
     $('.menu-item').hover(function() {
-        $(this).children('.foot-sub-menu').toggleClass('current-menu');
+        $(this).children('.foot-sub-menu').addClass('current-menu');
+      }, function() {
+        $(this).removeClass('current-menu');
     });
+
+//     $( "td" ).hover(
+//  function() {
+//    $( this ).addClass( "hover" );
+//  }, function() {
+//    $( this ).removeClass( "hover" );
+//  }
+// );
+
+  //   $('.nav-div').on('hover', '.menu-item', function(el) {
+  //      $(this).children('.foot-sub-menu').toggleClass('current-menu');
+  //  });
 
     $('.sub-menu-neigh').click(function() {
         if ($(this.checked)) {

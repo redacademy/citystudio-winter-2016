@@ -889,7 +889,9 @@ a {
     cursor: pointer; }
   .foot-sub-menu .sub-menu-neigh span, .foot-sub-menu .sub-menu-part span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover {
+  .foot-sub-menu .sub-menu-year span {
+    color: #0082b9; }
+  .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover, .foot-sub-menu .sub-menu-year span:hover {
     color: #00A0DC;
     cursor: pointer; }
 
@@ -920,6 +922,7 @@ a {
     width: 0;
     height: 0;
     border-style: solid;
+    color: #0082b9;
     border-width: 20px 20px 0;
     border-color: #fff transparent transparent;
     position: absolute;
@@ -929,7 +932,7 @@ a {
 .year {
   position: absolute;
   bottom: 100px;
-  left: 0px; }
+  left: 4px; }
   .year::after {
     content: '';
     width: 0;
@@ -1082,7 +1085,7 @@ object {
 
 .hero {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url(../../images/Front-page-background-image.png) no-repeat center;
   background-size: cover;
   display: -webkit-flex;
