@@ -19,11 +19,11 @@
 									<span>Kitsilano</span>
 								</li>
 								<li class="sub-menu-neigh" id="pleasant">
-									<input type="checkbox" name="neighbourhood" value="pleasant" />
+									<input type="checkbox" name="neighbourhood" value="mt-pleasant" />
 									<span>Mt. Pleasant</span>
 								</li>
 								<li class="sub-menu-neigh" id="commercial">
-									<input type="checkbox" name="neighbourhood" value="commercial" />
+									<input type="checkbox" name="neighbourhood" value="commercial-dr" />
 									<span>Commercial Dr.</span>
 								</li>
 							</ul>
