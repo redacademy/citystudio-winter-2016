@@ -166,6 +166,7 @@ jQuery(document).ready(function($) {
     });
 
     function reloadProjects(){
+
     $('.sub-menu-year').click(function() {
         if ($(this.checked)) {
             yearValue = $(this).find('input').val();
