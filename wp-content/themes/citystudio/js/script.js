@@ -110,7 +110,6 @@ jQuery(document).ready(function($){
       reloadProjects();
     }
   });
-
   $('.sub-menu-year').click(function() {
     if ($(this.checked)) {
       yearValue = $(this).find('input').val();
@@ -123,11 +122,8 @@ jQuery(document).ready(function($){
       } // close if
     }); // close sub-menu-year
 
-    console.log(queryFilter);
-
     function reloadProjects() {
 
-      console.log(queryFilter);
         $.ajax({
           type: 'GET',
           dataType: 'json',
@@ -140,6 +136,5 @@ jQuery(document).ready(function($){
               // query Database - reqgiester the AJAX and write query in PHP
               //relaoad the UI
           }); // close ajax call
-
   } // close reload projects})
 });
