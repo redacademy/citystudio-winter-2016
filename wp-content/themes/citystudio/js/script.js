@@ -131,8 +131,9 @@ jQuery(document).ready(function($){
         $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]=' + queryFilter.neighValue + '+' + queryFilter.yearValue + '+' + queryFilter.partValue,
+          url: api_vars.rest_url + 'wp/v2/project?filter[neighbourhood]=' + queryFilter.neighValue + '+?filter[partner]=' + queryFilter.partValue + '+?filter[year]=' + queryFilter.partValue,
           success: function(response) {
+            debugger;
             // alert('Got the Values' + partValue + yearValue + neighValue);
             console.log(response);
           }, // close success
