@@ -1,4 +1,3 @@
-
 jQuery(document).ready(function($){
 
   $('.bxslider').bxSlider({
@@ -10,7 +9,6 @@ jQuery(document).ready(function($){
     pager: false,
     controls: true
   });
-
   $('.main-carousel').flickity({
     cellAlign: 'left',
     contain: true,
@@ -18,7 +16,6 @@ jQuery(document).ready(function($){
     accessibility: true,
     prevNextButtons: false
   });
-
   var gallery = [
     'featured-square-1',
     'upper-mini-1',
@@ -121,9 +118,7 @@ jQuery(document).ready(function($){
       reloadProjects();
       } // close if
     }); // close sub-menu-year
-
     function reloadProjects() {
-
         $.ajax({
           type: 'GET',
           dataType: 'json',
@@ -138,4 +133,5 @@ jQuery(document).ready(function($){
               //relaoad the UI
           }); // close ajax call
   } // close reload projects})
+
 });
