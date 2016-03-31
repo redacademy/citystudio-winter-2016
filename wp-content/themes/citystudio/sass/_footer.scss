@@ -111,6 +111,7 @@
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
+
 }
 
 .refresh{
@@ -142,10 +143,13 @@
       cursor: pointer;
     }
 
-    .sub-menu-neigh span, .sub-menu-part span {
+    .sub-menu-neigh span, .sub-menu-part span{
       color: $medium-blue;
     }
-    .sub-menu-neigh span:hover, .sub-menu-part span:hover {
+     .sub-menu-year span {
+       color: $medium-blue;
+     }
+    .sub-menu-neigh span:hover, .sub-menu-part span:hover, .sub-menu-year span:hover  {
       color: $light-blue;
       cursor: pointer;
     }
@@ -183,6 +187,7 @@
       width: 0;
       height: 0;
       border-style: solid;
+     color: $medium-blue;
       border-width: 20px 20px 0;
       border-color: #fff transparent transparent;
       position: absolute;
@@ -194,7 +199,7 @@
 .year {
   position: absolute;
   bottom: 100px;
-  left: 0px;
+  left: 4px;
 
     &::after {
       content: '';

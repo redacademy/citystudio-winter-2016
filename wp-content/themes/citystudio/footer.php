@@ -54,15 +54,15 @@
 						<div class="years menu-item">
 							<ul class="foot-sub-menu year">
 								<li><span class="menu-title">Year</span></li>
-								<li class="sub-menu-year" id="SFU">
+								<li class="sub-menu-year" id="2014">
 									<input type="checkbox" name="year" value="2014" />
 									<span>2014</span>
 								</li>
-								<li class="sub-menu-year" id="ubc">
+								<li class="sub-menu-year" id="2015">
 									<input type="checkbox" name="year" value="2015" />
 									<span>2015</span>
 								</li>
-								<li class="sub-menu-year" id="bcit">
+								<li class="sub-menu-year" id="2016">
 									<input type="checkbox" name="year" value="2016" />
 									<span>2016</label>
 								</li>
