@@ -863,7 +863,9 @@ a {
     cursor: pointer; }
   .foot-sub-menu .sub-menu-neigh span, .foot-sub-menu .sub-menu-part span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover {
+  .foot-sub-menu .sub-menu-year span {
+    color: #0082b9; }
+  .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover, .foot-sub-menu .sub-menu-year span:hover {
     color: #00A0DC;
     cursor: pointer; }
 
@@ -894,6 +896,7 @@ a {
     width: 0;
     height: 0;
     border-style: solid;
+    color: #0082b9;
     border-width: 20px 20px 0;
     border-color: #fff transparent transparent;
     position: absolute;
@@ -903,7 +906,7 @@ a {
 .year {
   position: absolute;
   bottom: 100px;
-  left: 0px; }
+  left: 4px; }
   .year::after {
     content: '';
     width: 0;
