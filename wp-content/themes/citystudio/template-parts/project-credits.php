@@ -14,18 +14,27 @@
   </div>
 
   <div class="col-one">
-    <?php
-        $terms = get_terms('product-type');
-    ?>
-
     <span class="proj-partners proj-detail-wrap">
       <h3>School &amp; Course:</h3>
-      <?php if (!empty($partner)) : ?>
-      <?php foreach ($partners as $partner) : ?>
-      <?php echo $partner->name; ?>
-      <?php endforeach; ?>
+
+    <?php
+      $terms = get_the_terms( get_the_ID(), 'partner' );
+      if ( $terms && ! is_wp_error( $terms ) ) :
+
+        $partner_links = array();
+
+        foreach ( $terms as $term ) {
+            $partner_links[] = $term->name;
+        }
+
+        $partner = join( ", ", $partner_links );
+      ?>
+
+  <?php printf( esc_html__( 'On draught: <span>%s</span>', 'textdomain' ), esc_html( $partner ) ); ?>
+
+    <?php endif; ?>
     </span>
-      <?php endif; ?>
+
 
     <span class="proj-faculty proj-detail-wrap">
       <h3>Faculty Member:</h3>

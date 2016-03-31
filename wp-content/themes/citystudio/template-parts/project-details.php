@@ -24,8 +24,7 @@
 
 		<h3>Scalability:</h3><span class="proj-scalability"><?php echo CFS()->get( 'scalability' ); ?></span>
 	</div>
-
-	</div>
+</div>
 
 	<div class="section-credits content-wrapper">
 		<div class="full-width-col">

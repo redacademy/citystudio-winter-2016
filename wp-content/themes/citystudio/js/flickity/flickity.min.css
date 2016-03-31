@@ -47,12 +47,11 @@ http://flickity.metafizzy.co
 .flickity-prev-next-button {
   position: absolute;
   top: 50%;
-  width: 44px;
-  height: 44px;
+  width: 75px;
+  height: 100px;
   border: none;
   border-radius: 50%;
-  background: white;
-  background: hsla(0, 0%, 100%, 0.75);
+  background: transparent;
   cursor: pointer;
   /* vertically center */
   -webkit-transform: translateY(-50%);
@@ -60,7 +59,7 @@ http://flickity.metafizzy.co
           transform: translateY(-50%);
 }
 
-.flickity-prev-next-button:hover { background: white; }
+.flickity-prev-next-button:hover { background: transparent; }
 
 .flickity-prev-next-button:focus {
   outline: none;
@@ -99,12 +98,21 @@ http://flickity.metafizzy.co
 }
 
 .flickity-prev-next-button .arrow {
-  fill: #333;
+  fill:#0198d5;
+}
+
+.flickity-prev-next-button .arrow:hover{
+  fill:#0082b9;
 }
 
 /* color & size if no SVG - IE8 and Android 2.3 */
 .flickity-prev-next-button.no-svg {
-  color: #333;
+  color: #0198d5;
+  font-size: 26px;
+}
+
+.flickity-prev-next-button.no-svg:hover{
+  color:#0082b9;
   font-size: 26px;
 }
 
