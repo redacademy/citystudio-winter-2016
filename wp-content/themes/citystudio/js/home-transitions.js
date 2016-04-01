@@ -1,7 +1,7 @@
 jQuery(document).ready(function($) {
 	$('.container').hide();
 	if ($('.home')[0]){
-	    $('.site-header').hide();
+	    // $('.site-header').hide();
 			$('footer').hide();
 	} else {
 		$('.site-header').show();
