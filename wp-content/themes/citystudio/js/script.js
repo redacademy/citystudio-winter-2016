@@ -6,7 +6,8 @@ jQuery(document).ready(function($) {
     contain: true,
     initialIndex: 0,
     accessibility: true,
-    wrapAround: true
+    wrapAround: true,
+    autoPlay: true
   });
 
   $('.main-carousel').flickity({
@@ -15,7 +16,8 @@ jQuery(document).ready(function($) {
     initialIndex: 0,
     accessibility: true,
     wrapAround: true,
-    prevNextButtons: false
+    prevNextButtons: false,
+    autoPlay: true
   });
 
   var gallery = [

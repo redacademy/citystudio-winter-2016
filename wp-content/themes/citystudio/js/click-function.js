@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 	$('.container').hide();
-	if ($('.home')[0]){
+	if ($('.home')){
 	    $('.site-header').hide();
 			$('footer').hide();
 	} else {
@@ -10,7 +10,6 @@ jQuery(document).ready(function($) {
 
 	$( "#button" ).click(function() {
     $('.hero').slideUp();
-    $('.container').show();
     $('.container').slideDown();
   $('.site-header').show();
   $('.site-footer').show();
