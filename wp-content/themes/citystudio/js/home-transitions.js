@@ -8,7 +8,7 @@ jQuery(document).ready(function($) {
 		$('footer').show();
 	}
 
-	$( "#button" ).click(function() {
+	$( '#button' ).click(function() {
     $('.hero').slideUp();
     $('.container').show();
     $('.container').slideDown();

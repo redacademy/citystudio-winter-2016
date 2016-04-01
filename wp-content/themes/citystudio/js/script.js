@@ -143,4 +143,5 @@ jQuery(document).ready(function($){
               //relaoad the UI
           }); // close ajax call
   } // close reload projects})
+
 });
