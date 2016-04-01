@@ -7,11 +7,10 @@ jQuery(document).ready(function($) {
     $('.site-header').show();
     $('footer').show();
   }
-
   $('#button').click(function() {
     $('.hero').slideUp();
     $('.container').slideDown();
-    $('.site-header').show();
-    $('.site-footer').show();
-  });
+ 	  $('.site-header').show();
+  	$('.site-footer').show();
+   });
 });

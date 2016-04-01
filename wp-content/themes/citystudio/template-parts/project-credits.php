@@ -17,6 +17,16 @@
     <span class="proj-partners proj-detail-wrap">
       <h3>School &amp; Course:</h3>
 
+    <?php  $terms = get_the_terms( $post, 'partners' );
+      if ( !empty($terms)) : ?>
+
+        <?php foreach ( $terms as $term )  : ?>
+
+            <?php echo $term->name; ?>
+
+      <?php endforeach; ?>
+      <?php endif; ?>
+      
     </span>
 
 
