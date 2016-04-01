@@ -1,6 +1,4 @@
-jQuery(document).ready(function($) {
-
-
+jQuery(document).ready(function($){
   $('.home-slider').flickity({
     cellAlign: 'left',
     contain: true,
@@ -8,16 +6,13 @@ jQuery(document).ready(function($) {
     accessibility: true,
     wrapAround: true
   });
-
   $('.main-carousel').flickity({
-    cellAlign: 'left',
-    contain: true,
-    initialIndex: 0,
-    accessibility: true,
-    wrapAround: true,
-    prevNextButtons: false
+      cellAlign: 'left',
+      contain: true,
+      initialIndex: 0,
+      accessibility: true,
+      prevNextButtons: false
   });
-
   var gallery = [
     'featured-square-1',
     'upper-mini-1',
@@ -33,49 +28,51 @@ jQuery(document).ready(function($) {
     'lower-regular-6'
     ];
 
-  $('.gallery-anchor').each(function(){
-    var i = $(this).index();
-    if( i === 0 ){
-      $(this).addClass(gallery[0]);
-    }
-    if( i === 1 ){
-      $(this).addClass(gallery[1]);
-    }
-    if( i === 2 ){
-      $(this).addClass(gallery[2]);
-    }
-    if( i === 3 ){
-      $(this).addClass(gallery[3]);
-    }
-    if( i === 4 ){
-      $(this).addClass(gallery[4]);
-    }
-    if( i === 5 ){
-      $(this).addClass(gallery[5]);
-    }
-    if( i === 6 ){
-      $(this).addClass(gallery[6]);
-    }
-    if( i === 7 ){
-      $(this).addClass(gallery[7]);
-    }
-    if( i === 8 ){
-      $(this).addClass(gallery[8]);
-    }
-    if( i === 9 ){
-      $(this).addClass(gallery[9]);
-    }
-    if( i === 10 ){
-      $(this).addClass(gallery[10]);
-    }
-}); //close each funtciont
+    $('.gallery-anchor').each(function() {
+        var i = $(this).index();
+
+        if (i === 0) {
+            $(this).addClass(gallery[0]);
+        }
+        if (i === 1) {
+            $(this).addClass('flex');
+            $(this).addClass(gallery[1]);
+        }
+        if (i === 2) {
+            $(this).addClass('flex');
+            $(this).addClass(gallery[2]);
+        }
+        if (i === 3) {
+            $(this).addClass(gallery[3]);
+        }
+        if (i === 4) {
+            $(this).addClass(gallery[4]);
+        }
+        if (i === 5) {
+            $(this).addClass(gallery[5]);
+        }
+        if (i === 6) {
+            $(this).addClass(gallery[6]);
+        }
+        if (i === 7) {
+            $(this).addClass(gallery[7]);
+        }
+        if (i === 8) {
+            $(this).addClass(gallery[8]);
+        }
+        if (i === 9) {
+            $(this).addClass(gallery[9]);
+        }
+        if (i === 10) {
+            $(this).addClass(gallery[10]);
+        }
+    }); //close each funtciont
 
     var queryFilter = {
         checkedNeigh: '',
         checkedPart: '',
         checkedYear: ''
     };
-
     $('.foot-sub-menu label').hide();
     $('.neigh-labels').hide();
     $('.part-labels').hide();
@@ -86,7 +83,6 @@ jQuery(document).ready(function($) {
       }, function() {
         $(this).removeClass('current-menu');
     });
-
 //     $( "td" ).hover(
 //  function() {
 //    $( this ).addClass( "hover" );
@@ -132,23 +128,20 @@ jQuery(document).ready(function($) {
             reloadProjects();
         } // close if
     }); // close sub-menu-year
-
-    console.log(queryFilter);
-
     function reloadProjects() {
-
-      console.log(queryFilter);
         $.ajax({
-            type: 'GET',
-            dataType: 'json',
-            url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]=' + queryFilter.neighValue + '+' + queryFilter.yearValue + '+' + queryFilter.partValue,
-            success: function(response) {
-                // alert('Got the Values' + partValue + yearValue + neighValue);
-                console.log(response);
-            }, // close success
-            // make ajax request
-            // query Database - reqgiester the AJAX and write query in PHP
-            //relaoad the UI
-        }); // close ajax call
-    } // close reload projects})
+          type: 'GET',
+          dataType: 'json',
+          url: api_vars.rest_url + 'wp/v2/project?filter[neighbourhood]=' + queryFilter.neighValue + '+?filter[partner]=' + queryFilter.partValue + '+?filter[year]=' + queryFilter.partValue,
+          success: function(response) {
+            debugger;
+            // alert('Got the Values' + partValue + yearValue + neighValue);
+            console.log(response);
+          }, // close success
+              // make ajax request
+              // query Database - reqgiester the AJAX and write query in PHP
+              //relaoad the UI
+          }); // close ajax call
+  } // close reload projects})
+
 });

@@ -5,9 +5,11 @@
  * Template Name: Front-page
  */
 get_header(); ?>
+
 <div class="front-page-main">
     <div class="hero">
         <div class="hero-logo">
+
         </div>
         <div class="site-description">
             <p>

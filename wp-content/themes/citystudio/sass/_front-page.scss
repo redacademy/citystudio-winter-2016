@@ -23,8 +23,8 @@
 .hero-logo{
 	background: url(../../images/citystudio-logo-trans.png) no-repeat center;
 	background-size: 60vw;
-	height: 40%;
 	margin-top: 4rem;
+	height: 40%;
 }
 
 .site-description{
@@ -34,7 +34,7 @@
 	p{
 	font-family: $fontfamily;
 	font-size: 1.5rem;
-text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
+	text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
 	color: white;
 	text-align: center;
 	}
@@ -46,6 +46,10 @@ text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
 	margin: 0 auto 2rem;
 	padding: 3% 3%;
     outline: 0;
+	@include desktop {
+
+	}
+
 }
 
 .loader{

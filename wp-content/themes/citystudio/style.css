@@ -655,6 +655,10 @@ a {
           justify-content: space-between;
   margin: 1rem; }
 
+@media screen and (min-width: 480px) {
+  .site-header {
+    display: none; } }
+
 .site-branding img {
   width: 45%;
   padding: 0.5rem 0 0 0.5rem; }
@@ -875,7 +879,7 @@ a {
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 1.8s ease-in; }
+  transition: all 1.9s ease-in; }
 
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
@@ -1101,8 +1105,8 @@ object {
 .hero-logo {
   background: url(../../images/citystudio-logo-trans.png) no-repeat center;
   background-size: 60vw;
-  height: 40%;
-  margin-top: 4rem; }
+  margin-top: 4rem;
+  height: 40%; }
 
 .site-description {
   margin: 0 auto;
