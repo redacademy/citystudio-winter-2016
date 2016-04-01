@@ -1,21 +1,35 @@
 .site-footer{
-  width: 100vw;
-  background-color: $dark-blue;
+ 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 1;
+  flex-direction: column;
+  @include desktop{
+    width: 100vw;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .social-icons-div {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   ul{
 	  list-style: none;
     display: flex;
-    margin: auto 0;
+    margin: 0 auto;
   }
+
+  @include desktop{
+    flex-direction: column;
+    ul{
+      list-style: none;
+      display: flex;
+      margin: auto 0;
+      }  
+    }
 }
 
 .social-icons{
@@ -36,19 +50,36 @@
 /* Footer Navigation */
 
 .nav{
-  width: 70vw;
+
+  width: 100vw;
+
+  @include desktop{
+  width: 90vw;
+  }
 }
 
 .nav-div{
     background-color: #76d6ff;
     max-height: 85px;
-    width: 80px;
-    margin: 3rem 3rem;
+    width: 85px;
+    margin: 3rem 0;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: all .5s ease-in;
+
+    @include desktop{
+      background-color: #76d6ff;
+      max-height: 85px;
+      width: 80px;
+      margin: 3rem 3rem;
+      border-radius: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all .5s ease-in;
+    }
 }
 
 .sort{
@@ -56,22 +87,32 @@
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 88px;
-  max-height: 85px;
-  padding: 30px 20px;
+  max-width: 5.2rem;
+  max-height: 5.3rem;
+  padding: 1.9rem 1rem;
   border-radius: 70px;
   background-color: #0082b9;
   &:hover{
     cursor: pointer;
   }
+   @include desktop{
+    width: 100vw;    
+  }
+
 }
 
 .open{
-  width: 70%
+  width: 100%;
+  @include desktop{
+  width: 70%;
+  }
 }
 
 .close{
-  width: 80px;
+  width: 3rem;
+  @include desktop{
+    width: 5rem;
+  }
 }
 
 .menu-item{
@@ -88,8 +129,8 @@
 .neighbourhood{
   background: url(../../assets/neighbourhood-icon.png) no-repeat center;
   background-size: 40px 60px;
-  width: 88px;
-  height: 85px;
+  width: 5.4rem;
+  height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.4s ease-in;
@@ -99,8 +140,8 @@
 .partners{
   background: url(../../assets/partners-icon.png) no-repeat center;
   background-size: 50px 70px;
-  width: 88px;
-  height: 85px;
+  width: 5.4rem;
+  height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.6s ease-in;
@@ -110,8 +151,8 @@
 .years{
   background: url(../../assets/in-progress-icon.png) no-repeat center;
   background-size: 45px 50px;
-  width: 88px;
-  height: 85px;
+  width: 5.4rem;
+  height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
@@ -121,12 +162,12 @@
 .refresh{
   background: url(../../assets/refresh.png) no-repeat center;
   background-size: 45px 50px;
-  width: 90px;
-  height: 85px;
+  width: 5.4rem;
+  height: 5.4rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 1.8s ease-in;
+  transition: all 1.9s ease-in;
 }
 
 /* Footer Navigation Menu */

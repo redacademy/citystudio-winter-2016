@@ -1,0 +1,27 @@
+.error-404.not-found {
+  border-top: 2px solid $city-blue;
+  height: 80vh;
+  .page-header,
+  .page-content {
+    margin-left: 1rem;
+    font-family: $fontfamily;
+    fieldset {
+      border: none !important;
+    }
+    .search-field {
+      line-height: 2rem;
+      width: 50vw;
+    }
+    button {
+      background: transparent;
+      border: none;
+margin-top: 5px;
+      .fa {
+        padding: 0;
+        color: #03648c;
+        font-size: 2rem;
+
+      }
+    }
+  }
+}

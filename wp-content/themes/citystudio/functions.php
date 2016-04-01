@@ -50,24 +50,6 @@ function red_starter_content_width() {
 add_action( 'after_setup_theme', 'red_starter_content_width', 0 );
 
 /**
- * Register widget area.
- *
- * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
- */
-function red_starter_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html( 'Sidebar' ),
-		'id'            => 'sidebar-1',
-		'description'   => '',
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
-}
-add_action( 'widgets_init', 'red_starter_widgets_init' );
-
-/**
  * Filter the stylesheet_uri to output the minified CSS file.
  */
 function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
@@ -88,7 +70,7 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 function citystudio_scripts() {
 	wp_enqueue_style ( 'font-awesome-cdn' , 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '4.4.0');
 
-	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array() );
+	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array());
 
 	wp_enqueue_style( 'flickity.min.css', get_template_directory_uri() . '/js/flickity/flickity.min.css', array());
 
@@ -119,13 +101,12 @@ add_action( 'wp_enqueue_scripts', 'citystudio_scripts' );
 function filter_scripts() {
 	$script_url = get_template_directory_uri(). '/build/js/script.min.js';
 
-// wp_enqueue_script('jquery');
-
 	wp_enqueue_script( 'filter_gallery', $script_url, array ( 'jquery' ), false, true);
 
 	wp_localize_script( 'filter_gallery', 'api_vars', array (
 		'rest_url' => esc_url_raw( rest_url() )
 	) );
+
 }
 
 add_action( 'wp_enqueue_scripts', 'filter_scripts' );

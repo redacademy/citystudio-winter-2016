@@ -5,9 +5,11 @@
  * Template Name: Front-page
  */
 get_header(); ?>
+
 <div class="front-page-main">
     <div class="hero">
         <div class="hero-logo">
+
         </div>
         <div class="site-description">
             <p>
@@ -18,9 +20,6 @@ get_header(); ?>
     </div>
 </div>
 <div class="container">
-	<?php while ( have_posts() ) : the_post(); ?>
-
-	<?php endwhile; ?>
 
 	<ul class="home-slider">
 

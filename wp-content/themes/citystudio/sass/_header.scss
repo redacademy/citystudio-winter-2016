@@ -5,6 +5,13 @@
   justify-content: space-between;
   margin: 1rem;
 }
+
+.site-header{
+  @include desktop {
+     display: none;
+  }
+}
+
 .site-branding img {
   width: 45%;
   padding: 0.5rem 0 0 0.5rem;
@@ -34,4 +41,15 @@
   background: url('../../images/gallery-blue.png') no-repeat center;
   background-size: contain;
   margin-bottom: 0.3rem;
+}
+
+.show-header-nav{
+  
+}
+
+.hide-search{
+  display: none;
+  @include desktop{
+     display: inline;
+  }
 }
