@@ -1045,6 +1045,31 @@ a {
 .hide-label {
   display: none !important; }
 
+.error-404.not-found {
+  border-top: 2px solid #0198d5;
+  height: 80vh; }
+  .error-404.not-found .page-header,
+  .error-404.not-found .page-content {
+    margin-left: 1rem;
+    font-family: "open_sans"; }
+    .error-404.not-found .page-header fieldset,
+    .error-404.not-found .page-content fieldset {
+      border: none !important; }
+    .error-404.not-found .page-header .search-field,
+    .error-404.not-found .page-content .search-field {
+      line-height: 2rem;
+      width: 50vw; }
+    .error-404.not-found .page-header button,
+    .error-404.not-found .page-content button {
+      background: transparent;
+      border: none;
+      margin-top: 5px; }
+      .error-404.not-found .page-header button .fa,
+      .error-404.not-found .page-content button .fa {
+        padding: 0;
+        color: #03648c;
+        font-size: 2rem; }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -1158,9 +1183,10 @@ object {
 
 .hero-logo {
   background: url(../../images/citystudio-logo-trans.png) no-repeat center;
-  background-size: 60vw;
+  background-size: 70vw;
+  height: 40vh;
   margin-top: 4rem;
-  height: 40%; }
+  z-index: 999; }
 
 .site-description {
   margin: 0 auto;
@@ -1198,33 +1224,18 @@ object {
 .home-slider .flickity-page-dots {
   display: none; }
 
-.flickity-slider a {
-  max-width: 400px; }
-
 .flickity-slider a li {
   border: .25rem solid white;
   height: 60vh;
-  margin: 0;
+  margin: 0 .25rem;
   width: auto;
   z-index: 1;
   left: 0;
   top: 0; }
 
-.flex-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-
 .featured-square-1 {
   height: 60vh;
   width: 400px !important;
-  background-color: #0082b9;
   overflow-y: hidden;
   -webkit-order: 1;
       -ms-flex-order: 1;
@@ -1232,17 +1243,17 @@ object {
 
 .featured-square-2 {
   height: 60vh;
-  width: 400px !important;
-  background-color: #0082b9;
+  width: 800px !important;
   overflow-y: hidden;
   -webkit-order: 2;
       -ms-flex-order: 2;
           order: 2; }
+  .featured-square-2 .description:hover {
+    background-color: rgba(0, 130, 185, 0.9); }
 
 .featured-square-3 {
   height: 60vh;
   width: 400px !important;
-  background-color: #0082b9;
   overflow-y: hidden;
   -webkit-order: 3;
       -ms-flex-order: 3;
@@ -1251,7 +1262,6 @@ object {
 .featured-square-4 {
   height: 60vh;
   width: 400px !important;
-  background-color: #0082b9;
   overflow-y: hidden;
   -webkit-order: 4;
       -ms-flex-order: 4;
@@ -1260,7 +1270,6 @@ object {
 .upper-mini-1 {
   height: 60vh;
   width: 400px !important;
-  background-color: #0082b9;
   overflow-y: hidden;
   -webkit-order: 5;
       -ms-flex-order: 5;
@@ -1269,7 +1278,6 @@ object {
 .upper-mini-2 {
   height: 60vh;
   width: 400px !important;
-  background-color: #0082b9;
   overflow-y: hidden;
   -webkit-order: 6;
       -ms-flex-order: 6;
@@ -1278,7 +1286,6 @@ object {
 .lower-regular-1 {
   height: 60vh;
   width: 400px !important;
-  background-color: #76d6ff;
   -webkit-order: 7;
       -ms-flex-order: 7;
           order: 7; }
@@ -1286,7 +1293,6 @@ object {
 .lower-regular-2 {
   height: 60vh;
   width: 400px !important;
-  background-color: #76d6ff;
   -webkit-order: 8;
       -ms-flex-order: 8;
           order: 8; }
@@ -1294,23 +1300,23 @@ object {
 .lower-regular-3 {
   height: 60vh;
   width: 400px !important;
-  background-color: #76d6ff;
   -webkit-order: 9;
       -ms-flex-order: 9;
           order: 9; }
 
 .lower-regular-4 {
   height: 60vh;
-  width: 400px !important;
-  background-color: #76d6ff;
+  width: 800px !important;
+  overflow-y: hidden;
   -webkit-order: 10;
       -ms-flex-order: 10;
           order: 10; }
+  .lower-regular-4 .description:hover {
+    background-color: rgba(0, 130, 185, 0.9); }
 
 .lower-regular-5 {
   height: 60vh;
   width: 400px !important;
-  background-color: #76d6ff;
   -webkit-order: 11;
       -ms-flex-order: 11;
           order: 11; }
@@ -1318,7 +1324,6 @@ object {
 .lower-regular-6 {
   height: 60vh;
   width: 400px !important;
-  background-color: #76d6ff;
   -webkit-order: 12;
       -ms-flex-order: 12;
           order: 12; }
@@ -1423,7 +1428,7 @@ span.excerpt {
   position: relative;
   height: 100%; }
   .section-credits.content-wrapper h3 {
-    line-height: 1rem; }
+    line-height: 2rem; }
 
 .page-title {
   -webkit-flex: 0 0 100%;

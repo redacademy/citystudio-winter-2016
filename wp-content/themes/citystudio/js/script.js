@@ -4,14 +4,17 @@ jQuery(document).ready(function($){
     contain: true,
     initialIndex: 0,
     accessibility: true,
-    wrapAround: true
+    wrapAround: true,
+    autoPlay: true
   });
   $('.main-carousel').flickity({
-      cellAlign: 'left',
-      contain: true,
-      initialIndex: 0,
-      accessibility: true,
-      prevNextButtons: false
+    cellAlign: 'left',
+    contain: true,
+    initialIndex: 0,
+    accessibility: true,
+    wrapAround: true,
+    prevNextButtons: false,
+    autoPlay: true
   });
   var gallery = [
     'featured-square-1',

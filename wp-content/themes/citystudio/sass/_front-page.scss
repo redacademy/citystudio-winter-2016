@@ -22,9 +22,10 @@
 
 .hero-logo{
 	background: url(../../images/citystudio-logo-trans.png) no-repeat center;
-	background-size: 60vw;
+	background-size: 70vw;
+	height: 40vh;
 	margin-top: 4rem;
-	height: 40%;
+	z-index: 999;
 }
 
 .site-description{
@@ -76,48 +77,36 @@
 	display: none;
 }
 
-.flickity-slider {
-	a {
-		max-width: 400px;
-	}
-}
-
 .flickity-slider a li {
 	border: .25rem solid white;
 	height: 60vh;
-	margin: 0;
+	margin: 0 .25rem;
 	width: auto;
 	z-index: 1;
 	left: 0;
 	top: 0;
 }
 
-.flex-container{
-display: flex;
-flex-direction: column;
-flex-wrap: wrap;
-}
-
 .featured-square-1{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #0082b9;
 	overflow-y: hidden;
 	order: 1;
 }
 
 .featured-square-2{
 	height: 60vh;
-	width: 400px !important;
-	background-color: #0082b9;
+	width: 800px !important;
 	overflow-y: hidden;
 	order: 2;
+	.description:hover{
+		background-color: transparentize($medium-blue, .1);
+	}
 }
 
 .featured-square-3{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #0082b9;
 	overflow-y: hidden;
 	order: 3;
 }
@@ -125,7 +114,6 @@ flex-wrap: wrap;
 .featured-square-4{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #0082b9;
 	overflow-y: hidden;
 	order: 4;
 }
@@ -133,7 +121,6 @@ flex-wrap: wrap;
 .upper-mini-1{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #0082b9;
 	overflow-y: hidden;
 	order: 5;
 }
@@ -141,7 +128,6 @@ flex-wrap: wrap;
 .upper-mini-2{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #0082b9;
 	overflow-y: hidden;
 	order: 6;
 }
@@ -191,14 +177,12 @@ flex-wrap: wrap;
 .lower-regular-1{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #76d6ff;
 	order: 7;
 }
 
 .lower-regular-2{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #76d6ff;
 	order: 8;
 
 }
@@ -206,28 +190,28 @@ flex-wrap: wrap;
 .lower-regular-3{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #76d6ff;
 	order: 9;
 }
 
 .lower-regular-4{
 	height: 60vh;
-	width: 400px !important;
-	background-color: #76d6ff;
+	width: 800px !important;
+	overflow-y: hidden;
 	order: 10;
+	.description:hover{
+		background-color: transparentize($medium-blue, .1);
+	}
 }
 
 .lower-regular-5{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #76d6ff;
 	order: 11;
 }
 
 .lower-regular-6{
 	height: 60vh;
 	width: 400px !important;
-	background-color: #76d6ff;
 	order: 12;
 }
 
@@ -251,6 +235,7 @@ flex-wrap: wrap;
 	padding: 1.5rem;
 	}
 }
+
 
 .description-title{
 	text-transform: uppercase;
