@@ -42,3 +42,14 @@
   background-size: contain;
   margin-bottom: 0.3rem;
 }
+
+.show-header-nav{
+  
+}
+
+.hide-search{
+  display: none;
+  @include desktop{
+     display: inline;
+  }
+}
