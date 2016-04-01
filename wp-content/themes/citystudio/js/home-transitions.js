@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
     $('.hero').slideUp();
     $('.container').show();
     $('.container').slideDown();
-  $('.site-header').show();
-  $('.site-footer').show();
+ 	$('.site-header').show();
+  	$('.site-footer').show();
    });
 });

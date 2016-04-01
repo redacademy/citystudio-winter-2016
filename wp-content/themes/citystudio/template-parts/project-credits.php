@@ -17,22 +17,16 @@
     <span class="proj-partners proj-detail-wrap">
       <h3>School &amp; Course:</h3>
 
-    <?php
-      $terms = get_the_terms( get_the_ID(), 'partner' );
-      if ( $terms && ! is_wp_error( $terms ) ) :
+    <?php  $terms = get_the_terms( $post, 'partners' );
+      if ( !empty($terms)) : ?>
 
-        $partner_links = array();
+        <?php foreach ( $terms as $term )  : ?>
 
-        foreach ( $terms as $term ) {
-            $partner_links[] = $term->name;
-        }
+            <?php echo $term->name; ?>
 
-        $partner = join( ", ", $partner_links );
-      ?>
-
-  <?php printf( esc_html__( 'On draught: <span>%s</span>', 'textdomain' ), esc_html( $partner ) ); ?>
-
-    <?php endif; ?>
+      <?php endforeach; ?>
+      <?php endif; ?>
+      
     </span>
 
 
