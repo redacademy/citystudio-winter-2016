@@ -11,15 +11,18 @@ jQuery(document).ready(function($) {
  }); // close sort
 
   // Create an empty object to hold the checked navigation values in the properties
-  var queryFilter = {
-      checkedNeigh: '',
-      checkedPart: '',
-      checkedYear: ''
-  };
+  var queryFilter = {};
 
   var neighValue = '',
       partValue = '',
       yearValue = '';
+
+
+  function filters(){
+    return Object.keys(queryFilter).map(function(filter){
+        return queryFilter[filter]
+    }).join('+');
+  }
 
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
@@ -74,15 +77,20 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]=' + queryFilter.neighValue + '+' + queryFilter.yearValue + '+' + queryFilter.partValue,
+          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]='+filters(),
+
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
-          }, // close success
-          // make ajax request
-          // query Database - reqgiester the AJAX and write query in PHP
-          //relaoad the UI
-          
+
+              var $gallery = $('.home-slider');
+
+              $galler.empty();
+
+              $.each();
+
+          } // close success
+
       }); // close ajax call
   } // close reload projects
 }); // document ready
