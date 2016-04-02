@@ -26,7 +26,7 @@
 
       <?php endforeach; ?>
       <?php endif; ?>
-      
+
     </span>
 
 
