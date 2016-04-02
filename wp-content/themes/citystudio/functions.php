@@ -108,8 +108,23 @@ function filter_scripts() {
 	) );
 
 }
-
 add_action( 'wp_enqueue_scripts', 'filter_scripts' );
+
+function slug_register_featured_image_url() {
+    register_rest_field( 'project',
+        'featured_image_url',
+        array(
+            'get_callback'    => 'slug_get_featured_image_url',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action( 'rest_api_init', 'slug_register_featured_image_url' );
+
+function slug_get_featured_image_url( $object, $field_name, $request ) {
+    return wp_get_attachment_url( get_post_thumbnail_id( $object['id'] ));
+}
 
 /**
  * Custom template tags for this theme.
