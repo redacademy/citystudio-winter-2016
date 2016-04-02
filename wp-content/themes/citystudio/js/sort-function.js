@@ -11,9 +11,7 @@ jQuery(document).ready(function($) {
  }); // close sort
 
   // Create an empty object to hold the checked navigation values in the properties
-  var queryFilter = {
-
-  };
+  var queryFilter = {};
 
   var neighValue = '',
       partValue = '',
@@ -71,8 +69,6 @@ jQuery(document).ready(function($) {
       }
   }); // close sub-menu-year
 
-  console.log(queryFilter);
-
   function reloadProjects() {
 
     console.log(queryFilter);
@@ -80,20 +76,18 @@ jQuery(document).ready(function($) {
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]='+filters(),
+
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
 
               var $gallery = $('.home-slider');
 
-              $galler.empty();
+              $gallery.empty();
+
               $.each();
 
-
           } // close success
-          // make ajax request
-          // query Database - reqgiester the AJAX and write query in PHP
-          //relaoad the UI
 
       }); // close ajax call
   } // close reload projects
