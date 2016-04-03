@@ -1,11 +1,11 @@
 jQuery(document).ready(function($) {
   $('.container').hide();
-  if ($('.home')) {
+  if ($('.home')[0]) {
     $('.site-header').hide();
-    $('footer').hide();
+    $('.site-footer').hide();
   } else {
     $('.site-header').show();
-    $('footer').show();
+    $('.site-footer').show();
   }
 
   $('#button').click(function() {

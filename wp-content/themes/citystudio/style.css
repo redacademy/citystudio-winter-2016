@@ -686,10 +686,8 @@ a {
     color: #03648c; }
 
 .icon-gallery {
-  height: 33px;
-  width: 33px;
   background: url("../../images/gallery-blue.png") no-repeat center;
-  background-size: contain;
+  background-size: 33px 33px;
   margin-bottom: 0.3rem; }
 
 .hide-search {
@@ -1161,6 +1159,82 @@ object {
   background-color: #fff;
   border-radius: 5px;
   padding: 1em 2em; }
+
+.searchpage {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0082b9;
+  width: 100vw; }
+  .searchpage .search-container {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .searchpage .search-form {
+    margin-top: 2rem;
+    width: 1040px;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 6rem; }
+  .searchpage ::-webkit-input-placeholder {
+    color: #006496; }
+  .searchpage :-moz-placeholder {
+    color: #006496; }
+  .searchpage ::-moz-placeholder {
+    color: #006496; }
+  .searchpage :-ms-input-placeholder {
+    color: #006496; }
+
+fieldset {
+  border: none; }
+
+input.search-field {
+  border: none;
+  font-size: 44px;
+  font-weight: 600; }
+
+input#s.search-field {
+  color: #0198d5; }
+
+.searchpage {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 70vh; }
+
+.search-list {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 1070px;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.search-item {
+  -webkit-flex: 0 1 30%;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+  width: 275px;
+  height: 225px;
+  margin-top: 2rem; }
 
 .container {
   display: block;

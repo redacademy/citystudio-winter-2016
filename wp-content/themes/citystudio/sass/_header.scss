@@ -36,20 +36,18 @@
 }
 
 .icon-gallery{
-  height: 33px;
-  width: 33px;
   background: url('../../images/gallery-blue.png') no-repeat center;
-  background-size: contain;
+  background-size: 33px 33px;
   margin-bottom: 0.3rem;
 }
 
 .show-header-nav{
-  
+
 }
 
 .hide-search{
   display: none;
-  @include desktop{
+  @include desktop {
      display: inline;
   }
 }

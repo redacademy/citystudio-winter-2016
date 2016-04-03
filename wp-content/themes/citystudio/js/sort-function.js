@@ -82,7 +82,7 @@ jQuery(document).ready(function($) {
           // make ajax request
           // query Database - reqgiester the AJAX and write query in PHP
           //relaoad the UI
-          
+
       }); // close ajax call
   } // close reload projects
 }); // document ready
