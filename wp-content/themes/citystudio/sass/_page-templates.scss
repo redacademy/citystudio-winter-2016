@@ -4,13 +4,13 @@
 
 /* Tag Archive Page */
 
-.tag-archive {
+.tag-archives  {
 
   header {
     flex-basis: 100%;
   }
 
-  article {
+  .section-archive {
     display: flex;
     flex-basis: 100%;
     flex-wrap: wrap;
@@ -18,12 +18,12 @@
   }
 }
 
-.product-type-page {
+.tag-archive {
   background-color: $medium-blue;
   padding-top: 2em;
 }
 
-.single-product-category {
+.archive-header {
   background-color: #fff;
   border-radius: 5px;
   padding: 1em 2em;

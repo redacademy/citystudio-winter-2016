@@ -10,7 +10,7 @@
      display: block;
 }
 
-.site-header{
+.site-header {
   @include desktop {
      display: none;
   }
