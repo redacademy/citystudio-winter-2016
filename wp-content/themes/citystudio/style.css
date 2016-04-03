@@ -689,6 +689,8 @@ a {
     color: #03648c; }
 
 .icon-gallery {
+  height: 33px;
+  width: 33px;
   background: url("../../images/gallery-blue.png") no-repeat center;
   background-size: 33px 33px;
   margin-bottom: 0.3rem; }
@@ -1170,12 +1172,12 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Tag Archive Page */
-.tag-archive header {
+.tag-archives header {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
 
-.tag-archive article {
+.tag-archives .section-archive {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1189,11 +1191,11 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.product-type-page {
+.tag-archive {
   background-color: #0082b9;
   padding-top: 2em; }
 
-.single-product-category {
+.archive-header {
   background-color: #fff;
   border-radius: 5px;
   padding: 1em 2em; }
