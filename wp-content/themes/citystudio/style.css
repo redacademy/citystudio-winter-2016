@@ -795,8 +795,7 @@ a {
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: 1.5rem;
-  margin-top: .5rem; }
+  margin-top: 0.5rem; }
   .social-icons-div ul {
     list-style: none;
     display: -webkit-flex;
@@ -807,7 +806,8 @@ a {
     .social-icons-div {
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
-              flex-direction: column; }
+              flex-direction: column;
+      margin-right: 1.5rem; }
       .social-icons-div ul {
         list-style: none;
         display: -webkit-flex;
@@ -818,14 +818,14 @@ a {
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
-  margin: .75rem 1.25rem 1rem 1rem; }
+  margin: 0.75rem 1.25rem 1rem 1rem; }
   .social-icons:hover {
     cursor: pointer; }
 
 .twitter {
   height: 2rem;
   width: 2rem;
-  margin-top: .5rem; }
+  margin-top: 0.5rem; }
 
 @media screen and (min-width: 480px) {
   .social-icons {
@@ -835,7 +835,7 @@ a {
   .twitter {
     height: 2.5rem;
     width: 2.5rem;
-    margin-top: .8rem; } }
+    margin-top: 0.8rem; } }
 
 /* Footer Navigation */
 .nav {
@@ -849,7 +849,7 @@ a {
   background-color: #76d6ff;
   max-height: 85px;
   width: 75px;
-  margin: 3rem 0;
+  margin: 2rem 0;
   border-radius: 70px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -860,16 +860,17 @@ a {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  transition: all .5s ease-in; }
+  transition: all 0.5s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      width: 85px; } }
+      width: 85px;
+      margin: 3rem 0; } }
   @media screen and (min-width: 480px) {
     .nav-div {
       background-color: #76d6ff;
       max-height: 85px;
       width: 80px;
-      margin: 3rem 3rem;
+      margin: 3rem;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -880,7 +881,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all .5s ease-in; } }
+      transition: all 0.5s ease-in; } }
 
 .sort {
   color: white;
@@ -889,7 +890,7 @@ a {
   border: 2px solid white;
   max-width: 4.7rem;
   max-height: 5rem;
-  padding: 1.5rem 1.5rem 0 .7rem;
+  padding: 1.5rem 1.5rem 0 0.7rem;
   border-radius: 70px;
   background-color: #0082b9; }
   .sort:hover {
@@ -921,7 +922,7 @@ a {
   margin: 0; }
 
 .neighbourhood {
-  background: url(../../assets/neighbourhood-icon.png) no-repeat center;
+  background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
   width: 4.4rem;
   height: 4.4rem;
@@ -934,7 +935,7 @@ a {
       height: 5.4rem; } }
 
 .partners {
-  background: url(../../assets/partners-icon.png) no-repeat center;
+  background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
   width: 4.4rem;
   height: 4.4rem;
@@ -947,7 +948,7 @@ a {
       height: 5.4rem; } }
 
 .years {
-  background: url(../../assets/in-progress-icon.png) no-repeat center;
+  background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
   width: 4.4rem;
   height: 4.4rem;
@@ -960,7 +961,7 @@ a {
       height: 5.4rem; } }
 
 .refresh {
-  background: url(../../assets/refresh.png) no-repeat center;
+  background: url("../../assets/refresh.png") no-repeat center;
   background-size: 45px 50px;
   width: 4.4rem;
   height: 4.4rem;
@@ -986,11 +987,14 @@ a {
   display: none; }
   .foot-sub-menu:hover {
     cursor: pointer; }
-  .foot-sub-menu .sub-menu-neigh span, .foot-sub-menu .sub-menu-part span {
+  .foot-sub-menu .sub-menu-neigh span,
+  .foot-sub-menu .sub-menu-part span {
     color: #0082b9; }
   .foot-sub-menu .sub-menu-year span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-neigh span:hover, .foot-sub-menu .sub-menu-part span:hover, .foot-sub-menu .sub-menu-year span:hover {
+  .foot-sub-menu .sub-menu-neigh span:hover,
+  .foot-sub-menu .sub-menu-part span:hover,
+  .foot-sub-menu .sub-menu-year span:hover {
     color: #00A0DC;
     cursor: pointer; }
 
@@ -1056,7 +1060,9 @@ a {
   background: #fff;
   padding: 1em; }
 
-.neigh-labels, .part-labels, .year-labels {
+.neigh-labels,
+.part-labels,
+.year-labels {
   display: inline-block;
   position: relative;
   background-color: #fff;
@@ -1067,9 +1073,13 @@ a {
   right: 16px;
   min-width: 142px;
   text-align: center; }
-  .neigh-labels label, .part-labels label, .year-labels label {
+  .neigh-labels label,
+  .part-labels label,
+  .year-labels label {
     color: #0082b9; }
-    .neigh-labels label::after, .part-labels label::after, .year-labels label::after {
+    .neigh-labels label::after,
+    .part-labels label::after,
+    .year-labels label::after {
       content: '';
       width: 0;
       height: 0;
