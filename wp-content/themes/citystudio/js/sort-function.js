@@ -1,6 +1,19 @@
 jQuery(document).ready(function($) {
 
-  // Sort Button Slides out
+  //sorting navigation is open on page load on mobile
+    $('#sort').resize(function(){
+         if ($('#page').width() <= 480 ){
+          $('#sort.nav-div').addClass('open');
+         }
+  });
+
+//   $('#sort').resize(function(){
+//        if (window.matchMedia('(max-width: 480px)')){
+//         $('.nav-div').addClass('open');
+//        }
+// });
+
+  // Sort Button Slides out on desktop size
   $('#sort').click(function() {
      $('#sort').addClass('open');
      if ($(this).data('clicked', true)) {
