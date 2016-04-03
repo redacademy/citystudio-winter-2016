@@ -82,9 +82,8 @@ jQuery(document).ready(function($) {
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
-
               var $gallery = $('.home-slider');
-              $galler.empty();
+              $gallery.empty();
               $.each();
 
           } // close success
