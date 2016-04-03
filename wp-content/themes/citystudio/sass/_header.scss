@@ -6,7 +6,7 @@
   margin: 1rem;
 }
 
-.site-header{
+.home.site-header {
   @include desktop {
      display: none;
   }
@@ -44,7 +44,7 @@
 }
 
 .show-header-nav{
-  
+
 }
 
 .hide-search{

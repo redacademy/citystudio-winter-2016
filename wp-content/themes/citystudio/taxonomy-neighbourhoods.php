@@ -1,62 +1,38 @@
 <?php
 /**
- * Template Name: The Project Tags Taxonomy
+ * Template Name: The Product-Type Taxonomy
  */
  get_header(); ?>
 
-<div id="primary" class="content-area">
-  <main id="main" class="site-main product-type-page" role="main">
+<div id="primary" class="content-area tag-archives">
+  <main id="main" class="site-main" role="main">
 
-    <div class="tag-archive content-wrapper">
+  <?php if ( have_posts() ) : ?>
 
-      <header class="page-header single-product-category">
-        <?php
-          the_archive_title( '<h2 class="page-title">', '</h2>' );
-        ?>
-      </header><!-- .page-header -->
+    <header class="page-header archive-header">
+      <?php
+        the_archive_title( '<h1 class="page-title">', '</h1>' );
+        the_archive_description( '<div class="taxonomy-description">', '</div>' );
+      ?>
+    </header><!-- .page-header -->
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <div class="section-archive content-wrapper">
+        <?php /* Start the Loop */ ?>
+        <?php while ( have_posts() ) : the_post(); ?>
+        <ul>
+          <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
-        <?php if ( have_posts() ) : ?>
-
-          <?php /* Start the Loop */ ?>
-          <?php while ( have_posts() ) : the_post(); ?>
-
-          <?php
-            $args = array(
-            	'post_type' => 'project',
-            	'tax_query' => array(
-            		'relation' => 'AND',
-              		array(
-              			'taxonomy' => 'neighbourhood',
-              			'field'    => 'slug',
-              		),
-              		array(
-              			'taxonomy' => 'partners',
-              			'field'    => 'term_id',
-              		),
-                  array(
-              			'taxonomy' => 'years',
-              			'field'    => 'term_id',
-              		),
-            	),
-            );
-            $query = new WP_Query( $args );
-          ?>
-
-          <?php endwhile; ?>
-
-          <?php the_posts_navigation(); ?>
+          <li style="background: url('<?php echo $background; ?>') no-repeat; ">
+          </li>
+        </ul>
+        <?php endwhile; ?>
 
         <?php else : ?>
 
-          <?php get_template_part( 'template-parts/content', 'none' ); ?>
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
         <?php endif; ?>
-
-      </article><!-- #post-## -->
-
-    </div> <!-- end content-wrapper div -->
+      </div>
 
   </main><!-- #main -->
 </div><!-- #primary -->
