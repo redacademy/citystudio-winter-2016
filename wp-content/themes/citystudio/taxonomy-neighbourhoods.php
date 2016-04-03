@@ -9,10 +9,9 @@
 
   <?php if ( have_posts() ) : ?>
 
-    <header class="page-header archive-header">
+    <header class="page-header archive-header content-wrapper">
       <?php
-        the_archive_title( '<h1 class="page-title">', '</h1>' );
-        the_archive_description( '<div class="taxonomy-description">', '</div>' );
+            echo single_term_title('<h2><span>Tags:</span> ', '</h2>' );
       ?>
     </header><!-- .page-header -->
 
