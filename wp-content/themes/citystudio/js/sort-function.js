@@ -73,7 +73,6 @@ jQuery(document).ready(function($) {
           return queryFilter[filter];
           debugger;
       }).join('+');
-
     }
 
   function reloadProjects() {
