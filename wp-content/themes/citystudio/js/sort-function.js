@@ -94,8 +94,12 @@ jQuery(document).ready(function($) {
               console.log(response);
               var $gallery = $('.home-slider');
               // Clear the Gallery after each sort data is added to repopulate the Gallery
+
               $gallery.empty();
-              $.each();
+
+              $.each(response, function() {
+                $gallery += '<li>test content</li>';
+              });
 
           } // close success
 
