@@ -20,44 +20,54 @@
 	flex-direction: column;
 }
 
+
+.hero-logo {
+background: url(../../images/citystudio-logo-trans.png) no-repeat center;
+	background-size: 80vw;
+	height: 30vh;
+	margin-top: 4rem;
+}
+
+@include desktop {
 .hero-logo{
-	background: url(../../images/citystudio-logo-trans.png) no-repeat center;
 	background-size: 70vw;
 	height: 40vh;
-	margin-top: 4rem;
 	z-index: 999;
+}
 }
 
 .site-description{
-	margin: 0 auto;
-	width: 56vw;
-	margin-bottom: 5rem;
-	p{
-	font-family: $fontfamily;
-	font-size: 1.2rem;
+	margin: 0 auto 4rem;
+	width: 80vw;
+	p {
+	font-size: 1.1rem;
 	text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
 	color: white;
 	text-align: center;
-	}
-
-	@include desktop{
-		p{
-			font-size: 1.5rem;
-
-		}
-	}
-
+	font-family: $fontfamily;
 }
+}
+
+@include desktop {
+.site-description{
+	margin: 0 auto 5rem;
+	width: 56vw;
+	p{
+	font-size: 1.5rem;
+	}
+}
+}
+
 .toggle-class{
 	background: url(../../assets/noun.png) no-repeat;
-    background-size: contain;
-    border: 0;
+  background-size: contain;
+  border: 0;
 	margin: 0 auto 2rem;
 	padding: 7% 7%;
-    outline: 0;
+  outline: 0;
 	@include desktop {
 		background-size: 60px;
-		padding: 6% 6%;
+		padding: 3% 3%;
 	}
 
 }
