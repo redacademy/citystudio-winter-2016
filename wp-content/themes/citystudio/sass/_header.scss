@@ -7,6 +7,10 @@
 }
 
 .site-header{
+     display: block;
+}
+
+.site-header{
   @include desktop {
      display: none;
   }
@@ -44,7 +48,7 @@
 }
 
 .show-header-nav{
-  
+
 }
 
 .hide-search{
