@@ -1381,7 +1381,7 @@ object {
   @media screen and (min-width: 480px) {
     .toggle-class {
       background-size: 60px;
-      padding: 3% 3%; } }
+      padding: 4% 4%; } }
 
 .loader {
   opacity: 0.1;
