@@ -34,40 +34,34 @@
 
 
 .hero-logo {
-background: url(../../images/citystudio-logo-trans.png) no-repeat center;
-	background-size: 80vw;
+	background: url(../../images/citystudio-logo-trans.png) no-repeat center;
+	background-size: 60vw;
 	height: 30vh;
 	margin-top: 4rem;
-}
-
-@include desktop {
-.hero-logo{
-	background-size: 70vw;
+	@include desktop {
+	background-size: 40vw;
 	height: 40vh;
 	z-index: 999;
-}
+	}
 }
 
 .site-description{
 	margin: 0 auto 4rem;
 	width: 80vw;
 	p {
-	font-size: 1.1rem;
-	text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
-	color: white;
-	text-align: center;
-	font-family: $fontfamily;
-}
-}
-
-@include desktop {
-.site-description{
+		font-size: 1.1rem;
+		text-shadow: 0px 3px 5px rgba(150, 150, 150, 1);
+		color: white;
+		text-align: center;
+		font-family: $fontfamily;
+	}
+	@include desktop {
 	margin: 0 auto 5rem;
 	width: 56vw;
-	p{
-	font-size: 1.5rem;
-	}
-}
+		p{
+			font-size: 1.9rem;
+		}
+	}	
 }
 
 .toggle-class{
