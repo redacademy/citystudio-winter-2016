@@ -682,7 +682,8 @@ a {
   padding-right: 2rem;
   margin: auto 0; }
   .icon-search .fa {
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    color: #03648c; }
   .icon-search a {
     color: #03648c; }
 
