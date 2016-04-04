@@ -152,3 +152,14 @@ order: 2;
 .proj-scalability{
   font-family: $fontfamily;
 }
+
+.tags {
+  display: inline-flex;
+  p{
+    background-color: #DCDCDC;
+    padding: .8rem 1rem;
+    color: black;
+    border-radius: 5px;
+    margin-left: 1rem;
+  }
+}

@@ -13,7 +13,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		<div class="not-found">
-			<div class="content-wrapper">
+
 
 
 
@@ -29,7 +29,6 @@ get_header(); ?>
 
 			</section><!-- .error-404 -->
 
-			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

@@ -69,6 +69,7 @@ jQuery(document).ready(function($){
         if (i === 10) {
             $(this).addClass(gallery[10]);
         }
-    }); //close each funtciont
+
+    }); //close each function
 
 });
