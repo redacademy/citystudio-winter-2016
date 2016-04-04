@@ -18,7 +18,6 @@ jQuery(document).ready(function($) {
          }
   });
 
-
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
 
@@ -37,15 +36,6 @@ jQuery(document).ready(function($) {
 
     $('.foot-sub-menu .sub-menu-item').click(function(){
     });
-
-  // Create an empty object to hold the checked navigation values in the properties
-  var queryFilter = {
-
-      };
-
-  var checkedNeigh = '',
-      checkedPart = '',
-      checkedYear = '';
 
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
@@ -133,9 +123,9 @@ jQuery(document).ready(function($) {
               $gallery.flickity('destroy');
               $gallery.empty();
 
-              if( filters() !== false ) {
+              // if( filters() !== false ) {
                 // If featured is checked add class of
-
+                debugger;
                 $.each(response, function(index, value) {
                   galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
                   galleryItems += '<li style="background: url(' + value.featured_image_url + ') no-repeat;">';
@@ -147,15 +137,17 @@ jQuery(document).ready(function($) {
                   galleryItems += '</div></div>';
                   galleryItems += '</li></a>';
                 });
-              } else {
-                $.each(response, function(index, value) {
-                  galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
-                  galleryItems += '<li style="background-color: dark-blue;">';
-
-                  galleryItems += '</div></div>';
-                  galleryItems += '</li></a>';
-              });
-            }
+              // }
+              //   else {
+              //     debugger;
+              //     $.each(response, function(index, value) {
+              //       galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
+              //       galleryItems += '<li style="background-color: dark-blue;">';
+              //
+              //       galleryItems += '</div></div>';
+              //       galleryItems += '</li></a>';
+              //   });
+              // }
               $gallery.append(galleryItems).flickity();
 
           } // close success
