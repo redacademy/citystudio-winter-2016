@@ -1378,11 +1378,22 @@ object {
     margin-top: 0;
     margin-bottom: 5px; }
 
+.landing-gallery {
+  height: 33px;
+  width: 33px;
+  background: url("../../images/gallery-white.png") no-repeat center;
+  background-size: 33px 33px;
+  margin-bottom: 0.3rem;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+  padding: 2rem; }
+
 .hero {
   width: 100vw;
   min-height: 100vh;
   background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url(../../images/Front-page-background-image.png) no-repeat center;
-  background-size: cover;
+  background-size: 100% 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
