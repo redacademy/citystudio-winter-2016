@@ -35,11 +35,20 @@
 				<div class="tags">
  				    <?php  $terms = get_the_terms( $post, 'partners' );
 
-				      if ( !empty($terms)) : ?>
+				      if ( !empty($terms)) : 
+				      foreach ( $terms as $term )  : ?>
 
-				        <?php foreach ( $terms as $term )  : ?>
+			        	<?php 
+			        	$var = $term->name; 
+			        	$links = get_terms($var);
 
-				         <?php echo '<p class="tag-links">' . $term->name . '</p>' ?>
+			        	
+					    // We successfully got a link. Print it out.
+					    echo '<li><a href="'. $var . '">' . $var . '</a></li>';
+					
+					// echo '<p class="tag-links">' . $var . '</p>' ?>
+
+
 
 				      <?php endforeach; ?>
 				      <?php endif; ?>
