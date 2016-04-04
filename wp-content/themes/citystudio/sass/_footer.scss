@@ -67,7 +67,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: all .5s ease-in;
+    transition: all 3s ease-in;
 
     @include desktop{
       background-color: #76d6ff;
@@ -78,7 +78,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      transition: all .5s ease-in;
+      transition: all 3s ease-in;
     }
 }
 
@@ -102,14 +102,15 @@
 }
 
 .open{
-  width: 100%;
+    min-width: 410px;
   @include desktop{
-  width: 70%;
+  width: 30%;
   }
 }
 
 .close{
-  width: 3rem;
+
+  width: 20px;
   @include desktop{
     width: 5rem;
   }
@@ -123,6 +124,7 @@
 .open .menu-item{
     opacity: 1;
     margin: 0;
+
 }
 
 
@@ -133,7 +135,7 @@
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.4s ease-in;
+  transition: all 1s ease-in;
 }
 
 
@@ -144,7 +146,7 @@
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.6s ease-in;
+  transition: all 2s ease-in;
 
 }
 
@@ -155,7 +157,7 @@
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.8s ease-in;
+  transition: all 2.5s ease-in;
 
 }
 
@@ -167,7 +169,7 @@
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 1.9s ease-in;
+  transition: all 3s ease-in;
 }
 
 /* Footer Navigation Menu */

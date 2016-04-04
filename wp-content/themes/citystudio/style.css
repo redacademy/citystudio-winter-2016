@@ -844,7 +844,7 @@ a {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  transition: all .5s ease-in; }
+  transition: all 3s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
       background-color: #76d6ff;
@@ -861,7 +861,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all .5s ease-in; } }
+      transition: all 3s ease-in; } }
 
 .sort {
   color: white;
@@ -880,13 +880,13 @@ a {
       width: 100vw; } }
 
 .open {
-  width: 100%; }
+  min-width: 410px; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 70%; } }
+      width: 30%; } }
 
 .close {
-  width: 3rem; }
+  width: 20px; }
   @media screen and (min-width: 480px) {
     .close {
       width: 5rem; } }
@@ -905,7 +905,7 @@ a {
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.4s ease-in; }
+  transition: all 1s ease-in; }
 
 .partners {
   background: url(../../assets/partners-icon.png) no-repeat center;
@@ -914,7 +914,7 @@ a {
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.6s ease-in; }
+  transition: all 2s ease-in; }
 
 .years {
   background: url(../../assets/in-progress-icon.png) no-repeat center;
@@ -923,7 +923,7 @@ a {
   height: 5.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1.8s ease-in; }
+  transition: all 2.5s ease-in; }
 
 .refresh {
   background: url(../../assets/refresh.png) no-repeat center;
@@ -933,7 +933,7 @@ a {
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 1.9s ease-in; }
+  transition: all 3s ease-in; }
 
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
@@ -1481,3 +1481,14 @@ span.excerpt {
 
 .proj-scalability {
   font-family: "open_sans"; }
+
+.tags {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex; }
+  .tags p {
+    background-color: #DCDCDC;
+    padding: .8rem 1rem;
+    color: black;
+    border-radius: 5px;
+    margin-left: 1rem; }

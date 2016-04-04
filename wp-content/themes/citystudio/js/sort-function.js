@@ -20,9 +20,10 @@ jQuery(document).ready(function($) {
 
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
-        return queryFilter[filter]
+        return queryFilter[filter];
     }).join('+');
   }
+
 
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
@@ -37,33 +38,33 @@ jQuery(document).ready(function($) {
 
   $('.sub-menu-neigh').click(function() {
       if ($(this.checked)) {
-          neighValue = $(this).find('input').val();
-          queryFilter.checkedNeigh = ($(this).text()).trim();
+          queryFilter.neighValue = $(this).find('input').val();
+          checkedNeigh = ($(this).text()).trim();
           $('.neigh-labels')
               .show()
-              .append('<label>' + queryFilter.checkedNeigh + '</label>');
+              .append('<label>' + checkedNeigh + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
   });
   $('.sub-menu-part').click(function() {
       if ($(this.checked)) {
-          partValue = $(this).find('input').val();
-          queryFilter.checkedPart = ($(this).text()).trim();
+          queryFilter.partValue = $(this).find('input').val();
+          checkedPart = ($(this).text()).trim();
           $('.part-labels')
               .show()
-              .append('<label>' + queryFilter.checkedPart + '</label>');
+              .append('<label>' + checkedPart + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
   });
   $('.sub-menu-year').click(function() {
       if ($(this.checked)) {
-          yearValue = $(this).find('input').val();
-          queryFilter.checkedYear = ($(this).text()).trim();
+          queryFilter.yearValue = $(this).find('input').val();
+          checkedYear = ($(this).text()).trim();
           $('.year-labels')
               .show()
-              .append('<label>' + queryFilter.checkedYear + '</label>');
+              .append('<label>' + checkedYear + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
@@ -73,15 +74,18 @@ jQuery(document).ready(function($) {
 
   function reloadProjects() {
 
+
     console.log(queryFilter);
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]='+filters(),
+          url: api_vars.rest_url + 'wp/v2/project?filter[projects_tags]='+filters(),
 
           success: function(response) {
+
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
+              getAllHeaders();
               var $gallery = $('.home-slider');
               $gallery.empty();
               $.each();
