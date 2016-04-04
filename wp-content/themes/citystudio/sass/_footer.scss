@@ -93,9 +93,9 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: all 2.5s ease-in;
+    transition: all 1.5s ease-in;
   }
-    @include desktop{
+    @include desktop {
       background-color: #76d6ff;
       max-height: 85px;
       width: 80px;
@@ -104,7 +104,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      transition: all 2.5s ease-in;
+      transition: all 1.5s ease-in;
     }
 }
 .sort {
@@ -114,7 +114,7 @@
   border: 2px solid white;
   max-width: 4.7rem;
   max-height: 5rem;
-  padding: 1.5rem 1.5rem 0 0.7rem;
+  padding: 1.5rem 1rem 0 .9rem;
   border-radius: 70px;
   background-color: #0082b9;
   &:hover {
@@ -128,19 +128,23 @@
     padding: 1.9rem 1rem;
   }
 }
-.open{
+.open {
   width: 100vw;
-  @include desktop{
+  @include desktop {
   width: 50vw;
   }
 }
 
 .close{
-
   width: 20px;
-  @include desktop{
+  @include desktop {
     width: 5rem;
   }
+}
+
+.close .refresh {
+    width: 20px;
+    color: red;
 }
 
 .menu-item {
@@ -151,14 +155,19 @@
     opacity: 1;
     margin: 0;
 }
+
+.open{
+    color: red;
+}
+
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4.5rem;
+  height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1s ease-in;
+  transition: all .5s ease-in;
   @include desktop {
     width: 5.4rem;
     height: 5.4rem;
@@ -167,11 +176,11 @@
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4.5rem;
+  height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
   @include desktop {
     width: 5.4rem;
     height: 5.4rem;
@@ -180,11 +189,11 @@
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.4rem;
-  height: 4.4rem;
+  width: 4.5rem;
+  height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2.5s ease-in;
+  transition: all 2s ease-in;
   @include desktop {
     width: 5.4rem;
     height: 5.4rem;
@@ -194,7 +203,7 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.4rem;
+  width: 4.5rem;
   height: 4.4rem;
   border-radius: 70px;
   border: 2px solid white;
