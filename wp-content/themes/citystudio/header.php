@@ -15,7 +15,16 @@
 
 	<?php wp_head(); ?>
 
-
+	<style media="screen and (max-width: 782px)">
+	            html {
+	                margin-top:0 !important;
+	            }
+	    </style>
+	    <style media="screen">
+	            html {
+	                margin-top:0 !important;
+	            }
+	    </style>
 	</head>
 
 	<body <?php body_class(); ?>>
