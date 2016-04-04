@@ -82,6 +82,8 @@ function citystudio_scripts() {
 
 	wp_enqueue_script('jquery');
 
+	wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-2.2.0.js');
+
 	wp_enqueue_script( 'flickity.pkgd.min.js', get_template_directory_uri() . '/js/flickity/flickity.pkgd.min.js', array());
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0' );
@@ -108,8 +110,23 @@ function filter_scripts() {
 	) );
 
 }
-
 add_action( 'wp_enqueue_scripts', 'filter_scripts' );
+
+function slug_register_featured_image_url() {
+    register_rest_field( 'project',
+        'featured_image_url',
+        array(
+            'get_callback'    => 'slug_get_featured_image_url',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action( 'rest_api_init', 'slug_register_featured_image_url' );
+
+function slug_get_featured_image_url( $object, $field_name, $request ) {
+    return wp_get_attachment_url( get_post_thumbnail_id( $object['id'] ));
+}
 
 /**
  * Custom template tags for this theme.

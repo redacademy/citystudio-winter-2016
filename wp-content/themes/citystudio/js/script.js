@@ -73,4 +73,3 @@ jQuery(document).ready(function($){
     }); //close each function
 
 });
-

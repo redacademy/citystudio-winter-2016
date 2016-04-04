@@ -1,6 +1,19 @@
 jQuery(document).ready(function($) {
 
-  // Sort Button Slides out
+  //sorting navigation is open on page load on mobile
+    $('#sort').resize(function(){
+         if ($('#page').width() <= 480 ){
+          $('#sort.nav-div').addClass('open');
+         }
+  });
+
+//   $('#sort').resize(function(){
+//        if (window.matchMedia('(max-width: 480px)')){
+//         $('.nav-div').addClass('open');
+//        }
+// });
+
+  // Sort Button Slides out on desktop size
   $('#sort').click(function() {
      $('#sort').addClass('open');
      if ($(this).data('clicked', true)) {
@@ -11,18 +24,15 @@ jQuery(document).ready(function($) {
  }); // close sort
 
   // Create an empty object to hold the checked navigation values in the properties
-  var queryFilter = {};
+  var queryFilter = {
+        neighValue: '',
+        partValue: '',
+        yearValue: ''
+      };
 
-  var neighValue = '',
-      partValue = '',
-      yearValue = '';
-
-
-  function filters(){
-    return Object.keys(queryFilter).map(function(filter){
-        return queryFilter[filter]
-    }).join('+');
-  }
+  var checkedNeigh = '',
+      checkedPart = '',
+      checkedYear = '';
 
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
@@ -37,39 +47,46 @@ jQuery(document).ready(function($) {
 
   $('.sub-menu-neigh').click(function() {
       if ($(this.checked)) {
-          neighValue = $(this).find('input').val();
-          queryFilter.checkedNeigh = ($(this).text()).trim();
+          queryFilter.neighValue = $(this).find('input').val();
+          checkedNeigh = ($(this).text()).trim();
           $('.neigh-labels')
               .show()
-              .append('<label>' + queryFilter.checkedNeigh + '</label>');
+              .append('<label>' + checkedNeigh + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
   });
   $('.sub-menu-part').click(function() {
       if ($(this.checked)) {
-          partValue = $(this).find('input').val();
-          queryFilter.checkedPart = ($(this).text()).trim();
+          queryFilter.partValue = $(this).find('input').val();
+          checkedPart = ($(this).text()).trim();
           $('.part-labels')
               .show()
-              .append('<label>' + queryFilter.checkedPart + '</label>');
+              .append('<label>' + checkedPart + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
   });
   $('.sub-menu-year').click(function() {
       if ($(this.checked)) {
-          yearValue = $(this).find('input').val();
-          queryFilter.checkedYear = ($(this).text()).trim();
+          queryFilter.yearValue = $(this).find('input').val();
+          checkedYear = ($(this).text()).trim();
           $('.year-labels')
               .show()
-              .append('<label>' + queryFilter.checkedYear + '</label>');
+              .append('<label>' + checkedYear + '</label>');
           $(this).parent().hide();
           reloadProjects();
       }
   }); // close sub-menu-year
 
-  console.log(queryFilter);
+  // A Function that returns the object queryFilter's properties
+  // and concatenates them into a url with + signs
+  function filters(){
+      return Object.keys(queryFilter).map(function(filter){
+          return queryFilter[filter];
+          debugger;
+      }).join('+');
+    }
 
   function reloadProjects() {
 
@@ -77,14 +94,25 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url + 'wp/v2/project?filter[project_tags]='+filters(),
+          url: api_vars.rest_url+'wp/v2/project?filter[project_tags]='+filters(),
+          data: {
+            'neighbourhoods': queryFilter.neighValue,
+            'partners': queryFilter.partValue,
+            'year': queryFilter.yearValue
+          },
 
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
               var $gallery = $('.home-slider');
+          
+              // Clear the Gallery after each sort data is added to repopulate the Gallery
+
               $gallery.empty();
-              $.each();
+
+              $.each(response, function() {
+                $gallery += '<li>test content</li>';
+              });
 
           } // close success
 
