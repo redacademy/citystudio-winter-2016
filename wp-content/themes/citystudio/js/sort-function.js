@@ -7,7 +7,6 @@ jQuery(document).ready(function($) {
          }
   });
 
-
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
       
@@ -21,6 +20,7 @@ jQuery(document).ready(function($) {
    $('.foot-sub-menu label').hide();
 
     $('.menu-item').hover(function(){
+
           $(this).children('.foot-sub-menu').toggleClass('current-menu');
     });
 
@@ -29,7 +29,9 @@ jQuery(document).ready(function($) {
 
   // Create an empty object to hold the checked navigation values in the properties
   var queryFilter = {
-
+      neighbourhood: '',
+      partners: '',
+      year: ''
       };
 
   var checkedNeigh = '',

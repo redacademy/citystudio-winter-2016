@@ -888,7 +888,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all 1.5s ease-in; } }
+      transition: all .5s ease-in; } }
   @media screen and (min-width: 480px) {
     .nav-div {
       background-color: #76d6ff;
@@ -905,7 +905,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all 1.5s ease-in; } }
+      transition: all .5s ease-in; } }
 
 .sort {
   color: white;
@@ -959,7 +959,7 @@ a {
   height: 4.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all .5s ease-in; }
+  transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
       width: 5.4rem;
@@ -985,7 +985,7 @@ a {
   height: 4.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2s ease-in; }
+  transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
       width: 5.4rem;
@@ -999,7 +999,7 @@ a {
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 3s ease-in; }
+  transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
       width: 5.4rem;
@@ -1090,6 +1090,9 @@ a {
   color: #006496;
   background: #fff;
   padding: 1em; }
+
+.show-label:hover {
+  transition-delay: 4s; }
 
 .neigh-labels,
 .part-labels,
