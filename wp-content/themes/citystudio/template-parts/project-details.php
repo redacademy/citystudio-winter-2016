@@ -33,48 +33,53 @@
 			<div class="tags-wrapper">
 				<h3>Tags:</h3>
 				<div class="tags">
+ 				    
  				    <?php  $terms = get_the_terms( $post, 'partners' );
 
 				      if ( !empty($terms)) : ?>
 
-				        <?php foreach ( $terms as $term )  : ?>
+				        <?php foreach ( $terms as $term )  :
+				        	$name = $term->name; 
+				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'partners') . '">' . $name . '</a>' . '</p>';
+					     ?>
 
-				         <?php echo '<p class="tag-links">' . $term->name . '</p>' ?>
 
-				      <?php endforeach; ?>
-				      <?php endif; ?>
-				      <?php  $terms = get_the_terms( $post, 'season' );
+
+					      <?php endforeach; ?>
+					    <?php endif; ?>
+					      <?php  $terms = get_the_terms( $post, 'season' );
 				      if ( !empty($terms)) : ?>
 
-				        <?php foreach ( $terms as $term )  : ?>
+				        <?php foreach ( $terms as $term )  : 
+							$name = $term->name; 
+				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'season') . '">' . $name . '</a>' . '</p>'; 
 
-				            <?php echo '<p class="tag-links">' . $term->name ?>
+				            ?>
 
 				      <?php endforeach; ?>
 				      <?php endif; ?>
 				      <?php  $terms = get_the_terms( $post, 'year' );
 				      if ( !empty($terms)) : ?>
 
-				        <?php foreach ( $terms as $term )  : ?>
-
-				            <?php echo $term->name . '</p>'?>
+				        <?php foreach ( $terms as $term )  : 
+				        	$name = $term->name; 
+				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'year') . '">' . $name . '</a>' . '</p>'; 
+							?>
 
 				      <?php endforeach; ?>
 				      <?php endif; ?>
 				      <?php  $terms = get_the_terms( $post, 'neighbourhoods' );
 				      if ( !empty($terms)) : ?>
 
-				        <?php foreach ( $terms as $term )  : ?>
+				        <?php foreach ( $terms as $term )  : 
 
-				            <?php echo '<p class="tag-links">' . $term->name . '</p>' ?>
+							$name = $term->name; 
+				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'neighbourhoods') . '">' . $name . '</a>' . '</p>'; 
+				       		?>
 
 				      <?php endforeach; ?>
 				      <?php endif; ?>
-
-
-
-				      </div>
-
+			      </div>
 			</div>
 		</div>
 	</div>

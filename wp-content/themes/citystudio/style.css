@@ -917,15 +917,15 @@ a {
   @media screen and (min-width: 480px) {
     .sort {
       width: 100vw;
-      max-width: 5.2rem;
+      max-width: 3.2rem;
       max-height: 5.3rem;
       padding: 1.9rem 1rem; } }
 
 .open {
-  min-width: 410px; }
+  width: 100vw; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 40%; } }
+      width: 50vw; } }
 
 .close {
   width: 20px; }
@@ -1370,6 +1370,13 @@ object {
   box-sizing: border-box;
   margin: 1em 2em 3em;
   padding: 1em; }
+
+.tag-url {
+  text-decoration: none;
+  color: black; }
+
+a, a:visited, a:hover, a:active {
+  color: inherit; }
 
 .container {
   display: block;
