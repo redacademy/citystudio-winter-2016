@@ -43,9 +43,6 @@ get_header(); ?>
 	  		</a>
 
 			<?php endforeach; wp_reset_postdata(); ?>
-
-
-
 	</ul>
 </div>
 <?php get_footer(); ?>

@@ -110,6 +110,7 @@ function filter_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'filter_scripts' );
 
+// Custom function to return image url in the API callback
 function slug_register_featured_image_url() {
     register_rest_field( 'project',
         'featured_image_url',
@@ -125,6 +126,41 @@ add_action( 'rest_api_init', 'slug_register_featured_image_url' );
 function slug_get_featured_image_url( $object, $field_name, $request ) {
     return wp_get_attachment_url( get_post_thumbnail_id( $object['id'] ));
 }
+
+// Custom function to return Subtitle Custom Field in API callback
+function project_subtitle() {
+    register_rest_field( 'project',
+        'subtitle',
+        array(
+            'get_callback'    => 'get_project_subtitle',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action( 'rest_api_init', 'project_subtitle' );
+
+function get_project_subtitle( $object, $field_name, $request ) {
+		return get_post_meta( $object[ 'id' ], $field_name );
+}
+
+// Custom function to return Excerpt Custom Field in API callback
+function project_excerpt() {
+    register_rest_field( 'project',
+        'excerpt',
+        array(
+            'get_callback'    => 'get_project_excerpt',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action( 'rest_api_init', 'project_excerpt' );
+
+function get_project_excerpt( $object, $field_name, $request ) {
+		return get_post_meta( $object[ 'id' ], $field_name );
+}
+
 
 /**
  * Custom template tags for this theme.
