@@ -1,6 +1,19 @@
 jQuery(document).ready(function($) {
 
-  // Sort Button Slides out
+  //sorting navigation is open on page load on mobile
+    $('#sort').resize(function(){
+         if ($('#page').width() <= 480 ){
+          $('#sort.nav-div').addClass('open');
+         }
+  });
+
+//   $('#sort').resize(function(){
+//        if (window.matchMedia('(max-width: 480px)')){
+//         $('.nav-div').addClass('open');
+//        }
+// });
+
+  // Sort Button Slides out on desktop size
   $('#sort').click(function() {
      $('#sort').addClass('open');
      if ($(this).data('clicked', true)) {
@@ -12,9 +25,9 @@ jQuery(document).ready(function($) {
 
   // Create an empty object to hold the checked navigation values in the properties
   var queryFilter = {
-        neighValue: '',
-        partValue: '',
-        yearValue: ''
+        // neighValue: '',
+        // partValue: '',
+        // yearValue: ''
       };
 
   var checkedNeigh = '',
@@ -73,7 +86,6 @@ jQuery(document).ready(function($) {
           return queryFilter[filter];
           debugger;
       }).join('+');
-
     }
 
   function reloadProjects() {
@@ -83,23 +95,24 @@ jQuery(document).ready(function($) {
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?filter[project_tags]='+filters(),
-          data: {
-            'neighbourhoods': queryFilter.neighValue,
-            'partners': queryFilter.partValue,
-            'year': queryFilter.yearValue
-          },
 
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
-              var $gallery = $('.home-slider');
-              // Clear the Gallery after each sort data is added to repopulate the Gallery
 
+              var $gallery = $('.container');
+              var galleryItems = '';
+
+              // Clear the Gallery after each sort data is added
+              // to repopulate the Gallery
               $gallery.empty();
-
-              $.each(response, function() {
-                $gallery += '<li>test content</li>';
+              $.each(response, function(index, value) {
+                galleryItems += '<li style="background: url(' +  value.featured_image_url  + ') no-repeat; " > ';
+                galleryItems += '<a class="gallery-anchor featured-square-1" href=" ' + value.link + ' "> ';
+                galleryItems += '</a></li>';
               });
+
+              $gallery.append(galleryItems);
 
           } // close success
 
