@@ -17,8 +17,13 @@
 }
 
 .site-branding img {
-  width: 45%;
-  padding: 0.5rem 0 0 0.5rem;
+  padding: 1rem 0 0 0.5rem;
+  width: 15rem;
+  @include desktop {
+  width: 26rem;
+  padding: 1rem 1rem;
+  }
+
 }
 .search-gallery {
   width: 30%;
@@ -27,13 +32,13 @@
   justify-content: center;
 }
 .icon-search {
-  font-size: 2rem;
-  font-weight: 100;
-  padding-right: 2rem;
+  font-size: 2.7rem;
+  padding: 2rem 1rem;
   margin: auto 0;
   .fa {
     padding-bottom: 1rem;
-color: #03648c;
+    color: #03648c;
+    margin: 2rem;
   }
   a {
     color: #03648c;
@@ -41,10 +46,10 @@ color: #03648c;
 }
 
 .icon-gallery{
-  height: 33px;
-  width: 33px;
+  height: 4rem;
+  width: 4rem;
   background: url('../../images/gallery-blue.png') no-repeat center;
-  background-size: 33px 33px;
+  background-size: 4rem 4rem;
   margin-bottom: 0.3rem;
 }
 

@@ -1,5 +1,5 @@
 	<div class="nav-div" id="sort">
-		<div class="sort">
+		<div class="sort" id="sort_nav">
 			<span>Sort</span>
 		</div>
 
