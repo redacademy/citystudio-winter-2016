@@ -31,11 +31,11 @@
 				</a>
 			</div><!-- .site-branding -->
 			<div class="search-gallery">
-			<div class="hide-search">
-				<span class="icon-search" aria-hidden="true">
-					<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
-				</span>
-			</div>
+				<div class="hide-search">
+					<span class="icon-search" aria-hidden="true">
+						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
+					</span>
+				</div>
 				<div class="icon-gallery">
 				</div>
 			</div>

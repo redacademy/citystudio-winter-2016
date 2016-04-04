@@ -21,7 +21,7 @@ get_header(); ?>
 
 				<a href="<?php echo the_permalink($project);?>">
 		      <?php if (has_post_thumbnail()) : ?>
-			      <?php the_post_thumbnail('medium', 'style=width:400px;height:300px;margin:.5rem;'); ?>
+			      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin:.5rem;'); ?>
 			    <?php endif; ?>
 				</a>
 

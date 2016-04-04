@@ -125,16 +125,15 @@
   }
 }
 .open{
-  min-width: 410px;
-  @include desktop{
-  width: 40%;
+  width: 100vw;
+  @include desktop {
+  width: 50vw;
   }
 }
 
 .close{
-
   width: 20px;
-  @include desktop{
+  @include desktop {
     width: 5rem;
   }
 }
