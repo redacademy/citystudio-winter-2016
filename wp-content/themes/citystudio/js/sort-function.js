@@ -7,16 +7,25 @@ jQuery(document).ready(function($) {
          }
   });
 
+
+  $('#sort_nav').click(function() {
+    $('#sort').toggleClass('open');
+      
+ }); // close sort
   // Sort Button Slides out on desktop size
-  $('#sort').click(function() {
-     $('#sort').addClass('open');
-     if ($(this).data('clicked', true)) {
-         $('.refresh').click(function() {
-             $('.refresh').removeClass('open');
-         });
-     }
+  $('#refresh').click(function() {
+    $('#sort').toggleClass('open');
+      
  }); // close sort
 
+   $('.foot-sub-menu label').hide();
+
+    $('.menu-item').hover(function(){
+          $(this).children('.foot-sub-menu').toggleClass('current-menu');
+    });
+
+    $('.foot-sub-menu .sub-menu-item').click(function(){
+    });
 
   // Create an empty object to hold the checked navigation values in the properties
   var queryFilter = {

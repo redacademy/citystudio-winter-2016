@@ -661,8 +661,12 @@ a {
     display: none; } }
 
 .site-branding img {
-  width: 45%;
-  padding: 0.5rem 0 0 0.5rem; }
+  padding: 1rem 0 0 0.5rem;
+  width: 15rem; }
+  @media screen and (min-width: 480px) {
+    .site-branding img {
+      width: 26rem;
+      padding: 1rem 1rem; } }
 
 .search-gallery {
   width: 30%;
@@ -677,20 +681,21 @@ a {
           justify-content: center; }
 
 .icon-search {
-  font-size: 2rem;
-  font-weight: 100;
-  padding-right: 2rem;
+  font-size: 2.7rem;
+  padding: 2rem 1rem;
   margin: auto 0; }
   .icon-search .fa {
-    padding-bottom: 1rem; }
+    padding-bottom: 1rem;
+    color: #03648c;
+    margin: 2rem; }
   .icon-search a {
     color: #03648c; }
 
 .icon-gallery {
-  height: 33px;
-  width: 33px;
+  height: 4rem;
+  width: 4rem;
   background: url("../../images/gallery-blue.png") no-repeat center;
-  background-size: 33px 33px;
+  background-size: 4rem 4rem;
   margin-bottom: 0.3rem; }
 
 .hide-search {
@@ -883,7 +888,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all 2.5s ease-in; } }
+      transition: all 1.5s ease-in; } }
   @media screen and (min-width: 480px) {
     .nav-div {
       background-color: #76d6ff;
@@ -900,7 +905,7 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      transition: all 2.5s ease-in; } }
+      transition: all 1.5s ease-in; } }
 
 .sort {
   color: white;
@@ -933,12 +938,19 @@ a {
     .close {
       width: 5rem; } }
 
+.close .refresh {
+  width: 20px;
+  color: red; }
+
 .menu-item {
   opacity: 0; }
 
 .open .menu-item {
   opacity: 1;
   margin: 0; }
+
+.open {
+  color: red; }
 
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
@@ -947,7 +959,7 @@ a {
   height: 4.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 1s ease-in; }
+  transition: all .5s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
       width: 5.4rem;
@@ -960,7 +972,7 @@ a {
   height: 4.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2s ease-in; }
+  transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
       width: 5.4rem;
@@ -973,7 +985,7 @@ a {
   height: 4.4rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2.5s ease-in; }
+  transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
       width: 5.4rem;
@@ -1406,15 +1418,14 @@ a, a:visited, a:hover, a:active {
 
 .hero-logo {
   background: url(../../images/citystudio-logo-trans.png) no-repeat center;
-  background-size: 80vw;
+  background-size: 60vw;
   height: 30vh;
   margin-top: 4rem; }
-
-@media screen and (min-width: 480px) {
-  .hero-logo {
-    background-size: 70vw;
-    height: 40vh;
-    z-index: 999; } }
+  @media screen and (min-width: 480px) {
+    .hero-logo {
+      background-size: 40vw;
+      height: 40vh;
+      z-index: 999; } }
 
 .site-description {
   margin: 0 auto 4rem;
@@ -1425,13 +1436,12 @@ a, a:visited, a:hover, a:active {
     color: white;
     text-align: center;
     font-family: "open_sans"; }
-
-@media screen and (min-width: 480px) {
-  .site-description {
-    margin: 0 auto 5rem;
-    width: 56vw; }
-    .site-description p {
-      font-size: 1.5rem; } }
+  @media screen and (min-width: 480px) {
+    .site-description {
+      margin: 0 auto 5rem;
+      width: 56vw; }
+      .site-description p {
+        font-size: 1.9rem; } }
 
 .toggle-class {
   background: url(../../assets/noun.png) no-repeat;
