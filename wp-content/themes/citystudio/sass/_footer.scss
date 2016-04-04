@@ -128,17 +128,16 @@
     padding: 1.9rem 1rem;
   }
 }
-.open{
+.open {
   width: 100vw;
-  @include desktop{
+  @include desktop {
   width: 50vw;
   }
 }
 
 .close{
-
   width: 20px;
-  @include desktop{
+  @include desktop {
     width: 5rem;
   }
 }
