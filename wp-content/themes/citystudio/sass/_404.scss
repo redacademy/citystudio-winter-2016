@@ -1,27 +1,64 @@
+
+.not-found {
+  background-color: $city-blue;
+  width: 100vw;
+}
+
+
 .error-404.not-found {
-  border-top: 2px solid $city-blue;
   height: 80vh;
   .page-header,
   .page-content {
+
+
+
+    .page-title {
+      color: white;
+      text-align: center;
+    }
+
+
+      #redirect-not-found {
+        color: $dark-blue;
+        text-align: center;
+        font-weight: 700;
+      }
+
+
+
+    ::-webkit-input-placeholder {
+         color: $dark-blue;
+    }
+
+    :-moz-placeholder {
+         color: $dark-blue;
+    }
+
+    ::-moz-placeholder {
+         color: $dark-blue;
+    }
+
+    :-ms-input-placeholder {
+         color: $dark-blue;
+    }
+
     margin-left: 1rem;
     font-family: $fontfamily;
     fieldset {
       border: none !important;
+      color: $city-blue;
     }
     .search-field {
-      line-height: 2rem;
-      width: 50vw;
+      line-height: 3rem;
+      width: 1040px;
+      color: $city-blue;
+
     }
     button {
       background: transparent;
       border: none;
 margin-top: 5px;
-      .fa {
-        padding: 0;
-        color: #03648c;
-        font-size: 2rem;
 
-      }
     }
   }
 }

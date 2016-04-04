@@ -689,6 +689,8 @@ a {
     color: #03648c; }
 
 .icon-gallery {
+  height: 33px;
+  width: 33px;
   background: url("../../images/gallery-blue.png") no-repeat center;
   background-size: 33px 33px;
   margin-bottom: 0.3rem; }
@@ -1081,30 +1083,51 @@ a {
 .hide-label {
   display: none !important; }
 
+.not-found {
+  background-color: #0198d5;
+  width: 100vw; }
+
 .error-404.not-found {
-  border-top: 2px solid #0198d5;
   height: 80vh; }
   .error-404.not-found .page-header,
   .error-404.not-found .page-content {
     margin-left: 1rem;
     font-family: "open_sans"; }
+    .error-404.not-found .page-header .page-title,
+    .error-404.not-found .page-content .page-title {
+      color: white;
+      text-align: center; }
+    .error-404.not-found .page-header #redirect-not-found,
+    .error-404.not-found .page-content #redirect-not-found {
+      color: #006496;
+      text-align: center;
+      font-weight: 700; }
+    .error-404.not-found .page-header ::-webkit-input-placeholder,
+    .error-404.not-found .page-content ::-webkit-input-placeholder {
+      color: #006496; }
+    .error-404.not-found .page-header :-moz-placeholder,
+    .error-404.not-found .page-content :-moz-placeholder {
+      color: #006496; }
+    .error-404.not-found .page-header ::-moz-placeholder,
+    .error-404.not-found .page-content ::-moz-placeholder {
+      color: #006496; }
+    .error-404.not-found .page-header :-ms-input-placeholder,
+    .error-404.not-found .page-content :-ms-input-placeholder {
+      color: #006496; }
     .error-404.not-found .page-header fieldset,
     .error-404.not-found .page-content fieldset {
-      border: none !important; }
+      border: none !important;
+      color: #0198d5; }
     .error-404.not-found .page-header .search-field,
     .error-404.not-found .page-content .search-field {
-      line-height: 2rem;
-      width: 50vw; }
+      line-height: 3rem;
+      width: 1040px;
+      color: #0198d5; }
     .error-404.not-found .page-header button,
     .error-404.not-found .page-content button {
       background: transparent;
       border: none;
       margin-top: 5px; }
-      .error-404.not-found .page-header button .fa,
-      .error-404.not-found .page-content button .fa {
-        padding: 0;
-        color: #03648c;
-        font-size: 2rem; }
 
 /*--------------------------------------------------------------
 # Media
@@ -1170,12 +1193,12 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Tag Archive Page */
-.tag-archive header {
+.tag-archives header {
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
           flex-basis: 100%; }
 
-.tag-archive article {
+.tag-archives .section-archive {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1189,15 +1212,16 @@ object {
       -ms-flex-pack: justify;
           justify-content: space-between; }
 
-.product-type-page {
+.tag-archive {
   background-color: #0082b9;
   padding-top: 2em; }
 
-.single-product-category {
+.archive-header {
   background-color: #fff;
   border-radius: 5px;
   padding: 1em 2em; }
 
+/** Search Page **/
 .searchpage {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1222,7 +1246,8 @@ object {
             justify-content: center; }
   .searchpage .search-form {
     margin-top: 2rem;
-    width: 1040px;
+    width: 1070px;
+    padding: 1rem;
     background-color: white;
     border: none;
     outline: none;
@@ -1274,6 +1299,7 @@ input#s.search-field {
   height: 225px;
   margin-top: 2rem; }
 
+/** 404 **/
 .container {
   display: block;
   margin-bottom: 10px solid white; }

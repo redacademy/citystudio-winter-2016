@@ -30,6 +30,9 @@
 }
 
 
+/** Search Page **/
+
+
 .searchpage {
 
   display: flex;
@@ -48,12 +51,14 @@
 
 .search-form {
   margin-top: 2rem;
-  width: 1040px;
+  width: 1070px;
+  padding: 1rem;
   background-color: white;
   border: none;
   outline: none;
   border-radius: 5px;
   height: 6rem;
+
 }
 ::-webkit-input-placeholder {
      color: $dark-blue;
@@ -85,12 +90,16 @@ input.search-field {
 }
 
 input#s.search-field {
-  color: #0198d5;
+  color: $city-blue;
 }
+
+
 .searchpage{
   display: flex;
   height: 70vh;
 }
+
+
 .search-list {
   display: flex;
   justify-content: space-between;
@@ -99,12 +108,13 @@ input#s.search-field {
 
 }
 
-
 .search-item {
   flex: 0 1 30%;
   width: 275px;
   height: 225px;
  margin-top: 2rem;
 
-
 }
+
+
+/** 404 **/
