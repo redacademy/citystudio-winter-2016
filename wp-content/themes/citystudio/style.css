@@ -922,10 +922,10 @@ a {
       padding: 1.9rem 1rem; } }
 
 .open {
-  min-width: 410px; }
+  width: 100vw; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 40%; } }
+      width: 50vw; } }
 
 .close {
   width: 20px; }
