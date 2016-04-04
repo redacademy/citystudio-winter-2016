@@ -1,13 +1,6 @@
 jQuery(document).ready(function($) {
 
-  // hold carousel initiliazation function
-  var $carousel = $('.carousel').flickity(),
-      // get instance
-      flkty = $carousel.data('flickity');
-      // access properties
-      // console.log( flkty.selectedIndex, flkty.selectedElement );
-
-      // queryFilter holds an empty object for the checked navigation values/properties
+  // queryFilter holds an empty object for the checked navigation values/properties
   var queryFilter = { },
       // values for input names
       checkedNeigh = '',
@@ -96,22 +89,20 @@ jQuery(document).ready(function($) {
           success: function(response) {
 
             // create gallery method to append HTML to
-            var $gallery = ('.home-slider').flickity({
-              cellAlign: 'left',
-              contain: true,
-              initialIndex: 0,
-              accessibility: true,
-              wrapAround: true,
-              prevNextButtons: false,
-              imagesLoaded: true
-            });
+            var $gallery = $('.home-slider');
+            var galleryItems = '';
 
               // Clear the Gallery after each sort data is added to repopulate the Gallery
+              $gallery.flickity('destroy');
               $gallery.empty();
 
               $.each(response, function(index, value) {
-                $gallery += '<li>test content</li>';
+                galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
+                galleryItems += '<li style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                galleryItems += '</li></a>';
               });
+
+              $gallery.append(galleryItems).flickity();
 
           } // close success
 
