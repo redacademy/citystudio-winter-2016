@@ -21,8 +21,8 @@
         <ul>
           <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
-          <li style="background: url('<?php echo $background; ?>') no-repeat; ">
-          </li>
+          <a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php echo $background; ?>') no-repeat; ">
+          </li></a>
         </ul>
         <?php endwhile; ?>
 

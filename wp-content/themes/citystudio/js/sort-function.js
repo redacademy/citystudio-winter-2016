@@ -25,9 +25,9 @@ jQuery(document).ready(function($) {
 
   // Create an empty object to hold the checked navigation values in the properties
   var queryFilter = {
-        neighValue: '',
-        partValue: '',
-        yearValue: ''
+        // neighValue: '',
+        // partValue: '',
+        // yearValue: ''
       };
 
   var checkedNeigh = '',
@@ -95,21 +95,15 @@ jQuery(document).ready(function($) {
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?filter[project_tags]='+filters(),
-          data: {
-            'neighbourhoods': queryFilter.neighValue,
-            'partners': queryFilter.partValue,
-            'year': queryFilter.yearValue
-          },
 
           success: function(response) {
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
-              var $gallery = $('.home-slider');
+              var $gallery = ('.home-slider');
               // Clear the Gallery after each sort data is added to repopulate the Gallery
-
               $gallery.empty();
 
-              $.each(response, function() {
+              $.each(response, function(index, value) {
                 $gallery += '<li>test content</li>';
               });
 
