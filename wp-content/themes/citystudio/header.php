@@ -15,7 +15,16 @@
 
 	<?php wp_head(); ?>
 
-
+	<style media="screen and (max-width: 782px)">
+			html {
+				margin-top:0 !important;
+			}
+	</style>
+	<style media="screen">
+			html {
+				margin-top:0 !important;
+			}
+	</style>
 	</head>
 
 	<body <?php body_class(); ?>>
@@ -26,7 +35,7 @@
 			<div class="header-container">
 
 			<div class="site-branding">
-				<a href="<?php echo esc_url(home_url());?>">
+				<a href="<?php echo esc_url(home_url([1]));?>">
 					<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
 				</a>
 			</div><!-- .site-branding -->

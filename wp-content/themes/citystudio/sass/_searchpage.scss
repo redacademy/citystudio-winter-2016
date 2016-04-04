@@ -7,7 +7,6 @@
   background-size: 80vw 70vw;
   fieldset {
     border: none;
-    margin-top: 2rem;
   }
   label {
     display: flex;
@@ -18,21 +17,27 @@
     border: none;
     outline: none;
     border-radius: 5px;
-    height: 6.5rem;
+    height: 2.5rem;
+    @include desktop {
+      height: 6.5rem;
+    }
     p {
       margin: auto 0;
       padding-left: 1rem;
-      font-size: 4rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
       color: $dark-blue;
       font-weight: 700;
       font-family: $fontfamily;
+      @include desktop {
+        font-size: 4rem;
+      }
     }
   }
   input {
     border: none;
     margin-top: 2rem;
-    font-size: 4rem;
+    font-size: 1.5rem;
     margin: auto 0.2rem;
     color: $city-blue;
     border-radius: 5px;
@@ -40,6 +45,9 @@
     font-family: $fontfamily;
     text-transform: uppercase;
     width:: 90%;
+    @include desktop{
+      font-size: 4rem;
+    }
   }
   .search-list {
     display: flex;
