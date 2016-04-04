@@ -7,12 +7,6 @@ jQuery(document).ready(function($) {
          }
   });
 
-//   $('#sort').resize(function(){
-//        if (window.matchMedia('(max-width: 480px)')){
-//         $('.nav-div').addClass('open');
-//        }
-// });
-
   // Sort Button Slides out on desktop size
   $('#sort').click(function() {
      $('#sort').addClass('open');
@@ -23,25 +17,21 @@ jQuery(document).ready(function($) {
      }
  }); // close sort
 
+
   // Create an empty object to hold the checked navigation values in the properties
   var queryFilter = {
-        // neighValue: '',
-        // partValue: '',
-        // yearValue: ''
+
       };
 
   var checkedNeigh = '',
       checkedPart = '',
       checkedYear = '';
 
-
-
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
         return queryFilter[filter];
     }).join('+');
   }
-
 
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
@@ -108,16 +98,21 @@ jQuery(document).ready(function($) {
 
           success: function(response) {
 
-              // alert('Got the Values' + partValue + yearValue + neighValue);
-              console.log(response);
-              var $gallery = $('.home-slider');
-          
+            // create gallery method to append HTML to
+            var $gallery = $('.home-slider');
+            var galleryItems = '';
+
               // Clear the Gallery after each sort data is added to repopulate the Gallery
+              $gallery.flickity('destroy');
               $gallery.empty();
 
               $.each(response, function(index, value) {
-                $gallery += '<li>test content</li>';
+                galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
+                galleryItems += '<li style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                galleryItems += '</li></a>';
               });
+
+              $gallery.append(galleryItems).flickity();
 
           } // close success
 

@@ -1,4 +1,5 @@
-.site-footer {
+
+.site-footer{
   display: flex;
   flex-direction: column;
   @include desktop {
@@ -31,9 +32,11 @@
       list-style: none;
       display: flex;
       margin: auto 0;
-    }
+
+      }
   }
 }
+
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
@@ -117,17 +120,18 @@
   &:hover {
     cursor: pointer;
   }
+
   @include desktop {
     width: 100vw;
-    max-width: 5.2rem;
+    max-width: 3.2rem;
     max-height: 5.3rem;
     padding: 1.9rem 1rem;
   }
 }
 .open{
-  min-width: 410px;
+  width: 100vw;
   @include desktop{
-  width: 40%;
+  width: 50vw;
   }
 }
 
