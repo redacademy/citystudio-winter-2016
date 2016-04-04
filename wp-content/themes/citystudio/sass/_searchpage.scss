@@ -2,27 +2,14 @@
 # Search Page Styles
 --------------------------------------------------------------*/
 .searchpage {
-<<<<<<< HEAD
  background-color: #0082b9;
 background-image: url('../../images/background-y.psd')no-repeat center;
 background-size: 80vw 70vw;
-
 fieldset {
   border: none;
   margin-top: 2rem;
- }
-label {
-=======
-  background-color: #0082b9;
-  background-image: url('../../images/background-y.psd')no-repeat center;
-  background-size: 80vw 70vw;
-
-  fieldset {
-    border: none;
-    margin-top: 2rem;
   }
   label {
->>>>>>> sort-function
   display: flex;
   flex-direction: row;
   margin: 0 auto !important;
@@ -61,5 +48,4 @@ label {
     justify-content: space-between;
     padding: 1rem;
   }
-}
 }

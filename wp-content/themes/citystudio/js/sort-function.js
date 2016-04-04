@@ -156,8 +156,6 @@ jQuery(document).ready(function($) {
                   galleryItems += '</li></a>';
               });
             }
-
-
               $gallery.append(galleryItems).flickity();
 
           } // close success
