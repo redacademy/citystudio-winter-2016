@@ -29,14 +29,17 @@ margin: 0 auto;
 font-family: $fontfamily;
 }
 
-.type-project header {
-  background-size: contain !important;
-  background-position: top center !important;
-  min-height: 400px;
-  @include desktop {
-    background-size: cover !important;
+@include desktop {
+  .type-project header {
+    background-size: contain !important;
     min-height: 500px;
   }
+}
+
+.type-project header {
+  background-size: cover !important;
+  background-position: top center !important;
+  min-height: 400px;
 }
 
 .section-header {
