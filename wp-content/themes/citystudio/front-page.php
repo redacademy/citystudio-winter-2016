@@ -33,6 +33,7 @@ get_header(); ?>
                             <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
                  <div class="subtitle"><?php echo CFS()->get( 'subtitle' ); ?></div>
                 <br>
+<<<<<<< HEAD
                                 <span class="home-description"><?php echo CFS()->get( 'excerpt' ); ?>
                                 </span>
                             </div>
@@ -40,5 +41,15 @@ get_header(); ?>
             </a>
             <?php endforeach; wp_reset_postdata(); ?>
     </ul>
+=======
+								<span class="home-description"><?php echo CFS()->get( 'excerpt' ); ?>
+								</span>
+							</div>
+						</li>
+	  		</a>
+
+			<?php endforeach; wp_reset_postdata(); ?>
+	</ul>
+>>>>>>> sort-function
 </div>
 <?php get_footer(); ?>

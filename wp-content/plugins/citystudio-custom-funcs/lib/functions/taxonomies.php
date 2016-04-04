@@ -41,6 +41,7 @@
  		'show_admin_column'          => true,
  		'show_in_nav_menus'          => true,
  		'show_tagcloud'              => true,
+    'query_var'                  => true,
  	);
  	register_taxonomy( 'partners', array( 'project' ), $args );
 
@@ -82,6 +83,7 @@ function season_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+    'query_var'                  => true,
 	);
 	register_taxonomy( 'season', array( 'project' ), $args );
 
@@ -123,6 +125,7 @@ function year_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+    'query_var'                  => true,
 	);
 	register_taxonomy( 'year', array( 'project' ), $args );
 
@@ -164,6 +167,7 @@ function neighbourhoods_taxonomy() {
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
+    'query_var'                  => true,
 	);
 	register_taxonomy( 'neighbourhoods', array( 'project' ), $args );
 
