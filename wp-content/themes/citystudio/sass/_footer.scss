@@ -1,5 +1,5 @@
 .site-footer{
- 
+
   display: flex;
   flex-direction: column;
   @include desktop{
@@ -28,7 +28,7 @@
       list-style: none;
       display: flex;
       margin: auto 0;
-      }  
+      }
     }
 }
 
@@ -96,7 +96,7 @@
     cursor: pointer;
   }
    @include desktop{
-    width: 100vw;    
+    width: 100vw;
   }
 
 }
