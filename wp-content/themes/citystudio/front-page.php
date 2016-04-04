@@ -6,7 +6,10 @@
  */
 get_header(); ?>
 <div class="front-page-main">
+
     <div class="hero">
+        <div class="landing-gallery">
+        </div>
         <div class="hero-logo">
         </div>
         <div class="site-description">
