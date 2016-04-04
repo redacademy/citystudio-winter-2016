@@ -31,7 +31,50 @@
 			<h3>Stewardship:</h3>
 				<span class="proj-stewardship"><?php echo CFS()->get( 'stewardship' ); ?></span>
 			<div class="tags-wrapper">
-				<h3>Tags:</div>
+				<h3>Tags:</h3>
+				<div class="tags">
+ 				    <?php  $terms = get_the_terms( $post, 'partners' );
+
+				      if ( !empty($terms)) : ?>
+
+				        <?php foreach ( $terms as $term )  : ?>
+
+				         <?php echo '<p class="tag-links">' . $term->name . '</p>' ?>
+
+				      <?php endforeach; ?>
+				      <?php endif; ?>
+				      <?php  $terms = get_the_terms( $post, 'season' );
+				      if ( !empty($terms)) : ?>
+
+				        <?php foreach ( $terms as $term )  : ?>
+
+				            <?php echo '<p class="tag-links">' . $term->name ?>
+
+				      <?php endforeach; ?>
+				      <?php endif; ?>
+				      <?php  $terms = get_the_terms( $post, 'year' );
+				      if ( !empty($terms)) : ?>
+
+				        <?php foreach ( $terms as $term )  : ?>
+
+				            <?php echo $term->name . '</p>'?>
+
+				      <?php endforeach; ?>
+				      <?php endif; ?>
+				      <?php  $terms = get_the_terms( $post, 'neighbourhoods' );
+				      if ( !empty($terms)) : ?>
+
+				        <?php foreach ( $terms as $term )  : ?>
+
+				            <?php echo '<p class="tag-links">' . $term->name . '</p>' ?>
+
+				      <?php endforeach; ?>
+				      <?php endif; ?>
+
+
+
+				      </div>
+
 			</div>
 		</div>
 	</div>

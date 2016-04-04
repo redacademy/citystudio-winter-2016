@@ -1,4 +1,3 @@
-<div class="nav">
 	<div class="nav-div" id="sort">
 		<div class="sort">
 			<span>Sort</span>

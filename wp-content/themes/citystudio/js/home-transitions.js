@@ -3,6 +3,7 @@ jQuery(document).ready(function($) {
   if ($('.home')[0]) {
     // $('.site-header').hide();
     $('.site-footer').hide();
+    $('.social-icons-div').hide();
   } else {
     $('.site-header').show();
     $('.site-footer').show();
@@ -12,5 +13,6 @@ jQuery(document).ready(function($) {
     $('.container').slideDown();
  	  $('.site-header').show();
   	$('.site-footer').show();
+    $('.social-icons-div').show();
    });
 });
