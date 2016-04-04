@@ -34,6 +34,15 @@ jQuery(document).ready(function($) {
       checkedPart = '',
       checkedYear = '';
 
+
+
+  function filters(){
+    return Object.keys(queryFilter).map(function(filter){
+        return queryFilter[filter];
+    }).join('+');
+  }
+
+
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
   $('.part-labels').hide();
@@ -86,10 +95,10 @@ jQuery(document).ready(function($) {
           return queryFilter[filter];
           debugger;
       }).join('+');
-
     }
 
   function reloadProjects() {
+
 
     console.log(queryFilter);
       $.ajax({
@@ -103,9 +112,11 @@ jQuery(document).ready(function($) {
           },
 
           success: function(response) {
+
               // alert('Got the Values' + partValue + yearValue + neighValue);
               console.log(response);
               var $gallery = $('.home-slider');
+          
               // Clear the Gallery after each sort data is added to repopulate the Gallery
 
               $gallery.empty();
