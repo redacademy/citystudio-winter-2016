@@ -1,30 +1,42 @@
 jQuery(document).ready(function($) {
 
-  //sorting navigation is open on page load on mobile
-    $('#sort').resize(function(){
-         if ($('#page').width() <= 480 ){
-          $('#sort.nav-div').addClass('open');
-         }
+//sorting navigation is open on page load on mobile
+  $('#sort').resize(function(){
+       if ($('#page').width() <= 480 ){
+        $('#sort.nav-div').addClass('open');
+       }
   });
 
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
       
- }); // close sort
+  }); // close sort
   // Sort Button Slides out on desktop size
+
   $('#refresh').click(function() {
-    $('#sort').toggleClass('open');
-      
- }); // close sort
+      checkedNeigh = '';
+      checkedPart = '';
+      checkedYear = '';
+      $('.neigh-labels').removeClass('current-menu');
+      $('.neigh-labels').hide();
+      $('.neigh-labels').empty();
+      $('.part-labels').removeClass('current-menu');
+      $('.part-labels').hide();
+      $('.part-labels').empty();
+      $('.year-labels').removeClass('current-menu');
+      $('.year-labels').hide();
+      $('.year-labels').empty();
+      $('.foot-sub-menu').removeClass('current-menu');
+   }); // close sort
+
 
    $('.foot-sub-menu label').hide();
 
-    $('.menu-item').hover(function(){
-
-          $(this).children('.foot-sub-menu').toggleClass('current-menu');
-    });
-
-    $('.foot-sub-menu .sub-menu-item').click(function(){
+   $('.menu-item').hover(function(){
+      $(this).children('.foot-sub-menu').toggleClass('current-menu');
+        if(checkedNeigh === '' || checkedPart === '' || checkedYear === '' ) {
+              $('.current-menu').toggle(); 
+            }
     });
 
   // Create an empty object to hold the checked navigation values in the properties
@@ -55,8 +67,9 @@ jQuery(document).ready(function($) {
       $(this).removeClass('current-menu');
   });
 
+
   $('.sub-menu-neigh').click(function() {
-      if ($(this.checked)) {
+        if ($(this.checked)) {
           queryFilter.neighValue = $(this).find('input').val();
           checkedNeigh = ($(this).text()).trim();
           $('.neigh-labels')
@@ -75,6 +88,7 @@ jQuery(document).ready(function($) {
               .append('<label>' + checkedPart + '</label>');
           $(this).parent().hide();
           reloadProjects();
+
       }
   });
   $('.sub-menu-year').click(function() {

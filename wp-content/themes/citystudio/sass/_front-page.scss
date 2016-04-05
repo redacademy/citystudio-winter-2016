@@ -3,7 +3,7 @@
 	margin-bottom: 10px solid white;
 	.bx-viewport{
 		margin-top: 0;
-    margin-bottom: 5px
+	    margin-bottom: 5px
 	}
 }
 
@@ -151,7 +151,7 @@
 }
 
 
-//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
+/*//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
 // .upper-mini-1{
 // 	height: 30vh !important;
 // 	width: 250px !important;
@@ -190,7 +190,7 @@
 // 	left: 0;
 // 	top: 0;
 // }
-// }
+// }*/
 
 .lower-regular-1{
 	height: 60vh;
@@ -246,11 +246,12 @@
 	font-family: sans-serif;
 	overflow: hidden;
 	font-family: $fontfamily;
-&:hover{
+	&:hover{
 	opacity: 1;
 	background-color: transparentize($dark-blue, .1);
 	border: 10px double white;
 	padding: 1.5rem;
+ 	transition: all 0.5s ease-in;
 	}
 }
 
@@ -260,11 +261,11 @@
 	font-size: 1.5rem;
 	font-weight: bold;
 	margin-bottom: 2rem;
-font-family: $fontfamily;
+	font-family: $fontfamily;
 }
 
 .subtitle{
-font-weight: bold;
+	font-weight: bold;
 }
 
 .home-description{

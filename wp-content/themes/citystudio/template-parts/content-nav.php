@@ -12,7 +12,7 @@
 					<li><span class="menu-title">Neighbourhoods</span></li>
 				<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-neigh">
-						<input type="checkbox" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
+						<input type="checkbox" id="neigh_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>
 		    <?php endforeach; ?>
@@ -30,7 +30,7 @@
 					<li><span class="menu-title">Partners</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-part">
-						<input type="checkbox" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
+						<input type="checkbox" id="partners_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>
 			<?php endforeach; ?>
@@ -48,7 +48,7 @@
 				<li><span class="menu-title">Year</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-year">
-						<input type="checkbox" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
+						<input type="checkbox" id="year_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>
 			<?php endforeach; ?>
