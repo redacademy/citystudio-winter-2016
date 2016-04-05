@@ -97,6 +97,14 @@
     left: 0;
     top: 0;
   }
+
+  button.flickity-prev-next-button{
+	display: none;
+	@include desktop {
+	display: block;
+	}
+}
+
   .featured-square-1 {
     height: 60vh;
     width: 400px !important;
