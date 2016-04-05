@@ -129,15 +129,10 @@
     padding: 1.9rem 1rem;
   }
 }
-<<<<<<< HEAD
-.open {
-  width: 100vw;
-  @include desktop {
-=======
+
 .open{
   width: 85vw;
   @include desktop{
->>>>>>> filter
   width: 50vw;
   }
 }
@@ -170,13 +165,8 @@
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
-<<<<<<< HEAD
   width: 4.5rem;
   height: 4.6rem;
-=======
-  width: 4.4rem;
-  height: 4.5rem;
->>>>>>> filter
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
@@ -188,13 +178,8 @@
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
-<<<<<<< HEAD
   width: 4.5rem;
   height: 4.6rem;
-=======
-  width: 4.4rem;
-  height: 4.5rem;
->>>>>>> filter
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
@@ -206,13 +191,8 @@
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
-<<<<<<< HEAD
   width: 4.5rem;
   height: 4.6rem;
-=======
-  width: 4.4rem;
-  height: 4.5rem;
->>>>>>> filter
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
@@ -226,7 +206,7 @@
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 45px 50px;
   width: 4.5rem;
-  height: 4.4rem;
+  height: 4.6rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
@@ -235,7 +215,6 @@
     width: 5.4rem;
     height: 5.4rem;
   }
-
 }
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {

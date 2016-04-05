@@ -7,7 +7,6 @@ margin-bottom: 10px solid white;
 	}
 }
 
-
 .landing-gallery {
 height: 33px;
 width: 33px;
@@ -16,7 +15,6 @@ background-size: 33px 33px;
 margin-bottom: 0.3rem;
 align-self: flex-end;
 padding: 2rem;
-
 }
 
 .hero{
@@ -80,8 +78,7 @@ outline: 0;
 @include desktop {
   background-size: 44px;
   padding: 2%;
-}
-
+	}
 }
 
 .loader{
@@ -166,7 +163,6 @@ order: 7;
 height: 60vh;
 width: 400px !important;
 order: 8;
-
 }
 
 .lower-regular-3{
@@ -215,9 +211,8 @@ opacity: 1;
 background-color: transparentize($dark-blue, .1);
 border: 10px double white;
 padding: 1.5rem;
-
+	}
 }
-
 .description-title{
 text-transform: uppercase;
 font-size: 1.5rem;
