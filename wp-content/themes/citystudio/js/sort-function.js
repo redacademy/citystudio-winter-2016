@@ -5,117 +5,94 @@ jQuery(document).ready(function($) {
     neighbourhoods: '',
     partners: '',
     year: ''
-  },
+  }
       // values for input names
-      checkedNeigh = '',
-      checkedPart = '',
-      checkedYear = '';
+    checkedNeigh = '',
+    checkedPart = '',
+    checkedYear = '';
 
   //sorting navigation is open on page load on mobile
-    $('#sort').resize(function(){
-         if ($('#page').width() <= 480 ){
-          $('#sort.nav-div').addClass('open');
-         }
+  $('#sort').resize(function(){
+      $('#sort.nav-div').addClass('open');
   });
 
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
- }); // close sort
+  }); // close sort
   // Sort Button Slides out on desktop size
   $('#refresh').click(function() {
     $('#sort').toggleClass('open');
-
- }); // close sort
+  }); // close sort
 
   $('#refresh').click(function() {
-      checkedNeigh = '';
-      checkedPart = '';
-      checkedYear = '';
-      $('.neigh-labels').removeClass('current-menu');
-      $('.neigh-labels').hide();
-      $('.neigh-labels').empty();
-      $('.part-labels').removeClass('current-menu');
-      $('.part-labels').hide();
-      $('.part-labels').empty();
-      $('.year-labels').removeClass('current-menu');
-      $('.year-labels').hide();
-      $('.year-labels').empty();
-      $('.foot-sub-menu').removeClass('current-menu');
+    checkedNeigh = '';
+    checkedPart = '';
+    checkedYear = '';
+    $('.neigh-labels').empty().hide();
+    $('.part-labels').empty().hide();
+    $('.year-labels').empty().hide();
    }); // close sort
 
-
-   $('.foot-sub-menu label').hide();
-
-   $('.menu-item').hover(function(){
-      $(this).children('.foot-sub-menu').toggleClass('current-menu');
-        if(checkedNeigh === '' || checkedPart === '' || checkedYear === '' ) {
-              $('.current-menu').toggle(); 
-            }
-    });
+  $('.menu-item').mouseover(function(){
+    var labelVisible = $(this).children('div').find('label').length;
+     if(!labelVisible){
+      $(this).children('.foot-sub-menu').addClass('current-menu'); 
+    }
+  }); 
+  
+  $('.menu-item').mouseout(function(){
+      $(this).children('.foot-sub-menu').removeClass('current-menu');        
+   });
 
   // Create an empty object to hold the checked navigation values in the properties
 
-  $('.foot-sub-menu label').hide();
-  $('.neigh-labels').hide();
-  $('.part-labels').hide();
-  $('.year-labels').hide();
-
-  $('.menu-item').hover(function() {
-      $(this).children('.foot-sub-menu').addClass('current-menu');
-    }, function() {
-      $(this).removeClass('current-menu');
-  });
-
-
   $('.sub-menu-neigh').click(function() {
-      if ($(this.checked)) {
-          queryFilter.neighbourhoods = $(this).find('input').val();
-//         if ($(this.checked)) {
-//           queryFilter.neighValue = $(this).find('input').val();
-          checkedNeigh = ($(this).text()).trim();
-          $('.neigh-labels')
-              .show()
-              .append('<label>' + checkedNeigh + '</label>');
-          $(this).parent().hide();
-          reloadProjects();
-      }
+    if ($(this.checked)) {
+      queryFilter.neighbourhoods = $(this).find('input').val();
+      checkedNeigh = ($(this).text()).trim();
+      $('.neigh-labels')
+          .show()
+          .append('<label>' + checkedNeigh + '</label>');
+      $(this).parent().removeClass('current-menu');
+      reloadProjects();
+    }
   });
   $('.sub-menu-part').click(function() {
-      if ($(this.checked)) {
-          queryFilter.partners = $(this).find('input').val();
-          checkedPart = ($(this).text()).trim();
-          $('.part-labels')
-              .show()
-              .append('<label>' + checkedPart + '</label>');
-          $(this).parent().hide();
-          reloadProjects();
+    if ($(this.checked)) {
+      queryFilter.partners = $(this).find('input').val();
+      checkedPart = ($(this).text()).trim();
+      $('.part-labels')
+          .show()
+          .append('<label>' + checkedPart + '</label>');
+      $(this).parent().removeClass('current-menu');
+      reloadProjects();
 
-      }
+    }
   });
   $('.sub-menu-year').click(function() {
-      if ($(this.checked)) {
-          queryFilter.year = $(this).find('input').val();
-          checkedYear = ($(this).text()).trim();
-          $('.year-labels')
-              .show()
-              .append('<label>' + checkedYear + '</label>');
-          $(this).parent().hide();
-          reloadProjects();
-      }
+    if ($(this.checked)) {
+      queryFilter.year = $(this).find('input').val();
+      checkedYear = ($(this).text()).trim();
+      $('.year-labels')
+          .show()
+          .append('<label>' + checkedYear + '</label>');
+          $(this).parent().removeClass('current-menu');
+      reloadProjects();
+    }
   }); // close sub-menu-year
 
   // A Function that returns the object queryFilter's properties
   // and concatenates them into a url with + signs
   function filters(){
-      return Object.keys(queryFilter).map(function(filter){
-        if(queryFilter[filter] !== '') {
-          return 'filter['+filter+']='+queryFilter[filter];
-        } else {
-          return false ;
-        }
-      }).filter(Boolean)
-        .join('&');
-    } //close filters function
+    return Object.keys(queryFilter).map(function(filter){
+      if(queryFilter[filter] !== '') {
+        return 'filter['+filter+']='+queryFilter[filter];
+      } else {
+        return false ;
+      }
+    }).filter(Boolean)
+      .join('&');
+  } //close filters function
 
   function reloadProjects() {
 
@@ -153,8 +130,6 @@ jQuery(document).ready(function($) {
                 $.each(response, function(index, value) {
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
-                  // var $featuredClass = featured();
-
                   function featured() {
                     if ( value.featured_project[0] === '1') {
                       return 'featured-square';
@@ -162,10 +137,6 @@ jQuery(document).ready(function($) {
                       return 'featured-rectangle';
                     }
                   }
-
-                  // Stretch Goals for today ----
-                  // $( ".featured-square-2" ).wrapAll( "<div class='small-flex' />");
-                  // $( ".featured-square-4" ).wrapAll( "<div class='large-flex' />");
 
                   if ( !value.placeholder ) {
 
@@ -195,9 +166,7 @@ jQuery(document).ready(function($) {
                                                 wrapAround: 'true'
                                                 // rightToLeft: 'true'
                                           });
-
           } // close success
-
       }); // close ajax call
   } // close reload projects
 }); // document ready

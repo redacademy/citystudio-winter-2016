@@ -224,13 +224,17 @@ display: flex;
 .foot-sub-menu input[type=checkbox] {
   display: none;
 }
+
+.current-menu {
+  display: block;
+}
+
 .foot-sub-menu {
+  display: none;
   background-color: #fff;
   padding: 0.8em;
-  display: inline-block;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
-  display: none;
   &:hover {
     cursor: pointer;
   }
@@ -321,7 +325,7 @@ display: flex;
 .neigh-labels,
 .part-labels,
 .year-labels {
-  display: inline-block;
+  display: none;
   position: relative;
   background-color: #fff;
   padding: 0.5em 0.8em;
