@@ -13,20 +13,13 @@
 }
 
 .site-branding img {
-
   width: 35%;
   padding: 0.5rem 0 0 0.5rem;
   padding: 1rem 0 0 0.5rem;
   width: 15rem;
-<<<<<<< HEAD
   @include desktop {
-  width: 26rem;
-  padding: 1rem 1rem;
-=======
-  @include desktop{
     width: 26rem;
     padding: 1rem 1rem;
->>>>>>> filter
   }
 }
 
