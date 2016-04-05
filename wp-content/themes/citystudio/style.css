@@ -653,11 +653,10 @@ a {
   margin: 1rem; }
 
 .site-header {
-  display: block; }
-
-@media screen and (min-width: 480px) {
-  .site-header {
-    display: none; } }
+  display: none; }
+  @media screen and (min-width: 480px) {
+    .site-header {
+      display: block; } }
 
 .site-branding img {
   width: 35%;
@@ -702,8 +701,9 @@ a {
     .icon-gallery {
       height: 4rem;
       width: 4rem;
-      background-size: 3rem 3rem;
-      margin-right: -10rem; } }
+      background: url("../../images/gallery-blue.png") no-repeat center;
+      background-size: 4rem 4rem;
+      margin-bottom: 0.3rem; } }
 
 .hide-search {
   display: none; }
@@ -835,21 +835,21 @@ a {
   margin: 0.75rem 1.25rem 1rem 1rem; }
   .social-icons:hover {
     cursor: pointer; }
+  @media screen and (min-width: 480px) {
+    .social-icons {
+      height: 2rem;
+      width: 2rem;
+      margin: 1rem 1.5rem 1rem 1rem; } }
 
 .twitter {
   height: 2rem;
   width: 2rem;
   margin-top: 0.5rem; }
 
-@media screen and (min-width: 480px) {
-  .social-icons {
-    height: 2rem;
-    width: 2rem;
-    margin: 1rem 1.5rem 1rem 1rem; }
-  .twitter {
-    height: 2.5rem;
-    width: 2.5rem;
-    margin-top: 0.8rem; } }
+.twitter {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-top: 0.8rem; }
 
 /* Footer Navigation */
 .nav {
@@ -863,7 +863,7 @@ a {
   background-color: #76d6ff;
   max-height: 85px;
   width: 75px;
-  margin: 2rem 0;
+  margin: 2rem 2rem;
   border-radius: 70px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -877,7 +877,7 @@ a {
   transition: all 0.5s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      width: 85px;
+      width: 80px;
       margin: 3rem 0; } }
   @media screen and (min-width: 480px) {
     .nav-div {
@@ -919,7 +919,7 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 4.7rem;
+  max-width: 2.2rem;
   max-height: 5rem;
   padding: 1.5rem 1rem 0 .9rem;
   border-radius: 70px;
@@ -934,7 +934,7 @@ a {
       padding: 1.9rem 1rem; } }
 
 .open {
-  width: 100vw; }
+  width: 85vw; }
   @media screen and (min-width: 480px) {
     .open {
       width: 50vw; } }
@@ -962,8 +962,8 @@ a {
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.5rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in; }
@@ -975,8 +975,8 @@ a {
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.5rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in; }
@@ -988,8 +988,8 @@ a {
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 4.4rem;
+  height: 4.5rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in; }
@@ -1564,6 +1564,46 @@ a, a:visited, a:hover, a:active {
       -ms-flex-order: 6;
           order: 6; }
 
+/*//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
+// .upper-mini-1{
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 5;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// 	li {
+// 	background-size: 300px 400px !important;
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 5;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// }
+// }
+//
+// .upper-mini-2{
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 6;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// 	li {
+// 	background-size: 300px 400px !important;
+// 	height: 30vh !important;
+// 	width: 250px !important;
+// 	background-color: #0198d5;
+// 	order: 6;
+// 	z-index: 1;
+// 	left: 0;
+// 	top: 0;
+// }
+// }*/
 .lower-regular-1 {
   height: 60vh;
   width: 400px !important;
@@ -1625,7 +1665,8 @@ a, a:visited, a:hover, a:active {
     opacity: 1;
     background-color: rgba(0, 100, 150, 0.9);
     border: 10px double white;
-    padding: 1.5rem; }
+    padding: 1.5rem;
+    transition: all 0.5s ease-in; }
 
 .description-title {
   text-transform: uppercase;

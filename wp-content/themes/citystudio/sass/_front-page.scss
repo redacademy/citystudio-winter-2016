@@ -1,10 +1,10 @@
 .container{
 display: block;
 margin-bottom: 10px solid white;
-.bx-viewport{
+  .bx-viewport{
   margin-top: 0;
-  margin-bottom: 5px
-}
+  margin-bottom: 5px;
+	}
 }
 
 
@@ -41,11 +41,11 @@ margin: 2rem;
 }
 
 @include desktop {
-.hero-logo{
-background-size: 48vw;
-height: 20vh;
-z-index: 999;
-}
+	.hero-logo{
+	background-size: 48vw;
+	height: 20vh;
+	z-index: 999;
+	}
 }
 
 .site-description{
@@ -61,13 +61,13 @@ font-family: 'open sans';
 }
 
 @include desktop {
-.site-description{
-margin: 0 auto 5rem;
-width: 48vw;
-p{
-font-size: 1.8rem;
-}
-}
+	.site-description{
+	margin: 0 auto 5rem;
+	width: 48vw;
+	p{
+	font-size: 1.8rem;
+	}
+	}
 }
 
 .toggle-class{
@@ -157,7 +157,7 @@ order: 6;
 }
 
 
-//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
+/*//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
 // .upper-mini-1{
 // 	height: 30vh !important;
 // 	width: 250px !important;
@@ -196,7 +196,7 @@ order: 6;
 // 	left: 0;
 // 	top: 0;
 // }
-// }
+// }*/
 
 .lower-regular-1{
 height: 60vh;
@@ -257,7 +257,7 @@ opacity: 1;
 background-color: transparentize($dark-blue, .1);
 border: 10px double white;
 padding: 1.5rem;
-}
+
 }
 
 
@@ -270,7 +270,7 @@ font-family: $fontfamily;
 }
 
 .subtitle{
-font-weight: bold;
+	font-weight: bold;
 }
 
 .home-description{
