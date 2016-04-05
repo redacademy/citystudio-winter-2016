@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
    $('.menu-item').hover(function(){
       $(this).children('.foot-sub-menu').toggleClass('current-menu');
         if(checkedNeigh === '' || checkedPart === '' || checkedYear === '' ) {
-              $('.current-menu').toggle(); 
+              $('.current-menu').toggle();
             }
     });
 

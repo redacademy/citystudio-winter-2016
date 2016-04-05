@@ -10,6 +10,7 @@ get_header(); ?>
 			<div class="searchpage">
 				<br>
 					<?php get_search_form(); ?>
+
 				<div class="search-list">
 					<?php if ( have_posts() ) : ?>
 					<?php /* Start the Loop */ ?>
@@ -20,6 +21,7 @@ get_header(); ?>
 				    <?php endif; ?>
 					</a>
 				<?php endwhile; ?>
+
 				<?php endif; ?>
 				</div>
 			</div>
