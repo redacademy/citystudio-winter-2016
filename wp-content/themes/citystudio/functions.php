@@ -80,7 +80,7 @@ function citystudio_scripts() {
 
 // Enqueing jquery & slider scripts
 
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script('jquery');
 
 	wp_enqueue_script( 'flickity.pkgd.min.js', get_template_directory_uri() . '/js/flickity/flickity.pkgd.min.js', array());
 
@@ -91,8 +91,6 @@ function citystudio_scripts() {
 	wp_enqueue_script( 'click-function.js', get_template_directory_uri() . '/js/home-transitions.js', array('jquery'), '2.2.0'  );
 
 	wp_enqueue_script( 'sort-function.js', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), '2.2.0'  );
-
-	wp_enqueue_script( 'gallery-pop.js', get_template_directory_uri() . '/js/gallery-pop.js', array('jquery'), '2.2.0' );
 
 }
 
