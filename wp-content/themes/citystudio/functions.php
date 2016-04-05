@@ -82,8 +82,6 @@ function citystudio_scripts() {
 
 	wp_enqueue_script('jquery');
 
-	wp_enqueue_script('jquery', get_template_directory_uri() . '/js/jquery-2.2.0.js');
-
 	wp_enqueue_script( 'flickity.pkgd.min.js', get_template_directory_uri() . '/js/flickity/flickity.pkgd.min.js', array());
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0' );

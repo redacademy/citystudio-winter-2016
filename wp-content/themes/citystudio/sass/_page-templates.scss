@@ -62,12 +62,6 @@
   .section-archive ul {
     margin: 0 auto;
   }
-  tag-archives .section-archive li  {
-    flex-basis: 33%;
-    margin: 0 auto;
-    min-width: 300px;
-    min-height: 250px;
-  }
 }
 
 // everything for both media views needs to be outside the desktop.
@@ -84,12 +78,17 @@
     margin: 0px 1.5em;
     box-sizing: border-box;
     padding: none;
-
       li {
         background-position: center center !important;
         background-size: cover !important;
         min-width: 325px;
         min-height: 250px;
+        @include desktop {
+          flex-basis: 33%;
+          margin: 0 auto;
+          min-width: 425px;
+          min-height: 350px;
+        }
       }
       a:hover {
         filter: brightness();
