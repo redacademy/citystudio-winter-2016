@@ -137,6 +137,7 @@ order: 2;
 }
 .full-width-col {
   margin: 1rem 0 9rem;
+  width: 95vw;
   font-family: $fontfamily;
   display: block;
   order: 3;
@@ -152,11 +153,14 @@ order: 2;
 
 .tags {
   display: inline-flex;
+  margin-top: .5rem;
   p{
     background-color: #DCDCDC;
     padding: .8rem 1rem;
     color: black;
     border-radius: 5px;
-    margin-left: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
   }
 }

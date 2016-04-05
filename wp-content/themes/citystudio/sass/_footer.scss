@@ -12,19 +12,22 @@
     z-index: 1;
   }
 }
+
 .social-icons-div {
-  position: relative;
-  top: 40px;
-  float: right;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.5rem;
+background-color: $dark-blue;
+display: flex;
   ul {
     list-style: none;
     display: flex;
     margin: 0 auto;
   }
   @include desktop {
+    position: relative;
+    top: 55px;
+    float: right;
+
+    flex-direction: column;
+    margin-top: 0.5rem;
     flex-direction: column;
     margin-right: 1.5rem;
     z-index: 999;
@@ -32,7 +35,6 @@
       list-style: none;
       display: flex;
       margin: auto 0;
-
       }
   }
 }
@@ -120,12 +122,11 @@
   &:hover {
     cursor: pointer;
   }
-
   @include desktop {
-    width: 100vw;
-    max-width: 3.2rem;
-    max-height: 5.3rem;
-    padding: 1.9rem 1rem;
+  width: 100vw;
+  max-width: 2.8rem;
+  height: 1.4rem;
+  padding: 1.9rem 1.2rem;
   }
 }
 .open {
@@ -210,10 +211,9 @@
   background-color: #0082b9;
   transition: all 3s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 5.2rem;
+    height: 5.1rem;
   }
-
 }
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
