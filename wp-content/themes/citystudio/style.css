@@ -945,8 +945,7 @@ a {
       width: 5rem; } }
 
 .close .refresh {
-  width: 20px;
-  color: red; }
+  width: 20px; }
 
 .menu-item {
   opacity: 0; }
@@ -1512,6 +1511,12 @@ a, a:visited, a:hover, a:active {
   z-index: 1;
   left: 0;
   top: 0; }
+
+button.flickity-prev-next-button {
+  display: none; }
+  @media screen and (min-width: 480px) {
+    button.flickity-prev-next-button {
+      display: block; } }
 
 .featured-square-1 {
   height: 60vh;
