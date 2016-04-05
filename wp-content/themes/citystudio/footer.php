@@ -4,7 +4,7 @@
  * @package RED_Starter_Theme
  */
 ?>
-			</div><!-- #content -->
+
 			<footer id="colophon" class="site-footer" role="contentinfo">
 					<?php get_template_part ('template-parts/content', 'nav'); ?>
 				<div class="social-icons-div">
@@ -27,8 +27,7 @@
 					</ul>
 				</div>
 			</footer><!-- #colophon -->
-		</div><!-- #page -->
-
+		</div><!-- #content -->
 		<?php wp_footer(); ?>
 	</body>
 </html>

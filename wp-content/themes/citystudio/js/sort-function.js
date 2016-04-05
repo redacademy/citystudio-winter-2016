@@ -20,7 +20,6 @@ jQuery(document).ready(function($) {
 
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
-
  }); // close sort
   // Sort Button Slides out on desktop size
   $('#refresh').click(function() {
@@ -28,14 +27,33 @@ jQuery(document).ready(function($) {
 
  }); // close sort
 
+  $('#refresh').click(function() {
+      checkedNeigh = '';
+      checkedPart = '';
+      checkedYear = '';
+      $('.neigh-labels').removeClass('current-menu');
+      $('.neigh-labels').hide();
+      $('.neigh-labels').empty();
+      $('.part-labels').removeClass('current-menu');
+      $('.part-labels').hide();
+      $('.part-labels').empty();
+      $('.year-labels').removeClass('current-menu');
+      $('.year-labels').hide();
+      $('.year-labels').empty();
+      $('.foot-sub-menu').removeClass('current-menu');
+   }); // close sort
+
+
    $('.foot-sub-menu label').hide();
 
-    $('.menu-item').hover(function(){
-          $(this).children('.foot-sub-menu').toggleClass('current-menu');
+   $('.menu-item').hover(function(){
+      $(this).children('.foot-sub-menu').toggleClass('current-menu');
+        if(checkedNeigh === '' || checkedPart === '' || checkedYear === '' ) {
+              $('.current-menu').toggle(); 
+            }
     });
 
-    $('.foot-sub-menu .sub-menu-item').click(function(){
-    });
+  // Create an empty object to hold the checked navigation values in the properties
 
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
@@ -48,9 +66,12 @@ jQuery(document).ready(function($) {
       $(this).removeClass('current-menu');
   });
 
+
   $('.sub-menu-neigh').click(function() {
       if ($(this.checked)) {
           queryFilter.neighbourhoods = $(this).find('input').val();
+//         if ($(this.checked)) {
+//           queryFilter.neighValue = $(this).find('input').val();
           checkedNeigh = ($(this).text()).trim();
           $('.neigh-labels')
               .show()
@@ -68,6 +89,7 @@ jQuery(document).ready(function($) {
               .append('<label>' + checkedPart + '</label>');
           $(this).parent().hide();
           reloadProjects();
+
       }
   });
   $('.sub-menu-year').click(function() {

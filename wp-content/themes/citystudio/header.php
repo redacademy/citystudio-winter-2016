@@ -16,23 +16,23 @@
 	<?php wp_head(); ?>
 
 	<style media="screen and (max-width: 782px)">
-			html {
-				margin-top:0 !important;
-			}
-	</style>
-	<style media="screen">
-			html {
-				margin-top:0 !important;
-			}
-	</style>
+	            html {
+	                margin-top:0 !important;
+	            }
+	    </style>
+	    <style media="screen">
+	            html {
+	                margin-top:0 !important;
+	            }
+	    </style>
 	</head>
 
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html( 'Skip to content' ); ?></a>
 
-			<header id="masthead" class="site-header" role="banner">
-			<div class="header-container">
+				<header id="masthead" class="site-header" role="banner">
+					<div class="header-container">
 
 			<div class="site-branding">
 				<a href="<?php echo esc_url(home_url([1]));?>">

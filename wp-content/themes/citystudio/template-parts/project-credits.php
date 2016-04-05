@@ -51,8 +51,25 @@
 
     <span class="proj-date proj-detail-wrap">
       <h3>Date Completed:</h3>
-      <?php echo CFS()->get( 'season_completed' ); ?>
-      <?php echo CFS()->get( 'date' ); ?>
+      <?php  $terms = get_the_terms( $post, 'season' );
+        if ( !empty($terms)) : ?>
+
+          <?php foreach ( $terms as $term )  : ?>
+
+              <?php echo $term->name; ?>
+
+        <?php endforeach; ?>
+        <?php endif; ?>
+
+      <?php  $terms = get_the_terms( $post, 'year' );
+        if ( !empty($terms)) : ?>
+
+          <?php foreach ( $terms as $term )  : ?>
+
+              <?php echo $term->name; ?>
+
+        <?php endforeach; ?>
+        <?php endif; ?>
     </span>
 
     <span class="proj-subtitle proj-detail-wrap">
@@ -67,7 +84,15 @@
 
     <span class="proj-subtitle proj-detail-wrap">
       <h3>Neighbourhood:</h3>
-      <?php echo CFS()->get( 'neighbourhood' ); ?>
+      <?php  $terms = get_the_terms( $post, 'neighbourhoods' );
+        if ( !empty($terms)) : ?>
+
+          <?php foreach ( $terms as $term )  : ?>
+
+              <?php echo $term->name; ?>
+
+        <?php endforeach; ?>
+        <?php endif; ?>
     </span>
 
     <span class="proj-subtitle proj-detail-wrap">

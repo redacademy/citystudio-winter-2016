@@ -12,19 +12,22 @@
     z-index: 1;
   }
 }
+
 .social-icons-div {
-  position: relative;
-  top: 40px;
-  float: right;
-  display: flex;
-  flex-direction: column;
-  margin-top: 0.5rem;
+background-color: $dark-blue;
+display: flex;
   ul {
     list-style: none;
     display: flex;
     margin: 0 auto;
   }
   @include desktop {
+    position: relative;
+    top: 55px;
+    float: right;
+
+    flex-direction: column;
+    margin-top: 0.5rem;
     flex-direction: column;
     margin-right: 1.5rem;
     z-index: 999;
@@ -32,7 +35,6 @@
       list-style: none;
       display: flex;
       margin: auto 0;
-
       }
   }
 }
@@ -44,44 +46,46 @@
   &:hover {
     cursor: pointer;
   }
-}
-.twitter {
-  height: 2rem;
-  width: 2rem;
-  margin-top: 0.5rem;
-}
-@include desktop {
-  .social-icons {
+  @include desktop {
     height: 2rem;
     width: 2rem;
     margin: 1rem 1.5rem 1rem 1rem;
     }
-  .twitter {
+  }
+
+.twitter {
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.5rem;
+  @include desktop {
     height: 2.5rem;
     width: 2.5rem;
-    margin-top: 0.8rem;
+    margin-top: .8rem;
   }
 }
+
 /* Footer Navigation */
 .nav {
   width: 95vw;
   margin: 0 auto;
   @include desktop {
-    width: 90vw;
+    width: 50vw;
+    margin: 0;
   }
 }
+
 .nav-div {
   background-color: #76d6ff;
   max-height: 85px;
   width: 75px;
-  margin: 2rem 0;
+  margin: 2rem 2rem;
   border-radius: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: all 0.5s ease-in;
   @include desktop {
-    width: 85px;
+    width: 80px;
     margin: 3rem 0;
   }
   @include desktop {
@@ -93,7 +97,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: all 1.5s ease-in;
+    transition: all .5s ease-in;
   }
     @include desktop {
       background-color: #76d6ff;
@@ -104,7 +108,7 @@
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      transition: all 1.5s ease-in;
+      transition: all .5s ease-in;
     }
 }
 .sort {
@@ -112,7 +116,7 @@
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 4.7rem;
+  max-width: 2.7rem;
   max-height: 5rem;
   padding: 1.5rem 1rem 0 .9rem;
   border-radius: 70px;
@@ -120,18 +124,20 @@
   &:hover {
     cursor: pointer;
   }
-
   @include desktop {
-    width: 100vw;
-    max-width: 3.2rem;
-    max-height: 5.3rem;
-    padding: 1.9rem 1rem;
+  width: 100vw;
+  max-width: 2.8rem;
+  height: 1.4rem;
+  padding: 1.9rem 1.2rem;
   }
 }
-.open {
-  width: 100vw;
-  @include desktop {
+
+.open{
+  width: 95vw;
+  margin: 1rem auto 1rem;
+  @include desktop{
   width: 50vw;
+  margin: 3rem;
   }
 }
 
@@ -163,11 +169,11 @@
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+      height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all .5s ease-in;
+  transition: all .4s ease-in;
   @include desktop {
     width: 5.4rem;
     height: 5.4rem;
@@ -176,8 +182,8 @@
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+    height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
@@ -189,11 +195,11 @@
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+      height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
-  transition: all 2s ease-in;
+  transition: all 1.8s ease-in;
   @include desktop {
     width: 5.4rem;
     height: 5.4rem;
@@ -203,17 +209,16 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.5rem;
+  width: 5.1rem;
   height: 4.4rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 3s ease-in;
+  transition: all 2s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 5.2rem;
+    height: 5.1rem;
   }
-
 }
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
@@ -307,7 +312,12 @@
   color: $dark-blue;
   background: #fff;
   padding: 1em;
+
 }
+  .show-label:hover{
+      transition-delay:4s;
+  }
+
 .neigh-labels,
 .part-labels,
 .year-labels {
