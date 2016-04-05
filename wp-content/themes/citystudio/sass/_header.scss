@@ -17,9 +17,12 @@
 }
 
 .site-branding img {
+
+  width: 35%;
+  padding: 0.5rem 0 0 0.5rem;
   padding: 1rem 0 0 0.5rem;
   width: 15rem;
-  @include desktop{
+  @include desktop {
   width: 26rem;
   padding: 1rem 1rem;
   }
@@ -36,9 +39,8 @@
   padding: 2rem 1rem;
   margin: auto 0;
   .fa {
-    padding-bottom: 1rem;
     color: #03648c;
-    margin: 2rem;
+    margin-top: 1rem;
   }
   a {
     color: #03648c;
@@ -46,11 +48,18 @@
 }
 
 .icon-gallery{
+  height: 2rem;
+  width: 2rem;
+  background: url('../../images/gallery-blue.png') center no-repeat;
+  background-size: 2.5rem 2.5rem;
+  margin-top: .5rem;
+  margin-left: 2rem;
+  @include desktop {
   height: 4rem;
   width: 4rem;
-  background: url('../../images/gallery-blue.png') no-repeat center;
-  background-size: 4rem 4rem;
-  margin-bottom: 0.3rem;
+  background-size: 3rem 3rem;
+  margin-right: -10rem;
+  }
 }
 
 .show-header-nav{
