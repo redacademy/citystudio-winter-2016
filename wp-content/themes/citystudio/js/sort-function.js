@@ -49,7 +49,7 @@ jQuery(document).ready(function($) {
    $('.menu-item').hover(function(){
       $(this).children('.foot-sub-menu').toggleClass('current-menu');
         if(checkedNeigh === '' || checkedPart === '' || checkedYear === '' ) {
-              $('.current-menu').toggle(); 
+              $('.current-menu').toggle();
             }
     });
 
@@ -149,7 +149,6 @@ jQuery(document).ready(function($) {
               $gallery.flickity('destroy');
               $gallery.empty();
 
-
                 $.each(response, function(index, value) {
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
@@ -170,7 +169,7 @@ jQuery(document).ready(function($) {
                   if ( !value.placeholder ) {
 
                     galleryItems += '<a class="gallery-anchor js-flickity" href="' + value.link + '" data-flickity-options="initialIndex:3">';
-                    galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                    galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat cover;">';
                     galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
 
                     galleryItems +=   '<div class="description">';
@@ -184,7 +183,7 @@ jQuery(document).ready(function($) {
                     galleryItems += '</a>';
 
                   } else {
-                    galleryItems += '<a class="gallery-anchor"><li class="blue-placeholder">';
+                    galleryItems += '<a class="gallery-anchor"><li class="featured-square blue-placeholder">';
                     galleryItems += '</li></a>';
                   }
 
