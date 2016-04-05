@@ -106,9 +106,9 @@ jQuery(document).ready(function($) {
           success: function(response) {
             console.log(response);
             // get the length of response and run this IF it is less than 10
-            if ( response.length < 10 ) {
+            if ( response.length < 4 ) {
               // this object holds the remaining slots left to fill
-              var objectPlaceholder = (10 - response.length);
+              var objectPlaceholder = (4 - response.length);
 
               // loop over the response.length to find empty slots to fill
               for (var i = 0; i < objectPlaceholder; i++ ) {
@@ -129,44 +129,50 @@ jQuery(document).ready(function($) {
 
 
                 $.each(response, function(index, value) {
-
-
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
                   // var $featuredClass = featured();
 
                   function featured() {
-                    if ( value.featured_project === 1 ) {
-                      return 'featured-square-2';
+                    if ( value.featured_project[0] === '1') {
+                      return 'featured-square';
                     } else {
-                      return 'featured-square-4';
+                      return 'featured-rectangle';
                     }
                   }
 
-                  $( ".featured-square-2" ).wrapAll( "<div class='small-flex' />");
-                  $( ".featured-square-4" ).wrapAll( "<div class='large-flex' />");
+                  // Stretch Goals for today ----
+                  // $( ".featured-square-2" ).wrapAll( "<div class='small-flex' />");
+                  // $( ".featured-square-4" ).wrapAll( "<div class='large-flex' />");
 
                   if ( !value.placeholder ) {
 
                     galleryItems += '<a class="gallery-anchor js-flickity" href="' + value.link + '" data-flickity-options="initialIndex:3">';
-                    galleryItems += '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
-                    galleryItems += ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
-                    galleryItems += '<div class="description"> <h2 class="description-title">' + value.title + '</h2>';
-                    galleryItems += '<div class="subtitle"> ' + value.subtitle + ' </div>';
-                    galleryItems += '<br>';
-                    galleryItems += '<span class="home-description"> ' + value.excerpt + ' </span>';
+                    galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                    galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
 
-                    galleryItems += '</div></div>';
-                    galleryItems += '</li></a>';
+                    galleryItems +=   '<div class="description">';
+                    galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
+                    galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';
+                    galleryItems +=     '<br>';
+                    galleryItems +=     '<span class="home-description"> ' + value.excerpt + ' </span>';
+                    galleryItems +=   '</div>';
+
+                    galleryItems +=   '</li>';
+                    galleryItems += '</a>';
 
                   } else {
                     galleryItems += '<a class="gallery-anchor"><li class="blue-placeholder">';
-                    galleryItems += '<h2 class="description-title">Nothing fit your search</h2>';
                     galleryItems += '</li></a>';
                   }
 
                 });
-              $gallery.append(galleryItems).flickity({cellAlign: 'left'});
+              $gallery.append(galleryItems).flickity({
+                                                cellAlign: 'left',
+                                                contain: 'true',
+                                                wrapAround: 'true'
+                                                // rightToLeft: 'true'
+                                          });
 
           } // close success
 

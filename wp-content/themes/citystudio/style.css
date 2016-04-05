@@ -1464,47 +1464,38 @@ a, a:visited, a:hover, a:active {
 .home-slider .flickity-page-dots {
   display: none; }
 
-.blue-placeholder {
-  height: 60vh;
-  width: 30vw;
-  background-color: #006496; }
-
 .flickity-slider a li {
-  background-size: cover !important;
   border: .25rem solid white;
   height: 60vh;
   margin: 0 .25rem;
-  width: 400px;
+  width: 100%;
   z-index: 1;
   left: 0;
   top: 0; }
-  .flickity-slider a li .lower-regular-4 {
-    height: 60vh;
-    width: 800px !important;
-    overflow-y: hidden;
-    -webkit-order: 10;
-        -ms-flex-order: 10;
-            order: 10; }
-    .flickity-slider a li .lower-regular-4 .description:hover {
-      background-color: rgba(0, 130, 185, 0.9); }
-  .flickity-slider a li .featured-square-2 {
-    height: 60vh;
-    width: 800px !important;
-    overflow-y: hidden;
-    -webkit-order: 2;
-        -ms-flex-order: 2;
-            order: 2; }
-    .flickity-slider a li .featured-square-2 .description:hover {
-      background-color: rgba(0, 130, 185, 0.9);
-      height: 60vh; }
 
-.featured-square-4 {
+.featured-rectangle {
   height: 60vh;
   width: 400px !important;
   overflow-y: hidden;
   -webkit-order: 4;
       -ms-flex-order: 4;
           order: 4; }
+
+.featured-square {
+  height: 60vh;
+  width: 800px !important;
+  overflow-y: hidden;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
+  .featured-square .description:hover {
+    background-color: rgba(0, 130, 185, 0.9);
+    height: 60vh; }
+
+li.blue-placeholder {
+  height: 60vh;
+  width: 30vw;
+  background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
 .description {
   height: 60vh;
