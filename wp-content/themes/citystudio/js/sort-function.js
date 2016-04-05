@@ -109,11 +109,21 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
 
-          // wp-json/wp/v2/posts?filter[job-type]=manager
-
           success: function(response) {
-
             console.log(response);
+            // get the length of response and run this IF it is less than 10
+            if ( response.length < 10 ) {
+              // this object holds the remaining slots left to fill
+              var objectPlaceholder = (10 - response.length);
+
+              // loop over the response.length to find empty slots to fill
+              for (var i = 0; i < objectPlaceholder; i++ ) {
+                // push an object into the blank slots
+                response.push(
+                  { placeholder: true }
+                );
+              }
+            }
 
             // create gallery method to append HTML to
             var $gallery = $('.home-slider');
@@ -123,32 +133,28 @@ jQuery(document).ready(function($) {
               $gallery.flickity('destroy');
               $gallery.empty();
 
-              // if( filters() !== false ) {
-                // If featured is checked add class of
-                debugger;
-                $.each(response, function(index, value) {
-                  galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
-                  galleryItems += '<li style="background: url(' + value.featured_image_url + ') no-repeat;">';
-                  galleryItems += '<div class="description"> <h2 class="description-title">' + value.title.rendered + '</h2>';
-                  galleryItems += '<div class="subtitle"> ' + value.subtitle + ' </div>'
-                  galleryItems += '<br>';
-                  galleryItems += '<span class="home-description"> ' + value.excerpt + ' </span>'
 
-                  galleryItems += '</div></div>';
-                  galleryItems += '</li></a>';
+                $.each(response, function(index, value) {
+
+                  if ( !value.placeholder ) {
+                    galleryItems += '<a class="gallery-anchor js-flickity" href="' + value.link + '" data-flickity-options="initialIndex:3">';
+                    galleryItems += '<li class="featured-square-1" style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                    galleryItems += '<div class="description"> <h2 class="description-title">' + value.title + '</h2>';
+                    galleryItems += '<div class="subtitle"> ' + value.subtitle + ' </div>';
+                    galleryItems += '<br>';
+                    galleryItems += '<span class="home-description"> ' + value.excerpt + ' </span>';
+
+                    galleryItems += '</div></div>';
+                    galleryItems += '</li></a>';
+
+                  } else {
+                    debugger;
+                    galleryItems += '<a class="gallery-anchor"><li class="blue-placeholder">';
+                    galleryItems += '</li></a>';
+                  }
+
                 });
-              // }
-              //   else {
-              //     debugger;
-              //     $.each(response, function(index, value) {
-              //       galleryItems += '<a class="gallery-anchor featured-square-1" href="' + value.link + '">';
-              //       galleryItems += '<li style="background-color: dark-blue;">';
-              //
-              //       galleryItems += '</div></div>';
-              //       galleryItems += '</li></a>';
-              //   });
-              // }
-              $gallery.append(galleryItems).flickity();
+              $gallery.append(galleryItems).flickity({cellAlign: 'left'});
 
           } // close success
 

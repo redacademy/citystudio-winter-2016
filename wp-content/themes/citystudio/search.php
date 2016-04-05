@@ -20,7 +20,6 @@ get_header(); ?>
 				    <?php endif; ?>
 					</a>
 				<?php endwhile; ?>
-				<?php else : ?>
 				<?php endif; ?>
 				</div>
 			</div>

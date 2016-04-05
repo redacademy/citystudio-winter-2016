@@ -1464,18 +1464,24 @@ a, a:visited, a:hover, a:active {
 .home-slider .flickity-page-dots {
   display: none; }
 
+.blue-placeholder {
+  height: 60vh;
+  width: 30vw;
+  background-color: #006496; }
+
 .flickity-slider a li {
+  background-size: cover !important;
   border: .25rem solid white;
   height: 60vh;
   margin: 0 .25rem;
-  width: auto;
+  width: 400px;
   z-index: 1;
   left: 0;
   top: 0; }
 
 .featured-square-1 {
   height: 60vh;
-  width: 400px !important;
+  width: 400px;
   overflow-y: hidden;
   -webkit-order: 1;
       -ms-flex-order: 1;
