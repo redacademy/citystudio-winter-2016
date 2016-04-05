@@ -113,17 +113,17 @@ button.flickity-prev-next-button{
 }
 
 .featured-rectangle {
-	height: 60vh;
-	width: 400px !important;
-	overflow-y: hidden;
-	order: 4;
-}
-
-.featured-square {
+	background-size: cover !important;
 	height: 60vh;
 	width: 800px !important;
 	overflow-y: hidden;
-	order: 2;
+}
+
+.featured-square {
+	background-size: cover !important;
+	height: 60vh;
+	width: 400px !important;
+	overflow-y: hidden;
 
 		.description:hover {
 			background-color: transparentize($medium-blue, .1);
@@ -133,7 +133,7 @@ button.flickity-prev-next-button{
 
 li.blue-placeholder {
 	height: 60vh;
-	width: 30vw;
+	width: 400px;
 	background: linear-gradient(to right, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
 							url('../../images/placeholder-blue.jpg')
 							top center
