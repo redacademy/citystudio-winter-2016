@@ -96,33 +96,30 @@
 	z-index: 1;
 	left: 0;
 	top: 0;
-}
 
-.featured-square-1{
-	height: 60vh;
-	width: 400px ;
-	overflow-y: hidden;
-	order: 1;
-}
-
-// KEEP THIS ONE
-.featured-square-2{
-	height: 60vh;
-	width: 800px !important;
-	overflow-y: hidden;
-	order: 2;
-	.description:hover{
-		background-color: transparentize($medium-blue, .1);
-		width: 727px !important;
+	// KEEP this one
+	.lower-regular-4{
 		height: 60vh;
-	}
-}
+		width: 800px !important;
+		overflow-y: hidden;
+		order: 10;
 
-.featured-square-3{
-	height: 60vh;
-	width: 400px !important;
-	overflow-y: hidden;
-	order: 3;
+			.description:hover {
+				background-color: transparentize($medium-blue, .1);
+			}
+	}
+	// KEEP THIS ONE
+	.featured-square-2 {
+		height: 60vh;
+		width: 800px !important;
+		overflow-y: hidden;
+		order: 2;
+
+			.description:hover {
+				background-color: transparentize($medium-blue, .1);
+				height: 60vh;
+	 		}
+	}
 }
 
 .featured-square-4{
@@ -132,19 +129,33 @@
 	order: 4;
 }
 
-.upper-mini-1{
-	height: 60vh;
-	width: 400px !important;
-	overflow-y: hidden;
-	order: 5;
-}
+// .featured-square-1{
+// 	height: 60vh;
+// 	width: 400px ;
+// 	overflow-y: hidden;
+// 	order: 1;
+// }
 
-.upper-mini-2{
-	height: 60vh;
-	width: 400px !important;
-	overflow-y: hidden;
-	order: 6;
-}
+// .featured-square-3{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	overflow-y: hidden;
+// 	order: 3;
+// }
+
+// .upper-mini-1{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	overflow-y: hidden;
+// 	order: 5;
+// }
+//
+// .upper-mini-2{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	overflow-y: hidden;
+// 	order: 6;
+// }
 
 
 //SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
@@ -187,49 +198,37 @@
 // 	top: 0;
 // }
 // }
+//
+// .lower-regular-1{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	order: 7;
+// }
+//
+// .lower-regular-2{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	order: 8;
+//
+// }
+//
+// .lower-regular-3{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	order: 9;
+// }
 
-.lower-regular-1{
-	height: 60vh;
-	width: 400px !important;
-	order: 7;
-}
-
-.lower-regular-2{
-	height: 60vh;
-	width: 400px !important;
-	order: 8;
-
-}
-
-.lower-regular-3{
-	height: 60vh;
-	width: 400px !important;
-	order: 9;
-}
-
-
-// KEEP this one
-.lower-regular-4{
-	height: 60vh;
-	width: 800px !important;
-	overflow-y: hidden;
-	order: 10;
-	.description:hover{
-		background-color: transparentize($medium-blue, .1);
-	}
-}
-
-.lower-regular-5{
-	height: 60vh;
-	width: 400px !important;
-	order: 11;
-}
-
-.lower-regular-6{
-	height: 60vh;
-	width: 400px !important;
-	order: 12;
-}
+// .lower-regular-5{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	order: 11;
+// }
+//
+// .lower-regular-6{
+// 	height: 60vh;
+// 	width: 400px !important;
+// 	order: 12;
+// }
 
 //setting description to opacity 0 at first
 .description{

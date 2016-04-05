@@ -162,19 +162,19 @@ function get_project_excerpt( $object, $field_name, $request ) {
 }
 
 // Custom function to return Title Custom Field in API callback
-function project_title() {
+function featured_project() {
     register_rest_field( 'project',
-        'title',
+        'featured_project',
         array(
-            'get_callback'    => 'get_project_title',
+            'get_callback'    => 'get_featured_project',
             'update_callback' => null,
             'schema'          => null,
         )
     );
 }
-add_action( 'rest_api_init', 'project_excerpt' );
+add_action( 'rest_api_init', 'featured_project' );
 
-function get_project_title( $object, $field_name, $request ) {
+function get_featured_project( $object, $field_name, $request ) {
 		return get_post_meta( $object[ 'id' ], $field_name );
 }
 

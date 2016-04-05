@@ -1478,34 +1478,25 @@ a, a:visited, a:hover, a:active {
   z-index: 1;
   left: 0;
   top: 0; }
-
-.featured-square-1 {
-  height: 60vh;
-  width: 400px;
-  overflow-y: hidden;
-  -webkit-order: 1;
-      -ms-flex-order: 1;
-          order: 1; }
-
-.featured-square-2 {
-  height: 60vh;
-  width: 800px !important;
-  overflow-y: hidden;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
-  .featured-square-2 .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    width: 727px !important;
-    height: 60vh; }
-
-.featured-square-3 {
-  height: 60vh;
-  width: 400px !important;
-  overflow-y: hidden;
-  -webkit-order: 3;
-      -ms-flex-order: 3;
-          order: 3; }
+  .flickity-slider a li .lower-regular-4 {
+    height: 60vh;
+    width: 800px !important;
+    overflow-y: hidden;
+    -webkit-order: 10;
+        -ms-flex-order: 10;
+            order: 10; }
+    .flickity-slider a li .lower-regular-4 .description:hover {
+      background-color: rgba(0, 130, 185, 0.9); }
+  .flickity-slider a li .featured-square-2 {
+    height: 60vh;
+    width: 800px !important;
+    overflow-y: hidden;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2; }
+    .flickity-slider a li .featured-square-2 .description:hover {
+      background-color: rgba(0, 130, 185, 0.9);
+      height: 60vh; }
 
 .featured-square-4 {
   height: 60vh;
@@ -1514,67 +1505,6 @@ a, a:visited, a:hover, a:active {
   -webkit-order: 4;
       -ms-flex-order: 4;
           order: 4; }
-
-.upper-mini-1 {
-  height: 60vh;
-  width: 400px !important;
-  overflow-y: hidden;
-  -webkit-order: 5;
-      -ms-flex-order: 5;
-          order: 5; }
-
-.upper-mini-2 {
-  height: 60vh;
-  width: 400px !important;
-  overflow-y: hidden;
-  -webkit-order: 6;
-      -ms-flex-order: 6;
-          order: 6; }
-
-.lower-regular-1 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 7;
-      -ms-flex-order: 7;
-          order: 7; }
-
-.lower-regular-2 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 8;
-      -ms-flex-order: 8;
-          order: 8; }
-
-.lower-regular-3 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 9;
-      -ms-flex-order: 9;
-          order: 9; }
-
-.lower-regular-4 {
-  height: 60vh;
-  width: 800px !important;
-  overflow-y: hidden;
-  -webkit-order: 10;
-      -ms-flex-order: 10;
-          order: 10; }
-  .lower-regular-4 .description:hover {
-    background-color: rgba(0, 130, 185, 0.9); }
-
-.lower-regular-5 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 11;
-      -ms-flex-order: 11;
-          order: 11; }
-
-.lower-regular-6 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 12;
-      -ms-flex-order: 12;
-          order: 12; }
 
 .description {
   height: 60vh;

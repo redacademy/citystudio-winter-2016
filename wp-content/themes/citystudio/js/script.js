@@ -17,18 +17,18 @@ jQuery(document).ready(function($){
     autoPlay: true
   });
   var gallery = [
-    'featured-square-1',
-    'upper-mini-1',
-    'upper-mini-2',
-    'featured-square-2',
-    'featured-square-3',
     'featured-square-4',
-    'lower-regular-1',
-    'lower-regular-2',
-    'lower-regular-3',
+    'featured-square-4',
+    'featured-square-4',
+    'featured-square-4',
+    'featured-square-4',
+    'featured-square-4',
     'lower-regular-4',
-    'lower-regular-5',
-    'lower-regular-6'
+    'lower-regular-4',
+    'lower-regular-4',
+    'lower-regular-4',
+    'lower-regular-4',
+    'lower-regular-4',
     ];
 
     $('.gallery-anchor').each(function() {

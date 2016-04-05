@@ -37,12 +37,6 @@ jQuery(document).ready(function($) {
     $('.foot-sub-menu .sub-menu-item').click(function(){
     });
 
-  function filters(){
-    return Object.keys(queryFilter).map(function(filter){
-        return queryFilter[filter];
-    }).join('+');
-  }
-
   $('.foot-sub-menu label').hide();
   $('.neigh-labels').hide();
   $('.part-labels').hide();
@@ -136,9 +130,27 @@ jQuery(document).ready(function($) {
 
                 $.each(response, function(index, value) {
 
+
+                  // if feature project checkbox is true add large class.
+                  // else if feature project checkoc is falso use reg class
+                  // var $featuredClass = featured();
+
+                  function featured() {
+                    if ( value.featured_project === 1 ) {
+                      return 'featured-square-2';
+                    } else {
+                      return 'featured-square-4';
+                    }
+                  }
+
+                  $( ".featured-square-2" ).wrapAll( "<div class='small-flex' />");
+                  $( ".featured-square-4" ).wrapAll( "<div class='large-flex' />");
+
                   if ( !value.placeholder ) {
+
                     galleryItems += '<a class="gallery-anchor js-flickity" href="' + value.link + '" data-flickity-options="initialIndex:3">';
-                    galleryItems += '<li class="featured-square-1" style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                    galleryItems += '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
+                    galleryItems += ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
                     galleryItems += '<div class="description"> <h2 class="description-title">' + value.title + '</h2>';
                     galleryItems += '<div class="subtitle"> ' + value.subtitle + ' </div>';
                     galleryItems += '<br>';
@@ -148,8 +160,8 @@ jQuery(document).ready(function($) {
                     galleryItems += '</li></a>';
 
                   } else {
-                    debugger;
                     galleryItems += '<a class="gallery-anchor"><li class="blue-placeholder">';
+                    galleryItems += '<h2 class="description-title">Nothing fit your search</h2>';
                     galleryItems += '</li></a>';
                   }
 
