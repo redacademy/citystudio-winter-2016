@@ -1357,14 +1357,7 @@ object {
         color: #006496; } }
   @media screen and (min-width: 1000px) {
     .tag-archives .section-archive ul {
-      margin: 0 auto; }
-    .tag-archives tag-archives .section-archive li {
-      -webkit-flex-basis: 33%;
-          -ms-flex-preferred-size: 33%;
-              flex-basis: 33%;
-      margin: 0 auto;
-      min-width: 300px;
-      min-height: 250px; } }
+      margin: 0 auto; } }
   .tag-archives header {
     -webkit-flex-basis: 100%;
         -ms-flex-preferred-size: 100%;
@@ -1391,6 +1384,14 @@ object {
       background-size: cover !important;
       min-width: 325px;
       min-height: 250px; }
+      @media screen and (min-width: 480px) {
+        .tag-archives .section-archive li {
+          -webkit-flex-basis: 33%;
+              -ms-flex-preferred-size: 33%;
+                  flex-basis: 33%;
+          margin: 0 auto;
+          min-width: 425px;
+          min-height: 350px; } }
     .tag-archives .section-archive a:hover {
       -webkit-filter: brightness();
               filter: brightness(); }
