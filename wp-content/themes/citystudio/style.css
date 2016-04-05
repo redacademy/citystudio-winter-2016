@@ -1347,7 +1347,14 @@ object {
       margin: 0 auto;
       min-width: 400px;
       min-height: 275px;
-      font-size: 3rem; } }
+      font-size: 3rem; }
+    .tag-archives h2 {
+      font-family: 'open_sans', bold;
+      font-size: 4rem;
+      color: #00A0DC;
+      font-weight: 900; }
+      .tag-archives h2 span {
+        color: #006496; } }
   @media screen and (min-width: 1000px) {
     .tag-archives .section-archive ul {
       margin: 0 auto; }
@@ -1404,7 +1411,8 @@ object {
   border-radius: 5px;
   box-sizing: border-box;
   margin: 1em 2em 3em;
-  padding: 1em; }
+  max-width: 80%;
+  font-size: 1.5rem; }
 
 .tag-url {
   text-decoration: none;
@@ -1421,7 +1429,6 @@ a, a:visited, a:hover, a:active {
     margin-bottom: 5px; }
 
 .landing-gallery {
-
   height: 33px;
   width: 33px;
   background: url("../../images/gallery-white.png") no-repeat center;
@@ -1432,26 +1439,10 @@ a, a:visited, a:hover, a:active {
           align-self: flex-end;
   padding: 2rem; }
 
-  display: none; }
-  @media screen and (min-width: 480px) {
-    .landing-gallery {
-      display: block;
-      height: 50px;
-      width: 50px;
-      background: url("../../images/gallery-white.png") no-repeat center;
-      background-size: 50px 50px;
-      margin-bottom: 0.3rem;
-      -webkit-align-self: flex-end;
-          -ms-flex-item-align: end;
-              align-self: flex-end;
-      padding: 3rem;
-      float: right; } }
-
 .hero {
   width: 100vw;
   min-height: 100vh;
-
-  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url(../../images/Front-page-background-image.png) no-repeat center;
   background-size: 100% 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1461,24 +1452,20 @@ a, a:visited, a:hover, a:active {
           flex-direction: column; }
 
 .hero-logo {
-  background: url("../../images/citystudio-logo-trans.png") no-repeat center;
+  background: url(../../images/citystudio-logo-trans.png) no-repeat center;
   background-size: 80vw;
-  height: 15vh;
-  margin: 6rem 2rem 1rem; }
-  @media screen and (min-width: 480px) {
-    .hero-logo {
-      background-size: 60vw;
-      height: 30vh;
-      margin: 0 2rem 3rem; } }
+  height: 30vh;
+  margin: 2rem; }
 
+@media screen and (min-width: 480px) {
+  .hero-logo {
+    background-size: 48vw;
+    height: 20vh;
+    z-index: 999; } }
 
 .site-description {
   margin: 0 auto 4rem;
   width: 80vw; }
-  @media screen and (min-width: 480px) {
-    .site-description {
-      margin: 0 auto;
-      width: 48vw; } }
   .site-description p {
     font-size: 1.1rem;
     text-shadow: 1px 3px 5px #969696;
@@ -1486,41 +1473,39 @@ a, a:visited, a:hover, a:active {
     text-align: center;
     font-family: 'open sans'; }
 
-    @media screen and (min-width: 480px) {
-      .site-description p {
-        font-size: 1.7rem; } }
-
+@media screen and (min-width: 480px) {
+  .site-description {
+    margin: 0 auto 5rem;
+    width: 48vw; }
+    .site-description p {
+      font-size: 1.8rem; } }
 
 .toggle-class {
-  background: url("../../assets/noun.png") no-repeat;
+  background: url(../../assets/noun.png) no-repeat;
   background-size: contain;
   border: 0;
-  margin: 0 auto;
-  padding: 7%;
-  outline: 0;
-  height: 30px;
-  width: 20px; }
+  margin: 0 auto 2rem;
+  padding: 7% 7%;
+  outline: 0; }
   @media screen and (min-width: 480px) {
     .toggle-class {
-      background-size: 75px;
-      padding: 4% 4% 4% 0.2rem;
-      height: 50px;
-      width: 45px; } }
+      background-size: 44px;
+      padding: 2%; } }
 
 .loader {
   opacity: 0.1;
   border: none;
   float: center;
   margin-left: 900px;
-  padding: 2rem; }
+  padding: 2rem 2rem; }
 
 .home-slider .flickity-page-dots {
   display: none; }
 
 .flickity-slider a li {
-  border: 0.25rem solid white;
+  border: .25rem solid white;
   height: 60vh;
-  margin: 0 0.25rem;
+  margin: 0 .25rem;
   width: auto;
   z-index: 1;
   left: 0;
@@ -1529,35 +1514,52 @@ a, a:visited, a:hover, a:active {
 .featured-square-1 {
   height: 60vh;
   width: 400px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1; }
 
 .featured-square-2 {
   height: 60vh;
   width: 800px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 2;
+      -ms-flex-order: 2;
+          order: 2; }
   .featured-square-2 .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    width: 92%; }
+    background-color: rgba(0, 130, 185, 0.9); }
 
 .featured-square-3 {
   height: 60vh;
   width: 400px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 3;
+      -ms-flex-order: 3;
+          order: 3; }
 
 .featured-square-4 {
   height: 60vh;
   width: 400px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 4;
+      -ms-flex-order: 4;
+          order: 4; }
 
 .upper-mini-1 {
   height: 60vh;
   width: 400px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 5;
+      -ms-flex-order: 5;
+          order: 5; }
 
 .upper-mini-2 {
   height: 60vh;
   width: 400px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 6;
+      -ms-flex-order: 6;
+          order: 6; }
 
 .lower-regular-1 {
   height: 60vh;
@@ -1583,23 +1585,30 @@ a, a:visited, a:hover, a:active {
 .lower-regular-4 {
   height: 60vh;
   width: 800px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  -webkit-order: 10;
+      -ms-flex-order: 10;
+          order: 10; }
   .lower-regular-4 .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    width: 92%; }
+    background-color: rgba(0, 130, 185, 0.9); }
 
 .lower-regular-5 {
   height: 60vh;
-  width: 400px !important; }
+  width: 400px !important;
+  -webkit-order: 11;
+      -ms-flex-order: 11;
+          order: 11; }
 
 .lower-regular-6 {
   height: 60vh;
-  width: 400px !important; }
+  width: 400px !important;
+  -webkit-order: 12;
+      -ms-flex-order: 12;
+          order: 12; }
 
 .description {
-
-  height: 84%;
-  width: 84%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   position: absolute;
   z-index: 2;
