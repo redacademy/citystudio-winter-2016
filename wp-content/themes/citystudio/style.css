@@ -673,7 +673,7 @@ a {
       padding: 1rem; } }
 
 .search-gallery {
-  width: 30%;
+  width: 23%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -870,7 +870,7 @@ a {
 .nav-div {
   background-color: #76d6ff;
   max-height: 85px;
-  width: 75px;
+  width: 71px;
   margin: 2rem 2rem;
   border-radius: 70px;
   display: -webkit-flex;
@@ -927,9 +927,9 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 2.7rem;
-  max-height: 5rem;
-  padding: 1.5rem 1rem 0 .9rem;
+  max-width: 1.7rem;
+  max-height: 3rem;
+  padding: 1.2rem 1.8rem 0 .7rem;
   border-radius: 70px;
   background-color: #0082b9; }
   .sort:hover {
@@ -971,48 +971,51 @@ a {
 
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-  background-size: 40px 60px;
-  width: 5.1rem;
-  height: 4.6rem;
+  background-size: 20px 30px;
+  width: 5.5rem;
+  height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
       width: 5.4rem;
-      height: 5.4rem; } }
+      height: 5.4rem;
+      background-size: 35px 45px; } }
 
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 50px 70px;
-  width: 5.1rem;
-  height: 4.6rem;
+  background-size: 30px 40px;
+  width: 5.5rem;
+  height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
       width: 5.4rem;
-      height: 5.4rem; } }
+      height: 5.4rem;
+      background-size: 45px 60px; } }
 
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 45px 50px;
-  width: 5.1rem;
-  height: 4.6rem;
+  background-size: 25px 30px;
+  width: 5.5rem;
+  height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
       width: 5.4rem;
-      height: 5.4rem; } }
+      height: 5.4rem;
+      background-size: 45px 45px; } }
 
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
-  background-size: 45px 50px;
-  width: 5.1rem;
-  height: 4.4rem;
+  background-size: 35px 35px;
+  width: 5.5rem;
+  height: 3.8rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
@@ -1020,7 +1023,8 @@ a {
   @media screen and (min-width: 480px) {
     .refresh {
       width: 5.2rem;
-      height: 5.1rem; } }
+      height: 5.1rem;
+      background-size: 45px 45px; } }
 
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
@@ -1474,15 +1478,15 @@ a, a:visited, a:hover, a:active {
   background: url("../../images/citystudio-logo-trans.png") no-repeat center;
   background-size: 80vw;
   height: 15vh;
-  margin: 6rem 2rem 1rem; }
+  margin: 4rem 2rem 1rem; }
   @media screen and (min-width: 480px) {
     .hero-logo {
       background-size: 60vw;
       height: 30vh;
-      margin: 0 2rem 3rem; } }
+      margin: 0 2rem 1rem; } }
 
 .site-description {
-  margin: 0 auto 4rem;
+  margin: 0 auto 1rem;
   width: 80vw; }
   @media screen and (min-width: 480px) {
     .site-description {
@@ -1540,32 +1544,27 @@ button.flickity-prev-next-button {
       display: block; } }
 
 .featured-rectangle {
-  height: 60vh;
-  width: 400px !important;
-  overflow-y: hidden;
-  -webkit-order: 4;
-      -ms-flex-order: 4;
-          order: 4; }
-
-.featured-square {
+  background-size: cover !important;
   height: 60vh;
   width: 800px !important;
-  overflow-y: hidden;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
+  overflow-y: hidden; }
+
+.featured-square {
+  background-size: cover !important;
+  height: 60vh;
+  width: 400px !important;
+  overflow-y: hidden; }
   .featured-square .description:hover {
     background-color: rgba(0, 130, 185, 0.9);
-    height: 60vh; }
+    height: 60vh;
+    width: 92%; }
 
 li.blue-placeholder {
   height: 60vh;
-  width: 30vw;
+  width: 400px;
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
 .description {
-  height: 84%;
-  width: 84%;
   opacity: 0;
   position: absolute;
   z-index: 2;
@@ -1580,7 +1579,7 @@ li.blue-placeholder {
     background-color: rgba(0, 100, 150, 0.9);
     border: 10px double white;
     padding: 1.5rem;
-    height: 100%; }
+    height: 92%; }
 
 .description-title {
   text-transform: uppercase;
