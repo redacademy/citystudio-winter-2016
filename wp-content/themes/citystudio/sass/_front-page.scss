@@ -166,8 +166,6 @@ li.blue-placeholder {
   text-overflow: ellipsis;
   overflow: hidden;
   font-family: $fontfamily;
-}
-=======
 border: .25rem solid white;
 height: 60vh;
 margin: 0 .25rem;
@@ -193,13 +191,13 @@ order: 1;
 }
 
 .featured-square-2{
-height: 60vh;
-width: 800px !important;
-overflow-y: hidden;
-order: 2;
-.description:hover{
-  background-color: transparentize($medium-blue, .1);
-}
+  height: 60vh;
+  width: 800px !important;
+  overflow-y: hidden;
+  order: 2;
+  .description:hover{
+    background-color: transparentize($medium-blue, .1);
+  }
 }
 
 .featured-square-3{
