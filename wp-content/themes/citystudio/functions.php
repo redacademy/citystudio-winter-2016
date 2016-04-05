@@ -101,9 +101,9 @@ add_action( 'wp_enqueue_scripts', 'citystudio_scripts' );
 function filter_scripts() {
 	$script_url = get_template_directory_uri(). '/build/js/script.min.js';
 
-	wp_enqueue_script( 'filter_gallery', $script_url, array ( 'jquery' ), false, true);
+	wp_enqueue_script( 'filter_gallery', $script_url, array( 'jquery' ), false, true );
 
-	wp_localize_script( 'filter_gallery', 'api_vars', array (
+	wp_localize_script( 'filter_gallery', 'api_vars', array(
 		'rest_url' => esc_url_raw( rest_url() )
 	) );
 
@@ -158,6 +158,23 @@ function project_excerpt() {
 add_action( 'rest_api_init', 'project_excerpt' );
 
 function get_project_excerpt( $object, $field_name, $request ) {
+		return get_post_meta( $object[ 'id' ], $field_name );
+}
+
+// Custom function to return Title Custom Field in API callback
+function featured_project() {
+    register_rest_field( 'project',
+        'featured_project',
+        array(
+            'get_callback'    => 'get_featured_project',
+            'update_callback' => null,
+            'schema'          => null,
+        )
+    );
+}
+add_action( 'rest_api_init', 'featured_project' );
+
+function get_featured_project( $object, $field_name, $request ) {
 		return get_post_meta( $object[ 'id' ], $field_name );
 }
 

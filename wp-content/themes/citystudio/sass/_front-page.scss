@@ -1,3 +1,6 @@
+//-----------------------------------------
+// LANDING PAGE STYLES  -----------------------
+
 .container {
     display: block;
     border-bottom: 7px solid white;
@@ -83,127 +86,92 @@
     margin-left: 900px;
     padding: 2rem;
   }
-  //-----------------------------------------
-  // BX-SLIDER STYLES------------------------
-  .home-slider .flickity-page-dots {
-    display: none;
+
+//-----------------------------------------
+// SLIDER STYLES------------------------
+
+.home-slider .flickity-page-dots {
+	display: none;
+}
+
+.flickity-slider a li {
+	border: 0.25rem solid white;
+	height: 60vh;
+	margin: 0 0.25rem;
+	width: 100%;
+	z-index: 1;
+	left: 0;
+	top: 0;
+}
+
+button.flickity-prev-next-button{
+	display: none;
+
+		@include desktop {
+			display: block;
+		}
+}
+
+.featured-rectangle {
+	height: 60vh;
+	width: 400px !important;
+	overflow-y: hidden;
+	order: 4;
+}
+
+.featured-square {
+	height: 60vh;
+	width: 800px !important;
+	overflow-y: hidden;
+	order: 2;
+
+		.description:hover {
+			background-color: transparentize($medium-blue, .1);
+			height: 60vh;
+ 		}
+}
+
+li.blue-placeholder {
+	height: 60vh;
+	width: 30vw;
+	background: linear-gradient(to right, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
+							url('../../images/placeholder-blue.jpg')
+							top center
+							no-repeat ;
+}
+
+.description {
+  height: 84%;
+  width: 84%;
+  opacity: 0;
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  color: white;
+  font-family: sans-serif;
+  overflow: hidden;
+  font-family: $fontfamily;
+  &:hover {
+    opacity: 1;
+    background-color: transparentize($dark-blue, .1);
+    border: 10px double white;
+    padding: 1.5rem;
+		height: 100%;
   }
-  .flickity-slider a li {
-    border: 0.25rem solid white;
-    height: 60vh;
-    margin: 0 0.25rem;
-    width: auto;
-    z-index: 1;
-    left: 0;
-    top: 0;
-  }
-  .featured-square-1 {
-    height: 60vh;
-    width: 400px !important;
-    overflow-y: hidden;
-    // order: 1;
-  }
-  .featured-square-2 {
-    height: 60vh;
-    width: 800px !important;
-    overflow-y: hidden;
-    // order: 2;
-    .description:hover {
-      background-color: transparentize($medium-blue, .1);
-      width: 92%;
-    }
-  }
-  .featured-square-3 {
-    height: 60vh;
-    width: 400px !important;
-    overflow-y: hidden;
-    // order: 3;
-  }
-  .featured-square-4 {
-    height: 60vh;
-    width: 400px !important;
-    overflow-y: hidden;
-    // order: 4;
-  }
-  .upper-mini-1 {
-    height: 60vh;
-    width: 400px !important;
-    overflow-y: hidden;
-    // order: 5;
-  }
-  .upper-mini-2 {
-    height: 60vh;
-    width: 400px !important;
-    overflow-y: hidden;
-    // order: 6;
-  }
-  .lower-regular-1 {
-    height: 60vh;
-    width: 400px !important;
-    order: 7;
-  }
-  .lower-regular-2 {
-    height: 60vh;
-    width: 400px !important;
-    order: 8;
-  }
-  .lower-regular-3 {
-    height: 60vh;
-    width: 400px !important;
-    order: 9;
-  }
-  .lower-regular-4 {
-    height: 60vh;
-    width: 800px !important;
-    overflow-y: hidden;
-    // order: 10;
-    .description:hover {
-      background-color: transparentize($medium-blue, .1);
-      width: 92%;
-    }
-  }
-  .lower-regular-5 {
-    height: 60vh;
-    width: 400px !important;
-    // order: 11;
-  }
-  .lower-regular-6 {
-    height: 60vh;
-    width: 400px !important;
-    // order: 12;
-  }
-  //setting description to opacity 0 at first
-  .description {
-    height: 84%;
-    width: 84%;
-    opacity: 0;
-    position: absolute;
-    z-index: 2;
-    left: 0;
-    top: 0;
-    color: white;
-    font-family: sans-serif;
-    overflow: hidden;
-    font-family: $fontfamily;
-    &:hover {
-      opacity: 1;
-      background-color: transparentize($dark-blue, .1);
-      border: 10px double white;
-      padding: 1.5rem;
-    }
-  }
-  .description-title {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 2rem;
-    font-family: $fontfamily;
-  }
-  .subtitle {
-    font-weight: bold;
-  }
-  .home-description {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    font-family: $fontfamily;
-  }
+}
+.description-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-family: $fontfamily;
+}
+.subtitle {
+  font-weight: bold;
+}
+.home-description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-family: $fontfamily;
+}

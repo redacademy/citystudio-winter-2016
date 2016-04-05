@@ -14,8 +14,10 @@
 
 	<div class="content-wrapper">
 		<div class="section-header">
+			<span>
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
+			<h2 class="proj-subtitle"><?php echo CFS()->get( 'subtitle' ); ?></h2>
+		</span>
 		</div>
 		<span class="	excerpt"><?php echo CFS()->get( 'excerpt' ); ?></span>
 	</div>

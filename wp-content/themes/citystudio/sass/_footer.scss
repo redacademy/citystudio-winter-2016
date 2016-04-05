@@ -46,7 +46,6 @@ display: flex;
   &:hover {
     cursor: pointer;
   }
-
   @include desktop {
     height: 2rem;
     width: 2rem;
@@ -58,19 +57,20 @@ display: flex;
   height: 2rem;
   width: 2rem;
   margin-top: 0.5rem;
-}
-
-  .twitter {
+  @include desktop {
     height: 2.5rem;
     width: 2.5rem;
-    margin-top: 0.8rem;
+    margin-top: .8rem;
+  }
 }
+
 /* Footer Navigation */
 .nav {
   width: 95vw;
   margin: 0 auto;
   @include desktop {
-    width: 90vw;
+    width: 50vw;
+    margin: 0;
   }
 }
 
@@ -116,7 +116,7 @@ display: flex;
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 2.2rem;
+  max-width: 2.7rem;
   max-height: 5rem;
   padding: 1.5rem 1rem 0 .9rem;
   border-radius: 70px;
@@ -133,9 +133,11 @@ display: flex;
 }
 
 .open{
-  width: 85vw;
+  width: 95vw;
+  margin: 1rem auto 1rem;
   @include desktop{
   width: 50vw;
+  margin: 3rem;
   }
 }
 
@@ -167,8 +169,8 @@ display: flex;
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 40px 60px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+      height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
@@ -180,8 +182,8 @@ display: flex;
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 50px 70px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+    height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
@@ -193,8 +195,8 @@ display: flex;
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.5rem;
-  height: 4.6rem;
+  width: 5.1rem;
+      height: 4.6rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
@@ -207,7 +209,7 @@ display: flex;
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 45px 50px;
-  width: 4.5rem;
+  width: 5.1rem;
   height: 4.4rem;
   border-radius: 70px;
   border: 2px solid white;

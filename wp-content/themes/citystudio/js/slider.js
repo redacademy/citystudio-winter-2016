@@ -6,7 +6,8 @@ jQuery(document).ready(function($) {
     contain: true,
     initialIndex: 0,
     accessibility: true,
-    wrapAround: true
+    wrapAround: true,
+    setGallerySize: false
   });
 
   $('.main-carousel').flickity({
