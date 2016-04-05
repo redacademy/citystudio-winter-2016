@@ -156,9 +156,9 @@ jQuery(document).ready(function($) {
 
                   function featured() {
                     if ( value.featured_project[0] === '1') {
-                      return 'featured-square';
-                    } else {
                       return 'featured-rectangle';
+                    } else {
+                      return 'featured-square';
                     }
                   }
 
