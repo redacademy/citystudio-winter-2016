@@ -1,5 +1,4 @@
-
-.site-footer{
+  .site-footer{
   display: flex;
   flex-direction: column;
   @include desktop {
@@ -113,7 +112,7 @@
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 2.2rem;
+  max-width: 3.2rem;
   max-height: 5rem;
   padding: 1.5rem 1rem 0 .9rem;
   border-radius: 70px;
@@ -121,11 +120,10 @@
   &:hover {
     cursor: pointer;
   }
-
   @include desktop {
     width: 100vw;
-    max-width: 3.2rem;
-    max-height: 5.3rem;
+    max-width: 3.4rem;
+    max-height: 5.1rem;
     padding: 1.9rem 1rem;
   }
 }

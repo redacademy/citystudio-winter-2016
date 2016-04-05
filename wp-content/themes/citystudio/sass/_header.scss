@@ -6,9 +6,9 @@
 }
 
 .site-header{
-    display: none;
+    display: block;
      @include desktop{
-          display: block;
+          display: none;
      }
 }
 
