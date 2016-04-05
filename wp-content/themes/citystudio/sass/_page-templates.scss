@@ -19,10 +19,20 @@
   }
 
   main {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    flex-basis: 100%;
-    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   h1 {
     margin: 0;
@@ -39,7 +49,9 @@
 @include desktop {
 
   .tag-archives .section-archive li {
-    flex-basis: 50%;
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
     margin: 0 auto;
     min-width: 400px;
     min-height: 275px;
@@ -67,13 +79,25 @@
 // everything for both media views needs to be outside the desktop.
 
   header {
-    flex-basis: 100%;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
   }
   .section-archive {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-basis: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
     padding-bottom: 4em;
     margin: 0px 1.5em;
     box-sizing: border-box;
@@ -84,14 +108,17 @@
         min-width: 325px;
         min-height: 250px;
         @include desktop {
-          flex-basis: 33%;
+          -webkit-flex-basis: 33%;
+              -ms-flex-preferred-size: 33%;
+                  flex-basis: 33%;
           margin: 0 auto;
           min-width: 425px;
           min-height: 350px;
         }
       }
       a:hover {
-        filter: brightness();
+        -webkit-filter: brightness();
+                filter: brightness();
       }
   }
 }
@@ -102,7 +129,9 @@
   padding-bottom: 4em;
 
   li {
-    flex-basis: 33%;
+    -webkit-flex-basis: 33%;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
     width: 300px;
     height: 250px;
   }
