@@ -156,48 +156,6 @@ overflow-y: hidden;
 order: 6;
 }
 
-
-/*//SAVED STYLES IN CASE WE CAN FIGURE OUT FLEXING TWO SMALLER SLIDER DIVS INTO PLACE
-// .upper-mini-1{
-// 	height: 30vh !important;
-// 	width: 250px !important;
-// 	background-color: #0198d5;
-// 	order: 5;
-// 	z-index: 1;
-// 	left: 0;
-// 	top: 0;
-// 	li {
-// 	background-size: 300px 400px !important;
-// 	height: 30vh !important;
-// 	width: 250px !important;
-// 	background-color: #0198d5;
-// 	order: 5;
-// 	z-index: 1;
-// 	left: 0;
-// 	top: 0;
-// }
-// }
-//
-// .upper-mini-2{
-// 	height: 30vh !important;
-// 	width: 250px !important;
-// 	background-color: #0198d5;
-// 	order: 6;
-// 	z-index: 1;
-// 	left: 0;
-// 	top: 0;
-// 	li {
-// 	background-size: 300px 400px !important;
-// 	height: 30vh !important;
-// 	width: 250px !important;
-// 	background-color: #0198d5;
-// 	order: 6;
-// 	z-index: 1;
-// 	left: 0;
-// 	top: 0;
-// }
-// }*/
-
 .lower-regular-1{
 height: 60vh;
 width: 400px !important;
@@ -224,7 +182,7 @@ overflow-y: hidden;
 order: 10;
 .description:hover{
   background-color: transparentize($medium-blue, .1);
-}
+	}
 }
 
 .lower-regular-5{
@@ -259,7 +217,6 @@ border: 10px double white;
 padding: 1.5rem;
 
 }
-
 
 .description-title{
 text-transform: uppercase;
