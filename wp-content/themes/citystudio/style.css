@@ -1459,7 +1459,7 @@ a, a:visited, a:hover, a:active {
 .hero {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center center fixed;
   background-size: 100% 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
