@@ -41,6 +41,7 @@
             flex-direction: column;
 
 }
+
 .hero-logo {
   background: url("../../images/citystudio-logo-trans.png") no-repeat center;
   background-size: 80vw;
@@ -130,6 +131,7 @@ button.flickity-prev-next-button {
     width: 91.5%;
     margin: 0 0.20rem;
   }
+
 }
 
 .featured-square {
@@ -147,6 +149,12 @@ button.flickity-prev-next-button {
 			height: 60vh;
       width: 83%;
       margin: 0 0.20rem;
+
+		// .description:hover {
+		// 	background-color: transparentize($medium-blue, .1);
+		// 	height: 60vh;
+    //   width: 84%;
+
  		}
 }
 
@@ -166,6 +174,7 @@ li.blue-placeholder {
 .description {
   height: 84%;
   width: 90%;
+
   opacity: 0;
   position: absolute;
   z-index: 2;
@@ -198,103 +207,12 @@ li.blue-placeholder {
   text-overflow: ellipsis;
   overflow: hidden;
   font-family: $fontfamily;
-  height: 60vh;
-  margin: 0 .25rem;
-  width: auto;
-  z-index: 1;
-  left: 0;
-  top: 0;
-}
-
-
-button.flickity-prev-next-button{
-	display: none;
-	@include desktop{
-	display: block;
-	}
-}
-
-.featured-square-1{
+// border: .25rem solid white;
 height: 60vh;
-width: 400px !important;
-overflow-y: hidden;
-order: 1;
+margin: 0 .25rem;
+width: auto;
+z-index: 1;
+left: 0;
+top: 0;
 }
-
-.featured-square-2{
-  height: 60vh;
-  width: 800px !important;
-  overflow-y: hidden;
-  order: 2;
-  .description:hover{
-    background-color: transparentize($medium-blue, .1);
-  }
-}
-
-.featured-square-3{
-height: 60vh;
-width: 400px !important;
-overflow-y: hidden;
-order: 3;
-}
-
-.featured-square-4{
-height: 60vh;
-width: 400px !important;
-overflow-y: hidden;
-order: 4;
-}
-
-.upper-mini-1{
-height: 60vh;
-width: 400px !important;
-overflow-y: hidden;
-order: 5;
-}
-
-.upper-mini-2{
-height: 60vh;
-width: 400px !important;
-overflow-y: hidden;
-order: 6;
-}
-
-.lower-regular-1{
-height: 60vh;
-width: 400px !important;
-order: 7;
-}
-
-.lower-regular-2{
-height: 60vh;
-width: 400px !important;
-order: 8;
-}
-
-.lower-regular-3{
-height: 60vh;
-width: 400px !important;
-order: 9;
-}
-
-.lower-regular-4{
-height: 60vh;
-width: 800px !important;
-overflow-y: hidden;
-order: 10;
-.description:hover{
-  background-color: transparentize($medium-blue, .1);
-	}
-}
-
-.lower-regular-5{
-height: 60vh;
-width: 400px !important;
-order: 11;
-}
-
-.lower-regular-6{
-height: 60vh;
-width: 400px !important;
-order: 12;
-}
+  
