@@ -824,7 +824,9 @@ a {
           -ms-flex-direction: column;
               flex-direction: column;
       margin-top: 0.5rem;
-      flex-direction: column;
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column;
       margin-right: 1.5rem;
       z-index: 999; }
       .social-icons-div ul {
