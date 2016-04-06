@@ -1596,7 +1596,6 @@ li.blue-placeholder {
   text-overflow: ellipsis;
   overflow: hidden;
   font-family: "open_sans";
-  border: .25rem solid white;
   height: 60vh;
   margin: 0 .25rem;
   width: auto;
