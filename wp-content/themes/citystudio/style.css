@@ -1083,12 +1083,12 @@ a {
     border-color: #fff transparent transparent;
     position: absolute;
     bottom: -13px;
-    left: 28%; }
+    left: 30%; }
 
 .year {
   position: absolute;
   bottom: 100px;
-  left: 4px; }
+  left: 10px; }
   .year::after {
     content: '';
     width: 0;
@@ -1098,7 +1098,7 @@ a {
     border-color: #fff transparent transparent;
     position: absolute;
     bottom: -13px;
-    left: 28%; }
+    left: 18%; }
 
 .current-menu {
   display: block; }
@@ -1116,6 +1116,24 @@ a {
 .show-label:hover {
   transition-delay: 4s; }
 
+.neigh-labels {
+  min-width: 120px;
+  right: 30px; }
+  .neigh-labels label::after {
+    left: 36%; }
+
+.part-labels {
+  min-width: 80px;
+  right: 11px; }
+  .part-labels label::after {
+    left: 31%; }
+
+.year-labels {
+  min-width: 80px;
+  right: 12px; }
+  .year-labels label::after {
+    left: 32%; }
+
 .neigh-labels,
 .part-labels,
 .year-labels {
@@ -1126,8 +1144,6 @@ a {
   border-radius: 8px;
   border: 0.5px solid #006496;
   bottom: 53px;
-  right: 16px;
-  min-width: 142px;
   text-align: center; }
   .neigh-labels label,
   .part-labels label,
@@ -1143,8 +1159,7 @@ a {
       border-width: 20px 20px 0;
       border-color: #fff transparent transparent;
       position: absolute;
-      bottom: -13px;
-      left: 28%; }
+      bottom: -13px; }
 
 .hide-label {
   display: none !important; }
