@@ -1,344 +1,299 @@
-.site-footer{
-display: flex;
-flex-direction: column;
-@include desktop {
-  width: 100vw;
-  background-color: $dark-blue;
+  .site-footer{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  position: absolute;
-  z-index: 1;
-}
+  flex-direction: column;
+  @include desktop {
+    width: 100vw;
+    background-color: $dark-blue;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1;
+  }
 }
 
 .social-icons-div {
 background-color: $dark-blue;
 display: flex;
-ul {
-  list-style: none;
-  display: flex;
-  margin: 0 auto;
-}
-@include desktop {
-  position: relative;
-  top: 55px;
-  float: right;
-
-  flex-direction: column;
-  margin-top: 0.5rem;
-  flex-direction: column;
-  margin-right: 1.5rem;
-  z-index: 999;
   ul {
     list-style: none;
     display: flex;
-    margin: auto 0;
-    }
-}
-}
+    margin: 0 auto;
+  }
+  @include desktop {
+    position: relative;
+    top: 55px;
+    float: right;
 
-.social-icons {
-height: 1.5rem;
-width: 1.5rem;
-margin: 0.75rem 1.25rem 1rem 1rem;
-&:hover {
-  cursor: pointer;
-}
-@include desktop {
-  height: 2rem;
-  width: 2rem;
-  margin: 1rem 1.5rem 1rem 1rem;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    flex-direction: column;
+    margin-right: 1.5rem;
+    z-index: 999;
+    ul {
+      list-style: none;
+      display: flex;
+      margin: auto 0;
+      }
   }
 }
 
+.social-icons {
+  height: 1.5rem;
+  width: 1.5rem;
+  margin: 0.75rem 1.25rem 1rem 1rem;
+  &:hover {
+    cursor: pointer;
+  }
+  @include desktop {
+    height: 2rem;
+    width: 2rem;
+    margin: 1rem 1.5rem 1rem 1rem;
+    }
+  }
+
 .twitter {
-height: 2rem;
-width: 2rem;
-margin-top: 0.5rem;
-@include desktop {
-  height: 2.5rem;
-  width: 2.5rem;
-  margin-top: .8rem;
-}
+  height: 2rem;
+  width: 2rem;
+  margin-top: 0.5rem;
+  @include desktop {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-top: .8rem;
+  }
 }
 
 /* Footer Navigation */
 .nav {
-width: 95vw;
-margin: 0 auto;
-@include desktop {
-  width: 50vw;
-  margin: 0;
-}
+  width: 95vw;
+  margin: 0 auto;
+  @include desktop {
+    width: 50vw;
+    margin: 0;
+  }
 }
 
 .nav-div {
-background-color: #76d6ff;
-max-height: 85px;
-width: 71px;
-margin: 2rem 2rem;
-border-radius: 70px;
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-transition: all 0.5s ease-in;
-@include desktop {
-  width: 80px;
-  margin: 3rem 0;
-}
-@include desktop {
   background-color: #76d6ff;
   max-height: 85px;
-  width: 80px;
-  margin: 3rem;
+  width: 71px;
+  margin: 2rem 2rem;
   border-radius: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: all .5s ease-in;
-}
+  transition: all 0.5s ease-in;
+  @include desktop {
+    width: 80px;
+    margin: 3rem 0;
+  }
   @include desktop {
     background-color: #76d6ff;
     max-height: 85px;
     width: 80px;
-    margin: 3rem 3rem;
+    margin: 3rem;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: all .5s ease-in;
   }
+    @include desktop {
+      background-color: #76d6ff;
+      max-height: 85px;
+      width: 80px;
+      margin: 3rem 3rem;
+      border-radius: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all .5s ease-in;
+    }
 }
 .sort {
-color: white;
-font-weight: bold;
-text-transform: uppercase;
-border: 2px solid white;
-max-width: 1.7rem;
-max-height: 3rem;
-padding: 1.2rem 1.8rem 0 .7rem;
-border-radius: 70px;
-background-color: #0082b9;
-&:hover {
-  cursor: pointer;
-}
-@include desktop {
-width: 100vw;
-max-width: 2.8rem;
-height: 1.4rem;
-padding: 1.9rem 1.2rem;
-}
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px solid white;
+  max-width: 1.7rem;
+  max-height: 3rem;
+  padding: 1.2rem 1.8rem 0 .7rem;
+  border-radius: 70px;
+  background-color: #0082b9;
+  &:hover {
+    cursor: pointer;
+  }
+  @include desktop {
+  width: 100vw;
+  max-width: 2.8rem;
+  height: 1.4rem;
+  padding: 1.9rem 1.2rem;
+  }
 }
 
 .open{
-width: 95vw;
-margin: 1rem auto 1rem;
-@include desktop{
-width: 50vw;
-margin: 3rem;
-}
+  width: 95vw;
+  margin: 1rem auto 1rem;
+  @include desktop{
+  width: 50vw;
+  margin: 3rem;
+  }
 }
 
 .close{
-width: 20px;
-@include desktop {
-  width: 5rem;
-}
+  width: 20px;
+  @include desktop {
+    width: 5rem;
+  }
 }
 
 .close .refresh {
-width: 20px;
+  width: 20px;
 }
 
 .menu-item {
-opacity: 0;
+  opacity: 0;
 }
 
 .open .menu-item{
-  opacity: 1;
-  margin: 0;
+    opacity: 1;
+    margin: 0;
 }
 
 .open{
-  color: red;
+    color: red;
 }
 
 .neighbourhood {
-background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-background-size: 20px 30px;
-width: 5.5rem;
-height: 4rem;
-border-radius: 70px;
-background-color: #03648c;
-transition: all .4s ease-in;
-@include desktop {
-  width: 5.4rem;
-  height: 5.4rem;
-  background-size: 35px 45px;
-}
-}
-.partners {
-background: url("../../assets/partners-icon.png") no-repeat center;
-background-size: 30px 40px;
+  background: url("../../assets/neighbourhood-icon.png") no-repeat center;
+  background-size: 20px 30px;
   width: 5.5rem;
   height: 4rem;
-border-radius: 70px;
-background-color: #03648c;
-transition: all 1s ease-in;
-@include desktop {
-  width: 5.4rem;
-  height: 5.4rem;
-background-size: 45px 60px;
+  border-radius: 70px;
+  background-color: #03648c;
+  transition: all .4s ease-in;
+  @include desktop {
+    width: 5.4rem;
+    height: 5.4rem;
+    background-size: 35px 45px;
+  }
 }
+.partners {
+  background: url("../../assets/partners-icon.png") no-repeat center;
+  background-size: 30px 40px;
+    width: 5.5rem;
+    height: 4rem;
+  border-radius: 70px;
+  background-color: #03648c;
+  transition: all 1s ease-in;
+  @include desktop {
+    width: 5.4rem;
+    height: 5.4rem;
+  background-size: 45px 60px;
+  }
 }
 .years {
-background: url("../../assets/in-progress-icon.png") no-repeat center;
-background-size: 25px 30px;
-width: 5.5rem;
-height: 4rem;
-border-radius: 70px;
-background-color: #03648c;
-transition: all 1.8s ease-in;
-@include desktop {
-  width: 5.4rem;
-  height: 5.4rem;
-  background-size: 45px 45px;
-}
+  background: url("../../assets/in-progress-icon.png") no-repeat center;
+  background-size: 25px 30px;
+  width: 5.5rem;
+  height: 4rem;
+  border-radius: 70px;
+  background-color: #03648c;
+  transition: all 1.8s ease-in;
+  @include desktop {
+    width: 5.4rem;
+    height: 5.4rem;
+    background-size: 45px 45px;
+  }
 
 }
 .refresh {
-background: url("../../assets/refresh.png") no-repeat center;
-background-size: 35px 35px;
-width: 5.5rem;
-height: 3.8rem;
-border-radius: 70px;
-border: 2px solid white;
-background-color: #0082b9;
-transition: all 2s ease-in;
-@include desktop {
-  width: 5.2rem;
-  height: 5.1rem;
-  background-size: 45px 45px;
-}
+  background: url("../../assets/refresh.png") no-repeat center;
+  background-size: 35px 35px;
+  width: 5.5rem;
+  height: 3.8rem;
+  border-radius: 70px;
+  border: 2px solid white;
+  background-color: #0082b9;
+  transition: all 2s ease-in;
+  @include desktop {
+    width: 5.2rem;
+    height: 5.1rem;
+    background-size: 45px 45px;
+  }
 }
 /* Footer Navigation Menu */
 .foot-sub-menu input[type=checkbox] {
-display: none;
+  display: none;
 }
 
 .current-menu {
-display: block;
+  display: block;
 }
 
 .foot-sub-menu {
-display: none;
-background-color: #fff;
-padding: 0.8em;
-border-radius: 8px;
-border: 0.5px solid $dark-blue;
-&:hover {
-  cursor: pointer;
-}
-.sub-menu-neigh span,
-.sub-menu-part span {
-  color: $medium-blue;
-}
-.sub-menu-year span {
-  color: $medium-blue;
-}
-.sub-menu-neigh span:hover,
-.sub-menu-part span:hover,
-.sub-menu-year span:hover {
-  color: $light-blue;
-  cursor: pointer;
-}
+  display: none;
+  background-color: #fff;
+  padding: 0.8em;
+  border-radius: 8px;
+  border: 0.5px solid $dark-blue;
+  &:hover {
+    cursor: pointer;
+  }
+  .sub-menu-neigh span,
+  .sub-menu-part span {
+    color: $medium-blue;
+  }
+  .sub-menu-year span {
+    color: $medium-blue;
+  }
+  .sub-menu-neigh span:hover,
+  .sub-menu-part span:hover,
+  .sub-menu-year span:hover {
+    color: $light-blue;
+    cursor: pointer;
+  }
 }
 .menu-item {
-position: relative;
+  position: relative;
 }
 .neigh {
-position: absolute;
-bottom: 100px;
-left: -35px;
-&::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 20px 20px 0;
-  border-color: #fff transparent transparent;
   position: absolute;
-  bottom: -13px;
-  left: 38%;
-}
+  bottom: 100px;
+  left: -35px;
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 20px 20px 0;
+    border-color: #fff transparent transparent;
+    position: absolute;
+    bottom: -13px;
+    left: 38%;
+  }
 }
 .part {
-position: absolute;
-bottom: 100px;
-left: -4px;
-&::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  color: $medium-blue;
-  border-width: 20px 20px 0;
-  border-color: #fff transparent transparent;
   position: absolute;
-  bottom: -13px;
-  left: 28%;
-}
+  bottom: 100px;
+  left: -4px;
+  &::after {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    color: $medium-blue;
+    border-width: 20px 20px 0;
+    border-color: #fff transparent transparent;
+    position: absolute;
+    bottom: -13px;
+    left: 28%;
+  }
 }
 .year {
-position: absolute;
-bottom: 100px;
-left: 4px;
-&::after {
-  content: '';
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 20px 20px 0;
-  border-color: #fff transparent transparent;
   position: absolute;
-  bottom: -13px;
-  left: 28%;
-}
-}
-.current-menu {
-display: block;
-}
-.menu-title {
-font-weight: bold;
-color: $dark-blue;
-}
-.show-label {
-display: block;
-color: $dark-blue;
-background: #fff;
-padding: 1em;
-
-}
-.show-label:hover{
-    transition-delay:4s;
-}
-
-.neigh-labels,
-.part-labels,
-.year-labels {
-display: none;
-position: relative;
-background-color: #fff;
-padding: 0.5em 0.8em;
-border-radius: 8px;
-border: 0.5px solid $dark-blue;
-bottom: 53px;
-right: 16px;
-min-width: 142px;
-text-align: center;
-label {
-  color: $medium-blue;
+  bottom: 100px;
+  left: 4px;
   &::after {
     content: '';
     width: 0;
@@ -351,7 +306,52 @@ label {
     left: 28%;
   }
 }
+.current-menu {
+  display: block;
+}
+.menu-title {
+  font-weight: bold;
+  color: $dark-blue;
+}
+.show-label {
+  display: block;
+  color: $dark-blue;
+  background: #fff;
+  padding: 1em;
+
+}
+  .show-label:hover{
+      transition-delay:4s;
+  }
+
+.neigh-labels,
+.part-labels,
+.year-labels {
+  display: none;
+  position: relative;
+  background-color: #fff;
+  padding: 0.5em 0.8em;
+  border-radius: 8px;
+  border: 0.5px solid $dark-blue;
+  bottom: 53px;
+  right: 16px;
+  min-width: 142px;
+  text-align: center;
+  label {
+    color: $medium-blue;
+    &::after {
+      content: '';
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 20px 20px 0;
+      border-color: #fff transparent transparent;
+      position: absolute;
+      bottom: -13px;
+      left: 28%;
+    }
+  }
 }
 .hide-label {
-display: none !important;
+  display: none !important;
 }
