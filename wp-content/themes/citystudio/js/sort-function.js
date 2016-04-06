@@ -31,17 +31,18 @@ jQuery(document).ready(function($) {
     $('.neigh-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
-   }); // close sort
+
+  }); // close refresh
 
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
-      $(this).children('.foot-sub-menu').addClass('current-menu'); 
+      $(this).children('.foot-sub-menu').addClass('current-menu');
     }
-  }); 
-  
+  });
+
   $('.menu-item').mouseout(function(){
-      $(this).children('.foot-sub-menu').removeClass('current-menu');        
+      $(this).children('.foot-sub-menu').removeClass('current-menu');
    });
 
   // Create an empty object to hold the checked navigation values in the properties
@@ -159,7 +160,8 @@ jQuery(document).ready(function($) {
                   }
 
                 });
-              $gallery.append(galleryItems).flickity({
+
+                $gallery.append(galleryItems).flickity({
                                                 cellAlign: 'left',
                                                 contain: 'true',
                                                 wrapAround: 'true'
