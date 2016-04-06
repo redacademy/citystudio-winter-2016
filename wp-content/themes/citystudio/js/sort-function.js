@@ -1,5 +1,10 @@
 jQuery(document).ready(function($) {
 
+  if ($('body').hasClass('single-project')) {
+    $('#sort_nav').hide();
+    $('.nav-div').css("background-color", "#006496")
+  }
+
   // queryFilter holds an empty object for the checked navigation values/properties
   var queryFilter = {
     neighbourhoods: '',
@@ -28,12 +33,17 @@ jQuery(document).ready(function($) {
     checkedNeigh = '';
     checkedPart = '';
     checkedYear = '';
+    queryFilter = {
+    neighbourhoods: '',
+    partners: '',
+    year: ''
+    }
     $('.neigh-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
+    reloadProjects();
 
-  }); // close refresh
-
+   }); // close refresh
 
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
@@ -98,14 +108,12 @@ jQuery(document).ready(function($) {
 
   function reloadProjects() {
 
-    console.log(queryFilter);
       $.ajax({
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
 
           success: function(response) {
-            console.log(response);
             // get the length of response and run this IF it is less than 10
             if ( response.length < 4 ) {
               // this object holds the remaining slots left to fill
@@ -166,7 +174,7 @@ jQuery(document).ready(function($) {
                                                 cellAlign: 'left',
                                                 contain: 'true',
                                                 wrapAround: 'true'
-                                                // rightToLeft: 'true'
+                                                // rightToLeft: 'true'  
                                           });
           } // close success
       }); // close ajax call
