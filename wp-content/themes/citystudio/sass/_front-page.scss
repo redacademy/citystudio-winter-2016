@@ -1,38 +1,47 @@
 //-----------------------------------------
 // LANDING PAGE STYLES  -----------------------
 .container {
-  display: block;
-  border-bottom: 7px solid white;
-  .bx-viewport {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
-}
-.landing-gallery {
-  display: none;
-  @include desktop {
     display: block;
-    height: 50px;
-    width: 50px;
-    background: url('../../images/gallery-white.png') no-repeat center;
-    background-size: 50px 50px;
-    margin-bottom: 0.3rem;
-    align-self: flex-end;
-    padding: 3rem;
-    float: right;
+    border-bottom: 7px solid white;
+    .bx-viewport {
+      margin-top: 0;
+      margin-bottom: 5px;
+    }
   }
+  .landing-gallery {
+    display: none;
+    @include desktop {
+      display: block;
+      height: 50px;
+      width: 50px;
+      background: url('../../images/gallery-white.png') no-repeat center;
+      background-size: 50px 50px;
+      margin-bottom: 0.3rem;
+      -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+              align-self: flex-end;
+      padding: 3rem;
+      float: right;
+    }
+  }
+  .hero {
+    width: 100vw;
+    min-height: 100vh;
+    background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+    background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center center fixed;
+    background-size: 100% 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+
 }
-.hero {
-  width: 100vw;
-  min-height: 100vh;
-  background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: 100% 100%;
-  display: flex;
-  flex-direction: column;
-}
+
 .hero-logo {
   background: url("../../images/citystudio-logo-trans.png") no-repeat center;
   background-size: 80vw;
@@ -111,12 +120,21 @@ button.flickity-prev-next-button {
 	width: 800px !important;
 	overflow-y: hidden;
   margin: 0 0.20rem;
+	-webkit-box-ordinal-group: 5;
+	-webkit-order: 4;
+	    -ms-flex-order: 4;
+      	        order: 4;
 }
+
 .featured-square {
 	background-size: cover !important;
 	height: 60vh;
 	width: 400px !important;
 	overflow-y: hidden;
+	-webkit-box-ordinal-group: 3;
+	-webkit-order: 2;
+	    -ms-flex-order: 2;
+	        order: 2;
 
 		.description:hover {
 			background-color: transparentize($medium-blue, .1);
@@ -135,6 +153,10 @@ button.flickity-prev-next-button {
 li.blue-placeholder {
 	height: 60vh;
 	width: 400px;
+	background: -webkit-linear-gradient(left, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
+							url('../../images/placeholder-blue.jpg')
+							top center
+							no-repeat ;
 	background: linear-gradient(to right, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
 							url('../../images/placeholder-blue.jpg')
 							top center
