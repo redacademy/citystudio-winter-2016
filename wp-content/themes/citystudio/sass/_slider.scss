@@ -40,7 +40,7 @@ font-family: $fontfamily;
 .type-project header {
   background-size: cover !important;
   background-position: top center !important;
-  min-height: 400px;
+  min-height: 550px;
 }
 
 .section-header {
@@ -60,11 +60,13 @@ font-family: $fontfamily;
           justify-content: center;
   width: 100%;
   font-family: $fontfamily;
+  text-align: center;
 
   .proj-subtitle {
     height: auto;
-    margin: 0.67em 0 0.67em 0.3em;
     font-family: $fontfamily;
+    text-align: center;
+    font-size: 1rem;
 
     h1 {
       font-size: 1rem !important;

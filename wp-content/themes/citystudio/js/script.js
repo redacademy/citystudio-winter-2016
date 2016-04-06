@@ -5,7 +5,8 @@ jQuery(document).ready(function($){
     initialIndex: 0,
     accessibility: true,
     wrapAround: true,
-    autoPlay: true
+    autoPlay: true,
+    autoPlay: 1500
   });
   $('.main-carousel').flickity({
     cellAlign: 'left',
@@ -15,9 +16,7 @@ jQuery(document).ready(function($){
     wrapAround: true,
     prevNextButtons: false,
     autoPlay: true,
-    // resize: true,
-    // setGallerySize: false
-    //http://flickity.metafizzy.co/options.html
+    autoPlay: 2500
   });
 
 });
