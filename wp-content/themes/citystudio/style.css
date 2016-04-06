@@ -1547,10 +1547,8 @@ a, a:visited, a:hover, a:active {
   display: none; }
 
 .flickity-slider a li {
-  border: 0.25rem solid white;
+  margin: .25rem;
   height: 60vh;
-  margin: 0 0.25rem;
-  width: 100%;
   z-index: 1;
   left: 0;
   top: 0; }
@@ -1561,43 +1559,9 @@ button.flickity-prev-next-button {
     button.flickity-prev-next-button {
       display: block; } }
 
-.featured-rectangle {
-  background-size: cover !important;
-  height: 60vh;
-  width: 800px !important;
-  overflow-y: hidden;
-  margin: 0 0.20rem;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4; }
-  .featured-rectangle .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    height: 60vh;
-    width: 91.5%;
-    margin: 0 0.20rem; }
-
-.featured-square {
-  background-size: cover !important;
-  height: 60vh;
-  width: 400px !important;
-  overflow-y: hidden;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2; }
-  .featured-square .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    height: 60vh;
-    width: 83%;
-    margin: 0 0.20rem; }
-
-li.blue-placeholder {
-  height: 60vh;
-  width: 400px;
-  background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
-
 .description {
-  height: 84%;
-  width: 90%;
+  width: 100%;
+  height: 100%;
   opacity: 0;
   position: absolute;
   z-index: 2;
@@ -1611,8 +1575,7 @@ li.blue-placeholder {
     opacity: 1;
     background-color: rgba(0, 100, 150, 0.9);
     border: 10px double white;
-    padding: 1.5rem;
-    height: 92%; }
+    padding: 1.5rem; }
 
 .description-title {
   text-transform: uppercase;
@@ -1634,6 +1597,39 @@ li.blue-placeholder {
   z-index: 1;
   left: 0;
   top: 0; }
+
+.featured-rectangle {
+  background-size: cover !important;
+  height: 60vh;
+  width: 800px !important;
+  overflow-y: hidden;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  order: 4; }
+  .featured-rectangle .description:hover {
+    background-color: rgba(0, 130, 185, 0.9);
+    height: 83.5%;
+    width: 91.5%;
+    margin: 0 0.20rem; }
+
+.featured-square {
+  background-size: cover !important;
+  height: 60vh;
+  width: 400px !important;
+  overflow-y: hidden;
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2; }
+  .featured-square .description:hover {
+    background-color: rgba(0, 100, 150, 0.9);
+    height: 83.5%;
+    width: 83%;
+    margin: 0 0.20rem; }
+
+li.blue-placeholder {
+  height: 60vh;
+  width: 400px;
+  background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
 /*--------------------------------------------------------------
 # Project Page Slider Styles
@@ -1670,7 +1666,7 @@ span.excerpt {
 .type-project header {
   background-size: cover !important;
   background-position: top center !important;
-  min-height: 400px; }
+  min-height: 550px; }
 
 .section-header {
   display: -webkit-flex;
@@ -1686,11 +1682,13 @@ span.excerpt {
   -ms-flex-pack: center;
   justify-content: center;
   width: 100%;
-  font-family: "open_sans"; }
+  font-family: "open_sans";
+  text-align: center; }
   .section-header .proj-subtitle {
     height: auto;
-    margin: 0.67em 0 0.67em 0.3em;
-    font-family: "open_sans"; }
+    font-family: "open_sans";
+    text-align: center;
+    font-size: 1rem; }
     .section-header .proj-subtitle h1 {
       font-size: 1rem !important;
       font-family: "open_sans"; }
