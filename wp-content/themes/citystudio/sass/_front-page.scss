@@ -124,6 +124,14 @@ button.flickity-prev-next-button {
 	-webkit-order: 4;
 	    -ms-flex-order: 4;
       	        order: 4;
+
+  .description:hover {
+    background-color: transparentize($medium-blue, .1);
+    height: 60vh;
+    width: 91.5%;
+    margin: 0 0.20rem;
+  }
+
 }
 
 .featured-square {
@@ -139,7 +147,7 @@ button.flickity-prev-next-button {
 		.description:hover {
 			background-color: transparentize($medium-blue, .1);
 			height: 60vh;
-      width: 92%;
+      width: 83%;
       margin: 0 0.20rem;
 
 		// .description:hover {
@@ -165,7 +173,7 @@ li.blue-placeholder {
 
 .description {
   height: 84%;
-  width: 92%;
+  width: 90%;
 
   opacity: 0;
   position: absolute;
@@ -199,7 +207,7 @@ li.blue-placeholder {
   text-overflow: ellipsis;
   overflow: hidden;
   font-family: $fontfamily;
-border: .25rem solid white;
+// border: .25rem solid white;
 height: 60vh;
 margin: 0 .25rem;
 width: auto;

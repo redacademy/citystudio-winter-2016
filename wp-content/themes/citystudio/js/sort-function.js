@@ -32,18 +32,8 @@ jQuery(document).ready(function($) {
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
 
-    $('.home-slider').flickity('destroy');
-    $('.home-slider').empty();
+  }); // close refresh
 
-    $('.home-slider').flickity({
-      cellAlign: 'left',
-      contain: true,
-      initialIndex: 0,
-      accessibility: true,
-      wrapAround: true,
-      autoPlay: true
-    });
-   }); // close sort
 
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
@@ -171,7 +161,8 @@ jQuery(document).ready(function($) {
                   }
 
                 });
-              $gallery.append(galleryItems).flickity({
+
+                $gallery.append(galleryItems).flickity({
                                                 cellAlign: 'left',
                                                 contain: 'true',
                                                 wrapAround: 'true'
