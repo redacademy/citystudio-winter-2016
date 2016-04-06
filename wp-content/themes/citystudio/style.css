@@ -1719,39 +1719,6 @@ button.flickity-prev-next-button {
       -ms-flex-order: 12;
           order: 12; }
 
-.description {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  color: white;
-  font-family: sans-serif;
-  overflow: hidden;
-  font-family: "open_sans"; }
-  .description:hover {
-    opacity: 1;
-    background-color: rgba(0, 100, 150, 0.9);
-    border: 10px double white;
-    padding: 1.5rem; }
-
-.description-title {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  font-family: "open_sans"; }
-
-.subtitle {
-  font-weight: bold; }
-
-.home-description {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-family: "open_sans"; }
-
 /*--------------------------------------------------------------
 # Project Page Slider Styles
 --------------------------------------------------------------*/
