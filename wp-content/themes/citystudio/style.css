@@ -1345,11 +1345,15 @@ object {
 /* Tag Archive Page */
 .tag-archives {
   background-color: #0082b9;
-  padding-top: 2em;
-  margin: 0 auto; }
+  padding-top: 2em; }
   .tag-archives .section-archive ul {
-    margin: 0 auto; }
+    -webkit-flex-basis: 33%;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+    margin: 0; }
     .tag-archives .section-archive ul li {
+      min-width: 360px;
+      min-height: 280px;
       margin: 1rem; }
   .tag-archives main {
     display: -webkit-flex;
@@ -1388,9 +1392,6 @@ object {
       font-weight: 900; }
       .tag-archives h2 span {
         color: #006496; } }
-  @media screen and (min-width: 1000px) {
-    .tag-archives .section-archive ul {
-      margin: 0 auto; } }
   .tag-archives header {
     -ms-flex-preferred-size: 100%;
     -webkit-flex-basis: 100%;
@@ -1411,7 +1412,8 @@ object {
     padding-bottom: 4em;
     margin: 0px 1.5em;
     box-sizing: border-box;
-    padding: none; }
+    padding: none;
+    width: 90vw; }
     .tag-archives .section-archive li {
       background-position: center center !important;
       background-size: cover !important;
