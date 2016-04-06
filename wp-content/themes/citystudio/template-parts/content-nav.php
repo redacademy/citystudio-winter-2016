@@ -11,7 +11,7 @@
 				<ul class="foot-sub-menu neigh">
 					<li><span class="menu-title">Neighbourhoods</span></li>
 				<?php foreach( $terms as $term) : ?>
-					<li class="sub-menu-neigh">
+					<li class="sub-menu-neigh" >
 						<input type="checkbox" id="neigh_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>

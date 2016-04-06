@@ -92,8 +92,6 @@ function citystudio_scripts() {
 
 	wp_enqueue_script( 'sort-function.js', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), '2.2.0'  );
 
-	wp_enqueue_script( 'gallery-pop.js', get_template_directory_uri() . '/js/gallery-pop.js', array('jquery'), '2.2.0' );
-
 }
 
 add_action( 'wp_enqueue_scripts', 'citystudio_scripts' );
