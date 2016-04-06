@@ -1548,7 +1548,8 @@ button.flickity-prev-next-button {
   background-size: cover !important;
   height: 60vh;
   width: 800px !important;
-  overflow-y: hidden; }
+  overflow-y: hidden;
+  margin: 0 0.20rem; }
 
 .featured-square {
   background-size: cover !important;
@@ -1558,7 +1559,8 @@ button.flickity-prev-next-button {
   .featured-square .description:hover {
     background-color: rgba(0, 130, 185, 0.9);
     height: 60vh;
-    width: 92%; }
+    width: 92%;
+    margin: 0 0.20rem; }
 
 li.blue-placeholder {
   height: 60vh;
@@ -1566,6 +1568,8 @@ li.blue-placeholder {
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
 .description {
+  height: 84%;
+  width: 92%;
   opacity: 0;
   position: absolute;
   z-index: 2;
