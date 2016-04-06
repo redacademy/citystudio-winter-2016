@@ -31,17 +31,29 @@ jQuery(document).ready(function($) {
     $('.neigh-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
+
+    $('.home-slider').flickity('destroy');
+    $('.home-slider').empty();
+
+    $('.home-slider').flickity({
+      cellAlign: 'left',
+      contain: true,
+      initialIndex: 0,
+      accessibility: true,
+      wrapAround: true,
+      autoPlay: true
+    });
    }); // close sort
 
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
-      $(this).children('.foot-sub-menu').addClass('current-menu'); 
+      $(this).children('.foot-sub-menu').addClass('current-menu');
     }
-  }); 
-  
+  });
+
   $('.menu-item').mouseout(function(){
-      $(this).children('.foot-sub-menu').removeClass('current-menu');        
+      $(this).children('.foot-sub-menu').removeClass('current-menu');
    });
 
   // Create an empty object to hold the checked navigation values in the properties
@@ -131,9 +143,9 @@ jQuery(document).ready(function($) {
                   // else if feature project checkoc is falso use reg class
                   function featured() {
                     if ( value.featured_project[0] === '1') {
-                      return 'featured-square';
-                    } else {
                       return 'featured-rectangle';
+                    } else {
+                      return 'featured-square';
                     }
                   }
 
