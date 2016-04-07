@@ -1,8 +1,10 @@
   .site-footer{
   display: flex;
   flex-direction: column;
+
   @include desktop {
     width: 100vw;
+    height: 100vh;
     background-color: $dark-blue;
     display: flex;
     flex-direction: row;
@@ -22,7 +24,7 @@ display: flex;
   }
   @include desktop {
     position: relative;
-    top: 55px;
+    top: 93px;
     float: right;
 
     flex-direction: column;

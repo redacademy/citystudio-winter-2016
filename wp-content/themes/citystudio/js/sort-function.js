@@ -115,9 +115,9 @@ jQuery(document).ready(function($) {
 
           success: function(response) {
             // get the length of response and run this IF it is less than 10
-            if ( response.length < 4 ) {
+            if ( response.length < 8 ) {
               // this object holds the remaining slots left to fill
-              var objectPlaceholder = (4 - response.length);
+              var objectPlaceholder = (8 - response.length);
 
               // loop over the response.length to find empty slots to fill
               for (var i = 0; i < objectPlaceholder; i++ ) {
@@ -141,9 +141,9 @@ jQuery(document).ready(function($) {
                   // else if feature project checkoc is falso use reg class
                   function featured() {
                     if ( value.featured_project[0] === '1') {
-                      return 'featured-rectangle';
-                    } else {
                       return 'featured-square';
+                    } else {
+                      return 'featured-rectangle';
                     }
                   }
 
@@ -173,8 +173,10 @@ jQuery(document).ready(function($) {
                 $gallery.append(galleryItems).flickity({
                                                 cellAlign: 'left',
                                                 contain: 'true',
-                                                wrapAround: 'true'
-                                                // rightToLeft: 'true'  
+                                                wrapAround: 'true',
+                                                autoPlay: true,
+                                                autoPlay: 3000
+                                                // rightToLeft: 'true'
                                           });
           } // close success
       }); // close ajax call

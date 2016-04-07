@@ -462,7 +462,6 @@ table {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto;
-  max-width: 1070px;
   padding: 0 .75em; }
 
 /*--------------------------------------------------------------
@@ -673,7 +672,7 @@ a {
       padding: 1rem; } }
 
 .search-gallery {
-  width: 23%;
+  width: 15%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -791,6 +790,7 @@ a {
   @media screen and (min-width: 480px) {
     .site-footer {
       width: 100vw;
+      height: 100vh;
       background-color: #006496;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -818,7 +818,7 @@ a {
   @media screen and (min-width: 480px) {
     .social-icons-div {
       position: relative;
-      top: 55px;
+      top: 93px;
       float: right;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
@@ -1346,15 +1346,17 @@ object {
 .tag-archives {
   background-color: #0082b9;
   padding-top: 2em; }
-  .tag-archives .section-archive ul {
-    -webkit-flex-basis: 33%;
-        -ms-flex-preferred-size: 33%;
-            flex-basis: 33%;
-    margin: 0; }
-    .tag-archives .section-archive ul li {
-      min-width: 360px;
-      min-height: 280px;
-      margin: 1rem; }
+  .tag-archives .section-archive {
+    padding: 1rem 1rem 3rem; }
+    .tag-archives .section-archive ul {
+      -webkit-flex-basis: 33%;
+          -ms-flex-preferred-size: 33%;
+              flex-basis: 33%;
+      margin: 0; }
+      .tag-archives .section-archive ul li {
+        min-width: 360px;
+        min-height: 280px;
+        margin-bottom: 1em; }
   .tag-archives main {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1409,10 +1411,8 @@ object {
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    padding-bottom: 4em;
-    margin: 0px 1.5em;
+    margin: 0 auto;
     box-sizing: border-box;
-    padding: none;
     width: 90vw; }
     .tag-archives .section-archive li {
       background-position: center center !important;
@@ -1446,7 +1446,7 @@ object {
   background-color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 1em 1.5em 2em;
+  margin: 1em 3em 2em;
   font-size: 1.5rem;
   width: 90vw;
   padding: 0 1em; }
@@ -1601,6 +1601,7 @@ button.flickity-prev-next-button {
 
 .featured-rectangle {
   background-size: cover !important;
+  background-position: center center !important;
   height: 60vh;
   width: 800px !important;
   overflow-y: hidden;
@@ -1609,12 +1610,13 @@ button.flickity-prev-next-button {
   order: 4; }
   .featured-rectangle .description:hover {
     background-color: rgba(0, 130, 185, 0.9);
-    height: 83.5%;
+    height: 88.5%;
     width: 91.5%;
     margin: 0 0.20rem; }
 
 .featured-square {
   background-size: cover !important;
+  background-position: center center !important;
   height: 60vh;
   width: 400px !important;
   overflow-y: hidden;
@@ -1623,7 +1625,7 @@ button.flickity-prev-next-button {
   order: 2; }
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
-    height: 83.5%;
+    height: 88.5%;
     width: 83%;
     margin: 0 0.20rem; }
 
@@ -1666,7 +1668,7 @@ span.excerpt {
 
 .type-project header {
   background-size: cover !important;
-  background-position: top center !important;
+  background-position: center center !important;
   min-height: 550px; }
 
 .section-header {
