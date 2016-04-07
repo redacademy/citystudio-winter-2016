@@ -178,7 +178,7 @@ button.flickity-prev-next-button {
 	background-size: cover !important;
   background-position: center center !important;
 	height: 60vh;
-	width: 400px !important;
+	width: 600px !important;
 	overflow-y: hidden;
 	-webkit-box-ordinal-group: 3;
 	-webkit-order: 2;
@@ -187,7 +187,7 @@ button.flickity-prev-next-button {
 		.description:hover {
 			background-color: transparentize($dark-blue, .1);
       height: 88.5%;
-      width: 83%;
+      width: 88%;
       margin: 0 0.20rem;
  		}
 }

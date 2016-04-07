@@ -61,6 +61,7 @@ font-family: $fontfamily;
   width: 100%;
   font-family: $fontfamily;
   text-align: center;
+  margin-bottom: 2rem;
 
   .proj-subtitle {
     height: auto;
@@ -194,6 +195,7 @@ font-family: $fontfamily;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: .5rem;
+
   p{
     background-color: #DCDCDC;
     padding: .8rem 1rem;
@@ -208,5 +210,8 @@ font-family: $fontfamily;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  p:hover {
+    background-color: lighten(#DCDCDC, 5);;
   }
 }

@@ -818,7 +818,7 @@ a {
   @media screen and (min-width: 480px) {
     .social-icons-div {
       position: relative;
-      top: 93px;
+      top: 80px;
       float: right;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
@@ -885,31 +885,10 @@ a {
   transition: all 0.5s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      width: 80px;
-      margin: 3rem 0; } }
-  @media screen and (min-width: 480px) {
-    .nav-div {
       background-color: #76d6ff;
       max-height: 85px;
       width: 80px;
-      margin: 3rem;
-      border-radius: 70px;
-      display: -webkit-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-flex-direction: row;
-          -ms-flex-direction: row;
-              flex-direction: row;
-      -webkit-justify-content: space-between;
-          -ms-flex-pack: justify;
-              justify-content: space-between;
-      transition: all .5s ease-in; } }
-  @media screen and (min-width: 480px) {
-    .nav-div {
-      background-color: #76d6ff;
-      max-height: 85px;
-      width: 80px;
-      margin: 3rem 3rem;
+      margin: 5.5rem 3rem 0;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1618,7 +1597,7 @@ button.flickity-prev-next-button {
   background-size: cover !important;
   background-position: center center !important;
   height: 60vh;
-  width: 400px !important;
+  width: 600px !important;
   overflow-y: hidden;
   -webkit-order: 2;
   -ms-flex-order: 2;
@@ -1626,7 +1605,7 @@ button.flickity-prev-next-button {
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
     height: 88.5%;
-    width: 83%;
+    width: 88%;
     margin: 0 0.20rem; }
 
 li.blue-placeholder {
@@ -1686,7 +1665,8 @@ span.excerpt {
   justify-content: center;
   width: 100%;
   font-family: "open_sans";
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 2rem; }
   .section-header .proj-subtitle {
     height: auto;
     font-family: "open_sans";
@@ -1801,3 +1781,5 @@ span.excerpt {
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+  .tags p:hover {
+    background-color: #e9e9e9; }

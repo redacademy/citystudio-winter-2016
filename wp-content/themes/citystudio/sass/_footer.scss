@@ -24,7 +24,7 @@ display: flex;
   }
   @include desktop {
     position: relative;
-    top: 93px;
+    top: 80px;
     float: right;
 
     flex-direction: column;
@@ -85,32 +85,18 @@ display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: all 0.5s ease-in;
-  @include desktop {
-    width: 80px;
-    margin: 3rem 0;
-  }
+
   @include desktop {
     background-color: #76d6ff;
     max-height: 85px;
     width: 80px;
-    margin: 3rem;
+    margin: 5.5rem 3rem 0;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: all .5s ease-in;
   }
-    @include desktop {
-      background-color: #76d6ff;
-      max-height: 85px;
-      width: 80px;
-      margin: 3rem 3rem;
-      border-radius: 70px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      transition: all .5s ease-in;
-    }
 }
 .sort {
   color: white;
