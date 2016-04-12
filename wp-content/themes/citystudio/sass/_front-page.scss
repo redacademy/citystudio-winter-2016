@@ -65,7 +65,7 @@
     text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
     color: white;
     text-align: center;
-    font-family: 'open sans';
+    font-family: $fontfamily;
     @include desktop {
       font-size: 1.7rem;
     }
@@ -168,7 +168,7 @@ button.flickity-prev-next-button {
   .description:hover {
     background-color: transparentize($medium-blue, .1);
     height: 83.5%;
-    width: 91.5%;
+    width: 90.75%;
     margin: 0 0.20rem;
   }
 }
@@ -185,7 +185,7 @@ button.flickity-prev-next-button {
 		.description:hover {
 			background-color: transparentize($dark-blue, .1);
       height: 83.5%;
-      width: 83%;
+      width: 82.25%;
       margin: 0 0.20rem;
  		}
 }
