@@ -971,7 +971,7 @@ a {
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
-  width: 5.5rem;
+  width: 4rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
@@ -985,7 +985,7 @@ a {
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 30px 40px;
-  width: 5.5rem;
+  width: 4rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
@@ -999,7 +999,7 @@ a {
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 25px 30px;
-  width: 5.5rem;
+  width: 4rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
@@ -1013,7 +1013,7 @@ a {
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  width: 5.5rem;
+  width: 4rem;
   height: 3.8rem;
   border-radius: 70px;
   border: 2px solid white;
@@ -1126,7 +1126,7 @@ a {
   border-radius: 8px;
   border: 0.5px solid #006496;
   bottom: 53px;
-  right: 16px;
+  right: 13px;
   min-width: 142px;
   text-align: center; }
   .neigh-labels label,
@@ -1718,39 +1718,6 @@ button.flickity-prev-next-button {
   -webkit-order: 12;
       -ms-flex-order: 12;
           order: 12; }
-
-.description {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
-  color: white;
-  font-family: sans-serif;
-  overflow: hidden;
-  font-family: "open_sans"; }
-  .description:hover {
-    opacity: 1;
-    background-color: rgba(0, 100, 150, 0.9);
-    border: 10px double white;
-    padding: 1.5rem; }
-
-.description-title {
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  font-family: "open_sans"; }
-
-.subtitle {
-  font-weight: bold; }
-
-.home-description {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  font-family: "open_sans"; }
 
 /*--------------------------------------------------------------
 # Project Page Slider Styles
