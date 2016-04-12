@@ -9,13 +9,13 @@
 
   <?php if ( have_posts() ) : ?>
 
-    <header class="page-header archive-header content-wrapper">
+    <header class="page-header archive-header">
       <?php
             echo single_term_title('<h2><span>Tags:</span> ', '</h2>' );
       ?>
     </header><!-- .page-header -->
 
-      <div class="section-archive content-wrapper">
+      <div class="section-archive">
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>

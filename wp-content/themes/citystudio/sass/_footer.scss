@@ -22,7 +22,7 @@ display: flex;
   }
   @include desktop {
     position: relative;
-    top: 55px;
+    top: 53px;
     float: right;
 
     flex-direction: column;
@@ -287,13 +287,13 @@ display: flex;
     border-color: #fff transparent transparent;
     position: absolute;
     bottom: -13px;
-    left: 28%;
+    left: 30%;
   }
 }
 .year {
   position: absolute;
   bottom: 100px;
-  left: 4px;
+  left: 10px;
   &::after {
     content: '';
     width: 0;
@@ -303,7 +303,7 @@ display: flex;
     border-color: #fff transparent transparent;
     position: absolute;
     bottom: -13px;
-    left: 28%;
+    left: 18%;
   }
 }
 .current-menu {
@@ -322,6 +322,31 @@ display: flex;
 }
   .show-label:hover{
       transition-delay:4s;
+  }
+
+  .neigh-labels {
+    min-width: 120px;
+    right: 30px;
+
+      label::after  {
+        left: 36%;
+      }
+  }
+  .part-labels {
+    min-width: 80px;
+    right: 11px;
+
+      label::after  {
+        left: 31%;
+      }
+  }
+  .year-labels  {
+    min-width: 80px;
+    right: 12px;
+
+      label::after  {
+        left: 32%;
+      }
   }
 
 .neigh-labels,
@@ -348,7 +373,6 @@ display: flex;
       border-color: #fff transparent transparent;
       position: absolute;
       bottom: -13px;
-      left: 28%;
     }
   }
 }
