@@ -114,6 +114,8 @@ jQuery(document).ready(function($) {
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
 
           success: function(response) {
+
+            console.log(response);
             // get the length of response and run this IF it is less than 10
             if ( response.length < 8 ) {
               // this object holds the remaining slots left to fill
