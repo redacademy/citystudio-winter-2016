@@ -1438,8 +1438,7 @@ a, a:visited, a:hover, a:active {
   color: inherit; }
 
 .container {
-  display: block;
-  border-bottom: 7px solid white; }
+  display: block; }
   .container .bx-viewport {
     margin-top: 0;
     margin-bottom: 5px; }
@@ -1463,7 +1462,7 @@ a, a:visited, a:hover, a:active {
 .hero {
   width: 100vw;
   min-height: 100vh;
-  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center center fixed;
+  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
   background-size: cover;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1523,12 +1522,14 @@ a, a:visited, a:hover, a:active {
   margin-left: 900px;
   padding: 2rem; }
 
+.flickity-viewport {
+  height: 400px !important; }
+
 .home-slider .flickity-page-dots {
   display: none; }
 
 .flickity-slider a li {
-  margin: .25rem;
-  height: 60vh;
+  height: 398px;
   z-index: 1;
   left: 0;
   top: 0; }
@@ -1543,13 +1544,8 @@ button.flickity-prev-next-button {
   width: 100%;
   height: 100%;
   opacity: 0;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
   color: white;
   font-family: sans-serif;
-  overflow: hidden;
   font-family: "open_sans"; }
   .description:hover {
     opacity: 1;
@@ -1559,7 +1555,7 @@ button.flickity-prev-next-button {
 
 .description-title {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: "open_sans"; }
@@ -1569,19 +1565,13 @@ button.flickity-prev-next-button {
 
 .home-description {
   text-overflow: ellipsis;
-  overflow: hidden;
   font-family: "open_sans";
-  height: 60vh;
-  margin: 0 .25rem;
-  width: auto;
-  z-index: 1;
-  left: 0;
-  top: 0; }
+  margin: 0 .25rem; }
 
 .featured-rectangle {
   background-size: cover !important;
   background-position: center center !important;
-  height: 60vh;
+  height: 400px;
   width: 800px !important;
   overflow-y: hidden;
   -webkit-order: 4;
@@ -1589,14 +1579,15 @@ button.flickity-prev-next-button {
   order: 4; }
   .featured-rectangle .description:hover {
     background-color: rgba(0, 130, 185, 0.9);
-    height: 83.5%;
-    width: 90.75%;
-    margin: 0 0.20rem; }
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box; }
 
 .featured-square {
   background-size: cover !important;
   background-position: center center !important;
-  height: 60vh;
+  height: 400px;
   width: 600px !important;
   overflow-y: hidden;
   -webkit-order: 2;
@@ -1604,12 +1595,13 @@ button.flickity-prev-next-button {
   order: 2; }
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
-    height: 83.5%;
-    width: 82.25%;
-    margin: 0 0.20rem; }
+    height: 100%;
+    width: 100%;
+    padding: 2em;
+    box-sizing: border-box; }
 
 li.blue-placeholder {
-  height: 60vh;
+  height: 400px;
   width: 400px;
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
