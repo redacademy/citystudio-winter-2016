@@ -28,6 +28,8 @@ img.wp-post-image {
 span.excerpt{
 margin: 0 auto;
 font-family: $fontfamily;
+text-align: center;
+width: 90vw;
 }
 
 @include desktop {
@@ -58,7 +60,6 @@ font-family: $fontfamily;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   font-family: $fontfamily;
   text-align: center;
   margin-bottom: 2rem;
@@ -68,11 +69,10 @@ font-family: $fontfamily;
     font-family: $fontfamily;
     text-align: center;
     font-size: 1rem;
-
     h1 {
       font-size: 1rem !important;
       font-family: $fontfamily;
-
+      max-width: 99%;
     }
   }
 }
@@ -210,6 +210,9 @@ font-family: $fontfamily;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+  &:hover{
+    background-color: lighten(#DCDCDC, 5);
+    }
   }
   p:hover {
     background-color: lighten(#DCDCDC, 5);;
