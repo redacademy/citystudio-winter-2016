@@ -818,7 +818,7 @@ a {
   @media screen and (min-width: 480px) {
     .social-icons-div {
       position: relative;
-      top: 80px;
+      top: 53px;
       float: right;
       -webkit-flex-direction: column;
           -ms-flex-direction: column;
@@ -1495,7 +1495,7 @@ a, a:visited, a:hover, a:active {
     text-shadow: 1px 3px 5px black;
     color: white;
     text-align: center;
-    font-family: 'open sans'; }
+    font-family: "open_sans"; }
     @media screen and (min-width: 480px) {
       .site-description p {
         font-size: 1.7rem; } }
@@ -1589,8 +1589,8 @@ button.flickity-prev-next-button {
   order: 4; }
   .featured-rectangle .description:hover {
     background-color: rgba(0, 130, 185, 0.9);
-    height: 88.5%;
-    width: 91.5%;
+    height: 83.5%;
+    width: 90.75%;
     margin: 0 0.20rem; }
 
 .featured-square {
@@ -1604,8 +1604,8 @@ button.flickity-prev-next-button {
   order: 2; }
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
-    height: 88.5%;
-    width: 88%;
+    height: 83.5%;
+    width: 82.25%;
     margin: 0 0.20rem; }
 
 li.blue-placeholder {
