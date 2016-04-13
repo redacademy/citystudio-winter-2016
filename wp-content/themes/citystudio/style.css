@@ -946,11 +946,11 @@ a {
   margin: 1rem auto 1rem; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 50vw;
+      width: 40%;
       margin: 3rem; } }
 
 .close {
-  width: 20px; }
+  width: 4rem; }
   @media screen and (min-width: 480px) {
     .close {
       width: 5rem; } }
@@ -978,8 +978,8 @@ a {
   transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 35px 45px; } }
 
 .partners {
@@ -992,8 +992,8 @@ a {
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 60px; } }
 
 .years {
@@ -1006,8 +1006,8 @@ a {
   transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 45px; } }
 
 .refresh {
@@ -1021,8 +1021,8 @@ a {
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 5.2rem;
-      height: 5.1rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 45px; } }
 
 /* Footer Navigation Menu */
@@ -1165,6 +1165,9 @@ a {
 
 .hide-label {
   display: none !important; }
+
+.notransition {
+  transition: none !important; }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1620,25 +1623,6 @@ button.flickity-prev-next-button {
   height: 60vh;
   width: 400px !important;
   overflow-y: hidden;
-  -webkit-order: 10;
-      -ms-flex-order: 10;
-          order: 10; }
-  .lower-regular-4 .description:hover {
-    background-color: rgba(0, 130, 185, 0.9); }
-
-.lower-regular-5 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 11;
-      -ms-flex-order: 11;
-          order: 11; }
-
-.lower-regular-6 {
-  height: 60vh;
-  width: 400px !important;
-  -webkit-order: 12;
-      -ms-flex-order: 12;
-          order: 12; }
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2; }
@@ -1652,6 +1636,7 @@ li.blue-placeholder {
   height: 60vh;
   width: 400px;
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
+
 /*--------------------------------------------------------------
 # Project Page Slider Styles
 --------------------------------------------------------------*/

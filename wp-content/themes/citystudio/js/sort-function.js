@@ -1,8 +1,9 @@
 jQuery(document).ready(function($) {
 
-  if ($('body').hasClass('single-project')) {
-    $('#sort_nav').hide();
-    $('.nav-div').css("background-color", "#006496")
+  if ($('body').hasClass('single-project') || $('body').hasClass('archive') || $('body').hasClass('search') ) {
+    $('#sort_nav').remove();
+    $('.nav-div').addClass('notransition');
+    $('.nav-div').css("background-color", "#006496");
   }
 
   // queryFilter holds an empty object for the checked navigation values/properties
