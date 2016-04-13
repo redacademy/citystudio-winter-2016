@@ -159,7 +159,7 @@ width: 90vw;
 }
 }
 .proj-description p {
-  color: black;
+  color: #000;
   font-family: $fontfamily;
 
 }
@@ -196,10 +196,11 @@ width: 90vw;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: .5rem;
+
   p{
     background-color: #DCDCDC;
     padding: .8rem 1rem;
-    color: black;
+    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -webkit-box;
@@ -213,5 +214,8 @@ width: 90vw;
   &:hover{
     background-color: lighten(#DCDCDC, 5);
     }
+  }
+  p:hover {
+    background-color: lighten(#DCDCDC, 5);;
   }
 }

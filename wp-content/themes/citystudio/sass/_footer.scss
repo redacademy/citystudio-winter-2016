@@ -1,4 +1,4 @@
- .site-footer{
+.site-footer{
   display: flex;
   flex-direction: column;
   @include desktop {
@@ -36,6 +36,7 @@ position: relative;
       }
   }
 }
+
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;

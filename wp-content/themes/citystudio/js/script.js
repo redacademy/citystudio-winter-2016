@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
     accessibility: true,
     wrapAround: true,
     autoPlay: true,
-    autoPlay: 1500
+    autoPlay: 3000
   });
   $('.main-carousel').flickity({
     cellAlign: 'left',
@@ -16,7 +16,7 @@ jQuery(document).ready(function($){
     wrapAround: true,
     prevNextButtons: false,
     autoPlay: true,
-    autoPlay: 2500
+    autoPlay: 3000
   });
 
 });

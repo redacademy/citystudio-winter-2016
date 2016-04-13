@@ -2,14 +2,15 @@
 // LANDING PAGE STYLES  -----------------------
 .container {
     display: block;
-    border-bottom: 7px solid white;
-    .bx-viewport {
-      margin-top: 0;
-      margin-bottom: 5px;
-    }
-  }
-  .landing-gallery {
-    display: none;
+
+      .bx-viewport {
+        margin-top: 0;
+        margin-bottom: 5px;
+      }
+}
+.landing-gallery {
+  display: none;
+
     @include desktop {
       display: block;
       height: 50px;
@@ -23,53 +24,57 @@
       padding: 3rem;
       float: right;
     }
-  }
-  .hero {
-    width: 100vw;
-    min-height: 100vh;
-    background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
-    background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center center fixed;
-    background-size: cover;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-
 }
-
+.hero {
+  width: 100vw;
+  min-height: 100vh;
+  background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  background: -o-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
 .hero-logo {
   background: url("../../images/citystudio-logo-trans.png") no-repeat center;
   background-size: 80vw;
   height: 15vh;
   margin: 4rem 2rem 1rem;
-  @include desktop {
-    background-size: 60vw;
-    height: 30vh;
-    margin: 0 2rem 1rem;
-  }
+
+    @include desktop {
+      background-size: 60vw;
+      height: 30vh;
+      margin: 0 2rem 1rem;
+    }
 }
+
 .site-description {
   margin: 0 auto 1rem;
   width: 80vw;
-  @include desktop {
-    margin: 0 auto;
-    width: 48vw;
-  }
-  p {
-    font-size: 1.1rem;
-    text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
-    color: white;
-    text-align: center;
-    font-family: $fontfamily;
+
     @include desktop {
-      font-size: 1.7rem;
+      margin: 0 auto;
+      width: 48vw;
     }
-  }
+
+    p {
+      font-size: 1.1rem;
+      text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
+      color: white;
+      text-align: center;
+      font-family: $fontfamily;
+
+        @include desktop {
+          font-size: 1.7rem;
+        }
+    }
 }
 .toggle-class {
   background: url("../../assets/noun.png") no-repeat;
@@ -80,12 +85,13 @@
   outline: 0;
   height: 30px;
   width: 20px;
-  @include desktop {
-    background-size: 75px;
-    padding: 4% 4% 4% 0.2rem;
-    height: 50px;
-    width: 45px;
-  }
+
+    @include desktop {
+      background-size: 75px;
+      padding: 4% 4% 4% 0.2rem;
+      height: 50px;
+      width: 45px;
+    }
 }
 .loader {
   opacity: 0.1;
@@ -94,104 +100,109 @@
   margin-left: 900px;
   padding: 2rem;
 }
+
 //-----------------------------------------
 // SLIDER STYLES------------------------
+
+a.gallery-anchor  {
+  text-decoration: none;
+}
+
+.flickity-viewport {
+  height: 400px !important;
+}
 .home-slider .flickity-page-dots {
   display: none;
 }
 .flickity-slider a li {
-  margin: .25rem;
-  height: 60vh;
+  height: 398px;
   z-index: 1;
   left: 0;
   top: 0;
 }
-
 button.flickity-prev-next-button {
   display: none;
-  @include desktop {
-    display: block;
-  }
-}
 
+    @include desktop {
+      display: block;
+    }
+}
 .description {
   width: 100%;
   height: 100%;
   opacity: 0;
-  position: absolute;
-  z-index: 2;
-  left: 0;
-  top: 0;
+  // left: 0;
+  // top: 0;
   color: white;
   font-family: sans-serif;
-  overflow: hidden;
+  // overflow: hidden;
   font-family: $fontfamily;
-  &:hover {
-    opacity: 1;
-    background-color: transparentize($dark-blue, .1);
-    border: 10px double white;
-    padding: 1.5rem;
 
-  }
+    &:hover {
+      opacity: 1;
+      background-color: transparentize($dark-blue, .1);
+      border: 10px double white;
+      padding: 1.5rem;
+    }
 }
 .description-title {
   text-transform: uppercase;
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: $fontfamily;
+  color: #fff;
+  text-decoration: none;
 }
 .subtitle {
   font-weight: bold;
 }
 .home-description {
   text-overflow: ellipsis;
-  overflow: hidden;
   font-family: $fontfamily;
-  height: 60vh;
   margin: 0 .25rem;
-  width: auto;
-  z-index: 1;
-  left: 0;
-  top: 0;
 }
 
 .featured-rectangle {
 	background-size: cover !important;
-	height: 60vh;
+  background-position: center center !important;
+	height: 400px;
 	width: 800px !important;
 	overflow-y: hidden;
 	-webkit-box-ordinal-group: 5;
 	-webkit-order: 4;
-	    -ms-flex-order: 4;
-      	        order: 4;
-  .description:hover {
-    background-color: transparentize($medium-blue, .1);
-    height: 83.5%;
-    width: 90.75%;
-    margin: 0 0.20rem;
-  }
-}
+	-ms-flex-order: 4;
+  order: 4;
 
+    .description:hover {
+      background-color: transparentize($medium-blue, .1);
+      height: 100%;
+      width: 100%;
+      padding: 2em;
+      box-sizing: border-box;
+    }
+}
 .featured-square {
 	background-size: cover !important;
-	height: 60vh;
-	width: 400px !important;
+  background-position: center center !important;
+	height: 400px;
+	width: 600px !important;
 	overflow-y: hidden;
 	-webkit-box-ordinal-group: 3;
 	-webkit-order: 2;
-	    -ms-flex-order: 2;
-	        order: 2;
-		.description:hover {
+	-ms-flex-order: 2;
+	order: 2;
+
+    .description:hover {
 			background-color: transparentize($dark-blue, .1);
-      height: 83.5%;
-      width: 82.25%;
-      margin: 0 0.20rem;
+      height: 100%;
+      width: 100%;
+      padding: 2em;
+      box-sizing: border-box;
  		}
 }
-
 li.blue-placeholder {
-	height: 60vh;
+	height: 400px;
 	width: 400px;
 	background: -webkit-linear-gradient(left, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
 							url('../../images/placeholder-blue.jpg')
