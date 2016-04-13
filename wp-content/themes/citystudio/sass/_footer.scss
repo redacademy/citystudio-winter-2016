@@ -38,6 +38,8 @@ display: flex;
   }
 }
 
+
+
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
@@ -135,13 +137,13 @@ display: flex;
   width: 95vw;
   margin: 1rem auto 1rem;
   @include desktop{
-  width: 50vw;
+  width: 40%;
   margin: 3rem;
   }
 }
 
 .close{
-  width: 20px;
+  width: 4rem;
   @include desktop {
     width: 5rem;
   }
@@ -162,6 +164,7 @@ display: flex;
 
 .open{
     color: red;
+
 }
 
 .neighbourhood {
@@ -173,8 +176,8 @@ display: flex;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
     background-size: 35px 45px;
   }
 }
@@ -187,8 +190,8 @@ display: flex;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
   background-size: 45px 60px;
   }
 }
@@ -201,8 +204,8 @@ display: flex;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
     background-size: 45px 45px;
   }
 
@@ -217,8 +220,8 @@ display: flex;
   background-color: #0082b9;
   transition: all 2s ease-in;
   @include desktop {
-    width: 5.2rem;
-    height: 5.1rem;
+    width: 88px;
+    height: 85px;
     background-size: 45px 45px;
   }
 }
@@ -378,4 +381,12 @@ display: flex;
 }
 .hide-label {
   display: none !important;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
 }

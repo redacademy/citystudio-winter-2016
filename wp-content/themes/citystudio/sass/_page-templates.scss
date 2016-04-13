@@ -35,30 +35,42 @@
     }
   }
 
-  @include desktop {
-    .tag-archives .section-archive li {
-      margin: 0 auto;
-      width: 360px;
-      height: 280px;
-      font-size: 3rem;
-    }
-    h2 {
-      font-family: 'open_sans', bold;
-      font-size: 4rem;
-      color: $light-blue;
-      font-weight: 900;
-      margin-top: 0.2rem;
-      span {
-        color: $dark-blue;
-      }
+@include desktop {
+
+  .tag-archives .section-archive li {
+    -webkit-flex-basis: 50%;
+        -ms-flex-preferred-size: 50%;
+            flex-basis: 50%;
+    margin: 0 auto;
+    min-width: 400px;
+    min-height: 275px;
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-family: 'open_sans', bold;
+    font-size: 4rem;
+    color: $light-blue;
+    font-weight: 900;
+    span {
+      color: $dark-blue;
     }
   }
-  //
-  // @include threecol {
-  //   .section-archive ul {
-  //
-  //   }
-  // }
+}
+
+@include threecol {
+  .section-archive ul {
+    // margin: 0 auto;
+  }
+}
+
+// everything for both media views needs to be outside the desktop.
+
+  header {
+    -webkit-flex-basis: 100%;
+        -ms-flex-preferred-size: 100%;
+            flex-basis: 100%;
+  }
   .section-archive {
     display: -webkit-box;
     display: -webkit-flex;
@@ -92,7 +104,7 @@
       filter:brightness();
     }
   }
-}
+
 .tag-archives {
   background-color: $medium-blue;
   padding-top: 2em;
@@ -118,6 +130,10 @@
   height: 6.5rem;
 margin-bottom: 1.5rem;
   }
+  margin: 1em 1.5em 2em;
+  font-size: 1.5rem;
+  width: 90vw;
+  padding: 0 1em;
 }
 .tag-url {
   text-decoration: none;

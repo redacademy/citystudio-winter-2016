@@ -946,11 +946,11 @@ a {
   margin: 1rem auto 1rem; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 50vw;
+      width: 40%;
       margin: 3rem; } }
 
 .close {
-  width: 20px; }
+  width: 4rem; }
   @media screen and (min-width: 480px) {
     .close {
       width: 5rem; } }
@@ -978,8 +978,8 @@ a {
   transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 35px 45px; } }
 
 .partners {
@@ -992,8 +992,8 @@ a {
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 60px; } }
 
 .years {
@@ -1006,8 +1006,8 @@ a {
   transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 45px; } }
 
 .refresh {
@@ -1021,8 +1021,8 @@ a {
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 5.2rem;
-      height: 5.1rem;
+      width: 88px;
+      height: 85px;
       background-size: 45px 45px; } }
 
 /* Footer Navigation Menu */
@@ -1165,6 +1165,9 @@ a {
 
 .hide-label {
   display: none !important; }
+
+.notransition {
+  transition: none !important; }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1358,6 +1361,15 @@ object {
     min-width: 360px;
     min-height: 280px;
     margin-bottom: 1rem; }
+  .tag-archives .section-archive ul {
+    -webkit-flex-basis: 33%;
+        -ms-flex-preferred-size: 33%;
+            flex-basis: 33%;
+    margin: 0; }
+    .tag-archives .section-archive ul li {
+      min-width: 360px;
+      min-height: 280px;
+      margin: 1rem; }
   .tag-archives main {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1390,6 +1402,10 @@ object {
       margin-top: 0.2rem; }
       .tag-archives h2 span {
         color: #006496; } }
+  .tag-archives header {
+    -ms-flex-preferred-size: 100%;
+    -webkit-flex-basis: 100%;
+            flex-basis: 100%; }
   .tag-archives .section-archive {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1442,6 +1458,10 @@ object {
     .archive-header {
       height: 6.5rem;
       margin-bottom: 1.5rem; } }
+  margin: 1em 1.5em 2em;
+  font-size: 1.5rem;
+  width: 90vw;
+  padding: 0 1em; }
 
 .tag-url {
   text-decoration: none;
@@ -1613,7 +1633,6 @@ button.flickity-prev-next-button {
   height: 60vh;
   width: 400px !important;
   overflow-y: hidden;
-<<<<<<< HEAD
   -webkit-order: 10;
       -ms-flex-order: 10;
           order: 10; }
@@ -1626,8 +1645,16 @@ button.flickity-prev-next-button {
   -webkit-order: 11;
       -ms-flex-order: 11;
           order: 11; }
+  -webkit-order: 2;
+  -ms-flex-order: 2;
+  order: 2; }
+  .featured-square .description:hover {
+    background-color: rgba(0, 100, 150, 0.9);
+    height: 83.5%;
+    width: 82.25%;
+    margin: 0 0.20rem; }
 
-.lower-regular-6 {
+li.blue-placeholder {
   height: 60vh;
   width: 400px !important;
   -webkit-order: 12;
@@ -1703,6 +1730,9 @@ span.excerpt {
   text-align: center;
   margin-bottom: 1.5rem;
   max-width: 99%; }
+  width: 100%;
+  font-family: "open_sans";
+  text-align: center; }
   .section-header .proj-subtitle {
     height: auto;
     font-family: "open_sans";
