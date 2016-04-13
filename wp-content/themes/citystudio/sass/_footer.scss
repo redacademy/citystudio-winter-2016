@@ -1,20 +1,20 @@
-  .site-footer{
+ .site-footer{
   display: flex;
   flex-direction: column;
   @include desktop {
     width: 100vw;
     background-color: $dark-blue;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
     position: absolute;
-    z-index: 1;
   }
 }
-
 .social-icons-div {
 background-color: $dark-blue;
 display: flex;
+position: relative;
   ul {
     list-style: none;
     display: flex;
@@ -22,14 +22,13 @@ display: flex;
   }
   @include desktop {
     position: relative;
+    flex-basis: 30%;
+    order: 2;
     top: 53px;
     float: right;
-
     flex-direction: column;
     margin-top: 0.5rem;
-    flex-direction: column;
     margin-right: 1.5rem;
-    z-index: 999;
     ul {
       list-style: none;
       display: flex;
@@ -37,23 +36,20 @@ display: flex;
       }
   }
 }
-
-
-
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
-  margin: 0.75rem 1.25rem 1rem 1rem;
+  margin: 1rem;
   &:hover {
     cursor: pointer;
   }
   @include desktop {
+    z-index: -1;
     height: 2rem;
     width: 2rem;
     margin: 1rem 1.5rem 1rem 1rem;
     }
   }
-
 .twitter {
   height: 2rem;
   width: 2rem;
@@ -64,7 +60,6 @@ display: flex;
     margin-top: .8rem;
   }
 }
-
 /* Footer Navigation */
 .nav {
   width: 95vw;
@@ -74,7 +69,6 @@ display: flex;
     margin: 0;
   }
 }
-
 .nav-div {
   background-color: #76d6ff;
   max-height: 85px;
@@ -84,32 +78,19 @@ display: flex;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: all 0.5s ease-in;
-  @include desktop {
-    width: 80px;
-    margin: 3rem 0;
-  }
-  @include desktop {
-    background-color: #76d6ff;
-    max-height: 85px;
-    width: 80px;
-    margin: 3rem;
-    border-radius: 70px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: all .5s ease-in;
-  }
+  transition: width 0.5s ease-in;
     @include desktop {
       background-color: #76d6ff;
       max-height: 85px;
+      z-index: 5 !important;
+      position: relative !important;
       width: 80px;
       margin: 3rem 3rem;
       border-radius: 70px;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      transition: all .5s ease-in;
+      transition: width .5s ease-in;
     }
 }
 .sort {
@@ -132,96 +113,90 @@ display: flex;
   padding: 1.9rem 1.2rem;
   }
 }
-
 .open{
-  width: 95vw;
+  min-width: 95vw;
+  width: 90%;
   margin: 1rem auto 1rem;
   @include desktop{
-  width: 40%;
+  position: relative !important;
+ flex-basis: 40%;
+  order: 1;
+  width: 40vw;
+  min-width: 450px;
   margin: 3rem;
   }
 }
-
 .close{
-  width: 4rem;
+  min-width: 20px;
   @include desktop {
     width: 5rem;
   }
 }
-
 .close .refresh {
-  width: 20px;
+  min-width: 20px;
 }
-
 .menu-item {
   opacity: 0;
 }
-
 .open .menu-item{
     opacity: 1;
     margin: 0;
 }
 
-.open{
-    color: red;
-
-}
-
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
-  width: 4rem;
+  width: 4.3rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
-    width: 88px;
-    height: 85px;
+    width: 5.4rem;
+    height: 5.4rem;
     background-size: 35px 45px;
   }
 }
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 30px 40px;
-    width: 4rem;
-    height: 4rem;
+  width: 4.3rem;
+  height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 88px;
-    height: 85px;
+    width: 5.4rem;
+    height: 5.4rem;
   background-size: 45px 60px;
   }
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 25px 30px;
-  width: 4rem;
+  width: 4.3rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
-    width: 88px;
-    height: 85px;
+    width: 5.4rem;
+    height: 5.4rem;
     background-size: 45px 45px;
   }
-
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  width: 4rem;
+  width: 4.3rem;
   height: 3.8rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
   transition: all 2s ease-in;
   @include desktop {
-    width: 88px;
-    height: 85px;
+    width: 5.2rem;
+    height: 5.1rem;
     background-size: 45px 45px;
   }
 }
@@ -229,11 +204,9 @@ display: flex;
 .foot-sub-menu input[type=checkbox] {
   display: none;
 }
-
 .current-menu {
   display: block;
 }
-
 .foot-sub-menu {
   display: none;
   background-color: #fff;
@@ -321,16 +294,13 @@ display: flex;
   color: $dark-blue;
   background: #fff;
   padding: 1em;
-
 }
   .show-label:hover{
       transition-delay:4s;
   }
-
   .neigh-labels {
     min-width: 120px;
     right: 30px;
-
       label::after  {
         left: 36%;
       }
@@ -338,7 +308,6 @@ display: flex;
   .part-labels {
     min-width: 80px;
     right: 11px;
-
       label::after  {
         left: 31%;
       }
@@ -346,12 +315,10 @@ display: flex;
   .year-labels  {
     min-width: 80px;
     right: 12px;
-
       label::after  {
         left: 32%;
       }
   }
-
 .neigh-labels,
 .part-labels,
 .year-labels {
@@ -362,8 +329,6 @@ display: flex;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
   bottom: 53px;
-  right: 13px;
-  min-width: 142px;
   text-align: center;
   label {
     color: $medium-blue;
@@ -381,12 +346,4 @@ display: flex;
 }
 .hide-label {
   display: none !important;
-}
-
-.notransition {
-  -webkit-transition: none !important;
-  -moz-transition: none !important;
-  -o-transition: none !important;
-  -ms-transition: none !important;
-  transition: none !important;
 }

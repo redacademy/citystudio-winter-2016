@@ -17,6 +17,12 @@
 	}
 }
 
+@mixin footer {
+	@media screen and (min-width: 540px){
+	@content;
+	}
+}
+
 @mixin threecol {
 	@media screen and (min-width: 1000px) {
 		@content;
