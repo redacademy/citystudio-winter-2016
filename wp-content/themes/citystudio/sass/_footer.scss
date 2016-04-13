@@ -35,6 +35,7 @@ display: flex;
       }
   }
 }
+
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
@@ -128,12 +129,12 @@ display: flex;
   width: 95vw;
   margin: 1rem auto 1rem;
   @include desktop{
-  width: 50vw;
+  width: 40%;
   margin: 3rem;
   }
 }
 .close{
-  width: 20px;
+  width: 4rem;
   @include desktop {
     width: 5rem;
   }
@@ -150,61 +151,62 @@ display: flex;
 }
 .open{
     color: red;
+
 }
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
-  width: 5.5rem;
+  width: 4rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
     background-size: 35px 45px;
   }
 }
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 30px 40px;
-    width: 5.5rem;
+    width: 4rem;
     height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
   background-size: 45px 60px;
   }
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 25px 30px;
-  width: 5.5rem;
+  width: 4rem;
   height: 4rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 88px;
+    height: 85px;
     background-size: 45px 45px;
   }
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  width: 5.5rem;
+  width: 4rem;
   height: 3.8rem;
   border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
   transition: all 2s ease-in;
   @include desktop {
-    width: 5.2rem;
-    height: 5.1rem;
+    width: 88px;
+    height: 85px;
     background-size: 45px 45px;
   }
 }
@@ -337,6 +339,8 @@ display: flex;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
   bottom: 53px;
+  right: 13px;
+  min-width: 142px;
   text-align: center;
   label {
     color: $medium-blue;
@@ -354,4 +358,12 @@ display: flex;
 }
 .hide-label {
   display: none !important;
+}
+
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
 }

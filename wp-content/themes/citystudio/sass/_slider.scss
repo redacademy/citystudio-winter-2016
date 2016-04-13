@@ -62,7 +62,8 @@ width: 90vw;
           justify-content: center;
   font-family: $fontfamily;
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
+  max-width: 99%;
 
   .proj-subtitle {
     height: auto;
@@ -158,7 +159,7 @@ width: 90vw;
 }
 }
 .proj-description p {
-  color: black;
+  color: #000;
   font-family: $fontfamily;
 
 }
@@ -199,7 +200,7 @@ width: 90vw;
   p{
     background-color: #DCDCDC;
     padding: .8rem 1rem;
-    color: black;
+    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -webkit-box;
