@@ -1606,14 +1606,6 @@ button.flickity-prev-next-button {
   order: 2; }
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
-<<<<<<< HEAD
-    height: 83.5%;
-    width: 82.25%;
-    margin: 0 0.20rem; }
-
-li.blue-placeholder {
-  height: 60vh;
-=======
     height: 100%;
     width: 100%;
     padding: 2em;
@@ -1621,7 +1613,6 @@ li.blue-placeholder {
 
 li.blue-placeholder {
   height: 400px;
->>>>>>> dd912705458b24edcc9bdf1b94e04509e0140e39
   width: 400px;
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
