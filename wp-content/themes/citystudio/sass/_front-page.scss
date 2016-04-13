@@ -104,6 +104,10 @@
 //-----------------------------------------
 // SLIDER STYLES------------------------
 
+a.gallery-anchor  {
+  text-decoration: none;
+}
+
 .flickity-viewport {
   height: 400px !important;
 }
@@ -147,6 +151,8 @@ button.flickity-prev-next-button {
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: $fontfamily;
+  color: #fff;
+  text-decoration: none;
 }
 .subtitle {
   font-weight: bold;

@@ -1,10 +1,8 @@
-  .site-footer{
+.site-footer{
   display: flex;
   flex-direction: column;
-
   @include desktop {
     width: 100vw;
-    height: 100vh;
     background-color: $dark-blue;
     display: flex;
     flex-direction: row;
@@ -13,7 +11,6 @@
     z-index: 1;
   }
 }
-
 .social-icons-div {
 background-color: $dark-blue;
 display: flex;
@@ -26,7 +23,6 @@ display: flex;
     position: relative;
     top: 53px;
     float: right;
-
     flex-direction: column;
     margin-top: 0.5rem;
     flex-direction: column;
@@ -39,7 +35,6 @@ display: flex;
       }
   }
 }
-
 .social-icons {
   height: 1.5rem;
   width: 1.5rem;
@@ -53,7 +48,6 @@ display: flex;
     margin: 1rem 1.5rem 1rem 1rem;
     }
   }
-
 .twitter {
   height: 2rem;
   width: 2rem;
@@ -64,7 +58,6 @@ display: flex;
     margin-top: .8rem;
   }
 }
-
 /* Footer Navigation */
 .nav {
   width: 95vw;
@@ -74,7 +67,6 @@ display: flex;
     margin: 0;
   }
 }
-
 .nav-div {
   background-color: #76d6ff;
   max-height: 85px;
@@ -85,18 +77,32 @@ display: flex;
   flex-direction: row;
   justify-content: space-between;
   transition: all 0.5s ease-in;
-
+  @include desktop {
+    width: 80px;
+    margin: 3rem 0;
+  }
   @include desktop {
     background-color: #76d6ff;
     max-height: 85px;
     width: 80px;
-    margin: 5.5rem 3rem 0;
+    margin: 3rem;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: all .5s ease-in;
   }
+    @include desktop {
+      background-color: #76d6ff;
+      max-height: 85px;
+      width: 80px;
+      margin: 3rem 3rem;
+      border-radius: 70px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      transition: all .5s ease-in;
+    }
 }
 .sort {
   color: white;
@@ -118,7 +124,6 @@ display: flex;
   padding: 1.9rem 1.2rem;
   }
 }
-
 .open{
   width: 95vw;
   margin: 1rem auto 1rem;
@@ -127,31 +132,25 @@ display: flex;
   margin: 3rem;
   }
 }
-
 .close{
   width: 20px;
   @include desktop {
     width: 5rem;
   }
 }
-
 .close .refresh {
   width: 20px;
 }
-
 .menu-item {
   opacity: 0;
 }
-
 .open .menu-item{
     opacity: 1;
     margin: 0;
 }
-
 .open{
     color: red;
 }
-
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
@@ -193,7 +192,6 @@ display: flex;
     height: 5.4rem;
     background-size: 45px 45px;
   }
-
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
@@ -214,11 +212,9 @@ display: flex;
 .foot-sub-menu input[type=checkbox] {
   display: none;
 }
-
 .current-menu {
   display: block;
 }
-
 .foot-sub-menu {
   display: none;
   background-color: #fff;
@@ -306,16 +302,13 @@ display: flex;
   color: $dark-blue;
   background: #fff;
   padding: 1em;
-
 }
   .show-label:hover{
       transition-delay:4s;
   }
-
   .neigh-labels {
     min-width: 120px;
     right: 30px;
-
       label::after  {
         left: 36%;
       }
@@ -323,7 +316,6 @@ display: flex;
   .part-labels {
     min-width: 80px;
     right: 11px;
-
       label::after  {
         left: 31%;
       }
@@ -331,12 +323,10 @@ display: flex;
   .year-labels  {
     min-width: 80px;
     right: 12px;
-
       label::after  {
         left: 32%;
       }
   }
-
 .neigh-labels,
 .part-labels,
 .year-labels {
