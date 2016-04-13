@@ -28,6 +28,8 @@ img.wp-post-image {
 span.excerpt{
 margin: 0 auto;
 font-family: $fontfamily;
+text-align: center;
+width: 90vw;
 }
 
 @include desktop {
@@ -39,8 +41,8 @@ font-family: $fontfamily;
 
 .type-project header {
   background-size: cover !important;
-  background-position: top center !important;
-  min-height: 400px;
+  background-position: center center !important;
+  min-height: 550px;
 }
 
 .section-header {
@@ -58,18 +60,19 @@ font-family: $fontfamily;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%;
   font-family: $fontfamily;
-
+  text-align: center;
+  margin-bottom: 1.5rem;
+  max-width: 99%;
   .proj-subtitle {
     height: auto;
-    margin: 0.67em 0 0.67em 0.3em;
     font-family: $fontfamily;
-
+    text-align: center;
+    font-size: 1rem;
     h1 {
       font-size: 1rem !important;
       font-family: $fontfamily;
-
+      max-width: 99%;
     }
   }
 }
@@ -206,5 +209,8 @@ font-family: $fontfamily;
     -webkit-align-items: center;
         -ms-flex-align: center;
             align-items: center;
+  &:hover{
+    background-color: lighten(#DCDCDC, 5);
+    }
   }
 }

@@ -2,20 +2,14 @@
 # Page Templates
 --------------------------------------------------------------*/
 /* Tag Archive Page */
-
-.tag-archives  {
+.tag-archives {
   background-color: $medium-blue;
   padding-top: 2em;
-  margin: 0 auto;
-
-
-  .section-archive ul {
-    margin: 0 auto;
-    li {
-      margin: 1rem;
-    }
+  li {
+    min-width: 360px;
+    min-height: 280px;
+    margin-bottom: 1rem;
   }
-
   main {
     display: -webkit-box;
     display: -webkit-flex;
@@ -23,14 +17,11 @@
     display: flex;
     -webkit-box-pack: center;
     -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   h1 {
     margin: 0;
@@ -44,111 +35,97 @@
     }
   }
 
-@include desktop {
-
-  .tag-archives .section-archive li {
-    -webkit-flex-basis: 50%;
-        -ms-flex-preferred-size: 50%;
-            flex-basis: 50%;
-    margin: 0 auto;
-    min-width: 400px;
-    min-height: 275px;
-    font-size: 3rem;
-
-  }
-
-  h2 {
-    font-family: 'open_sans', bold;
-    font-size: 4rem;
-    color: $light-blue;
-    font-weight: 900;
-    span {
-      color: $dark-blue;
+  @include desktop {
+    .tag-archives .section-archive li {
+      margin: 0 auto;
+      width: 360px;
+      height: 280px;
+      font-size: 3rem;
+    }
+    h2 {
+      font-family: 'open_sans', bold;
+      font-size: 4rem;
+      color: $light-blue;
+      font-weight: 900;
+      margin-top: 0.2rem;
+      span {
+        color: $dark-blue;
+      }
     }
   }
-}
-
-@include threecol {
-  .section-archive ul {
-    margin: 0 auto;
-  }
-}
-
-// everything for both media views needs to be outside the desktop.
-
-  header {
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
-  }
+  //
+  // @include threecol {
+  //   .section-archive ul {
+  //
+  //   }
+  // }
   .section-archive {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-basis: 100%;
-        -ms-flex-preferred-size: 100%;
-            flex-basis: 100%;
     -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     padding-bottom: 4em;
-    margin: 0px 1.5em;
+    margin: 1.5rem 1.5em 0 1.5rem;
     box-sizing: border-box;
     padding: none;
-      li {
-        background-position: center center !important;
-        background-size: cover !important;
-        min-width: 325px;
-        min-height: 250px;
-        @include desktop {
-          -webkit-flex-basis: 33%;
-              -ms-flex-preferred-size: 33%;
-                  flex-basis: 33%;
-          margin: 0 auto;
-          min-width: 425px;
-          min-height: 350px;
-        }
+    width: 90vw;
+    li {
+      background-position: center center !important;
+      background-size: cover !important;
+      width: 360px;
+      height: 280px;
+      @include desktop {
+        margin: 0 auto;
+        width: 360px;
+        height: 280px;
       }
-      a:hover {
-        -webkit-filter: brightness();
-                filter: brightness();
-      }
+    }
+    a:hover {
+      -webkit-filter: brightness();
+      filter:brightness();
+    }
   }
 }
-
 .tag-archives {
   background-color: $medium-blue;
   padding-top: 2em;
   padding-bottom: 4em;
-
   li {
     -webkit-flex-basis: 33%;
-        -ms-flex-preferred-size: 33%;
-            flex-basis: 33%;
+    -ms-flex-preferred-size: 33%;
+    flex-basis: 33%;
     width: 300px;
     height: 250px;
   }
 }
-
 .archive-header {
   background-color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
-  margin: 1em 2em 3em;
-  max-width: 80%;
+
   font-size: 1.5rem;
+  width: 90vw;
+  padding: 0 .5em;
+  height: 2.5rem;
+@include desktop {
+  height: 6.5rem;
+margin-bottom: 1.5rem;
+  }
 }
-
-.tag-url{
-    text-decoration: none;
-    color: black;
+.tag-url {
+  text-decoration: none;
+  color: black;
 }
-
-a, a:visited, a:hover, a:active {
+a,
+a:visited,
+a:hover,
+a:active {
   color: inherit;
 }

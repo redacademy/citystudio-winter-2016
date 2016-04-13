@@ -15,7 +15,7 @@
       ?>
     </header><!-- .page-header -->
 
-      <div class="section-archive content-wrapper">
+      <div class="section-archive">
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>
