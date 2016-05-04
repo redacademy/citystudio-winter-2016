@@ -118,9 +118,9 @@ jQuery(document).ready(function($) {
 
             console.log(response);
             // get the length of response and run this IF it is less than 10
-            if ( response.length < 8 ) {
+            if ( response.length < 12 ) {
               // this object holds the remaining slots left to fill
-              var objectPlaceholder = (8 - response.length);
+              var objectPlaceholder = (12 - response.length);
 
               // loop over the response.length to find empty slots to fill
               for (var i = 0; i < objectPlaceholder; i++ ) {

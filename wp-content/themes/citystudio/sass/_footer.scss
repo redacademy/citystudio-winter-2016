@@ -15,10 +15,14 @@
 background-color: $dark-blue;
 display: flex;
 position: relative;
-  ul {
+
+  ul{
     list-style: none;
     display: flex;
     margin: 0 auto;
+    a{
+     border: none;
+    }
   }
   @include desktop {
     position: relative;

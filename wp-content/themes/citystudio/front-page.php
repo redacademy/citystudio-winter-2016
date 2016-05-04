@@ -39,7 +39,7 @@ get_header(); ?>
 </div>
 
 <div class="container">
-    <ul class="home-slider">
+    <ul class="grid">
         <?php
              $args = array( 'post_type' => 'project', 'numberposts' => 10 );
              $latest_posts = get_posts( $args ); // returns an array of posts
@@ -52,10 +52,10 @@ get_header(); ?>
                   <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
                     <div class="subtitle"><?php echo CFS()->get( 'subtitle' ); ?></div>
                     <br />
-                    <span class="home-description"><?php echo CFS()->get( 'excerpt' ); ?></span>
+                    <!-- <span class="home-description"><?php echo CFS()->get( 'excerpt' ); ?></span> -->
                   </div>
               </li>
-            </a>
+          </a>
             <?php endforeach; wp_reset_postdata(); ?>
     </ul>
 </div>
