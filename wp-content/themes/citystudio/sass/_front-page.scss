@@ -1,27 +1,25 @@
 //-----------------------------------------
 // LANDING PAGE STYLES  -----------------------
 .container {
-    display: block;
-
-      .bx-viewport {
-        margin-top: 0;
-        margin-bottom: 5px;
-      }
+  display: block;
+  .bx-viewport {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
 }
 .landing-gallery {
   display: none;
-
-    @include desktop {
-      display: block;
-      height: 50px;
-      width: 50px;
-      margin-bottom: 0.3rem;
-      -webkit-align-self: flex-end;
-          -ms-flex-item-align: end;
-              align-self: flex-end;
-      padding: 3rem;
-      float: right;
-    }
+  @include desktop {
+    display: block;
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0.3rem;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    padding: 3rem;
+    float: right;
+  }
 }
 .hero {
   width: 100vw;
@@ -45,51 +43,47 @@
   background-size: 80vw;
   height: 15vh;
   margin: 4rem 2rem 1rem;
-
-    @include desktop {
-      background-size: 60vw;
-      height: 30vh;
-      margin: 0 2rem 1rem;
-    }
+  @include desktop {
+    background-size: 60vw;
+    height: 30vh;
+    margin: 0 2rem 1rem;
+  }
 }
-.homepage-partners{
+.homepage-partners {
   width: 100vw;
   height: 50vh;
   /*display: flex;*/
-  .partners-title{
+  .partners-title {
     text-align: center;
     text-transform: uppercase;
     padding: 3%;
   }
-  .partner-buttons{
+  .partner-buttons {
     text-align: center;
   }
-  button{
+  button {
     background-color: rgba(1,152,213,.8);
     color: white;
-    padding: .5% 2%;
+    padding: 0.5% 2%;
   }
 }
 .site-description {
   margin: 0 auto 1rem;
   width: 80vw;
-
+  @include desktop {
+    margin: 0 auto;
+    width: 48vw;
+  }
+  p {
+    font-size: 1.1rem;
+    text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
+    color: white;
+    text-align: center;
+    font-family: $fontfamily;
     @include desktop {
-      margin: 0 auto;
-      width: 48vw;
+      font-size: 1.7rem;
     }
-
-    p {
-      font-size: 1.1rem;
-      text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
-      color: white;
-      text-align: center;
-      font-family: $fontfamily;
-
-        @include desktop {
-          font-size: 1.7rem;
-        }
-    }
+  }
 }
 .toggle-class {
   background: url("../../assets/noun.png") no-repeat;
@@ -100,13 +94,12 @@
   outline: 0;
   height: 30px;
   width: 20px;
-
-    @include desktop {
-      background-size: 75px;
-      padding: 4% 4% 4% 0.2rem;
-      height: 50px;
-      width: 45px;
-    }
+  @include desktop {
+    background-size: 75px;
+    padding: 4% 4% 4% 0.2rem;
+    height: 50px;
+    width: 45px;
+  }
 }
 .loader {
   opacity: 0.1;
@@ -114,117 +107,4 @@
   float: center;
   margin-left: 900px;
   padding: 2rem;
-}
-
-//-----------------------------------------
-// SLIDER STYLES------------------------
-
-a.gallery-anchor  {
-  text-decoration: none;
-}
-
-.home-slider .flickity-viewport {
-  height: 400px !important;
-}
-.home-slider .flickity-page-dots {
-  display: none;
-}
-.flickity-slider a li {
-  height: 398px;
-  z-index: 1;
-  left: 0;
-  top: 0;
-}
-button.flickity-prev-next-button {
-  display: none;
-
-    @include desktop {
-      display: block;
-    }
-}
-.description {
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  // left: 0;
-  // top: 0;
-  color: white;
-  font-family: sans-serif;
-  // overflow: hidden;
-  font-family: $fontfamily;
-
-    &:hover {
-      opacity: 1;
-      background-color: transparentize($dark-blue, .1);
-      border: 10px double white;
-      padding: 1.5rem;
-    }
-}
-.description-title {
-  text-transform: uppercase;
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
-  font-family: $fontfamily;
-  color: #fff;
-  text-decoration: none;
-}
-.subtitle {
-  font-weight: bold;
-}
-.home-description {
-  text-overflow: ellipsis;
-  font-family: $fontfamily;
-  margin: 0 .25rem;
-}
-
-.featured-rectangle {
-	background-size: cover !important;
-  background-position: center center !important;
-	height: 400px;
-	width: 800px !important;
-	overflow-y: hidden;
-	-webkit-box-ordinal-group: 5;
-	-webkit-order: 4;
-	-ms-flex-order: 4;
-  order: 4;
-
-    .description:hover {
-      background-color: transparentize($medium-blue, .1);
-      height: 100%;
-      width: 100%;
-      padding: 2em;
-      box-sizing: border-box;
-    }
-}
-.featured-square {
-	background-size: cover !important;
-  background-position: center center !important;
-	height: 400px;
-	width: 600px !important;
-	overflow-y: hidden;
-	-webkit-box-ordinal-group: 3;
-	-webkit-order: 2;
-	-ms-flex-order: 2;
-	order: 2;
-
-    .description:hover {
-			background-color: transparentize($dark-blue, .1);
-      height: 100%;
-      width: 100%;
-      padding: 2em;
-      box-sizing: border-box;
- 		}
-}
-li.blue-placeholder {
-	height: 400px;
-	width: 400px;
-	background: -webkit-linear-gradient(left, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
-							url('../../images/placeholder-blue.jpg')
-							top center
-							no-repeat ;
-	background: linear-gradient(to right, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 0%, rgba(0, 100, 150,0.80) 99%, rgba(0, 100, 150,0.80) 100%),
-							url('../../images/placeholder-blue.jpg')
-							top center
-							no-repeat ;
 }
