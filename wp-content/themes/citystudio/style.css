@@ -1503,7 +1503,7 @@ a:active {
   .homepage-partners button {
     background-color: rgba(1, 152, 213, 0.8);
     color: white;
-    padding: .5% 2%; }
+    padding: 0.5% 2%; }
 
 .site-description {
   margin: 0 auto 1rem;
@@ -1545,43 +1545,82 @@ a:active {
   margin-left: 900px;
   padding: 2rem; }
 
-a.gallery-anchor {
-  text-decoration: none; }
+a {
+  text-decoration: none;
+  border: .15rem solid white; }
 
-.home-slider .flickity-viewport {
-  height: 400px !important; }
+.grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  width: 100vw; }
 
-.home-slider .flickity-page-dots {
-  display: none; }
+li {
+  list-style-type: none;
+  height: 100%; }
 
-.flickity-slider a li {
-  height: 398px;
-  z-index: 1;
-  left: 0;
-  top: 0; }
-
-button.flickity-prev-next-button {
-  display: none; }
+.featured-rectangle {
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  min-width: 250px;
+  -webkit-flex: 0 1 99%;
+      -ms-flex: 0 1 99%;
+          flex: 0 1 99%; }
   @media screen and (min-width: 480px) {
-    button.flickity-prev-next-button {
-      display: block; } }
+    .featured-rectangle {
+      -webkit-flex: 0 1 24.555%;
+          -ms-flex: 0 1 24.555%;
+              flex: 0 1 24.555%; } }
+  .featured-rectangle .description:hover {
+    background-color: rgba(0, 130, 185, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; }
+
+.featured-square {
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  min-width: 250px;
+  -webkit-flex: 0 1 99%;
+      -ms-flex: 0 1 99%;
+          flex: 0 1 99%; }
+  @media screen and (min-width: 480px) {
+    .featured-square {
+      -webkit-flex: 0 1 49.555%;
+          -ms-flex: 0 1 49.555%;
+              flex: 0 1 49.555%; } }
+  .featured-square .description:hover {
+    background-color: rgba(0, 100, 150, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; }
 
 .description {
   width: 100%;
   height: 100%;
   opacity: 0;
   color: white;
-  font-family: sans-serif;
   font-family: "open_sans"; }
   .description:hover {
     opacity: 1;
     background-color: rgba(0, 100, 150, 0.9);
     border: 10px double white;
-    padding: 1.5rem; }
+    padding: 1rem; }
 
 .description-title {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: "open_sans";
@@ -1589,49 +1628,13 @@ button.flickity-prev-next-button {
   text-decoration: none; }
 
 .subtitle {
-  font-weight: bold; }
-
-.home-description {
+  font-size: 1rem;
   text-overflow: ellipsis;
-  font-family: "open_sans";
-  margin: 0 .25rem; }
-
-.featured-rectangle {
-  background-size: cover !important;
-  background-position: center center !important;
-  height: 400px;
-  width: 800px !important;
-  overflow-y: hidden;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4; }
-  .featured-rectangle .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box; }
-
-.featured-square {
-  background-size: cover !important;
-  background-position: center center !important;
-  height: 400px;
-  width: 600px !important;
-  overflow-y: hidden;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2; }
-  .featured-square .description:hover {
-    background-color: rgba(0, 100, 150, 0.9);
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box; }
-
-li.blue-placeholder {
-  height: 400px;
-  width: 400px;
-  background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 100px; }
 
 /*--------------------------------------------------------------
 # Project Page Slider Styles
