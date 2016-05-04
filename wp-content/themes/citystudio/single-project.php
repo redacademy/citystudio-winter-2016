@@ -12,18 +12,29 @@ get_header();
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
-
     <div class="main-carousel">
 
-      <div class="carousel-cell">
-        <header class="entry-header" style="background: url('<?php echo $background; ?>') no-repeat; "></header>
-      </div>
-      <div class="carousel-cell">
+        <?php
+        	$upload_path = content_url() . '/uploads/';
 
-      </div>
-      <div class="carousel-cell">
+        	$fields = CFS()->get('gallery_images');
+        	foreach ($fields as $field) {
 
+        		$logo_image_ID = $field['image'];
+        		$logo_image_ALT = get_post_meta($logo_image_ID, '_wp_attachment_image_alt', true);
+        		$logo_image_TITLE = get_the_title($logo_image_ID);
+        		$logo_image_URL_data = wp_get_attachment_metadata($logo_image_ID, true);
+        		$logo_image_URL = $logo_image_URL_data["file"];
+
+              echo '<div class="carousel-cell">';
+        			   echo '<img src="';
+        			    echo $upload_path . $logo_image_URL;
+        			    echo '" title="'.$logo_image_TITLE.'" alt="';
+        			    echo $logo_image_ALT;
+        			    echo '">';
+              echo '</div>';
+        	}
+        ?>
       </div>
 
     </div><!-- end main-carousel -->
