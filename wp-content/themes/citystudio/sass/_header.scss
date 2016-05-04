@@ -56,8 +56,8 @@
   font-size: 2.3rem;
   margin: auto 0;
   .fa {
-    color: #03648c;
-    margin-top: 1rem;
+    color: $medium-blue;
+    margin-top: 1.6rem;
   }
   a {
     color: #03648c;
@@ -66,22 +66,16 @@
 .icon-menu {
   height: 2rem;
   width: 2rem;
-  background: url('../../images/hamburger-menu.png') center no-repeat;
-  background-size: 2.5rem 2.5rem;
-  margin-top: 0.5rem;
+  font-size: 2.3rem;
+  margin-top: 1.6rem;
   margin-left: 2rem;
-  color: #76d6ff;
+  .fa{
+    color: $medium-blue;
+   } 
   @include desktop {
-    color: #76d6ff;
     height: 4rem;
     width: 4rem;
     background-size: 3rem 3rem;
     margin-right: -10rem;
-  }
-}
-.hide-search {
-  display: none;
-  @include desktop {
-    display: inline;
   }
 }

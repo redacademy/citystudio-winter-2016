@@ -9,11 +9,9 @@ get_header(); ?>
 <div class="front-page-main">
 
     <div class="hero">
-        <div class="landing-gallery">
-        </div>
         <div class="site-description">
             <p>
-                CitySudio is an innovation and leadership hub inside City Hall where staff, citizens and students from 6 universities and colleges co-create experiments and solutions for the City.
+            <b>CitySudio</b> is an experimentation and innovation hub for the <b>City of Vancouver</b> where staff, students and community members design and launch <b>projects</b> and solutions for the City.
             </p>
         </div>
     </div>
@@ -29,6 +27,14 @@ get_header(); ?>
     <button>VCC</button>
     <button>LANGARA</button>
     <button>EMILY CARR</button>
+  </div>
+   <div class="partners-title">
+    <h1>explore city studio projects</h1>
+  </div>
+  <div class="homepage-description">
+    <h3> 
+      This is an <b>interactive gallery!</b> use the SORT to filter through the gallery.
+    </h3>
   </div>
 </div>
 

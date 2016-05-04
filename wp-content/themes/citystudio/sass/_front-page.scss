@@ -23,7 +23,7 @@
 }
 .hero {
   width: 100vw;
-  height: 60vh;
+  height: 65vh;
   background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background: -o-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
@@ -51,12 +51,12 @@
 }
 .homepage-partners {
   width: 100vw;
-  height: 50vh;
-  /*display: flex;*/
-  .partners-title {
+  height: 45vh;
+  .partners-title{
     text-align: center;
+    margin-top: 2.5rem;
+    margin-bottom: -1.6rem;
     text-transform: uppercase;
-    padding: 3%;
   }
   .partner-buttons {
     text-align: center;
@@ -64,11 +64,38 @@
   button {
     background-color: rgba(1,152,213,.8);
     color: white;
+    padding: .5% 2%;
+    margin: .3rem;
+  }
+  .homepage-description{
+    text-align: center;
+    h3{
+      font-size: 1.7rem;
+      font-weight:100;
+    }
+
     padding: 0.5% 2%;
   }
 }
 .site-description {
   margin: 0 auto 1rem;
+  width: 70vw;
+    @include desktop {
+      margin: 0 auto;
+      width: 48vw;
+    }
+    p {
+      @include desktop {
+      margin: 0 auto;
+      padding-top: 13rem;
+      font-size: 2rem;
+      color: white;
+      opacity: .8;
+      text-align: center;
+      font-family: $fontfamily;
+        font-size: 2.1rem;
+      }
+    }
   width: 80vw;
   @include desktop {
     margin: 0 auto;
@@ -76,29 +103,12 @@
   }
   p {
     font-size: 1.1rem;
-    text-shadow: 1px 3px 5px rgba(0, 0, 0, 1);
     color: white;
     text-align: center;
     font-family: $fontfamily;
     @include desktop {
       font-size: 1.7rem;
     }
-  }
-}
-.toggle-class {
-  background: url("../../assets/noun.png") no-repeat;
-  background-size: contain;
-  border: 0;
-  margin: 0 auto;
-  padding: 7%;
-  outline: 0;
-  height: 30px;
-  width: 20px;
-  @include desktop {
-    background-size: 75px;
-    padding: 4% 4% 4% 0.2rem;
-    height: 50px;
-    width: 45px;
   }
 }
 .loader {
