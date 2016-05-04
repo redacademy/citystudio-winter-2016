@@ -44,7 +44,7 @@
 								</span>
 							</div>
 							<a href="<?php echo esc_url(home_url([1]));?>">
-								<div class="icon-gallery"></div>
+								<div class="icon-menu"></div>
 							</a>
 						</div>
 					</div>

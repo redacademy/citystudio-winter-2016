@@ -15,8 +15,6 @@
       display: block;
       height: 50px;
       width: 50px;
-      background: url('../../images/gallery-white.png') no-repeat center;
-      background-size: 50px 50px;
       margin-bottom: 0.3rem;
       -webkit-align-self: flex-end;
           -ms-flex-item-align: end;
@@ -27,10 +25,10 @@
 }
 .hero {
   width: 100vw;
-  min-height: 100vh;
-  background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
-  background: -o-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
-  background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  height: 60vh;
+  background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
+  background: -o-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
+  background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
@@ -54,7 +52,24 @@
       margin: 0 2rem 1rem;
     }
 }
-
+.homepage-partners{
+  width: 100vw;
+  height: 50vh;
+  /*display: flex;*/
+  .partners-title{
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3%;
+  }
+  .partner-buttons{
+    text-align: center;
+  }
+  button{
+    background-color: rgba(1,152,213,.8);
+    color: white;
+    padding: .5% 2%;
+  }
+}
 .site-description {
   margin: 0 auto 1rem;
   width: 80vw;

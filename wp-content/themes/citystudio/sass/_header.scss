@@ -63,14 +63,16 @@
     color: #03648c;
   }
 }
-.icon-gallery {
+.icon-menu {
   height: 2rem;
   width: 2rem;
-  background: url('../../images/gallery-blue.png') center no-repeat;
+  background: url('../../images/hamburger-menu.png') center no-repeat;
   background-size: 2.5rem 2.5rem;
   margin-top: 0.5rem;
   margin-left: 2rem;
+  color: #76d6ff;
   @include desktop {
+    color: #76d6ff;
     height: 4rem;
     width: 4rem;
     background-size: 3rem 3rem;
