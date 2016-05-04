@@ -4,7 +4,9 @@
 .single-projects {
   border-top: 1px solid $light-blue;
   .carousel-cell {
-    width: 100vw;
+    width: 50%; /* half-width */
+    height: 350px;
+    margin-right: 5px;
   }
 }
 .project .bx-wrapper .bx-viewport {
@@ -71,8 +73,8 @@ span.excerpt {
     }
   }
 }
-.section-credits.content-wrapper {
-  width: 100vw;
+.content-wrapper {
+  width: 80vw;
 }
 @include desktop {
   .section-credits.content-wrapper {

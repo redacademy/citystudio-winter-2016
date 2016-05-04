@@ -1639,7 +1639,10 @@ li.blue-placeholder {
 .single-projects {
   border-top: 1px solid #00A0DC; }
   .single-projects .carousel-cell {
-    width: 100vw; }
+    width: 50%;
+    /* half-width */
+    height: 350px;
+    margin-right: 5px; }
 
 .project .bx-wrapper .bx-viewport {
   box-shadow: none !important; }
@@ -1699,8 +1702,8 @@ span.excerpt {
       font-family: "open_sans";
       max-width: 99%; }
 
-.section-credits.content-wrapper {
-  width: 100vw; }
+.content-wrapper {
+  width: 80vw; }
 
 @media screen and (min-width: 480px) {
   .section-credits.content-wrapper {
