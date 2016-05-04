@@ -38,14 +38,12 @@
 						</div><!-- .site-branding -->
 
 						<div class="search-gallery">
-							<div class="hide-search">
-								<span class="icon-search" aria-hidden="true">
-									<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
-								</span>
-							</div>
-							<a href="<?php echo esc_url(home_url([1]));?>">
-								<div class="icon-menu"></div>
-							</a>
+							<span class="icon-search" aria-hidden="true">
+								<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
+							</span>
+						<div class="icon-menu" style="color: #76d6ff;">
+							<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
+						</div>
 						</div>
 					</div>
 				</header><!-- #masthead -->
