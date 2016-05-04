@@ -35,11 +35,7 @@
     }
   }
   @include desktop {
-    .tag-archives .section-archive li {
-      margin: 0 auto;
-      width: 360px;
-      height: 280px;
-      font-size: 3rem;
+    .tag-archives {
     }
     h2 {
       font-family: 'open_sans', bold;
@@ -75,9 +71,10 @@
       width: 360px;
       height: 280px;
       @include desktop {
-        margin: 0 auto;
+        margin: 0 auto 2rem;
         width: 360px;
         height: 280px;
+        font-size: 3rem;
       }
     }
     a:hover {
@@ -108,7 +105,7 @@
   height: 2.5rem;
 @include desktop {
   height: 6.5rem;
-margin-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
   }
 }
 .tag-url {
