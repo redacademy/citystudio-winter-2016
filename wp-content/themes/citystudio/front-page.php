@@ -5,20 +5,31 @@
  * Template Name: Front-page
  */
 get_header(); ?>
+
 <div class="front-page-main">
 
     <div class="hero">
         <div class="landing-gallery">
-        </div>
-        <div class="hero-logo">
         </div>
         <div class="site-description">
             <p>
                 CitySudio is an innovation and leadership hub inside City Hall where staff, citizens and students from 6 universities and colleges co-create experiments and solutions for the City.
             </p>
         </div>
-        <button id="button" class="toggle-class"></button>
     </div>
+</div>
+
+<div class="homepage-partners">
+  <div class="partners-title">
+    <h1>city studio partners</h1>
+  </div>
+  <div class="partner-buttons">
+    <button>UBC</button>
+    <button>SFU</button>
+    <button>VCC</button>
+    <button>LANGARA</button>
+    <button>EMILY CARR</button>
+  </div>
 </div>
 
 <div class="container">

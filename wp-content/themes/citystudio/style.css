@@ -696,15 +696,17 @@ a {
   .icon-search a {
     color: #03648c; }
 
-.icon-gallery {
+.icon-menu {
   height: 2rem;
   width: 2rem;
-  background: url("../../images/gallery-blue.png") center no-repeat;
+  background: url("../../images/hamburger-menu.png") center no-repeat;
   background-size: 2.5rem 2.5rem;
   margin-top: 0.5rem;
-  margin-left: 2rem; }
+  margin-left: 2rem;
+  color: #76d6ff; }
   @media screen and (min-width: 480px) {
-    .icon-gallery {
+    .icon-menu {
+      color: #76d6ff;
       height: 4rem;
       width: 4rem;
       background-size: 3rem 3rem;
@@ -1456,8 +1458,6 @@ a:active {
       display: block;
       height: 50px;
       width: 50px;
-      background: url("../../images/gallery-white.png") no-repeat center;
-      background-size: 50px 50px;
       margin-bottom: 0.3rem;
       -ms-flex-item-align: end;
       -webkit-align-self: flex-end;
@@ -1467,8 +1467,8 @@ a:active {
 
 .hero {
   width: 100vw;
-  min-height: 100vh;
-  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/Front-page-background-image.png") no-repeat center;
+  height: 60vh;
+  background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1487,6 +1487,21 @@ a:active {
       background-size: 60vw;
       height: 30vh;
       margin: 0 2rem 1rem; } }
+
+.homepage-partners {
+  width: 100vw;
+  height: 50vh;
+  /*display: flex;*/ }
+  .homepage-partners .partners-title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 3%; }
+  .homepage-partners .partner-buttons {
+    text-align: center; }
+  .homepage-partners button {
+    background-color: rgba(1, 152, 213, 0.8);
+    color: white;
+    padding: .5% 2%; }
 
 .site-description {
   margin: 0 auto 1rem;
@@ -1606,14 +1621,6 @@ button.flickity-prev-next-button {
   order: 2; }
   .featured-square .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
-<<<<<<< HEAD
-    height: 83.5%;
-    width: 82.25%;
-    margin: 0 0.20rem; }
-
-li.blue-placeholder {
-  height: 60vh;
-=======
     height: 100%;
     width: 100%;
     padding: 2em;
@@ -1621,7 +1628,6 @@ li.blue-placeholder {
 
 li.blue-placeholder {
   height: 400px;
->>>>>>> dd912705458b24edcc9bdf1b94e04509e0140e39
   width: 400px;
   background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
 
