@@ -781,15 +781,22 @@ a {
 .social-icons ul {
   list-style: none; }
 
+#colophon {
+  position: fixed;
+  bottom: 0;
+  height: 16%; }
+
 .site-footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  position: absolute; }
   @media screen and (min-width: 480px) {
     .site-footer {
+      position: fixed;
       width: 100vw;
       background-color: #006496;
       display: -webkit-flex;
@@ -804,20 +811,30 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      position: absolute; } }
+      width: 100%;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+46 */
+      /* FF3.6-15 */
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 15%, rgba(0, 100, 150, 0.7) 50%, rgba(0, 100, 150, 0.8) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
+      /* IE6-9 */ } }
 
 .social-icons-div {
   background-color: #006496;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  bottom: 0; }
   .social-icons-div ul {
     list-style: none;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
     margin: 0 auto; }
+    .social-icons-div ul a {
+      border: none; }
   @media screen and (min-width: 480px) {
     .social-icons-div {
       position: relative;
@@ -848,6 +865,7 @@ a {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
     .social-icons {
+      position: fixed;
       z-index: 1;
       height: 2rem;
       width: 2rem;
@@ -873,10 +891,11 @@ a {
       margin: 0; } }
 
 .nav-div {
-  background-color: #76d6ff;
-  max-height: 85px;
-  width: 71px;
-  margin: 2rem 2rem;
+  /*background-color: #76d6ff;*/
+  max-height: 100%;
+  width: 50px;
+  margin-left: 6%;
+  margin-top: 4%;
   border-radius: 70px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -890,12 +909,13 @@ a {
   transition: width 0.5s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      background-color: #76d6ff;
-      max-height: 85px;
+      height: 100%;
+      /*background-color: #76d6ff;*/
+      max-height: 70px;
       z-index: 5 !important;
       position: relative !important;
-      width: 80px;
-      margin: 3rem 3rem;
+      width: 74px;
+      margin: 2%;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -913,19 +933,21 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 1.7rem;
-  max-height: 3rem;
-  padding: 1.2rem 1.8rem 0 .7rem;
-  border-radius: 70px;
-  background-color: #0082b9; }
+  padding: 0.8rem;
+  border-radius: 45px;
+  background-color: #0082b9;
+  padding-top: 1.4em;
+  padding-bottom: 0.3em; }
+  .sort span {
+    padding: 4%; }
   .sort:hover {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
     .sort {
       width: 100vw;
+      margin: 0;
       max-width: 2.8rem;
-      height: 1.4rem;
-      padding: 1.9rem 1.2rem; } }
+      height: 2.5rem; } }
 
 .open {
   min-width: 95vw;
@@ -942,7 +964,7 @@ a {
               order: 1;
       width: 40vw;
       min-width: 450px;
-      margin: 3rem; } }
+      margin: 2%; } }
 
 .close {
   min-width: 20px; }
@@ -964,14 +986,14 @@ a {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
   width: 4.3rem;
-  height: 4rem;
+  height: 2rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 35px 45px; } }
 
 .partners {
@@ -984,8 +1006,8 @@ a {
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 45px 60px; } }
 
 .years {
@@ -998,8 +1020,8 @@ a {
   transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 45px 45px; } }
 
 .refresh {
@@ -1013,8 +1035,8 @@ a {
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 5.2rem;
-      height: 5.1rem;
+      width: 4.35rem;
+      height: 4.2rem;
       background-size: 45px 45px; } }
 
 /* Footer Navigation Menu */
@@ -1026,8 +1048,14 @@ a {
 
 .foot-sub-menu {
   display: none;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fff;
-  padding: 0.8em;
+  margin-left: 1.2em;
+  margin-top: 2em;
+  margin-bottom: -0.4em;
+  padding: 0.5em;
   border-radius: 8px;
   border: 0.5px solid #006496; }
   .foot-sub-menu:hover {
@@ -1048,8 +1076,8 @@ a {
 
 .neigh {
   position: absolute;
-  bottom: 100px;
-  left: -35px; }
+  bottom: 89px;
+  left: -59px; }
   .neigh::after {
     content: '';
     width: 0;
@@ -1063,8 +1091,8 @@ a {
 
 .part {
   position: absolute;
-  bottom: 100px;
-  left: -4px; }
+  bottom: 89px;
+  left: -29px; }
   .part::after {
     content: '';
     width: 0;
@@ -1079,8 +1107,9 @@ a {
 
 .year {
   position: absolute;
-  bottom: 100px;
-  left: 10px; }
+  bottom: 89px;
+  left: -15px;
+  padding-right: 1.1em; }
   .year::after {
     content: '';
     width: 0;
@@ -1110,19 +1139,19 @@ a {
 
 .neigh-labels {
   min-width: 120px;
-  right: 30px; }
+  right: 55%; }
   .neigh-labels label::after {
     left: 36%; }
 
 .part-labels {
   min-width: 80px;
-  right: 11px; }
+  right: 27%; }
   .part-labels label::after {
     left: 31%; }
 
 .year-labels {
   min-width: 80px;
-  right: 12px; }
+  right: 27%; }
   .year-labels label::after {
     left: 32%; }
 
@@ -1495,28 +1524,53 @@ a:active {
     padding: .5% 2%;
     margin: .3rem; }
   .homepage-partners .homepage-description {
-    text-align: center; }
+    text-align: center;
+    padding: 0.5% 2%; }
     .homepage-partners .homepage-description h3 {
       font-size: 1.7rem;
       font-weight: 100; }
 
 .site-description {
   margin: 0 auto 1rem;
-  width: 70vw; }
+  width: 70vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80vw; }
   @media screen and (min-width: 480px) {
     .site-description {
       margin: 0 auto;
       width: 48vw; } }
   @media screen and (min-width: 480px) {
     .site-description p {
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
       margin: 0 auto;
-      padding-top: 13rem;
+      padding-top: 7rem;
+      max-width: 80%;
       font-size: 2rem;
       color: white;
       opacity: .8;
       text-align: center;
       font-family: "open_sans";
       font-size: 2.1rem; } }
+  @media screen and (min-width: 480px) {
+    .site-description {
+      margin: 0 auto;
+      width: 48vw; } }
+  .site-description p {
+    font-size: 1.1rem;
+    color: white;
+    text-align: center;
+    font-family: "open_sans"; }
+    @media screen and (min-width: 480px) {
+      .site-description p {
+        font-size: 1.7rem; } }
 
 .loader {
   opacity: 0.1;
@@ -1525,43 +1579,82 @@ a:active {
   margin-left: 900px;
   padding: 2rem; }
 
-a.gallery-anchor {
-  text-decoration: none; }
+a {
+  text-decoration: none;
+  border: .15rem solid white; }
 
-.home-slider .flickity-viewport {
-  height: 400px !important; }
+.grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style-type: none;
+  width: 100vw; }
 
-.home-slider .flickity-page-dots {
-  display: none; }
+li {
+  list-style-type: none;
+  height: 100%; }
 
-.flickity-slider a li {
-  height: 398px;
-  z-index: 1;
-  left: 0;
-  top: 0; }
-
-button.flickity-prev-next-button {
-  display: none; }
+.featured-rectangle {
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  min-width: 250px;
+  -webkit-flex: 0 1 99%;
+      -ms-flex: 0 1 99%;
+          flex: 0 1 99%; }
   @media screen and (min-width: 480px) {
-    button.flickity-prev-next-button {
-      display: block; } }
+    .featured-rectangle {
+      -webkit-flex: 0 1 24.555%;
+          -ms-flex: 0 1 24.555%;
+              flex: 0 1 24.555%; } }
+  .featured-rectangle .description:hover {
+    background-color: rgba(0, 130, 185, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; }
+
+.featured-square {
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  min-width: 250px;
+  -webkit-flex: 0 1 99%;
+      -ms-flex: 0 1 99%;
+          flex: 0 1 99%; }
+  @media screen and (min-width: 480px) {
+    .featured-square {
+      -webkit-flex: 0 1 49.555%;
+          -ms-flex: 0 1 49.555%;
+              flex: 0 1 49.555%; } }
+  .featured-square .description:hover {
+    background-color: rgba(0, 100, 150, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; }
 
 .description {
   width: 100%;
   height: 100%;
   opacity: 0;
   color: white;
-  font-family: sans-serif;
   font-family: "open_sans"; }
   .description:hover {
     opacity: 1;
     background-color: rgba(0, 100, 150, 0.9);
     border: 10px double white;
-    padding: 1.5rem; }
+    padding: 1rem; }
 
 .description-title {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.25rem;
   font-weight: bold;
   margin-bottom: 2rem;
   font-family: "open_sans";
@@ -1569,49 +1662,13 @@ button.flickity-prev-next-button {
   text-decoration: none; }
 
 .subtitle {
-  font-weight: bold; }
-
-.home-description {
+  font-size: 1rem;
   text-overflow: ellipsis;
-  font-family: "open_sans";
-  margin: 0 .25rem; }
-
-.featured-rectangle {
-  background-size: cover !important;
-  background-position: center center !important;
-  height: 400px;
-  width: 800px !important;
-  overflow-y: hidden;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
-  order: 4; }
-  .featured-rectangle .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box; }
-
-.featured-square {
-  background-size: cover !important;
-  background-position: center center !important;
-  height: 400px;
-  width: 600px !important;
-  overflow-y: hidden;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
-  order: 2; }
-  .featured-square .description:hover {
-    background-color: rgba(0, 100, 150, 0.9);
-    height: 100%;
-    width: 100%;
-    padding: 2em;
-    box-sizing: border-box; }
-
-li.blue-placeholder {
-  height: 400px;
-  width: 400px;
-  background: linear-gradient(to right, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 0%, rgba(0, 100, 150, 0.8) 99%, rgba(0, 100, 150, 0.8) 100%), url("../../images/placeholder-blue.jpg") top center no-repeat; }
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  height: 100px; }
 
 /*--------------------------------------------------------------
 # Project Page Slider Styles
