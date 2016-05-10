@@ -1,24 +1,38 @@
+#colophon {
+position: fixed;
+bottom: 0;
+height: 16%;
+}
+
 .site-footer{
   display: flex;
   flex-direction: column;
+   position: absolute;
   @include desktop {
+    position: fixed;
     width: 100vw;
     background-color: $dark-blue;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-between;
-    position: absolute;
+
+    width: 100%;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+46 */
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0) 15%, rgba(0, 100, 150, 1) 50%, rgba(0, 100, 150, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 15%,rgba(0, 100, 150, 1) 50%,rgba(0, 100, 150, 1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 15%,rgba(0, 100, 150, .7) 50%,rgba(0, 100, 150, .8 ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 ); /* IE6-9 */
   }
 }
 .social-icons-div {
-background-color: $dark-blue;
-display: flex;
-position: relative;
-
+  background-color: $dark-blue;
+  display: flex;
+  bottom: 0;
   ul{
     list-style: none;
     display: flex;
+    position: fixed;
     margin: 0 auto;
     a{
      border: none;
@@ -47,6 +61,7 @@ position: relative;
     cursor: pointer;
   }
   @include desktop {
+    position: fixed;
     z-index: 1;
     height: 2rem;
     width: 2rem;
@@ -73,22 +88,25 @@ position: relative;
   }
 }
 .nav-div {
-  background-color: #76d6ff;
-  max-height: 85px;
-  width: 71px;
-  margin: 2rem 2rem;
+  /*background-color: #76d6ff;*/
+  max-height: 100%;
+  width: 50px;
+  margin-left: 6%;
+  margin-top: 4%;
   border-radius: 70px;
   display: flex;
   flex-direction: row;
+
   justify-content: space-between;
   transition: width 0.5s ease-in;
     @include desktop {
-      background-color: #76d6ff;
-      max-height: 85px;
+      height: 100%;
+      /*background-color: #76d6ff;*/
+      max-height: 70px;
       z-index: 5 !important;
       position: relative !important;
-      width: 80px;
-      margin: 3rem 3rem;
+      width: 74px;
+      margin: 2%;
       border-radius: 70px;
       display: flex;
       flex-direction: row;
@@ -96,37 +114,43 @@ position: relative;
       transition: width .5s ease-in;
     }
 }
+
 .sort {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 1.7rem;
-  max-height: 3rem;
-  padding: 1.2rem 1.8rem 0 .7rem;
-  border-radius: 70px;
+  padding: 0.8rem;
+  border-radius: 45px;
   background-color: #0082b9;
+  padding-top: 1.4em;
+  padding-bottom: 0.3em;
+  span{
+    padding: 4%;
+  }
   &:hover {
     cursor: pointer;
   }
   @include desktop {
   width: 100vw;
+  margin: 0;
   max-width: 2.8rem;
-  height: 1.4rem;
-  padding: 1.9rem 1.2rem;
-  }
+  height: 2.5rem;
+   }
 }
+
+
 .open{
   min-width: 95vw;
   width: 90%;
   margin: 1rem auto 1rem;
   @include desktop{
   position: relative !important;
- flex-basis: 40%;
+  flex-basis: 40%;
   order: 1;
   width: 40vw;
   min-width: 450px;
-  margin: 3rem;
+  margin: 2%;
   }
 }
 .close{
@@ -150,13 +174,13 @@ position: relative;
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
   width: 4.3rem;
-  height: 4rem;
+  height: 2rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 4.35rem;
+    height: 4.36rem;
     background-size: 35px 45px;
   }
 }
@@ -169,8 +193,8 @@ position: relative;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 4.35rem;
+    height: 4.36rem;
   background-size: 45px 60px;
   }
 }
@@ -183,8 +207,8 @@ position: relative;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
-    width: 5.4rem;
-    height: 5.4rem;
+    width: 4.35rem;
+    height: 4.36rem;
     background-size: 45px 45px;
   }
 }
@@ -198,8 +222,8 @@ position: relative;
   background-color: #0082b9;
   transition: all 2s ease-in;
   @include desktop {
-    width: 5.2rem;
-    height: 5.1rem;
+    width: 4.35rem;
+    height: 4.2rem;
     background-size: 45px 45px;
   }
 }
@@ -212,8 +236,12 @@ position: relative;
 }
 .foot-sub-menu {
   display: none;
+  justify-content: space-between;
   background-color: #fff;
-  padding: 0.8em;
+  margin-left: 1.2em; 
+  margin-top: 2em; 
+  margin-bottom: -0.4em; 
+  padding: 0.5em;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
   &:hover {
@@ -238,8 +266,8 @@ position: relative;
 }
 .neigh {
   position: absolute;
-  bottom: 100px;
-  left: -35px;
+  bottom: 89px;
+  left: -59px;
   &::after {
     content: '';
     width: 0;
@@ -254,8 +282,8 @@ position: relative;
 }
 .part {
   position: absolute;
-  bottom: 100px;
-  left: -4px;
+  bottom: 89px;
+  left: -29px;
   &::after {
     content: '';
     width: 0;
@@ -271,8 +299,9 @@ position: relative;
 }
 .year {
   position: absolute;
-  bottom: 100px;
-  left: 10px;
+  bottom: 89px;
+  left: -15px;
+  padding-right: 1.1em;
   &::after {
     content: '';
     width: 0;
@@ -303,21 +332,21 @@ position: relative;
   }
   .neigh-labels {
     min-width: 120px;
-    right: 30px;
+    right: 55%;
       label::after  {
         left: 36%;
       }
   }
   .part-labels {
     min-width: 80px;
-    right: 11px;
+    right: 27%;
       label::after  {
         left: 31%;
       }
   }
   .year-labels  {
     min-width: 80px;
-    right: 12px;
+    right: 27%;
       label::after  {
         left: 32%;
       }

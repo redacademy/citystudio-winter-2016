@@ -80,14 +80,19 @@
 .site-description {
   margin: 0 auto 1rem;
   width: 70vw;
+  display: flex;
+
     @include desktop {
       margin: 0 auto;
       width: 48vw;
     }
     p {
       @include desktop {
+      align-items: center;
+      justify-content: center;
       margin: 0 auto;
-      padding-top: 13rem;
+      padding-top: 7rem;
+      max-width: 80%;
       font-size: 2rem;
       color: white;
       opacity: .8;
