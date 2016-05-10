@@ -58,6 +58,4 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/citystudio/
 
-# Ignore npm packages #
-# =================== #
-wp-content/themes/citystudio/node_modules/
+wp-content/themes/citystudio/sass/foot-work.sass
