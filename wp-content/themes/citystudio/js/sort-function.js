@@ -12,12 +12,13 @@ jQuery(document).ready(function($) {
     partners: '',
     year: ''
   }
-      // values for input names
-    checkedNeigh = '',
-    checkedPart = '',
-    checkedYear = '';
 
-  //sorting navigation is open on page load on mobile
+  // values for input names
+  checkedNeigh = '',
+  checkedPart = '',
+  checkedYear = '';
+
+  // Sort navigation is open on page load on mobile
   $('#sort').resize(function(){
       $('#sort.nav-div').addClass('open');
   });
@@ -25,7 +26,8 @@ jQuery(document).ready(function($) {
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
   }); // close sort
-  // Sort Button Slides out on desktop size
+
+  // Sort navigation dlides out on desktop when clicked
   $('#refresh').click(function() {
     $('#sort').toggleClass('open');
   }); // close sort
@@ -34,18 +36,21 @@ jQuery(document).ready(function($) {
     checkedNeigh = '';
     checkedPart = '';
     checkedYear = '';
+
     queryFilter = {
-    neighbourhoods: '',
-    partners: '',
-    year: ''
+      neighbourhoods: '',
+      partners: '',
+      year: ''
     }
+
     $('.neigh-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
     reloadProjects();
+  }); // close refresh
 
-   }); // close refresh
-
+  // If the input label is visible,
+  // find foot-sub-menu and add class current-menu
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
@@ -53,49 +58,57 @@ jQuery(document).ready(function($) {
     }
   });
 
+  // Remove class current-menu if mouse isn't hovering over menu-item
   $('.menu-item').mouseout(function(){
       $(this).children('.foot-sub-menu').removeClass('current-menu');
    });
 
-  // Create an empty object to hold the checked navigation values in the properties
-
+  // Create an empty object to hold
+  // the checked navigation values in the properties
   $('.sub-menu-neigh').click(function() {
     if ($(this.checked)) {
       queryFilter.neighbourhoods = $(this).find('input').val();
       checkedNeigh = ($(this).text()).trim();
+
       $('.neigh-labels')
           .show()
           .append('<label>' + checkedNeigh + '</label>');
+
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
   });
+
   $('.sub-menu-part').click(function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
+
       $('.part-labels')
           .show()
           .append('<label>' + checkedPart + '</label>');
+
       $(this).parent().removeClass('current-menu');
       reloadProjects();
-
     }
   });
   $('.sub-menu-year').click(function() {
     if ($(this.checked)) {
       queryFilter.year = $(this).find('input').val();
       checkedYear = ($(this).text()).trim();
+
       $('.year-labels')
           .show()
           .append('<label>' + checkedYear + '</label>');
-          $(this).parent().removeClass('current-menu');
+
+      $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
-  }); // close sub-menu-year
+  }); // end the check for each sub-menu type
+
 
   // A Function that returns the object queryFilter's properties
-  // and concatenates them into a url with + signs
+  // and concatenates them into a url with + signs creates API call
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
@@ -107,8 +120,9 @@ jQuery(document).ready(function($) {
       .join('&');
   } //close filters function
 
+  // function that queries the database for the values captured in the inputs
+  // re-creates the grid based on returned data
   function reloadProjects() {
-
       $.ajax({
           type: 'GET',
           dataType: 'json',
@@ -118,9 +132,9 @@ jQuery(document).ready(function($) {
 
             console.log(response);
             // get the length of response and run this IF it is less than 10
-            if ( response.length < 12 ) {
+            if ( response.length < 14 ) {
               // this object holds the remaining slots left to fill
-              var objectPlaceholder = (12 - response.length);
+              var objectPlaceholder = (14 - response.length);
 
               // loop over the response.length to find empty slots to fill
               for (var i = 0; i < objectPlaceholder; i++ ) {
@@ -132,11 +146,11 @@ jQuery(document).ready(function($) {
             }
 
             // create gallery method to append HTML to
-            var $gallery = $('.home-slider');
+            var $gallery = $('.grid');
             var galleryItems = '';
 
               // Clear the Gallery after each sort data is added to repopulate the Gallery
-              $gallery.flickity('destroy');
+              // $gallery.flickity('destroy'); -- how do we destroy the old grid now?
               $gallery.empty();
 
                 $.each(response, function(index, value) {
@@ -144,15 +158,15 @@ jQuery(document).ready(function($) {
                   // else if feature project checkoc is falso use reg class
                   function featured() {
                     if ( value.featured_project[0] === '1') {
-                      return 'featured-square';
-                    } else {
                       return 'featured-rectangle';
+                    } else {
+                      return 'featured-square';
                     }
                   }
 
                   if ( !value.placeholder ) {
 
-                    galleryItems += '<a class="gallery-anchor js-flickity" href="' + value.link + '" data-flickity-options="initialIndex:3">';
+                    galleryItems += '<a class="gallery-anchor" href="' + value.link + '">';
                     galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat cover;">';
                     galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
 
@@ -173,14 +187,7 @@ jQuery(document).ready(function($) {
 
                 });
 
-                $gallery.append(galleryItems).flickity({
-                                                cellAlign: 'left',
-                                                contain: 'true',
-                                                wrapAround: 'true',
-                                                autoPlay: true,
-                                                autoPlay: 3000
-                                                // rightToLeft: 'true'
-                                          });
+                $gallery.append(galleryItems);
           } // close success
       }); // close ajax call
   } // close reload projects

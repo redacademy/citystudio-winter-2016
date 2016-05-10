@@ -1610,26 +1610,6 @@ li {
   list-style-type: none;
   height: 100%; }
 
-.featured-rectangle {
-  background-size: cover;
-  background-position: center center;
-  height: 250px;
-  min-width: 250px;
-  -webkit-flex: 0 1 99%;
-      -ms-flex: 0 1 99%;
-          flex: 0 1 99%; }
-  @media screen and (min-width: 480px) {
-    .featured-rectangle {
-      -webkit-flex: 0 1 24.555%;
-          -ms-flex: 0 1 24.555%;
-              flex: 0 1 24.555%; } }
-  .featured-rectangle .description:hover {
-    background-color: rgba(0, 130, 185, 0.9);
-    height: 100%;
-    width: 100%;
-    padding: 1rem;
-    box-sizing: border-box; }
-
 .featured-square {
   background-size: cover;
   background-position: center center;
@@ -1640,10 +1620,30 @@ li {
           flex: 0 1 99%; }
   @media screen and (min-width: 480px) {
     .featured-square {
+      -webkit-flex: 0 1 24.555%;
+          -ms-flex: 0 1 24.555%;
+              flex: 0 1 24.555%; } }
+  .featured-square .description:hover {
+    background-color: rgba(0, 130, 185, 0.9);
+    height: 100%;
+    width: 100%;
+    padding: 1rem;
+    box-sizing: border-box; }
+
+.featured-rectangle {
+  background-size: cover;
+  background-position: center center;
+  height: 250px;
+  min-width: 250px;
+  -webkit-flex: 0 1 99%;
+      -ms-flex: 0 1 99%;
+          flex: 0 1 99%; }
+  @media screen and (min-width: 480px) {
+    .featured-rectangle {
       -webkit-flex: 0 1 49.555%;
           -ms-flex: 0 1 49.555%;
               flex: 0 1 49.555%; } }
-  .featured-square .description:hover {
+  .featured-rectangle .description:hover {
     background-color: rgba(0, 100, 150, 0.9);
     height: 100%;
     width: 100%;
