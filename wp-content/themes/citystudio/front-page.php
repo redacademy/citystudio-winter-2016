@@ -18,8 +18,8 @@ get_header(); ?>
 </div>
 
 <div class="homepage-partners">
-  <div class="partners-title">
-    <h1>city studio partners</h1>
+  <div class="title">
+    <h2>CityStudio Partners</h2>
   </div>
   <div class="partner-buttons">
     <button>UBC</button>
@@ -28,15 +28,21 @@ get_header(); ?>
     <button>LANGARA</button>
     <button>EMILY CARR</button>
   </div>
-   <div class="partners-title">
-    <h1>explore city studio projects</h1>
+</div>
+
+<div class="homepage-explore">
+  <div class="title">
+    <h1>Explore CityStudio Projects</h1>
   </div>
+
   <div class="homepage-description">
-    <h3> 
+    <p>
       This is an <b>interactive gallery!</b> use the SORT to filter through the gallery.
-    </h3>
+    </p>
   </div>
 </div>
+
+
 
 <div class="container">
     <ul class="grid">

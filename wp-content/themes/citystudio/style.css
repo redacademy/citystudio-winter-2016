@@ -389,11 +389,24 @@ h3 {
   font-weight: bold; }
 
 p {
-  color: #949A9F; }
+  color: #2D2D2D; }
 
 .archive h2 {
   color: #006496;
   text-transform: uppercase; }
+
+.title {
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 0 1em; }
+  .title h1 {
+    font-size: 3em;
+    margin: 0 0; }
+  .title h2 {
+    font-size: 2em; }
+
+.homepage-description p {
+  font-size: 1.5em; }
 
 1em 2em 3em
 html {
@@ -697,32 +710,25 @@ a {
   font-size: 2.3rem;
   margin: auto 0; }
   .icon-search .fa {
-    color: #03648c;
-    margin-top: 1rem; }
+    color: #0082b9;
+    margin-top: 1.6rem; }
   .icon-search a {
     color: #03648c; }
 
 .icon-menu {
   height: 2rem;
   width: 2rem;
-  background: url("../../images/hamburger-menu.png") center no-repeat;
-  background-size: 2.5rem 2.5rem;
-  margin-top: 0.5rem;
-  margin-left: 2rem;
-  color: #76d6ff; }
+  font-size: 2.3rem;
+  margin-top: 1.6rem;
+  margin-left: 2rem; }
+  .icon-menu .fa {
+    color: #0082b9; }
   @media screen and (min-width: 480px) {
     .icon-menu {
-      color: #76d6ff;
       height: 4rem;
       width: 4rem;
       background-size: 3rem 3rem;
       margin-right: -10rem; } }
-
-.hide-search {
-  display: none; }
-  @media screen and (min-width: 480px) {
-    .hide-search {
-      display: inline; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -788,15 +794,22 @@ a {
 .social-icons ul {
   list-style: none; }
 
+#colophon {
+  position: fixed;
+  bottom: 0;
+  height: 16%; }
+
 .site-footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  position: absolute; }
   @media screen and (min-width: 480px) {
     .site-footer {
+      position: fixed;
       width: 100vw;
       background-color: #006496;
       display: -webkit-flex;
@@ -811,20 +824,30 @@ a {
       -webkit-justify-content: space-between;
           -ms-flex-pack: justify;
               justify-content: space-between;
-      position: absolute; } }
+      width: 100%;
+      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&0+0,1+46 */
+      /* FF3.6-15 */
+      /* Chrome10-25,Safari5.1-6 */
+      background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 15%, rgba(0, 100, 150, 0.7) 50%, rgba(0, 100, 150, 0.8) 100%);
+      /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
+      /* IE6-9 */ } }
 
 .social-icons-div {
   background-color: #006496;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  position: relative; }
+  bottom: 0; }
   .social-icons-div ul {
     list-style: none;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    position: fixed;
     margin: 0 auto; }
+    .social-icons-div ul a {
+      border: none; }
   @media screen and (min-width: 480px) {
     .social-icons-div {
       position: relative;
@@ -842,7 +865,6 @@ a {
       margin-top: 0.5rem;
       margin-right: 1.5rem; }
       .social-icons-div ul {
-        list-style: none;
         display: -webkit-flex;
         display: -ms-flexbox;
         display: flex;
@@ -856,7 +878,8 @@ a {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
     .social-icons {
-      z-index: -1;
+      position: fixed;
+      z-index: 1;
       height: 2rem;
       width: 2rem;
       margin: 1rem; } }
@@ -881,10 +904,11 @@ a {
       margin: 0; } }
 
 .nav-div {
-  background-color: #76d6ff;
-  max-height: 85px;
-  width: 71px;
-  margin: 2rem 2rem;
+  /*background-color: #76d6ff;*/
+  max-height: 100%;
+  width: 50px;
+  margin-left: 6%;
+  margin-top: 4%;
   border-radius: 70px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -898,12 +922,13 @@ a {
   transition: width 0.5s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      background-color: #76d6ff;
-      max-height: 85px;
+      height: 100%;
+      /*background-color: #76d6ff;*/
+      max-height: 70px;
       z-index: 5 !important;
       position: relative !important;
-      width: 80px;
-      margin: 3rem 3rem;
+      width: 74px;
+      margin: 2%;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -921,19 +946,21 @@ a {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  max-width: 1.7rem;
-  max-height: 3rem;
-  padding: 1.2rem 1.8rem 0 .7rem;
-  border-radius: 70px;
-  background-color: #0082b9; }
+  padding: 0.8rem;
+  border-radius: 45px;
+  background-color: #0082b9;
+  padding-top: 1.4em;
+  padding-bottom: 0.3em; }
+  .sort span {
+    padding: 4%; }
   .sort:hover {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
     .sort {
       width: 100vw;
+      margin: 0;
       max-width: 2.8rem;
-      height: 1.4rem;
-      padding: 1.9rem 1.2rem; } }
+      height: 2.5rem; } }
 
 .open {
   min-width: 95vw;
@@ -950,7 +977,7 @@ a {
               order: 1;
       width: 40vw;
       min-width: 450px;
-      margin: 3rem; } }
+      margin: 2%; } }
 
 .close {
   min-width: 20px; }
@@ -972,14 +999,14 @@ a {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
   width: 4.3rem;
-  height: 4rem;
+  height: 2rem;
   border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in; }
   @media screen and (min-width: 480px) {
     .neighbourhood {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 35px 45px; } }
 
 .partners {
@@ -992,8 +1019,8 @@ a {
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 45px 60px; } }
 
 .years {
@@ -1006,8 +1033,8 @@ a {
   transition: all 1.8s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 5.4rem;
-      height: 5.4rem;
+      width: 4.35rem;
+      height: 4.36rem;
       background-size: 45px 45px; } }
 
 .refresh {
@@ -1021,8 +1048,8 @@ a {
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 5.2rem;
-      height: 5.1rem;
+      width: 4.35rem;
+      height: 4.2rem;
       background-size: 45px 45px; } }
 
 /* Footer Navigation Menu */
@@ -1034,8 +1061,14 @@ a {
 
 .foot-sub-menu {
   display: none;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: #fff;
-  padding: 0.8em;
+  margin-left: 1.2em;
+  margin-top: 2em;
+  margin-bottom: -0.4em;
+  padding: 0.5em;
   border-radius: 8px;
   border: 0.5px solid #006496; }
   .foot-sub-menu:hover {
@@ -1056,8 +1089,8 @@ a {
 
 .neigh {
   position: absolute;
-  bottom: 100px;
-  left: -35px; }
+  bottom: 89px;
+  left: -59px; }
   .neigh::after {
     content: '';
     width: 0;
@@ -1071,8 +1104,8 @@ a {
 
 .part {
   position: absolute;
-  bottom: 100px;
-  left: -4px; }
+  bottom: 89px;
+  left: -29px; }
   .part::after {
     content: '';
     width: 0;
@@ -1087,8 +1120,9 @@ a {
 
 .year {
   position: absolute;
-  bottom: 100px;
-  left: 10px; }
+  bottom: 89px;
+  left: -15px;
+  padding-right: 1.1em; }
   .year::after {
     content: '';
     width: 0;
@@ -1118,19 +1152,19 @@ a {
 
 .neigh-labels {
   min-width: 120px;
-  right: 30px; }
+  right: 55%; }
   .neigh-labels label::after {
     left: 36%; }
 
 .part-labels {
   min-width: 80px;
-  right: 11px; }
+  right: 27%; }
   .part-labels label::after {
     left: 31%; }
 
 .year-labels {
   min-width: 80px;
-  right: 12px; }
+  right: 27%; }
   .year-labels label::after {
     left: 32%; }
 
@@ -1160,9 +1194,6 @@ a {
       border-color: #fff transparent transparent;
       position: absolute;
       bottom: -13px; }
-
-.hide-label {
-  display: none !important; }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1468,8 +1499,8 @@ a:active {
       float: right; } }
 
 .hero {
-  width: 100vw;
-  height: 60vh;
+  width: 100%;
+  height: 400px;
   background: linear-gradient(to right, rgba(73, 155, 234, 0.8) 0%, rgba(2, 152, 213, 0.8) 0%, rgba(1, 152, 213, 0.8) 99%, rgba(1, 152, 213, 0.8) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-flex;
@@ -1491,52 +1522,65 @@ a:active {
       margin: 0 2rem 1rem; } }
 
 .homepage-partners {
-  width: 100vw;
-  height: 50vh;
-  /*display: flex;*/ }
-  .homepage-partners .partners-title {
-    text-align: center;
-    text-transform: uppercase;
-    padding: 3%; }
+  width: 100%;
+  margin: 2.5em auto 4em;
+  text-align: center; }
   .homepage-partners .partner-buttons {
     text-align: center; }
   .homepage-partners button {
     background-color: rgba(1, 152, 213, 0.8);
     color: white;
-    padding: 0.5% 2%; }
+    padding: .5% 2%;
+    margin: .3rem; }
+
+.homepage-explore {
+  text-align: center;
+  width: 100%;
+  margin: 4em auto; }
+  .homepage-explore h3 {
+    font-size: 1.7rem;
+    font-weight: 100; }
 
 .site-description {
   margin: 0 auto 1rem;
-  width: 80vw; }
+  width: 70vw;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
   @media screen and (min-width: 480px) {
     .site-description {
       margin: 0 auto;
-      width: 48vw; } }
+      width: 70%; } }
+  @media screen and (min-width: 480px) {
+    .site-description p {
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+                  -ms-grid-row-align: center;
+              align-items: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0 auto;
+      padding-top: 7rem;
+      max-width: 80%;
+      font-size: 2rem;
+      color: white;
+      opacity: .8;
+      text-align: center;
+      font-family: "open_sans";
+      font-size: 2.1rem; } }
+  @media screen and (min-width: 480px) {
+    .site-description {
+      margin: 0 auto;
+      width: 70%; } }
   .site-description p {
     font-size: 1.1rem;
-    text-shadow: 1px 3px 5px black;
     color: white;
     text-align: center;
     font-family: "open_sans"; }
     @media screen and (min-width: 480px) {
       .site-description p {
         font-size: 1.7rem; } }
-
-.toggle-class {
-  background: url("../../assets/noun.png") no-repeat;
-  background-size: contain;
-  border: 0;
-  margin: 0 auto;
-  padding: 7%;
-  outline: 0;
-  height: 30px;
-  width: 20px; }
-  @media screen and (min-width: 480px) {
-    .toggle-class {
-      background-size: 75px;
-      padding: 4% 4% 4% 0.2rem;
-      height: 50px;
-      width: 45px; } }
 
 .loader {
   opacity: 0.1;
