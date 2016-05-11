@@ -19,6 +19,7 @@ ehthumbs.db
 error_log
 access_log
 
+
 # Ignore packages #
 # =============== #
 *.7z
@@ -58,6 +59,4 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/citystudio/
 
-# Ignore npm packages #
-# =================== #
-wp-content/themes/citystudio/node_modules/
+wp-content/themes/citystudio/sass/foot-work.sass

@@ -15,7 +15,6 @@ get_header(); ?>
             </p>
         </div>
     </div>
-</div>
 
 <div class="homepage-partners">
   <div class="title">
@@ -28,18 +27,14 @@ get_header(); ?>
     <button>LANGARA</button>
     <button>EMILY CARR</button>
   </div>
-</div>
-
-<div class="homepage-explore">
-  <div class="title">
-    <h1>Explore CityStudio Projects</h1>
-  </div>
-
-  <div class="homepage-description">
-    <p>
+  <div class="sticky-navigation">
+    <?php get_template_part ('template-parts/content', 'nav'); ?>
+      <p class="explore">explore our projects</p>
+    <div class="homepage-description">
       This is an <b>interactive gallery!</b> use the SORT to filter through the gallery.
-    </p>
   </div>
+  </div>
+  
 </div>
 
 <div class="container">
