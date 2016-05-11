@@ -116,7 +116,7 @@ jQuery(document).ready(function($) {
 
           success: function(response) {
 
-            console.log(response);
+            console.log(response);` ` 
             // get the length of response and run this IF it is less than 10
             if ( response.length < 12 ) {
               // this object holds the remaining slots left to fill

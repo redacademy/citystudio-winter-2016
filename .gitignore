@@ -19,6 +19,7 @@ ehthumbs.db
 error_log
 access_log
 
+
 # Ignore packages #
 # =============== #
 *.7z
