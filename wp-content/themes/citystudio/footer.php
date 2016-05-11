@@ -11,7 +11,6 @@
 				</div>
 
 				<div class="social-icons-div">
-				
  					<p>
 							<a href="https://www.facebook.com/CityStudioVancouver/">
 								<img src="<?php echo get_template_directory_uri().'/images/social-facebook-white.png';?>" class="social-icons" alt="Link to Citystudio Facebook Page" />
@@ -31,7 +30,7 @@
 							<a href="http://www.youtube.com/user/CityStudioVancouver">
 								<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio Twitter Feed" />
 							</a>
-				</p>
+					</p>
 				</div>
 			</footer><!-- #colophon -->
 		</div><!-- #content -->
