@@ -15,11 +15,13 @@ get_header(); ?>
 					<?php if ( have_posts() ) : ?>
 					<?php /* Start the Loop */ ?>
 					<?php while ( have_posts() ) : the_post(); ?>
+
 					<a href="<?php echo get_the_permalink();?>">
 			      <?php if (has_post_thumbnail()) : ?>
 				      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin: 0 auto;margin-bottom:1.5rem;'); ?>
 				    <?php endif; ?>
 					</a>
+
 				<?php endwhile; ?>
 
 				<?php endif; ?>
