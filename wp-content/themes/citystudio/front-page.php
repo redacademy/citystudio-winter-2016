@@ -45,11 +45,25 @@ get_header(); ?>
 <div class="container">
     <ul class="grid">
         <?php
-             $args = array( 'post_type' => 'project', 'numberposts' => 12 );
-             $latest_posts = get_posts( $args ); // returns an array of posts
+        $args = array(
+          'post_type' => 'project',
+          'numberposts' => 12,
+          'meta_query_args' => array(
+              array(
+                'key' => 'featured_project',
+                'value' => 'true',
+                'compare' => 'IN',
+                'numberposts' => 4
+              )
+          )
+        );
+
+        $latest_posts = get_posts( $args );
         ?>
+
         <?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
-          <a class="gallery-anchor <?php echo (CFS()->get( 'featured_project' ) === 0 ) ? 'featured-square' : 'featured-rectangle'; ?>" href="<?php echo esc_url( get_permalink() ); ?>" >
+
+          <a class="gallery-anchor <?php echo (CFS()->get( 'featured_project' ) === 1 ) ? 'featured-rectangle' : 'featured-square'; ?>" href="<?php echo esc_url( get_permalink() ); ?>" >
 
             <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
