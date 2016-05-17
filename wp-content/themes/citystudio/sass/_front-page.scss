@@ -85,6 +85,7 @@
 .site-description {
   margin: 0 auto;
   width: 70vw;
+  height: 48%;
   display: flex;
   padding: 6rem;
   justify-content: space-around;
@@ -110,7 +111,7 @@
   @include desktop {
     margin: 0 auto;
     width: 70%;
-    height: 38%;
+    height: 48%;
   }
   p {
     font-size: 1.1rem;

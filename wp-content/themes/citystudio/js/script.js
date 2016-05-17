@@ -15,12 +15,16 @@ jQuery(document).ready(function($){
      $(window).scroll(function(){
       var sticky = $('.sticky-navigation'),
           scroll = $(window).scrollTop();
+          offset = sticky.offset();
 
-      if (scroll >= 1222) {
+      if (scroll >= offset.top) {
          sticky.addClass('fixed');
      }
-         else sticky.removeClass('fixed');
-    });
+       if (scroll <= offset.top) {
+        sticky.removeClass('fixed');
+      }
+      else null;
+  });
 
 });
 

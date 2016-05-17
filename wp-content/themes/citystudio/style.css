@@ -1209,6 +1209,7 @@ a:active {
 .site-description {
   margin: 0 auto;
   width: 70vw;
+  height: 48%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1240,7 +1241,7 @@ a:active {
     .site-description {
       margin: 0 auto;
       width: 70%;
-      height: 38%; } }
+      height: 48%; } }
   .site-description p {
     font-size: 1.1rem;
     color: white;
