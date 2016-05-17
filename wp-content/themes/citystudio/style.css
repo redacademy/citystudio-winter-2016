@@ -1564,6 +1564,7 @@ a:active {
   width: 480px;
   z-index: 1;
   border-radius: 20px;
+  padding: .1%;
   background-color: rgba(255, 255, 255, 0.4); }
   .fixed p {
     display: -webkit-flex;

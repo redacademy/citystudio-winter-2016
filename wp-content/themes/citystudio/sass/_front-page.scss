@@ -51,8 +51,6 @@
   color:  #ff8000;
 }
 
-
-
 .homepage-partners {
   width: 100vw;
   height: 42vh;
@@ -69,7 +67,6 @@
     padding: .5% 2%;
     margin: .3rem;
   }
- 
 }
   .partners-title{
     text-align: center;
@@ -435,6 +432,7 @@
   width: 480px; 
   z-index: 1;
   border-radius: 20px;
+  padding: .1%;
     p {
       display: flex;
       /*justify-content: flex-end;*/
