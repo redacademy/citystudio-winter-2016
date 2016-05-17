@@ -23,10 +23,8 @@
 }
 .hero {
   width: 100%;
-  height: 400px;
-  background: -webkit-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
-  background: -o-linear-gradient(left, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
-  background: linear-gradient(to right, rgba(73,155,234,0.80) 0%, rgba(2,152,213,0.80) 0%, rgba(1,152,213,0.80) 99%, rgba(1,152,213,0.80) 100%), url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
+  height: 100vh;
+  background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-box;
   display: -webkit-flex;
@@ -49,12 +47,18 @@
     margin: 0 2rem 1rem;
   }
 }
+.orange{
+  color:  #ff8000;
+}
+
+
 
 .homepage-partners {
   width: 100vw;
   height: 42vh;
   text-align: center;
   padding-bottom: 2%;
+  display: block;
   .partner-buttons {
     text-align: center;
     padding: 2%;
@@ -76,34 +80,35 @@
   }
  .homepage-description{
     text-align: center;  
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     font-weight:100;
-    padding: 0.5% 2%;
+    padding: 2% 5%;
 
   }
 .site-description {
-  margin: 0 auto 1rem;
+  margin: 0 auto;
   width: 70vw;
   display: flex;
+  padding: 6rem;
+  justify-content: space-around;
+
+  a {border: none;
+  }
+  p {
     @include desktop {
-      margin: 0 auto;
-      width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding-top: 7rem;
+    max-width: 80%;
+    font-size: 2rem;
+    color: white;
+    opacity: .8;
+    text-align: center;
+    font-family: $fontfamily;
+      font-size: 2.1rem;
     }
-    p {
-      @include desktop {
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      padding-top: 7rem;
-      max-width: 80%;
-      font-size: 2rem;
-      color: white;
-      opacity: .8;
-      text-align: center;
-      font-family: $fontfamily;
-        font-size: 2.1rem;
-      }
-    }
+  }
 
   @include desktop {
     margin: 0 auto;
@@ -420,18 +425,37 @@
   display: inline-flex;
   float: left;
   width: 40%;
+  transition: all .5 ease-in;
 
 }
+.fixed{
+  transition: all .5 ease-in;
+  position: fixed;
+  top:0; left:0; 
+  width: 480px; 
+  z-index: 1;
+  border-radius: 20px;
+    p {
+      display: flex;
+      /*justify-content: flex-end;*/
+      margin-right: 12%;
+    }
+  background-color: rgba(255,255,255,.4); 
+}
 .explore{
-  padding-top: 1%;
+  padding: .4% 5% 0 0%;
+  position: relative;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 3.5rem;
+   display: flex;
+   text-align: center;
+  justify-content: flex-end;
 }
 .title{
+  padding-left: 12%;
   padding-top: 1%;
   width: 98%;
-  float: right;
   font-weight: bold;
   font-size: 26px;
 }
