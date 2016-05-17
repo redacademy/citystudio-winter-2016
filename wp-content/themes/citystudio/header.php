@@ -32,7 +32,9 @@
 					<div class="header-container">
 
 						<div class="site-branding">
-						
+						   <a href="<?php echo esc_url(home_url([1]));?>">
+				            <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				          </a>
 						</div><!-- .site-branding -->
 
 						<div class="search-gallery">

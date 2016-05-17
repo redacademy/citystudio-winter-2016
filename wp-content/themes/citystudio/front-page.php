@@ -10,9 +10,7 @@ get_header(); ?>
 
     <div class="hero">
         <div class="site-description">
-          <a href="<?php echo esc_url(home_url([1]));?>">
             <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
-          </a>
         </div>
         <div class="homepage-description">
             <p>

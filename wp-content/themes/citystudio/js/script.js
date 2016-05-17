@@ -16,12 +16,11 @@ jQuery(document).ready(function($){
       var sticky = $('.sticky-navigation'),
           scroll = $(window).scrollTop();
 
-      if (scroll >= 1115) {
+      if (scroll >= 1222) {
          sticky.addClass('fixed');
      }
          else sticky.removeClass('fixed');
     });
-
 
 });
 

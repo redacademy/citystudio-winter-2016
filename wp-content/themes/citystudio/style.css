@@ -1202,7 +1202,7 @@ a:active {
 
 .homepage-description {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: 100;
   padding: 2% 5%; }
 
@@ -1239,7 +1239,8 @@ a:active {
   @media screen and (min-width: 480px) {
     .site-description {
       margin: 0 auto;
-      width: 70%; } }
+      width: 70%;
+      height: 38%; } }
   .site-description p {
     font-size: 1.1rem;
     color: white;
@@ -1257,7 +1258,7 @@ a:active {
   padding: 2rem; }
 
 .nav-div {
-  /*background-color: #76d6ff;*/
+  background-color: #76d6ff;
   max-height: 100%;
   width: 50px;
   margin-left: 6%;
@@ -1442,38 +1443,39 @@ a:active {
 
 .neigh {
   position: absolute;
-  bottom: 89px;
-  left: -59px; }
+  bottom: -128px;
+  left: -55px; }
   .neigh::after {
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 20px 0;
-    border-color: #fff transparent transparent;
+    /*    border-width: 20px 20px 0;
+*/
+    border-color: #fff;
     position: absolute;
     bottom: -13px;
     left: 38%; }
 
 .part {
   position: absolute;
-  bottom: 89px;
-  left: -29px; }
+  bottom: -105px;
+  left: -25px; }
   .part::after {
     content: '';
     width: 0;
     height: 0;
     border-style: solid;
     color: #0082b9;
-    border-width: 20px 20px 0;
-    border-color: #fff transparent transparent;
+    /*border-width: 20px 20px 0;*/
+    border-color: #fff;
     position: absolute;
     bottom: -13px;
     left: 30%; }
 
 .year {
   position: absolute;
-  bottom: 89px;
+  bottom: -105px;
   left: -15px;
   padding-right: 1.1em; }
   .year::after {
@@ -1481,7 +1483,7 @@ a:active {
     width: 0;
     height: 0;
     border-style: solid;
-    border-width: 20px 20px 0;
+    /*border-width: 20px 20px 0;*/
     border-color: #fff transparent transparent;
     position: absolute;
     bottom: -13px;
@@ -1553,24 +1555,21 @@ a:active {
   display: -ms-inline-flexbox;
   display: inline-flex;
   float: left;
-  width: 40%;
-  transition: all .5 ease-in; }
+  width: 40%; }
 
 .fixed {
-  transition: all .5 ease-in;
   position: fixed;
   top: 0;
   left: 0;
   width: 480px;
   z-index: 1;
   border-radius: 20px;
-  padding: .1%;
+  padding: .4%;
   background-color: rgba(255, 255, 255, 0.4); }
   .fixed p {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    /*justify-content: flex-end;*/
     margin-right: 12%; }
 
 .explore {
