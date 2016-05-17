@@ -10,32 +10,30 @@ get_header(); ?>
 
     <div class="hero">
         <div class="site-description">
+          <a href="<?php echo esc_url(home_url([1]));?>">
+            <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+          </a>
+        </div>
+        <div class="homepage-description">
             <p>
-            <b>CitySudio</b> is an experimentation and innovation hub for the <b>City of Vancouver</b> where staff, students and community members design and launch <b>projects</b> and solutions for the City.
+            <b class="orange">CitySudio</b> is an experimentation and innovation hub for the <b class="orange">City of Vancouver</b> where staff, students and community members design and launch <b class="orange">projects</b> and solutions for the City.
             </p>
         </div>
+        <div class="homepage-partners">
+            <button>UBC</button>
+            <button>SFU</button>
+            <button>VCC</button>
+            <button>LANGARA</button>
+            <button>EMILY CARR</button>
+        </div>
     </div>
-
-<div class="homepage-partners">
-  <div class="title">
-    <h2>CityStudio Partners</h2>
-  </div>
-  <div class="partner-buttons">
-    <button>UBC</button>
-    <button>SFU</button>
-    <button>VCC</button>
-    <button>LANGARA</button>
-    <button>EMILY CARR</button>
-  </div>
   <div class="sticky-navigation">
     <?php get_template_part ('template-parts/content', 'nav'); ?>
       <p class="explore">explore our projects</p>
+  </div>
     <div class="homepage-description">
       This is an <b>interactive gallery!</b> use the SORT to filter through the gallery.
-  </div>
-  </div>
-  
-</div>
+    </div>
 
 <div class="container">
     <ul class="grid">

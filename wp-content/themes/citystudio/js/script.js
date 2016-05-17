@@ -11,5 +11,18 @@ jQuery(document).ready(function($){
     autoPlay: 3000
   });
 
+    // var header = $(".site-header");
+
+     $(window).scroll(function(){
+      var sticky = $('.sticky-navigation'),
+          scroll = $(window).scrollTop();
+
+      if (scroll >= 1090) {
+         sticky.addClass('fixed');
+     }
+         else sticky.removeClass('fixed');
+    });
+
+
 });
 
