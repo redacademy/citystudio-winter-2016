@@ -12,12 +12,11 @@ jQuery(document).ready(function($){
   });
 
     // var header = $(".site-header");
-
      $(window).scroll(function(){
       var sticky = $('.sticky-navigation'),
           scroll = $(window).scrollTop();
 
-      if (scroll >= 1090) {
+      if (scroll >= 1115) {
          sticky.addClass('fixed');
      }
          else sticky.removeClass('fixed');
