@@ -403,7 +403,7 @@
   padding: 0.5em 0.8em;
   border-radius: 8px;
   border: 0.5px solid $dark-blue;
-  bottom: 53px;
+  bottom: -70px;
   text-align: center;
   label {
     color: $medium-blue;
@@ -412,7 +412,7 @@
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 20px 0;
+      /*border-width: 20px 20px 0;*/
       border-color: #fff transparent transparent;
       position: absolute;
       bottom: -13px;
