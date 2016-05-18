@@ -34,7 +34,7 @@ get_header(); ?>
       This is an <b>interactive gallery!</b> use the SORT to filter through the gallery.
   </div>
   </div>
-  
+
 </div>
 
 <div class="container">
@@ -42,13 +42,13 @@ get_header(); ?>
         <?php
         $args = array(
           'post_type' => 'project',
-          'numberposts' => 12,
-          'meta_query_args' => array(
+          'numberposts' => 4,
+          'meta_query' => array(
+            'relation' => '=',
               array(
                 'key' => 'featured_project',
-                'value' => 'true',
-                'compare' => 'IN',
-                'numberposts' => 4
+                'value' => 1,
+                'compare' => 'IN'
               )
           )
         );
