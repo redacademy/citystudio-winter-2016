@@ -94,7 +94,7 @@
   justify-content: space-around;
 
   a {border: none;
-  }
+    }
   p {
     @include desktop {
     align-items: center;
@@ -148,7 +148,6 @@
   transition: width 0.5s ease-in;
     @include desktop {
       height: 100%;
-      /*background-color: #76d6ff;*/
       max-height: 70px;
       z-index: 5 !important;
       position: relative !important;
@@ -169,6 +168,7 @@
   border: 2px solid white;
   padding: 0.8rem;
   border-radius: 45px;
+  z-index: 2;
   background-color: #0082b9;
   padding-top: 1.4em;
   padding-bottom: 0.3em;
@@ -216,12 +216,19 @@
     margin: 0;
 }
 
+
+.neighbourhood,
+.partners,
+.years,
+.refresh {
+    width: 4.3rem;
+    border-radius: 70px;
+}
+
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
-  width: 4.3rem;
   height: 2rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
@@ -233,23 +240,19 @@
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 30px 40px;
-  width: 4.3rem;
   height: 4rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
     width: 4.35rem;
     height: 4.36rem;
-  background-size: 45px 60px;
+    background-size: 45px 60px;
   }
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 25px 30px;
-  width: 4.3rem;
   height: 4rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
@@ -261,9 +264,7 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  width: 4.3rem;
   height: 3.8rem;
-  border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
   transition: all 2s ease-in;
@@ -303,7 +304,8 @@
   .sub-menu-neigh span:hover,
   .sub-menu-part span:hover,
   .sub-menu-year span:hover {
-    color: $light-blue;
+    color: #ff8000;
+    font-weight: bold;
     cursor: pointer;
   }
 }
@@ -319,11 +321,11 @@
     width: 0;
     height: 0;
     border-style: solid;
-/*    border-width: 20px 20px 0;
-*/    border-color: #fff;
+    /*border-width: 20px 20px 0;*/
+    border-color: #fff;
     position: absolute;
-    bottom: -13px;
-    left: 38%;
+    bottom: 127px;
+    left: 35%;
   }
 }
 .part {
@@ -339,8 +341,8 @@
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
     position: absolute;
-    bottom: -13px;
-    left: 30%;
+    bottom: 102px;
+    left: 24%;
   }
 }
 .year {
@@ -356,7 +358,7 @@
     /*border-width: 20px 20px 0;*/
     border-color: #fff transparent transparent;
     position: absolute;
-    bottom: -13px;
+    bottom: 100px;
     left: 18%;
   }
 }
@@ -408,13 +410,15 @@
   border: 0.5px solid $dark-blue;
   bottom: -70px;
   text-align: center;
+   color: #ff8000;
+  font-weight: bold;
   label {
     &::after {
       content: '';
       width: 0;
       height: 0;
       border-style: solid;
-      border-width: 20px 20px 0;
+      /*border-width: 20px 20px 0;*/
       border-color: #fff transparent transparent;
       position: absolute;
       bottom: -13px;
@@ -433,9 +437,9 @@
     top: 0;
     left: -3px;
     height: 143px;
-    width: 100%;
+    width: 101%;
+    z-index: 2;
     padding: 0;
-    text-align: center;
     p {
       margin-right: 120px;
       margin-bottom: 0;
