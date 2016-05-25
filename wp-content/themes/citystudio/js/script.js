@@ -17,11 +17,11 @@ jQuery(document).ready(function($){
           scroll = $(window).scrollTop();
           offset = sticky.offset();
 
-      if (scroll >= 1095) {
+      if (scroll >= 1090) {
          sticky.addClass("fixed");
          description.addClass("fixed");
      }
-      else if (scroll <= 1095)  {
+      else if (scroll <= 1090)  {
         sticky.removeClass("fixed");
          description.removeClass("fixed");
     }
