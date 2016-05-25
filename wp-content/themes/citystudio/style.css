@@ -916,6 +916,8 @@ a {
     padding: 1rem;
     width: 90vw;
     margin: 0 auto; }
+    .searchpage .search-list a {
+      border: none; }
 
 .search-form {
   margin-bottom: 0; }
@@ -1030,6 +1032,9 @@ object {
 .gallery-caption {
   display: block; }
 
+.tag-links a {
+  border: none; }
+
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
@@ -1083,6 +1088,8 @@ object {
     box-sizing: border-box;
     padding: none;
     width: 90vw; }
+    .tag-archives .section-archive ul a {
+      border: none; }
     .tag-archives .section-archive li {
       background-position: center center !important;
       background-size: cover !important;
@@ -1094,9 +1101,6 @@ object {
           width: 360px;
           height: 280px;
           font-size: 3rem; } }
-    .tag-archives .section-archive a:hover {
-      -webkit-filter: brightness();
-      filter: brightness(); }
 
 .tag-archives {
   background-color: #0082b9;
@@ -1124,7 +1128,8 @@ object {
 
 .tag-url {
   text-decoration: none;
-  color: black; }
+  color: black;
+  border: none; }
 
 a,
 a:visited,
@@ -1203,7 +1208,7 @@ a:active {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 550;
-  padding: 9% 5%;
+  padding: 11% 5%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1570,7 +1575,7 @@ a:active {
   position: fixed;
   top: 0;
   left: -2px;
-  height: 143px;
+  height: 138px;
   width: 101%;
   z-index: 2;
   padding: 0;
@@ -1585,7 +1590,7 @@ a:active {
   text-align: left;
   font-size: 22px; }
   .nav-description p {
-    padding: 2.5%; }
+    padding: 34px; }
   .nav-description img {
     height: 70px;
     width: 70px;

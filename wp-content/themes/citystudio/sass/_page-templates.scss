@@ -57,14 +57,20 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
+    -webkit-justify-content:   space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding-bottom: 4em;
     margin: 1.5rem 1.5em 0 1.5rem;
     box-sizing: border-box;
     padding: none;
+
     width: 90vw;
+    ul{
+        a{
+          border: none;
+        }
+      }
     li {
       background-position: center center !important;
       background-size: cover !important;
@@ -76,10 +82,6 @@
         height: 280px;
         font-size: 3rem;
       }
-    }
-    a:hover {
-      -webkit-filter: brightness();
-      filter:brightness();
     }
   }
 }
@@ -111,6 +113,7 @@
 .tag-url {
   text-decoration: none;
   color: black;
+  border: none;
 }
 a,
 a:visited,
