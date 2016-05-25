@@ -1186,6 +1186,7 @@ a:active {
     text-align: center;
     padding: 2%; }
   .homepage-partners button {
+    font-weight: bold;
     background-color: rgba(1, 152, 213, 0.8);
     color: white;
     padding: .5% 2%;
@@ -1202,7 +1203,7 @@ a:active {
   text-align: center;
   font-size: 1.2rem;
   font-weight: 550;
-  padding: 15% 5%;
+  padding: 9% 5%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1211,7 +1212,7 @@ a:active {
           justify-content: center;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, white 15%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0) 100%);
+  background: linear-gradient(to bottom, white 17%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
   /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
   /* IE6-9 */ }

@@ -60,6 +60,7 @@
     padding: 2%;
   }
   button {
+    font-weight: bold;
     background-color: rgba(1,152,213,.8);
     color: white;
     padding: .5% 2%;
@@ -77,12 +78,12 @@
     text-align: center;
     font-size: 1.2rem;
     font-weight: 550;
-    padding: 15% 5%;
+    padding: 9% 5%;
     display: flex;
     justify-content: center;
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 15%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 15%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 15%,rgba(255,255,255, .2) 50%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    background: -moz-linear-gradient(top, rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 ); /* IE6-9 */
   }
 .site-description {
