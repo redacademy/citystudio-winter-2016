@@ -23,7 +23,7 @@
 }
 .hero {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-box;
@@ -53,9 +53,7 @@
 
 .homepage-partners {
   width: 100vw;
-  height: 42vh;
   text-align: center;
-  padding-bottom: 2%;
   display: block;
   .partner-buttons {
     text-align: center;
@@ -76,11 +74,16 @@
     text-transform: uppercase;
   }
  .homepage-description{
-    text-align: center;  
-    font-size: 1.8rem;
-    font-weight:100;
-    padding: 2% 5%;
-
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 550;
+    padding: 15% 5%;
+    display: flex;
+    justify-content: center;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,1) 15%, rgba(0255,255,255, .7) 50%, rgba(0, 100, 150, 0) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 15%,rgba(255,255,255, 1) 50%,rgba(255,255,255, 0) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0) 15%,rgba(255,255,255, .7) 50%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 ); /* IE6-9 */
   }
 .site-description {
   margin: 0 auto;
@@ -91,7 +94,7 @@
   justify-content: space-around;
 
   a {border: none;
-  }
+    }
   p {
     @include desktop {
     align-items: center;
@@ -111,7 +114,7 @@
   @include desktop {
     margin: 0 auto;
     width: 70%;
-    height: 48%;
+    height: 250px;
   }
   p {
     font-size: 1.1rem;
@@ -145,7 +148,6 @@
   transition: width 0.5s ease-in;
     @include desktop {
       height: 100%;
-      /*background-color: #76d6ff;*/
       max-height: 70px;
       z-index: 5 !important;
       position: relative !important;
@@ -166,6 +168,7 @@
   border: 2px solid white;
   padding: 0.8rem;
   border-radius: 45px;
+  z-index: 2;
   background-color: #0082b9;
   padding-top: 1.4em;
   padding-bottom: 0.3em;
@@ -189,9 +192,9 @@
   margin: 1rem auto 1rem;
   @include desktop{
   position: relative !important;
-  flex-basis: 40%;
+  flex-basis: 25%;
   order: 1;
-  width: 40vw;
+  width: 30vw;
   min-width: 450px;
   margin: 2%;
   }
@@ -213,12 +216,19 @@
     margin: 0;
 }
 
+
+.neighbourhood,
+.partners,
+.years,
+.refresh {
+    width: 4.3rem;
+    border-radius: 70px;
+}
+
 .neighbourhood {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
-  width: 4.3rem;
   height: 2rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all .4s ease-in;
   @include desktop {
@@ -230,23 +240,19 @@
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 30px 40px;
-  width: 4.3rem;
   height: 4rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
     width: 4.35rem;
     height: 4.36rem;
-  background-size: 45px 60px;
+    background-size: 45px 60px;
   }
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 25px 30px;
-  width: 4.3rem;
   height: 4rem;
-  border-radius: 70px;
   background-color: #03648c;
   transition: all 1.8s ease-in;
   @include desktop {
@@ -258,9 +264,7 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  width: 4.3rem;
   height: 3.8rem;
-  border-radius: 70px;
   border: 2px solid white;
   background-color: #0082b9;
   transition: all 2s ease-in;
@@ -300,7 +304,8 @@
   .sub-menu-neigh span:hover,
   .sub-menu-part span:hover,
   .sub-menu-year span:hover {
-    color: $light-blue;
+    color: #ff8000;
+    font-weight: bold;
     cursor: pointer;
   }
 }
@@ -316,11 +321,11 @@
     width: 0;
     height: 0;
     border-style: solid;
-/*    border-width: 20px 20px 0;
-*/    border-color: #fff;
+    /*border-width: 20px 20px 0;*/
+    border-color: #fff;
     position: absolute;
-    bottom: -13px;
-    left: 38%;
+    bottom: 127px;
+    left: 35%;
   }
 }
 .part {
@@ -336,8 +341,8 @@
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
     position: absolute;
-    bottom: -13px;
-    left: 30%;
+    bottom: 102px;
+    left: 24%;
   }
 }
 .year {
@@ -353,7 +358,7 @@
     /*border-width: 20px 20px 0;*/
     border-color: #fff transparent transparent;
     position: absolute;
-    bottom: -13px;
+    bottom: 100px;
     left: 18%;
   }
 }
@@ -405,8 +410,9 @@
   border: 0.5px solid $dark-blue;
   bottom: -70px;
   text-align: center;
+   color: #ff8000;
+  font-weight: bold;
   label {
-    color: $medium-blue;
     &::after {
       content: '';
       width: 0;
@@ -423,21 +429,38 @@
 .sticky-navigation{
   display: inline-flex;
   float: left;
-  width: 40%;
+  padding: 35px;
 
 }
 .fixed{
-  position: fixed;
-  top:0; left:0; 
-  width: 480px; 
-  z-index: 1;
-  border-radius: 20px;
-  padding: .4%;
+    position: fixed;
+    top: 0;
+    left: -3px;
+    height: 143px;
+    width: 101%;
+    z-index: 2;
+    padding: 0;
     p {
-      display: flex;
-      margin-right: 12%;
+      margin-right: 120px;
+      margin-bottom: 0;
     }
-  background-color: rgba(255,255,255,.4); 
+    background-color: rgba(255,255,255, 1); 
+}
+
+.nav-description{
+  height: 8%;
+  margin-left: 40%;
+  text-align: left;
+  font-size: 22px;
+  p{
+    padding: 2.5%;
+
+  }
+  img{
+    height: 70px;
+    width: 70px;
+    margin-bottom: -27px;
+  }
 }
 .explore{
   padding: .4% 5% 0 0%;

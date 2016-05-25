@@ -11,19 +11,20 @@ jQuery(document).ready(function($){
     autoPlay: 3000
   });
 
-    // var header = $(".site-header");
      $(window).scroll(function(){
-      var sticky = $('.sticky-navigation'),
+      var sticky = $('.sticky-navigation');
+          description = $('.nav-description');
           scroll = $(window).scrollTop();
           offset = sticky.offset();
 
-      if (scroll >= offset.top) {
-         sticky.addClass('fixed');
+      if (scroll >= 1095) {
+         sticky.addClass("fixed");
+         description.addClass("fixed");
      }
-       if (scroll <= offset.top) {
-        sticky.removeClass('fixed');
-      }
-      else null;
+      else if (scroll <= 1095)  {
+        sticky.removeClass("fixed");
+         description.removeClass("fixed");
+    }
   });
 
 });
