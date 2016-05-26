@@ -1,491 +1,81 @@
-//-----------------------------------------
-// LANDING PAGE STYLES  -----------------------
+//--------------------------------------------------------*
+// -------------- HOME PAGE STYLES  ----------------------*
+
 .container {
   display: block;
-  .bx-viewport {
-    margin-top: 0;
-    margin-bottom: 5px;
-  }
 }
-.landing-gallery {
-  display: none;
-  @include desktop {
-    display: block;
-    height: 50px;
-    width: 50px;
-    margin-bottom: 0.3rem;
-    -webkit-align-self: flex-end;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    padding: 3rem;
-    float: right;
-  }
-}
+// -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
-  height: 65vh;
+  height: 85vh;
+  opacity: 0.75;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
+  // background-color:rgba(0, 0, 0, 0.4); //not working but should
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
-  display: flex;
+  display: block;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-}
-.hero-logo {
-  background: url("../../images/citystudio-logo-trans.png") no-repeat center;
-  background-size: 80vw;
-  height: 15vh;
-  margin: 4rem 2rem 1rem;
-  @include desktop {
-    background-size: 60vw;
-    height: 30vh;
-    margin: 0 2rem 1rem;
-  }
-}
-.orange{
-  color: #ff8000;
+  border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 }
 
+.homepage-description {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  font-family: $fontfamily;
+  padding: 8% 9%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  opacity: 1 !important;
+}
+
+//couldnt get variable going - riva **********************
+// $ciystudio-orange: #ff8000;
+
+.orange-font {
+  color: #db5100;
+}
+
+// -------------- PARTNER STYLES  ----------------------*
 .homepage-partners {
   width: 100vw;
   text-align: center;
   display: block;
+
+  h1 {
+  margin: 2rem 0 1rem 0;
+  letter-spacing: .1rem;
+}
+  p {
+  width: 70vw;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  font-family: $fontfamily;
+}
   .partner-buttons {
     text-align: center;
-    padding: 2%;
+    padding: 3%;
   }
   button {
     font-weight: bold;
     background-color: rgba(1,152,213,.8);
     color: white;
-    padding: .5% 2%;
-    margin: .3rem;
+    padding: 0.5% 2%;
+    margin: 1rem 1rem 2rem 1rem;
   }
-}
-  .partners-title{
-    text-align: center;
-    color: white;
-    margin-top: 2.5rem;
-    margin-bottom: -1.6rem;
-    text-transform: uppercase;
-  }
- .homepage-description{
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 550;
-    padding: 11% 5%;
-    display: flex;
-    justify-content: center;
-    background: -moz-linear-gradient(top, rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 ); /* IE6-9 */
-  }
-.site-description {
-  margin: 0 auto;
-  width: 70vw;
-  height: 48%;
-  display: flex;
-  padding: 6rem;
-  justify-content: space-around;
-
-  a {border: none;
-    }
-  p {
-    @include desktop {
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding-top: 7rem;
-    max-width: 80%;
-    font-size: 2rem;
-    color: white;
-    opacity: .8;
-    text-align: center;
-    font-family: $fontfamily;
-      font-size: 2.1rem;
-    }
-  }
-
-  @include desktop {
-    margin: 0 auto;
-    width: 70%;
-    height: 250px;
-  }
-  p {
-    font-size: 1.1rem;
-    color: white;
-    text-align: center;
-    font-family: $fontfamily;
-    @include desktop {
-      font-size: 1.7rem;
-    }
-  }
-}
-.loader {
-  opacity: 0.1;
-  border: none;
-  float: center;
-  margin-left: 900px;
-  padding: 2rem;
 }
 
-.nav-div {
-  background-color: #76d6ff;
-  max-height: 100%;
-  width: 50px;
-  margin-left: 6%;
-  margin-top: 4%;
-  border-radius: 70px;
-  display: flex;
-  flex-direction: row;
-
-  justify-content: space-between;
-  transition: width 0.5s ease-in;
-    @include desktop {
-      height: 100%;
-      max-height: 70px;
-      z-index: 5 !important;
-      position: relative !important;
-      width: 74px;
-      margin: 2%;
-      border-radius: 70px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      transition: width .5s ease-in;
-    }
-}
-
-.sort {
-  color: white;
-  font-weight: bold;
-  text-transform: uppercase;
-  border: 2px solid white;
-  padding: 0.8rem;
-  border-radius: 45px;
-  z-index: 2;
-  background-color: #0082b9;
-  padding-top: 1.4em;
-  padding-bottom: 0.3em;
-  span{
-    padding: 4%;
-  }
-  &:hover {
-    cursor: pointer;
-  }
-  @include desktop {
-  width: 100vw;
-  margin: 0;
-  max-width: 2.8rem;
-  height: 2.5rem;
-   }
-}
-
-.open{
-  min-width: 95vw;
-  width: 90%;
-  margin: 1rem auto 1rem;
-  @include desktop{
-  position: relative !important;
-  flex-basis: 25%;
-  order: 1;
-  width: 30vw;
-  min-width: 450px;
-  margin: 2%;
-  }
-}
-.close{
-  min-width: 20px;
-  @include desktop {
-    width: 5rem;
-  }
-}
-.close .refresh {
-  min-width: 20px;
-}
-.menu-item {
-  opacity: 0;
-}
-.open .menu-item{
-    opacity: 1;
-    margin: 0;
-}
-
-
-.neighbourhood,
-.partners,
-.years,
-.refresh {
-    width: 4.3rem;
-    border-radius: 70px;
-}
-
-.neighbourhood {
-  background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-  background-size: 20px 30px;
-  height: 2rem;
-  background-color: #03648c;
-  transition: all .4s ease-in;
-  @include desktop {
-    width: 4.35rem;
-    height: 4.36rem;
-    background-size: 35px 45px;
-  }
-}
-.partners {
-  background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 30px 40px;
-  height: 4rem;
-  background-color: #03648c;
-  transition: all 1s ease-in;
-  @include desktop {
-    width: 4.35rem;
-    height: 4.36rem;
-    background-size: 45px 60px;
-  }
-}
-.years {
-  background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 25px 30px;
-  height: 4rem;
-  background-color: #03648c;
-  transition: all 1.8s ease-in;
-  @include desktop {
-    width: 4.35rem;
-    height: 4.36rem;
-    background-size: 45px 45px;
-  }
-}
-.refresh {
-  background: url("../../assets/refresh.png") no-repeat center;
-  background-size: 35px 35px;
-  height: 3.8rem;
-  border: 2px solid white;
-  background-color: #0082b9;
-  transition: all 2s ease-in;
-  @include desktop {
-    width: 4.35rem;
-    height: 4.2rem;
-    background-size: 45px 45px;
-  }
-}
-/* Footer Navigation Menu */
-.foot-sub-menu input[type=checkbox] {
-    display: none;
-}
-.current-menu {
-  display: block;
-}
-.foot-sub-menu {
-  display: none;
-  justify-content: space-between;
-  background-color: #fff;
-  margin-left: 1.2em; 
-  margin-top: 2em; 
-  margin-bottom: -0.4em; 
-  padding: 0.5em;
-  border-radius: 8px;
-  border: 0.5px solid $dark-blue;
-  &:hover {
-    cursor: pointer;
-  }
-  .sub-menu-neigh span,
-  .sub-menu-part span {
-    color: $medium-blue;
-  }
-  .sub-menu-year span {
-    color: $medium-blue;
-  }
-  .sub-menu-neigh span:hover,
-  .sub-menu-part span:hover,
-  .sub-menu-year span:hover {
-    color: #ff8000;
-    font-weight: bold;
-    cursor: pointer;
-  }
-}
-.menu-item {
-  position: relative;
-}
-.neigh {
-  position: absolute;
-  bottom: -128px;
-  left: -55px;
-  &::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    /*border-width: 20px 20px 0;*/
-    border-color: #fff;
-    position: absolute;
-    bottom: 127px;
-    left: 35%;
-  }
-}
-.part {
-  position: absolute;
-  bottom: -105px;
-  left: -25px;
-  &::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    color: $medium-blue;
-    /*border-width: 20px 20px 0;*/
-    border-color: #fff;
-    position: absolute;
-    bottom: 102px;
-    left: 24%;
-  }
-}
-.year {
-  position: absolute;
-  bottom: -105px;
-  left: -15px;
-  padding-right: 1.1em;
-  &::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    /*border-width: 20px 20px 0;*/
-    border-color: #fff transparent transparent;
-    position: absolute;
-    bottom: 100px;
-    left: 18%;
-  }
-}
-.current-menu {
-  display: block;
-}
-.menu-title {
-  font-weight: bold;
-  color: $dark-blue;
-}
-.show-label {
-  display: block;
-  color: $dark-blue;
-  background: #fff;
-  padding: 1em;
-}
-  .show-label:hover{
-      transition-delay:4s;
-  }
-  .neigh-labels {
-    min-width: 120px;
-    right: 55%;
-      label::after  {
-        left: 36%;
-      }
-  }
-  .part-labels {
-    min-width: 80px;
-    right: 27%;
-      label::after  {
-        left: 31%;
-      }
-  }
-  .year-labels  {
-    min-width: 80px;
-    right: 27%;
-      label::after  {
-        left: 32%;
-      }
-  }
-.neigh-labels,
-.part-labels,
-.year-labels {
-  display: none;
-  position: relative;
-  background-color: #fff;
-  padding: 0.5em 0.8em;
-  border-radius: 8px;
-  border: 0.5px solid $dark-blue;
-  bottom: -70px;
+.partners-title {
   text-align: center;
-   color: #ff8000;
-  font-weight: bold;
-  label {
-    &::after {
-      content: '';
-      width: 0;
-      height: 0;
-      border-style: solid;
-      /*border-width: 20px 20px 0;*/
-      border-color: #fff transparent transparent;
-      position: absolute;
-      bottom: -13px;
-    }
-  }
-}
-
-.sticky-navigation{
-  display: inline-flex;
-  float: left;
-  padding: 30px;
-
-}
-.fixed{
-    position: fixed;
-    top: 0;
-    left: -2px;
-    height: 138px;
-    width: 101%;
-    z-index: 2;
-    padding: 0;
-    p {
-      margin-right: 120px;
-      margin-bottom: 0;
-    }
-    background-color: rgba(255,255,255, 1); 
-}
-
-.nav-description{
-  height: 8%;
-  margin-left: 40%;
-  text-align: left;
-  font-size: 22px;
-  p{
-    padding: 34px;
-
-  }
-  img{
-    height: 70px;
-    width: 70px;
-    margin-bottom: -27px;
-  }
-}
-.explore{
-  padding: .4% 5% 0 0%;
-  position: relative;
+  color: white;
+  margin-top: 2.5rem;
   text-transform: uppercase;
-  font-weight: bold;
-  font-size: 3.5rem;
-   display: flex;
-   text-align: center;
-  justify-content: flex-end;
-}
-.title{
-  padding-left: 12%;
-  padding-top: 1%;
-  width: 98%;
-  font-weight: bold;
-  font-size: 26px;
-}
-
-.social-icons{
-  display: inline-flex;
-  justify-content: space-between;
-  padding: 2%;
-  p{
-    padding-left: 2%;
-  }
 }

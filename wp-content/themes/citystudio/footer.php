@@ -6,7 +6,7 @@
 ?>
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				
+
 				<div class="contact-information">
 				</div>
 
@@ -28,7 +28,7 @@
 					</p>
 					<p>
 						<a href="http://www.youtube.com/user/CityStudioVancouver">
-							<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio Twitter Feed" />
+							<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio YouTube Feed" />
 						</a>
 					</p>
 				</div>
