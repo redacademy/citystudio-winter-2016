@@ -28,23 +28,25 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html('Skip to content'); ?></a>
 
-				<header id="masthead" class="site-header" role="banner">
-					<div class="header-container">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="header-container">
 
-						<div class="site-branding">
-						   <a href="<?php echo esc_url(home_url([1]));?>">
-				            <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
-				          </a>
-						</div><!-- .site-branding -->
+				<div class="site-branding">
+					<a href="<?php echo esc_url(home_url([1]));?>">
+				    <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				  </a>
+				</div><!-- .site-branding -->
 
-						<div class="search-gallery">
-							<span class="icon-search" aria-hidden="true">
-								<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
-							</span>
-						<div class="icon-menu" style="color: #76d6ff;">
-							<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
-						</div>
-						</div>
-					</div>
-				</header><!-- #masthead -->
+				<div class="search-gallery">
+					<span class="icon-search" aria-hidden="true">
+						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
+					</span>
+
+
+				<div class="icon-menu">
+					<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
+				</div>
+	</div>
+			</div> 	<!--close header container -->
+		</header><!-- #masthead -->
 <div id="content" class="site-content">
