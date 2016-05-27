@@ -1132,10 +1132,9 @@ a:active {
   font-weight: bold;
   font-family: "open_sans";
   padding: 13% 9%;
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, white 17%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+ */
+  /*background: -moz-linear-gradient(top, rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
+  /*  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
+  /*  background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 40%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+ */
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
