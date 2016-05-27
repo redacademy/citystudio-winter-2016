@@ -44,7 +44,7 @@
 
 
 				<div class="icon-menu">
-					<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
+					 <button onclick="myFunction()" class="hamburger-menu"><i class="fa fa-bars"></i></button>
 				</div>
 	</div>
 			</div> 	<!--close header container -->
