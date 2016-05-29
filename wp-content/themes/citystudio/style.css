@@ -728,8 +728,8 @@ a {
   text-decoration: none;
   padding: 6%;
   display: block;
-  border-bottom: 3px solid grey !important;
-  border-left: 3px solid black !important;
+  border-bottom: 2px solid grey !important;
+  border-left: 2px solid black !important;
   font-size: 20px; }
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
@@ -807,7 +807,7 @@ a {
   height: 43px; }
 
 .header-nav ul > li:hover ul li:last-child {
-  border-bottom: 3px solid black; }
+  border-bottom: 2px solid black; }
 
 /*--------------------------------------------------------------
 # Widgets
