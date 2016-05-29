@@ -7,7 +7,7 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
-  height: 80vh;
+  height: 75vh;
   opacity: 0.8;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
@@ -29,10 +29,10 @@
   font-size: 1.2rem;
   font-weight: bold;
   font-family: $fontfamily;
-  padding: 13% 9%;
-  /*background: -moz-linear-gradient(top, rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
-/*  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
-/*  background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 40%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+ */
+  padding: 15% 9%;
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  rgba(255,255,255,1) 17%,rgba(255,255,255, .3) 40%,rgba(255,255,255, 0 ) 100%); /* W3C, IE10+, FF16+, Chrome26+  */
   display: flex;
   justify-content: center;
   z-index: 1;

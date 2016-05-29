@@ -29,3 +29,15 @@ jQuery(document).ready(function($){
 
 });
 
+function myFunction() {
+    document.getElementById("hamburgerMenu").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(e) {
+  e.preventDefault;
+
+  ('dropdown-content').show;
+
+}
+
