@@ -44,8 +44,40 @@
 
 
 				<div class="icon-menu">
-					<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
+					<button onclick="myFunction()" class="hamburger"><i class="fa fa-bars"></i></button>
+					  <div id="hamburgerMenu" class="dropdown-content">
+					 <nav class="header-nav">
+					    <ul>
+					        <li><a href="#">Home</a></li>
+					        <li>
+					            <a href="#">About<img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					            <ul>
+					                <li><a href="#">Vision</a></li>
+					                <li><a href="#">5 Programs</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Partners</a></li>
+					        <li><a href="#">Courses <img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					            <ul>
+					                <li><a href="#">Studio</a></li>
+					                <li><a href="#">Campus</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Projects</a></li>
+					        <li><a href="#">Consulting <img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					        	 <ul>
+					                <li><a href="#">Speaking</a></li>
+					                <li><a href="#">Tours</a></li>
+					                <li><a href="#">Art of Cities</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Blog</a></li>
+					        <li><a href="#">People</a></li>
+					        <li><a href="#">Contact Us</a></li>
+					    </ul>
+					</nav>
 				</div>
+				
 	</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->

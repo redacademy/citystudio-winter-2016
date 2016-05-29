@@ -51,8 +51,10 @@
   }
 }
 .icon-menu {
+  
   font-size: 4rem;
   margin-left: 3rem;
+
   margin-top: 0.15rem;
   @include desktop {
     font-size: 2.5rem;
@@ -60,4 +62,107 @@
   .fa {
     color: $medium-blue;
   }
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 190px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  margin-left: -135px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  padding: 6%;
+  display: block;
+  border-bottom: 3px solid black !important;
+  border-left: 2px solid black !important;
+  font-size: 20px;
+    ul li{
+      border-left: 2px solid black !important;
+
+    }
+}
+
+.hamburger{
+  background-color: white;
+  border: none;
+  font-size: 32px;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.show {
+  display:block;
+}
+
+.header-nav{
+  /*margin: -12px;*/
+  margin-top: 0;
+}
+
+.header-nav ul {
+    *zoom:1;
+    list-style:none;
+    margin:0;
+    padding:0;
+    background: #f9f9f9;
+    border-left: 2px solid black;
+}
+.header-nav ul:before,.header-nav ul:after {
+    content:"";
+    display:table;
+}
+.header-nav ul:after {
+    clear:both;
+}
+.header-nav ul > li {
+    position:relative;
+    a{
+      img{
+        width: 30px;
+        height: 30px;
+        float: left;
+        margin-left: -9px;
+      }
+    }
+}
+.header-nav a {
+    display:block;
+    padding:10px 20px;
+    line-height:1.2em;
+    color:#fff;
+    border-left:1px solid #595959;
+}
+.header-nav a:hover {
+    text-decoration:none;
+    background:#595959;
+
+}
+.header-nav li ul {
+    position:absolute;
+    /*left:-145px;*/
+    z-index: 2;
+    top:36px;
+    left:36px;
+    background-color: #f9f9f9;
+
+}
+
+.header-nav li ul li {
+    overflow:hidden;
+    height:0;
+    width: 100%;
+    -webkit-transition:height 200ms ease-in;
+    -moz-transition:height 200ms ease-in;
+    -o-transition:height 200ms ease-in;
+    transition:height 200ms ease-in;
+}
+.header-nav ul > li:hover ul li {
+    height:36px;
+    /*width: 100%;*/
 }
