@@ -85,6 +85,7 @@
 .open .menu-item {
   opacity: 1;
   margin: 0;
+  transition: all 1s ease-in;
 }
 .neighbourhood,
 .partners,
@@ -298,6 +299,7 @@
   float: left;
   padding: 0;
   height: 115px;
+  padding-left: 150px;
   transition: height 1.2s ease;
 }
 .fixed {
@@ -317,28 +319,34 @@
 }
 
 .sticky-navigation.fixed{
-  transition: all .3s ease;
-  padding-top: 10px;
+  transition: all .4s ease;
+  padding-top: 5px;
+  padding-left: 150px;
 
 }
 .nav-description.fixed{
   transition: all 1.2s ease;
   padding-top: 10px;
-  left: 0;
+  margin-left: 700px;
+   p {
+    padding: 2px;
+    width: 40%;
+  }
 }
 .nav-description {
+  transition: all 1s ease;
   height: 80px;
-  margin-left: 40%;
+  margin-left: 48%;
   text-align: left;
   font-size: 22px;
   font-family: $fontfamily;
   p {
-    padding: 18px;
-  }
+    padding: 2px;
+    width: 600px;}
   img {
-    height: 70px;
-    width: 70px;
-    margin-bottom: -27px;
+    height: 60px;
+    width: 60px;
+    margin-bottom: -20px;
   }
 }
 .explore {

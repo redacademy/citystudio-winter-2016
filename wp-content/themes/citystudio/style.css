@@ -688,7 +688,7 @@ a {
   margin-right: 0.5rem; }
   @media screen and (min-width: 480px) {
     .search-gallery {
-      margin-right: 2rem; } }
+      margin-right: 4rem; } }
 
 .icon-search {
   font-size: 1.75rem; }
@@ -718,7 +718,7 @@ a {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  width: 235px;
+  width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-left: -180px;
   z-index: 1; }
@@ -786,7 +786,7 @@ a {
   z-index: 2;
   line-height: 1.1em;
   top: 36px;
-  left: 56px;
+  left: 80px;
   background-color: #f9f9f9;
   border-top: none;
   border-bottom: none;
@@ -795,6 +795,7 @@ a {
 .header-nav li ul:nth-child(1) {
   left: 80px; }
 
+/* second dropdown UL */
 .header-nav li ul li {
   overflow: hidden;
   height: 0;
@@ -894,9 +895,12 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row; }
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
   .site-links ul {
     margin-left: 2rem; }
   .site-links li:hover {
@@ -1249,7 +1253,7 @@ a:active {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "open_sans";
-  padding: 15% 9%;
+  padding: 9% 9%;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
   background: linear-gradient(to bottom, white 17%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%);
@@ -1482,7 +1486,8 @@ li {
 
 .open .menu-item {
   opacity: 1;
-  margin: 0; }
+  margin: 0;
+  transition: all 1s ease-in; }
 
 .neighbourhood,
 .partners,
@@ -1689,6 +1694,7 @@ li {
   float: left;
   padding: 0;
   height: 115px;
+  padding-left: 150px;
   transition: height 1.2s ease; }
 
 .fixed {
@@ -1706,26 +1712,32 @@ li {
     margin-bottom: 0; }
 
 .sticky-navigation.fixed {
-  transition: all .3s ease;
-  padding-top: 10px; }
+  transition: all .4s ease;
+  padding-top: 5px;
+  padding-left: 150px; }
 
 .nav-description.fixed {
   transition: all 1.2s ease;
   padding-top: 10px;
-  left: 0; }
+  margin-left: 700px; }
+  .nav-description.fixed p {
+    padding: 2px;
+    width: 40%; }
 
 .nav-description {
+  transition: all 1s ease;
   height: 80px;
-  margin-left: 40%;
+  margin-left: 48%;
   text-align: left;
   font-size: 22px;
   font-family: "open_sans"; }
   .nav-description p {
-    padding: 18px; }
+    padding: 2px;
+    width: 600px; }
   .nav-description img {
-    height: 70px;
-    width: 70px;
-    margin-bottom: -27px; }
+    height: 60px;
+    width: 60px;
+    margin-bottom: -20px; }
 
 .explore {
   padding: 0.4% 5% 0 0;

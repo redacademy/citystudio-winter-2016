@@ -15,6 +15,8 @@
 					<li>Courses</li>
 					<li>Projects</li>
 				</ul>
+				</div>
+				<div class="site-links">
 				<ul>
 					<li>Consulting</li>
 					<li>Blog</li>
