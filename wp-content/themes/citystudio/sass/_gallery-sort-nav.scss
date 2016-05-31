@@ -11,25 +11,23 @@
   background-color: #76d6ff;
   max-height: 100%;
   width: 50px;
-  margin-left: 6%;
-  margin-top: 4%;
   border-radius: 70px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: width 0.5s ease-in;
+  transition: width 1s ease-in;
   @include desktop {
     height: 100%;
     max-height: 70px;
-    z-index: 5 !important;
+    z-index: 2 !important;
     position: relative !important;
     width: 74px;
-    margin: 2%;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    transition: width 0.5s ease-in;
+    transition: width .8s ease-in;
+    margin: 22px 32px;
   }
 }
 .sort {
@@ -54,19 +52,21 @@
     margin: 0;
     max-width: 2.8rem;
     height: 2.5rem;
+    transition: all 1s ease-in;
   }
 }
 .open {
-  min-width: 95vw;
+  min-width: 100vw;
   width: 90%;
-  margin: 1rem auto;
+  transition: all .8s ease-in;
   @include desktop {
     position: relative !important;
     flex-basis: 25%;
     order: 1;
     width: 30vw;
     min-width: 450px;
-    margin: 2%;
+      transition: all 1s ease-in;
+
   }
 }
 .close {
@@ -295,13 +295,16 @@
 .sticky-navigation {
   display: inline-flex;
   float: left;
-  padding: 30px;
+  padding: 0;
+  height: 115px;
+  transition: height 1.8s ease;
 }
 .fixed {
   position: fixed;
   top: 0;
   left: -2px;
-  height: 138px;
+  padding-top: 20px;
+  height: 125px;
   width: 101%;
   z-index: 2;
   padding: 0;
@@ -311,14 +314,25 @@
   }
   background-color: rgba(255,255,255, 1);
 }
+
+.sticky-navigation.fixed{
+  transition: all .3s ease;
+  padding-top: 10px;
+
+}
+.nav-description.fixed{
+  transition: all 1.2s ease;
+  padding-top: 10px;
+  left: 0;
+}
 .nav-description {
-  height: 8%;
+  height: 80px;
   margin-left: 40%;
   text-align: left;
   font-size: 22px;
   font-family: $fontfamily;
   p {
-    padding: 24px;
+    padding: 18px;
   }
   img {
     height: 70px;
@@ -342,4 +356,8 @@
   width: 98%;
   font-weight: bold;
   font-size: 26px;
+}
+
+.gallery-description-container{
+  height: 12px;
 }
