@@ -1231,11 +1231,7 @@ a:active {
 
 .hero {
   width: 100%;
-<<<<<<< HEAD
   height: 75vh;
-=======
-  height: 85vh;
->>>>>>> e85ba082981678819ffbdcf9f0e37fce45ec4930
   opacity: 0.8;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
@@ -1253,7 +1249,6 @@ a:active {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "open_sans";
-<<<<<<< HEAD
   padding: 15% 9%;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
@@ -1262,9 +1257,6 @@ a:active {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-=======
-  padding: 8% 8%;
->>>>>>> e85ba082981678819ffbdcf9f0e37fce45ec4930
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1697,14 +1689,14 @@ li {
   float: left;
   padding: 0;
   height: 115px;
-  transition: height 1.8s ease; }
+  transition: height 1.2s ease; }
 
 .fixed {
   position: fixed;
   top: 0;
   left: -2px;
   padding-top: 20px;
-  height: 125px;
+  height: 120px;
   width: 101%;
   z-index: 2;
   padding: 0;
