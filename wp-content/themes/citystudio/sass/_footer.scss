@@ -16,14 +16,15 @@
   font-size: .8rem;
   line-height: 1.4rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  justify-content: space-between;
   ul{
     margin-left: 2rem;
   }
   li:hover{
   color: lighten($citystudio-grey, .9);
   cursor: pointer;
-}
+  }
 }
 /* Footer Social Links */
 .social-icons-div {

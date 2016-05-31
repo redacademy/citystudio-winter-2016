@@ -66,5 +66,5 @@
 
 </div>
 <div class="nav-description">
- <p> This is an <b> interactive gallery! </b> use the <img src="<?php bloginfo('template_directory'); ?>/images/sort.png"> to filter through the gallery.</p>
+ <p> This is an <b> interactive gallery! </b> use the <img src="<?php bloginfo('template_directory'); ?>/images/sort.png">  button to filter through the gallery.</p>
 </div>
