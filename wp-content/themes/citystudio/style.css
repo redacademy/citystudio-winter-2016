@@ -1374,7 +1374,7 @@ li {
 .nav-div {
   background-color: #76d6ff;
   max-height: 100%;
-  width: 50px;
+  width: 150px;
   border-radius: 70px;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1432,7 +1432,7 @@ li {
 .open {
   min-width: 100vw;
   width: 90%;
-  transition: all .8s ease-in; }
+  transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
       position: relative !important;
@@ -1442,7 +1442,7 @@ li {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
-      width: 30vw;
+      width: 24vw;
       min-width: 450px;
       transition: all 1s ease-in; } }
 
@@ -1450,10 +1450,12 @@ li {
   min-width: 20px; }
   @media screen and (min-width: 480px) {
     .close {
-      width: 5rem; } }
+      width: 5rem;
+      transition: all 1s ease-in; } }
 
 .close .refresh {
-  min-width: 20px; }
+  min-width: 25px;
+  transition: width 1s ease-in; }
 
 .menu-item {
   opacity: 0; }
