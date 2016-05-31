@@ -872,11 +872,38 @@ a {
 .social-icons ul {
   list-style: none; }
 
-@media screen and (min-width: 480px) {
-  .site-footer {
-    background: #006496;
-    z-index: 9999; } }
+.site-footer {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #006496;
+  z-index: 9999; }
 
+/* Footer Navigation */
+.site-links {
+  color: white;
+  font-family: "open_sans";
+  font-size: .8rem;
+  line-height: 1.4rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .site-links ul {
+    margin-left: 2rem; }
+  .site-links li:hover {
+    color: #969ca1;
+    cursor: pointer; }
+
+/* Footer Social Links */
 .social-icons-div {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -884,6 +911,7 @@ a {
   -webkit-justify-content: flex-end;
       -ms-flex-pack: end;
           justify-content: flex-end;
+  float: right;
   padding: 4% 2% 0;
   right: 12px; }
   .social-icons-div a {
@@ -894,7 +922,8 @@ a {
   width: 1.5rem;
   margin: 1rem; }
   .social-icons:hover {
-    cursor: pointer; }
+    cursor: pointer;
+    color: #77d6ff; }
   @media screen and (min-width: 480px) {
     .social-icons {
       z-index: 1;
@@ -911,15 +940,6 @@ a {
       height: 2.5rem;
       width: 2.5rem;
       margin-top: .8rem; } }
-
-/* Footer Navigation */
-.nav {
-  width: 95vw;
-  margin: 0 auto; }
-  @media screen and (min-width: 480px) {
-    .nav {
-      width: 50vw;
-      margin: 0; } }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1211,7 +1231,11 @@ a:active {
 
 .hero {
   width: 100%;
+<<<<<<< HEAD
   height: 75vh;
+=======
+  height: 85vh;
+>>>>>>> e85ba082981678819ffbdcf9f0e37fce45ec4930
   opacity: 0.8;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
@@ -1229,6 +1253,7 @@ a:active {
   font-size: 1.2rem;
   font-weight: bold;
   font-family: "open_sans";
+<<<<<<< HEAD
   padding: 15% 9%;
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
@@ -1237,6 +1262,9 @@ a:active {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+=======
+  padding: 8% 8%;
+>>>>>>> e85ba082981678819ffbdcf9f0e37fce45ec4930
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;

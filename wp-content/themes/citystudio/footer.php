@@ -7,7 +7,20 @@
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
 
-				<div class="contact-information">
+				<div class="site-links">
+				<ul>
+					<li>Home</li>
+					<li>About</li>
+					<li>Partners</li>
+					<li>Courses</li>
+					<li>Projects</li>
+				</ul>
+				<ul>
+					<li>Consulting</li>
+					<li>Blog</li>
+					<li>People</li>
+					<li>Contact Us</li>
+				</ul>
 				</div>
 
 				<div class="social-icons-div">

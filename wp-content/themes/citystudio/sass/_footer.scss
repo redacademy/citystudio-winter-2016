@@ -1,13 +1,35 @@
 
 .site-footer{
-  @include desktop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   background: $dark-blue;
   z-index: 9999;
+    @include desktop {
   }
 }
+
+/* Footer Navigation */
+.site-links{
+  color: white;
+  font-family: $fontfamily;
+  font-size: .8rem;
+  line-height: 1.4rem;
+  display: flex;
+  flex-direction: row;
+  ul{
+    margin-left: 2rem;
+  }
+  li:hover{
+  color: lighten($citystudio-grey, .9);
+  cursor: pointer;
+}
+}
+/* Footer Social Links */
 .social-icons-div {
   display: flex;
   justify-content: flex-end;
+  float: right;
   a{
     border: none;
   }
@@ -20,6 +42,7 @@
   margin: 1rem;
   &:hover {
     cursor: pointer;
+    color: lighten($lightest-blue, .1);
   }
   @include desktop {
     z-index: 1;
@@ -37,14 +60,5 @@
     height: 2.5rem;
     width: 2.5rem;
     margin-top: .8rem;
-  }
-}
-/* Footer Navigation */
-.nav {
-  width: 95vw;
-  margin: 0 auto;
-  @include desktop {
-    width: 50vw;
-    margin: 0;
   }
 }
