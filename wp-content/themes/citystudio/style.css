@@ -1409,14 +1409,14 @@ li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  transition: width 1s ease-in; }
+  transition: width 2s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
       height: 100%;
-      max-height: 70px;
+      max-height: 80px;
       z-index: 2 !important;
       position: relative !important;
-      width: 74px;
+      width: 81px;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1435,14 +1435,11 @@ li {
   font-weight: bold;
   text-transform: uppercase;
   border: 2px solid white;
-  padding: 0.8rem;
+  padding: 18px 19px;
   border-radius: 45px;
+  margin-top: 0 auto;
   z-index: 2;
-  background-color: #0082b9;
-  padding-top: 1.4em;
-  padding-bottom: 0.3em; }
-  .sort span {
-    padding: 4%; }
+  background-color: #0082b9; }
   .sort:hover {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
@@ -1452,11 +1449,15 @@ li {
       max-width: 2.8rem;
       height: 2.5rem;
       transition: all 1s ease-in; } }
+  .sort label {
+    transition: all 1s ease-in;
+    font-size: 22px;
+    margin: 0 -7px; }
 
 .open {
   min-width: 100vw;
   width: 90%;
-  transition: all 1s ease-in; }
+  transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
       position: relative !important;
@@ -1466,28 +1467,28 @@ li {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
-      width: 25vw;
-      min-width: 450px;
+      min-width: 510px;
       transition: all 1s ease-in; } }
 
 .close {
-  min-width: 20px; }
+  min-width: 20px;
+  transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .close {
-      width: 5rem;
-      transition: all 1s ease-in; } }
+      width: 5rem; } }
 
 .close .refresh {
   min-width: 25px;
   transition: width 1s ease-in; }
 
 .menu-item {
-  opacity: 0; }
+  opacity: 0;
+  transition: all 3s ease-in; }
 
 .open .menu-item {
   opacity: 1;
   margin: 0;
-  transition: all 1s ease-in; }
+  transition: all 2s ease-in; }
 
 .themes,
 .partners,
@@ -1501,11 +1502,11 @@ li {
   background-size: 20px 30px;
   height: 2rem;
   background-color: #03648c;
-  transition: all 0.4s ease-in; }
+  transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .themes {
-      width: 4.35rem;
-      height: 4.36rem;
+      width: 5rem;
+      height: 5rem;
       background-size: 35px 45px; } }
 
 .partners {
@@ -1513,11 +1514,11 @@ li {
   background-size: 30px 40px;
   height: 4rem;
   background-color: #03648c;
-  transition: all 1s ease-in; }
+  transition: all 1.5s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 4.35rem;
-      height: 4.36rem;
+      width: 5rem;
+      height: 5rem;
       background-size: 45px 60px; } }
 
 .years {
@@ -1525,11 +1526,11 @@ li {
   background-size: 25px 30px;
   height: 4rem;
   background-color: #03648c;
-  transition: all 1.8s ease-in; }
+  transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 4.35rem;
-      height: 4.36rem;
+      width: 5rem;
+      height: 5rem;
       background-size: 45px 45px; } }
 
 .refresh {
@@ -1538,11 +1539,11 @@ li {
   height: 3.8rem;
   border: 2px solid white;
   background-color: #0082b9;
-  transition: all 2s ease-in; }
+  transition: all 2.3s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 4.35rem;
-      height: 4.2rem;
+      width: 5rem;
+      height: 4.8rem;
       background-size: 45px 45px; } }
 
 .nav-sub-menu input[type=checkbox] {
@@ -1639,27 +1640,33 @@ li {
 .show-label {
   display: block;
   color: #006496;
-  background: #fff;
+  background: white;
   padding: 1em; }
 
 .show-label:hover {
   transition-delay: 4s; }
 
 .theme-labels {
-  min-width: 120px;
-  right: 55%; }
+  width: 46px;
+  right: 0px;
+  top: 0;
+  height: 56px; }
   .theme-labels label::after {
     left: 36%; }
 
 .part-labels {
-  min-width: 80px;
-  right: 27%; }
+  width: 46px;
+  height: 52px;
+  right: 0;
+  top: 0; }
   .part-labels label::after {
     left: 31%; }
 
 .year-labels {
-  min-width: 80px;
-  right: 27%; }
+  width: 48px;
+  right: 9%;
+  top: 0;
+  height: 52px; }
   .year-labels label::after {
     left: 32%; }
 
@@ -1669,13 +1676,14 @@ li {
   display: none;
   position: relative;
   background-color: #fff;
-  padding: 0.5em 0.8em;
-  border-radius: 8px;
-  border: 0.5px solid #006496;
-  bottom: -70px;
+  width: 85px;
+  height: 79px;
+  border-radius: 45px;
+  border: 1.5px solid #006496;
   text-align: center;
-  color: #ff8000;
-  font-weight: bold; }
+  color: #00A0DC;
+  font-weight: 700;
+  word-wrap: break-word; }
   .theme-labels label::after,
   .part-labels label::after,
   .year-labels label::after {

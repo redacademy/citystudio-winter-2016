@@ -19,7 +19,6 @@ jQuery(document).ready(function($){
           offset = nav.offset().top;
 
       if (scroll >= offset) {
-        console.log(offset);
          sticky.addClass("fixed");
          description.addClass("fixed");
      }
