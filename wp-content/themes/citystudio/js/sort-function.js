@@ -8,13 +8,13 @@ jQuery(document).ready(function($) {
 
   // queryFilter holds an empty object for the checked navigation values/properties
   var queryFilter = {
-    neighbourhoods: '',
+    themes: '',
     partners: '',
     year: ''
   }
 
   // values for input names
-  checkedNeigh = '',
+  checkedTheme = '',
   checkedPart = '',
   checkedYear = '';
 
@@ -33,17 +33,17 @@ jQuery(document).ready(function($) {
   }); // close sort
 
   $('#refresh').click(function() {
-    checkedNeigh = '';
+    checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
 
     queryFilter = {
-      neighbourhoods: '',
+      themes: '',
       partners: '',
       year: ''
     }
 
-    $('.neigh-labels').empty().hide();
+    $('.theme-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
     reloadProjects();
@@ -65,15 +65,15 @@ jQuery(document).ready(function($) {
 
   // Create an empty object to hold
   // the checked navigation values in the properties
-  $('.sub-menu-neigh').click(function() {
+  $('.sub-menu-theme').click(function() {
     if ($(this.checked)) {
-      queryFilter.neighbourhoods = $(this).find('input').val();
-      checkedNeigh = ($(this).text()).trim();
+      queryFilter.themes = $(this).find('input').val();
+      checkedTheme = ($(this).text()).trim();
 
-      $('.neigh-labels')
+      $('.theme-labels')
           .show()
-          .append('<label>' + checkedNeigh + '</label>');
-
+          .append('<label>' + checkedTheme + '</label>');
+          debugger;
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
@@ -156,13 +156,13 @@ jQuery(document).ready(function($) {
                 $.each(response, function(index, value) {
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
-                  function featured() {
-                    if ( value.featured_project[0] === '1') {
-                      return 'featured-rectangle';
-                    } else {
-                      return 'featured-square';
-                    }
-                  }
+                  // function featured() {
+                  //   if ( value.featured_project[0] === '1') {
+                  //     return 'featured-rectangle';
+                  //   } else {
+                  //     return 'featured-square';
+                  //   }
+                  // }
 
                   if ( !value.placeholder ) {
 

@@ -1489,21 +1489,21 @@ li {
   margin: 0;
   transition: all 1s ease-in; }
 
-.neighbourhood,
+.themes,
 .partners,
 .years,
 .refresh {
   width: 4.3rem;
   border-radius: 70px; }
 
-.neighbourhood {
+.themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
   height: 2rem;
   background-color: #03648c;
   transition: all 0.4s ease-in; }
   @media screen and (min-width: 480px) {
-    .neighbourhood {
+    .themes {
       width: 4.35rem;
       height: 4.36rem;
       background-size: 35px 45px; } }
@@ -1566,12 +1566,12 @@ li {
   border: 0.5px solid #006496; }
   .foot-sub-menu:hover {
     cursor: pointer; }
-  .foot-sub-menu .sub-menu-neigh span,
+  .foot-sub-menu .sub-menu-theme span,
   .foot-sub-menu .sub-menu-part span {
     color: #0082b9; }
   .foot-sub-menu .sub-menu-year span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-neigh span:hover,
+  .foot-sub-menu .sub-menu-theme span:hover,
   .foot-sub-menu .sub-menu-part span:hover,
   .foot-sub-menu .sub-menu-year span:hover {
     color: #ff8000;
@@ -1581,11 +1581,11 @@ li {
 .menu-item {
   position: relative; }
 
-.neigh {
+.theme {
   position: absolute;
   bottom: -128px;
   left: -55px; }
-  .neigh::after {
+  .theme::after {
     content: '';
     width: 0;
     height: 0;
@@ -1644,10 +1644,10 @@ li {
 .show-label:hover {
   transition-delay: 4s; }
 
-.neigh-labels {
+.theme-labels {
   min-width: 120px;
   right: 55%; }
-  .neigh-labels label::after {
+  .theme-labels label::after {
     left: 36%; }
 
 .part-labels {
@@ -1662,7 +1662,7 @@ li {
   .year-labels label::after {
     left: 32%; }
 
-.neigh-labels,
+.theme-labels,
 .part-labels,
 .year-labels {
   display: none;
@@ -1675,7 +1675,7 @@ li {
   text-align: center;
   color: #ff8000;
   font-weight: bold; }
-  .neigh-labels label::after,
+  .theme-labels label::after,
   .part-labels label::after,
   .year-labels label::after {
     content: '';

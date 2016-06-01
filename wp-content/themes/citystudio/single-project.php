@@ -118,8 +118,8 @@ get_header();
         </span>
 
         <span class="proj-subtitle proj-detail-wrap">
-          <h3>Neighbourhood:</h3>
-          <?php  $terms = get_the_terms( $post, 'neighbourhoods' );
+          <h3>Themes:</h3>
+          <?php  $terms = get_the_terms( $post, 'themes' );
             if ( !empty($terms)) : ?>
               <?php foreach ( $terms as $term )  : ?>
                   <?php echo $term->name; ?>
@@ -197,13 +197,13 @@ get_header();
 
     				      <?php endforeach; ?>
     				      <?php endif; ?>
-    				      <?php  $terms = get_the_terms( $id, 'neighbourhoods' );
+    				      <?php  $terms = get_the_terms( $id, 'themes' );
     				      if ( !empty($terms)) : ?>
 
     				        <?php foreach ( $terms as $term )  :
 
     							$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'neighbourhoods') . '">' . $name . '</a>' . '</p>';
+    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'themes') . '">' . $name . '</a>' . '</p>';
     				       		?>
 
     				      <?php endforeach; ?>
