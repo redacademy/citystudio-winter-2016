@@ -51,7 +51,7 @@
   }
 }
 .icon-menu {
-  
+
   font-size: 4rem;
   margin-left: 3rem;
 
@@ -61,12 +61,13 @@
   }
   .fa {
     color: $medium-blue;
+    font-size: 2.5rem;
   }
 }
 
 .hamburger-menu{
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 .dropdown-content {
   display: none;
@@ -169,7 +170,7 @@
     -o-transition:height 300ms ease-in;
     transition:height 300ms ease-in;
     border: none;
-} 
+}
 .header-nav ul > li:hover ul li {
     height:43px;
 }
