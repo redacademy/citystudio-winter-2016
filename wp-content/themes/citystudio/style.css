@@ -1567,6 +1567,7 @@ li {
   padding: 0.5em;
   font-size: 15px;
   border-radius: 8px;
+  z-index: 3;
   border: 0.5px solid #006496; }
   .nav-sub-menu:hover {
     cursor: pointer; }
@@ -1598,8 +1599,8 @@ li {
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
     position: absolute;
-    bottom: 127px;
-    left: 35%; }
+    /*bottom: 127px;
+    left: 35%;*/ }
 
 .part {
   position: absolute;
@@ -1614,8 +1615,8 @@ li {
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
     position: absolute;
-    bottom: 102px;
-    left: 24%; }
+    /* bottom: 102px;
+    left: 24%;*/ }
 
 .year {
   position: absolute;
@@ -1631,8 +1632,8 @@ li {
     /*border-width: 20px 20px 0;*/
     border-color: #fff transparent transparent;
     position: absolute;
-    bottom: 100px;
-    left: 18%; }
+    /*bottom: 100px;
+    left: 18%;*/ }
 
 .current-menu {
   display: block; }
@@ -1659,7 +1660,8 @@ li {
     left: 36%; }
 
 .theme-labels label {
-  padding: 2%; }
+  font-size: 14px;
+  hyphen: manual; }
 
 .part-labels {
   width: 46px;
@@ -1690,7 +1692,7 @@ li {
   text-align: center;
   color: #00A0DC;
   font-weight: 700;
-  word-wrap: break-word; }
+  word-break: break-word; }
   .theme-labels label::after,
   .part-labels label::after,
   .year-labels label::after {
@@ -1698,6 +1700,7 @@ li {
     width: 0;
     height: 0;
     border-style: solid;
+    -ms-word-break: break-all;
     /*border-width: 20px 20px 0;*/
     border-color: #fff transparent transparent;
     position: absolute;
