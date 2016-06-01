@@ -46,7 +46,9 @@ jQuery(document).ready(function($) {
     $('.theme-labels').empty().hide();
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
+   
     reloadProjects();
+  
   }); // close refresh
 
   // If the input label is visible,
@@ -73,7 +75,6 @@ jQuery(document).ready(function($) {
       $('.theme-labels')
           .show()
           .append('<label>' + checkedTheme + '</label>');
-          debugger;
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
@@ -153,23 +154,26 @@ jQuery(document).ready(function($) {
               // $gallery.flickity('destroy'); -- how do we destroy the old grid now?
               $gallery.empty();
 
+
+
                 $.each(response, function(index, value) {
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
-                  // function featured() {
-                  //   if ( value.featured_project[0] === '1') {
-                  //     return 'featured-rectangle';
-                  //   } else {
-                  //     return 'featured-square';
-                  //   }
-                  // }
+                  function featured() {
+                    if ( value.featured_project[0] === '1') {
+                      return 'featured-rectangle';
+                    } else {
+                      return 'featured-square';
+                    }
+                  }
 
                   if ( !value.placeholder ) {
 
-                    galleryItems += '<a class="gallery-anchor" href="' + value.link + '">';
-                    galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat cover;">';
+                    galleryItems +=   '<a class="gallery-anchor ';
+                    galleryItems +=   featured(); 
+                    galleryItems +=   '" href="' + value.link + '">';
+                    galleryItems +=   '<li style="background: url(' + value.featured_image_url; + ') no-repeat cover;">';
                     galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
-
                     galleryItems +=   '<div class="description">';
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';

@@ -1582,9 +1582,9 @@ li {
 
 .theme {
   position: absolute;
-  bottom: -132px;
-  left: -55px;
-  width: 122px; }
+  bottom: -252px;
+  left: -60px;
+  width: 130px; }
   .theme::after {
     content: '';
     width: 0;
@@ -1615,7 +1615,8 @@ li {
 .year {
   position: absolute;
   bottom: -108px;
-  left: -15px;
+  left: -21px;
+  width: 45px;
   padding-right: 1.1em; }
   .year::after {
     content: '';

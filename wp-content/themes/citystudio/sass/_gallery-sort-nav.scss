@@ -182,9 +182,9 @@
 }
 .theme {
   position: absolute;
-  bottom: -132px;
-  left: -55px;
-  width: 122px;
+  bottom: -252px;
+  left: -60px;
+  width: 130px;
   &::after {
     content: '';
     width: 0;
@@ -217,7 +217,8 @@
 .year {
   position: absolute;
   bottom: -108px;
-  left: -15px;
+  left: -21px;
+  width: 45px;
   padding-right: 1.1em;
   &::after {
     content: '';
