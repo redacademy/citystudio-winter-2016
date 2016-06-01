@@ -38,7 +38,7 @@ wp-content/themes/citystudio/node_modules/
 # Ignore everything in the root except the "wp-content" directory.
 # =============== #
 /*
-!.gitignore
+.gitignore
 !wp-content/
 !README.md
 
