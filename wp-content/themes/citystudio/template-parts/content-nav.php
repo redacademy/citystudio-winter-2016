@@ -3,14 +3,13 @@
 			<span>Sort</span>
 		</div>
 
-		<div class="theme menu-item" id="theme">
+		<div class="themes menu-item">
 			<?php $terms = get_terms( 'themes', array (
 				'hide_empty' => 0,
 			) ); ?>
 		  <?php if ( ! empty( $terms ) ) : ?>
 				<ul class="foot-sub-menu theme">
 					<li><span class="menu-title">Themes</span></li>
-					:)
 				<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-theme" >
 						<input type="checkbox" id="theme_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
