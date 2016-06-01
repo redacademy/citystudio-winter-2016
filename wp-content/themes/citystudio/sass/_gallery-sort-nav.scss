@@ -143,14 +143,13 @@
     background-size: 45px 45px;
   }
 }
-/* Footer Navigation Menu */
-.foot-sub-menu input[type=checkbox] {
+.nav-sub-menu input[type=checkbox] {
   display: none;
 }
 .current-menu {
   display: block;
 }
-.foot-sub-menu {
+.nav-sub-menu {
   display: none;
   justify-content: space-between;
   background-color: #fff;
@@ -183,8 +182,9 @@
 }
 .theme {
   position: absolute;
-  bottom: -128px;
+  bottom: -132px;
   left: -55px;
+  width: 122px;
   &::after {
     content: '';
     width: 0;
@@ -199,7 +199,7 @@
 }
 .part {
   position: absolute;
-  bottom: -105px;
+  bottom: -108px;
   left: -25px;
   &::after {
     content: '';
@@ -216,7 +216,7 @@
 }
 .year {
   position: absolute;
-  bottom: -105px;
+  bottom: -108px;
   left: -15px;
   padding-right: 1.1em;
   &::after {

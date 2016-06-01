@@ -50,17 +50,17 @@ jQuery(document).ready(function($) {
   }); // close refresh
 
   // If the input label is visible,
-  // find foot-sub-menu and add class current-menu
+  // find nav-sub-menu and add class current-menu
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
-      $(this).children('.foot-sub-menu').addClass('current-menu');
+      $(this).children('.nav-sub-menu').addClass('current-menu');
     }
   });
 
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.menu-item').mouseout(function(){
-      $(this).children('.foot-sub-menu').removeClass('current-menu');
+      $(this).children('.nav-sub-menu').removeClass('current-menu');
    });
 
   // Create an empty object to hold

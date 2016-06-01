@@ -13,15 +13,17 @@ jQuery(document).ready(function($){
 
      $(window).scroll(function(){
       var sticky = $('.sticky-navigation');
+          nav = $('.gallery-description-container');
           description = $('.nav-description');
           scroll = $(window).scrollTop();
-          offset = sticky.offset();
+          offset = nav.offset().top;
 
-      if (scroll >= 1347) {
+      if (scroll >= offset) {
+        console.log(offset);
          sticky.addClass("fixed");
          description.addClass("fixed");
      }
-      else if (scroll <= 1347)  {
+      else if (scroll <= offset)  {
         sticky.removeClass("fixed");
          description.removeClass("fixed");
     }

@@ -1545,14 +1545,13 @@ li {
       height: 4.2rem;
       background-size: 45px 45px; } }
 
-/* Footer Navigation Menu */
-.foot-sub-menu input[type=checkbox] {
+.nav-sub-menu input[type=checkbox] {
   display: none; }
 
 .current-menu {
   display: block; }
 
-.foot-sub-menu {
+.nav-sub-menu {
   display: none;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1564,16 +1563,16 @@ li {
   padding: 0.5em;
   border-radius: 8px;
   border: 0.5px solid #006496; }
-  .foot-sub-menu:hover {
+  .nav-sub-menu:hover {
     cursor: pointer; }
-  .foot-sub-menu .sub-menu-theme span,
-  .foot-sub-menu .sub-menu-part span {
+  .nav-sub-menu .sub-menu-theme span,
+  .nav-sub-menu .sub-menu-part span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-year span {
+  .nav-sub-menu .sub-menu-year span {
     color: #0082b9; }
-  .foot-sub-menu .sub-menu-theme span:hover,
-  .foot-sub-menu .sub-menu-part span:hover,
-  .foot-sub-menu .sub-menu-year span:hover {
+  .nav-sub-menu .sub-menu-theme span:hover,
+  .nav-sub-menu .sub-menu-part span:hover,
+  .nav-sub-menu .sub-menu-year span:hover {
     color: #ff8000;
     font-weight: bold;
     cursor: pointer; }
@@ -1583,8 +1582,9 @@ li {
 
 .theme {
   position: absolute;
-  bottom: -128px;
-  left: -55px; }
+  bottom: -132px;
+  left: -55px;
+  width: 122px; }
   .theme::after {
     content: '';
     width: 0;
@@ -1598,7 +1598,7 @@ li {
 
 .part {
   position: absolute;
-  bottom: -105px;
+  bottom: -108px;
   left: -25px; }
   .part::after {
     content: '';
@@ -1614,7 +1614,7 @@ li {
 
 .year {
   position: absolute;
-  bottom: -105px;
+  bottom: -108px;
   left: -15px;
   padding-right: 1.1em; }
   .year::after {

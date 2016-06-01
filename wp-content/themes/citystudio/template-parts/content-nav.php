@@ -8,7 +8,7 @@
 				'hide_empty' => 0,
 			) ); ?>
 		  <?php if ( ! empty( $terms ) ) : ?>
-				<ul class="foot-sub-menu theme">
+				<ul class="nav-sub-menu theme">
 					<li><span class="menu-title">Themes</span></li>
 				<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-theme" >
@@ -26,7 +26,7 @@
 				'hide_empty' => 0,
 			) ); ?>
 			<?php if ( ! empty( $terms ) ) : ?>
-				<ul class="foot-sub-menu part">
+				<ul class="nav-sub-menu part">
 					<li><span class="menu-title">Partners</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-part">
@@ -44,7 +44,7 @@
 				'hide_empty' => 0,
 			) ); ?>
 			<?php if ( ! empty( $terms ) ) : ?>
-			<ul class="foot-sub-menu year">
+			<ul class="nav-sub-menu year">
 				<li><span class="menu-title">Year</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-year">
