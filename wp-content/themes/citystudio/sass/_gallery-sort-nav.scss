@@ -15,7 +15,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  transition: width 2s ease-in;
+  transition: width 1s ease-in;
   @include desktop {
     height: 100%;
     max-height: 80px;
@@ -39,6 +39,7 @@
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
+  transition: all 1s ease-in;
   background-color: #0082b9;
   &:hover {
     cursor: pointer;
@@ -51,7 +52,6 @@
     transition: all 1s ease-in;
   }
   label{
-    transition: all 1s ease-in;
     font-size: 22px;
     margin: 0 -7px;
   }
@@ -81,12 +81,12 @@
 }
 .menu-item {
   opacity: 0;
-  transition: all 3s ease-in;
+  transition: all 2s ease-in;
 }
 .open .menu-item {
   opacity: 1;
   margin: 0;
-  transition: all 2s ease-in;
+  transition: all 1s ease-in;
 }
 .themes,
 .partners,

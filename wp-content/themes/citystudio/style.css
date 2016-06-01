@@ -1412,7 +1412,7 @@ li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  transition: width 2s ease-in; }
+  transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
       height: 100%;
@@ -1442,6 +1442,7 @@ li {
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
+  transition: all 1s ease-in;
   background-color: #0082b9; }
   .sort:hover {
     cursor: pointer; }
@@ -1453,7 +1454,6 @@ li {
       height: 2.5rem;
       transition: all 1s ease-in; } }
   .sort label {
-    transition: all 1s ease-in;
     font-size: 22px;
     margin: 0 -7px; }
 
@@ -1486,12 +1486,12 @@ li {
 
 .menu-item {
   opacity: 0;
-  transition: all 3s ease-in; }
+  transition: all 2s ease-in; }
 
 .open .menu-item {
   opacity: 1;
   margin: 0;
-  transition: all 2s ease-in; }
+  transition: all 1s ease-in; }
 
 .themes,
 .partners,

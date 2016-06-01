@@ -20,7 +20,7 @@
 		  <?php endif; ?>
 			<div class="theme-labels">
 				<i class="fa fa-star" aria-hidden="true"></i>
-				<br>
+			<br>
 			</div>
 		</div>
 
