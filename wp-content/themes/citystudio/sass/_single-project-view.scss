@@ -6,6 +6,8 @@
   margin: 0;
   width: 100vw;
   background-color: $city-blue;
+  border-top: 1px solid $citystudio-grey;
+  border-bottom: 1px solid $citystudio-grey;
   .entry-title {
     color: white;
     text-transform: uppercase;
@@ -44,6 +46,9 @@
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2;
+  h3 {
+    font-family: $fontfamily;
+  }
 }
 .col-two img {
   display: none;
@@ -59,13 +64,10 @@
       width: 45vw;
       margin-bottom: 0.75rem;
       display: block;
-    }
-    h3 {
-      font-family: $fontfamily;
+      border: 1px solid $citystudio-grey;
     }
   }
 }
-
 .proj-detail-wrap {
   display: block;
   margin: 0 0 1.5em;

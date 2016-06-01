@@ -1773,7 +1773,9 @@ li {
 .page-title {
   margin: 0;
   width: 100vw;
-  background-color: #0198d5; }
+  background-color: #0198d5;
+  border-top: 1px solid #949A9F;
+  border-bottom: 1px solid #949A9F; }
   .page-title .entry-title {
     color: white;
     text-transform: uppercase;
@@ -1806,6 +1808,8 @@ li {
   -webkit-order: 2;
   -ms-flex-order: 2;
   order: 2; }
+  .col-two h3 {
+    font-family: "open_sans"; }
 
 .col-two img {
   display: none; }
@@ -1819,9 +1823,8 @@ li {
       height: 50vh;
       width: 45vw;
       margin-bottom: 0.75rem;
-      display: block; }
-    .col-two h3 {
-      font-family: "open_sans"; } }
+      display: block;
+      border: 1px solid #949A9F; } }
 
 .proj-detail-wrap {
   display: block;
