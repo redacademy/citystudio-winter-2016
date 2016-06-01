@@ -1,6 +1,6 @@
 	<div class="nav-div" id="sort">
 		<div class="sort" id="sort_nav">
-			<span>Sort</span>
+			<label>Sort</label>
 		</div>
 
 		<div class="themes menu-item">
@@ -18,7 +18,10 @@
 		    <?php endforeach; ?>
 				</ul>
 		  <?php endif; ?>
-			<div class="theme-labels"></div>
+			<div class="theme-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<br>
+			</div>
 		</div>
 
 		<div class="partners menu-item">
@@ -36,7 +39,10 @@
 			<?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
-			<div class="part-labels"></div>
+			<div class="part-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<br>
+			</div>
 		</div>
 
 		<div class="years menu-item">
@@ -55,6 +61,8 @@
 			</ul>
 			<?php endif; ?>
 			<div class="year-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<br>
 			</div>
 		</div>
 

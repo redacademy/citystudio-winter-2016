@@ -43,9 +43,9 @@ jQuery(document).ready(function($) {
       year: ''
     }
 
-    $('.theme-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
+    $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
    
     reloadProjects();
   
