@@ -87,14 +87,14 @@
   margin: 0;
   transition: all 1s ease-in;
 }
-.neighbourhood,
+.themes,
 .partners,
 .years,
 .refresh {
   width: 4.3rem;
   border-radius: 70px;
 }
-.neighbourhood {
+.themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
   height: 2rem;
@@ -163,14 +163,14 @@
   &:hover {
     cursor: pointer;
   }
-  .sub-menu-neigh span,
+  .sub-menu-theme span,
   .sub-menu-part span {
     color: $medium-blue;
   }
   .sub-menu-year span {
     color: $medium-blue;
   }
-  .sub-menu-neigh span:hover,
+  .sub-menu-theme span:hover,
   .sub-menu-part span:hover,
   .sub-menu-year span:hover {
     color: #ff8000;
@@ -181,7 +181,7 @@
 .menu-item {
   position: relative;
 }
-.neigh {
+.theme {
   position: absolute;
   bottom: -128px;
   left: -55px;
@@ -247,7 +247,7 @@
 .show-label:hover {
   transition-delay: 4s;
 }
-.neigh-labels {
+.theme-labels {
   min-width: 120px;
   right: 55%;
   label::after {
@@ -268,7 +268,7 @@
     left: 32%;
   }
 }
-.neigh-labels,
+.theme-labels,
 .part-labels,
 .year-labels {
   display: none;

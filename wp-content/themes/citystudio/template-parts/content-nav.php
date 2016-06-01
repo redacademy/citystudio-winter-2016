@@ -3,22 +3,23 @@
 			<span>Sort</span>
 		</div>
 
-		<div class="neighbourhood menu-item" id="neighbourhood">
-			<?php $terms = get_terms( 'neighbourhoods', array (
+		<div class="theme menu-item" id="theme">
+			<?php $terms = get_terms( 'themes', array (
 				'hide_empty' => 0,
 			) ); ?>
 		  <?php if ( ! empty( $terms ) ) : ?>
-				<ul class="foot-sub-menu neigh">
-					<li><span class="menu-title">Neighbourhoods</span></li>
+				<ul class="foot-sub-menu theme">
+					<li><span class="menu-title">Themes</span></li>
+					:)
 				<?php foreach( $terms as $term) : ?>
-					<li class="sub-menu-neigh" >
-						<input type="checkbox" id="neigh_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
+					<li class="sub-menu-theme" >
+						<input type="checkbox" id="theme_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>
 		    <?php endforeach; ?>
 				</ul>
 		  <?php endif; ?>
-			<div class="neigh-labels"></div>
+			<div class="theme-labels"></div>
 		</div>
 
 		<div class="partners menu-item">
