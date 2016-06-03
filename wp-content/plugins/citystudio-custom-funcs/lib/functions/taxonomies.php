@@ -129,31 +129,31 @@ function year_taxonomy() {
 }
 add_action( 'init', 'year_taxonomy', 0 );
 
-//neighbourhood TAXONOMY-------------------*
+//theme TAXONOMY-------------------*
 
-function neighbourhoods_taxonomy() {
+function themes_taxonomy() {
 
 	$labels = array(
-		'name'                       => _x( 'Neighbourhoods', 'Taxonomy General Name', 'text_domain' ),
-		'singular_name'              => _x( 'Neighbourhood', 'Taxonomy Singular Name', 'text_domain' ),
-		'menu_name'                  => __( 'Neighbourhood', 'text_domain' ),
-		'all_items'                  => __( 'All Neighbourhoods', 'text_domain' ),
-		'parent_item'                => __( 'Neighbourhood Item', 'text_domain' ),
-		'parent_item_colon'          => __( 'Parent Neighbourhood:', 'text_domain' ),
-		'new_item_name'              => __( 'New Neighbourhood Name', 'text_domain' ),
-		'add_new_item'               => __( 'Add New Neighbourhood', 'text_domain' ),
-		'edit_item'                  => __( 'Edit Neighbourhood', 'text_domain' ),
-		'update_item'                => __( 'Update Neighbourhood', 'text_domain' ),
-		'view_item'                  => __( 'View Neighbourhood', 'text_domain' ),
+		'name'                       => _x( 'Themes', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'Theme', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'Theme', 'text_domain' ),
+		'all_items'                  => __( 'All Themes', 'text_domain' ),
+		'parent_item'                => __( 'Theme Item', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent Theme:', 'text_domain' ),
+		'new_item_name'              => __( 'New Theme Name', 'text_domain' ),
+		'add_new_item'               => __( 'Add New Theme', 'text_domain' ),
+		'edit_item'                  => __( 'Edit Theme', 'text_domain' ),
+		'update_item'                => __( 'Update Theme', 'text_domain' ),
+		'view_item'                  => __( 'View Theme', 'text_domain' ),
 		'separate_items_with_commas' => __( 'Separate years with commas', 'text_domain' ),
-		'add_or_remove_items'        => __( 'Add or remove neighbourhoods', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove Themes', 'text_domain' ),
 		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
-		'popular_items'              => __( 'Popular Neighbourhoods', 'text_domain' ),
-		'search_items'               => __( 'Search Neighbourhoods', 'text_domain' ),
+		'popular_items'              => __( 'Popular Themes', 'text_domain' ),
+		'search_items'               => __( 'Search Themes', 'text_domain' ),
 		'not_found'                  => __( 'Not Found', 'text_domain' ),
-		'no_terms'                   => __( 'No neighbourhoods', 'text_domain' ),
-		'items_list'                 => __( 'Neighbourhoods list', 'text_domain' ),
-		'items_list_navigation'      => __( 'Neighbourhoods list navigation', 'text_domain' ),
+		'no_terms'                   => __( 'No Themes', 'text_domain' ),
+		'items_list'                 => __( 'Themes list', 'text_domain' ),
+		'items_list_navigation'      => __( 'Themes list navigation', 'text_domain' ),
 	);
 	$args = array(
 		'labels'                     => $labels,
@@ -165,7 +165,7 @@ function neighbourhoods_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'neighbourhoods', array( 'project' ), $args );
+	register_taxonomy( 'themes', array( 'project' ), $args );
 
 }
-add_action( 'init', 'neighbourhoods_taxonomy', 0 );
+add_action( 'init', 'themes_taxonomy', 0 );

@@ -8,12 +8,12 @@ jQuery(document).ready(function($) {
 
   // queryFilter holds an empty object for the checked navigation values/properties
   var queryFilter = {
-    neighbourhoods: '',
+    themes: '',
     partners: '',
     year: ''
   }
   // values for input names
-  checkedNeigh = '',
+  checkedTheme = '',
   checkedPart = '',
   checkedYear = '';
 
@@ -32,47 +32,48 @@ jQuery(document).ready(function($) {
   }); // close sort
 
   $('#refresh').click(function() {
-    checkedNeigh = '';
+    checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
 
     queryFilter = {
-      neighbourhoods: '',
+      themes: '',
       partners: '',
       year: ''
     }
 
-    $('.neigh-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
+    $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+   
     reloadProjects();
+  
   }); // close refresh
 
   // If the input label is visible,
-  // find foot-sub-menu and add class current-menu
+  // find nav-sub-menu and add class current-menu
   $('.menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
-      $(this).children('.foot-sub-menu').addClass('current-menu');
+      $(this).children('.nav-sub-menu').addClass('current-menu');
     }
   });
 
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.menu-item').mouseout(function(){
-      $(this).children('.foot-sub-menu').removeClass('current-menu');
+      $(this).children('.nav-sub-menu').removeClass('current-menu');
    });
 
   // Create an empty object to hold
   // the checked navigation values in the properties
-  $('.sub-menu-neigh').click(function() {
+  $('.sub-menu-theme').click(function() {
     if ($(this.checked)) {
-      queryFilter.neighbourhoods = $(this).find('input').val();
-      checkedNeigh = ($(this).text()).trim();
+      queryFilter.themes = $(this).find('input').val();
+      checkedTheme = ($(this).text()).trim();
 
-      $('.neigh-labels')
+      $('.theme-labels')
           .show()
-          .append('<label>' + checkedNeigh + '</label>');
-
+          .append('<label>' + checkedTheme + '</label>');
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
@@ -152,6 +153,8 @@ jQuery(document).ready(function($) {
               // $gallery.flickity('destroy'); -- how do we destroy the old grid now?
               $gallery.empty();
 
+
+
                 $.each(response, function(index, value) {
                   // if feature project checkbox is true add large class.
                   // else if feature project checkoc is falso use reg class
@@ -165,10 +168,11 @@ jQuery(document).ready(function($) {
 
                   if ( !value.placeholder ) {
 
-                    galleryItems += '<a class="gallery-anchor" href="' + value.link + '">';
-                    galleryItems +=   '<li class=" ' + featured(); + ' " style="background: url(' + value.featured_image_url + ') no-repeat cover;">';
+                    galleryItems +=   '<a class="gallery-anchor ';
+                    galleryItems +=   featured(); 
+                    galleryItems +=   '" href="' + value.link + '">';
+                    galleryItems +=   '<li style="background: url(' + value.featured_image_url; + ') no-repeat cover;">';
                     galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
-
                     galleryItems +=   '<div class="description">';
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';

@@ -6,8 +6,23 @@
 ?>
 
 			<footer id="colophon" class="site-footer" role="contentinfo">
-				
-				<div class="contact-information">
+
+				<div class="site-links">
+				<ul>
+					<li>Home</li>
+					<li>About</li>
+					<li>Partners</li>
+					<li>Courses</li>
+					<li>Projects</li>
+				</ul>
+				</div>
+				<div class="site-links">
+				<ul>
+					<li>Consulting</li>
+					<li>Blog</li>
+					<li>People</li>
+					<li>Contact Us</li>
+				</ul>
 				</div>
 
 				<div class="social-icons-div">
@@ -28,7 +43,7 @@
 					</p>
 					<p>
 						<a href="http://www.youtube.com/user/CityStudioVancouver">
-							<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio Twitter Feed" />
+							<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio YouTube Feed" />
 						</a>
 					</p>
 				</div>

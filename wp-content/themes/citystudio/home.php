@@ -2,15 +2,15 @@
 /**
  * The template for displaying all single posts.
  *
- * @package RED_Starter_Theme
+ * Template Name: Blog
  */
 
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		<div="page-title">
-		<h1>What We Do</h1>
+		<div class="page-title">
+			<h1>Home</h1>
 		</div>
 		<?php while ( have_posts() ) : the_post(); ?>
 

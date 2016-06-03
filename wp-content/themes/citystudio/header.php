@@ -28,23 +28,58 @@
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html('Skip to content'); ?></a>
 
-				<header id="masthead" class="site-header" role="banner">
-					<div class="header-container">
+		<header id="masthead" class="site-header" role="banner">
+			<div class="header-container">
 
-						<div class="site-branding">
-						   <a href="<?php echo esc_url(home_url([1]));?>">
-				            <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
-				          </a>
-						</div><!-- .site-branding -->
+				<div class="site-branding">
+					<a href="<?php echo esc_url(home_url([1]));?>">
+				    <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				  </a>
+				</div><!-- .site-branding -->
 
-						<div class="search-gallery">
-							<span class="icon-search" aria-hidden="true">
-								<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
-							</span>
-						<div class="icon-menu" style="color: #76d6ff;">
-							<a href="<?php echo esc_url(home_url([1]));?>"><i class="fa fa-bars"></i></a>
-						</div>
-						</div>
-					</div>
-				</header><!-- #masthead -->
+				<div class="search-gallery">
+					<span class="icon-search" aria-hidden="true">
+						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
+					</span>
+
+
+				<div class="icon-menu">
+					<button onclick="myFunction()" class="hamburger"><i class="fa fa-bars"></i></button>
+					  <div id="hamburgerMenu" class="dropdown-content">
+					 <nav class="header-nav">
+					    <ul>
+					        <li><a href="#">Home</a></li>
+					        <li>
+					            <a href="#">About<img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					            <ul>
+					                <li><a href="#">Vision</a></li>
+					                <li><a href="#">5 Programs</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Partners</a></li>
+					        <li><a href="http://localhost:3000/city_studio/front-page/what-we-do/">What We Do</a></li>
+					        <li><a href="#">Courses <img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					            <ul>
+					                <li><a href="#">Studio</a></li>
+					                <li><a href="#">Campus</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Projects</a></li>
+					        <li><a href="#">Consulting <img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
+					        	 <ul>
+					                <li><a href="#">Speaking</a></li>
+					                <li><a href="#">Tours</a></li>
+					                <li><a href="#">Art of Cities</a></li>
+					            </ul>
+					        </li>
+					        <li><a href="#">Blog</a></li>
+					        <li><a href="#">People</a></li>
+					        <li><a href="#">Contact Us</a></li>
+					    </ul>
+					</nav>
+				</div>
+				
+	</div>
+			</div> 	<!--close header container -->
+		</header><!-- #masthead -->
 <div id="content" class="site-content">

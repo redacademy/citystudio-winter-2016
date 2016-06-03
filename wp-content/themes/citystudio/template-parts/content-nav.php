@@ -1,24 +1,27 @@
 	<div class="nav-div" id="sort">
 		<div class="sort" id="sort_nav">
-			<span>Sort</span>
+			<label>Sort</label>
 		</div>
 
-		<div class="neighbourhood menu-item" id="neighbourhood">
-			<?php $terms = get_terms( 'neighbourhoods', array (
+		<div class="themes menu-item">
+			<?php $terms = get_terms( 'themes', array (
 				'hide_empty' => 0,
 			) ); ?>
 		  <?php if ( ! empty( $terms ) ) : ?>
-				<ul class="foot-sub-menu neigh">
-					<li><span class="menu-title">Neighbourhoods</span></li>
+				<ul class="nav-sub-menu theme">
+					<li><span class="menu-title">Themes</span></li>
 				<?php foreach( $terms as $term) : ?>
-					<li class="sub-menu-neigh" >
-						<input type="checkbox" id="neigh_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
+					<li class="sub-menu-theme" >
+						<input type="checkbox" id="theme_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
 						<span><?php echo $term->name ?></span>
 					</li>
 		    <?php endforeach; ?>
 				</ul>
 		  <?php endif; ?>
-			<div class="neigh-labels"></div>
+			<div class="theme-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+			<br>
+			</div>
 		</div>
 
 		<div class="partners menu-item">
@@ -26,7 +29,7 @@
 				'hide_empty' => 0,
 			) ); ?>
 			<?php if ( ! empty( $terms ) ) : ?>
-				<ul class="foot-sub-menu part">
+				<ul class="nav-sub-menu part">
 					<li><span class="menu-title">Partners</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-part">
@@ -36,7 +39,10 @@
 			<?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
-			<div class="part-labels"></div>
+			<div class="part-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<br>
+			</div>
 		</div>
 
 		<div class="years menu-item">
@@ -44,7 +50,7 @@
 				'hide_empty' => 0,
 			) ); ?>
 			<?php if ( ! empty( $terms ) ) : ?>
-			<ul class="foot-sub-menu year">
+			<ul class="nav-sub-menu year">
 				<li><span class="menu-title">Year</span></li>
 					<?php foreach( $terms as $term) : ?>
 					<li class="sub-menu-year">
@@ -55,6 +61,8 @@
 			</ul>
 			<?php endif; ?>
 			<div class="year-labels">
+				<i class="fa fa-star" aria-hidden="true"></i>
+				<br>
 			</div>
 		</div>
 
@@ -66,5 +74,5 @@
 
 </div>
 <div class="nav-description">
- <p> This is an <b> interactive gallery! </b> use the <img src="<?php bloginfo('template_directory'); ?>/images/sort.png"> to filter through the gallery.</p>
+ <p> This is an <b> interactive gallery! </b> use the <img src="<?php bloginfo('template_directory'); ?>/images/sort.png">  button to filter through the gallery.</p>
 </div>
