@@ -28,4 +28,3 @@ jQuery(document).ready(function($){
   });
 
 });
-
