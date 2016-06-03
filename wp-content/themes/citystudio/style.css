@@ -1889,3 +1889,66 @@ li {
     align-items: center; }
     .tags p:hover {
       background-color: #e9e9e9; }
+
+.page-title {
+  margin: 0;
+  width: 100vw;
+  padding: 2%;
+  /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/
+  background-origin: content-box;
+  background-size: 1900px 200px; }
+  .page-title h1 {
+    color: white;
+    font-size: 64px; }
+
+.wwd-hero {
+  background: url(../../images/CityStudio-LandingPage-bg.jpg) no-repeat bottom center;
+  background-size: cover;
+  width: 100%;
+  height: 70vh; }
+
+.why,
+.how,
+.mission-statement {
+  padding-left: 40%;
+  padding-top: 2%;
+  padding-right: 10%; }
+  .why hr,
+  .how hr,
+  .mission-statement hr {
+    color: #00A0DC; }
+
+.call-to-action {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+  background-color: #f9f9f9;
+  padding: 4%;
+  width: 91vw; }
+  .call-to-action p {
+    width: 60%; }
+
+.connect {
+  padding-top: 1%;
+  width: 370px;
+  height: 160px;
+  background-color: #00A0DC;
+  color: white;
+  text-align: center; }
+  .connect p {
+    color: white;
+    font-weight: bold;
+    font-size: 18px; }
+  .connect button {
+    text-align: center;
+    background-color: #00A0DC;
+    color: white;
+    padding: 1%;
+    border: 2px solid white;
+    text-transform: uppercase;
+    font-weight: bold; }
+    .connect button p {
+      /*margin: .3%;*/ }

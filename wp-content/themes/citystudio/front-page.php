@@ -1,7 +1,5 @@
 <?php
 /**
- * The main template file.
- *
  * Template Name: Front-page
  */
 get_header(); ?>

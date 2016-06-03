@@ -57,6 +57,7 @@
 					            </ul>
 					        </li>
 					        <li><a href="#">Partners</a></li>
+					        <li><a href="http://localhost:3000/city_studio/front-page/what-we-do/">What We Do</a></li>
 					        <li><a href="#">Courses <img src="<?php bloginfo('template_directory'); ?>/images/arrow_down.png" /></a>
 					            <ul>
 					                <li><a href="#">Studio</a></li>
