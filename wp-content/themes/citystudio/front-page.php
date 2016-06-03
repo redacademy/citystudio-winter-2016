@@ -1,5 +1,9 @@
 <?php
 /**
+<<<<<<< HEAD
+=======
+ *
+>>>>>>> partners-page
  * Template Name: Front-page
  */
 get_header(); ?>

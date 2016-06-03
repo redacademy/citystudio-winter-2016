@@ -1391,6 +1391,64 @@ li {
   -webkit-box-orient: vertical;
   height: 100px; }
 
+.title-banner {
+  background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 30vh;
+  display: block; }
+  .title-banner h1 {
+    font-size: 2.5rem;
+    font-family: "open_sans";
+    color: white;
+    font-weight: normal;
+    text-align: center;
+    padding: 3.5rem 0; }
+    .title-banner h1 span {
+      font-weight: bold; }
+
+.blue-overlay {
+  background-color: #0198d5;
+  overflow: hidden;
+  width: 100%;
+  height: 30vh;
+  z-index: 2; }
+
+.info-main {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.school-mission-container {
+  margin: 2rem 0 0 5rem;
+  font-family: "open_sans";
+  width: 40%; }
+  .school-mission-container h3 {
+    font-size: 1.2rem;
+    padding-bottom: 0.25rem; }
+  .school-mission-container .school-mission {
+    font-size: 0.9rem;
+    line-height: 1.25rem; }
+
+.campus-course-container {
+  margin: 1rem 0 0 9rem; }
+  .campus-course-container .campus-courses {
+    font-family: "open_sans";
+    font-size: 1rem; }
+  .campus-course-container h3 {
+    margin-bottom: 0.25rem; }
+  .campus-course-container li {
+    font-size: 0.85rem;
+    line-height: 1.5rem; }
+  .campus-course-container li p {
+    margin-bottom: 0; }
+
 .loader {
   opacity: 0.1;
   border: none;

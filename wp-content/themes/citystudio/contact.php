@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying contact page.
+ * Template Name: Contact Page.
  *
  * @package RED_Starter_Theme
  */
