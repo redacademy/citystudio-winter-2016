@@ -1,6 +1,5 @@
 <?php
 /**
- * The main template file.
  *
  * Template Name: Front-page
  */
