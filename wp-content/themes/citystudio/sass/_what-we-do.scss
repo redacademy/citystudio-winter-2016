@@ -1,6 +1,6 @@
 .page-title {
   margin: 0;
-  width: 100vw;
+  width: 95vw;
   padding: 2%;
   /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/
   background-origin: content-box;
@@ -9,6 +9,13 @@
     color: white;
     font-size: 64px;
   }
+}
+
+.wwd-content{
+  display: block;
+  justify-content: center;
+  width: 90vw;
+  padding: 2% 0;
 }
 
 .wwd-hero{
@@ -21,48 +28,64 @@
 .why,
 .how,
 .mission-statement{
-  padding-left: 40%;
-  padding-top: 2%;
+  padding-left: 32%;
+  padding-top: 1%;
   padding-right: 10%;
-  hr{
-  color: $light-blue;
+  .separate{
+    border-top: 3px dashed $light_blue;
+    background-color: #fff;
   }
-  
+  h3{
+    font-size: 20px;
+    padding-bottom: 1%;
+  }
+  p{
+    font-size: 18px;
+      line-height: 1.8rem;
+
+  }
 }
 .call-to-action{
   display: flex;
   justify-content: space-around;
   background-color: #f9f9f9;
-  padding: 4%;
-  width: 91vw;
+  padding: 2%;
+  width: 95vw;
+  font-size: 18px;
   p{
-    width: 60%;
+    width: 60%; 
   }
-
 }
-
 .connect{
-  padding-top: 1%;
-  width: 370px;
-  height: 160px;
+  width: 280px;
+  height: 100px;
+  border-radius: 5px;
+  z-index:10;
+  padding:10px;
+  -moz-box-shadow:0px 0px 7px #0;
   background-color: $light-blue;
   color: white;
+  padding-top: 1%;
   text-align: center;
+  .become-involved{
+    font-weight: bold;
+  }
   p{
     color: white;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 19px;
+    display: table-cell;
+    padding: 0 2%;
+    letter-spacing: 3px;
   }
     button{
-    text-align: center;
-    background-color: $light-blue;
     color: white;
-    padding: 1%;
+    padding: 3%;
     border: 2px solid white;
     text-transform: uppercase;
     font-weight: bold;
-    p{
-      /*margin: .3%;*/
-    }
+    background-color: $light-blue;
+    text-align: center;
+    margin: 4%;
   }
 }
