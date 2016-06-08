@@ -1474,10 +1474,10 @@ li {
   @media screen and (min-width: 480px) {
     .nav-div {
       height: 100%;
-      max-height: 80px;
+      max-height: 86px;
       z-index: 2 !important;
       position: relative !important;
-      width: 81px;
+      width: 86px;
       border-radius: 70px;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -1489,14 +1489,15 @@ li {
           -ms-flex-pack: justify;
               justify-content: space-between;
       transition: width .8s ease-in;
-      margin: 22px 32px; } }
+      margin: 23px 28px; } }
 
 .sort {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid white;
-  padding: 18px 19px;
+  border: 3px solid white;
+  padding: 21px 18px;
+  right: 2px;
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
@@ -1508,16 +1509,17 @@ li {
     .sort {
       width: 100vw;
       margin: 0;
-      max-width: 2.8rem;
-      height: 2.5rem;
+      max-width: 3rem;
+      height: 2.4rem;
       transition: all 1s ease-in; } }
   .sort label {
-    font-size: 22px;
-    margin: 0 -7px; }
+    font-size: 21px;
+    margin: 0 -6px;
+    padding-top: 2px; }
 
 .open {
   min-width: 100vw;
-  width: 90%;
+  width: 500px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
@@ -1528,7 +1530,7 @@ li {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
-      min-width: 510px;
+      min-width: 500px;
       transition: all 1s ease-in; } }
 
 .close {
@@ -1566,8 +1568,8 @@ li {
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .themes {
-      width: 5rem;
-      height: 5rem;
+      width: 5.3rem;
+      height: 5.3rem;
       background-size: 35px 45px; } }
 
 .partners {
@@ -1578,8 +1580,8 @@ li {
   transition: all 1.5s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
-      width: 5rem;
-      height: 5rem;
+      width: 5.3rem;
+      height: 5.3rem;
       background-size: 45px 60px; } }
 
 .years {
@@ -1590,21 +1592,22 @@ li {
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .years {
-      width: 5rem;
-      height: 5rem;
+      width: 5.2rem;
+      height: 5.3rem;
       background-size: 45px 45px; } }
 
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
   height: 3.8rem;
-  border: 2px solid white;
+  border: 3px solid white;
   background-color: #0082b9;
   transition: all 2.3s ease-in; }
   @media screen and (min-width: 480px) {
     .refresh {
       width: 5rem;
-      height: 4.8rem;
+      height: 5rem;
+      right: -2px;
       background-size: 45px 45px; } }
 
 .nav-sub-menu input[type=checkbox] {
@@ -1647,7 +1650,7 @@ li {
 .theme {
   position: absolute;
   bottom: -231px;
-  left: -60px;
+  left: -55px;
   width: 130px; }
   .theme::after {
     content: '';
@@ -1717,10 +1720,6 @@ li {
   .theme-labels label::after {
     left: 36%; }
 
-.theme-labels label {
-  font-size: 14px;
-  hyphen: manual; }
-
 .part-labels {
   width: 46px;
   height: 52px;
@@ -1731,7 +1730,7 @@ li {
 
 .year-labels {
   width: 48px;
-  right: 9%;
+  right: 0;
   top: 0;
   height: 52px; }
   .year-labels label::after {
@@ -1739,12 +1738,18 @@ li {
 
 .theme-labels,
 .part-labels,
+.year-labels label {
+  font-size: 16px;
+  hyphen: manual; }
+
+.theme-labels,
+.part-labels,
 .year-labels {
   display: none;
   position: relative;
   background-color: #fff;
-  width: 85px;
-  height: 79px;
+  width: 89px;
+  height: 83px;
   border-radius: 45px;
   border: 1.5px solid #006496;
   text-align: center;
@@ -1770,7 +1775,7 @@ li {
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 115px;
+  height: 120px;
   padding-left: 140px;
   transition: height 1.2s ease; }
 
@@ -1783,7 +1788,7 @@ li {
   font-size: 22px;
   font-family: "open_sans"; }
   .nav-description p {
-    padding: 2px;
+    padding: 12px;
     width: 600px; }
   .nav-description img {
     height: 60px;
@@ -1806,7 +1811,7 @@ li {
 
 .sticky-navigation.fixed {
   transition: all .4s ease;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-left: 140px; }
 
 .nav-description.fixed {
@@ -1816,6 +1821,9 @@ li {
   .nav-description.fixed p {
     padding: 6px;
     width: 600px; }
+
+.nav-div.fixed {
+  margin: 23px 28px; }
 
 .explore {
   padding: 0.4% 5% 0 0;
@@ -1988,7 +1996,7 @@ li {
   .how h3,
   .mission-statement h3 {
     font-size: 20px;
-    padding-bottom: 2%; }
+    padding-bottom: 1%; }
   .why p,
   .how p,
   .mission-statement p {
@@ -2013,7 +2021,9 @@ li {
   width: 280px;
   height: 100px;
   border-radius: 5px;
-  box-shadow: 0px 0px 7px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  padding: 10px;
+  -moz-box-shadow: 0px 0px 7px #fff;
   background-color: #00A0DC;
   color: white;
   padding-top: 1%;
@@ -2023,11 +2033,10 @@ li {
   .connect p {
     color: white;
     font-weight: bold;
-    font-size: 18px;
-    margin-left: 16%;
+    font-size: 19px;
     display: table-cell;
     padding: 0 2%;
-    letter-spacing: 2px; }
+    letter-spacing: 3px; }
   .connect button {
     color: white;
     padding: 3%;
