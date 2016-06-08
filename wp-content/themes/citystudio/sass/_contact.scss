@@ -1,0 +1,42 @@
+.contact-header {
+  background-color: $city-blue;
+  h1 {
+    color: #fff;
+    margin-left: 2rem;
+    font-family: $fontfamily;
+  }
+}
+
+iframe{
+  width: 100vw;
+  height: 40vh;
+}
+
+.contact-page-container{
+  background-color: $medium-blue;
+  padding-top: 2rem;
+}
+.getintouch-container{
+  display: flex;
+  justify-content: center;
+}
+.getintouch-block{
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  width: 90vw;
+  padding: 0.25em 0.75em;
+  height: 2rem;
+  @include desktop {
+    height: 4rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-family: 'open_sans', bold;
+    font-size: 2rem;
+    color: $light-blue;
+    font-weight: 900;
+    margin-top: 0.2rem;
+  }
+}

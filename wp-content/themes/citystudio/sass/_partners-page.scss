@@ -1,3 +1,4 @@
+//TOP PORTION STYLES
 .title-banner {
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat center center;
   background-size: cover;
@@ -27,22 +28,23 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  margin: 0 50px 2rem 50px;
 }
 .school-mission-container {
-  margin: 2rem 0 0 5rem;
+  margin: 3rem 0 0 5rem;
   font-family: $fontfamily;
   width: 40%;
   h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     padding-bottom: 0.25rem;
   }
   .school-mission {
-    font-size: 0.9rem;
-    line-height: 1.25rem;
+    font-size: 1rem;
+    line-height: 1.4rem;
   }
 }
 .campus-course-container {
-  margin: 1rem 0 0 9rem;
+  margin: 1.5rem 0 1rem 9rem;
   .campus-courses {
     font-family: $fontfamily;
     font-size: 1rem;
@@ -53,8 +55,75 @@
   li {
     font-size: 0.85rem;
     line-height: 1.5rem;
+    &:hover{
+    text-decoration: underline;
+    }
   }
   li p {
     margin-bottom: 0;
   }
+}
+
+//PROJECT DISPLAY STYLES
+.projects-container{
+  background-color: $medium-blue;
+  padding-top: 2rem;
+}
+.title-block-container{
+  display: flex;
+  justify-content: center;
+}
+.title-block{
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  width: 90vw;
+  padding: 0 0.5em;
+  height: 2rem;
+  @include desktop {
+    height: 5rem;
+    margin-bottom: 1rem;
+  }
+  h2 {
+    font-family: 'open_sans', bold;
+    font-size: 3rem;
+    color: $dark-blue;
+    font-weight: 900;
+    margin-top: 0.2rem;
+    text-transform: uppercase;
+    span {
+      color: $light-blue;
+    }
+  }
+}
+//MEDIA LINKS STYLES
+.media-links-title{
+font-size: 1rem;
+font-family: $fontfamily;
+font-weight: bold;
+color: white;
+margin-left: 5vw;
+margin-bottom: .5rem;
+}
+.media-links-container{
+display: flex;
+justify-content: space-between;
+flex-direction: row;
+width: 90vw;
+margin-left: 5vw;
+margin-right: 5vw;
+}
+
+.media-link{
+ width: 20vw;
+p{
+color:white;
+font-size: .9rem;
+font-family: $fontfamily;
+font-weight: 550;
+&:hover{
+text-decoration: underline;
+}
+}
 }
