@@ -9,7 +9,8 @@
 
 					<div class="footer-logo">
 						<img src="<?php echo get_template_directory_uri().'/images/citystudio-logo.png';?>">
-						<div class="social-icons-div">
+					
+					<div class="social-icons-div">
 							<a href="https://www.facebook.com/CityStudioVancouver/">
 								<img src="<?php echo get_template_directory_uri().'/images/social-facebook-white.png';?>" class="social-icons" alt="Link to Citystudio Facebook Page" />
 							</a>
