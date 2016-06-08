@@ -10,21 +10,18 @@
     font-size: 64px;
   }
 }
-
 .wwd-content{
   display: block;
   justify-content: center;
   width: 90vw;
   padding: 2% 0;
 }
-
 .wwd-hero{
   background: url(../../images/CityStudio-LandingPage-bg.jpg) no-repeat bottom center;
   background-size: cover;
   width: 100%;
   height: 70vh;
 }
-
 .why,
 .how,
 .mission-statement{
@@ -41,8 +38,7 @@
   }
   p{
     font-size: 18px;
-      line-height: 1.8rem;
-
+    line-height: 1.8rem;
   }
 }
 .call-to-action{
@@ -57,16 +53,17 @@
   }
 }
 .connect{
-  width: 280px;
+  width: 285px;
   height: 100px;
-  border-radius: 5px;
+  border-radius: 2px;
   z-index:10;
   padding:10px;
-  -moz-box-shadow:0px 0px 7px #fff;
   background-color: $light-blue;
   color: white;
-  padding-top: 1%;
   text-align: center;
+  -moz-box-shadow: 0 0 8px #666666;
+  -webkit-box-shadow: 0 0 8px #666666;
+  box-shadow: 0 0 8px #666666;
   .become-involved{
     font-weight: bold;
   }
@@ -75,17 +72,45 @@
     font-weight: bold;
     font-size: 19px;
     display: table-cell;
-    padding: 0 2%;
+    padding: 0 1%;
     letter-spacing: 3px;
   }
-    button{
+  button{
     color: white;
     padding: 3%;
-    border: 2px solid white;
+    border: 3px solid white;
     text-transform: uppercase;
     font-weight: bold;
     background-color: $light-blue;
     text-align: center;
     margin: 4%;
+      -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    -moz-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transition: all .1s; 
+    &:hover {
+    background: $light-blue;
+    -webkit-transform: scale(1.03);
+    -moz-transform: scale(1.03);
+    -ms-transform: scale(1.03);
+    -o-transform: scale(1.03);
+    transform: scale(1.03);
+    -webkit-animation:'';
+    -moz-animation:none;
+    -ms-animation:'';
+    -o-animation:'';
+    animation:'';
+    box-shadow: 0 1px 3px #EEEEEE, 0 45px rgba(#fff, 0.12) inset;
+
+    }
+    &:active{
+        box-shadow:  0 0 0 0 #BBB7AE; 
+    }
   }
 }

@@ -895,7 +895,8 @@ a {
     border: none; }
     .social-icons-div a img {
       width: 50px;
-      height: 50px; }
+      height: 50px;
+      opacity: 1; }
 
 .social-icons {
   height: 1.5rem;
@@ -929,7 +930,8 @@ a {
   width: 800px; }
   .footer-logo img {
     width: 440px;
-    height: 100px; }
+    height: 100px;
+    opacity: .4; }
 
 .footer-located {
   margin: -3rem;
@@ -2056,16 +2058,15 @@ li {
     width: 60%; }
 
 .connect {
-  width: 280px;
+  width: 285px;
   height: 100px;
-  border-radius: 5px;
+  border-radius: 2px;
   z-index: 10;
   padding: 10px;
-  -moz-box-shadow: 0px 0px 7px #fff;
   background-color: #00A0DC;
   color: white;
-  padding-top: 1%;
-  text-align: center; }
+  text-align: center;
+  box-shadow: 0 0 8px #666666; }
   .connect .become-involved {
     font-weight: bold; }
   .connect p {
@@ -2073,14 +2074,30 @@ li {
     font-weight: bold;
     font-size: 19px;
     display: table-cell;
-    padding: 0 2%;
+    padding: 0 1%;
     letter-spacing: 3px; }
   .connect button {
     color: white;
     padding: 3%;
-    border: 2px solid white;
+    border: 3px solid white;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #00A0DC;
     text-align: center;
-    margin: 4%; }
+    margin: 4%;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin: center center;
+    transition: all .1s; }
+    .connect button:hover {
+      background: #00A0DC;
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03);
+      -webkit-animation: '';
+      animation: '';
+      box-shadow: 0 1px 3px #EEEEEE, 0 45px rgba(255, 255, 255, 0.12) inset; }
+    .connect button:active {
+      box-shadow: 0 0 0 0 #BBB7AE; }
