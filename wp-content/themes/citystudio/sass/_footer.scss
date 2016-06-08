@@ -114,4 +114,8 @@
   margin: 0px 0 6px 0;
   font-size: 18px;
   }
+   li:hover{
+  color: lighten($citystudio-grey, .9);
+  cursor: pointer;
+  }
 }

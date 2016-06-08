@@ -1025,6 +1025,9 @@ iframe {
     color: white;
     margin: 0px 0 6px 0;
     font-size: 18px; }
+  .citystudio-div li:hover {
+    color: #969ca1;
+    cursor: pointer; }
 
 /*--------------------------------------------------------------
 # Search Page Styles
