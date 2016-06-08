@@ -51,15 +51,15 @@
   text-align: center;
   display: block;
   h1 {
-  margin: 2rem 0 1rem 0;
-  letter-spacing: .1rem;
-}
+    margin: 2rem 0 1rem 0;
+    letter-spacing: .1rem;
+  }
   p {
-  width: 70vw;
-  margin: 0 auto;
-  padding-bottom: 2rem;
-  font-family: $fontfamily;
-}
+    width: 74vw;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-size: 21px;
+  }
   .partner-buttons {
     text-align: center;
     padding: 3%;
@@ -73,7 +73,6 @@
     margin: 1rem 1rem 2rem 1rem;
   }
 }
-
 .partners-title {
   text-align: center;
   color: white;
