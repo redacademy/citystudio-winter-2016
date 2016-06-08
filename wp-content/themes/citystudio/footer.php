@@ -37,7 +37,7 @@
 					<p>604-874-6401</p>
 
 				</div>
-				<div class="site-links">
+				<div class="exploring-div">
 					<h3>Keep Exploring</h3>
 					<ul>
 						<li>Projects</li>
@@ -46,7 +46,7 @@
 						<li>Partners</li>
 					</ul>
 				</div>
-				<div class="site-links">
+				<div class="citystudio-div">
 					<h3>CITYSTUDIO</h3>
 					<ul>
 						<li>Contact Us</li>
