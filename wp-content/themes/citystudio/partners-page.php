@@ -42,13 +42,46 @@ get_header(); ?>
 
 <!-- start past projects display -->
     <div class="projects-container">
-      <div class="title-block">
-        <h2>Past Projects By <span><?php echo CFS()->get( 'school_abrev' ); ?></span></h2>
-      </div>
-      
+			<div class="title-block-container">
+	      <div class="title-block">
+	        <h2>Past Projects By: <span><?php echo CFS()->get( 'school_abrev' ); ?></span></h2>
+	      </div>
+			</div>
+<!-- loop for displaying projects -->
+			<div class="section-archive">
+			  <?php if ( have_posts() ) : ?>
+				<?php /* Start the Loop */ ?>
+				<?php while ( have_posts() ) : the_post(); ?>
+				<ul>
+					<?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
-    </div>
-		</main><!-- #main -->
-	</div><!-- #primary -->
+					<a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php echo $background; ?>') no-repeat; ">
+					</li></a>
+				</ul>
+				<?php endwhile; ?>
+
+				<?php else : ?>
+
+				<?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+				<?php endif; ?>
+			</div>
+<!-- media links -->
+				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
+				<div class="media-links-container">
+					<div class="media-link">
+						<p><?php echo CFS()->get( 'media_link_1' ); ?></p>
+					</div>
+					<div class="media-link">
+						<p><?php echo CFS()->get( 'media_link_2' ); ?></p>
+					</div>
+					<div class="media-link">
+						<p><?php echo CFS()->get( 'media_link_3' ); ?></p>
+					</div>
+				</div>
+
+  	</div><!-- end projects-container -->
+	</main><!-- #main -->
+</div><!-- #primary -->
 
 <?php get_footer(); ?>
