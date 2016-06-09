@@ -24,10 +24,12 @@ get_header(); ?>
                         if( have_rows('section') );
                              // loop through the rows of data
                             while ( have_rows('section') ) : the_row(); ?>
-                          	<h3><?php the_sub_field('section_heading') ?></h3>
-                          	<?php the_sub_field('section_content') ?>
+                          	<h3>
+	                          	<?php the_sub_field('section_heading') ?>
+	                        </h3>
+	                          	<?php the_sub_field('section_content') ?>
 							<hr class="separate">
-                          <?php  endwhile; ?>
+                     <?php  endwhile; ?>
 				</div>
 			</div>
 			<div class="call-to-action">

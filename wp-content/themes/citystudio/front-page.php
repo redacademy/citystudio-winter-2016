@@ -15,23 +15,10 @@ get_header(); ?>
             </p>
         </div>
     </div> <!-- end hero -->
-
-       <div class="homepage-partners">
-          <h1>CityStudio Partners</h1>
-          <p>
-            CityStudio partners with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what how you can get involved through your school, and what students have done in the past using the gallery below:
-          </p>
-            <button>NEC</button>
-            <button>UBC</button>
-            <button>BCIT</button>
-            <button>SFU</button>
-            <button>VCC</button>
-            <button>LANGARA</button>
-            <button>ECUAD</button>
-          <hr>
-          <h1>CityStudio Projects</h1>
-        </div>
   <div class="gallery-description-container">
+      <div class="homepage-partners">
+            <h1>CityStudio Projects</h1>
+      </div>
     <div class="sticky-navigation">
       <?php get_template_part ('template-parts/content', 'nav'); ?>
     </div>
@@ -72,5 +59,35 @@ get_header(); ?>
 
           <?php endforeach; wp_reset_postdata(); ?>
     </ul>
+    <div class="homepage-partners">
+          <h1>CityStudio Partners</h1>
+          <div class="featured">
+              <?php
+              // check if the repeater field has rows of data
+                if( have_rows('featured_partner') );
+                   // loop through the rows of data
+                while ( have_rows('featured_partner') ) : the_row(); ?>
+                  <img src ="<?php the_sub_field('image_url') ?>" />
+              <?php endwhile; ?>
+          </div>
+          <div class="partners-row1">
+              <?php
+              // check if the repeater field has rows of data
+                if( have_rows('partner_row_1') );
+                   // loop through the rows of data
+                while ( have_rows('partner_row_1') ) : the_row(); ?>
+                  <img src ="<?php the_sub_field('image_url') ?>" />
+              <?php endwhile; ?>
+          </div>
+          <div class="partners-row2">
+              <?php
+              // check if the repeater field has rows of data
+                if( have_rows('partner_row_2') );
+                   // loop through the rows of data
+                while ( have_rows('partner_row_2') ) : the_row(); ?>
+                  <img src ="<?php the_sub_field('image_url') ?>" />
+              <?php endwhile; ?>
+          </div>  
+        </div>
 </div>
 <?php get_footer(); ?>

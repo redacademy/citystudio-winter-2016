@@ -694,7 +694,7 @@ a {
     .icon-search {
       font-size: 2.3rem; } }
   .icon-search .fa {
-    color: #0082b9; }
+    color: #00A0DC; }
   .icon-search a {
     color: #03648c; }
 
@@ -706,7 +706,7 @@ a {
     .icon-menu {
       font-size: 2.5rem; } }
   .icon-menu .fa {
-    color: #0082b9;
+    color: #00A0DC;
     font-size: 2.5rem; }
 
 .hamburger-menu {
@@ -920,7 +920,7 @@ iframe {
     margin-top: 0.2rem; }
 
 .site-footer {
-  width: 1906px;
+  width: 1723px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -974,7 +974,7 @@ iframe {
       margin-top: .8rem; } }
 
 .footer-logo {
-  padding: 1% 2% 0;
+  padding: 2% 2%;
   display: block;
   width: 800px; }
   .footer-logo img {
@@ -1370,7 +1370,7 @@ a:active {
   display: block; }
   .homepage-partners h1 {
     margin: 2rem 0 1rem 0;
-    letter-spacing: .1rem; }
+    letter-spacing: -.1rem; }
   .homepage-partners p {
     width: 74vw;
     margin: 0 auto;
@@ -1392,6 +1392,20 @@ a:active {
   color: white;
   margin-top: 2.5rem;
   text-transform: uppercase; }
+
+.partners-row1 img,
+.partners-row2 img {
+  width: 180px;
+  height: 180px; }
+
+.featured,
+.partners-row1,
+.partners-row2 {
+  background-color: #f9f9f9; }
+  .featured img,
+  .partners-row1 img,
+  .partners-row2 img {
+    padding: 2% 3%; }
 
 a {
   text-decoration: none; }
@@ -1692,7 +1706,7 @@ li {
       width: 100vw;
       margin: 0;
       max-width: 3rem;
-      height: 2.4rem;
+      height: 2.3rem;
       transition: all 1s ease-in; } }
   .sort label {
     font-size: 21px;
@@ -1958,8 +1972,8 @@ li {
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 120px;
-  padding-left: 140px;
+  height: 130px;
+  padding-left: 130px;
   transition: height 1.2s ease; }
 
 .nav-description {
@@ -1971,7 +1985,7 @@ li {
   font-size: 22px;
   font-family: "open_sans"; }
   .nav-description p {
-    padding: 14px;
+    padding: 6px;
     width: 600px; }
   .nav-description img {
     height: 60px;
@@ -1981,9 +1995,9 @@ li {
 .fixed {
   position: fixed;
   top: 0;
-  left: -2px;
+  left: -3px;
   padding-top: 20px;
-  height: 120px;
+  height: 130px;
   width: 101%;
   z-index: 2;
   padding: 0;
@@ -1995,7 +2009,7 @@ li {
 .sticky-navigation.fixed {
   transition: all .4s ease;
   padding-top: 6px;
-  padding-left: 140px; }
+  padding-left: 130px; }
 
 .nav-description.fixed {
   transition: all 1.2s ease;
@@ -2168,7 +2182,7 @@ li {
   padding: 2rem;
   margin: 0 auto; }
   .section-header .separate {
-    border-top: 3px dashed #00A0DC;
+    border-top: 3px dashed #76d6ff;
     background-color: #fff;
     margin: 2rem 0; }
   .section-header h3 {

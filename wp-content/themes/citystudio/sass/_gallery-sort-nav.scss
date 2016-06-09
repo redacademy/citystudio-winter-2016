@@ -48,7 +48,7 @@
     width: 100vw;
     margin: 0;
     max-width: 3rem;
-    height: 2.4rem;
+    height: 2.3rem;
     transition: all 1s ease-in;
   }
   label{
@@ -288,8 +288,8 @@
 .theme-labels,
 .part-labels,
 .year-labels label{
-    font-size: 16px;
-    hyphen: manual;
+  font-size: 16px;
+  hyphen: manual;
 }
 
 .theme-labels,
@@ -323,8 +323,8 @@
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 120px;
-  padding-left: 140px;
+  height: 130px;
+  padding-left: 130px;
   transition: height 1.2s ease;
 }
 
@@ -337,7 +337,7 @@
   font-size: 22px;
   font-family: $fontfamily;
   p {
-    padding: 14px;
+    padding: 6px;
     width: 600px;}
   img {
     height: 60px;
@@ -349,9 +349,9 @@
 .fixed {
   position: fixed;
   top: 0;
-  left: -2px;
+  left: -3px;
   padding-top: 20px;
-  height: 120px;
+  height: 130px;
   width: 101%;
   z-index: 2;
   padding: 0;
@@ -365,7 +365,7 @@
 .sticky-navigation.fixed{
   transition: all .4s ease;
   padding-top: 6px;
-  padding-left: 140px;
+  padding-left: 130px;
 
 }
 .nav-description.fixed{
