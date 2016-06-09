@@ -41,6 +41,7 @@ wp-content/themes/citystudio/node_modules/
 .gitignore
 !wp-content/
 !README.md
+wp-content/themes/citystuido/gulpfile.js
 
 # Ignore everything in "wp-content" except the "plugins" and "themes".
 # =============== #
