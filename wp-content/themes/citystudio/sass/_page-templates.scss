@@ -36,8 +36,7 @@
     }
   }
   @include desktop {
-    .tag-archives {
-    }
+    .tag-archives {}
     h2 {
       font-family: 'open_sans', bold;
       font-size: 4rem;
@@ -58,20 +57,19 @@
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     -webkit-box-pack: justify;
-    -webkit-justify-content:   space-between;
+    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
     padding-bottom: 4em;
     margin: 1.5rem 1.5em 0 1.5rem;
     box-sizing: border-box;
     padding: none;
-
     width: 90vw;
-    ul{
-        a{
-          border: none;
-        }
+    ul {
+      a {
+        border: none;
       }
+    }
     li {
       background-position: center center !important;
       background-size: cover !important;
@@ -104,11 +102,11 @@
   box-sizing: border-box;
   font-size: 1.5rem;
   width: 90vw;
-  padding: 0 .5em;
+  padding: 0 0.5em;
   height: 2.5rem;
-@include desktop {
-  height: 6.5rem;
-  margin-bottom: 1.5rem;
+  @include desktop {
+    height: 6.5rem;
+    margin-bottom: 1.5rem;
   }
 }
 .tag-url {

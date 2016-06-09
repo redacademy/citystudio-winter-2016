@@ -17,25 +17,25 @@
   justify-content: space-between;
   transition: width 1s ease-in;
   @include desktop {
-    height: 100%;
-    max-height: 80px;
+    height: 85px;
     z-index: 2 !important;
     position: relative !important;
-    width: 81px;
+    width: 86px;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     transition: width .8s ease-in;
-    margin: 22px 32px;
+    margin: 17px 10px;
   }
 }
 .sort {
   color: white;
   font-weight: bold;
   text-transform: uppercase;
-  border: 2px solid white;
-  padding: 18px 19px; 
+  border: 3px solid white;
+  padding: 21px 18px; 
+  right: 2px;
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
@@ -47,24 +47,26 @@
   @include desktop {
     width: 100vw;
     margin: 0;
-    max-width: 2.8rem;
-    height: 2.5rem;
+    max-width: 3rem;
+    height: 2.4rem;
     transition: all 1s ease-in;
   }
   label{
-    font-size: 22px;
-    margin: 0 -7px;
+    font-size: 21px;
+    margin: 0 -6px;
+    padding-top:2px;
   }
 }
 .open {
   min-width: 100vw;
-  width: 90%;
+  width: 500px;
+  height: 85px;
   transition: width 1s ease-in;
   @include desktop {
     position: relative !important;
     flex-basis: 25%;
     order: 1;
-    min-width: 510px;
+    min-width: 500px;
     transition: all 1s ease-in;
   }
 }
@@ -94,7 +96,11 @@
 .refresh {
   width: 4.3rem;
   border-radius: 70px;
+    @include desktop {
+    
+  }
 }
+
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
   background-size: 20px 30px;
@@ -102,8 +108,8 @@
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 5rem;
-    height: 5rem;
+    width: 5.3rem;
+    height: 5.3rem;
     background-size: 35px 45px;
   }
 }
@@ -114,8 +120,8 @@
   background-color: #03648c;
   transition: all 1.5s ease-in;
   @include desktop {
-    width: 5rem;
-    height: 5rem;
+    width: 5.3rem;
+    height: 5.3rem;
     background-size: 45px 60px;
   }
 }
@@ -126,8 +132,8 @@
   background-color: #03648c;
   transition: all 2s ease-in;
   @include desktop {
-    width: 5rem;
-    height: 5rem;
+    width: 5.2rem;
+    height: 5.3rem;
     background-size: 45px 45px;
   }
 }
@@ -135,12 +141,13 @@
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
   height: 3.8rem;
-  border: 2px solid white;
+  border: 3px solid white;
   background-color: #0082b9;
   transition: all 2.3s ease-in;
   @include desktop {
     width: 5rem;
-    height: 4.8rem;
+    height: 5rem;
+    right: -2px;
     background-size: 45px 45px;
   }
 }
@@ -186,7 +193,7 @@
 .theme {
   position: absolute;
   bottom: -231px;
-  left: -60px;
+  left: -55px;
   width: 130px;
   &::after {
     content: '';
@@ -260,10 +267,6 @@
     left: 36%;
   }
 }
-.theme-labels label{
-    font-size: 14px;
-    hyphen: manual;
-  }
 .part-labels {
   width: 46px;
   height: 52px;
@@ -275,7 +278,7 @@
 }
 .year-labels {
   width: 48px;
-  right: 9%;
+  right: 0;
   top: 0;
   height: 52px;
   label::after {
@@ -284,12 +287,19 @@
 }
 .theme-labels,
 .part-labels,
+.year-labels label{
+    font-size: 16px;
+    hyphen: manual;
+}
+
+.theme-labels,
+.part-labels,
 .year-labels {
     display: none;
     position: relative;
     background-color: #fff;
     width: 85px;
-    height: 79px;
+    height: 83px;
     border-radius: 45px;
     border: 1.5px solid #006496;
     text-align: center;
@@ -313,13 +323,13 @@
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 115px;
+  height: 120px;
   padding-left: 140px;
   transition: height 1.2s ease;
 }
 
 .nav-description {
-  transition: all 1s ease;
+  transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
   margin-left: 48%;
@@ -327,7 +337,7 @@
   font-size: 22px;
   font-family: $fontfamily;
   p {
-    padding: 2px;
+    padding: 14px;
     width: 600px;}
   img {
     height: 60px;
@@ -354,7 +364,7 @@
 
 .sticky-navigation.fixed{
   transition: all .4s ease;
-  padding-top: 5px;
+  padding-top: 6px;
   padding-left: 140px;
 
 }
@@ -363,9 +373,13 @@
   padding-top: 5px;
   margin-left: 48%;
    p {
-    padding: 6px;
+    padding: 12px;
     width: 600px;
   }
+}
+
+.nav-div.fixed{
+  margin: 23px 28px;
 }
 
 .explore {
