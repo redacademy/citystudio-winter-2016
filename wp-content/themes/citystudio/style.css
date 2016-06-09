@@ -920,16 +920,16 @@ iframe {
     margin-top: 0.2rem; }
 
 .site-footer {
-  width: 1723px;
+  width: 100%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
@@ -974,9 +974,9 @@ iframe {
       margin-top: .8rem; } }
 
 .footer-logo {
-  padding: 2% 2%;
+  padding: 2% 0;
   display: block;
-  width: 800px; }
+  width: 540px; }
   .footer-logo img {
     width: 440px;
     height: 100px;
@@ -984,7 +984,7 @@ iframe {
 
 .footer-located {
   margin: 0rem;
-  max-width: 8%;
+  max-width: 155px;
   text-align: center; }
   .footer-located h3, .footer-located p {
     color: white;
@@ -1001,7 +1001,8 @@ iframe {
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: center;
-  margin-top: .5rem; }
+  margin-top: .5rem;
+  max-width: 12%; }
   .exploring-div h3 {
     font-size: 18px;
     color: white;
@@ -1670,7 +1671,7 @@ li {
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .nav-div {
-      height: 85px;
+      height: 84px;
       z-index: 2 !important;
       position: relative !important;
       width: 86px;
@@ -1716,7 +1717,7 @@ li {
 .open {
   min-width: 100vw;
   width: 500px;
-  height: 85px;
+  height: 84px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
@@ -1986,7 +1987,7 @@ li {
   font-family: "open_sans"; }
   .nav-description p {
     padding: 6px;
-    width: 600px; }
+    width: 50%; }
   .nav-description img {
     height: 60px;
     width: 60px;
@@ -2014,7 +2015,7 @@ li {
 .nav-description.fixed {
   transition: all 1.2s ease;
   padding-top: 5px;
-  margin-left: 48%; }
+  margin-left: 50%; }
   .nav-description.fixed p {
     padding: 12px;
     width: 600px; }
@@ -2155,7 +2156,7 @@ li {
 
 .page-title {
   margin: 0;
-  max-width: 1844px;
+  width: 96%;
   padding: 2%;
   /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/
   background-origin: content-box;
@@ -2187,7 +2188,8 @@ li {
     margin: 2rem 0; }
   .section-header h3 {
     font-size: 20px;
-    padding-bottom: 1%; }
+    padding-bottom: 1%;
+    width: 170px; }
   .section-header p {
     font-size: 18px;
     line-height: 1.8rem; }
@@ -2198,7 +2200,7 @@ li {
   display: flex;
   position: relative;
   background-color: #f9f9f9;
-  padding: 2% 0% 1% 9%;
+  padding: 2% 3% 0% 9%;
   max-width: 1844px;
   font-size: 18px; }
   .call-to-action .cta-heading {
@@ -2217,7 +2219,7 @@ li {
   color: white;
   text-align: center;
   box-shadow: 0 0 8px #666666;
-  margin-left: 24%;
+  margin-left: 120px;
   margin-top: 3%; }
   .connect .become-involved {
     font-weight: bold; }

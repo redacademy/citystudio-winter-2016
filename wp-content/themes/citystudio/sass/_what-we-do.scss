@@ -1,6 +1,6 @@
 .page-title {
   margin: 0;
-  max-width: 1844px;
+  width: 96%;
   padding: 2%;
   /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/
   background-origin: content-box;
@@ -33,6 +33,7 @@
   h3{
     font-size: 20px;
     padding-bottom: 1%;
+    width: 170px;
   }
   p{
     font-size: 18px;
@@ -43,7 +44,7 @@
   display: flex;
   position: relative;
   background-color: #f9f9f9;
-  padding: 2% 0% 1% 9%;
+  padding: 2% 3% 0% 9%;
   max-width: 1844px;
   font-size: 18px;
   .cta-heading{
@@ -66,7 +67,7 @@
   -moz-box-shadow: 0 0 8px #666666;
   -webkit-box-shadow: 0 0 8px #666666;
   box-shadow: 0 0 8px #666666;
-  margin-left: 24%;
+  margin-left: 120px;;
   margin-top: 3%;
   .become-involved{
     font-weight: bold;

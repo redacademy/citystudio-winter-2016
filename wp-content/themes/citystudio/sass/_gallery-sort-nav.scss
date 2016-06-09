@@ -17,7 +17,7 @@
   justify-content: space-between;
   transition: width 1s ease-in;
   @include desktop {
-    height: 85px;
+    height: 84px;
     z-index: 2 !important;
     position: relative !important;
     width: 86px;
@@ -60,7 +60,7 @@
 .open {
   min-width: 100vw;
   width: 500px;
-  height: 85px;
+  height: 84px;
   transition: width 1s ease-in;
   @include desktop {
     position: relative !important;
@@ -338,7 +338,7 @@
   font-family: $fontfamily;
   p {
     padding: 6px;
-    width: 600px;}
+    width: 50%;}
   img {
     height: 60px;
     width: 60px;
@@ -371,7 +371,7 @@
 .nav-description.fixed{
   transition: all 1.2s ease;
   padding-top: 5px;
-  margin-left: 48%;
+  margin-left: 50%;
    p {
     padding: 12px;
     width: 600px;
