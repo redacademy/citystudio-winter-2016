@@ -1,8 +1,11 @@
 
 .site-footer{
+  width: 1906px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
   background: $dark-blue;
   z-index: 9999;
     @include desktop {
@@ -11,8 +14,8 @@
 
 /* Footer Social Links */
 .social-icons-div {
-  display: flex;
   padding: 4% 2% 0;
+
   a{
     border: none;
     img{
@@ -49,8 +52,9 @@
   }
 }
 .footer-logo{
-  padding: 4% 2% 0;
-  display: flex;
+  padding: 1% 2% 0;
+    display: block;
+
   width: 800px;
   img{
     width: 440px;
@@ -59,8 +63,8 @@
   }
 }
 .footer-located{
-  margin: -3rem;
-  max-width: 20%;
+  margin: 0rem;
+  max-width: 8%;
   h3, p {
   color: white;
   margin: 0px 0 6px 0;
@@ -111,7 +115,7 @@
   }
   h3, p {
   color: white;
-  margin: 0px 0 6px 0;
+  margin: 0px -22px 6px 0;
   font-size: 18px;
   }
    li:hover{

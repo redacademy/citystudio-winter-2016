@@ -920,6 +920,7 @@ iframe {
     margin-top: 0.2rem; }
 
 .site-footer {
+  width: 1906px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -929,14 +930,17 @@ iframe {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #006496;
   z-index: 9999; }
 
 /* Footer Social Links */
 .social-icons-div {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   padding: 4% 2% 0; }
   .social-icons-div a {
     border: none; }
@@ -970,10 +974,8 @@ iframe {
       margin-top: .8rem; } }
 
 .footer-logo {
-  padding: 4% 2% 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  padding: 1% 2% 0;
+  display: block;
   width: 800px; }
   .footer-logo img {
     width: 440px;
@@ -981,8 +983,8 @@ iframe {
     opacity: .4; }
 
 .footer-located {
-  margin: -3rem;
-  max-width: 20%;
+  margin: 0rem;
+  max-width: 8%;
   text-align: center; }
   .footer-located h3, .footer-located p {
     color: white;
@@ -1028,7 +1030,7 @@ iframe {
       height: 50px; }
   .citystudio-div h3, .citystudio-div p {
     color: white;
-    margin: 0px 0 6px 0;
+    margin: 0px -22px 6px 0;
     font-size: 18px; }
   .citystudio-div li:hover {
     color: #969ca1;
@@ -2139,11 +2141,11 @@ li {
 
 .page-title {
   margin: 0;
-  width: 95vw;
+  max-width: 1844px;
   padding: 2%;
   /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/
   background-origin: content-box;
-  background-size: 1900px 200px; }
+  background-size: 1844px 200px; }
   .page-title h1 {
     color: white;
     font-size: 64px; }
@@ -2153,7 +2155,6 @@ li {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90vw;
   padding: 2% 0; }
 
 .wwd-hero {
@@ -2162,25 +2163,18 @@ li {
   width: 100%;
   height: 70vh; }
 
-.why,
-.how,
-.mission-statement {
-  padding-left: 32%;
-  padding-top: 1%;
-  padding-right: 10%; }
-  .why .separate,
-  .how .separate,
-  .mission-statement .separate {
+.section-header {
+  max-width: 928px;
+  padding: 2rem;
+  margin: 0 auto; }
+  .section-header .separate {
     border-top: 3px dashed #00A0DC;
-    background-color: #fff; }
-  .why h3,
-  .how h3,
-  .mission-statement h3 {
+    background-color: #fff;
+    margin: 2rem 0; }
+  .section-header h3 {
     font-size: 20px;
     padding-bottom: 1%; }
-  .why p,
-  .how p,
-  .mission-statement p {
+  .section-header p {
     font-size: 18px;
     line-height: 1.8rem; }
 
@@ -2188,26 +2182,29 @@ li {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  position: relative;
   background-color: #f9f9f9;
-  padding: 2%;
-  width: 95vw;
+  padding: 2% 0% 1% 9%;
+  max-width: 1844px;
   font-size: 18px; }
-  .call-to-action p {
-    width: 60%; }
+  .call-to-action .cta-heading {
+    width: 50%;
+    padding-bottom: 2%; }
+  .call-to-action .cta-content {
+    width: 100%; }
 
 .connect {
+  display: block;
   width: 285px;
   height: 100px;
   border-radius: 2px;
-  z-index: 10;
-  padding: 10px;
+  padding: 9px;
   background-color: #00A0DC;
   color: white;
   text-align: center;
-  box-shadow: 0 0 8px #666666; }
+  box-shadow: 0 0 8px #666666;
+  margin-left: 24%;
+  margin-top: 3%; }
   .connect .become-involved {
     font-weight: bold; }
   .connect p {
@@ -2215,7 +2212,7 @@ li {
     font-weight: bold;
     font-size: 19px;
     display: table-cell;
-    padding: 0 1%;
+    padding: 0 20%;
     letter-spacing: 3px; }
   .connect button {
     color: white;

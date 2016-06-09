@@ -1,6 +1,4 @@
 jQuery(document).ready(function($){
-
-
      $(window).scroll(function(){
       var sticky = $('.sticky-navigation');
           nav = $('.gallery-description-container');
