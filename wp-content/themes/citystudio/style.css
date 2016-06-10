@@ -1332,6 +1332,7 @@ a:active {
 .hero {
   width: 100%;
   height: 75vh;
+  opacity: 0.95;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat bottom center;
   background-size: cover;
   display: -webkit-flex;
@@ -1340,20 +1341,16 @@ a:active {
   -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
-  border-bottom: 2px solid lightgrey; }
+  border-bottom: 1px solid black; }
 
-.homepage-description {
+.hero-blurb {
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   font-weight: bold;
   font-family: "open_sans";
-  padding: 9% 9%;
-  /* FF3.6-15 */
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, white 17%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  padding: 8.5% 12%;
+  background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
-  /* IE6-9 */
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1365,48 +1362,45 @@ a:active {
 .orange-font {
   color: #db5100; }
 
-.homepage-partners {
+.homepage-titles {
+  margin: 3rem auto 1rem;
+  letter-spacing: 0.1rem;
+  font-family: "open_sans";
+  text-align: center; }
+
+.homepage-description {
+  margin: 0 auto;
+  padding-bottom: 3.5rem;
+  font-size: 1rem;
+  font-family: "open_sans";
+  text-align: center;
+  width: 70%; }
+
+.separate {
+  border-top: 2px dashed #00A0DC;
+  background-color: #fff;
+  width: 45%; }
+
+.homepage-partners-container {
   width: 100vw;
   text-align: center;
   display: block; }
-  .homepage-partners h1 {
-    margin: 2rem 0 1rem 0;
-    letter-spacing: -.1rem; }
-  .homepage-partners p {
-    width: 74vw;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    font-size: 21px; }
-  .homepage-partners .partner-buttons {
+  .homepage-partners-container .partner-buttons {
     text-align: center;
     padding: 3%; }
-  .homepage-partners button {
+  .homepage-partners-container button {
     font-weight: bold;
     background-color: rgba(1, 152, 213, 0.8);
     color: white;
     border-radius: 7px;
     padding: 0.5% 2%;
-    margin: 1rem 1rem 2rem 1rem; }
+    margin: 1rem 1rem 2rem; }
 
 .partners-title {
   text-align: center;
   color: white;
   margin-top: 2.5rem;
   text-transform: uppercase; }
-
-.partners-row1 img,
-.partners-row2 img {
-  width: 180px;
-  height: 180px; }
-
-.featured,
-.partners-row1,
-.partners-row2 {
-  background-color: #f9f9f9; }
-  .featured img,
-  .partners-row1 img,
-  .partners-row2 img {
-    padding: 2% 3%; }
 
 a {
   text-decoration: none; }
@@ -1973,21 +1967,20 @@ li {
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 130px;
-  padding-left: 130px;
+  height: 120px;
+  padding-left: 2rem;
   transition: height 1.2s ease; }
 
 .nav-description {
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 48%;
+  margin-left: 49%;
   text-align: left;
-  font-size: 22px;
+  font-size: 1.3rem;
   font-family: "open_sans"; }
   .nav-description p {
-    padding: 6px;
-    width: 50%; }
+    padding: 6px; }
   .nav-description img {
     height: 60px;
     width: 60px;
@@ -2010,14 +2003,18 @@ li {
 .sticky-navigation.fixed {
   transition: all .4s ease;
   padding-top: 6px;
-  padding-left: 130px; }
+  padding-left: 2rem; }
 
 .nav-description.fixed {
-  transition: all 1.2s ease;
-  padding-top: 5px;
-  margin-left: 50%; }
+  transition: all .8s ease;
+  height: 80px;
+  padding-top: 6px;
+  margin-left: 49%;
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: "open_sans"; }
   .nav-description.fixed p {
-    padding: 12px;
+    padding: 14px;
     width: 600px; }
 
 .nav-div.fixed {
@@ -2045,7 +2042,8 @@ li {
   font-size: 26px; }
 
 .gallery-description-container {
-  height: 12px; }
+  height: 12px;
+  border-top: 1px solid black; }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles

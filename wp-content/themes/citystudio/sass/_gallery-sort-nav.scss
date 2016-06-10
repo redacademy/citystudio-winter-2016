@@ -34,7 +34,7 @@
   font-weight: bold;
   text-transform: uppercase;
   border: 3px solid white;
-  padding: 21px 18px; 
+  padding: 21px 18px;
   right: 2px;
   border-radius: 45px;
   margin-top: 0 auto;
@@ -97,7 +97,7 @@
   width: 4.3rem;
   border-radius: 70px;
     @include desktop {
-    
+
   }
 }
 
@@ -221,7 +221,7 @@
     border-color: #fff;
     position: absolute;
    /* bottom: 102px;
-    left: 24%;*/  
+    left: 24%;*/
   }
 }
 .year {
@@ -304,7 +304,7 @@
     border: 1.5px solid #006496;
     text-align: center;
     color: #00A0DC;
-    font-weight: 700; 
+    font-weight: 700;
     word-break: break-word;
     label {
     &::after {
@@ -323,8 +323,8 @@
   display: inline-flex;
   float: left;
   padding: 0;
-  height: 130px;
-  padding-left: 130px;
+  height: 120px;
+  padding-left: 2rem;
   transition: height 1.2s ease;
 }
 
@@ -332,13 +332,13 @@
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 48%;
+  margin-left: 49%;
   text-align: left;
-  font-size: 22px;
+  font-size: 1.3rem;
   font-family: $fontfamily;
   p {
     padding: 6px;
-    width: 50%;}
+  }
   img {
     height: 60px;
     width: 60px;
@@ -365,17 +365,20 @@
 .sticky-navigation.fixed{
   transition: all .4s ease;
   padding-top: 6px;
-  padding-left: 130px;
+  padding-left: 2rem;
 
 }
 .nav-description.fixed{
-  transition: all 1.2s ease;
-  padding-top: 5px;
-  margin-left: 50%;
-   p {
-    padding: 12px;
-    width: 600px;
-  }
+  transition: all .8s ease;
+  height: 80px;
+  padding-top: 6px;
+  margin-left: 49%;
+  text-align: left;
+  font-size: 1.3rem;
+  font-family: $fontfamily;
+  p {
+    padding: 14px;
+    width: 600px;}
 }
 
 .nav-div.fixed{
@@ -402,4 +405,5 @@
 
 .gallery-description-container{
   height: 12px;
+  border-top: 1px solid black;
 }
