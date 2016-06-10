@@ -1,6 +1,10 @@
 /*--------------------------------------------------------------
 # Single Project Page Styles
 --------------------------------------------------------------*/
+.section-credits{
+display:flex;
+justify-content: center;
+}
 //HEADER
 .page-title {
   margin: 0;
@@ -13,7 +17,7 @@
     text-transform: uppercase;
     font-family: $fontfamily;
     font-size: 3rem;
-    margin-left: 1.5rem;
+    margin-left: 4.5rem;
   }
 }
 //SHORT DESCRIPTION
@@ -21,17 +25,17 @@
   margin: 2rem;
   font-family: $fontfamily;
   text-align: left;
-  width: 90vw;
+  width: 85%;
 }
 //PROJECT CREDIT COLUMNS
 .col-one,
 .col-two {
-  width: 95vw;
+  width: 85%;
 }
 @include desktop {
   .col-one,
   .col-two {
-    width: 45vw;
+    width: 42.5%;
   }
 }
 .col-one {
@@ -39,7 +43,6 @@
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-  margin-left: 2rem;
 }
 .col-two {
   -webkit-box-ordinal-group: 3;
@@ -62,7 +65,7 @@
     img {
       height: 50vh;
       width: 45vw;
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.75rem;
       display: block;
       border: 1px solid $citystudio-grey;
     }
@@ -78,7 +81,7 @@
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
 .full-width-col {
   margin: 1rem 2rem;
-  width: 90vw;
+  width: 85%;
   font-family: $fontfamily;
   display: block;
   -webkit-box-ordinal-group: 4;
@@ -99,7 +102,7 @@
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: 0.5rem;
-  width: 95vw;
+  width: 85%;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;

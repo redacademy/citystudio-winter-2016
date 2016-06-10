@@ -60,7 +60,7 @@ get_header(); ?>
 
 			<?php wp_reset_postdata(); ?>
 			</div>
-
+		<hr class="separate-white">
 <!-- media links -->
 				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
 				<div class="media-links-container">

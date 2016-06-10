@@ -1,13 +1,13 @@
 .contact-header {
-  background: url("../../images/citystudio-logo.png") center center no-repeat ;
-  background-color: $light-blue;
+  // background: url("../../images/citystudio-logo.png") center center no-repeat ;
+  background-color: $city-blue;
   background-size: cover;
-  height: 9rem;
+  height: 7rem;
   width: 100%;
   h1 {
     color: #fff;
     margin-left: 5.2%;
-    padding-top: 2rem;
+    padding-top: 1rem;
     font-family: $fontfamily;
   }
 }

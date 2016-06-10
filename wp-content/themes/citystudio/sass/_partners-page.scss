@@ -108,6 +108,15 @@
   justify-content: space-between;
   margin: 1rem 4rem 0;
 }
+
+.separate-white {
+  border-top: 2px dashed white;
+  background-color: transparent;
+  width: 55%;
+  margin-bottom: 2rem;
+margin-top: 1rem;
+}
+
 //MEDIA LINKS STYLES
 .media-links-title {
   font-size: 1rem;
