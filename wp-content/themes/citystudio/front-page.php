@@ -16,9 +16,11 @@ get_header(); ?>
         </div>
     </div> <!-- end hero -->
 
+<!-- <hr class="separate"> -->
+
   <h1 class="homepage-titles">CityStudio Projects</h1>
   <p class="homepage-description">
-    CityStudio partners with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
+    We partner with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
   </p>
 
   <!-- <hr class="separate"> -->
@@ -52,7 +54,12 @@ get_header(); ?>
 
         <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
-        <li style="background: url('<?php echo $background; ?>') no-repeat center; background-size: cover; border-top: 2px solid white; border-bottom: 2px solid white;border-right: 1px solid white; border-left: 1px solid white;">
+        <li style=
+            "background: url('<?php echo $background; ?>') no-repeat center;
+             background-size: cover;
+             border-top: 2px solid white;
+             border-bottom: 2px solid white;
+             border-right: 2px solid white;">
           <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
             <div class="subtitle"><?php echo CFS()->get( 'subtitle' ); ?>
             </div>
@@ -68,14 +75,6 @@ get_header(); ?>
   <div class="homepage-partners-container">
 
     <h1 class="homepage-titles">CityStudio Partners</h1>
-            <button>NEC</button>
-            <button>UBC</button>
-            <button>BCIT</button>
-            <button>SFU</button>
-            <button>VCC</button>
-            <button>LANGARA</button>
-            <button>ECUAD</button>
-      </div>
 
       <div class="featured">
                     <?php
@@ -103,5 +102,5 @@ get_header(); ?>
                       while ( have_rows('partner_row_2') ) : the_row(); ?>
                         <img src ="<?php the_sub_field('image_url') ?>" />
                     <?php endwhile; ?>
-                </div>  
+                </div>
 <?php get_footer(); ?>

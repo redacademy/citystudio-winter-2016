@@ -5,12 +5,13 @@
  */
 ?>
 
-			<footer id="colophon" class="site-footer" role="contentinfo">
+	<footer id="colophon" class="site-footer" role="contentinfo">
 
-					<div class="footer-logo">
-						<img src="<?php echo get_template_directory_uri().'/images/citystudio-logo.png';?>">
-						
-					<div class="social-icons-div">
+		<div class="footer-branding-container">
+			<div class="footer-logo">
+				<img src="<?php echo get_template_directory_uri().'/images/citystudio-logo.png';?>">
+			</div>
+			<div class="social-icons-div">
 							<a href="https://www.facebook.com/CityStudioVancouver/">
 								<img src="<?php echo get_template_directory_uri().'/images/social-facebook-white.png';?>" class="social-icons" alt="Link to Citystudio Facebook Page" />
 							</a>
@@ -18,21 +19,25 @@
 								<img src="<?php echo get_template_directory_uri().'/images/social-instagram-white.png';?>" class="social-icons" alt="Link to Citystudio Instagram Feed" />
 							</a>
 							<a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-								<img src="<?php echo get_template_directory_uri().'/images/social-twitter-white.png';?>" class="social-icons twitter" alt="Link to Citystudio Twitter Feed" />
+								<img src="<?php echo get_template_directory_uri().'/images/social-twitter-white.png';?>" class="social-icons" alt="Link to Citystudio Twitter Feed" />
 							</a>
 							<a href="http://www.youtube.com/user/CityStudioVancouver">
-								<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons twitter" alt="Link to Citystudio YouTube Feed" />
+								<img src="<?php echo get_template_directory_uri().'/images/social-youtube-white.png';?>" class="social-icons" alt="Link to Citystudio YouTube Feed" />
 							</a>
-					</div>
-				</div>	
-				<div class="footer-located">
-					<h3>Located At:</h3><br>
-					<p>1800 Spyglass Place<br>
-					Vancouver, B.C.</p>
-					<p>604-874-6401</p>
+			</div>
+		</div> <!--end footer branding -->
 
+		<div class="footer-info-container">
+				<div class="footer-info-block">
+					<h3>Located At</h3>
+					<ul>
+						<li>1800 Spyglass Place</li>
+						<li>Vancouver, B.C.</li>
+						<li>604-874-6401</li>
+					</ul>
 				</div>
-				<div class="exploring-div">
+
+				<div class="footer-info-block">
 					<h3>Keep Exploring</h3>
 					<ul>
 						<li>Projects</li>
@@ -41,7 +46,8 @@
 						<li>Partners</li>
 					</ul>
 				</div>
-				<div class="citystudio-div">
+
+				<div class="footer-info-block">
 					<h3>CITYSTUDIO</h3>
 					<ul>
 						<li>Contact Us</li>
@@ -50,7 +56,7 @@
 						<li>Blog</li>
 					</ul>
 				</div>
-
+		</div><!-- end footer info container -->
 			</footer><!-- #colophon -->
 		</div><!-- #content -->
 		<?php wp_footer(); ?>

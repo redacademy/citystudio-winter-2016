@@ -11,12 +11,17 @@ a {
   justify-content: center;
   list-style-type: none;
   width: 100vw;
+  padding-bottom: 4px;
   border-top: 2px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 }
 
 li {
   list-style-type: none;
   height: 100%;
+//   :nth-child(3n+1){
+//   border-right: 0px !important;
+// }
 }
 
 .featured-square {
@@ -34,6 +39,7 @@ li {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
+    // border: 5px double white;
   }
 }
 .featured-rectangle {
@@ -41,9 +47,9 @@ li {
   background-position: center center;
   height: 250px;
   min-width: 250px;
-  flex: 0 1 99%;
+  flex: 0 1 98%;
   @include desktop {
-  flex: 0 1 49.555%;
+  flex: 0 1 49.1255%;
   }
   .description:hover {
     background-color: transparentize($dark-blue, .1);
@@ -51,6 +57,7 @@ li {
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
+
   }
  }
 
