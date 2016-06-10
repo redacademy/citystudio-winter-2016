@@ -998,6 +998,18 @@ iframe {
     opacity: 0.7;
     line-height: 1.5rem; }
 
+.copyrite {
+  background-color: #006496;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  color: white; }
+
 /*--------------------------------------------------------------
 # Search Page Styles
 --------------------------------------------------------------*/
