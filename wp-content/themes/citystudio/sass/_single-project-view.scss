@@ -1,25 +1,27 @@
 /*--------------------------------------------------------------
 # Single Project Page Styles
 --------------------------------------------------------------*/
-.section-credits{
-display:flex;
-justify-content: center;
+.section-credits {
+  display: flex;
+  justify-content: center;
 }
 //HEADER
 .page-title {
   margin: 0;
   width: 100vw;
   background-color: $city-blue;
-  border-top: 1px solid $citystudio-grey;
-  border-bottom: 1px solid $citystudio-grey;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
   .entry-title {
     color: white;
     text-transform: uppercase;
     font-family: $fontfamily;
     font-size: 3rem;
-    margin-left: 4.5rem;
+    margin: auto 4.5rem;
   }
 }
+//HEROBANNER
+
 //SHORT DESCRIPTION
 .excerpt {
   margin: 2rem;

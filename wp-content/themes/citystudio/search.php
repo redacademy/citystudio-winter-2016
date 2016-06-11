@@ -21,20 +21,16 @@ get_header(); ?>
 				</div>
 
 				<div class="search-list">
-					<?php if ( have_posts() ) : ?>
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
+					<?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 12, ) ); ?>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
 
 					<a href="<?php echo get_the_permalink();?>">
 			      <?php if (has_post_thumbnail()) : ?>
-				      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin: 0 auto;margin-bottom:1.5rem;'); ?>
+				      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin: 0 auto 2rem;'); ?>
 				    <?php endif; ?>
 					</a>
 
-				<?php endwhile; ?>
-
-				<?php endif; ?>
-
+				<?php endwhile; wp_reset_query(); ?>
 				</div>
 			</div>
 		</main><!-- #main -->

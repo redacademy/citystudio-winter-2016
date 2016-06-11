@@ -12,15 +12,26 @@ get_header();
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <!-- Section Project Credits -->
-    <div class="section-credits content-wrapper">
+		      <div class="page-title">
+		        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+					</div>
+		<?php
+		    global $post;
+		    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+		?>
+				<div class="project-hero"
+						 style="background: url(<?php echo $src[0]; ?> ) no-repeat center bottom;
+										background-size: cover;
+										display: block;
+									  height: 70vh;">
 
-      <div class="page-title">
-        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			</div>
+				</div>
 
+
+
+	<div class="section-credits content-wrapper">
       <div class="excerpt"><?php echo CFS()->get( 'excerpt' ); ?></div>
-
+    <!-- Section Project Credits -->
       <div class="col-one">
         <span class="proj-partners proj-detail-wrap">
           <h3>School &amp; Course:</h3>
@@ -55,16 +66,13 @@ get_header();
           <h3>Staff &amp; Partners:</h3>
           <?php echo CFS()->get( 'staff_partners' ); ?>
         </span>
-        <span class="proj-subtitle proj-detail-wrap">
-          <h3>Student Team:</h3>
-          <?php echo CFS()->get( 'student_team' ); ?>
-        </span>
       </div> <!-- end .col-one -->
 
       <div class="col-two">
-				<?php if ( has_post_thumbnail() ) : ?>
-					<?php the_post_thumbnail( 'large' ); ?>
-				<?php endif; ?>
+				<span class="proj-subtitle proj-detail-wrap">
+          <h3>Student Team:</h3>
+          <?php echo CFS()->get( 'student_team' ); ?>
+        </span>
         <span class="proj-subtitle proj-detail-wrap">
           <h3>City Strategy:</h3>
           <?php echo CFS()->get( 'city_strategy' ); ?>

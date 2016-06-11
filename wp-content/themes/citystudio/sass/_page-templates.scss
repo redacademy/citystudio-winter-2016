@@ -74,12 +74,16 @@
       background-size: cover !important;
       width: 360px;
       height: 280px;
+      border: 1px solid transparent;
       @include desktop {
         margin: 0 auto 2rem;
         width: 360px;
         height: 280px;
         font-size: 3rem;
       }
+    &:hover{
+      border: 1px solid black;
+}
     }
   }
 }

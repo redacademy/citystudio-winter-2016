@@ -8,9 +8,9 @@ a {
 .grid {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;;
   list-style-type: none;
-  width: 100vw;
+  width: 103%;
   padding-bottom: 4px;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
