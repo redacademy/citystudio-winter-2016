@@ -79,6 +79,20 @@ position: absolute;
 }
 }
 
+.archive-blurb{
+background: white;
+padding:2%;
+display: flex;
+justify-content: center;
+text-align: center;
+p{
+font-family: $fontfamily;
+width:65%;
+margin-top: 1rem;
+font-size: 1rem;
+}
+}
+
 //ARCHIVE GRID-----------------------
 
   .search-list {

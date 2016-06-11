@@ -59,9 +59,9 @@
 					</div>
 			</div><!-- end footer info container -->
 
-			
+
 		</footer><!-- #colophon -->
-		<div class="copyrite">© Copyrite CityStudio Vancouver</div>
+		<div class="copyright">© Copyright CityStudio Vancouver</div>
 	</div><!-- #content -->
 		<?php wp_footer(); ?>
 	</body>
