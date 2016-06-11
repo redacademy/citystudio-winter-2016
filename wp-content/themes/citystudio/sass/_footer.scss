@@ -12,7 +12,12 @@
 }
 //Footer Branding----------------------
 .footer-branding-container{
-  margin-left: 2rem;
+  margin-left: 3rem;
+  @include tablet{
+    height: 114px;
+    width: 100%;
+    padding-top: 22px;
+  }
 }
 .footer-logo{
   display: block;
@@ -22,17 +27,29 @@
   opacity: .4;
   width: 100%;
   height: 100%;
+    @include tablet{
+      width: 345px;
+      height: 65px;
+
+    }
+  }
+   @include tablet{
+    display: inline;
   }
 }
 .social-icons-div{
   display:flex;
   align-items: flex-start;
+   @include tablet{
+    float: right;
+    width: 40%;
+  }
 }
 .social-icons {
   height: 1rem;
   width: 1rem;
   max-width: 50%;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   &:hover {
     cursor: pointer;
   }
@@ -40,15 +57,14 @@
     height: 1.5rem;
     width: 1.5rem;
     margin-right: 2rem;
-    }
   }
 
-.footer-info-container{
-display: flex;
-flex-direction: row;
-margin-right:2rem;
 }
-
+.footer-info-container{
+  display: flex;
+  flex-direction: row;
+  margin-right:2rem;
+}
 .footer-info-block{
   color: white;
   width:40%;
@@ -56,22 +72,27 @@ margin-right:2rem;
   margin: 2rem;
   margin-top: 2.5rem;
   h3{
-  margin-bottom: .25rem;
-  opacity: 0.9;
-  font-size: 1rem;
+    margin-bottom: .25rem;
+    opacity: 0.9;
+    font-size: 1rem;
   }
-    h3,li{
-  color:white;
-  font-family: $fontfamily;
-  text-align: center;
+    h3, li {
+    color:white;
+    font-family: $fontfamily;
+    text-align: center;
   }
   li{
-  font-weight: lighter;
-  font-size: .85rem;
-  width: 9rem;
-  opacity: 0.7;
-  line-height: 1.5rem;
-
+    font-size: .85rem;
+    width: 9rem;
+    opacity: 0.7;
+    line-height: 1.5rem;
+  }
+  li:hover{
+    cursor: pointer;
+    color: $light_blue;
+  }
+  @include tablet{
+    display: none;
   }
 }
 
@@ -86,8 +107,3 @@ margin-right:2rem;
   font-size: .8rem;
   line-height: 1.25rem;
 }
-
-// a &:hover{
-// cursor: pointer;
-// text-decoration: underline;
-// }

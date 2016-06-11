@@ -17,6 +17,12 @@
 	}
 }
 
+@mixin tablet{
+	@media screen and (max-width: 1024px){
+	@content;
+	}
+}
+
 @mixin footer {
 	@media screen and (min-width: 540px){
 	@content;

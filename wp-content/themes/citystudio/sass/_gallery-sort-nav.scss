@@ -292,7 +292,6 @@
   font-size: 16px;
   hyphen: manual;
 }
-
 .theme-labels,
 .part-labels,
 .year-labels {
@@ -321,15 +320,17 @@
   }
 }
 .sticky-navigation {
-  display: inline-flex;
-  float: left;
-  padding: 0;
-  height: 120px;
-  padding-left: 2rem;
-  transition: height 1.2s ease;
+  @include desktop{
+    display: inline-flex;
+    float: left;
+    padding: 0;
+    height: 120px;
+    padding-left: 2rem;
+    transition: height 1.2s ease;
+  }
 }
-
 .nav-description {
+  @include desktop{
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
@@ -337,16 +338,19 @@
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
-  p {
-    padding: 6px;
-}
-  img {
-    height: 60px;
-    width: 60px;
-    margin-bottom: -20px;
+    p {
+      padding: 6px;
+    }
+    img {
+      height: 60px;
+      width: 60px;
+      margin-bottom: -20px;
+      }
+  }
+  @include tablet{
+    display: none;
   }
 }
-
 .fixed {
   position: fixed;
   top: 0;
@@ -362,7 +366,6 @@
   }
   background-color: rgba(255,255,255, 1);
 }
-
 .sticky-navigation.fixed{
   transition: all .4s ease;
   padding-top: 6px;
