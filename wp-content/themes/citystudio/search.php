@@ -16,7 +16,7 @@ get_header(); ?>
 				</header>
 				<div class="archive-blurb">
 					<p>
-
+							<?php the_field('archive_blurb') ?>
 					</p>
 				</div>
 
@@ -34,7 +34,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php endif; ?>
-			
+
 				</div>
 			</div>
 		</main><!-- #main -->

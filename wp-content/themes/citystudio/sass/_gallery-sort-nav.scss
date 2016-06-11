@@ -59,15 +59,15 @@
   }
 }
 .open {
-  min-width: 100vw;
-  width: 500px;
-  height: 84px;
+  width: 95vw;
+  height: 80px;
   transition: width 1s ease-in;
   @include desktop {
+    min-width: 480px;
+    height: 84px;
     position: relative !important;
     flex-basis: 25%;
     order: 1;
-    min-width: 500px;
     transition: all 1s ease-in;
   }
 }
@@ -95,8 +95,9 @@
 .partners,
 .years,
 .refresh {
-  width: 4.3rem;
-  border-radius: 70px;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 45px;
     @include desktop {
 
   }
@@ -104,8 +105,9 @@
 
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-  background-size: 20px 30px;
-  height: 2rem;
+  background-size: 30px 45px;
+  height: 5rem;
+  width: 5rem;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
@@ -116,8 +118,7 @@
 }
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 30px 40px;
-  height: 4rem;
+  background-size: 40px 55px;
   background-color: #03648c;
   transition: all 1.5s ease-in;
   @include desktop {
@@ -128,8 +129,7 @@
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 25px 30px;
-  height: 4rem;
+  background-size: 40px 45px;
   background-color: #03648c;
   transition: all 2s ease-in;
   @include desktop {
@@ -141,10 +141,10 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  height: 3.8rem;
   border: 3px solid white;
   background-color: #0082b9;
   transition: all 2.3s ease-in;
+  height: 4.8rem;
   @include desktop {
     width: 5rem;
     height: 5rem;
@@ -320,6 +320,11 @@
   }
 }
 .sticky-navigation {
+    display: inline-flex;
+    float: left;
+    padding: 0;
+    height: 120px;
+    transition: height 1.2s ease;
   @include desktop{
     display: inline-flex;
     float: left;
@@ -334,7 +339,7 @@
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 49%;
+  margin-left: 52%;
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
@@ -357,7 +362,7 @@
   left: -3px;
   padding-top: 20px;
   height: 130px;
-  width: 101%;
+  width: 100vw;
   z-index: 2;
   padding: 0;
   p {
@@ -367,16 +372,21 @@
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
+  @include desktop{
   transition: all .4s ease;
   padding-top: 6px;
-  padding-left: 2rem;
+  padding: 0;
+    padding-left: 1rem;
+  }
+  @include tablet{
+  }
 
 }
 .nav-description.fixed{
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 49%;
+  margin-left: 52%;
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
@@ -386,7 +396,7 @@
 }
 
 .nav-div.fixed{
-  margin: 23px 28px;
+  margin: 23px 0px;
 }
 
 .explore {

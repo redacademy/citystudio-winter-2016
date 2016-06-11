@@ -34,7 +34,7 @@
   }
    @include tablet{
     display: inline;
-  }  
+  }
 }
 .social-icons-div{
   display:flex;
@@ -75,7 +75,7 @@
     opacity: 0.9;
     font-size: 1rem;
   }
-    h3{
+    h3, li {
     color:white;
     font-family: $fontfamily;
     text-align: center;
@@ -94,14 +94,15 @@
     display: none;
   }
 }
-.copyrite{
-  font-family: sans-serif;
+
+.copyright{
   background-color: $dark-blue;
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: transparentize(white, .3);
+  font-family: $fontfamily;
+  font-size: .8rem;
+  line-height: 1.25rem;
 }
-
-
