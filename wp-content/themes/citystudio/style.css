@@ -1748,12 +1748,13 @@ li {
     padding-top: 2px; }
 
 .open {
-  min-width: 100vw;
-  height: 84px;
+  min-width: 96vw;
+  height: 80px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
-      width: 500px;
+      height: 84px;
+      min-width: 480px;
       position: relative !important;
       -webkit-flex-basis: 25%;
           -ms-flex-preferred-size: 25%;
@@ -1761,8 +1762,10 @@ li {
       -webkit-order: 1;
           -ms-flex-order: 1;
               order: 1;
-      min-width: 500px;
       transition: all 1s ease-in; } }
+  @media screen and (max-width: 1024px) {
+    .open {
+      min-width: 470px; } }
 
 .close {
   min-width: 20px;
@@ -1788,9 +1791,9 @@ li {
 .partners,
 .years,
 .refresh {
-  height: 5.2rem;
-  width: 5.2rem;
-  border-radius: 70px; }
+  height: 5rem;
+  width: 5rem;
+  border-radius: 45px; }
 
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
@@ -1805,7 +1808,7 @@ li {
 
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 35px 50px;
+  background-size: 45px 60px;
   background-color: #03648c;
   transition: all 1.5s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1816,7 +1819,7 @@ li {
 
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 35px 50px;
+  background-size: 40px 43px;
   background-color: #03648c;
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
@@ -2063,7 +2066,7 @@ li {
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 49%;
+  margin-left: 52%;
   text-align: left;
   font-size: 1.3rem;
   font-family: "open_sans"; }
@@ -2072,7 +2075,7 @@ li {
     width: 600px; }
 
 .nav-div.fixed {
-  margin: 23px 28px; }
+  margin: 23px 0px; }
 
 .explore {
   padding: 0.4% 5% 0 0;
