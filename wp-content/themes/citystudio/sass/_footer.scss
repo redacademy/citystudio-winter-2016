@@ -75,13 +75,16 @@ margin-right:2rem;
   }
 }
 
-.copyrite{
+.copyright{
   background-color: $dark-blue;
   display: flex;
   justify-content: center;
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: transparentize(white, .3);
+  font-family: $fontfamily;
+  font-size: .8rem;
+  line-height: 1.25rem;
 }
 
 // a &:hover{
