@@ -18,40 +18,35 @@ get_header(); ?>
 			</div>
 
 			<div class="wwd-content">
-				<div class="why">
-					<h3>Why</h3>
-					<p>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-					</p>
-					<p>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-					</p>
-				<hr class="separate">
-				</div>
-				<div class="how">
-					<h3>How</h3>
-					<p>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-					</p>
-					<br>
-					<p>
-					"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-					</p>
-				<hr class="separate">
-				</div>
-				<div class="mission-statement">
-					<h3>Mission Statement</h3>
-					<p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-					</p>
-					<hr class="separate">
+				<div class="section-header">
+					<?php
+                        // check if the repeater field has rows of data
+                        if( have_rows('section') );
+                             // loop through the rows of data
+                            while ( have_rows('section') ) : the_row(); ?>
+                          	<h3>
+	                          	<?php the_sub_field('section_heading') ?>
+	                        </h3>
+	                          	<?php the_sub_field('section_content') ?>
+							<hr class="separate">
+                     <?php  endwhile; ?>
 				</div>
 			</div>
 			<div class="call-to-action">
-				<p>
-					<b>How can people get involved in our innovation?</b>
-					<br>
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</p>
+					<?php
+	            // check if the repeater field has rows of data
+	            if( have_rows('call_to_action') );
+	                 // loop through the rows of data
+	                while ( have_rows('call_to_action') ) : the_row(); ?>
+	            <div style="display: block; width: 800px">
+					<div class="cta-heading">
+		              	<h3><?php the_sub_field('cta_heading') ?></h3>
+		            </div>
+		            <div class="cta-content">
+		            	<?php the_sub_field('cta_content') ?>
+					</div>
+				</div>
+	              <?php  endwhile; ?>
 					<div class="connect">
 						<label class="become-involved">Become Involved!</label>
 						<button><p>Connect</p></button>

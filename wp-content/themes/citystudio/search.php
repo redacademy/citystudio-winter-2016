@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying search results pages.
+* Template Name: Project Archive Search Page
  *
  * @package RED_Starter_Theme
  */
@@ -8,8 +8,17 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="searchpage">
-				<br>
-					<?php get_search_form(); ?>
+				<header class="search-archive-header">
+					<h1>Project Archive</h1>
+					<div class="searchform-container">
+						<?php get_search_form(); ?>
+					</div>
+				</header>
+				<div class="archive-blurb">
+					<p>
+							<?php the_field('archive_blurb') ?>
+					</p>
+				</div>
 
 				<div class="search-list">
 					<?php if ( have_posts() ) : ?>
@@ -25,7 +34,7 @@ get_header(); ?>
 				<?php endwhile; ?>
 
 				<?php endif; ?>
-				
+
 				</div>
 			</div>
 		</main><!-- #main -->
