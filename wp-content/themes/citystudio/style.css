@@ -954,11 +954,7 @@ iframe {
     @media screen and (max-width: 1024px) {
       .footer-logo img {
         width: 345px;
-<<<<<<< HEAD
         height: 65px; } }
-=======
-        height: 70px; } }
->>>>>>> mobile_css
   @media screen and (max-width: 1024px) {
     .footer-logo {
       display: inline; } }
@@ -1770,22 +1766,13 @@ li {
     padding-top: 2px; }
 
 .open {
-<<<<<<< HEAD
-  min-width: 96vw;
-=======
   width: 95vw;
->>>>>>> mobile_css
   height: 80px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
-<<<<<<< HEAD
-      height: 84px;
-      min-width: 480px;
-=======
       min-width: 480px;
       height: 84px;
->>>>>>> mobile_css
       position: relative !important;
       -webkit-flex-basis: 25%;
           -ms-flex-preferred-size: 25%;
@@ -1822,24 +1809,15 @@ li {
 .partners,
 .years,
 .refresh {
-<<<<<<< HEAD
-  height: 5rem;
-  width: 5rem;
-=======
   width: 5rem;
   height: 5rem;
->>>>>>> mobile_css
   border-radius: 45px; }
 
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-<<<<<<< HEAD
-  background-size: 30px 40px;
-=======
   background-size: 30px 45px;
   height: 5rem;
   width: 5rem;
->>>>>>> mobile_css
   background-color: #03648c;
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1850,11 +1828,7 @@ li {
 
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-<<<<<<< HEAD
   background-size: 45px 60px;
-=======
-  background-size: 40px 55px;
->>>>>>> mobile_css
   background-color: #03648c;
   transition: all 1.5s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1865,11 +1839,7 @@ li {
 
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-<<<<<<< HEAD
   background-size: 40px 43px;
-=======
-  background-size: 40px 45px;
->>>>>>> mobile_css
   background-color: #03648c;
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
@@ -2069,25 +2039,6 @@ li {
       height: 120px;
       padding-left: 2rem;
       transition: height 1.2s ease; } }
-<<<<<<< HEAD
-=======
-
-@media screen and (min-width: 480px) {
-  .nav-description {
-    transition: all .8s ease;
-    height: 80px;
-    padding-top: 6px;
-    margin-left: 52%;
-    text-align: left;
-    font-size: 1.3rem;
-    font-family: "open_sans"; }
-    .nav-description p {
-      padding: 6px; }
-    .nav-description img {
-      height: 60px;
-      width: 60px;
-      margin-bottom: -20px; } }
->>>>>>> mobile_css
 
 .nav-description {
   padding: 0; }
@@ -2096,7 +2047,7 @@ li {
       transition: all .8s ease;
       height: 80px;
       padding-top: 6px;
-      margin-left: 49%;
+      margin-left: 52%;
       text-align: left;
       font-size: 1.3rem;
       font-family: "open_sans"; }
@@ -2124,22 +2075,12 @@ li {
     margin-right: 120px;
     margin-bottom: 0; }
 
-<<<<<<< HEAD
-.sticky-navigation.fixed {
-  padding: 0; }
-  @media screen and (min-width: 480px) {
-    .sticky-navigation.fixed {
-      transition: all .4s ease;
-      padding-left: 2rem;
-      padding-top: 6px; } }
-=======
 @media screen and (min-width: 480px) {
   .sticky-navigation.fixed {
     transition: all .4s ease;
     padding-top: 6px;
     padding: 0;
     padding-left: 1rem; } }
->>>>>>> mobile_css
 
 .nav-description.fixed {
   transition: all .8s ease;

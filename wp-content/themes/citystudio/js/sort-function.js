@@ -45,9 +45,9 @@ jQuery(document).ready(function($) {
     $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
     $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
     $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
-   
+
     reloadProjects();
-  
+
   }); // close refresh
 
   // If the input label is visible,
@@ -169,7 +169,7 @@ jQuery(document).ready(function($) {
                   if ( !value.placeholder ) {
 
                     galleryItems +=   '<a class="gallery-anchor ';
-                    galleryItems +=   featured(); 
+                    galleryItems +=   featured();
                     galleryItems +=   '" href="' + value.link + '">';
                     galleryItems +=   '<li style="background: url(' + value.featured_image_url; + ') no-repeat cover;">';
                     galleryItems +=   ' " style="background: url(' + value.featured_image_url + ') no-repeat;">';
