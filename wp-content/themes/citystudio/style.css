@@ -953,8 +953,8 @@ iframe {
     height: 100%; }
     @media screen and (max-width: 1024px) {
       .footer-logo img {
-        width: 315px;
-        height: 70px; } }
+        width: 345px;
+        height: 65px; } }
   @media screen and (max-width: 1024px) {
     .footer-logo {
       display: inline; } }
@@ -1749,11 +1749,11 @@ li {
 
 .open {
   min-width: 100vw;
-  width: 500px;
   height: 84px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
+      width: 500px;
       position: relative !important;
       -webkit-flex-basis: 25%;
           -ms-flex-preferred-size: 25%;
@@ -1788,13 +1788,13 @@ li {
 .partners,
 .years,
 .refresh {
-  width: 4.3rem;
+  height: 5.2rem;
+  width: 5.2rem;
   border-radius: 70px; }
 
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-  background-size: 20px 30px;
-  height: 2rem;
+  background-size: 30px 40px;
   background-color: #03648c;
   transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1805,8 +1805,7 @@ li {
 
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 30px 40px;
-  height: 4rem;
+  background-size: 35px 50px;
   background-color: #03648c;
   transition: all 1.5s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1817,8 +1816,7 @@ li {
 
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 25px 30px;
-  height: 4rem;
+  background-size: 35px 50px;
   background-color: #03648c;
   transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1830,7 +1828,6 @@ li {
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  height: 3.8rem;
   border: 3px solid white;
   background-color: #0082b9;
   transition: all 2.3s ease-in; }
@@ -2000,36 +1997,45 @@ li {
     position: absolute;
     bottom: -13px; }
 
-@media screen and (min-width: 480px) {
-  .sticky-navigation {
-    display: -webkit-inline-flex;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    float: left;
-    padding: 0;
-    height: 120px;
-    padding-left: 2rem;
-    transition: height 1.2s ease; } }
+.sticky-navigation {
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  float: left;
+  padding: 0;
+  height: 120px;
+  transition: height 1.2s ease; }
+  @media screen and (min-width: 480px) {
+    .sticky-navigation {
+      display: -webkit-inline-flex;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      float: left;
+      padding: 0;
+      height: 120px;
+      padding-left: 2rem;
+      transition: height 1.2s ease; } }
 
-@media screen and (min-width: 480px) {
-  .nav-description {
-    transition: all .8s ease;
-    height: 80px;
-    padding-top: 6px;
-    margin-left: 49%;
-    text-align: left;
-    font-size: 1.3rem;
-    font-family: "open_sans"; }
-    .nav-description p {
-      padding: 6px; }
-    .nav-description img {
-      height: 60px;
-      width: 60px;
-      margin-bottom: -20px; } }
-
-@media screen and (max-width: 1024px) {
-  .nav-description {
-    display: none; } }
+.nav-description {
+  padding: 0; }
+  @media screen and (min-width: 480px) {
+    .nav-description {
+      transition: all .8s ease;
+      height: 80px;
+      padding-top: 6px;
+      margin-left: 49%;
+      text-align: left;
+      font-size: 1.3rem;
+      font-family: "open_sans"; }
+      .nav-description p {
+        padding: 6px; }
+      .nav-description img {
+        height: 60px;
+        width: 60px;
+        margin-bottom: -20px; } }
+  @media screen and (max-width: 1024px) {
+    .nav-description {
+      display: none; } }
 
 .fixed {
   position: fixed;
@@ -2046,9 +2052,12 @@ li {
     margin-bottom: 0; }
 
 .sticky-navigation.fixed {
-  transition: all .4s ease;
-  padding-top: 6px;
-  padding-left: 2rem; }
+  padding: 0; }
+  @media screen and (min-width: 480px) {
+    .sticky-navigation.fixed {
+      transition: all .4s ease;
+      padding-left: 2rem;
+      padding-top: 6px; } }
 
 .nav-description.fixed {
   transition: all .8s ease;

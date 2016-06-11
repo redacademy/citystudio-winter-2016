@@ -60,10 +60,10 @@
 }
 .open {
   min-width: 100vw;
-  width: 500px;
   height: 84px;
   transition: width 1s ease-in;
   @include desktop {
+    width: 500px;
     position: relative !important;
     flex-basis: 25%;
     order: 1;
@@ -95,7 +95,9 @@
 .partners,
 .years,
 .refresh {
-  width: 4.3rem;
+  height: 5.2rem;
+  width: 5.2rem;
+
   border-radius: 70px;
     @include desktop {
 
@@ -104,8 +106,7 @@
 
 .themes {
   background: url("../../assets/neighbourhood-icon.png") no-repeat center;
-  background-size: 20px 30px;
-  height: 2rem;
+  background-size: 30px 40px;
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
@@ -116,8 +117,7 @@
 }
 .partners {
   background: url("../../assets/partners-icon.png") no-repeat center;
-  background-size: 30px 40px;
-  height: 4rem;
+  background-size: 35px 50px;
   background-color: #03648c;
   transition: all 1.5s ease-in;
   @include desktop {
@@ -128,8 +128,7 @@
 }
 .years {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
-  background-size: 25px 30px;
-  height: 4rem;
+  background-size: 35px 50px;
   background-color: #03648c;
   transition: all 2s ease-in;
   @include desktop {
@@ -141,7 +140,6 @@
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
   background-size: 35px 35px;
-  height: 3.8rem;
   border: 3px solid white;
   background-color: #0082b9;
   transition: all 2.3s ease-in;
@@ -320,6 +318,12 @@
   }
 }
 .sticky-navigation {
+    display: inline-flex;
+    float: left;
+    padding: 0;
+    height: 120px;
+    transition: height 1.2s ease;
+
   @include desktop{
     display: inline-flex;
     float: left;
@@ -330,6 +334,7 @@
   }
 }
 .nav-description {
+  padding: 0;
   @include desktop{
   transition: all .8s ease;
   height: 80px;
@@ -352,6 +357,7 @@
   }
 }
 .fixed {
+
   position: fixed;
   top: 0;
   left: -3px;
@@ -367,9 +373,12 @@
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
+    padding: 0;
+  @include desktop{
   transition: all .4s ease;
-  padding-top: 6px;
   padding-left: 2rem;
+  padding-top: 6px;
+  }
 
 }
 .nav-description.fixed{
