@@ -1,0 +1,66 @@
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+
+/* Posts and pages */
+
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 $base__space-unit;
+}
+
+.updated:not(.published){
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: $base__space-unit 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 $base__space-unit;
+}
+
+/* Asides */
+
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/* Comments */
+
+.comment-content a {
+	word-wrap: break-word;
+}
+.bypostauthor {
+	display: block;
+}
+
+.container{
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	            -ms-grid-row-align: center;
+	        align-items: center;
+}
+
+.site-footer{
+  width: 100vw;
+  background-color: $dark-blue;
+}
+
+.social-icons ul{
+	list-style: none;
+}

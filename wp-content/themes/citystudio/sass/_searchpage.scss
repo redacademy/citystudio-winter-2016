@@ -1,0 +1,121 @@
+/*--------------------------------------------------------------
+# Search Page Styles
+--------------------------------------------------------------*/
+.search-archive-header {
+  // background: url("../../images/citystudio-logo.png") center center no-repeat ;
+  background-color: $city-blue;
+  background-size: cover;
+  height: 7rem;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  h1 {
+    color: #fff;
+    padding-top: 1rem;
+    font-family: $fontfamily;
+    margin-right: 10rem;
+    margin-left: -10rem;
+  }
+}
+
+.search-form {
+  margin-bottom: 0;
+  width:100%;
+  padding-right: 15rem;
+  @include desktop {
+    margin-top: 2rem;
+  }
+}
+.searchpage {
+  background-color: #0082b9;
+  fieldset {
+    border: none;
+    margin-right: -5rem;
+  }
+  label {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    margin: 0 auto !important;
+    width: 100%;
+    background-color: white;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    height: 1rem;
+    border: 1px solid lightgrey;
+    position: relative;
+    @include desktop {
+      height: 2.25rem;
+    }
+  }
+  input {
+    border: none;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+    margin: auto 0.2rem;
+    color: $light-blue;
+    border-radius: 5px;
+    font-weight: 700;
+    font-family: $fontfamily;
+    width: 100%;
+    @include desktop {
+      font-size: 1rem;
+    }
+  }
+.fa{
+color: $light-blue;
+font-size: 1.25rem;
+top: .4rem;
+right:.6rem;
+position: absolute;
+}
+}
+
+.archive-blurb{
+background: white;
+padding:2%;
+display: flex;
+justify-content: center;
+text-align: center;
+p{
+font-family: $fontfamily;
+width:65%;
+margin-top: 1rem;
+font-size: 1rem;
+}
+}
+
+//ARCHIVE GRID-----------------------
+
+  .search-list {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 1rem;
+    width: 90%;
+    margin: 0 auto;
+    a{
+      border: none;
+    }
+  }
