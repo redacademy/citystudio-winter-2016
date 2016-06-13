@@ -1766,7 +1766,11 @@ li {
     padding-top: 2px; }
 
 .open {
+<<<<<<< HEAD
   width: 480px;
+=======
+  width: 95vw;
+>>>>>>> 86d1f52ad2f3f1ac94c0bb7c52649117672d9af6
   height: 80px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
