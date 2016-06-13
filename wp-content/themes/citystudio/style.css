@@ -2238,8 +2238,7 @@ li {
 .page-title {
   margin: 0;
   width: 100%;
-  height: 7rem;
-  /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/ }
+  height: 7rem; }
   .page-title h1 {
     color: #fff;
     margin-left: 5.2%;
@@ -2281,16 +2280,19 @@ li {
   display: flex;
   position: relative;
   background-color: #f9f9f9;
-  padding: 1% 3% 3% 10%;
+  padding: 4% 6% 3% 10%;
   max-width: 1844px;
   font-size: 18px; }
   .call-to-action .cta-heading {
-    width: 70%;
+    width: 90%;
     padding-bottom: 2%; }
   .call-to-action .cta-content {
     width: 100%; }
     .call-to-action .cta-content p {
       margin-right: 65px; }
+      @media screen and (max-width: 1024px) {
+        .call-to-action .cta-content p {
+          display: none; } }
 
 .connect {
   display: block;
@@ -2299,10 +2301,14 @@ li {
   border-radius: 2px;
   padding: 8px;
   margin-top: 30px;
+  margin-left: 08px;
   background-color: #00A0DC;
   color: white;
   text-align: center;
   box-shadow: 0 0 8px #666666; }
+  @media screen and (max-width: 1024px) {
+    .connect {
+      margin-top: 0; } }
   .connect .become-involved {
     font-weight: bold; }
   .connect p {
@@ -2339,5 +2345,4 @@ li {
       box-shadow: 0 0 0 0 #BBB7AE; }
 
 .cta_blurb {
-  display: block;
-  width: 900px; }
+  display: block; }
