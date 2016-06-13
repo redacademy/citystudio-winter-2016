@@ -41,7 +41,7 @@
 						</ul>
 					</div>
 
-					<div class="footer-info-block">
+					<div class="footer-info-block2">
 						<h3>Keep Exploring</h3>
 						<ul>
 							<li>Projects</li>
@@ -52,7 +52,7 @@
 
 					</div>
 
-					<div class="footer-info-block">
+					<div class="footer-info-block2">
 						<h3>CITYSTUDIO</h3>
 						<ul>
 							<li>Contact Us</li>
