@@ -59,7 +59,7 @@
   }
 }
 .open {
-  width: 95vw;
+  width: 480px;
   height: 80px;
   transition: width 1s ease-in;
   @include desktop {
@@ -71,7 +71,7 @@
     transition: all 1s ease-in;
   }
   @include tablet{
-    min-width: 470px;
+    min-width: 480px;
   }
 }
 .close {
@@ -384,7 +384,7 @@
   @include tablet{
   }
 
-}
+ }
 .nav-description.fixed{
   transition: all .8s ease;
   height: 80px;
