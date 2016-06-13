@@ -29,11 +29,15 @@
 
 			<div class="footer-info-container">
 					<div class="footer-info-block">
-						<h3>Located At</h3>
+						<h3>Located At:</h3>
 						<ul>
-							<li>1800 Spyglass Place</li>
-							<li>Vancouver, B.C.</li>
-							<li>604-874-6401</li>
+							<li>
+							<a href="http://maps.google.com/?q=1800 Spyglass Place Vancouver, B.C."><i class="fa fa-map-marker" aria-hidden="true"></i>
+ 								1800 Spyglass Place Vancouver, B.C.</a>
+							</li>
+							<li>
+								<a href="tel:604-874-6401"> <i class="fa fa-phone" aria-hidden="true"></i><b> 604-874-6401</b></a>	
+							</li>
 						</ul>
 					</div>
 
