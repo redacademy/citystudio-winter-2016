@@ -33,6 +33,11 @@
   display: flex;
   justify-content: center;
   z-index: 1;
+  @include iphone6{
+    font-size: 1.1rem;
+    padding: 22% 6%;
+  }
+
 }
 //couldnt get variable going - riva **********************
 // $ciystudio-orange: #ff8000;
@@ -44,7 +49,12 @@
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
-  // opacity: 0.9;
+  font-size: 2.2rem;
+  @include iphone6{
+    h1{
+      letter-spacing: 0.1rem;
+      }
+  }
 }
 .homepage-description {
   margin: 0 auto;
@@ -53,6 +63,10 @@
   font-family: $fontfamily;
   text-align: center;
   width: 65%;
+  @include iphone6{
+    padding: 20px 0;
+    width: 80%;
+  }
 }
 // .separate {
 //   border-top: 2px dashed $light_blue;
@@ -94,8 +108,6 @@
   margin-top: 2.5rem;
   text-transform: uppercase;
 }
-
-
 .partners-row1,
 .partners-row2{
   img {

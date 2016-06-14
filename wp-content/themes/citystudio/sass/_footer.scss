@@ -9,12 +9,18 @@
   z-index: 9999;
     @include desktop {
   }
+  @include iphone6{
+    padding: 14px 12px;
+  }
 }
 //Footer Branding----------------------
 .footer-branding-container{
   margin-left: 3rem;
   @include tablet{
     height: 114px;
+  }
+  @include iphone6{
+    height: 110px;
   }
 }
 .footer-logo{
@@ -26,18 +32,31 @@
     @include tablet{
       width: 345px;
       height: 65px;
-
     }
   }
-   @include tablet{
+  @include tablet{
     display: inline;
+  }
+  @include iphone6{
+    img{
+      width: 73%;
+    }
   }
 }
 .social-icons-div{
   display:flex;
   align-items: flex-start;
+  justify-content: center;
    @include tablet{
     width: 52%;
+  }
+  @include iphone6{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    img{
+      width: 30px;
+    }
   }
 }
 .social-icons {
@@ -54,11 +73,17 @@
     margin-right: 2rem;
   }
 
+  @include iphone6{
+    margin: 0;
+  }
 }
 .footer-info-container{
   display: flex;
   flex-direction: row;
   margin-right:2rem;
+  @include iphone6{
+    margin:0;
+  }
 }
 .footer-info-block{
   color: white;
@@ -90,8 +115,11 @@
   @include tablet{
     width: 67%;
   }
-}
 
+  @include iphone6{
+    display:none;
+  }
+}
 .footer-info-block2{
   color: white;
   width:40%;
@@ -121,11 +149,6 @@
     display: none;
   }
 }
-
-
-
-
-
 .copyright{
   background-color: $dark-blue;
   display: flex;
@@ -136,4 +159,7 @@
   font-family: $fontfamily;
   font-size: .8rem;
   line-height: 1.25rem;
+  @include iphone6{
+    width: 106%;
+  }
 }

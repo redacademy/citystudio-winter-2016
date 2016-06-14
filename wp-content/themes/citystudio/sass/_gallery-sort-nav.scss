@@ -419,4 +419,8 @@
 
 .gallery-description-container{
   height: 12px;
+  display: block;
+  @include iphone6{
+    display: none;
+  }
 }

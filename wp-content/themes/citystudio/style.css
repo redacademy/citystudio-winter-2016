@@ -687,12 +687,18 @@ a {
   @media screen and (min-width: 480px) {
     .search-gallery {
       margin-right: 4rem; } }
+  @media screen and (max-width: 375px) {
+    .search-gallery {
+      margin-right: 1.5rem; } }
 
 .icon-search {
   font-size: 1.75rem; }
   @media screen and (min-width: 480px) {
     .icon-search {
       font-size: 2.3rem; } }
+  @media screen and (max-width: 375px) {
+    .icon-search {
+      display: none; } }
   .icon-search .fa {
     color: #00A0DC; }
   .icon-search a {
@@ -705,9 +711,12 @@ a {
   @media screen and (min-width: 480px) {
     .icon-menu {
       font-size: 2.5rem; } }
+  @media screen and (max-width: 375px) {
+    .icon-menu {
+      font-size: 3rem; } }
   .icon-menu .fa {
     color: #00A0DC;
-    font-size: 2.5rem; }
+    font-size: 2.3rem; }
 
 .hamburger-menu {
   width: 50px;
@@ -934,12 +943,18 @@ iframe {
           flex-direction: row;
   background: #006496;
   z-index: 9999; }
+  @media screen and (max-width: 375px) {
+    .site-footer {
+      padding: 14px 12px; } }
 
 .footer-branding-container {
   margin-left: 3rem; }
   @media screen and (max-width: 1024px) {
     .footer-branding-container {
       height: 114px; } }
+  @media screen and (max-width: 375px) {
+    .footer-branding-container {
+      height: 110px; } }
 
 .footer-logo {
   display: block;
@@ -954,6 +969,9 @@ iframe {
   @media screen and (max-width: 1024px) {
     .footer-logo {
       display: inline; } }
+  @media screen and (max-width: 375px) {
+    .footer-logo img {
+      width: 73%; } }
 
 .social-icons-div {
   display: -webkit-flex;
@@ -961,10 +979,24 @@ iframe {
   display: flex;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   @media screen and (max-width: 1024px) {
     .social-icons-div {
       width: 52%; } }
+  @media screen and (max-width: 375px) {
+    .social-icons-div {
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .social-icons-div img {
+        width: 30px; } }
 
 .social-icons {
   height: 1rem;
@@ -978,6 +1010,9 @@ iframe {
       height: 1.5rem;
       width: 1.5rem;
       margin-right: 2rem; } }
+  @media screen and (max-width: 375px) {
+    .social-icons {
+      margin: 0; } }
 
 .footer-info-container {
   display: -webkit-flex;
@@ -987,6 +1022,9 @@ iframe {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-right: 2rem; }
+  @media screen and (max-width: 375px) {
+    .footer-info-container {
+      margin: 0; } }
 
 .footer-info-block {
   color: white;
@@ -1013,6 +1051,9 @@ iframe {
   @media screen and (max-width: 1024px) {
     .footer-info-block {
       width: 67%; } }
+  @media screen and (max-width: 375px) {
+    .footer-info-block {
+      display: none; } }
 
 .footer-info-block2 {
   color: white;
@@ -1053,6 +1094,9 @@ iframe {
   font-family: "open_sans";
   font-size: .8rem;
   line-height: 1.25rem; }
+  @media screen and (max-width: 375px) {
+    .copyright {
+      width: 106%; } }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1410,6 +1454,10 @@ a:active {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 1; }
+  @media screen and (max-width: 375px) {
+    .hero-blurb {
+      font-size: 1.1rem;
+      padding: 22% 6%; } }
 
 .orange-font {
   color: #db5100; }
@@ -1418,7 +1466,11 @@ a:active {
   margin: 3rem auto 1rem;
   letter-spacing: 0.1rem;
   font-family: "open_sans";
-  text-align: center; }
+  text-align: center;
+  font-size: 2.2rem; }
+  @media screen and (max-width: 375px) {
+    .homepage-titles h1 {
+      letter-spacing: 0.1rem; } }
 
 .homepage-description {
   margin: 0 auto;
@@ -1427,6 +1479,10 @@ a:active {
   font-family: "open_sans";
   text-align: center;
   width: 65%; }
+  @media screen and (max-width: 375px) {
+    .homepage-description {
+      padding: 20px 0;
+      width: 80%; } }
 
 .homepage-partners-container {
   width: 100vw;
@@ -2139,7 +2195,11 @@ li {
   font-size: 26px; }
 
 .gallery-description-container {
-  height: 12px; }
+  height: 12px;
+  display: block; }
+  @media screen and (max-width: 375px) {
+    .gallery-description-container {
+      display: none; } }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles
@@ -2277,6 +2337,9 @@ li {
   background-size: cover;
   width: 100%;
   height: 70vh; }
+  @media screen and (max-width: 375px) {
+    .wwd-hero {
+      height: 55vh; } }
 
 .section-header {
   max-width: 928px;
@@ -2306,6 +2369,9 @@ li {
   .call-to-action .cta-heading {
     width: 90%;
     padding-bottom: 2%; }
+    @media screen and (max-width: 375px) {
+      .call-to-action .cta-heading {
+        display: none; } }
   .call-to-action .cta-content {
     width: 100%; }
     .call-to-action .cta-content p {
@@ -2329,6 +2395,9 @@ li {
   @media screen and (max-width: 1024px) {
     .connect {
       margin-top: 0; } }
+  @media screen and (max-width: 375px) {
+    .connect {
+      margin: 0; } }
   .connect .become-involved {
     font-weight: bold; }
   .connect p {
