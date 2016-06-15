@@ -1,0 +1,84 @@
+.banner-inner {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+  justify-content: center;
+  padding: 0 4em;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.citystudio-banner {
+  background: url("../../images/citystudio-logo.png"), $medium-blue;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.9;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+
+.container {
+  margin: 4em auto;
+  max-width: 1130px;
+}
+
+.citystudio-teams {
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0 0 100%;
+    justify-content: space-between;
+    padding-bottom: 4em;
+    border-bottom: 2px dashed $medium-blue;
+  }
+
+  h2 {
+    flex: 0 1 100%;
+    margin-bottom: 2em;
+    text-align: center;
+  }
+}
+
+.team {
+  display: flex;
+  flex: 0 0 20%;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 180px;
+  min-height: 340px;
+  text-align: center;
+
+  .team-pic {
+    flex: 0 1 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 1em;
+  }
+
+  h3 {
+    flex: 0 2 100%;
+  }
+
+  p {
+    flex: 0 3 100%;
+    text-align: center;
+  }
+}
+
+.leaders {
+  display: flex;
+  flex: 0 0 23%;
+  flex-wrap: wrap;
+  justify-content: center;
+  min-height: 70px;
+  height: 100%;
+
+  p {
+    text-align: center;
+  }
+}

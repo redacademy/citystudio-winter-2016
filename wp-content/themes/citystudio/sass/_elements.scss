@@ -82,3 +82,17 @@ table {
           flex-wrap: wrap;
   margin: 0 auto;
 }
+
+// Anchor Styles for People Page
+
+h3.people-title {
+	color: $medium-blue;
+	text-decoration: underline;
+	font-weight: 700;
+	font-family: $fontfamily;
+	font-size: 1em;
+
+	&:hover {
+		cursor: pointer;
+	}
+}
