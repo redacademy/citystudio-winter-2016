@@ -57,14 +57,12 @@
   }
 }
 .icon-menu {
-  font-size: 4rem;
   margin-left: 3rem;
   margin-top: 0.15rem;
   @include desktop {
     font-size: 2.5rem;
   }
   @include iphone6{
-    font-size: 3rem;
   }
   .fa {
     color: $light-blue;

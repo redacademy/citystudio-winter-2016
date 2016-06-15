@@ -705,15 +705,11 @@ a {
     color: #03648c; }
 
 .icon-menu {
-  font-size: 4rem;
   margin-left: 3rem;
   margin-top: 0.15rem; }
   @media screen and (min-width: 480px) {
     .icon-menu {
       font-size: 2.5rem; } }
-  @media screen and (max-width: 375px) {
-    .icon-menu {
-      font-size: 3rem; } }
   .icon-menu .fa {
     color: #00A0DC;
     font-size: 2.3rem; }
@@ -943,9 +939,6 @@ iframe {
           flex-direction: row;
   background: #006496;
   z-index: 9999; }
-  @media screen and (max-width: 375px) {
-    .site-footer {
-      padding: 14px 12px; } }
 
 .footer-branding-container {
   margin-left: 3rem; }
@@ -954,7 +947,9 @@ iframe {
       height: 114px; } }
   @media screen and (max-width: 375px) {
     .footer-branding-container {
-      height: 110px; } }
+      height: 110px;
+      margin: 0;
+      padding-top: 2%; } }
 
 .footer-logo {
   display: block;
