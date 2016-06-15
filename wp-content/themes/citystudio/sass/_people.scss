@@ -7,7 +7,6 @@
   max-width: 1280px;
   margin: 0 auto;
 }
-
 .citystudio-banner {
   background: url("../../images/citystudio-logo.png"), $medium-blue;
   background-size: cover;
@@ -17,15 +16,12 @@
   height: 150px;
   overflow: hidden;
 }
-
-
-.container {
+.people-container {
   margin: 4em auto;
   max-width: 1130px;
 }
 
 .citystudio-teams {
-
   ul {
     display: flex;
     flex-wrap: wrap;
