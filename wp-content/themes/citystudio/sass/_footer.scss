@@ -27,6 +27,7 @@
 .footer-logo{
   display: block;
   height: 4rem;
+  justify-content: center;
   img{
   opacity: .4;
   height: 100%;
@@ -35,10 +36,9 @@
       height: 65px;
     }
   }
-  @include tablet{
-    display: inline;
-  }
   @include iphone6{
+    display: flex;
+    jusify-content: center;
     img{
       width: 73%;
     }
@@ -161,6 +161,6 @@
   font-size: .8rem;
   line-height: 1.25rem;
   @include iphone6{
-    width: 106%;
+    width: 100%;
   }
 }

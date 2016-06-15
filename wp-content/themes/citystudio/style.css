@@ -943,6 +943,9 @@ iframe {
     color: #00A0DC;
     font-weight: 900;
     margin-top: 0.2rem; }
+    @media screen and (max-width: 375px) {
+      .getintouch-block h2 {
+        margin-top: -0.8rem; } }
 
 .site-footer {
   width: 100%;
@@ -974,7 +977,10 @@ iframe {
 
 .footer-logo {
   display: block;
-  height: 4rem; }
+  height: 4rem;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .footer-logo img {
     opacity: .4;
     height: 100%; }
@@ -982,12 +988,14 @@ iframe {
       .footer-logo img {
         width: 345px;
         height: 65px; } }
-  @media screen and (max-width: 1024px) {
-    .footer-logo {
-      display: inline; } }
   @media screen and (max-width: 375px) {
-    .footer-logo img {
-      width: 73%; } }
+    .footer-logo {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      jusify-content: center; }
+      .footer-logo img {
+        width: 73%; } }
 
 .social-icons-div {
   display: -webkit-flex;
@@ -1112,7 +1120,7 @@ iframe {
   line-height: 1.25rem; }
   @media screen and (max-width: 375px) {
     .copyright {
-      width: 106%; } }
+      width: 100%; } }
 
 /*--------------------------------------------------------------
 # Search Page Styles
