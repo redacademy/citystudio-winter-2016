@@ -390,10 +390,6 @@ h3 {
 p {
   color: #2D2D2D; }
 
-.archive h2 {
-  color: #006496;
-  text-transform: uppercase; }
-
 .title {
   text-transform: uppercase;
   font-weight: bold;
@@ -406,6 +402,22 @@ p {
 
 .homepage-description p {
   font-size: 1.5em; }
+
+.role {
+  font-style: italic; }
+
+h2.page-titles {
+  color: #fff;
+  font-family: "open_sans";
+  font-size: 3em;
+  font-weight: bold; }
+
+.section-titles {
+  color: #404040;
+  font-family: "open_sans";
+  font-size: 3em;
+  font-weight: 700;
+  text-transform: none; }
 
 1em 2em 3em
 html {
@@ -474,6 +486,15 @@ table {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 auto; }
+
+h3.people-title {
+  color: #0082b9;
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: "open_sans";
+  font-size: 1em; }
+  h3.people-title:hover {
+    cursor: pointer; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -687,19 +708,24 @@ a {
   @media screen and (min-width: 480px) {
     .search-gallery {
       margin-right: 4rem; } }
+  @media screen and (max-width: 375px) {
+    .search-gallery {
+      margin-right: 1.5rem; } }
 
 .icon-search {
   font-size: 1.75rem; }
   @media screen and (min-width: 480px) {
     .icon-search {
       font-size: 2.3rem; } }
+  @media screen and (max-width: 375px) {
+    .icon-search {
+      display: none; } }
   .icon-search .fa {
     color: #00A0DC; }
   .icon-search a {
     color: #03648c; }
 
 .icon-menu {
-  font-size: 4rem;
   margin-left: 3rem;
   margin-top: 0.15rem; }
   @media screen and (min-width: 480px) {
@@ -707,7 +733,7 @@ a {
       font-size: 2.5rem; } }
   .icon-menu .fa {
     color: #00A0DC;
-    font-size: 2.5rem; }
+    font-size: 2.3rem; }
 
 .hamburger-menu {
   width: 50px;
@@ -917,6 +943,9 @@ iframe {
     color: #00A0DC;
     font-weight: 900;
     margin-top: 0.2rem; }
+    @media screen and (max-width: 375px) {
+      .getintouch-block h2 {
+        margin-top: -0.8rem; } }
 
 .site-footer {
   width: 100%;
@@ -939,25 +968,34 @@ iframe {
   margin-left: 3rem; }
   @media screen and (max-width: 1024px) {
     .footer-branding-container {
-      height: 114px;
-      width: 100%;
-      padding-top: 22px; } }
+      height: 114px; } }
+  @media screen and (max-width: 375px) {
+    .footer-branding-container {
+      height: 110px;
+      margin: 0;
+      padding-top: 2%; } }
 
 .footer-logo {
   display: block;
-  width: 20rem;
-  height: 4rem; }
+  height: 4rem;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   .footer-logo img {
     opacity: .4;
-    width: 100%;
     height: 100%; }
     @media screen and (max-width: 1024px) {
       .footer-logo img {
         width: 345px;
         height: 65px; } }
-  @media screen and (max-width: 1024px) {
+  @media screen and (max-width: 375px) {
     .footer-logo {
-      display: inline; } }
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      jusify-content: center; }
+      .footer-logo img {
+        width: 73%; } }
 
 .social-icons-div {
   display: -webkit-flex;
@@ -965,11 +1003,24 @@ iframe {
   display: flex;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-          align-items: flex-start; }
+          align-items: flex-start;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
   @media screen and (max-width: 1024px) {
     .social-icons-div {
-      float: right;
-      width: 40%; } }
+      width: 52%; } }
+  @media screen and (max-width: 375px) {
+    .social-icons-div {
+      width: 100%;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+      .social-icons-div img {
+        width: 30px; } }
 
 .social-icons {
   height: 1rem;
@@ -983,6 +1034,9 @@ iframe {
       height: 1.5rem;
       width: 1.5rem;
       margin-right: 2rem; } }
+  @media screen and (max-width: 375px) {
+    .social-icons {
+      margin: 0; } }
 
 .footer-info-container {
   display: -webkit-flex;
@@ -992,6 +1046,9 @@ iframe {
       -ms-flex-direction: row;
           flex-direction: row;
   margin-right: 2rem; }
+  @media screen and (max-width: 375px) {
+    .footer-info-container {
+      margin: 0; } }
 
 .footer-info-block {
   color: white;
@@ -1007,16 +1064,44 @@ iframe {
     color: white;
     font-family: "open_sans";
     text-align: center; }
-  .footer-info-block li {
+  .footer-info-block ul li {
     font-size: .85rem;
     width: 9rem;
     opacity: 0.7;
-    line-height: 1.5rem; }
+    line-height: 1.8rem; }
   .footer-info-block li:hover {
     cursor: pointer;
     color: #00A0DC; }
   @media screen and (max-width: 1024px) {
     .footer-info-block {
+      width: 67%; } }
+  @media screen and (max-width: 375px) {
+    .footer-info-block {
+      display: none; } }
+
+.footer-info-block2 {
+  color: white;
+  width: 40%;
+  font-family: sans-serif;
+  margin: 2rem;
+  margin-top: 2.5rem; }
+  .footer-info-block2 h3 {
+    margin-bottom: .25rem;
+    opacity: 0.9;
+    font-size: 1rem; }
+  .footer-info-block2 h3, .footer-info-block2 li {
+    color: white;
+    font-family: "open_sans";
+    text-align: center; }
+  .footer-info-block2 ul li {
+    font-size: .85rem;
+    width: 9rem;
+    opacity: 0.7; }
+  .footer-info-block2 li:hover {
+    cursor: pointer;
+    color: #00A0DC; }
+  @media screen and (max-width: 1024px) {
+    .footer-info-block2 {
       display: none; } }
 
 .copyright {
@@ -1033,6 +1118,9 @@ iframe {
   font-family: "open_sans";
   font-size: .8rem;
   line-height: 1.25rem; }
+  @media screen and (max-width: 375px) {
+    .copyright {
+      width: 100%; } }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -1410,6 +1498,10 @@ a:active {
       -ms-flex-pack: center;
           justify-content: center;
   z-index: 1; }
+  @media screen and (max-width: 375px) {
+    .hero-blurb {
+      font-size: 1.1rem;
+      padding: 22% 6%; } }
 
 .orange-font {
   color: #db5100; }
@@ -1418,7 +1510,11 @@ a:active {
   margin: 3rem auto 1rem;
   letter-spacing: 0.1rem;
   font-family: "open_sans";
-  text-align: center; }
+  text-align: center;
+  font-size: 2.2rem; }
+  @media screen and (max-width: 375px) {
+    .homepage-titles h1 {
+      letter-spacing: 0.1rem; } }
 
 .homepage-description {
   margin: 0 auto;
@@ -1427,6 +1523,10 @@ a:active {
   font-family: "open_sans";
   text-align: center;
   width: 65%; }
+  @media screen and (max-width: 375px) {
+    .homepage-description {
+      padding: 20px 0;
+      width: 80%; } }
 
 .homepage-partners-container {
   width: 100vw;
@@ -1779,7 +1879,7 @@ li {
     cursor: pointer; }
   @media screen and (min-width: 480px) {
     .sort {
-      width: 100vw;
+      width: 480px;
       margin: 0;
       max-width: 3rem;
       height: 2.3rem;
@@ -1790,7 +1890,7 @@ li {
     padding-top: 2px; }
 
 .open {
-  width: 95vw;
+  width: 480px;
   height: 80px;
   transition: width 1s ease-in; }
   @media screen and (min-width: 480px) {
@@ -1807,7 +1907,7 @@ li {
       transition: all 1s ease-in; } }
   @media screen and (max-width: 1024px) {
     .open {
-      min-width: 470px; } }
+      min-width: 480px; } }
 
 .close {
   min-width: 20px;
@@ -2143,7 +2243,11 @@ li {
   font-size: 26px; }
 
 .gallery-description-container {
-  height: 12px; }
+  height: 12px;
+  display: block; }
+  @media screen and (max-width: 375px) {
+    .gallery-description-container {
+      display: none; } }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles
@@ -2259,11 +2363,114 @@ li {
     .tags p:hover {
       background-color: #e9e9e9; }
 
+.banner-inner {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  height: 100%;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0 4em;
+  max-width: 1280px;
+  margin: 0 auto; }
+
+.citystudio-banner {
+  background: url("../../images/citystudio-logo.png"), #0082b9;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.9;
+  width: 100%;
+  height: 150px;
+  overflow: hidden; }
+
+.people-container {
+  margin: 4em auto;
+  max-width: 1130px; }
+
+.citystudio-teams ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 4em;
+  border-bottom: 2px dashed #0082b9; }
+
+.citystudio-teams h2 {
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+  margin-bottom: 2em;
+  text-align: center; }
+
+.team {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 20%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 180px;
+  min-height: 340px;
+  text-align: center; }
+  .team .team-pic {
+    -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    border-radius: 100%;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    margin-bottom: 1em; }
+  .team h3 {
+    -webkit-flex: 0 2 100%;
+        -ms-flex: 0 2 100%;
+            flex: 0 2 100%; }
+  .team p {
+    -webkit-flex: 0 3 100%;
+        -ms-flex: 0 3 100%;
+            flex: 0 3 100%;
+    text-align: center; }
+
+.leaders {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex: 0 0 23%;
+      -ms-flex: 0 0 23%;
+          flex: 0 0 23%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 70px;
+  height: 100%; }
+  .leaders p {
+    text-align: center; }
+
 .page-title {
   margin: 0;
   width: 100%;
-  height: 7rem;
-  /*background: url(../../images/citystudio-logo.png) rgba(1, 152, 213, 1) no-repeat;*/ }
+  height: 7rem; }
   .page-title h1 {
     color: #fff;
     margin-left: 5.2%;
@@ -2282,6 +2489,9 @@ li {
   background-size: cover;
   width: 100%;
   height: 70vh; }
+  @media screen and (max-width: 375px) {
+    .wwd-hero {
+      height: 55vh; } }
 
 .section-header {
   max-width: 928px;
@@ -2305,27 +2515,40 @@ li {
   display: flex;
   position: relative;
   background-color: #f9f9f9;
-  padding: 2% 3% 0% 9%;
+  padding: 4% 6% 3% 10%;
   max-width: 1844px;
   font-size: 18px; }
   .call-to-action .cta-heading {
-    width: 50%;
+    width: 90%;
     padding-bottom: 2%; }
+    @media screen and (max-width: 375px) {
+      .call-to-action .cta-heading {
+        display: none; } }
   .call-to-action .cta-content {
     width: 100%; }
+    .call-to-action .cta-content p {
+      margin-right: 65px; }
+      @media screen and (max-width: 1024px) {
+        .call-to-action .cta-content p {
+          display: none; } }
 
 .connect {
   display: block;
   width: 285px;
-  height: 100px;
+  height: 110px;
   border-radius: 2px;
   padding: 9px;
+  margin-left: 08px;
   background-color: #00A0DC;
   color: white;
   text-align: center;
-  box-shadow: 0 0 8px #666666;
-  margin-left: 120px;
-  margin-top: 3%; }
+  box-shadow: 0 0 8px #666666; }
+  @media screen and (max-width: 1024px) {
+    .connect {
+      margin-top: 0; } }
+  @media screen and (max-width: 375px) {
+    .connect {
+      margin: 0; } }
   .connect .become-involved {
     font-weight: bold; }
   .connect p {
@@ -2337,13 +2560,13 @@ li {
     letter-spacing: 3px; }
   .connect button {
     color: white;
-    padding: 3%;
+    padding: 8px;
     border: 3px solid white;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #00A0DC;
     text-align: center;
-    margin: 4%;
+    margin: 12px;
     -webkit-transform: scale(1);
     transform: scale(1);
     -webkit-transform-origin: center center;
@@ -2360,3 +2583,6 @@ li {
       box-shadow: 0 1px 3px #EEEEEE, 0 45px rgba(255, 255, 255, 0.12) inset; }
     .connect button:active {
       box-shadow: 0 0 0 0 #BBB7AE; }
+
+.cta_blurb {
+  display: block; }

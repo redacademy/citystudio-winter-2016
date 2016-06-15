@@ -74,7 +74,7 @@
 					        </li>
 					        <li><a href="#">Blog</a></li>
 					        <li><a href="#">People</a></li>
-					        <li><a href="#">Contact Us</a></li>
+					        <li><a href="http://localhost/city_studio/front-page/contact-page/">Contact Us</a></li>
 					    </ul>
 					</nav>
 				</div>

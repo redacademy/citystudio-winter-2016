@@ -43,5 +43,8 @@ iframe{
     color: $light-blue;
     font-weight: 900;
     margin-top: 0.2rem;
+    @include iphone6{
+      margin-top: -0.8rem;
+    }
   }
 }

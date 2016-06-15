@@ -1,22 +1,32 @@
 <?php
 /**
-* Template Name: People
+* Template Page for People
 */
 get_header();
 ?>
 
 <div id="primary" class="content-area single-projects">
 	<main id="main" class="site-main" role="main">
+    <div class="people-container">
+      <div class="people-archive">
 
-	<?php while (have_posts()) : the_post(); ?>
+        <header class="citystudio-banner">
+          <div class="banner-inner">
+            <h2 class="page-titles">People</h2>
+          </div>
+        </header>
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <?php get_template_part( 'template-parts/people', 'team' ); ?>
 
-  
-  </article><!-- #post-## -->
+      <?php get_template_part( 'template-parts/people', 'leadership' ); ?>
 
-	<?php endwhile; // End of the loop. ?>
-</div><!-- end single proj view container -->
+      <?php get_template_part( 'template-parts/people', 'operations' ); ?>
+
+      <?php get_template_part( 'template-parts/people', 'founders' ); ?>
+
+
+      </div><!-- .people-archive -->
+    </div>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
