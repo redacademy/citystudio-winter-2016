@@ -90,11 +90,6 @@ p {
 	color: $citystudio-black;
 }
 
-.archive h2 {
-	color: $dark-blue;
-	text-transform: uppercase;
-}
-
 .title {
 	text-transform: uppercase;
 	font-weight: bold;
@@ -113,4 +108,29 @@ p {
 	p {
 		font-size: 1.5em;
 	}
+}
+
+.role {
+	font-style: italic;
+}
+
+// Banner Page Tiles
+
+// H2
+h2.page-titles {
+	color: #fff;
+	font-family: $fontfamily;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+
+// Section Ttiles
+
+.section-titles {
+	color: $color__text-main;
+	font-family: $fontfamily;
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: none;
 }
