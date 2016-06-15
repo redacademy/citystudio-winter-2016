@@ -2511,10 +2511,9 @@ li {
 .connect {
   display: block;
   width: 285px;
-  height: 100px;
+  height: 110px;
   border-radius: 2px;
-  padding: 8px;
-  margin-top: 30px;
+  padding: 9px;
   margin-left: 08px;
   background-color: #00A0DC;
   color: white;
