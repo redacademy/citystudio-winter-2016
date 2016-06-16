@@ -9,7 +9,7 @@
 
   <?php if ( have_posts() ) : ?>
 
-    <header class="page-header archive-header content-wrapper">
+    <header class="page-header archive-header">
       <?php
             echo single_term_title('<h2><span>Tags:</span> ', '</h2>' );
       ?>

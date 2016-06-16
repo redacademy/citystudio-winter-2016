@@ -15,7 +15,7 @@
     padding-top: 1rem;
     font-family: $fontfamily;
     margin-right: 10rem;
-    margin-left: -10rem;
+    margin-left: -5rem;
   }
 }
 
@@ -23,6 +23,7 @@
   margin-bottom: 0;
   width:100%;
   padding-right: 15rem;
+  padding-left: 5.25rem;
   @include desktop {
     margin-top: 2rem;
   }
@@ -31,7 +32,6 @@
   background-color: #0082b9;
   fieldset {
     border: none;
-    margin-right: -5rem;
   }
   label {
     display: -webkit-box;
@@ -69,6 +69,9 @@
     @include desktop {
       font-size: 1rem;
     }
+  &::placeholder{
+  color:$city-blue;
+}
   }
 .fa{
 color: $light-blue;
@@ -76,6 +79,10 @@ font-size: 1.25rem;
 top: .4rem;
 right:.6rem;
 position: absolute;
+&:hover{
+cursor: pointer;
+color: $dark-blue;
+}
 }
 }
 
@@ -89,7 +96,7 @@ p{
 font-family: $fontfamily;
 width:65%;
 margin-top: 1rem;
-font-size: 1rem;
+font-size: 1.1rem;
 }
 }
 
@@ -112,10 +119,15 @@ font-size: 1rem;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    align-items: center;
     padding: 1rem;
     width: 90%;
     margin: 0 auto;
-    a{
-      border: none;
+    margin-top: 2rem;
+  a img{
+      border: 1px solid transparent;
+    &:hover{
+      border:1px solid black;
     }
   }
+}

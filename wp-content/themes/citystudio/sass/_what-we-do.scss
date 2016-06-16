@@ -72,10 +72,9 @@
 .connect{
   display: block;
   width: 285px;
-  height: 100px;
+  height: 110px;
   border-radius: 2px;
-  padding: 8px;
-  margin-top: 30px;
+  padding: 9px;
   margin-left: 08px;
   background-color: $light_blue;
   color: white;
@@ -84,14 +83,14 @@
   -webkit-box-shadow: 0 0 8px #666666;
   box-shadow: 0 0 8px #666666;
   @include tablet{
-      margin-top: 0;
+    margin-top: 0;
   }
   @include iphone6{
     margin: 0;
   }
-    .become-involved{
-      font-weight: bold;
-    }
+  .become-involved{
+    font-weight: bold;
+  }
   p{
     color: white;
     font-weight: bold;
@@ -139,8 +138,6 @@
     }
   }
 }
-
 .cta_blurb{
-  display: block; 
-
+  display: block;
 }

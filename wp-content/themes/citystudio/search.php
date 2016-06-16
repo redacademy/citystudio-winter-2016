@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Project Archive Search Page
+* Template Name: Archive/ Search Page
  *
  * @package RED_Starter_Theme
  */
@@ -20,21 +20,32 @@ get_header(); ?>
 					</p>
 				</div>
 
-				<div class="search-list">
-					<?php if ( have_posts() ) : ?>
-					<?php /* Start the Loop */ ?>
-					<?php while ( have_posts() ) : the_post(); ?>
-
+			<div class="search-list-container">
+				<ul class="search-list">
+					<?php $loop = new WP_Query( array( 'post_type' => 'project', 'posts_per_page' => 9, ) ); ?>
+					<?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+					<li>
 					<a href="<?php echo get_the_permalink();?>">
 			      <?php if (has_post_thumbnail()) : ?>
-				      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin: 0 auto;margin-bottom:1.5rem;'); ?>
+				      <?php the_post_thumbnail('medium', 'style=width:360px;height:280px;margin: 0 auto 2rem;'); ?>
 				    <?php endif; ?>
 					</a>
+					</li>
+				<?php endwhile; wp_reset_query(); ?>
+				</ul>
 
-				<?php endwhile; ?>
-
-				<?php endif; ?>
-
+				<?php echo do_shortcode ("[ajax_load_more
+					preloaded='true'
+					preloaded_amount='9'
+				  images_loaded='true'
+ 					post_type='projects'
+					posts_per_page='3'
+					pause='true'
+					scroll='true'
+					pause_override='true'
+					button_label='Load More'
+					button_loading_label='Loading...'
+					css-classes='search-list']"); ?>
 				</div>
 			</div>
 		</main><!-- #main -->

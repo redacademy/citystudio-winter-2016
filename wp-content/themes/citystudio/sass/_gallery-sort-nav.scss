@@ -290,7 +290,7 @@
 .theme-labels,
 .part-labels,
 .year-labels label{
-  font-size: 16px;
+  font-size: 1rem;
   hyphen: manual;
 }
 .theme-labels,
@@ -321,32 +321,28 @@
   }
 }
 .sticky-navigation {
+    display: none;
+  @include desktop {
     display: inline-flex;
     float: left;
     padding: 0;
     height: 120px;
-    transition: height 1.2s ease;
-  @include desktop{
-    display: inline-flex;
-    float: left;
-    padding: 0;
-    height: 120px;
-    padding-left: 2rem;
     transition: height 1.2s ease;
   }
 }
 .nav-description {
   padding: 0;
-  @include desktop{
+  @include desktop {
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 52%;
+  margin-left: 50%;
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
     p {
       padding: 6px;
+      width: 97%;
     }
     img {
       height: 60px;
@@ -354,7 +350,10 @@
       margin-bottom: -20px;
     }
   }
-  @include tablet{
+  @include tablet {
+    display: none;
+  }
+  @include iphone6 {
     display: none;
   }
 }
@@ -388,12 +387,12 @@
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 52%;
+  margin-left: 50%;
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
   p {
-    padding: 14px;
+    padding: 6px;
     width: 600px;}
 }
 .nav-div.fixed{
@@ -418,9 +417,13 @@
 }
 
 .gallery-description-container{
-  height: 12px;
+  height: 5px;
   display: block;
   @include iphone6{
     display: none;
   }
+}
+
+.fa-star{
+margin-top: 1rem;
 }
