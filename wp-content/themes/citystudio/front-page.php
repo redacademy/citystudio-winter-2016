@@ -80,7 +80,7 @@ get_header(); ?>
       <div class="featured">
                     <?php
                     // check if the repeater field has rows of data
-                      if( have_rows('featured_partner') );
+                        if( have_rows('featured_partner') );
                          // loop through the rows of data
                       while ( have_rows('featured_partner') ) : the_row(); ?>
                         <img src ="<?php the_sub_field('image_url') ?>" />
