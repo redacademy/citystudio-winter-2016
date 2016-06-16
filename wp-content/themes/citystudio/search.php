@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Project Archive Search Page
+* Template Name: Archive/ Search Page
  *
  * @package RED_Starter_Theme
  */
