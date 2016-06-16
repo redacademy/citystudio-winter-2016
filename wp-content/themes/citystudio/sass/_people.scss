@@ -18,7 +18,6 @@
   overflow: hidden;
 }
 
-
 .container {
   margin: 4em auto;
   max-width: 1130px;
@@ -81,4 +80,32 @@
   p {
     text-align: center;
   }
+}
+
+
+
+// Single Person Page
+
+article.people {
+  max-width: 1130px;
+  margin: 4em auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.person-left {
+  flex: 0 1 30%;
+  border-radius: 100%;
+  overflow: hidden;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.person-right {
+  flex: 0 1 60%;
+}
+
+.person-name {
+  border-bottom: 2px dashed $medium-blue;
 }
