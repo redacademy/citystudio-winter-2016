@@ -30,7 +30,7 @@ get_header(); ?>
       <?php get_template_part ('template-parts/content', 'nav'); ?>
     </div>
   </div>
-  <div class="container">
+  <div class="full-width">
     <ul class="grid">
         <?php
         $args = array(
@@ -50,7 +50,8 @@ get_header(); ?>
 
         <?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
 
-      <a class="gallery-anchor <?php echo (CFS()->get( 'featured_project' ) === 1 ) ? 'featured-rectangle' : 'featured-square'; ?>" href="<?php echo esc_url( get_permalink() ); ?>" >
+
+      <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
 
         <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 

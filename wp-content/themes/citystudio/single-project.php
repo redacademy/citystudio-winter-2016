@@ -111,6 +111,9 @@ get_header();
     			<div class="tags-wrapper">
     				<h3>Tags:</h3>
     			<div class="tags">
+
+						<?php the_tags( '<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
+
     					<?php $id = get_the_id(); ?>
      				    <?php  $terms = get_the_terms	( $id, 'partners' );
     				      if ( !empty($terms)) : ?>
