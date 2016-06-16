@@ -17,6 +17,8 @@
   flex-direction: row;
   justify-content: space-between;
   transition: width 1s ease-in;
+  margin-right: 4em;
+
   @include desktop {
     height: 84px;
     z-index: 2 !important;
@@ -31,6 +33,8 @@
   }
 }
 .sort {
+  display: flex;
+  align-items: center;
   color: white;
   font-weight: bold;
   text-transform: uppercase;
@@ -322,21 +326,25 @@
 }
 .sticky-navigation {
     display: none;
+
   @include desktop {
     display: inline-flex;
     float: left;
     padding: 0;
     height: 120px;
     transition: height 1.2s ease;
+    margin-left: 4em;
   }
 }
 .nav-description {
   padding: 0;
+
   @include desktop {
   transition: all .8s ease;
   height: 80px;
   padding-top: 6px;
   margin-left: 50%;
+  margin-right: 4em;
   text-align: left;
   font-size: 1.3rem;
   font-family: $fontfamily;
