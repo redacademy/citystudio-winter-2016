@@ -4,7 +4,7 @@ jQuery(document).ready(function($){
           nav = $('.gallery-description-container');
           description = $('.nav-description');
           scroll = $(window).scrollTop();
-          offset = nav.offset().top;
+          offset = nav.offset().scrollTop();
 
       if (scroll >= offset) {
          sticky.addClass("fixed");

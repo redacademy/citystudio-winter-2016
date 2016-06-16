@@ -58,9 +58,20 @@ get_header(); ?>
 				</a>
 
 			<?php wp_reset_postdata(); ?>
-
-			</div>
-<?php echo do_shortcode("[ajax_load_more post_type='project' posts_per_page='6' pause='true' scroll='false' button_label='Load More' button_loading_label='Loading...' container_type='div']"); ?>
+		</div>
+		<div class="load-more-button">
+		<?php echo do_shortcode("[ajax_load_more
+							preloaded='true'
+							preloaded_amount='6'
+							post_type='project'
+							posts_per_page='6'
+							pause='true'
+							scroll='false'
+							button_label='Load More'
+							button_loading_label='Loading...'
+							css-classes='section-archive'
+							container_type='div']"); ?>
+		</div>
 		<hr class="separate-white">
 <!-- media links -->
 				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>

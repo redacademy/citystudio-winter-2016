@@ -1229,7 +1229,7 @@ iframe {
   .search-list a img {
     border: 1px solid transparent; }
     .search-list a img:hover {
-      border: 1px solid black; }
+      border: 1px solid #000000; }
 
 .not-found {
   background-color: #0198d5;
@@ -1769,7 +1769,23 @@ li {
   .section-archive img {
     border: 1px solid transparent; }
     .section-archive img:hover {
-      border: 1px solid black; }
+      border: 1px solid #000000; }
+
+#ajax-load-more {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1rem 4rem 0; }
+  #ajax-load-more img {
+    border: 1px solid transparent; }
+    #ajax-load-more img:hover {
+      border: 1px solid #000000; }
 
 .separate-white {
   border-top: 2px dashed white;
