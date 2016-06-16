@@ -854,6 +854,10 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.full-width {
+  max-width: 1280px;
+  margin: 0 auto; }
+
 /* Posts and pages */
 .sticky {
   display: block; }
@@ -1504,6 +1508,28 @@ a:active {
     .homepage-description {
       padding: 20px 0;
       width: 80%; } }
+
+.grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.gallery-anchor {
+  -webkit-flex: 1 0 25%;
+      -ms-flex: 1 0 25%;
+          flex: 1 0 25%;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  width: 100%;
+  height: 350px; }
+
+.gallery-anchor:first-child,
+.gallery-anchor:nth-child(6n),
+.gallery-anchor:nth-child(7n) {
+  -webkit-flex: 1 0 50%;
+      -ms-flex: 1 0 50%;
+          flex: 1 0 50%; }
 
 .homepage-partners-container {
   width: 100vw;
