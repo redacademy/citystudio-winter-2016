@@ -1490,7 +1490,7 @@ a:active {
       padding: 8.5% 12%; } }
 
 .orange-font {
-  color: #db5100; }
+  color: #ee7600; }
 
 .homepage-titles {
   margin: 1rem auto;
@@ -2102,7 +2102,7 @@ li {
 .theme-labels,
 .part-labels,
 .year-labels label {
-  font-size: 16px;
+  font-size: 1rem;
   hyphen: manual; }
 
 .theme-labels,
@@ -2232,6 +2232,9 @@ li {
   @media screen and (max-width: 375px) {
     .gallery-description-container {
       display: none; } }
+
+.fa-star {
+  margin-top: 1rem; }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles

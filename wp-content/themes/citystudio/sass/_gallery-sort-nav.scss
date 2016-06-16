@@ -290,7 +290,7 @@
 .theme-labels,
 .part-labels,
 .year-labels label{
-  font-size: 16px;
+  font-size: 1rem;
   hyphen: manual;
 }
 .theme-labels,
@@ -422,4 +422,8 @@
   @include iphone6{
     display: none;
   }
+}
+
+.fa-star{
+margin-top: 1rem;
 }

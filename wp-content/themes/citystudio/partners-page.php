@@ -51,15 +51,16 @@ get_header(); ?>
 			<div class="section-archive">
 				<?php $query = new WP_Query( array( 'partners' => 'eucad' ) );
 			  // The Loop
-			  while ( $query->have_posts() ) {
-			      $query->the_post(); ?>
+			  while ( $query->have_posts() ) { $query->the_post(); ?>
 				<a href="<?php echo get_the_permalink();?>">
 					<?php echo '<li>' . the_post_thumbnail('medium','style=width:340px;height:250px;margin: 0 auto;margin-bottom:1.5rem;') . '</li>';
 				  } ?>
 				</a>
 
 			<?php wp_reset_postdata(); ?>
+
 			</div>
+<?php echo do_shortcode("[ajax_load_more post_type='project' posts_per_page='6' pause='true' scroll='false' button_label='Load More' button_loading_label='Loading...' container_type='div']"); ?>
 		<hr class="separate-white">
 <!-- media links -->
 				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
