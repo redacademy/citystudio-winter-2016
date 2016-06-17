@@ -52,7 +52,7 @@
     color: $light-blue;
     &:hover{
     color: $medium-blue;
-  }
+    }
   }
   a {
     color: #03648c;
@@ -68,17 +68,17 @@
     margin-top: 0.15rem;
     margin-right: 0rem;
   }
-  @include tablet{
-  }
   .fa {
     color: $light-blue;
     font-size: 2.3rem;
     &:hover{
     color: $medium-blue;
-  }
+   }
   }
 }
-
+.menu-item {
+  transition: all 2s ease-in;
+}
 .hamburger-menu{
   width: 50px;
   height: 50px;
@@ -92,8 +92,7 @@
   margin-left: -180px;
   z-index: 1;
 }
-
-.dropdown-content a {
+.dropdown-content a{
   color: black;
   text-decoration: none;
   padding: 6%;
