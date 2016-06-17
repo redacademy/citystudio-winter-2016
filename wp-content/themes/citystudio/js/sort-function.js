@@ -177,9 +177,7 @@ jQuery(document).ready(function($) {
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';
                     galleryItems +=     '<br>';
-                    galleryItems +=     '<span class="home-description"> ' + value.excerpt + ' </span>';
                     galleryItems +=   '</div>';
-
                     galleryItems +=   '</li>';
                     galleryItems += '</a>';
 
