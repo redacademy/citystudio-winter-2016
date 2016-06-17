@@ -1,11 +1,10 @@
 jQuery(document).ready(function($){
-     $(window).scroll(function(e){
-        e.preventDefault;
-      var sticky = $('.sticky-navigation');
-          nav = $('.gallery-description-container');
-          description = $('.nav-description');
-          scroll = $(window).scrollTop();
-          offset = nav.offset().top;
+     $(window).scroll(function(){
+      var sticky = $('.sticky-navigation'),
+          nav = $('.gallery-description-container'),
+          description = $('.nav-description'),
+          scroll = $(window).scrollTop(),
+          offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");

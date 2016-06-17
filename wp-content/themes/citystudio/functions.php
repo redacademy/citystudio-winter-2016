@@ -7,6 +7,22 @@
  * @package RED_Starter_Theme
  */
 
+// require_once('wp-advanced-search/wpas.php');
+
+// function my_search_form() {
+//     $args = array();
+//     $args['wp_query'] = array('post_type' => 'post',
+//                               'posts_per_page' => 9);
+//     $args['fields'][] = array('type' => 'search',
+//                               'title' => 'Search',
+//                               'placeholder' => 'Search projects...');
+//     $args['fields'][] = array('type' => 'taxonomy',
+//                               'taxonomy' => 'category',
+//                               'format' => 'select');
+//     register_wpas_form('my-form', $args);
+// }
+// add_action('init', 'my_search_form');
+
 if ( ! function_exists( 'red_starter_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
