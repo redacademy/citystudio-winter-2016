@@ -7,8 +7,6 @@
 
 get_header(); ?>
 
-	<h1> The archive page </h1>
-
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 

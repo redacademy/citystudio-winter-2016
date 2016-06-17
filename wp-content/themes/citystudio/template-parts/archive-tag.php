@@ -7,13 +7,10 @@
 
 ?>
 
-	<div class="menu-list-items">
+	<div class="tag-archives">
 
 		<?php if ( has_post_thumbnail() ) : ?>
 			<?php the_post_thumbnail( 'medium' ); ?>
 		<?php endif; ?>
 
-    <div class="list-item-info">
-
-    </div>
 	</div><!-- .menu-list-items -->

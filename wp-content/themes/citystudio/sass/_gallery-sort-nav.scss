@@ -326,7 +326,6 @@
 }
 .sticky-navigation {
     display: none;
-
     padding-left: 85px;
   @include desktop {
     display: inline-flex;
@@ -334,7 +333,7 @@
     padding: 0;
     height: 120px;
     transition: height 1.2s ease;
-      padding-left: 85px;
+    padding-left: 1rem;
   }
 }
 .nav-description {
@@ -383,8 +382,7 @@
   @include desktop{
   transition: all .4s ease;
   padding-top: 6px;
-  padding: 0;
-    padding-left: 5.2rem;
+  padding-left: 1rem;
   }
   @include tablet{
   }

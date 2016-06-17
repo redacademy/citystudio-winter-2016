@@ -49,14 +49,9 @@ get_header(); ?>
 			</div>
 <!-- loop for displaying projects -->
 			<div class="section-archive">
-
-				<?php $query = new WP_Query( array(
-					'partners' => 'eucad',
-					'posts_per_page' => 3,
- 					 ) ); ?>
-
-			  <!-- // The Loop -->
-			  <?php while ( $query->have_posts() ) { $query->the_post(); ?>
+				<?php $query = new WP_Query( array( 'partners' => 'eucad' ) );
+			  // The Loop
+			  while ( $query->have_posts() ) { $query->the_post(); ?>
 				<a href="<?php echo get_the_permalink();?>">
 					<?php echo '<li>' . the_post_thumbnail('medium','style=width:340px;height:250px;margin: 0 auto;margin-bottom:1.5rem;') . '</li>';
 				  } ?>
@@ -64,23 +59,8 @@ get_header(); ?>
 
 			<?php wp_reset_postdata(); ?>
 
-		</div>
-		<div class="section-archive">
-		<?php echo do_shortcode("[ajax_load_more
-							preloaded='true'
-							preloaded_amount='6'
-							post_type='project'
-							taxonomy='partners'
-							taxonomy_terms='eucad'
-							taxonomy_operator='IN'
-							posts_per_page='6'
-							pause='true'
-							scroll='false'
-							button_label='Load More'
-							button_loading_label='Loading...'
-							css-classes='section-archive'
-							container_type='div']"); ?>
-		</div>
+			</div>
+
 		<hr class="separate-white">
 <!-- media links -->
 				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
