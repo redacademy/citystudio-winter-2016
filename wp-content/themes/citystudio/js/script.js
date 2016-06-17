@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
-     $(window).scroll(function(){
+     $(window).scroll(function(e){
+        e.preventDefault;
       var sticky = $('.sticky-navigation');
           nav = $('.gallery-description-container');
           description = $('.nav-description');
@@ -25,7 +26,5 @@ function myFunction() {
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(e) {
   e.preventDefault;
-
   ('dropdown-content').show;
-
 }
