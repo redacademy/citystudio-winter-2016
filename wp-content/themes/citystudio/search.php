@@ -16,7 +16,7 @@ get_header(); ?>
 				</header>
 				<div class="archive-blurb">
 					<p>
-							<?php the_field('archive_blurb') ?>
+						<?php the_field('archive_blurb') ?>
 					</p>
 				</div>
 
@@ -37,7 +37,7 @@ get_header(); ?>
 				<?php echo do_shortcode ("[ajax_load_more
 					preloaded='true'
 					preloaded_amount='9'
-				  images_loaded='true'
+					images_loaded='true'
  					post_type='projects'
 					posts_per_page='3'
 					pause='true'
