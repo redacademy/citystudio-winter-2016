@@ -739,6 +739,10 @@ a {
     .icon-menu .fa:hover {
       color: #0082b9; }
 
+.menu-item {
+  /*opacity: 0;*/
+  transition: all 2s ease-in; }
+
 .hamburger-menu {
   width: 50px;
   height: 50px; }
@@ -837,6 +841,9 @@ a {
 
 .header-nav ul > li:hover ul li:last-child {
   border-bottom: 2px solid black; }
+
+.menu-main {
+  color: black; }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1928,10 +1935,6 @@ li {
 .close .refresh {
   min-width: 25px;
   transition: width 1s ease-in; }
-
-.menu-item {
-  opacity: 0;
-  transition: all 2s ease-in; }
 
 .open .menu-item {
   opacity: 1;
