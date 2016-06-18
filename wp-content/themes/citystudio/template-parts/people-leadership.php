@@ -16,23 +16,22 @@ $citystudio_leadership = new WP_Query( $args ); ?>
 <?php /* Start the Loop */ ?>
 <div class="citystudio-teams">
 
-  <div class="citystudio-team container">
+  <div class="citystudio-team team-container">
     <h2 class="section-titles">Leadership Council</h2>
 
     <ul>
 
     <?php while ( $citystudio_leadership->have_posts() ) : $citystudio_leadership->the_post(); ?>
 
-          <li class="leaders">
-                  <h3 class="people-title"><?php the_field( 'leadership_council_member_name' ); ?></h3>
-                  <p class="role"><?php the_field( 'leadership_council_member_role' ); ?></p>
-          </li>
+      <li class="leaders">
+        <h3 class="people-title"><?php the_field( 'leadership_council_member_name' ); ?></h3>
+        <p class="role"><?php the_field( 'leadership_council_member_role' ); ?></p>
+      </li>
 
     <?php endwhile; ?>
-
     </ul>
-
+</div>
+<hr class="separate" />
 <?php else : ?>
 
 <?php endif; ?>
-</div>

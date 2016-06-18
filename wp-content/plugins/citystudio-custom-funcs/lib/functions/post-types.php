@@ -48,6 +48,7 @@ function register_project_post_type() {
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'excerpt', 'author', 'thumbnail', 'revisions', 'custom-fields' ),
 		'hierarchical'          => false,
+		'taxonomies'            => array( 'post_tag' ),
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_rest'			=> true,

@@ -15,19 +15,23 @@ $citystudio_team = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams container">
+<div class="citystudio-teams team-container">
 
-  <h2 class="section-titles">CityStudio Team</h2>
+  <h2 class="section-titles">CityStudio Vancouver Team</h2>
 
   <ul>
 
   <?php while ( $citystudio_team->have_posts() ) : $citystudio_team->the_post(); ?>
 
                 <li class="team">
-                  <a ref="<?php the_permalink(); ?>">
+                  <a href="<?php the_permalink(); ?>">
 
                     <div class="team-pic">
-                      <img src="<?php the_field( 'team_member_image' ); ?> " />
+
+                      <?php if( get_field('team_member_image') ): ?>
+                        <img src="<?php the_field( 'team_member_image' ); ?>" />
+                      <?php endif; ?>
+
                     </div>
 
                     <h3 class="people-title"><?php the_field( 'team_member_name' ); ?></h3>
@@ -41,9 +45,8 @@ $citystudio_team = new WP_Query( $args ); ?>
       <?php endwhile; ?>
 
   </ul>
-
+</div>
+<hr class="separate" />
 <?php else : ?>
 
 <?php endif; ?>
-
-</div>

@@ -57,6 +57,7 @@ get_header(); ?>
 				  } ?>
 				</a>
 
+				<?php red_starter_numbered_pagination(); ?>
 			<?php wp_reset_postdata(); ?>
 		</div>
 		<div class="load-more-button">
