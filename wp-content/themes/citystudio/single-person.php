@@ -33,11 +33,8 @@ get_header();
 			<p>
 				<?php the_field( 'team_member_bio' ); ?>
 			</p>
-
 		</div>
-
-
-
+		
   </article><!-- #post-## -->
 
 	<?php endwhile; // End of the loop. ?>

@@ -33,12 +33,12 @@ get_header(); ?>
 				</div>
 			</div>
 			<div class="call-to-action">
-			
-					<div class="connect">
-						<label class="become-involved">Become Involved!</label>
-						<button><p>Connect</p></button>
-					</div>
-				</div>
+
+			<?php if(get_field('activate_cta') ): ?>  
+		      	<?php get_template_part('template-parts/content', 'template'); ?>
+			<?php endif; ?>
+
+			</div>
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
