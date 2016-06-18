@@ -4,19 +4,15 @@
  */
 
 get_header(); ?>
-	
-
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		     <div class="page-title">
 		    	<div class="wwd-page-wrapper">
-				<h1>What We Do</h1>
-			  </div>
+					<h1><?php wp_title(); ?></h1>
+				</div>
 			</div>
-			<div class="wwd-hero">	
-			</div>
-
+			<div class="wwd-hero"></div>
 			<div class="wwd-content">
 				<div class="section-header">
 					<?php
@@ -24,9 +20,7 @@ get_header(); ?>
                         if( have_rows('main_section') );
                              // loop through the rows of data
                             while ( have_rows('main_section') ) : the_row(); ?>
-                          	<h3>
-	                          	<?php the_sub_field('title') ?>
-	                        </h3>
+                          	<h3><?php the_sub_field('title') ?></h3>
 	                          	<?php the_sub_field('content') ?>
 							<hr class="separate">
                      <?php  endwhile; ?>

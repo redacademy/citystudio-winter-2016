@@ -756,6 +756,9 @@ a {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-left: -180px;
   z-index: 1; }
+  @media screen and (max-width: 375px) {
+    .dropdown-content {
+      width: 27%; } }
 
 .dropdown-content a {
   color: black;
@@ -765,8 +768,14 @@ a {
   border-bottom: 2px solid grey !important;
   border-left: 2px solid black !important;
   font-size: 20px; }
+  @media screen and (max-width: 375px) {
+    .dropdown-content a {
+      border: none !important; } }
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
+    @media screen and (max-width: 375px) {
+      .dropdown-content a ul li {
+        border: none; } }
 
 .hamburger {
   background-color: white;
@@ -780,8 +789,10 @@ a {
   display: block; }
 
 .header-nav {
-  /*margin: -12px;*/
   margin-top: 0; }
+  @media screen and (max-width: 375px) {
+    .header-nav {
+      margin-left: -138px; } }
 
 .header-nav ul {
   *zoom: 1;
@@ -808,8 +819,12 @@ a {
 .header-nav a {
   display: block;
   padding: 14px 25px;
+  color: #2cb5e8 !important;
   line-height: 22px;
   border-left: 1px solid #595959; }
+  @media screen and (max-width: 375px) {
+    .header-nav a {
+      border: none; } }
 
 .header-nav a:hover {
   text-decoration: none;
@@ -842,6 +857,13 @@ a {
 
 .header-nav ul > li:hover ul li:last-child {
   border-bottom: 2px solid black; }
+  @media screen and (max-width: 375px) {
+    .header-nav ul > li:hover ul li:last-child {
+      border: none; } }
+
+@media screen and (max-width: 375px) {
+  .menu-menu-container {
+    width: 375px; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1003,6 +1025,10 @@ iframe {
   @media screen and (min-width: 480px) {
     .footer-logo {
       height: 4rem; } }
+  @media screen and (max-width: 375px) {
+    .footer-logo {
+      height: 4em;
+      padding-top: 2%; } }
 
 .social-icons-div {
   display: -webkit-flex;
@@ -1016,6 +1042,10 @@ iframe {
           justify-content: flex-start;
   margin-top: 0.5rem;
   width: 52%; }
+  @media screen and (max-width: 375px) {
+    .social-icons-div {
+      width: 42%;
+      padding-left: 5.6em; } }
 
 .social-icons {
   height: 1rem;
@@ -2446,14 +2476,14 @@ li {
   background: url("../../images/citystudio-logo.png"), #0082b9;
   background-size: cover;
   background-position: center center;
+  margin-bottom: 4em;
   opacity: 0.9;
   width: 100%;
   height: 150px;
   overflow: hidden; }
 
-.people-container {
-  margin: 4em auto;
-  max-width: 1130px; }
+.team-container {
+  margin: 4em 2em; }
 
 .citystudio-teams ul {
   display: -webkit-flex;
@@ -2468,8 +2498,7 @@ li {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-bottom: 4em;
-  border-bottom: 2px dashed #0082b9; }
+  padding-bottom: 2em; }
 
 .citystudio-teams h2 {
   -webkit-flex: 0 1 100%;
@@ -2488,11 +2517,17 @@ li {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   max-height: 180px;
   min-height: 340px;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   text-align: center; }
   .team .team-pic {
     -webkit-flex: 0 1 100%;
@@ -2512,14 +2547,23 @@ li {
         -ms-flex: 0 3 100%;
             flex: 0 3 100%;
     text-align: center; }
+  .team a {
+    margin-bottom: 0.5em; }
+  .team:hover {
+    cursor: pointer; }
+    .team:hover img {
+      -webkit-filter: opacity(0.8);
+              filter: opacity(0.8); }
+    .team:hover h3 {
+      color: #76d6ff; }
 
-.leaders {
+.leaders, .operations, .founders {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 0 23%;
-      -ms-flex: 0 0 23%;
-          flex: 0 0 23%;
+  -webkit-flex: 0 0 20%;
+      -ms-flex: 0 0 20%;
+          flex: 0 0 20%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -2528,7 +2572,9 @@ li {
           justify-content: center;
   min-height: 70px;
   height: 100%; }
-  .leaders p {
+  .leaders h3, .operations h3, .founders h3 {
+    text-decoration: none; }
+  .leaders p, .operations p, .founders p {
     text-align: center; }
 
 article.people {
@@ -2558,8 +2604,8 @@ article.people {
       -ms-flex: 0 1 60%;
           flex: 0 1 60%; }
 
-.person-name {
-  border-bottom: 2px dashed #0082b9; }
+.person-name h1, .person-name p {
+  color: #2cb5e8; }
 
 .page-title {
   margin: 0;

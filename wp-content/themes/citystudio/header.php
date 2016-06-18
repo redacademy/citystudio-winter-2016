@@ -32,8 +32,8 @@
 
 				<div class="site-branding">
 					<a href="<?php echo esc_url(home_url([1]));?>">
-				    <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
-				  </a>
+				    	<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				  	</a>
 				</div><!-- .site-branding -->
 
 				<div class="search-gallery">
@@ -42,11 +42,11 @@
 					</span>
 				<div class="icon-menu">
 					<button onclick="myFunction()" class="hamburger"><i class="fa fa-bars"></i></button>
-						<div id="hamburgerMenu" class="dropdown-content">
-							<nav class="header-nav">
-		  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-							</nav>
-						</div>
+					<div id="hamburgerMenu" class="dropdown-content">
+						<nav class="header-nav">
+	  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</nav>
+					</div>
 				</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->

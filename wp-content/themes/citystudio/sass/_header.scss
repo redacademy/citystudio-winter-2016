@@ -91,6 +91,9 @@
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   margin-left: -180px;
   z-index: 1;
+  @include iphone6{
+    width: 27%;
+  }
 }
 .dropdown-content a{
   color: black;
@@ -99,9 +102,15 @@
   display: block;
   border-bottom: 2px solid grey !important;
   border-left: 2px solid black !important;
+  @include iphone6{
+    border: none !important;
+  }
   font-size: 20px;
     ul li{
       border-left: 2px solid grey !important;
+      @include iphone6{
+       border: none;
+      }
     }
 }
 .hamburger{
@@ -114,8 +123,10 @@
   display:block;
 }
 .header-nav{
-  /*margin: -12px;*/
   margin-top: 0;
+  @include iphone6{
+    margin-left: -138px;
+  }
 }
 .header-nav ul {
   *zoom:1;
@@ -145,8 +156,12 @@
 .header-nav a {
   display:block;
   padding: 14px 25px;
+  color: #2cb5e8 !important;
   line-height: 22px;
   border-left:1px solid #595959;
+    @include iphone6{
+      border: none;
+    }
 }
 .header-nav a:hover {
   text-decoration:none;
@@ -184,4 +199,13 @@
 }
 .header-nav ul > li:hover ul li:last-child {
   border-bottom: 2px solid black;
+    @include iphone6{
+      border: none;
+    }
+}
+
+.menu-menu-container{
+  @include iphone6{
+    width: 375px;
+  }
 }
