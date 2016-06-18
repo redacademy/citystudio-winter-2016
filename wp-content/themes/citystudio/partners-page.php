@@ -56,25 +56,22 @@ get_header(); ?>
 					<?php echo '<li>' . the_post_thumbnail('medium','style=width:340px;height:250px;margin: 0 auto;margin-bottom:1.5rem;') . '</li>';
 				  } ?>
 				</a>
-
 			<?php wp_reset_postdata(); ?>
-
 			</div>
-
 		<hr class="separate-white">
 <!-- media links -->
-				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
-				<div class="media-links-container">
-					<div class="media-link">
-						<p><?php echo CFS()->get( 'media_link_1' ); ?></p>
-					</div>
-					<div class="media-link">
-						<p><?php echo CFS()->get( 'media_link_2' ); ?></p>
-					</div>
-					<div class="media-link">
-						<p><?php echo CFS()->get( 'media_link_3' ); ?></p>
-					</div>
-				</div>
+		<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
+		<div class="media-links-container">
+			<div class="media-link">
+				<p><?php echo CFS()->get( 'media_link_1' ); ?></p>
+			</div>
+			<div class="media-link">
+				<p><?php echo CFS()->get( 'media_link_2' ); ?></p>
+			</div>
+			<div class="media-link">
+				<p><?php echo CFS()->get( 'media_link_3' ); ?></p>
+			</div>
+		</div>
 
   	</div><!-- end projects-container -->
 	</main><!-- #main -->

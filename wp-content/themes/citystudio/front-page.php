@@ -75,7 +75,7 @@ get_header(); ?>
 
   <div class="homepage-partners-container">
 
-    <h1 class="homepage-titles">CityStudio Partners</h1>
+    <h1 class="homepage-titles">CityStudio Participating Schools</h1>
 
       <div class="featured">
                     <?php

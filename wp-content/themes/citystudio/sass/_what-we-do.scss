@@ -30,7 +30,7 @@
   padding: 2rem;
   margin: 0 auto;
   .separate{
-    border-top: 3px dashed #76d6ff;
+    border-top: 3px dashed $light-blue;
     background-color: #fff;
     margin: 2rem 0;
   }
@@ -47,7 +47,7 @@
 .call-to-action{
   display: flex;
   position: relative;
-  background-color: #f9f9f9;
+  background-color: $color__background-lightblue;
   padding: 4% 6% 3% 10%;
   max-width: 1844px;
   font-size: 18px;

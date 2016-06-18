@@ -1,6 +1,6 @@
-<?php
+	<?php
 /** 
- * Template Name: What We Do
+ * Template Name: Template One
  */
 
 get_header(); ?>
@@ -21,32 +21,19 @@ get_header(); ?>
 				<div class="section-header">
 					<?php
                         // check if the repeater field has rows of data
-                        if( have_rows('section') );
+                        if( have_rows('main_section') );
                              // loop through the rows of data
-                            while ( have_rows('section') ) : the_row(); ?>
+                            while ( have_rows('main_section') ) : the_row(); ?>
                           	<h3>
-	                          	<?php the_sub_field('section_heading') ?>
+	                          	<?php the_sub_field('title') ?>
 	                        </h3>
-	                          	<?php the_sub_field('section_content') ?>
+	                          	<?php the_sub_field('content') ?>
 							<hr class="separate">
                      <?php  endwhile; ?>
 				</div>
 			</div>
 			<div class="call-to-action">
-					<?php
-	            // check if the repeater field has rows of data
-	            if( have_rows('call_to_action') );
-	                 // loop through the rows of data
-	                while ( have_rows('call_to_action') ) : the_row(); ?>
-	            <div class="cta_blurb">
-					<div class="cta-heading">
-		              	<h3><?php the_sub_field('cta_heading') ?></h3>
-		            </div>
-		            <div class="cta-content">
-		            	<?php the_sub_field('cta_content') ?>
-					</div>
-				</div>
-	              <?php  endwhile; ?>
+			
 					<div class="connect">
 						<label class="become-involved">Become Involved!</label>
 						<button><p>Connect</p></button>

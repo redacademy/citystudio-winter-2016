@@ -27,7 +27,6 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html('Skip to content'); ?></a>
-
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-container">
 
@@ -43,13 +42,12 @@
 					</span>
 				<div class="icon-menu">
 					<button onclick="myFunction()" class="hamburger"><i class="fa fa-bars"></i></button>
-					  <div id="hamburgerMenu" class="dropdown-content">
-					<nav class="header-nav">
-  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-					</nav>
+						<div id="hamburgerMenu" class="dropdown-content">
+							<nav class="header-nav">
+		  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+							</nav>
+						</div>
 				</div>
-				
-	</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->
-<div id="content" class="site-content">
+			<div id="content" class="site-content">

@@ -89,7 +89,6 @@
   min-width: 25px;
   transition: width 1s ease-in;
 }
-
 .open .menu-item {
   opacity: 1;
   margin: 0;
@@ -330,7 +329,7 @@
     padding: 0;
     height: 120px;
     transition: height 1.2s ease;
-    padding-left: 1rem;
+    padding-left: 6rem;
   }
 }
 .nav-description {
@@ -378,12 +377,10 @@
 .sticky-navigation.fixed{
   @include desktop{
   transition: all .4s ease;
-  padding-top: 6px;
-  padding-left: 1rem;
+  padding-left: 6rem;
   }
   @include tablet{
   }
-
  }
 .nav-description.fixed{
   transition: all .8s ease;
