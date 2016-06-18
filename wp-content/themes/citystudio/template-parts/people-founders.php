@@ -16,7 +16,7 @@ $citystudio_founders = new WP_Query( $args ); ?>
 <?php /* Start the Loop */ ?>
 
 
-<div class="citystudio-team container">
+<div class="citystudio-team team-container">
 
   <h2 class="section-titles">Founder's Circle</h2>
 
@@ -24,9 +24,9 @@ $citystudio_founders = new WP_Query( $args ); ?>
 
   <?php while ( $citystudio_founders->have_posts() ) : $citystudio_founders->the_post(); ?>
 
-          <li class="team">
-                  <h3 class="people-title"><?php the_sub_field( 'founder_member_name' ); ?></h3>
-                  <p class="role"><?php the_sub_field( 'leadership_council_member_position' ); ?></p>
+          <li class="founders">
+                  <h3 class="people-title"><?php the_field( 'founder_member_name' ); ?></h3>
+                  <p class="role"><?php the_field( 'founder_member_position' ); ?></p>
           </li>
 
       <?php endwhile; ?>

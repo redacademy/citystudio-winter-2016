@@ -15,7 +15,7 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams container">
+<div class="citystudio-teams team-container">
 
   <h2 class="section-titles">Operations Council</h2>
 
@@ -23,15 +23,16 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
   <?php while ( $citystudio_operations->have_posts() ) : $citystudio_operations->the_post(); ?>
 
-          <li class="team">
-            <h3 class="people-title"><?php the_field( 'team_member_name' ); ?></h3>
-
-            <p class="role"><?php the_field( 'team_member_role' ); ?></p>
+          <li class="operations">
+            <h3 class="people-title"><?php the_field( 'operations_council_member_name' ); ?></h3>
+            <p class="role"><?php the_field( 'operations_council_member_position' ); ?></p>
           </li>
 
       <?php endwhile; ?>
   </ul>
 </div>
+
+<hr class="separate" />
 <?php else : ?>
 
 <?php endif; ?>

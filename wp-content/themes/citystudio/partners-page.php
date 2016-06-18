@@ -56,6 +56,7 @@ get_header(); ?>
 					<?php echo '<li>' . the_post_thumbnail('medium','style=width:340px;height:250px;margin: 0 auto;margin-bottom:1.5rem;') . '</li>';
 				  } ?>
 				</a>
+
 			<?php wp_reset_postdata(); ?>
 			</div>
 		<hr class="separate-white">

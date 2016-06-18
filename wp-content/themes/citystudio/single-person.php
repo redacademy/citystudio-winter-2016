@@ -28,13 +28,18 @@ get_header();
 			<div class="person-name">
 				<h1 class="people-title"><?php the_field( 'team_member_name' ); ?></h1>
 				<p class="role"><?php the_field( 'team_member_role' ); ?></p>
+				<hr class="separate" />
 			</div>
 
 			<p>
 				<?php the_field( 'team_member_bio' ); ?>
 			</p>
 		</div>
-		
+
+		<div class="static-return-button">
+			<a href="">Back To People Page</a>
+		</div>
+
   </article><!-- #post-## -->
 
 	<?php endwhile; // End of the loop. ?>
