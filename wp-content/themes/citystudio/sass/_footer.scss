@@ -31,6 +31,10 @@
     height: 4rem;
     // width: 100%;
   }
+  @include iphone6{
+    height: 4em;
+    padding-top: 2%;
+  }
 }
 .social-icons-div {
   display: flex;
@@ -38,6 +42,10 @@
   justify-content: flex-start;
   margin-top: 0.5rem;
   width: 52%;
+  @include iphone6{
+  width: 42%;
+    padding-left: 5.6em;
+  }
 }
 .social-icons {
   height: 1rem;

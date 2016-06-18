@@ -761,6 +761,9 @@ a {
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
   margin-left: -180px;
   z-index: 1; }
+  @media screen and (max-width: 375px) {
+    .dropdown-content {
+      width: 27%; } }
 
 .dropdown-content a {
   color: black;
@@ -770,8 +773,14 @@ a {
   border-bottom: 2px solid grey !important;
   border-left: 2px solid black !important;
   font-size: 20px; }
+  @media screen and (max-width: 375px) {
+    .dropdown-content a {
+      border: none !important; } }
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
+    @media screen and (max-width: 375px) {
+      .dropdown-content a ul li {
+        border: none; } }
 
 .hamburger {
   background-color: white;
@@ -785,8 +794,10 @@ a {
   display: block; }
 
 .header-nav {
-  /*margin: -12px;*/
   margin-top: 0; }
+  @media screen and (max-width: 375px) {
+    .header-nav {
+      margin-left: -138px; } }
 
 .header-nav ul {
   *zoom: 1;
@@ -813,8 +824,12 @@ a {
 .header-nav a {
   display: block;
   padding: 14px 25px;
+  color: #2cb5e8 !important;
   line-height: 22px;
   border-left: 1px solid #595959; }
+  @media screen and (max-width: 375px) {
+    .header-nav a {
+      border: none; } }
 
 .header-nav a:hover {
   text-decoration: none;
@@ -847,6 +862,13 @@ a {
 
 .header-nav ul > li:hover ul li:last-child {
   border-bottom: 2px solid black; }
+  @media screen and (max-width: 375px) {
+    .header-nav ul > li:hover ul li:last-child {
+      border: none; } }
+
+@media screen and (max-width: 375px) {
+  .menu-menu-container {
+    width: 375px; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1008,6 +1030,10 @@ iframe {
   @media screen and (min-width: 480px) {
     .footer-logo {
       height: 4rem; } }
+  @media screen and (max-width: 375px) {
+    .footer-logo {
+      height: 4em;
+      padding-top: 2%; } }
 
 .social-icons-div {
   display: -webkit-flex;
@@ -1021,6 +1047,10 @@ iframe {
           justify-content: flex-start;
   margin-top: 0.5rem;
   width: 52%; }
+  @media screen and (max-width: 375px) {
+    .social-icons-div {
+      width: 42%;
+      padding-left: 5.6em; } }
 
 .social-icons {
   height: 1rem;
@@ -2472,7 +2502,12 @@ li {
           flex: 0 0 100%;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
+<<<<<<< HEAD
           justify-content: space-between; }
+=======
+          justify-content: space-between;
+  padding-bottom: 2em; }
+>>>>>>> mobile-menu
 
 .citystudio-teams h2 {
   -webkit-flex: 0 1 100%;
@@ -2580,6 +2615,7 @@ article.people {
 
 .person-name h1, .person-name p {
   color: #2cb5e8; }
+<<<<<<< HEAD
 
 .static-return-button a {
   font-size: 1.3em;
@@ -2591,6 +2627,8 @@ article.people {
   cursor: pointer;
   -webkit-filter: opacity(0.8);
           filter: opacity(0.8); }
+=======
+>>>>>>> mobile-menu
 
 .page-title {
   margin: 0;
