@@ -29,7 +29,6 @@
     flex-wrap: wrap;
     flex: 0 0 100%;
     justify-content: space-between;
-    padding-bottom: 2em;
   }
 
   h2 {
@@ -131,5 +130,19 @@ article.people {
 
   h1, p {
     color: $light-blue;
+  }
+}
+
+.static-return-button {
+
+  a {
+    font-size: 1.3em;
+    color: $light-blue;
+    text-decoration: underline;
+    text-transform: uppercase;
+  }
+  a:hover {
+    cursor: pointer;
+    filter: opacity(0.8);
   }
 }

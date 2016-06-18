@@ -496,6 +496,11 @@ h3.people-title {
   h3.people-title:hover {
     cursor: pointer; }
 
+.separate {
+  border-top: 2.5px dashed #2cb5e8;
+  background-color: #fff;
+  margin: 2em 0 1em; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -2467,8 +2472,7 @@ li {
           flex: 0 0 100%;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-bottom: 2em; }
+          justify-content: space-between; }
 
 .citystudio-teams h2 {
   -webkit-flex: 0 1 100%;
@@ -2577,6 +2581,17 @@ article.people {
 .person-name h1, .person-name p {
   color: #2cb5e8; }
 
+.static-return-button a {
+  font-size: 1.3em;
+  color: #2cb5e8;
+  text-decoration: underline;
+  text-transform: uppercase; }
+
+.static-return-button a:hover {
+  cursor: pointer;
+  -webkit-filter: opacity(0.8);
+          filter: opacity(0.8); }
+
 .page-title {
   margin: 0;
   width: 100%;
@@ -2607,10 +2622,6 @@ article.people {
   max-width: 928px;
   padding: 2rem;
   margin: 0 auto; }
-  .section-header .separate {
-    border-top: 3px dashed #2cb5e8;
-    background-color: #fff;
-    margin: 2rem 0; }
   .section-header h3 {
     font-size: 20px;
     padding-bottom: 1%;

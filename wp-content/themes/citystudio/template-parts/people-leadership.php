@@ -30,8 +30,9 @@ $citystudio_leadership = new WP_Query( $args ); ?>
 
     <?php endwhile; ?>
     </ul>
+    <hr class="separate" />
 </div>
-<hr class="separate" />
+
 <?php else : ?>
 
 <?php endif; ?>

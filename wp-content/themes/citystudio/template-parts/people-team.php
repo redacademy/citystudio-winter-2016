@@ -43,10 +43,10 @@ $citystudio_team = new WP_Query( $args ); ?>
                 </li>
 
       <?php endwhile; ?>
-
   </ul>
+  <hr class="separate" />
 </div>
-<hr class="separate" />
+
 <?php else : ?>
 
 <?php endif; ?>
