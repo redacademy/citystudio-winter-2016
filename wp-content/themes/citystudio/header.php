@@ -35,7 +35,7 @@
 				    	<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
 				  	</a>
 				</div><!-- .site-branding -->
-
+				
 				<div class="search-gallery">
 					<span class="icon-search" aria-hidden="true">
 						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
