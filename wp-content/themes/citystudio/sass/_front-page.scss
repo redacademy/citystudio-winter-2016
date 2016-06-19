@@ -100,22 +100,42 @@
 // -------------- PARTNER SECTION STYLES  ----------------------*
 
 .homepage-partners-container {
-  width: 100vw;
   text-align: center;
   display: block;
+  margin: 0 auto;
+
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0 2em;
+  }
+
+  li {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    flex: 0 0 20%;
+    max-width: 200px;
+    height: 80px;
+  }
+
   h1 {
     margin: 2rem 0 1rem 0;
   }
+
   p {
     width: 74vw;
     margin: 0 auto;
     padding-bottom: 1rem;
     font-size: 21px;
   }
+
   .partner-buttons {
     text-align: center;
     padding: 3%;
   }
+
   button {
     font-weight: bold;
     background-color: rgba(1,152,213,.8);
@@ -124,7 +144,13 @@
     padding: 0.5% 2%;
     margin: 1rem 1rem 2rem 1rem;
   }
+
 }
+
+.featured {
+
+}
+
 .partners-title {
   text-align: center;
   color: white;

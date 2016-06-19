@@ -75,33 +75,39 @@ get_header(); ?>
 
   <div class="homepage-partners-container">
 
-    <h1 class="homepage-titles">CityStudio Participating Schools</h1>
+    <h1 class="homepage-titles">Participating Schools</h1>
 
-      <div class="featured">
-                    <?php
-                    // check if the repeater field has rows of data
-                        if( have_rows('featured_partner') );
-                         // loop through the rows of data
-                      while ( have_rows('featured_partner') ) : the_row(); ?>
-                        <img src ="<?php the_sub_field('image_url') ?>" />
-                    <?php endwhile; ?>
-                </div>
-                <div class="partners-row1">
-                    <?php
-                    // check if the repeater field has rows of data
-                      if( have_rows('partner_row_1') );
-                         // loop through the rows of data
-                      while ( have_rows('partner_row_1') ) : the_row(); ?>
-                        <img src ="<?php the_sub_field('image_url') ?>" />
-                    <?php endwhile; ?>
-                </div>
-                <div class="partners-row2">
-                    <?php
-                    // check if the repeater field has rows of data
-                      if( have_rows('partner_row_2') );
-                         // loop through the rows of data
-                      while ( have_rows('partner_row_2') ) : the_row(); ?>
-                        <img src ="<?php the_sub_field('image_url') ?>" />
-                    <?php endwhile; ?>
-                </div>
+        <ul class="featured">
+          <?php
+          // check if the repeater field has rows of data
+              if( have_rows('partner_row') );
+               // loop through the rows of data
+            while ( have_rows('partner_row') ) : the_row(); ?>
+
+            <li style="background-image: url( '<?php the_sub_field('school_logo'); ?> ' ); ">
+            </li>
+          <?php endwhile; ?>
+        </ul>
+
+        <ul class="featured-two">
+            <?php
+            // check if the repeater field has rows of data
+              if( have_rows('partner_row_two') );
+                 // loop through the rows of data
+              while ( have_rows('partner_row_two') ) : the_row(); ?>
+              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
+              </li>
+            <?php endwhile; ?>
+        </ul>
+
+        <ul class="feature-two">
+            <?php
+            // check if the repeater field has rows of data
+              if( have_rows('partner_row_three') );
+                 // loop through the rows of data
+              while ( have_rows('partner_row_three') ) : the_row(); ?>
+              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
+              </li>
+            <?php endwhile; ?>
+        </ul>
 <?php get_footer(); ?>
