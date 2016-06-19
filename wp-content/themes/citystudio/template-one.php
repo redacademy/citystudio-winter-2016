@@ -7,11 +7,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-		     <div class="page-title">
-		    	<div class="wwd-page-wrapper">
-						<h1><?php wp_title(); ?></h1>
-					</div>
+
+			<header class="citystudio-banner">
+				<div class="banner-inner">
+					<h2 class="page-titles"><?php the_title(); ?></h2>
 				</div>
+			</header>
+
 			<div class="wwd-hero"></div>
 			<div class="wwd-content">
 				<div class="section-header">

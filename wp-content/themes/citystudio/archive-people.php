@@ -10,7 +10,7 @@ get_header();
     <div class="">
       <div class="people-archive">
 
-        <header class="citystudio-banner">
+        <header class="citystudio-banner-short">
           <div class="banner-inner">
             <h2 class="page-titles">People</h2>
           </div>
