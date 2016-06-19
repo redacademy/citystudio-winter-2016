@@ -8,7 +8,7 @@ get_header();
 <div id="primary" class="content-area single-projects">
 	<main id="main" class="site-main" role="main">
 
-		<header class="citystudio-banner">
+		<header class="citystudio-banner-short">
 			<div class="banner-inner">
 				<h2 class="page-titles">People</h2>
 			</div>
@@ -26,7 +26,7 @@ get_header();
 		<div class="person-right">
 
 			<div class="person-name">
-				<h1 class="people-title"><?php the_field( 'team_member_name' ); ?></h1>
+				<h1 class="people-title"><?php the_title(); ?></h1>
 				<p class="role"><?php the_field( 'team_member_role' ); ?></p>
 
         <hr class="separate" />
