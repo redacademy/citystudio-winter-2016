@@ -3,10 +3,10 @@
 --------------------------------------------------------------*/
 
 .full-width {
-  max-width: 1280px;
+  max-width: 2525px;
   margin: 0 auto;
-  @include xx-large{
-  	max-width: 1905px;
+  @include xx-large {
+  	max-width: 2525px;
   }
 }
 
