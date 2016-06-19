@@ -11,7 +11,7 @@ get_header(); ?>
 
         <div class="hero-blurb">
             <p>
-            <b class="orange-font">CityStudio</b> is an experimentation and innovation hub for the <b class="orange-font">City of Vancouver</b> where staff, students and community members design and launch <b class="orange-font">projects</b> and solutions for the City.<br/> These are our stories.
+            <b class="orange-font">CityStudio</b> is an experimentation and innovation hub for the <b class="orange-font">City of Vancouver</b> where staff, students and community members design and launch <b class="orange-font">projects</b> and solutions for the City. These are our stories.
             </p>
         </div>
     </div> <!-- end hero -->
@@ -63,7 +63,7 @@ get_header(); ?>
              border-right: 2px solid white;">
           <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
             <div class="subtitle"><?php echo CFS()->get( 'home_subtitle' ); ?>
-            </div>  
+            </div>
           </div>
         </li>
       </a>

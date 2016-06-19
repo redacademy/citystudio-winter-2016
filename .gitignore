@@ -34,6 +34,7 @@ access_log
 # Ignore npm packages #
 # =============== #
 wp-content/themes/citystudio/node_modules/
+wp-content/themes/citystudio/gulpfile.js
 
 # Ignore everything in the root except the "wp-content" directory.
 # =============== #
@@ -41,7 +42,6 @@ wp-content/themes/citystudio/node_modules/
 .gitignore
 !wp-content/
 !README.md
-wp-content/themes/citystuido/gulpfile.js
 
 # Ignore everything in "wp-content" except the "plugins" and "themes".
 # =============== #
@@ -61,3 +61,5 @@ wp-content/themes/*
 !wp-content/themes/citystudio/
 
 wp-content/themes/citystudio/sass/foot-work.sass
+
+wp-content/themes/chloescountertop/gulpfile.js
