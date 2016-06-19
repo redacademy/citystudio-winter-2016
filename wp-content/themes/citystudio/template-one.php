@@ -1,5 +1,5 @@
 	<?php
-/** 
+/**
  * Template Name: Template One
  */
 
@@ -9,9 +9,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		     <div class="page-title">
 		    	<div class="wwd-page-wrapper">
-					<h1><?php wp_title(); ?></h1>
+						<h1><?php wp_title(); ?></h1>
+					</div>
 				</div>
-			</div>
 			<div class="wwd-hero"></div>
 			<div class="wwd-content">
 				<div class="section-header">
@@ -28,7 +28,7 @@ get_header(); ?>
 			</div>
 			<div class="call-to-action">
 
-			<?php if(get_field('activate_cta') ): ?>  
+			<?php if(get_field('activate_cta') ): ?>
 		      	<?php get_template_part('template-parts/content', 'template'); ?>
 			<?php endif; ?>
 
