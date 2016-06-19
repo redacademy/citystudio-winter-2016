@@ -2267,6 +2267,21 @@ li {
     position: absolute;
     bottom: -13px; }
 
+.gallery-description-container {
+  height: 150px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 1280px; }
+  @media screen and (max-width: 375px) {
+    .gallery-description-container {
+      display: none; } }
+
 .sticky-navigation {
   display: none;
   padding-left: 85px; }
@@ -2279,7 +2294,15 @@ li {
       padding: 0;
       height: 120px;
       transition: height 1.2s ease;
-      padding-left: 6rem; } }
+      padding-left: 2em;
+      -webkit-flex-basis: 25%;
+          -ms-flex-preferred-size: 25%;
+              flex-basis: 25%; } }
+
+@media screen and (min-width: 480px) {
+  .sticky-navigation.fixed {
+    transition: all .4s ease;
+    padding-left: 2em; } }
 
 .nav-description {
   padding: 0; }
@@ -2288,7 +2311,7 @@ li {
       transition: all .8s ease;
       height: 80px;
       padding-top: 6px;
-      margin-left: 50%;
+      margin-left: 25%;
       margin-right: 4em;
       text-align: left;
       font-size: 1.3rem;
@@ -2319,11 +2342,6 @@ li {
   .fixed p {
     margin-right: 120px;
     margin-bottom: 0; }
-
-@media screen and (min-width: 480px) {
-  .sticky-navigation.fixed {
-    transition: all .4s ease;
-    padding-left: 6rem; } }
 
 .nav-description.fixed {
   transition: all .8s ease;
@@ -2360,13 +2378,6 @@ li {
   width: 98%;
   font-weight: bold;
   font-size: 26px; }
-
-.gallery-description-container {
-  height: 5px;
-  display: block; }
-  @media screen and (max-width: 375px) {
-    .gallery-description-container {
-      display: none; } }
 
 .fa-star {
   margin-top: 1rem; }
@@ -2517,7 +2528,6 @@ li {
   background: url("../../images/citystudio-logo.png"), #0082b9;
   background-size: cover;
   background-position: center center;
-  margin-bottom: 4em;
   opacity: 0.9;
   width: 100%;
   height: 150px;

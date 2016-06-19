@@ -56,7 +56,7 @@ get_header(); ?>
 			  // The Loop
 			  while ( $query->have_posts() ) { $query->the_post(); ?>
 				<a href="<?php echo get_the_permalink();?>">
-					<?php echo '<li>' . the_post_thumbnail('medium','style=width:305px;height:240px;margin: 0 auto;margin-bottom:1.5rem; margin-right:1rem; margin-left:1rem;') . '</li>';
+					<?php echo '<li>' . the_post_thumbnail('medium','style=width:350px;height:250px;margin: 0 auto;margin-bottom:1.5rem; margin-right:1rem; margin-left:1rem;') . '</li>';
 				  } ?>
 				</a>
 

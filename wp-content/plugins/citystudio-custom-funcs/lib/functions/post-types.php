@@ -175,7 +175,7 @@ function register_partners_post_type()  {
 		'publicly_queryable'    => true,
 		'capability_type'       => 'post',
 	);
-	register_post_type( 'Partners', $args );
+	register_post_type( 'partners', $args );
 
 }
 add_action( 'init', 'register_partners_post_type', 0 );
