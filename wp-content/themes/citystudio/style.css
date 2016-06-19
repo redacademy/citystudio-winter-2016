@@ -2267,21 +2267,6 @@ li {
     position: absolute;
     bottom: -13px; }
 
-.gallery-description-container {
-  height: 150px;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  width: 100%;
-  margin: 0 auto;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  max-width: 1280px; }
-  @media screen and (max-width: 375px) {
-    .gallery-description-container {
-      display: none; } }
-
 .sticky-navigation {
   display: none;
   padding-left: 85px; }
@@ -2294,15 +2279,7 @@ li {
       padding: 0;
       height: 120px;
       transition: height 1.2s ease;
-      padding-left: 2em;
-      -webkit-flex-basis: 25%;
-          -ms-flex-preferred-size: 25%;
-              flex-basis: 25%; } }
-
-@media screen and (min-width: 480px) {
-  .sticky-navigation.fixed {
-    transition: all .4s ease;
-    padding-left: 2em; } }
+      padding-left: 2rem; } }
 
 .nav-description {
   padding: 0; }
@@ -2311,14 +2288,14 @@ li {
       transition: all .8s ease;
       height: 80px;
       padding-top: 6px;
-      margin-left: 25%;
+      margin-left: 50%;
       margin-right: 4em;
       text-align: left;
       font-size: 1.3rem;
       font-family: "open_sans"; }
       .nav-description p {
         padding: 6px;
-        width: 97%; }
+        width: 600px; }
       .nav-description img {
         height: 60px;
         width: 60px;
@@ -2334,7 +2311,7 @@ li {
   position: fixed;
   top: 0;
   padding-top: 20px;
-  height: 130px;
+  height: 120px;
   width: 100vw;
   z-index: 2;
   padding: 0;
@@ -2342,6 +2319,11 @@ li {
   .fixed p {
     margin-right: 120px;
     margin-bottom: 0; }
+
+@media screen and (min-width: 480px) {
+  .sticky-navigation.fixed {
+    transition: all .4s ease;
+    padding-left: 2em; } }
 
 .nav-description.fixed {
   transition: all .8s ease;
@@ -2378,6 +2360,13 @@ li {
   width: 98%;
   font-weight: bold;
   font-size: 26px; }
+
+.gallery-description-container {
+  height: 120px;
+  display: block; }
+  @media screen and (max-width: 375px) {
+    .gallery-description-container {
+      display: none; } }
 
 .fa-star {
   margin-top: 1rem; }
