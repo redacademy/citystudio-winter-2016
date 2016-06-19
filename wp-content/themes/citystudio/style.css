@@ -687,9 +687,6 @@ a {
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between; }
-  @media screen and (min-width: 480px) {
-    .header-container {
-      height: 20vh; } }
 
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -887,11 +884,11 @@ a {
 # Content
 --------------------------------------------------------------*/
 .full-width {
-  max-width: 1280px;
+  max-width: 2525px;
   margin: 0 auto; }
   @media screen and (min-width: 1900px) {
     .full-width {
-      max-width: 1905px; } }
+      max-width: 2525px; } }
 
 /* Posts and pages */
 .sticky {
@@ -1518,19 +1515,21 @@ a:active {
 
 .hero-blurb {
   text-align: center;
+  max-width: 2525px;
   font-size: 1rem;
   font-weight: bold;
-  font-family: "open_sans";
-  padding: 22% 10%;
   background: linear-gradient(to bottom, white 5%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
+  font-family: "open_sans";
+  padding: 22% 10%;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 1; }
+  z-index: 1;
+  max-width: 100%; }
   @media screen and (min-width: 480px) {
     .hero-blurb {
       font-size: 1.8rem;
@@ -1560,7 +1559,7 @@ a:active {
   @media screen and (min-width: 480px) {
     .homepage-description {
       padding-bottom: 4.5rem;
-      width: 65%; } }
+      max-width: 70%; } }
 
 .grid {
   display: -webkit-flex;
@@ -1692,7 +1691,7 @@ li {
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat center center;
   background-size: cover;
   width: 100%;
-  height: 10rem;
+  height: 12em;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1724,7 +1723,7 @@ li {
 .blue-overlay {
   background-color: rgba(1, 152, 213, 0.7);
   width: 100%;
-  height: 10rem;
+  height: 12em;
   z-index: 2; }
   @media screen and (min-width: 480px) {
     .blue-overlay {
