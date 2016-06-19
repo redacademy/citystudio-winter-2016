@@ -1584,9 +1584,29 @@ a:active {
           flex: 1 0 50%; }
 
 .homepage-partners-container {
-  width: 100vw;
   text-align: center;
-  display: block; }
+  display: block;
+  margin: 0 auto; }
+  .homepage-partners-container ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 0 2em; }
+  .homepage-partners-container li {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    -webkit-flex: 0 0 20%;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+    max-width: 200px;
+    height: 80px; }
   .homepage-partners-container h1 {
     margin: 2rem 0 1rem 0; }
   .homepage-partners-container p {
