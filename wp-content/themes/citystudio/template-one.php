@@ -1,11 +1,9 @@
 	<?php
-/** 
+/**
  * Template Name: Template One
  */
 
 get_header(); ?>
-	
-
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -14,7 +12,7 @@ get_header(); ?>
 				<h1>What We Do</h1>
 			  </div>
 			</div>
-			<div class="wwd-hero">	
+			<div class="wwd-hero">
 			</div>
 
 			<div class="wwd-content">
@@ -34,7 +32,7 @@ get_header(); ?>
 			</div>
 			<div class="call-to-action">
 
-			<?php if(get_field('activate_cta') ): ?>  
+			<?php if(get_field('activate_cta') ): ?>
 		      	<?php get_template_part('template-parts/content', 'template'); ?>
 			<?php endif; ?>
 
