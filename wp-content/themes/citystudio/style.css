@@ -2502,12 +2502,7 @@ li {
           flex: 0 0 100%;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-<<<<<<< HEAD
           justify-content: space-between; }
-=======
-          justify-content: space-between;
-  padding-bottom: 2em; }
->>>>>>> mobile-menu
 
 .citystudio-teams h2 {
   -webkit-flex: 0 1 100%;
@@ -2615,7 +2610,6 @@ article.people {
 
 .person-name h1, .person-name p {
   color: #2cb5e8; }
-<<<<<<< HEAD
 
 .static-return-button a {
   font-size: 1.3em;
@@ -2627,8 +2621,6 @@ article.people {
   cursor: pointer;
   -webkit-filter: opacity(0.8);
           filter: opacity(0.8); }
-=======
->>>>>>> mobile-menu
 
 .page-title {
   margin: 0;
