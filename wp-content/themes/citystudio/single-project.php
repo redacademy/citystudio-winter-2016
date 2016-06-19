@@ -11,37 +11,32 @@ get_header();
 	<?php while (have_posts()) : the_post(); ?>
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-		      <div class="page-title">
-		        <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-					</div>
+<!-- title/herobanner -->
+		<div class="citystudio-banner">
+		  <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		</div>
 		<?php
-		    global $post;
-		    $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
+		  global $post;
+		  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
 		?>
-				<div class="project-hero"
-						 style="background: url(<?php echo $src[0]; ?> ) no-repeat center center;
-										background-size: cover;
-										display: block;
-									  height: 70vh;">
-
-				</div>
-
-
-
+		<div class="project-hero"
+				 style="background: url(<?php echo $src[0]; ?> ) no-repeat center center;
+								background-size: cover;
+								display: block;
+  						  height: 70vh;">
+		</div>
+<!-- Section Project Credits -->
 	<div class="section-credits content-wrapper">
       <div class="excerpt"><?php echo CFS()->get( 'excerpt' ); ?></div>
-    <!-- Section Project Credits -->
       <div class="col-one">
         <span class="proj-partners proj-detail-wrap">
           <h3>School &amp; Course:</h3>
-
-        <?php  $terms = get_the_terms( $post, 'partners' );
-          if ( !empty($terms)) : ?>
-            <?php foreach ( $terms as $term )  : ?>
-                <?php echo $term->name; ?>
-          <?php endforeach; ?>
-          <?php endif; ?>
+					<?php
+					$values = CFS()->get( 'participating_school' );
+					foreach ( $values as $key => $label ) {
+					    echo $label;
+					} ?>
+					- <?php echo CFS()->get( 'course_name' ); ?>
         </span>
         <span class="proj-faculty proj-detail-wrap">
           <h3>Faculty Member:</h3>
@@ -49,50 +44,56 @@ get_header();
         </span>
 				<span class="proj-date proj-detail-wrap">
 					<h3>Date Completed:</h3>
-					<?php  $terms = get_the_terms( $post, 'season' );
-						if ( !empty($terms)) : ?>
-							<?php foreach ( $terms as $term )  : ?>
-									<?php echo $term->name; ?>
-						<?php endforeach; ?>
-						<?php endif; ?>
-					<?php  $terms = get_the_terms( $post, 'year' );
-						if ( !empty($terms)) : ?>
-							<?php foreach ( $terms as $term )  : ?>
-									<?php echo $term->name; ?>
-						<?php endforeach; ?>
-						<?php endif; ?>
+					<?php
+					$values = CFS()->get( 'season_completed' );
+					foreach ( $values as $key => $label ) {
+					    echo $label;
+					} ?>
+					<?php
+					$values = CFS()->get( 'year_completed' );
+					foreach ( $values as $key => $label ) {
+							echo $label;
+					} ?>
 				</span>
-        <span class="proj-staff proj-detail-wrap">
-          <h3>Staff &amp; Partners:</h3>
-          <?php echo CFS()->get( 'staff_partners' ); ?>
-        </span>
+				<span class="proj-subtitle proj-detail-wrap">
+					<h3>City Strategy &amp; Goal Area: </h3>
+					<?php
+					$values = CFS()->get( 'city_strategy' );
+					foreach ( $values as $key => $label ) {
+							echo $label;
+					} ?>
+				<?php echo CFS()->get( 'goal_area' ); ?>
+				</span>
+				<span class="proj-subtitle proj-detail-wrap">
+				  <h3>Neighbourhood:</h3>
+					<?php
+					$values = CFS()->get( 'neighbourhood' );
+					foreach ( $values as $key => $label ) {
+							echo $label;
+					} ?>
+				</span>
       </div> <!-- end .col-one -->
 
       <div class="col-two">
 				<span class="proj-subtitle proj-detail-wrap">
-          <h3>Student Team:</h3>
-          <?php echo CFS()->get( 'student_team' ); ?>
-        </span>
-        <span class="proj-subtitle proj-detail-wrap">
-          <h3>City Strategy:</h3>
-          <?php echo CFS()->get( 'city_strategy' ); ?>
-        </span>
-        <span class="proj-subtitle proj-detail-wrap">
-          <h3>Initiative:</h3>
-          <?php echo CFS()->get( 'initiative' ); ?>
-        </span>
-        <span class="proj-subtitle proj-detail-wrap">
-          <h3>Themes:</h3>
-          <?php  $terms = get_the_terms( $post, 'themes' );
-            if ( !empty($terms)) : ?>
-              <?php foreach ( $terms as $term )  : ?>
-                  <?php echo $term->name; ?>
-            <?php endforeach; ?>
-            <?php endif; ?>
+					<h3>Student Team:</h3>
+					<?php echo CFS()->get( 'student_team' ); ?>
+				</span>
+				<span class="proj-staff proj-detail-wrap">
+          <h3>Staff Contact &amp; Partners:</h3>
+          <?php echo CFS()->get( 'staff_partners' ); ?>
         </span>
         <span class="proj-subtitle proj-detail-wrap">
           <h3>Media:</h3>
-          <?php echo CFS()->get( 'media' ); ?>
+					<?php
+						// check if the repeater field has rows of data
+						if( have_rows('project_media') );
+						// loop through the rows of data
+						while ( have_rows('project_media') ) : the_row(); ?>
+						<p class="media-links">
+							<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_title') ?> </a>
+						</p>
+						<?php endwhile; ?>
         </span>
       </div> <!-- end .col-two -->
     </div> <!-- end section-credits content-wrapper -->
@@ -100,14 +101,18 @@ get_header();
     <!-- Project Details -->
     <div class="section-credits content-wrapper">
     	<div class="full-width-col">
+			<div class="scalability-wrap">
 	    		<h3>Description:</h3>
 						<span class="proj-description"><?php echo CFS()->get( 'full_description' ); ?></span>
+			</div>
 			<div class="scalability-wrap">
 				<h3>Scalability:</h3>
 					<span class="proj-scalability"><?php echo CFS()->get( 'scalability' ); ?></span>
 			</div>
+			<div class="scalability-wrap">
 	    		<h3>Stewardship:</h3>
     				<span class="proj-stewardship"><?php echo CFS()->get( 'stewardship' ); ?></span>
+			</div>
     			<div class="tags-wrapper">
     				<h3>Tags:</h3>
     			<div class="tags">

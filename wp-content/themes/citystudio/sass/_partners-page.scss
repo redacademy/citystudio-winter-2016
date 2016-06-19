@@ -73,10 +73,15 @@
     }
   }
 }
+
+.logo img{
+  max-width: 400px;
+  max-height: 500px;
+}
 .campus-course-container {
   margin: 1rem auto;
   @include desktop {
-    margin: 2rem 0 1rem 9rem;
+    margin: 2rem 0 1rem 5rem;
   }
   .logo {
     display: none;
@@ -88,9 +93,9 @@
     font-family: $fontfamily;
     font-size: 1rem;
     text-align: center;
-  @include desktop {
-    text-align: left;
-  }
+    @include desktop {
+      text-align: left;
+    }
   }
   h3 {
     margin-bottom: 0.25rem;
@@ -112,9 +117,9 @@
   background-color: $medium-blue;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  @include desktop{
-padding-top: 2rem;
-}
+  @include desktop {
+    padding-top: 2rem;
+  }
 }
 .title-block-container {
   display: flex;
@@ -141,7 +146,7 @@ padding-top: 2rem;
     margin-top: 0.2rem;
     text-transform: uppercase;
     @include desktop {
-    font-size: 3rem;
+      font-size: 3rem;
     }
     span {
       color: $light-blue;
@@ -151,9 +156,9 @@ padding-top: 2rem;
 .section-archive {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 1rem;
+  margin: 1.5rem 1rem;
   @include desktop {
     margin: 1rem 4rem 0;
   }
@@ -179,38 +184,38 @@ padding-top: 2rem;
   color: white;
   margin: 0.5rem 0 0.75rem 1rem;
   @include desktop {
-  margin: 0.5rem 0 0.75rem 4rem;
+    margin: 0.5rem 0 0.75rem 4rem;
   }
 }
 .media-links-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+  flex-wrap: wrap;
   width: 90%;
+  margin-top: 1.5rem;
   margin-left: 1rem;
   margin-right: 1rem;
   @include desktop {
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-left: 4rem;
-  margin-right: 4rem;
-  width: 90%;
-}
-.media-link {
-  width: 100%;
-  text-align: center;
-  @include desktop {
-    width: 25%;
-    text-align: left;
+    flex-direction: row;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    width: 90%;
   }
-  p {
-    color: white;
-    font-size: 0.9rem;
-    font-family: $fontfamily;
-    font-weight: 550;
-    &:hover {
-      text-decoration: underline;
+  .media-links {
+    width: 100%;
+    text-align: center;
+    @include desktop {
+      width: 25%;
+    }
+    p, a {
+      color: white;
+      font-size: 0.9rem;
+      font-family: $fontfamily;
+      font-weight: 550;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
-}
 }

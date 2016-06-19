@@ -5,31 +5,43 @@
   display: flex;
   justify-content: center;
 }
-//HEADER
-.page-title {
-  margin: 0;
-  width: 100vw;
-  background-color: $city-blue;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
+// HEADER
   .entry-title {
     color: white;
-    text-transform: uppercase;
     font-family: $fontfamily;
-    font-size: 3rem;
-    margin: auto 4.5rem;
+    font-size: 1.5rem;
+    margin: 0 1.5rem;
+    padding-top: .65rem;
+    @include desktop {
+      font-size: 4rem;
+      margin: auto 7.5rem;
+      padding-top: 1.5rem;
   }
 }
 //HEROBANNER
 
+.project-hero{
+  display: none;
+@include desktop {
+  display: block;
+}
+}
 //SHORT DESCRIPTION
 .excerpt {
-  margin: 2rem;
+  margin: 2rem 1rem;
   font-family: $fontfamily;
   text-align: left;
   width: 85%;
+  font-size: 1em;
+  @include desktop {
+    margin: 3.5rem 2rem;
+    text-align: center;
+    width: 65%;
+    font-size: 1.15em;
+}
 }
 //PROJECT CREDIT COLUMNS
+
 .col-one,
 .col-two {
   width: 85%;
@@ -37,7 +49,7 @@
 @include desktop {
   .col-one,
   .col-two {
-    width: 42.5%;
+    width: 37.5%;
   }
 }
 .col-one {
@@ -45,6 +57,7 @@
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
+
 }
 .col-two {
   -webkit-box-ordinal-group: 3;
@@ -55,22 +68,13 @@
     font-family: $fontfamily;
   }
 }
-.col-two img {
-  display: none;
-}
+
 @include desktop {
   .col-two {
     -webkit-box-ordinal-group: 3;
     -webkit-order: 2;
     -ms-flex-order: 2;
     order: 2;
-    img {
-      height: 50vh;
-      width: 45vw;
-      margin-bottom: 1.75rem;
-      display: block;
-      border: 1px solid $citystudio-grey;
-    }
   }
 }
 .proj-detail-wrap {
@@ -79,19 +83,34 @@
   font-size: 1rem;
   font-weight: normal;
   font-family: $fontfamily;
+  p {
+  margin-bottom: .5em;
+  &:hover {
+  color: $city-blue;
+  text-decoration: underline;
 }
+}
+}
+
+
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
 .full-width-col {
-  margin: 1rem 2rem;
-  width: 85%;
+  margin: 1rem;
+  width: 75%;
   font-family: $fontfamily;
   display: block;
   -webkit-box-ordinal-group: 4;
   -webkit-order: 3;
   -ms-flex-order: 3;
   order: 3;
+  @include desktop {
+    margin: 1rem 4rem;
+  }
   .scalability-wrap {
-    margin-bottom: 1rem;
+    margin: 1.5rem 0;
+  }
+  h3 {
+    padding-bottom: .5rem;
   }
 }
 //TAG LINKS
@@ -103,7 +122,7 @@
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
-  margin-top: 0.5rem;
+  margin-top: .5rem;
   width: 85%;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
