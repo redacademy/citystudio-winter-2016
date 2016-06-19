@@ -938,6 +938,26 @@ a {
 .social-icons ul {
   list-style: none; }
 
+.citystudio-banner {
+  background: url("../../images/citystudio-logo.png"), #0082b9;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 0;
+  opacity: 0.9;
+  width: 100%;
+  height: 150px;
+  overflow: hidden; }
+
+.citystudio-banner-short {
+  background: url("../../images/citystudio-logo.png"), #0082b9;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.9;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 4em; }
+
 .contact-header {
   background-color: #0198d5;
   background-size: cover;
@@ -2513,16 +2533,6 @@ li {
   max-width: 1280px;
   margin: 0 auto; }
 
-.citystudio-banner {
-  background: url("../../images/citystudio-logo.png"), #0082b9;
-  background-size: cover;
-  background-position: center center;
-  margin-bottom: 4em;
-  opacity: 0.9;
-  width: 100%;
-  height: 150px;
-  overflow: hidden; }
-
 .team-container {
   margin: 4em 2em; }
 
@@ -2675,13 +2685,14 @@ article.people {
           justify-content: center;
   padding: 2% 0; }
 
-.wwd-hero {
-  background: url(../../images/CityStudio-LandingPage-bg.jpg) no-repeat bottom center;
+.template-hero {
+  background-position: center center;
+  background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
   height: 70vh; }
   @media screen and (max-width: 375px) {
-    .wwd-hero {
+    .template-hero {
       height: 55vh; } }
 
 .section-header {

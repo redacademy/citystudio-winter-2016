@@ -20,13 +20,17 @@ get_header();
 
     <!-- Section Project Credits -->
     <div class="person-left">
-			<img src="<?php the_field( 'team_member_image' ); ?> " />
+
+      <?php if( get_field('team_member_image') ): ?>
+        <img src="<?php the_field( 'team_member_image' ); ?>" />
+      <?php endif; ?>
+
 		</div>
 
 		<div class="person-right">
 
 			<div class="person-name">
-				<h1 class="people-title"><?php the_title(); ?></h1>
+				<?php the_title('	<h1 class="people-title">', '</h1>' ); ?>
 				<p class="role"><?php the_field( 'team_member_role' ); ?></p>
 
         <hr class="separate" />
@@ -39,7 +43,7 @@ get_header();
 		</div>
 
     <div class="static-return-button">
-      <a href="<?php the_permalink();  ?>/people "> << Back To People Page</a>
+      <a href="<?php echo esc_url( home_url( '/people' ) ); ?>"> << Back To People Page</a>
     </div>
 
 
