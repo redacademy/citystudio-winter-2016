@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Tag Archives
+ * Template Name: Taxonomy Archives
  */
  get_header(); ?>
 
