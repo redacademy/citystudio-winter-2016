@@ -63,8 +63,9 @@
 .icon-menu {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
+
   @include desktop {
-    font-size: 2.5rem;
+    font-size: 2.5em;
     margin-left: 3rem;
     margin-top: 0.15rem;
     margin-right: 0rem;
@@ -178,15 +179,17 @@
   -moz-transition:height 300ms ease-in;
   -o-transition:height 300ms ease-in;
   transition:height 300ms ease-in;
+
     @include iphone6{
-      padding: 0px 2em 1em;  
+      padding: 0px 2em 1em;
       border: none;
       font-size: 1.8em;
-      font-weight: 700;
+      font-weight: 500;
     }
 }
 .header-nav a:hover {
-  text-decoration:none;
+  text-decoration: underline;
+  font-weight: 700;
   background:#f7f9f9;
 }
 .header-nav li ul {
@@ -196,7 +199,7 @@
   background-color: #f9f9f9;
     @include iphone6{
       top: 1.6em;
-      position: relative; 
+      position: relative;
     }
 
   }

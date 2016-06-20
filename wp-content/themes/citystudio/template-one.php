@@ -14,7 +14,7 @@ get_header(); ?>
 				</div>
 			</header>
 
-			<div class="template-hero" style="background: url( '<?php the_field( 'banner_image' ); ?> ' ) no-repeat center center; "></div>
+			<div class="template-hero" style="background-image: url( '<?php the_field( 'banner_image' ); ?> ' ); "></div>
 			<div class="wwd-content">
 				<div class="section-header">
 					<?php

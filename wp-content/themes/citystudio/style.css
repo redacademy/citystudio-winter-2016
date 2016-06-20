@@ -737,7 +737,7 @@ a {
   margin-right: 0.5rem; }
   @media screen and (min-width: 480px) {
     .icon-menu {
-      font-size: 2.5rem;
+      font-size: 2.5em;
       margin-left: 3rem;
       margin-top: 0.15rem;
       margin-right: 0rem; } }
@@ -842,10 +842,11 @@ a {
       padding: 0px 2em 1em;
       border: none;
       font-size: 1.8em;
-      font-weight: 700; } }
+      font-weight: 500; } }
 
 .header-nav a:hover {
-  text-decoration: none;
+  text-decoration: underline;
+  font-weight: 700;
   background: #f7f9f9; }
 
 .header-nav li ul {
@@ -1747,7 +1748,7 @@ li {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 12em;
+  height: 250px;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -1766,24 +1767,27 @@ li {
     color: white;
     font-weight: normal;
     text-align: center;
-    padding: 2rem 0;
     width: 65%;
     margin: 0 auto; }
     @media screen and (min-width: 480px) {
       .partners-banner h1 {
-        font-size: 2.5rem;
-        padding: 4.5rem 0; } }
+        font-size: 2.5rem; } }
     .partners-banner h1 span {
       font-weight: bold; }
 
 .blue-overlay {
   background-color: rgba(1, 152, 213, 0.7);
-  width: 100%;
-  height: 12em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 250px;
   z-index: 2; }
   @media screen and (min-width: 480px) {
     .blue-overlay {
-      height: 16rem; } }
+      height: 250px; } }
 
 .info-main {
   display: -webkit-flex;
@@ -2705,7 +2709,7 @@ article.people {
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 70vh; }
+  height: 300px; }
   @media screen and (max-width: 375px) {
     .template-hero {
       height: 55vh; } }
