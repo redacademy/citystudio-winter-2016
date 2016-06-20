@@ -34,7 +34,7 @@ $citystudio_team = new WP_Query( $args ); ?>
 
                     </div>
 
-                    <h3 class="people-title"><?php the_field( 'team_member_name' ); ?></h3>
+                    <?php the_title( '<h3 class="people-title">' , '</h3>' ); ?>
 
                   </a>
 

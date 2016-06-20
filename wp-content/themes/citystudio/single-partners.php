@@ -10,12 +10,13 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <!-- "info main top section -->
-      <header class="title-banner">
+      <header class="title-banner partners-banner" style="background-image: url( '<?php the_field('partner_banner_image'); ?> ' ); ">
 				<div class="blue-overlay">
 	        <h1>CityStudio Partner: <span><?php the_field('school_name' ); ?></span>
 	        </h1>
 				</div>
       </header>
+
       <div class="info-main">
         <div class="school-mission-container">
           <h3>School's mission or vision</h3>
