@@ -8,6 +8,10 @@
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  @include iphone6{
+    position: fixed;
+    background-color: white;
+  }
 }
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -74,7 +78,12 @@
   }
 }
 .menu-item {
-  transition: all 2s ease-in;
+  background-color: #f9f9f9;
+  font-weight: 700;
+  @include iphone6{
+    height: 4em;
+    z-index: 2;
+  }
 }
 .hamburger-menu{
   width: 50px;
@@ -86,23 +95,21 @@
   background-color: #f9f9f9;
   width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-left: -180px;
+  margin-left: -189px;
   z-index: 1;
   @include iphone6{
     width: 27%;
   }
 }
 .dropdown-content a{
+  transition: height .3s ease-in;
   color: black;
   text-decoration: none;
-  padding: 6%;
   display: block;
-  border-bottom: 2px solid grey !important;
-  border-left: 2px solid black !important;
   @include iphone6{
     border: none !important;
   }
-  font-size: 20px;
+  font-size: 22px;
     ul li{
       border-left: 2px solid grey !important;
       @include iphone6{
@@ -121,61 +128,78 @@
 }
 .header-nav{
   margin-top: 0;
+  background-color: #f9f9f9;
   @include iphone6{
-    margin-left: -138px;
+    margin-left: -135px;
+
   }
 }
+
+
+#primary-menu li{
+  @include iphone6{
+     padding: .2em 0em .2em 1em;
+  }
+}
+
 .header-nav ul {
   *zoom:1;
   list-style:none;
   margin:0;
-  padding:0;
+  padding: .6em .2em 0 .3em;
   background: #f9f9f9;
+  @include iphone6{
+    padding: 5em 0 8.3em 0;
+  }
 }
 .header-nav ul:before,.header-nav ul:after {
-    content:"";
-    display:table;
+  content:"";
+  display:table;
 }
 .header-nav ul:after {
-    clear:both;
+  clear:both;
 }
 .header-nav ul > li {
-    position:relative;
-    a{
-      img{
-        width: 30px;
-        height: 30px;
-        float: left;
-        margin-left: -9px;
-      }
+  a{
+    img{
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-left: -9px;
     }
+  }
 }
 .header-nav a {
   display:block;
-  padding: 14px 25px;
+  padding: 0 0 .6em .6em;
   color: #2cb5e8 !important;
-  line-height: 22px;
-  border-left:1px solid #595959;
+  background-color: #f9f9f9;
+   -webkit-transition:height 300ms ease-in;
+  -moz-transition:height 300ms ease-in;
+  -o-transition:height 300ms ease-in;
+  transition:height 300ms ease-in;
     @include iphone6{
+      padding: 0px 2em 1em;  
       border: none;
+      font-size: 1.8em;
+      font-weight: 700;
     }
 }
 .header-nav a:hover {
   text-decoration:none;
-  background:#595959;
-
+  background:#f7f9f9;
 }
 .header-nav li ul {
-  position:absolute;
+  position: absolute;
   z-index: 2;
-  line-height:1.1em;
-  top:36px;
-  left:80px;
+  top:.6em;
   background-color: #f9f9f9;
-  border-top: none;
-  border-bottom: none;
-  border-right: none;
-}
+    @include iphone6{
+      top: 1.6em;
+      position: relative; 
+    }
+
+  }
 .header-nav li ul:nth-child(1) {
   left: 80px;
 }
@@ -192,17 +216,19 @@
   border: none;
 }
 .header-nav ul > li:hover ul li {
-  height:43px;
+  height:.95em;
+  @include iphone6{
+  }
 }
 .header-nav ul > li:hover ul li:last-child {
-  border-bottom: 2px solid black;
-    @include iphone6{
-      border: none;
-    }
+  @include iphone6{
+    border: none;
+  }
 }
-
 .menu-menu-container{
   @include iphone6{
-    width: 375px;
+    width: 384px;
+    position: fixed;
+    z-index: 3;
   }
 }
