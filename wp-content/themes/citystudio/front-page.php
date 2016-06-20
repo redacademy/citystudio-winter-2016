@@ -71,9 +71,9 @@ get_header(); ?>
     </ul>
 </div><!-- end grid container -->
 
-  <div class="homepage-partners-container">
-
     <h1 class="homepage-titles">Participating Schools</h1>
+
+      <div class="homepage-partners-container">
 
         <ul class="featured">
           <?php
@@ -93,19 +93,20 @@ get_header(); ?>
               if( have_rows('partner_row_two') );
                  // loop through the rows of data
               while ( have_rows('partner_row_two') ) : the_row(); ?>
-              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
+              <li style="background-image: url( ' <?php the_sub_field('school_logo') ?> ' ); ">
               </li>
             <?php endwhile; ?>
         </ul>
 
-        <ul class="feature-two">
+        <ul class="featured-two">
             <?php
             // check if the repeater field has rows of data
               if( have_rows('partner_row_three') );
                  // loop through the rows of data
               while ( have_rows('partner_row_three') ) : the_row(); ?>
-              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
+              <li style="background-image: url( ' <?php the_sub_field('school_logo') ?> ' ); ">
               </li>
             <?php endwhile; ?>
         </ul>
+  </div>
 <?php get_footer(); ?>

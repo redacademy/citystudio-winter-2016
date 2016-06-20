@@ -58,7 +58,7 @@
   font-size: 1.7rem;
   @include desktop {
     font-size: 2.2rem;
-    margin: 3rem auto 1rem;
+    margin: 3em auto 1em ;
 
   }
 }
@@ -97,23 +97,20 @@
 // -------------- PARTNER SECTION STYLES  ----------------------*
 
 .homepage-partners-container {
-  text-align: center;
-  display: block;
-  margin: 0 auto;
+  background-color: $color__background-lightblue;
+  padding: 4em;
 
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 2em;
+    justify-content: space-around;
+    max-width: 1130px;
+    margin: 0 0 4em;
   }
-
   li {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center center;
-    flex: 0 0 20%;
-    max-width: 200px;
     height: 80px;
   }
 
@@ -141,11 +138,13 @@
     padding: 0.5% 2%;
     margin: 1rem 1rem 2rem 1rem;
   }
-
 }
 
 .featured {
-
+  li {
+    flex: 0 0 30%;
+    max-width: 300px;
+  }
 }
 
 .partners-title {
@@ -154,19 +153,15 @@
   margin-top: 2.5rem;
   text-transform: uppercase;
 }
-.partners-row1,
-.partners-row2{
+
+.featured-two {
+
+  li {
+    flex: 0 0 15%;
+  }
+
   img {
     width: 180px;
     height: 180px;
-  }
-}
-
-.featured,
-.partners-row1,
-.partners-row2 {
-  background-color: #f9f9f9;
-  img {
-    padding: 2% 3%;
   }
 }

@@ -52,7 +52,7 @@ get_header(); ?>
 			</div>
 <!-- loop for displaying projects -->
 			<div class="section-archive">
-				<?php $query = new WP_Query( array( 'partners' => 'eucad' ) );
+				<?php $query = new WP_Query( array( 'partners' => 'emily-carr' ) );
 			  // The Loop
 			  while ( $query->have_posts() ) { $query->the_post(); ?>
 				<a href="<?php echo get_the_permalink();?>">

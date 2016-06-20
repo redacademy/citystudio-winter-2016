@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Single Project Page Template
+* Template Name: Single Project
 */
 get_header();
 ?>
@@ -12,9 +12,13 @@ get_header();
 
   <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <!-- title/herobanner -->
-		<div class="citystudio-banner">
-		  <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-		</div>
+
+		<header class="citystudio-banner">
+			<div class="banner-inner">
+				<?php the_title( '<h1 class="page-titles">', '</h1>' ); ?>
+			</div>
+		</header>
+
 		<?php
 		  global $post;
 		  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
