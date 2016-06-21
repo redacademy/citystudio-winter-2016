@@ -35,6 +35,18 @@
 	}
 }
 
+@mixin footer-1-col {
+	@media screen and (max-width: 650px){
+	@content;
+	}
+}
+
+@mixin footer-2-col{
+	@media screen and (max-width: 845px){
+	@content;
+	}	
+}
+
 @mixin iphone6{
 	@media screen and (max-width: 375px){
 	@content;

@@ -17,22 +17,26 @@
 //Footer Branding----------------------
 .footer-branding-container {
   margin-left: 0.5rem;
+  margin-top: 1em;
   @include desktop {
-    margin-left: 3rem;
+    margin-left: .5em;
+    margin-top: 1em;
   }
 }
 .footer-logo {
   display: block;
-  height: 2rem;
+  height: 3rem;
+  width: 11em;
   justify-content: center;
   img {
     opacity: 0.4;
     height: 100%;
   }
   @include desktop {
-    height: 4rem;
-    // width: 100%;
+    width: 11em;
   }
+
+
   @include iphone6{
     height: 4em;
     padding-top: 2%;
@@ -43,7 +47,10 @@
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 0.5rem;
-  width: 52%;
+  width: 190px;
+  @include desktop{
+
+  }
   @include iphone6{
   width: 42%;
     padding-left: 5.6em;
@@ -107,6 +114,42 @@ margin-top: 1rem;
   }
   @include desktop {}
 }
+
+.footer-info-block1 {
+  display: none;
+  @include desktop {
+    display: block;
+    color: white;
+    width: 40%;
+    font-family: sans-serif;
+    margin: 2.5rem 2rem 2rem;
+    h3 {
+      margin-bottom: 0.25rem;
+      opacity: 0.9;
+      font-size: 1rem;
+    }
+    h3,
+    li {
+      color: white;
+      font-family: $fontfamily;
+      text-align: center;
+    }
+    ul li {
+      font-size: 0.85rem;
+      width: 9rem;
+      opacity: 0.7;
+    }
+    li:hover {
+      cursor: pointer;
+      color: $light_blue;
+    }
+  }
+  @include footer-1-col{
+    display: none;
+  }
+
+}
+
 .footer-info-block2 {
   display: none;
   @include desktop {
@@ -136,7 +179,13 @@ margin-top: 1rem;
       color: $light_blue;
     }
   }
+  @include footer-2-col{
+    display: none;
+  }
 }
+
+
+
 .copyright {
   background-color: $dark-blue;
   display: flex;

@@ -41,7 +41,7 @@
 						</ul>
 					</div>
 
-					<div class="footer-info-block2">
+					<div class="footer-info-block1">
 						<h3>Keep Exploring</h3>
 						<ul>
 							<li>Projects</li>
