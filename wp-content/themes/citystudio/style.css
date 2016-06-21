@@ -749,7 +749,7 @@ a {
 
 .menu-item {
   background-color: #f9f9f9;
-  font-weight: 700; }
+  font-weight: 500; }
   @media screen and (max-width: 375px) {
     .menu-item {
       height: 4em;
@@ -1783,7 +1783,8 @@ li {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 250px;
+  height: 100%;
+  width: 100%;
   z-index: 2; }
   @media screen and (min-width: 480px) {
     .blue-overlay {
@@ -2751,7 +2752,7 @@ article.people {
 
 .connect {
   display: block;
-  width: 285px;
+  width: 850px;
   height: 110px;
   border-radius: 2px;
   padding: 9px;
@@ -2775,10 +2776,10 @@ article.people {
     display: table-cell;
     padding: 0 20%;
     letter-spacing: 3px; }
-  .connect button {
+  .connect a {
     color: white;
-    padding: 8px;
-    border: 3px solid white;
+    padding: 12px;
+    border: 3px solid white !important;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #2cb5e8;
@@ -2791,14 +2792,14 @@ article.people {
     -ms-transform-origin: center center;
     -o-transform-origin: center center;
     transition: all .1s; }
-    .connect button:hover {
+    .connect a:hover {
       background: #2cb5e8;
       -webkit-transform: scale(1.03);
       transform: scale(1.03);
       -webkit-animation: '';
       animation: '';
       box-shadow: 0 1px 3px #EEEEEE, 0 45px rgba(255, 255, 255, 0.12) inset; }
-    .connect button:active {
+    .connect a:active {
       box-shadow: 0 0 0 0 #BBB7AE; }
 
 .cta_blurb {
