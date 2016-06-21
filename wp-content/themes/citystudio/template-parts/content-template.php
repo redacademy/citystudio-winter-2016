@@ -13,12 +13,12 @@
          // loop through the rows of data
         while ( have_rows('call_to_action') ) : the_row(); ?>
     <div class="cta_blurb">
-		<div class="cta-heading">
-          	<h3><?php the_sub_field('cta_heading') ?></h3>
-        </div>
-        <div class="cta-content">
-        	<?php the_sub_field('cta_content') ?>
-		</div>
+  		<div class="cta-heading">
+            	<h3><?php the_sub_field('cta_heading') ?></h3>
+      </div>
+      <div class="cta-content">
+      	<?php the_sub_field('cta_content') ?>
+     	</div>
 	</div>
 
 <div class="connect">

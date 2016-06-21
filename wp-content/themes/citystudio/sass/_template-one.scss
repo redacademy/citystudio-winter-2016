@@ -47,7 +47,7 @@
   display: flex;
   position: relative;
   background-color: $color__background-lightblue;
-  padding: 4% 6% 3% 10%;
+  padding: 40px;
   max-width: 1844px;
   font-size: 18px;
   .cta-heading{
@@ -60,22 +60,20 @@
   .cta-content{
     width: 100%;
     p{
-      margin-right: 65px;
+    margin-right: 105px;
       @include tablet{
         display: none;
       }
     }
   }
-
 }
 .connect{
-  display: block;
-  width: 850px;
-  height: 110px;
   border-radius: 2px;
-  padding: 9px;
-  margin-left: 08px;
   background-color: $light_blue;
+  margin: 15px auto;
+  height: 100px;
+  width: 440px;
+  padding: .9em 0;
   color: white;
   text-align: center;
   -moz-box-shadow: 0 0 8px #666666;
@@ -93,20 +91,19 @@
   p{
     color: white;
     font-weight: bold;
-    font-size: 19px;
+    font-size: 1em;
     display: table-cell;
-    padding: 0 20%;
     letter-spacing: 3px;
+    padding-top: 1.6em;
   }
   a{
     color: white;
-    padding: 12px;
+    padding: 14px;
     border: 3px solid white !important;
     text-transform: uppercase;
     font-weight: bold;
     background-color: $light_blue;
     text-align: center;
-    margin: 12px;
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
     -o-transform: scale(1);
@@ -138,4 +135,8 @@
 }
 .cta_blurb{
   display: block;
+  width: 136%;
+  @include iphone6{
+    width: 0;
+  }
 }
