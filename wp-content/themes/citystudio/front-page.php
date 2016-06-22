@@ -1,4 +1,4 @@
-<?php
+gu<?php
 /**
  *
  * Template Name: Front-page
@@ -21,7 +21,7 @@ get_header(); ?>
   <h1 class="homepage-titles">CityStudio Projects</h1>
   <p class="homepage-description" style="display: none;">
     We partner with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
-  </p> 
+  </p>
 
   <!-- <hr class="separate"> -->
 
@@ -56,7 +56,7 @@ get_header(); ?>
         <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
         <li style=
-            "background: url('<?php echo $background; ?>') no-repeat center;
+            "background: url('<?php the_field('project_featured_image'); ?>') no-repeat center;
              background-size: cover;
              border-top: 2px solid white;
              border-bottom: 2px solid white;
