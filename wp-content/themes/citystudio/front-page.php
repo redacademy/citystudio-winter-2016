@@ -1,4 +1,4 @@
-<?php
+gu<?php
 /**
  *
  * Template Name: Front-page
