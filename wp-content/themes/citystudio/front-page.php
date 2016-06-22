@@ -82,7 +82,7 @@ get_header(); ?>
                // loop through the rows of data
             while ( have_rows('partner_row') ) : the_row(); ?>
 
-            <li style="background-image: url( '<?php the_sub_field('school_logo'); ?> ' ); ">
+            <li style="background-image: url( '<?php the_sub_field('image_url'); ?> ' ); ">
             </li>
           <?php endwhile; ?>
         </ul>
@@ -93,7 +93,7 @@ get_header(); ?>
               if( have_rows('partner_row_two') );
                  // loop through the rows of data
               while ( have_rows('partner_row_two') ) : the_row(); ?>
-              <li style="background-image: url( ' <?php the_sub_field('school_logo') ?> ' ); ">
+              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
               </li>
             <?php endwhile; ?>
         </ul>
@@ -104,7 +104,7 @@ get_header(); ?>
               if( have_rows('partner_row_three') );
                  // loop through the rows of data
               while ( have_rows('partner_row_three') ) : the_row(); ?>
-              <li style="background-image: url( ' <?php the_sub_field('school_logo') ?> ' ); ">
+              <li style="background-image: url( ' <?php the_sub_field('image_url') ?> ' ); ">
               </li>
             <?php endwhile; ?>
         </ul>
