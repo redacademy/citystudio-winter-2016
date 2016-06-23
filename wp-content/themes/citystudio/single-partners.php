@@ -31,13 +31,14 @@ get_header(); ?>
           <div class="campus-courses">
             <h3>Campus Courses</h3>
             <ul class="campus-courses">
-				<?php
-					if( have_rows('school_courses') );
-						while ( have_rows('school_courses') ) : the_row(); ?>
-					<li>
-						<a href ="<?php the_sub_field('course_link') ?>"><?php the_sub_field('course_name') ?> </a>
-					</li>
-				<?php endwhile; ?>
+						<?php
+							if( have_rows('school_courses') );
+								while ( have_rows('school_courses') ) : the_row(); ?>
+							<li>
+								<a href ="<?php the_sub_field('course_link') ?>"><?php the_sub_field('course_name') ?> </a>
+							</li>
+						<?php endwhile; ?>
+							<p><?php the_field( 'no_courses_option' ); ?></p>
             </ul>
           </div>
         </div>

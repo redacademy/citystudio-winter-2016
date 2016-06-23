@@ -23,6 +23,11 @@ get_header();
 		  global $post;
 		  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
 		?>
+		<?php if( get_field('image') ): ?>
+
+			<img src="<?php the_field('image'); ?>" />
+
+		<?php endif; ?>
 		<div class="project-hero"
 				 style="background: url(<?php the_field('project_featured_image'); ?> ) no-repeat center center;
 								background-size: cover;
@@ -47,12 +52,8 @@ get_header();
           <?php echo CFS()->get( 'faculty_member' ); ?>
         </span>
 				<span class="proj-date proj-detail-wrap">
-					<h3>Date Completed:</h3>
-					<?php
-					$values = CFS()->get( 'season_completed' );
-					foreach ( $values as $key => $label ) {
-					    echo $label;
-					} ?>
+					<h3>Semester Completed:</h3>
+					<?php the_field('semester_completed'); ?>
 					<?php
 					$values = CFS()->get( 'year_completed' );
 					foreach ( $values as $key => $label ) {

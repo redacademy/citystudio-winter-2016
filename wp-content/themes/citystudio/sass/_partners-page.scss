@@ -10,7 +10,7 @@
   align-items: center;
 
   @include desktop {
-    height: 16rem;
+    height: 250px;
   }
   h1 {
     font-size: 1.25rem;
@@ -44,9 +44,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 1.5rem 0.25rem;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0.25em;
   @include desktop {
-    margin: 0 50px 2rem;
+    margin: 0 50px 2em;
   }
 }
 .school-mission-container {
@@ -55,16 +57,17 @@
   width: 100%;
   text-align: center;
   @include desktop {
-    margin: auto 2rem;
+    margin: auto 1.5em;
     width: 40%;
     text-align: left;
+    padding-right: 2em;
   }
   h3 {
-    font-size: 1.25rem;
-    padding-bottom: 0.5rem;
+    font-size: 1.25em;
+    padding-bottom: 0.5em;
     @include desktop {
-      font-size: 1.5rem;
-      padding-bottom: 0.25rem;
+      font-size: 1.5em;
+      padding-bottom: 0.25em;
     }
   }
   .school-mission {
@@ -113,6 +116,9 @@
   }
   li p {
     margin-bottom: 0;
+  }
+  p {
+    font-size: 0.85rem;
   }
 }
 //PROJECT DISPLAY STYLES
