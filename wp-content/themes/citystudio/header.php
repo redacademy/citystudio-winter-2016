@@ -29,7 +29,6 @@
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html('Skip to content'); ?></a>
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-container">
-
 				<div class="site-branding">
 					<a href="<?php echo esc_url(home_url([1]));?>">
 				    	<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
@@ -48,7 +47,6 @@
 						</nav>
 					</div>
 				</div>
-				
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->
 			<div id="content" class="site-content">
