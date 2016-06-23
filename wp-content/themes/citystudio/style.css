@@ -1701,10 +1701,9 @@ a {
   padding-bottom: 4px;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey; }
-
-li {
-  list-style-type: none;
-  height: 100%; }
+  .grid li {
+    list-style-type: none;
+    height: 100%; }
 
 .description {
   box-sizing: border-box;
@@ -1761,7 +1760,7 @@ li {
           align-items: center; }
   @media screen and (min-width: 480px) {
     .title-banner {
-      height: 16rem; } }
+      height: 250px; } }
   .title-banner h1 {
     font-size: 1.25rem;
     font-family: "open_sans";
@@ -1785,7 +1784,7 @@ li {
   z-index: 2; }
   @media screen and (min-width: 480px) {
     .blue-overlay {
-      height: 16rem; } }
+      height: 250px; } }
 
 .info-main {
   display: -webkit-flex;
@@ -1797,10 +1796,16 @@ li {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  margin: 1.5rem 0.25rem; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 1.5rem 0.25em; }
   @media screen and (min-width: 480px) {
     .info-main {
-      margin: 0 50px 2rem; } }
+      margin: 0 50px 2em; } }
 
 .school-mission-container {
   margin: auto 1rem;
@@ -1809,16 +1814,17 @@ li {
   text-align: center; }
   @media screen and (min-width: 480px) {
     .school-mission-container {
-      margin: auto 2rem;
+      margin: auto 1.5em;
       width: 40%;
-      text-align: left; } }
+      text-align: left;
+      padding-right: 2em; } }
   .school-mission-container h3 {
-    font-size: 1.25rem;
-    padding-bottom: 0.5rem; }
+    font-size: 1.25em;
+    padding-bottom: 0.5em; }
     @media screen and (min-width: 480px) {
       .school-mission-container h3 {
-        font-size: 1.5rem;
-        padding-bottom: 0.25rem; } }
+        font-size: 1.5em;
+        padding-bottom: 0.25em; } }
   .school-mission-container .school-mission {
     font-size: 0.9rem;
     line-height: 1.25rem; }
@@ -1858,6 +1864,8 @@ li {
       color: #ee7600; }
   .campus-course-container li p {
     margin-bottom: 0; }
+  .campus-course-container p {
+    font-size: 0.85rem; }
 
 .projects-container {
   background-color: #0082b9;
