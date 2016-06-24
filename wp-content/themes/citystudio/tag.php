@@ -20,6 +20,8 @@
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>
 
+          <li><?php the_field('banner_image'); ?></li>
+
           <a href="<?php echo esc_url( get_permalink() ); ?>">
           <?php
       			$image = get_field('banner_image');
@@ -34,6 +36,9 @@
 
       		<?php endif; ?>
             </a>
+              banner_image
+
+
         </ul>
         <?php endwhile; ?>
 

@@ -11,7 +11,7 @@
 
     <header class="page-header archive-header">
       <?php
-            echo single_term_title('<h2><span>Tags:</span> ', '</h2>' );
+            echo single_term_title('<h2><span>Tag:</span> ', '</h2>' );
       ?>
     </header><!-- .page-header -->
 
@@ -19,10 +19,13 @@
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>
-          <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
-
-          <a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php echo $background; ?>') no-repeat; ">
-          </li></a>
+          <a href="<?php echo esc_url( get_permalink() ); ?>">
+            <li style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
+                      background-size: cover;
+                      background-size: cover;
+                      display: block;
+                      "></li>
+          </a>
         </ul>
         <?php endwhile; ?>
 
