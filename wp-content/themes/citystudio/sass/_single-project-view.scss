@@ -46,7 +46,7 @@
 @include desktop {
   .col-one,
   .col-two {
-    width: 37.5%;
+    width: 40.5%;
   }
 }
 .col-one {
@@ -54,7 +54,9 @@
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-
+  @include desktop {
+    margin-left: 7.3em;
+}
 }
 .col-two {
   -webkit-box-ordinal-group: 3;
@@ -80,7 +82,7 @@
   font-size: 1rem;
   font-weight: normal;
   font-family: $fontfamily;
-  p {
+  .media-links {
   margin-bottom: .5em;
   &:hover {
   color: $city-blue;
@@ -93,7 +95,7 @@
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
 .full-width-col {
   margin: 1rem;
-  width: 75%;
+  width: 80%;
   font-family: $fontfamily;
   display: block;
   -webkit-box-ordinal-group: 4;
@@ -101,14 +103,36 @@
   -ms-flex-order: 3;
   order: 3;
   @include desktop {
-    margin: 1rem 4rem;
+    margin: 1em 11.25em;
   }
   .scalability-wrap {
-    margin: 1.5rem 0;
+    margin-bottom: 1.5rem;
   }
   h3 {
     padding-bottom: .5rem;
   }
+}
+//IMAGE BAR
+.image-bar{
+  width: 103%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  -webkit-box-ordinal-group: 5;
+  -webkit-order: 4;
+  -ms-flex-order: 4;
+  margin: 2em 0 2em 0;
+
+  @include desktop {
+
+  }
+  img {
+  height: 200px;
+  width: 300px;
+  margin-right: 1em;
+  border-radius: 5%;
+}
 }
 //TAG LINKS
 .tags-wrapper {

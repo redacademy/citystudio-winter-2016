@@ -20,85 +20,94 @@ get_header();
 		</header>
 
 		<?php
-		  global $post;
-		  $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), array( 5600,1000 ), false, '' );
-		?>
-		<?php if( get_field('image') ): ?>
+			$image = get_field('banner_image');
 
-			<img src="<?php the_field('image'); ?>" />
+			if( !empty($image) ): ?>
+
+			<div class="project-hero"
+					 style="background: url('<?php echo $image['url']; ?>') no-repeat center center;
+									background-size: cover;
+									display: block;
+	  						  height: 70vh;">
+			</div>
 
 		<?php endif; ?>
-		<div class="project-hero"
-				 style="background: url(<?php the_field('project_featured_image'); ?> ) no-repeat center center;
-								background-size: cover;
-								display: block;
-  						  height: 70vh;">
-		</div>
+
 <!-- Section Project Credits -->
 	<div class="section-credits content-wrapper">
-      <div class="excerpt"><?php echo CFS()->get( 'excerpt' ); ?></div>
+      <div class="excerpt"><?php the_field('excerpt'); ?></div>
       <div class="col-one">
         <span class="proj-partners proj-detail-wrap">
           <h3>School &amp; Course:</h3>
-					<?php
-					$values = CFS()->get( 'participating_school' );
-					foreach ( $values as $key => $label ) {
-					    echo $label;
-					} ?>
-					- <?php echo CFS()->get( 'course_name' ); ?>
+				<p><?php the_field('participating_school'); ?>
+					- <?php if( have_rows('course_name') );
+							while ( have_rows('course_name') ) : the_row(); ?>
+						<?php the_sub_field('course_name') ?>
+						<?php endwhile; ?></p>
+						<?php endif; ?>
         </span>
         <span class="proj-faculty proj-detail-wrap">
           <h3>Faculty Member:</h3>
-          <?php echo CFS()->get( 'faculty_member' ); ?>
+          <p><?php the_field('faculty_members'); ?></p>
         </span>
 				<span class="proj-date proj-detail-wrap">
 					<h3>Semester Completed:</h3>
-					<?php the_field('semester_completed'); ?>
-					<?php
-					$values = CFS()->get( 'year_completed' );
-					foreach ( $values as $key => $label ) {
-							echo $label;
-					} ?>
+					<p><?php the_field('semester_completed'); ?> -
+					<?php the_field('year_completed'); ?> </p>
 				</span>
 				<span class="proj-subtitle proj-detail-wrap">
 					<h3>City Strategy &amp; Goal Area: </h3>
-					<?php
-					$values = CFS()->get( 'city_strategy' );
-					foreach ( $values as $key => $label ) {
-							echo $label;
-					} ?>
-				<?php echo CFS()->get( 'goal_area' ); ?>
+					<p><?php the_field('city_strategy'); ?> -
+					<?php the_field('goal_area'); ?></p>
 				</span>
 				<span class="proj-subtitle proj-detail-wrap">
 				  <h3>Neighbourhood:</h3>
-					<?php
-					$values = CFS()->get( 'neighbourhood' );
-					foreach ( $values as $key => $label ) {
-							echo $label;
-					} ?>
+					<?php the_field('neighbourhood'); ?>
 				</span>
       </div> <!-- end .col-one -->
 
       <div class="col-two">
 				<span class="proj-subtitle proj-detail-wrap">
 					<h3>Student Team:</h3>
-					<?php echo CFS()->get( 'student_team' ); ?>
+					<p><?php the_field('student_team'); ?></p>
 				</span>
 				<span class="proj-staff proj-detail-wrap">
           <h3>Staff Contact &amp; Partners:</h3>
-          <?php echo CFS()->get( 'staff_partners' ); ?>
+          <?php the_field('staff_partners'); ?>
         </span>
         <span class="proj-subtitle proj-detail-wrap">
-          <h3>Media:</h3>
 					<?php
-						// check if the repeater field has rows of data
+
+								$value = get_field( 'activate_media' );
+
+								if( $value ) { ?>
+          <h3>Media:</h3>
+<!-- linking media -->
+					<?php
 						if( have_rows('project_media') );
-						// loop through the rows of data
 						while ( have_rows('project_media') ) : the_row(); ?>
 						<p class="media-links">
 							<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_title') ?> </a>
 						</p>
 						<?php endwhile; ?>
+<!-- file upload -->
+						<?php
+							if( have_rows('project_media_2') );
+							while ( have_rows('project_media_2') ) : the_row(); ?>
+							<p class="media-links">
+								<?php if( get_sub_field('file_upload') ): ?>
+									<a href="<?php the_sub_field('file_upload'); ?>" ><?php the_sub_field('file_name'); ?></a>
+								<?php endif; ?>
+							</p>
+							<?php endwhile; ?>
+<!-- embed video or image -->
+						<div class="embed-container">
+							<?php the_field('embed_video'); ?>
+						</div>
+						<?php } else {
+									echo '';
+								}
+						?>
         </span>
       </div> <!-- end .col-two -->
     </div> <!-- end section-credits content-wrapper -->
@@ -108,22 +117,48 @@ get_header();
     	<div class="full-width-col">
 			<div class="scalability-wrap">
 	    		<h3>Description:</h3>
-						<span class="proj-description"><?php echo CFS()->get( 'full_description' ); ?></span>
+						<span class="proj-description"><?php the_field('full_description'); ?></span>
 			</div>
-			<div class="scalability-wrap">
-				<h3>Scalability:</h3>
-					<span class="proj-scalability"><?php echo CFS()->get( 'scalability' ); ?></span>
-			</div>
-			<div class="scalability-wrap">
-	    		<h3>Stewardship:</h3>
-    				<span class="proj-stewardship"><?php echo CFS()->get( 'stewardship' ); ?></span>
-			</div>
-    			<div class="tags-wrapper">
-    				<h3>Tags:</h3>
-    			<div class="tags">
 
+			<?php
+
+						$value = get_field( 'activate_scalability' );
+
+						if( $value ) { ?>
+			<div class="scalability-wrap">
+				<h3><?php the_field('scalability_title'); ?></h3>
+					<span class="proj-scalability"><?php the_field('scalability'); ?></span>
+			</div>
+		<?php } else {
+					echo '';
+				}
+		?>
+
+		<?php
+
+					$value = get_field( 'activate_stewardship' );
+
+					if( $value ) { ?>
+			<div class="scalability-wrap">
+	    		<h3><?php the_field('stewardship_title'); ?></h3>
+    				<span class="proj-stewardship"><?php the_field('stewardship'); ?></span>
+			</div>
+			<?php } else {
+						echo '';
+					}
+			?>
+<!-- image bar -->
+<div class="image-bar">
+	<?php
+	if( have_rows('image_bar') );
+	while ( have_rows('image_bar') ) : the_row(); ?>
+		<img src ="<?php the_sub_field('additional_image') ?>" />
+	<?php endwhile; ?>
+</div>
+  <div class="tags-wrapper">
+		<h3>Tags:</h3>
+	<div class="tags">
 						<?php the_tags( '<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
-
     					<?php $id = get_the_id(); ?>
      				    <?php  $terms = get_the_terms	( $id, 'partners' );
     				      if ( !empty($terms)) : ?>
