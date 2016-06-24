@@ -20,7 +20,7 @@
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>
           <li>
-            <a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php the_field('project_featured_image'); ?>') no-repeat; ">
+            <a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php the_field('banner_image'); ?>') no-repeat; ">
           </li></a>
         </ul>
         <?php endwhile; ?>
