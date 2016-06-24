@@ -96,7 +96,7 @@
   background-color: #f9f9f9;
     width: 255px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-  margin-left: -220px;
+  margin-left: -170px;
   z-index: 100;
   @include iphone6{
     width: 27%;
@@ -211,7 +211,7 @@
 }
 //sub menu css
 .header-nav li ul li {
-  overflow: visible;
+  overflow: hidden;
   height:0;
   width: 100%;
   -webkit-transition:height 300ms ease-in;
@@ -226,7 +226,7 @@
 .header-nav ul > li:hover ul li {
   height: .95em;
   @include iphone6{
-    height: 1.95em;
+    height: 2.95em;
   }
 }
 .header-nav ul > li:hover ul li:last-child {
