@@ -11,6 +11,7 @@
   @include iphone6{
     position: fixed;
     background-color: white;
+    z-index: 3;
   }
 }
 .site-branding img {
@@ -93,12 +94,16 @@
   display: none;
   position: absolute;
   background-color: #f9f9f9;
+    width: 255px;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+  margin-left: -220px;
+  z-index: 100;
+  @include iphone6{
+    width: 27%;
   width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   margin-left: -126px;
   z-index: 100;
-  @include iphone6{
-    width: 27%;
   }
 }
 .dropdown-content a{
@@ -136,8 +141,11 @@
 
 #primary-menu {
   z-index: 3;
-  padding: 0.4em;
-}
+  padding: 0.3em 0.4em;
+    @include iphone6{
+      padding: 5em 1em 2.1em;
+    }
+  }
 
 .header-nav ul {
   *zoom:1;
@@ -180,6 +188,7 @@
       border: none;
       font-size: 1.8em;
       font-weight: 500;
+      z-index: 8;
     }
 }
 .header-nav a:hover {
@@ -190,10 +199,11 @@
 .header-nav li ul {
   background-color: #f9f9f9;
     @include iphone6{
+      display: none;
       top: -6.4em;
       position: relative;
       font-size: 10px;
-      left: 15em;
+      left: 2em;
     }
   }
 .header-nav li ul:nth-child(1) {
@@ -223,6 +233,7 @@
 }
 .menu-menu-container{
   border-top: 4px solid $light-blue;
+  border-bottom: 4px solid $light-blue;
   border-radius: 5px;
   @include iphone6{
     width: 100%;
@@ -234,5 +245,13 @@
 .sub-menu{
   @include iphone6{
     margin: 1.3em;
+    li a{
+      margin: .4em .8em;
+    }
   }
+
+}
+
+.menu-clicked{
+    left: 10em;
 }
