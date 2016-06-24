@@ -145,7 +145,7 @@ get_header();
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :
     				        	$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'year') . '">' . $name . '</a>' . '</p>';
+    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'years') . '">' . $name . '</a>' . '</p>';
     							?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>

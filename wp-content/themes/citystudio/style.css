@@ -712,6 +712,9 @@ a {
   -ms-flex-pack: center;
   justify-content: center;
   margin-right: 0.5rem; }
+  @media screen and (max-width: 1024px) {
+    .search-gallery {
+      margin-right: -4em !important; } }
   @media screen and (min-width: 480px) {
     .search-gallery {
       margin-right: 2rem; } }
@@ -804,15 +807,17 @@ a {
     .header-nav {
       margin-left: -135px; } }
 
-@media screen and (max-width: 375px) {
-  #primary-menu li {
-    padding: .2em 0em .2em 1em; } }
+#primary-menu {
+  padding: 0.4em; }
+  @media screen and (max-width: 375px) {
+    #primary-menu li {
+      padding: .2em 0em .2em 1em; } }
 
 .header-nav ul {
   *zoom: 1;
   list-style: none;
   margin: 0;
-  padding: .6em .2em 0 .3em;
+  padding: 0em .2em 0 .3em;
   background: #f9f9f9; }
   @media screen and (max-width: 375px) {
     .header-nav ul {
@@ -833,7 +838,7 @@ a {
 
 .header-nav a {
   display: block;
-  padding: 0 0 .6em .6em;
+  padding: 0 0 .6em 0em;
   color: #2cb5e8 !important;
   background-color: #f9f9f9;
   transition: height 300ms ease-in; }
@@ -845,14 +850,11 @@ a {
       font-weight: 500; } }
 
 .header-nav a:hover {
-  text-decoration: underline;
   font-weight: 700;
-  background: #f7f9f9; }
+  background: #f7f9f9;
+  color: #ee7600 !important; }
 
 .header-nav li ul {
-  position: absolute;
-  z-index: 2;
-  top: .6em;
   background-color: #f9f9f9; }
   @media screen and (max-width: 375px) {
     .header-nav li ul {
@@ -862,9 +864,8 @@ a {
 .header-nav li ul:nth-child(1) {
   left: 80px; }
 
-/* second dropdown UL */
 .header-nav li ul li {
-  overflow: hidden;
+  overflow: visible;
   height: 0;
   width: 100%;
   transition: height 300ms ease-in;
@@ -877,11 +878,14 @@ a {
   .header-nav ul > li:hover ul li:last-child {
     border: none; } }
 
-@media screen and (max-width: 375px) {
-  .menu-menu-container {
-    width: 384px;
-    position: fixed;
-    z-index: 3; } }
+.menu-menu-container {
+  border-top: 4px solid #2cb5e8;
+  border-radius: 5px; }
+  @media screen and (max-width: 375px) {
+    .menu-menu-container {
+      width: 384px;
+      position: fixed;
+      z-index: 3; } }
 
 /*--------------------------------------------------------------
 # Widgets
@@ -1144,7 +1148,7 @@ iframe {
       .footer-info-block ul,
       .footer-info-block1 ul,
       .footer-info-block2 ul {
-        padding-top: 2%; }
+        padding-top: 14%; }
       .footer-info-block h3,
       .footer-info-block li,
       .footer-info-block1 h3,
