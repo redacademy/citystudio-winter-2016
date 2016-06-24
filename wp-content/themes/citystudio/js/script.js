@@ -24,7 +24,7 @@ function myFunction() {
 window.onclick = function(e) {
   e.preventDefault;
   ('dropdown-content').show;
-  
+
 }
 jQuery(document).ready(function($){
 
