@@ -7,7 +7,6 @@
   margin-left: 900px;
   padding: 2rem;
 }
-
 .nav-div {
   background-color: #76d6ff;
   width: 85px;
@@ -18,7 +17,6 @@
   justify-content: space-between;
   transition: width 1s ease-in;
   margin-right: 4em;
-
   @include desktop {
     height: 84px;
     z-index: 2 !important;

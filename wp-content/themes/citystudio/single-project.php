@@ -175,6 +175,7 @@ get_header();
     				            ?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
+
     				      <?php  $terms = get_the_terms( $id, 'year' );
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :
@@ -183,6 +184,7 @@ get_header();
     							?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
+
     				      <?php  $terms = get_the_terms( $id, 'themes' );
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :
