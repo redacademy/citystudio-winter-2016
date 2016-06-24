@@ -74,12 +74,11 @@ get_header();
           <h3>Staff Contact &amp; Partners:</h3>
           <?php the_field('staff_partners'); ?>
         </span>
+<!-- media fields -->
         <span class="proj-subtitle proj-detail-wrap">
 					<?php
-
-								$value = get_field( 'activate_media' );
-
-								if( $value ) { ?>
+						$value = get_field( 'activate_media' );
+						if( $value ) { ?>
           <h3>Media:</h3>
 <!-- linking media -->
 					<?php
@@ -89,7 +88,7 @@ get_header();
 							<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_title') ?> </a>
 						</p>
 						<?php endwhile; ?>
-<!-- file upload -->
+<!-- file media upload -->
 						<?php
 							if( have_rows('project_media_2') );
 							while ( have_rows('project_media_2') ) : the_row(); ?>
@@ -99,7 +98,7 @@ get_header();
 								<?php endif; ?>
 							</p>
 							<?php endwhile; ?>
-<!-- embed video or image -->
+<!-- embed video or image media-->
 						<div class="embed-container">
 							<?php the_field('embed_video'); ?>
 						</div>
