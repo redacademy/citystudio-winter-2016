@@ -19,8 +19,21 @@
         <?php /* Start the Loop */ ?>
         <?php while ( have_posts() ) : the_post(); ?>
         <ul>
-            <a href="<?php echo esc_url( get_permalink() ); ?>"><li style="background: url('<?php the_field('banner_image'); ?>')">
-          </li></a>
+
+          <a href="<?php echo esc_url( get_permalink() ); ?>">
+          <?php
+      			$image = get_field('banner_image');
+
+      			if( !empty($image) ): ?>
+
+              <li style="background: url('<?php echo $image['url']; ?>') no-repeat center center;
+                          background-size: cover;
+                          background-size: cover;
+   									      display: block;
+   	  						        height: 70vh;"></li>
+
+      		<?php endif; ?>
+            </a>
         </ul>
         <?php endwhile; ?>
 
