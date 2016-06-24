@@ -40,11 +40,10 @@ get_header();
         <span class="proj-partners proj-detail-wrap">
           <h3>School &amp; Course:</h3>
 				<p><?php the_field('participating_school'); ?>
-					- <?php if( have_rows('course_name') );
+				 <?php if( have_rows('course_name') );
 							while ( have_rows('course_name') ) : the_row(); ?>
 						<?php the_sub_field('course_name') ?>
 						<?php endwhile; ?></p>
-						
         </span>
         <span class="proj-faculty proj-detail-wrap">
           <h3>Faculty Member:</h3>
