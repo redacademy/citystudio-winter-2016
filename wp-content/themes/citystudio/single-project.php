@@ -44,7 +44,6 @@ get_header();
 							while ( have_rows('course_name') ) : the_row(); ?>
 						<?php the_sub_field('course_name') ?>
 						<?php endwhile; ?></p>
-						<?php endif; ?>
         </span>
         <span class="proj-faculty proj-detail-wrap">
           <h3>Faculty Member:</h3>
@@ -176,6 +175,7 @@ get_header();
     				            ?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
+
     				      <?php  $terms = get_the_terms( $id, 'year' );
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :
@@ -184,6 +184,7 @@ get_header();
     							?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
+
     				      <?php  $terms = get_the_terms( $id, 'themes' );
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :

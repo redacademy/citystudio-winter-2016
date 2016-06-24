@@ -1145,10 +1145,6 @@ iframe {
         margin-bottom: 0.25rem;
         opacity: 0.9;
         font-size: 1rem; }
-      .footer-info-block ul,
-      .footer-info-block1 ul,
-      .footer-info-block2 ul {
-        padding-top: 14%; }
       .footer-info-block h3,
       .footer-info-block li,
       .footer-info-block1 h3,
@@ -1164,7 +1160,8 @@ iframe {
       .footer-info-block2 ul li {
         font-size: 0.85rem;
         width: 9rem;
-        opacity: 0.7; }
+        opacity: 0.7;
+        line-height: 1.3em; }
       .footer-info-block li:hover,
       .footer-info-block1 li:hover,
       .footer-info-block2 li:hover {
@@ -2481,7 +2478,7 @@ a {
   order: 1; }
   @media screen and (min-width: 480px) {
     .col-one {
-      margin-left: 7.3em; } }
+      margin-left: 5.5em; } }
 
 .col-two {
   -webkit-order: 2;
