@@ -20,8 +20,23 @@ jQuery(document).ready(function($){
 function myFunction() {
     document.getElementById("hamburgerMenu").classList.toggle("show");
 }
-// Close the dropdown menu if the user clicks outside of it
+// Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
   e.preventDefault;
   ('dropdown-content').show;
+  
 }
+jQuery(document).ready(function($){
+
+$("#primary-menu li a").click(function(){
+
+        $(".header-nav li ul").show().animate({"left": "+14em"});
+
+    });
+
+
+  // $(".sub-menu li a").click(function(){
+  //     this.css("color": "red")
+  // });
+
+});

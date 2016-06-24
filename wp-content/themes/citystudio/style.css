@@ -690,7 +690,8 @@ a {
   @media screen and (max-width: 375px) {
     .header-container {
       position: fixed;
-      background-color: white; } }
+      background-color: white;
+      z-index: 3; } }
 
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -763,13 +764,17 @@ a {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  width: 250px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  margin-left: -126px;
+  width: 255px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  margin-left: -220px;
   z-index: 100; }
   @media screen and (max-width: 375px) {
     .dropdown-content {
-      width: 27%; } }
+      width: 27%;
+      width: 250px;
+      box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+      margin-left: -126px;
+      z-index: 100; } }
 
 .dropdown-content a {
   transition: height .3s ease-in;
@@ -806,7 +811,10 @@ a {
 
 #primary-menu {
   z-index: 3;
-  padding: 0.4em; }
+  padding: 0.3em 0.4em; }
+  @media screen and (max-width: 375px) {
+    #primary-menu {
+      padding: 5em 1em 2.1em; } }
 
 .header-nav ul {
   *zoom: 1;
@@ -842,7 +850,8 @@ a {
       padding: 0px 2em 1em;
       border: none;
       font-size: 1.8em;
-      font-weight: 500; } }
+      font-weight: 500;
+      z-index: 8; } }
 
 .header-nav a:hover {
   font-weight: 700;
@@ -853,10 +862,11 @@ a {
   background-color: #f9f9f9; }
   @media screen and (max-width: 375px) {
     .header-nav li ul {
+      display: none;
       top: -6.4em;
       position: relative;
       font-size: 10px;
-      left: 15em; } }
+      left: 2em; } }
 
 .header-nav li ul:nth-child(1) {
   left: 80px; }
@@ -879,6 +889,7 @@ a {
 
 .menu-menu-container {
   border-top: 4px solid #2cb5e8;
+  border-bottom: 4px solid #2cb5e8;
   border-radius: 5px; }
   @media screen and (max-width: 375px) {
     .menu-menu-container {
@@ -888,7 +899,12 @@ a {
 
 @media screen and (max-width: 375px) {
   .sub-menu {
-    margin: 1.3em; } }
+    margin: 1.3em; }
+    .sub-menu li a {
+      margin: .4em .8em; } }
+
+.menu-clicked {
+  left: 10em; }
 
 /*--------------------------------------------------------------
 # Widgets
