@@ -797,6 +797,9 @@ a {
 
 .header-nav {
   margin-top: 0;
+  border-top: 4px solid #2cb5e8;
+  border-bottom: 4px solid #2cb5e8;
+  border-radius: 5px;
   background-color: #f9f9f9; }
   @media screen and (max-width: 375px) {
     .header-nav {
@@ -804,7 +807,7 @@ a {
 
 #primary-menu {
   z-index: 3;
-  padding: 0.3em 0.4em; }
+  padding: .7em 0.7em; }
   @media screen and (max-width: 375px) {
     #primary-menu {
       padding: 5em 1em 2.1em; } }
@@ -864,6 +867,7 @@ a {
 .header-nav li ul:nth-child(1) {
   left: 80px; }
 
+/*//sub menu css*/
 .header-nav li ul li {
   overflow: hidden;
   height: 0;
@@ -878,23 +882,20 @@ a {
   height: .95em; }
   @media screen and (max-width: 375px) {
     .header-nav ul > li:hover ul li {
-      height: 2.95em; } }
+      height: 3.5em; } }
 
-.menu-menu-container {
-  border-top: 4px solid #2cb5e8;
-  border-bottom: 4px solid #2cb5e8;
-  border-radius: 5px; }
-  @media screen and (max-width: 375px) {
-    .menu-menu-container {
-      width: 100%;
-      position: fixed;
-      z-index: 3; } }
+@media screen and (max-width: 375px) {
+  .menu-menu-container {
+    width: 100%;
+    position: fixed;
+    z-index: 3; } }
 
 @media screen and (max-width: 375px) {
   .sub-menu {
-    margin: 1.3em; }
+    margin: 1em; }
     .sub-menu li a {
-      margin: .4em .8em; } }
+      margin: .4em 0;
+      font-size: 2em; } }
 
 .menu-clicked {
   left: 10em; }
