@@ -58,7 +58,7 @@ get_header(); ?>
              border-bottom: 2px solid white;
              border-right: 2px solid white;">
           <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
-            <div class="subtitle"><?php echo CFS()->get( 'home_subtitle' ); ?>
+            <div class="subtitle"><?php the_field( 'subtitle' ); ?>
             </div>
           </div>
         </li>
