@@ -23,9 +23,15 @@ get_header(); ?>
 			<h2>Get in touch:</h2>
 		</div>
 	</div>
- <div class="contact-form-container">
 
- </div>
+	<div class="contact-content">
+		 <div class="contact-form-container">
+			<?php echo FrmFormsController::show_form(5, $key = '5', $title=false, $description=false); ?>
+		 </div>
+			<div class="contact-info-container">
+
+			</div>
+	</div>
 
 </div><!-- end contact-page-container -->
 	</main><!-- #main -->

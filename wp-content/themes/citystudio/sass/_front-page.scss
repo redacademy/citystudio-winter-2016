@@ -95,11 +95,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 1130px;
-    margin: 0 0 3.5em;
+    max-width: 100%;
+    margin-bottom: 3.5em;
   }
   li {
-    height: 100px;
+    height: 110px;
   &:hover{
     cursor: pointer;
   }
