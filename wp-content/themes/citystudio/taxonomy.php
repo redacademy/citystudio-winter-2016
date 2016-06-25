@@ -17,7 +17,7 @@
 
       <div class="section-archive">
         <?php /* Start the Loop */ ?>
-      <ul class="tag-archive-wrap">
+      <ul class="tag-archives">
         <?php while ( have_posts() ) : the_post(); ?>
 
           <a href="<?php echo esc_url( get_permalink() ); ?>">

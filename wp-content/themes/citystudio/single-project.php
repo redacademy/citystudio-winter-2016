@@ -19,7 +19,6 @@ get_header();
 			</div>
 		</header>
 
-
 			<div class="project-hero"
 					 style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
 									background-size: cover;
@@ -27,7 +26,7 @@ get_header();
 	  						  height: 70vh;">
 			</div>
 
-	
+
 
 <!-- Section Project Credits -->
 	<div class="section-credits content-wrapper">
