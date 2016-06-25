@@ -169,16 +169,7 @@ get_header();
     				            ?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
-
-    				      <?php  $terms = get_the_terms( $id, 'year' );
-    				      if ( !empty($terms)) : ?>
-    				        <?php foreach ( $terms as $term )  :
-    				        	$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'year') . '">' . $name . '</a>' . '</p>';
-    							?>
-    				      <?php endforeach; ?>
-    				      <?php endif; ?>
-
+    				  
     				      <?php  $terms = get_the_terms( $id, 'themes' );
     				      if ( !empty($terms)) : ?>
     				        <?php foreach ( $terms as $term )  :

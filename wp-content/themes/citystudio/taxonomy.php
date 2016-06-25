@@ -15,27 +15,32 @@
       ?>
     </header><!-- .page-header -->
 
-      <div class="section-archive">
-        <?php /* Start the Loop */ ?>
-      <ul class="tag-archives">
-        <?php while ( have_posts() ) : the_post(); ?>
+      <div class="section-archives">
 
-          <a href="<?php echo esc_url( get_permalink() ); ?>">
-            <li style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
-                      background-size: cover;
-                      background-size: cover;
-                      display: block;
-                      "></li>
-          </a>
+        <ul class="tag-gallery">
+          <?php while ( have_posts() ) : the_post(); ?>
 
-        <?php endwhile; ?>
+            <a href="<?php echo esc_url( get_permalink() ); ?>">
+              <li style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
+                        background-size: cover;
+                        background-size: cover;
+                        display: block;
+                        ">
+                <div class="tag-description">
+                  <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
+                  <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+                </div>
+              </li>
+            </a>
 
-        <?php else : ?>
-      </ul>
-        <?php get_template_part( 'template-parts/content', 'none' ); ?>
+          <?php endwhile; ?>
 
-        <?php endif; ?>
-      </div>
+          <?php else : ?>
+        </ul><!-- .tag-gallery -->
+          <?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+          <?php endif; ?>
+      </div><!-- .section-archives -->
 
   </main><!-- #main -->
 </div><!-- #primary -->
