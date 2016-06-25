@@ -36,10 +36,6 @@ jQuery(document).ready(function($){
       $(".sub-menu").toggleClass("show-menu");
   });
 
-});
-
-jQuery(document).ready(function($){
-
   $(".hamburger").on("click", function(){
     $("i", this).toggleClass("fa-bars fa-times-circle");
     });

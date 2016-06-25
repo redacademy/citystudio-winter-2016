@@ -773,7 +773,6 @@ a {
 
 .dropdown-content a {
   transition: height .3s ease-in;
-  color: black;
   text-decoration: none;
   display: block;
   font-size: 22px; }
@@ -913,6 +912,9 @@ a {
     top: -3em; }
     .sub-menu.show-menu li a {
       font-size: 1.5em; } }
+
+.show-menu {
+  height: 200px; }
 
 /*--------------------------------------------------------------
 # Widgets
