@@ -18,7 +18,10 @@ jQuery(document).ready(function($){
 
 });
 function myFunction() {
-    document.getElementById("hamburgerMenu").classList.toggle("show");
+    var hamburger = document.getElementById("hamburgerMenu");
+
+    hamburger.classList.toggle("show");
+
 }
 // Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
@@ -26,17 +29,18 @@ window.onclick = function(e) {
   ('dropdown-content').show;
 
 }
+
 jQuery(document).ready(function($){
 
-$("#primary-menu li a").click(function(){
+  $("#primary-menu li a").click(function(){
+      $(".sub-menu").toggleClass("show-menu");
+  });
 
-        $(".header-nav li ul").show().animate({"left": "+14em"});
+});
 
+jQuery(document).ready(function($){
+
+  $(".hamburger").on("click", function(){
+    $("i", this).toggleClass("fa-bars fa-times-circle");
     });
-
-
-  // $(".sub-menu li a").click(function(){
-  //     this.css("color": "red")
-  // });
-
 });
