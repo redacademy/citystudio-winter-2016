@@ -906,9 +906,6 @@ a {
 .menu-clicked {
   left: 10em; }
 
-.menu-unclicked {
-  left: 2em; }
-
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
@@ -1661,9 +1658,6 @@ a:active {
     max-width: 1130px;
     margin: 0 0 3.5em; }
   .homepage-partners-container li {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center center;
     height: 100px; }
     .homepage-partners-container li:hover {
       cursor: pointer; }

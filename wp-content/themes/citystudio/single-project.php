@@ -19,19 +19,15 @@ get_header();
 			</div>
 		</header>
 
-		<?php
-			$image = get_field('banner_image');
-
-			if( !empty($image) ): ?>
 
 			<div class="project-hero"
-					 style="background: url('<?php echo $image['url']; ?>') no-repeat center center;
+					 style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
 									background-size: cover;
 									display: block;
 	  						  height: 70vh;">
 			</div>
 
-		<?php endif; ?>
+	
 
 <!-- Section Project Credits -->
 	<div class="section-credits content-wrapper">
