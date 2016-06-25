@@ -11,21 +11,19 @@
     font-family: $fontfamily;
   }
 }
-
-iframe{
+iframe {
   width: 100vw;
   height: 40vh;
 }
-
-.contact-page-container{
+.contact-page-container {
   background-color: $medium-blue;
   padding-top: 2rem;
 }
-.getintouch-container{
+.getintouch-container {
   display: flex;
   justify-content: center;
 }
-.getintouch-block{
+.getintouch-block {
   background-color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
@@ -43,8 +41,62 @@ iframe{
     color: $light-blue;
     font-weight: 900;
     margin-top: 0.2rem;
-    @include iphone6{
+    @include iphone6 {
       margin-top: -0.8rem;
+    }
+  }
+}
+
+.contact-content{
+display: flex;
+flex-direction: row;
+}
+
+.contact-info-container{
+
+}
+
+
+.contact-form-container {
+  width: 40%;
+  padding: 2em 0 2em 4em;
+   ::-webkit-input-placeholder {
+    color: $city-blue;
+    font-weight: bold;
+  }
+   :-moz-placeholder {
+    color: $city-blue;
+    opacity: 1;
+    font-weight: bold;
+  }
+   ::-moz-placeholder {
+    color: $city-blue;
+    opacity: 1;
+    font-weight: bold;
+  }
+   :-ms-input-placeholder {
+    font-weight: bold;
+    color: $city-blue;
+  }
+}
+.frm_other_input, #field_nmmsb {
+  width: 251px !important;
+}
+input[type='email']:focus {
+  font-weight: bold;
+}
+.frm_submit {
+  margin-top: 2em;
+  input[type=submit] {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    width: 150px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    box-shadow: none !important;
+    &:hover {
+      background-color: lighten($city-blue, .5) !important;
     }
   }
 }
