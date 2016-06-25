@@ -96,7 +96,7 @@
   background-color: #f9f9f9;
     width: 255px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-  margin-left: -220px;
+  margin-left: -170px;
   z-index: 100;
   @include iphone6{
     width: 27%;
@@ -133,6 +133,9 @@
 }
 .header-nav{
   margin-top: 0;
+  border-top: 4px solid $light-blue;
+  border-bottom: 4px solid $light-blue;
+  border-radius: 5px;
   background-color: #f9f9f9;
   @include iphone6{
     margin-left: -189px;
@@ -141,7 +144,7 @@
 
 #primary-menu {
   z-index: 3;
-  padding: 0.3em 0.4em;
+  padding: .7em 0.7em;
     @include iphone6{
       padding: 5em 1em 2.1em;
     }
@@ -209,9 +212,9 @@
 .header-nav li ul:nth-child(1) {
   left: 80px;
 }
-//sub menu css
+/*//sub menu css*/
 .header-nav li ul li {
-  overflow: visible;
+  overflow: hidden;
   height:0;
   width: 100%;
   -webkit-transition:height 300ms ease-in;
@@ -226,15 +229,13 @@
 .header-nav ul > li:hover ul li {
   height: .95em;
   @include iphone6{
-    height: 1.95em;
+    height: 3.5em;
   }
 }
 .header-nav ul > li:hover ul li:last-child {
 }
 .menu-menu-container{
-  border-top: 4px solid $light-blue;
-  border-bottom: 4px solid $light-blue;
-  border-radius: 5px;
+  
   @include iphone6{
     width: 100%;
     position: fixed;
@@ -244,9 +245,10 @@
 
 .sub-menu{
   @include iphone6{
-    margin: 1.3em;
+    margin: 1em;
     li a{
-      margin: .4em .8em;
+        margin: .4em 0;
+        font-size: 2em;
     }
   }
 

@@ -159,6 +159,7 @@
 }
 .nav-sub-menu {
   display: none;
+  position: relative;
   justify-content: space-between;
   background-color: #fff;
   margin-left: 1.2em;
@@ -190,9 +191,17 @@
 .menu-item {
   position: relative;
 }
+
+.open {
+  .theme,
+  .part,
+  .year{
+    position: relative;
+    bottom: -55px;
+  }
+}
+
 .theme {
-  position: absolute;
-  bottom: -231px;
   left: -55px;
   width: 130px;
   &::after {
@@ -202,15 +211,14 @@
     border-style: solid;
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
-    position: absolute;
+    position: relative;
     /*bottom: 127px;
     left: 35%;*/
   }
 }
 .part {
-  position: absolute;
-  bottom: -99px;
   left: -17px;
+  width: 90px;
   &::after {
     content: '';
     width: 0;
@@ -219,14 +227,12 @@
     color: $medium-blue;
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
-    position: absolute;
+    position: relative;
    /* bottom: 102px;
     left: 24%;*/
   }
 }
 .year {
-  position: absolute;
-  bottom: -99px;
   left: -15px;
   width: 45px;
   padding-right: 1.1em;
@@ -420,7 +426,6 @@
     display: none;
   }
 }
-
 .fa-star{
 margin-top: 1rem;
 }
