@@ -17,8 +17,9 @@
 
       <div class="section-archive">
         <?php /* Start the Loop */ ?>
+      <ul class="tag-archive-wrap">
         <?php while ( have_posts() ) : the_post(); ?>
-        <ul>
+
           <a href="<?php echo esc_url( get_permalink() ); ?>">
             <li style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
                       background-size: cover;
@@ -26,11 +27,11 @@
                       display: block;
                       "></li>
           </a>
-        </ul>
+
         <?php endwhile; ?>
 
         <?php else : ?>
-
+      </ul>
         <?php get_template_part( 'template-parts/content', 'none' ); ?>
 
         <?php endif; ?>

@@ -766,7 +766,7 @@ a {
   background-color: #f9f9f9;
   width: 255px;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  margin-left: -220px;
+  margin-left: -170px;
   z-index: 100; }
   @media screen and (max-width: 375px) {
     .dropdown-content {
@@ -804,6 +804,9 @@ a {
 
 .header-nav {
   margin-top: 0;
+  border-top: 4px solid #2cb5e8;
+  border-bottom: 4px solid #2cb5e8;
+  border-radius: 5px;
   background-color: #f9f9f9; }
   @media screen and (max-width: 375px) {
     .header-nav {
@@ -811,7 +814,7 @@ a {
 
 #primary-menu {
   z-index: 3;
-  padding: 0.3em 0.4em; }
+  padding: .7em 0.7em; }
   @media screen and (max-width: 375px) {
     #primary-menu {
       padding: 5em 1em 2.1em; } }
@@ -871,8 +874,9 @@ a {
 .header-nav li ul:nth-child(1) {
   left: 80px; }
 
+/*//sub menu css*/
 .header-nav li ul li {
-  overflow: visible;
+  overflow: hidden;
   height: 0;
   width: 100%;
   transition: height 300ms ease-in;
@@ -885,23 +889,20 @@ a {
   height: .95em; }
   @media screen and (max-width: 375px) {
     .header-nav ul > li:hover ul li {
-      height: 1.95em; } }
+      height: 3.5em; } }
 
-.menu-menu-container {
-  border-top: 4px solid #2cb5e8;
-  border-bottom: 4px solid #2cb5e8;
-  border-radius: 5px; }
-  @media screen and (max-width: 375px) {
-    .menu-menu-container {
-      width: 100%;
-      position: fixed;
-      z-index: 3; } }
+@media screen and (max-width: 375px) {
+  .menu-menu-container {
+    width: 100%;
+    position: fixed;
+    z-index: 3; } }
 
 @media screen and (max-width: 375px) {
   .sub-menu {
-    margin: 1.3em; }
+    margin: 1em; }
     .sub-menu li a {
-      margin: .4em .8em; } }
+      margin: .4em 0;
+      font-size: 2em; } }
 
 .menu-clicked {
   left: 10em; }
@@ -2184,6 +2185,7 @@ a {
 
 .nav-sub-menu {
   display: none;
+  position: relative;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -2213,9 +2215,13 @@ a {
 .menu-item {
   position: relative; }
 
+.open .theme,
+.open .part,
+.open .year {
+  position: relative;
+  bottom: -55px; }
+
 .theme {
-  position: absolute;
-  bottom: -231px;
   left: -55px;
   width: 130px; }
   .theme::after {
@@ -2225,14 +2231,13 @@ a {
     border-style: solid;
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
-    position: absolute;
+    position: relative;
     /*bottom: 127px;
     left: 35%;*/ }
 
 .part {
-  position: absolute;
-  bottom: -99px;
-  left: -17px; }
+  left: -17px;
+  width: 90px; }
   .part::after {
     content: '';
     width: 0;
@@ -2241,13 +2246,11 @@ a {
     color: #0082b9;
     /*border-width: 20px 20px 0;*/
     border-color: #fff;
-    position: absolute;
+    position: relative;
     /* bottom: 102px;
     left: 24%;*/ }
 
 .year {
-  position: absolute;
-  bottom: -99px;
   left: -15px;
   width: 45px;
   padding-right: 1.1em; }
