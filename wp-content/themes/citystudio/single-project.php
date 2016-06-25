@@ -20,7 +20,7 @@ get_header();
 		</header>
 
 		<?php
-			$image = get_field('banner_image');
+			$image = the_field('banner_image');
 
 			if( !empty($image) ): ?>
 
