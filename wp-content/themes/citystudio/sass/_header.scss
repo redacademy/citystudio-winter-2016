@@ -82,7 +82,7 @@
   background-color: #f9f9f9;
   font-weight: 500;
   @include iphone6{
-    height: 5em;
+    height: 3.5em;
     z-index: 2;
   }
 }
@@ -93,17 +93,19 @@
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-    width: 255px;
+  background-color: #f7f9f9;
+  width: 255px;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-  margin-left: -170px;
-  z-index: 100;
+  margin-left: -217px;
+  top: 98px;
+  z-index: 3;
   @include iphone6{
     width: 27%;
-  width: 250px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  margin-left: -126px;
-  z-index: 100;
+    width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    margin-left: -126px;
+    top: 70px;
+    z-index: 100;
   }
 }
 .dropdown-content a{
@@ -132,11 +134,9 @@
   display:block;
 }
 .header-nav{
-  margin-top: 0;
   border-top: 4px solid $light-blue;
   border-bottom: 4px solid $light-blue;
-  border-radius: 5px;
-  background-color: #f9f9f9;
+  background-color: #f7f9f9;
   @include iphone6{
     margin-left: -189px;
   }
@@ -146,7 +146,9 @@
   z-index: 3;
   padding: .7em 0.7em;
     @include iphone6{
-      padding: 5em 1em 2.1em;
+    padding: 3em 8em .5em;
+    height: 544px;
+    font-size: .8em;
     }
   }
 
@@ -188,8 +190,7 @@
   transition:height 300ms ease-in;
     @include iphone6{
       padding: 0px 2em 1em;
-      border: none;
-      font-size: 1.8em;
+      font-size: 1.6em;
       font-weight: 500;
       z-index: 8;
     }
@@ -197,7 +198,11 @@
 .header-nav a:hover {
   font-weight: 700;
   background:#f7f9f9;
-  color: #ee7600 !important;
+  color: $medium_blue !important;
+  text-decoration: underline;
+}
+.header-nav a:active{
+  text-decoration: underline;
 }
 .header-nav li ul {
   background-color: #f9f9f9;
@@ -229,7 +234,7 @@
 .header-nav ul > li:hover ul li {
   height: .95em;
   @include iphone6{
-    height: 3.5em;
+    height: 2.5em;
   }
 }
 .header-nav ul > li:hover ul li:last-child {
@@ -244,16 +249,27 @@
 }
 
 .sub-menu{
+  li a{
+      font-size: 16px;
+  }
   @include iphone6{
     margin: 1em;
+
     li a{
         margin: .4em 0;
         font-size: 2em;
     }
   }
-
 }
 
-.menu-clicked{
-    left: 10em;
+.sub-menu.show-menu{
+  @include iphone6{
+    transition: all .5s ease-in;
+    margin: 1em;
+    display: block;
+    top: -3em;
+    li a{
+        font-size: 1.5em;
+    }
+  }
 }
