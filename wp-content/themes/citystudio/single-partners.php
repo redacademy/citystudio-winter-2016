@@ -53,20 +53,38 @@ get_header(); ?>
 	      </div>
 			</div>
 <!-- loop for displaying projects -->
-			<div class="section-archive">
-				<?php $query = new WP_Query( array( 'partners' => 'emily-carr' ) );
-			  // The Loop
-			  while ( $query->have_posts() ) { $query->the_post(); ?>
-				<a href="<?php echo get_the_permalink();?>">
-					<?php echo '<li>' . the_post_thumbnail('medium','style=width:350px;height:250px;margin: 0 auto;margin-bottom:1.5rem; margin-right:1rem; margin-left:1rem;') . '</li>';
-				  } ?>
-				</a>
+<div class="section-archive">
+	<div class="noshow"><?php $school= the_field( 'school_abrev' );?></div>
+	<?php
+	$args = array(
+	'post_type' => 'project',
+	'numberposts' => 6,
+	'tax_query' => array (
+	'taxonomy' => 'partners',
+	'partners' => 'slug',
+	'terms' => $school
+	),
+	);
 
-			<?php wp_reset_postdata(); ?>
-			</div>
+	$latest_posts = get_posts( $args );?>
+
+	<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
+
+
+	<a href="<?php echo esc_url( get_permalink() ); ?>" >
+	<li style=
+	  "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
+	   background-size: cover;
+	   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);">
+	</li>
+	</a>
+	<?php endforeach; wp_reset_postdata(); ?>
+</div>
+
+
 		<hr class="separate-white">
 <!-- media links -->
-				<h3 class ="media-links-title"><?php echo the_field( 'school_abrev' ); ?> in the media, publications, and press...</h3>
+				<h3 class ="media-links-title"><span><?php echo the_field( 'school_abrev' ); ?></span> in the media, publications, and press...</h3>
 				<div class="media-links-container">
 						<?php
 							// check if the repeater field has rows of data

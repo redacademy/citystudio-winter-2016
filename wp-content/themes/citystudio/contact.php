@@ -20,7 +20,7 @@ get_header(); ?>
 
 	<div class="getintouch-container">
 		<div class="getintouch-block">
-			<h2>Get in touch:</h2>
+			<h2>Get in touch</h2>
 		</div>
 	</div>
 
