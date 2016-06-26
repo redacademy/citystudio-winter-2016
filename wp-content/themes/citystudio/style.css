@@ -1049,7 +1049,8 @@ iframe {
   font-size: 1.25rem;
   width: 90%;
   padding: 0.25em 0.75em;
-  height: 2rem; }
+  height: 2rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 480px) {
     .getintouch-block {
       height: 4rem;
@@ -1996,10 +1997,12 @@ a {
         text-align: left; } }
   .campus-course-container h3 {
     margin-bottom: 0.25rem; }
-  .campus-course-container li {
+  .campus-course-container li, .campus-course-container a {
     font-size: 0.85rem;
-    line-height: 1.5rem; }
-    .campus-course-container li:hover {
+    line-height: 1.5rem;
+    color: #0198d5;
+    font-weight: 500; }
+    .campus-course-container li:hover, .campus-course-container a:hover {
       text-decoration: underline;
       color: #ee7600; }
   .campus-course-container li p {
@@ -2030,7 +2033,8 @@ a {
   font-size: 1.25rem;
   width: 90%;
   padding: 0 1em;
-  height: 2.5rem; }
+  height: 2.5rem;
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 480px) {
     .title-block {
       height: 5rem;
@@ -2066,10 +2070,22 @@ a {
   @media screen and (min-width: 480px) {
     .section-archive {
       margin: 1rem 4rem 0; } }
-  .section-archive img {
+  .section-archive li {
     border: 1px solid transparent; }
-    .section-archive img:hover {
+    .section-archive li:hover {
       border: 1px solid #000000; }
+  .section-archive li {
+    width: 300px;
+    height: 225px;
+    margin: 0 auto;
+    margin-bottom: 1.5rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    list-style: none;
+    border-radius: 2%; }
+
+.noshow {
+  display: none; }
 
 .separate-white {
   border-top: 2px dashed white;
@@ -2084,6 +2100,8 @@ a {
   font-weight: bold;
   color: white;
   margin: 0.5rem 0 0.75rem 1rem; }
+  .media-links-title span {
+    text-transform: uppercase; }
   @media screen and (min-width: 480px) {
     .media-links-title {
       margin: 0.5rem 0 0.75rem 4rem; } }
