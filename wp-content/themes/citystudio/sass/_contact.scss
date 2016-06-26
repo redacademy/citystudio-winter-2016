@@ -53,7 +53,19 @@ flex-direction: row;
 }
 
 .contact-info-container{
-
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 4em auto;
+  h3, p{
+  color: #ffffff;
+  font-family: $fontfamily;
+}
+  p{
+  font-weight: lighter;
+}
 }
 
 

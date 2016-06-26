@@ -66,7 +66,7 @@ get_header(); ?>
 			</div>
 		<hr class="separate-white">
 <!-- media links -->
-				<h3 class ="media-links-title"><?php echo CFS()->get( 'school_abrev' ); ?> in the media, publications, and press...</h3>
+				<h3 class ="media-links-title"><?php echo the_field( 'school_abrev' ); ?> in the media, publications, and press...</h3>
 				<div class="media-links-container">
 						<?php
 							// check if the repeater field has rows of data
