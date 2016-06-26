@@ -1,6 +1,7 @@
 <?php
   $args = array(
   'post_type' => 'people',
+  'order'   => 'ASC',
   'tax_query' => array(
     array(
       'taxonomy' => 'team',
