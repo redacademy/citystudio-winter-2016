@@ -35,7 +35,7 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-  $(".hamburger").click(function(){
-      $("i", this).toggleClass("fa-bars fa-times-circle");
+  $(".fa-bars").click(function(){
+      $(this).toggleClass("fa-bars fa-times-circle");
     });
 });
