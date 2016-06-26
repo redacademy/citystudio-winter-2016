@@ -1,6 +1,7 @@
 <?php
   $args = array(
   'post_type' => 'people',
+  'order'   => 'ASC',
   'tax_query' => array(
     array(
       'taxonomy' => 'team',
@@ -44,7 +45,6 @@ $citystudio_team = new WP_Query( $args ); ?>
 
       <?php endwhile; ?>
   </ul>
-  <hr class="separate" />
 </div>
 
 <?php else : ?>
