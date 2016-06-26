@@ -17,14 +17,11 @@ jQuery(document).ready(function($){
   });
 
 
-  $("#primary-menu li a").click(function(){
-      $(".sub-menu").toggleClass("show-menu");
-  });
-
+ 
 
 });
 function myFunction() {
-    var hamburger = document.getElementById("hamburgerMenu");
+  var hamburger = document.getElementById("hamburgerMenu");
     hamburger.classList.toggle("show");
 }
 // Close the dropdown menu if the user clicks outnerside of it
@@ -35,7 +32,14 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-  $(".hamburger").click(function(){
+  $(".hamburger").click(function(e){
+    e.preventDefault();
       $("i", this).toggleClass("fa-bars fa-times-circle");
     });
+
+  $("#primary-menu li a").click(function(e){
+    e.preventDefault();
+      $(".sub-menu").toggleClass("show-menu");
+  });
+
 });
