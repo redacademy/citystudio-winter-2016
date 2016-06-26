@@ -37,6 +37,6 @@ jQuery(document).ready(function($){
   });
 
   $(".hamburger").click(function(){
-    $("i", this).toggleClass("fa-bars fa-times-circle");
+      $("i", this).toggleClass("fa-bars fa-times-circle");
     });
 });
