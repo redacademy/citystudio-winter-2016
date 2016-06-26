@@ -97,7 +97,7 @@
       font-size: 1rem;
     }
     h3,
-    li {
+    li, a {
       color: white;
       font-family: $fontfamily;
       text-align: center;
@@ -108,7 +108,7 @@
       opacity: 0.7;
       line-height: 1.75em;
     }
-    li:hover {
+    li:hover, a:hover {
       cursor: pointer;
       color: $light_blue;
     }
