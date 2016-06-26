@@ -419,6 +419,12 @@ h2.page-titles {
   font-weight: 700;
   text-transform: none; }
 
+.single a {
+  color: #0198d5;
+  text-decoration: underline; }
+  .single a:hover {
+    color: #ee7600; }
+
 1em 2em 3em
 html {
   box-sizing: border-box;
@@ -495,11 +501,6 @@ h3.people-title {
   font-size: 1em; }
   h3.people-title:hover {
     cursor: pointer; }
-
-.separate {
-  border-top: 2.5px dashed #2cb5e8;
-  background-color: #fff;
-  margin: 2em 0 1em; }
 
 /*--------------------------------------------------------------
 # Forms
@@ -989,7 +990,7 @@ a {
   overflow: hidden; }
 
 .citystudio-banner-short {
-  background: url("../../images/citystudio-logo.png"), #0082b9;
+  background: url("../../images/citystudio-logo-lighter.png"), #0082b9;
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
@@ -1453,8 +1454,7 @@ object {
 /* Tag Archive Page */
 .tag-archives {
   background-color: #0082b9;
-  padding-top: 2em;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  padding-top: 2em; }
   .tag-archives main {
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -1469,6 +1469,7 @@ object {
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
     width: 90vw;
     padding: 0 0.5em;
@@ -2640,28 +2641,39 @@ a {
   margin: 0 auto; }
 
 .team-container {
-  margin: 4em 2em; }
-
-.citystudio-teams ul {
+  margin: 4em 2em;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between; }
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .team-container .section-titles {
+    -webkit-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+            flex: 0 1 100%;
+    margin-bottom: 2em;
+    text-align: center; }
 
-.citystudio-teams h2 {
-  -webkit-flex: 0 1 100%;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-  margin-bottom: 2em;
-  text-align: center; }
+.citystudio-teams {
+  padding-bottom: 2em; }
+  .citystudio-teams ul {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-flex: 0 0 100%;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    border-bottom: 2.5px dashed #2cb5e8; }
 
 .team {
   display: -webkit-flex;
@@ -2673,17 +2685,13 @@ a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  max-height: 180px;
-  min-height: 340px;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 340px;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
   text-align: center; }
   .team .team-pic {
     -webkit-flex: 0 1 100%;
@@ -2760,8 +2768,10 @@ article.people {
       -ms-flex: 0 1 60%;
           flex: 0 1 60%; }
 
-.person-name h1, .person-name p {
-  color: #2cb5e8; }
+.person-name {
+  border-bottom: 2.5px dashed #2cb5e8; }
+  .person-name h1, .person-name p {
+    color: #2cb5e8; }
 
 .static-return-button a {
   font-size: 1.3em;
