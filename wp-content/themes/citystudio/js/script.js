@@ -1,10 +1,10 @@
 jQuery(document).ready(function($){
-     $(window).scroll(function(){
-      var sticky = $('.sticky-navigation'),
-          nav = $('.gallery-description-container'),
-          description = $('.nav-description'),
-          scroll = $(window).scrollTop(),
-          offset = nav.offset().top
+  $(window).scroll(function(){
+    var sticky = $('.sticky-navigation'),
+        nav = $('.gallery-description-container'),
+        description = $('.nav-description'),
+        scroll = $(window).scrollTop(),
+        offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
@@ -16,12 +16,16 @@ jQuery(document).ready(function($){
     }
   });
 
+
+  $("#primary-menu li a").click(function(){
+      $(".sub-menu").toggleClass("show-menu");
+  });
+
+
 });
 function myFunction() {
     var hamburger = document.getElementById("hamburgerMenu");
-
     hamburger.classList.toggle("show");
-
 }
 // Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
@@ -31,11 +35,6 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-
-  $("#primary-menu li a").click(function(){
-      $(".sub-menu").toggleClass("show-menu");
-  });
-
   $(".hamburger").click(function(){
       $("i", this).toggleClass("fa-bars fa-times-circle");
     });
