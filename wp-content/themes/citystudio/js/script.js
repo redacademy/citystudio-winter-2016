@@ -16,9 +16,6 @@ jQuery(document).ready(function($){
     }
   });
 
-
- 
-
 });
 function myFunction() {
   var hamburger = document.getElementById("hamburgerMenu");
