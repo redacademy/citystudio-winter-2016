@@ -132,6 +132,44 @@
     padding-top: 2rem;
   }
 }
+
+
+// Project Gallery
+
+.section-archive-partners {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 1.5rem auto;
+  max-width: 90vw;
+
+  @include desktop {
+    margin: 1rem 4rem 0;
+  }
+}
+
+.partner-projects-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  li {
+    flex: 0 0 30%;
+    margin-bottom: 2em;
+    border: 1px solid transparent;
+    width: 360px;
+    height: 280px;
+    margin: 0 auto;
+    margin-bottom:1.5rem;
+    list-style: none;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+}
+
 .title-block-container {
   display: flex;
   justify-content: center;
@@ -165,32 +203,7 @@
     }
   }
 }
-.section-archive {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 1.5rem 1rem;
-  @include desktop {
-    margin: 1rem 4rem 0;
-  }
-  li {
-    border: 1px solid transparent;
-    &:hover {
-      border: 1px solid #000000;
-    }
-  }
-  li {
-    width:300px;
-    height:225px;
-    margin: 0 auto;
-    margin-bottom:1.5rem;
-    margin-right:1rem;
-    margin-left:1rem;
-    list-style: none;
-    border-radius: 2%;
-  }
-}
+
 .noshow{
 display: none;
 }

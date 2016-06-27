@@ -53,33 +53,24 @@ get_header(); ?>
 	      </div>
 			</div>
 <!-- loop for displaying projects -->
-<div class="section-archive">
-	<div class="noshow"><?php $school= the_field( 'school_abrev' );?></div>
-	<?php
-	$args = array(
-	'post_type' => 'project',
-	'numberposts' => 6,
-	'tax_query' => array (
-	'taxonomy' => 'partners',
-	'partners' => 'slug',
-	'terms' => $school
-	),
-	);
+<div class="section-archive-partners">
 
-	$latest_posts = get_posts( $args );?>
+			<?php
+				global $post;
+				$school = $post_slug=$post->post_name;
 
-	<?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
+				if ( is_single( $school ) ) {
+
+					get_template_part( 'template-parts/school', $school);
+
+				} else {
+				  //everything else
+				}
+			?>
 
 
-	<a href="<?php echo esc_url( get_permalink() ); ?>" >
-	<li style=
-	  "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
-	   background-size: cover;
-	   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);">
-	</li>
-	</a>
-	<?php endforeach; wp_reset_postdata(); ?>
-</div>
+
+</div><!-- .section-archive -->
 
 
 		<hr class="separate-white">
