@@ -16,9 +16,6 @@ jQuery(document).ready(function($){
     }
   });
 
-
- 
-
 });
 function myFunction() {
   var hamburger = document.getElementById("hamburgerMenu");
@@ -32,14 +29,10 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-<<<<<<< HEAD
   $(".hamburger").click(function(e){
     e.preventDefault();
       $("i", this).toggleClass("fa-bars fa-times-circle");
-=======
-  $(".fa-bars").click(function(){
-      $(this).toggleClass("fa-bars fa-times-circle");
->>>>>>> fix_menu
+
     });
 
   $("#primary-menu li a").click(function(e){

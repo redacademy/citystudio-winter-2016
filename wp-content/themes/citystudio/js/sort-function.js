@@ -20,10 +20,14 @@ jQuery(document).ready(function($) {
   // Sort navigation is open on page load on mobile
   $('#sort').resize(function(){
       $('#sort.nav-div').addClass('open');
+
   });
 
   $('#sort_nav').click(function() {
     $('#sort').toggleClass('open');
+    $('.theme-labels').toggleClass('show-labels');
+    $('.part-labels').toggleClass('show-labels');
+    $('.year-labels').toggleClass('show-labels');
   }); // close sort
 
   // Sort navigation dlides out on desktop when clicked
