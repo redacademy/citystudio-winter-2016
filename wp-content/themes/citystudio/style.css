@@ -2046,7 +2046,8 @@ a {
           flex-wrap: wrap;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
-          justify-content: space-between; }
+          justify-content: space-between;
+  width: 100%; }
   .partner-projects-gallery li {
     -webkit-flex: 0 0 30%;
         -ms-flex: 0 0 30%;
