@@ -18,10 +18,10 @@
   transition: width 1s ease-in;
   margin-right: 4em;
   @include desktop {
-    height: 84px;
+    height: 89px;
+    width: 88px;
     z-index: 2 !important;
     position: relative !important;
-    width: 86px;
     border-radius: 70px;
     display: flex;
     flex-direction: row;
@@ -51,7 +51,7 @@
     width: 480px;
     margin: 0;
     max-width: 3rem;
-    height: 2.3rem;
+    height: 2.6rem;
     transition: all 1s ease-in;
   }
   label{
@@ -65,8 +65,8 @@
   height: 80px;
   transition: width 1s ease-in;
   @include desktop {
-    min-width: 480px;
-    height: 84px;
+    min-width: 520px;
+    height: 90px;
     position: relative !important;
     flex-basis: 25%;
     order: 1;
@@ -100,6 +100,8 @@
   height: 5rem;
   border-radius: 45px;
     @include desktop {
+      width: 5.6rem;
+      height: 5.6rem;
   }
 }
 .themes {
@@ -110,9 +112,9 @@
   background-color: #03648c;
   transition: all 1s ease-in;
   @include desktop {
-    width: 5.3rem;
-    height: 5.3rem;
-    background-size: 35px 45px;
+     background-size: 35px 45px;
+     width: 5.6rem;
+     height: 5.6rem;
   }
 }
 .partners {
@@ -121,8 +123,6 @@
   background-color: #03648c;
   transition: all 1.5s ease-in;
   @include desktop {
-    width: 5.3rem;
-    height: 5.3rem;
     background-size: 45px 60px;
   }
 }
@@ -132,7 +132,6 @@
   background-color: #03648c;
   transition: all 2s ease-in;
   @include desktop {
-    width: 5.2rem;
     height: 5.3rem;
     background-size: 45px 45px;
   }
@@ -149,6 +148,7 @@
     height: 5rem;
     right: -2px;
     background-size: 45px 45px;
+    
   }
 }
 .nav-sub-menu input[type=checkbox] {
@@ -330,7 +330,7 @@
     display: inline-flex;
     float: left;
     padding: 0;
-    height: 120px;
+    height: 130px;
     transition: height 1.2s ease;
     padding-left: 2rem;
   }
