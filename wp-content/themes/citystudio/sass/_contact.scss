@@ -31,6 +31,7 @@ iframe {
   width: 90%;
   padding: 0.25em 0.75em;
   height: 2rem;
+box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include desktop {
     height: 4rem;
     margin-bottom: 1rem;
@@ -53,7 +54,19 @@ flex-direction: row;
 }
 
 .contact-info-container{
-
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 4em auto;
+  h3, p{
+  color: #ffffff;
+  font-family: $fontfamily;
+}
+  p{
+  font-weight: lighter;
+}
 }
 
 

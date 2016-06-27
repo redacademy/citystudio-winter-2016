@@ -32,8 +32,6 @@ get_header();
 			<div class="person-name">
 				<?php the_title('	<h1 class="people-title">', '</h1>' ); ?>
 				<p class="role"><?php the_field( 'team_member_role' ); ?></p>
-
-        <hr class="separate" />
 			</div>
 
 			<p>

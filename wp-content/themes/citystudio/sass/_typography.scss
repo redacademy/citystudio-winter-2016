@@ -134,3 +134,15 @@ h2.page-titles {
 	font-weight: 700;
 	text-transform: none;
 }
+
+// Links in paragraphs
+
+.single a {
+
+	color: $city-blue;
+	text-decoration: underline;
+
+	&:hover {
+		color: $ciystudio-orange;
+	}
+}

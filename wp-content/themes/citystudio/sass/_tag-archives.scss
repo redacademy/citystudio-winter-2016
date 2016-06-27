@@ -7,6 +7,7 @@
   background-color: $medium-blue;
   padding-top: 2em;
 
+
   main {
     display: flex;
     justify-content: center;
@@ -17,6 +18,7 @@
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     font-size: 1.5rem;
     width: 90vw;
     padding: 0 0.5em;
@@ -61,6 +63,7 @@
     flex: 0 0 33%;
     background-position: center center !important;
     background-size: cover !important;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     max-width: 360px;
     max-height: 280px;
     margin-bottom: 1rem;
@@ -93,6 +96,7 @@
 
   &:hover {
     display: flex;
+    border: 2px solid #fff;
     justify-content: center;
     flex-wrap: wrap;
     align-items: center;
@@ -113,7 +117,7 @@
   text-align: center;
 }
 
-.tag-subtitle p{
+.tag-subtitle p {
   width: 100%;
   flex: 0 2 100%;
   font-family: $fontfamily;
