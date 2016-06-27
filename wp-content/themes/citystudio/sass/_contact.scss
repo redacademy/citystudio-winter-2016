@@ -31,7 +31,7 @@ iframe {
   width: 90%;
   padding: 0.25em 0.75em;
   height: 2rem;
-box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include desktop {
     height: 4rem;
     margin-bottom: 1rem;
@@ -47,29 +47,26 @@ box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     }
   }
 }
-
-.contact-content{
-display: flex;
-flex-direction: row;
+.contact-content {
+  display: flex;
+  flex-direction: row;
 }
-
-.contact-info-container{
+.contact-info-container {
   display: flex;
   width: 50%;
   flex-direction: column;
   text-align: center;
   align-items: center;
   margin: 4em auto;
-  h3, p{
-  color: #ffffff;
-  font-family: $fontfamily;
+  h3,
+  p {
+    color: #ffffff;
+    font-family: $fontfamily;
+  }
+  p {
+    font-weight: lighter;
+  }
 }
-  p{
-  font-weight: lighter;
-}
-}
-
-
 .contact-form-container {
   width: 40%;
   padding: 2em 0 2em 4em;
@@ -92,7 +89,24 @@ flex-direction: row;
     color: $city-blue;
   }
 }
-.frm_other_input, #field_nmmsb {
+.frm_form_field {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  label {
+    color: white;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    width: 80%;
+  }
+}
+#frm_field_68_container,
+#frm_field_67_container {
+  box-shadow: none !important;
+}
+#field_g5aab {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+}
+.frm_other_input,
+#field_nmmsb {
   width: 251px !important;
 }
 input[type='email']:focus {
@@ -107,7 +121,7 @@ input[type='email']:focus {
     width: 150px !important;
     text-transform: uppercase !important;
     letter-spacing: 2px !important;
-    box-shadow: none !important;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2) !important;
     &:hover {
       background-color: lighten($city-blue, .5) !important;
     }

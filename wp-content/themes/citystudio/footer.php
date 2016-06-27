@@ -47,7 +47,7 @@
 							<li>Projects</li>
 							<li>Campus Courses</li>
 							<li>For Students</li>
-							<li>Partners</li>
+							<li>Participating Schools</li>
 						</ul>
 
 					</div>
@@ -65,7 +65,7 @@
 
 
 		</footer><!-- #colophon -->
-		<div class="copyright">© Copyright CityStudio Vancouver</div>
+		<div class="copyright">© Copyright <?php echo date("Y") ?> CityStudio Vancouver</div>
 	</div><!-- #content -->
 		<?php wp_footer(); ?>
 	</body>
