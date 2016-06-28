@@ -68,8 +68,6 @@ get_header(); ?>
 				}
 			?>
 
-
-
 </div><!-- .section-archive -->
 
 
