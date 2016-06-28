@@ -112,6 +112,9 @@
       cursor: pointer;
       color: $light_blue;
     }
+  .menu-item {
+  background-color: transparent;
+}
   }
   @include footer-1-col{
     display: none;
