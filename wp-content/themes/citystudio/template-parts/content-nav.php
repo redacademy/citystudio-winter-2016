@@ -3,7 +3,7 @@
 		<label>Sort</label>
 	</div>
 
-	<div class="themes menu-item">
+	<div class="themes sort-menu-item">
 		<?php $terms = get_terms( 'themes', array (
 			'hide_empty' => 0,
 		) ); ?>
@@ -24,7 +24,7 @@
 		</div>
 	</div>
 
-	<div class="partners menu-item">
+	<div class="partners sort-menu-item">
 		<?php $terms = get_terms( 'partners', array (
 			'hide_empty' => 0,
 		) ); ?>
@@ -45,7 +45,7 @@
 		</div>
 	</div>
 
-	<div class="years menu-item">
+	<div class="years sort-menu-item">
 		<?php $terms = get_terms( 'year', array (
 			'hide_empty' => 0,
 		) ); ?>

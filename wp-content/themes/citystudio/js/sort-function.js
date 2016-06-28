@@ -56,7 +56,7 @@ jQuery(document).ready(function($) {
 
   // If the input label is visible,
   // find nav-sub-menu and add class current-menu
-  $('.menu-item').mouseover(function(){
+  $('.sort-menu-item').mouseover(function(){
     var labelVisible = $(this).children('div').find('label').length;
      if(!labelVisible){
       $(this).children('.nav-sub-menu').addClass('current-menu');
@@ -64,7 +64,7 @@ jQuery(document).ready(function($) {
   });
 
   // Remove class current-menu if mouse isn't hovering over menu-item
-  $('.menu-item').mouseout(function(){
+  $('.sort-menu-item').mouseout(function(){
       $(this).children('.nav-sub-menu').removeClass('current-menu');
    });
 
