@@ -124,10 +124,15 @@ font-size: 1.1rem;
     width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
-  a img{
+  li {
       border: 1px solid transparent;
+      flex: 0 0 30%;
+      height: 250px;
+      margin-bottom: 2em;
+      box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     &:hover{
       border:1px solid #000000;
+      cursor: pointer;
     }
   }
 }

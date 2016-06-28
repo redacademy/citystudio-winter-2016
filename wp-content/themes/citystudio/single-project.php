@@ -1,6 +1,6 @@
 <?php
 /**
-* Template Name: Single Project
+* Template Name: Single Project.
 */
 get_header();
 ?>
@@ -15,7 +15,7 @@ get_header();
 
 		<header class="citystudio-banner">
 			<div class="banner-inner">
-				<?php the_title( '<h1 class="page-titles">', '</h1>' ); ?>
+				<?php the_title('<h1 class="page-titles">', '</h1>'); ?>
 			</div>
 		</header>
 
@@ -35,8 +35,8 @@ get_header();
         <span class="proj-partners proj-detail-wrap">
           <h3>School &amp; Course:</h3>
 				<p><?php the_field('participating_school'); ?>
-				 <?php if( have_rows('course_name') );
-							while ( have_rows('course_name') ) : the_row(); ?>
+				 <?php if (have_rows('course_name'));
+                            while (have_rows('course_name')) : the_row(); ?>
 						<?php the_sub_field('course_name') ?>
 						<?php endwhile; ?></p>
         </span>
@@ -72,35 +72,45 @@ get_header();
 <!-- media fields -->
         <span class="proj-subtitle proj-detail-wrap">
 					<?php
-						$value = get_field( 'activate_media' );
-						if( $value ) { ?>
+                        $value = get_field('activate_media');
+                        if ($value) {
+                            ?>
           <h3>Media:</h3>
 <!-- linking media -->
 					<?php
-						if( have_rows('project_media') );
-						while ( have_rows('project_media') ) : the_row(); ?>
+                        if (have_rows('project_media'));
+                            while (have_rows('project_media')) : the_row();
+                            ?>
 						<p class="media-links">
 							<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_title') ?> </a>
 						</p>
-						<?php endwhile; ?>
+						<?php endwhile;
+                            ?>
 <!-- file media upload -->
 						<?php
-							if( have_rows('project_media_2') );
-							while ( have_rows('project_media_2') ) : the_row(); ?>
+                            if (have_rows('project_media_2'));
+                            while (have_rows('project_media_2')) : the_row();
+                            ?>
 							<p class="media-links">
-								<?php if( get_sub_field('file_upload') ): ?>
-									<a href="<?php the_sub_field('file_upload'); ?>" ><?php the_sub_field('file_name'); ?></a>
-								<?php endif; ?>
+								<?php if (get_sub_field('file_upload')): ?>
+									<a href="<?php the_sub_field('file_upload');
+                            ?>" ><?php the_sub_field('file_name');
+                            ?></a>
+								<?php endif;
+                            ?>
 							</p>
-							<?php endwhile; ?>
+							<?php endwhile;
+                            ?>
 <!-- embed video or image media-->
 						<div class="embed-container">
-							<?php the_field('embed_video'); ?>
+							<?php the_field('embed_video');
+                            ?>
 						</div>
-						<?php } else {
-									echo '';
-								}
-						?>
+						<?php
+                        } else {
+                            echo '';
+                        }
+                        ?>
         </span>
       </div> <!-- end .col-two -->
     </div> <!-- end section-credits content-wrapper -->
@@ -115,67 +125,75 @@ get_header();
 
 			<?php
 
-						$value = get_field( 'activate_scalability' );
+                        $value = get_field('activate_scalability');
 
-						if( $value ) { ?>
+                        if ($value) {
+                            ?>
 			<div class="scalability-wrap">
-				<h3><?php the_field('scalability_title'); ?></h3>
-					<span class="proj-scalability"><?php the_field('scalability'); ?></span>
+				<h3><?php the_field('scalability_title');
+                            ?></h3>
+					<span class="proj-scalability"><?php the_field('scalability');
+                            ?></span>
 			</div>
-		<?php } else {
-					echo '';
-				}
-		?>
+		<?php
+                        } else {
+                            echo '';
+                        }
+        ?>
 
 		<?php
 
-					$value = get_field( 'activate_stewardship' );
+                    $value = get_field('activate_stewardship');
 
-					if( $value ) { ?>
+                    if ($value) {
+                        ?>
 			<div class="scalability-wrap">
-	    		<h3><?php the_field('stewardship_title'); ?></h3>
-    				<span class="proj-stewardship"><?php the_field('stewardship'); ?></span>
+	    		<h3><?php the_field('stewardship_title');
+                        ?></h3>
+    				<span class="proj-stewardship"><?php the_field('stewardship');
+                        ?></span>
 			</div>
-			<?php } else {
-						echo '';
-					}
-			?>
+			<?php
+                    } else {
+                        echo '';
+                    }
+            ?>
 <!-- image bar -->
 <div class="image-bar">
 	<?php
-	if( have_rows('image_bar') );
-	while ( have_rows('image_bar') ) : the_row(); ?>
+    if (have_rows('image_bar'));
+    while (have_rows('image_bar')) : the_row(); ?>
 		<img src ="<?php the_sub_field('additional_image') ?>" />
 	<?php endwhile; ?>
 </div>
   <div class="tags-wrapper">
 		<h3>Tags:</h3>
 	<div class="tags">
-						<?php the_tags( '<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
+						<?php the_tags('<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
     					<?php $id = get_the_id(); ?>
-     				    <?php  $terms = get_the_terms	( $id, 'partners' );
-    				      if ( !empty($terms)) : ?>
-    				        <?php foreach ( $terms as $term )  :
-    				        	$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'partners') . '">' . $name . '</a>' . '</p>';
-    					     ?>
+     				    <?php  $terms = get_the_terms($id, 'partners');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'partners').'">'.$name.'</a>'.'</p>';
+                             ?>
     					      <?php endforeach; ?>
     					    <?php endif; ?>
-    					      <?php  $terms = get_the_terms( $id, 'season' );
-    				      if ( !empty($terms)) : ?>
-    				        <?php foreach ( $terms as $term )  :
-    							$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'season') . '">' . $name . '</a>' . '</p>';
-    				            ?>
+    					      <?php  $terms = get_the_terms($id, 'season');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'season').'">'.$name.'</a>'.'</p>';
+                                ?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
-    				  
-    				      <?php  $terms = get_the_terms( $id, 'themes' );
-    				      if ( !empty($terms)) : ?>
-    				        <?php foreach ( $terms as $term )  :
-    							$name = $term->name;
-    				       		echo '<p class="tag-links">' . '<a class="tag-url" href="' . get_term_link($term->slug, 'themes') . '">' . $name . '</a>' . '</p>';
-    				       		?>
+
+    				      <?php  $terms = get_the_terms($id, 'themes');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
+                                   ?>
     				      <?php endforeach; ?>
     				      <?php endif; ?>
     			  </div>
