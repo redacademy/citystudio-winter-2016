@@ -864,10 +864,11 @@ a {
   @media screen and (max-width: 375px) {
     .header-nav li ul {
       display: none;
-      top: -6.4em;
+      top: -3em;
       position: relative;
       font-size: 10px;
-      left: 2em; } }
+      left: 11em;
+      width: 65%; } }
 
 .header-nav li ul:nth-child(1) {
   left: 80px; }
@@ -881,7 +882,7 @@ a {
   border: none; }
   @media screen and (max-width: 375px) {
     .header-nav li ul li {
-      height: 3em; } }
+      height: 1em; } }
 
 .header-nav ul > li:hover ul li {
   height: .95em; }
@@ -903,7 +904,7 @@ a {
     margin: 1em; }
     .sub-menu li a {
       margin: .4em 0;
-      font-size: 2em; } }
+      font-size: 1.5em; } }
 
 @media screen and (max-width: 375px) {
   .sub-menu.show-menu {
@@ -913,9 +914,6 @@ a {
     top: -3em; }
     .sub-menu.show-menu li a {
       font-size: 1.5em; } }
-
-.show-menu {
-  height: 200px; }
 
 /*--------------------------------------------------------------
 # Widgets
