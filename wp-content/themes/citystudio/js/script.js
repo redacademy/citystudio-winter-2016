@@ -29,7 +29,7 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-  $(".hamburger").click(function(e){
+  $("#hamburgerMenu").click(function(e){
     e.preventDefault();
       $("i", this).toggleClass("fa-bars fa-times-circle");
 
@@ -39,19 +39,12 @@ jQuery(document).ready(function($){
 
 
     menuSubmenu.show(); 
-      
-    // menuSubmenu.toggle(function(){
-    //   $(".header-nav li ul li").css("height: 3em"),
-    //   function(){
-    //      $(".sub-menu li a").css("margin: -1.6em")
-    //   }
-
-    // });
 
     $(document).ready(function(){
       $(".header-nav li ul li").toggle(
       function(){$(".header-nav li ul li").css({"height": "3em"});},
-      function(){$(".header-nav li ul li").css({"height": "0"});
+      function(){$(".header-nav ul>li:hover ul li").css({"height": "0em"});
+      // why doesn't this work?>>>><<<<</
     });
 });
 
