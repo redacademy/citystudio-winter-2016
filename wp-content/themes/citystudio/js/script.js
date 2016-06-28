@@ -43,8 +43,6 @@ jQuery(document).ready(function($){
     $(document).ready(function(){
       $(".header-nav li ul li").toggle(
       function(){$(".header-nav li ul li").css({"height": "3em"});},
-      function(){$(".header-nav ul>li:hover ul li").css({"height": "0em"});
-      // why doesn't this work?>>>><<<<</
     });
 });
 
