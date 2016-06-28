@@ -89,6 +89,7 @@
 .hamburger-menu{
   width: 50px;
   height: 50px;
+
 }
 .dropdown-content {
   display: none;
@@ -157,6 +158,7 @@
   margin:0;
   padding: 0em .2em 0 .3em;
   background: #f9f9f9;
+
   @include iphone6{
     padding: 0;
   }
@@ -207,10 +209,11 @@
   background-color: #f9f9f9;
     @include iphone6{
       display: none;
-      top: -6.4em;
+      top: -3em;
       position: relative;
       font-size: 10px;
-      left: 2em;
+      left: 11em;
+      width: 65%;
     }
   }
 .header-nav li ul:nth-child(1) {
@@ -227,7 +230,7 @@
   transition:height 300ms ease-in;
   border: none;
   @include iphone6{
-    height: 3em;
+    height: 1em;
   }
 }
 .header-nav ul > li:hover ul li {
@@ -250,13 +253,14 @@
 .sub-menu{
   li a{
       font-size: 16px;
+
   }
   @include iphone6{
     margin: 1em;
 
     li a{
         margin: .4em 0;
-        font-size: 2em;
+        font-size: 1.5em;
     }
   }
 }
@@ -271,8 +275,4 @@
         font-size: 1.5em;
     }
   }
-}
-
-.show-menu{
-  height: 200px;
 }

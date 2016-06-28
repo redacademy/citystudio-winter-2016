@@ -35,9 +35,31 @@ jQuery(document).ready(function($){
 
     });
 
-  $("#primary-menu li a").click(function(e){
-    e.preventDefault();
-      $(".sub-menu").toggleClass("show-menu");
-  });
+  var menuSubmenu = $(".menu").children().children();
+
+
+    menuSubmenu.show(); 
+      
+    // menuSubmenu.toggle(function(){
+    //   $(".header-nav li ul li").css("height: 3em"),
+    //   function(){
+    //      $(".sub-menu li a").css("margin: -1.6em")
+    //   }
+
+    // });
+
+    $(document).ready(function(){
+      $(".header-nav li ul li").toggle(
+      function(){$(".header-nav li ul li").css({"height": "3em"});},
+      function(){$(".header-nav li ul li").css({"height": "0"});
+    });
+});
+
 
 });
+
+
+
+
+
+
