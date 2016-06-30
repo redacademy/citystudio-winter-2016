@@ -40,7 +40,7 @@
 						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
 					</span>
 				<div class="icon-menu">
-					<button onclick="myFunction()" class="hamburger"><i class="fa fa-bars"></i></button>
+					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i></button>
 					<div id="hamburgerMenu" class="dropdown-content">
 						<nav class="header-nav">
 	  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
@@ -49,4 +49,3 @@
 				</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->
-			<div id="content" class="site-content">

@@ -41,25 +41,27 @@
 						</ul>
 					</div>
 
+
 					<div class="footer-info-block1">
 						<h3>Keep Exploring</h3>
-						<ul>
-							<li>Projects</li>
+
+	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-keep-exploring' ) ); ?>
+							<!-- <li>Projects</li>
 							<li>Campus Courses</li>
 							<li>For Students</li>
-							<li>Participating Schools</li>
-						</ul>
+							<li>Participating Schools</li> -->
+
 
 					</div>
 
 					<div class="footer-info-block2">
 						<h3>CITYSTUDIO</h3>
-						<ul>
-							<li>Contact Us</li>
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-citystudio' ) ); ?>
+							<!-- <li>Contact Us</li>
 							<li>People</li>
 							<li>Consulting</li>
-							<li>Blog</li>
-						</ul>
+							<li>Blog</li> -->
+
 					</div>
 			</div><!-- end footer info container -->
 
