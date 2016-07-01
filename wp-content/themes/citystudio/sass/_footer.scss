@@ -27,27 +27,24 @@
   display: block;
   height: 3rem;
   width: 11em;
-  margin-bottom: 1em;
   img {
     opacity: 0.4;
   }
   @include desktop {
     width: 17em;
-  }
-  @include iphone6{
-    height: 4em;
-    padding-top: 2%;
+    margin-bottom: 1em;
   }
 }
 .social-icons-div {
   display: flex;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
   width: 190px;
-  @include iphone6{
-  width: 42%;
-    padding-left: 5.6em;
+  @include desktop {
+    justify-content: flex-start;
+    margin-bottom: 0px;
   }
 }
 .social-icons {
@@ -67,12 +64,12 @@
   }
 }
 .footer-info-container {
-  display: flex;
-  flex-direction: row;
-  margin-right: 2rem;
-  @include iphone6 {
-    margin: 0;
-    display: none;
+  margin: 0;
+  display: none;
+  @include desktop {
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
   }
 }
 .footer-info-block {
@@ -101,6 +98,7 @@
       color: white;
       font-family: $fontfamily;
       text-align: center;
+      text-decoration: none;
     }
     ul li {
       font-size: 0.85rem;
@@ -111,6 +109,7 @@
     li:hover, a:hover {
       cursor: pointer;
       color: $light_blue;
+      text-decoration: underline;
     }
   .menu-item {
   background-color: transparent;

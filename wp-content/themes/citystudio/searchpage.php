@@ -1,7 +1,8 @@
 <?php
 /**
-* Template Name: Search Results Page
+* Template Name:Search Page
  */
+//page id = 872
 get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -19,35 +20,20 @@ get_header(); ?>
 				</div>
 				<div class="search-list-container">
 					<ul class="search-list">
-						<?php
-$s=get_search_query();
-$args = array(
-                's' =>$s
-            );
-    // The Query
-$the_query = new WP_Query( $args );
-if ( $the_query->have_posts() ) {
-        _e("<h2 style='font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
-        while ( $the_query->have_posts() ) {
-           $the_query->the_post();
-                 ?>
+						<?php $loop = new WP_Query(array('post_type' => 'project', 'posts_per_page' => 12)); ?>
+						<?php while ($loop->have_posts()) : $loop->the_post(); ?>
 						<li style=
 		            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
 		             background-size: cover;
 								">
 						<a href="<?php echo get_the_permalink();?>">
+							<!-- <div class="tag-description">
+						 	 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
+						 	 <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+						  </div> -->
 						</a>
 						</li>
-						<?php
-						        }
-						    }else{
-						?>
-						        <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
-						        <div class="alert alert-info">
-						          <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
-						        </div>
-						<?php } ?>
-					<?php wp_reset_query(); ?>
+					<?php endwhile; wp_reset_query(); ?>
 					</ul>
 				</div>
 			</div>

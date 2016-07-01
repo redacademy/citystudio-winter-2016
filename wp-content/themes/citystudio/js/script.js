@@ -41,10 +41,9 @@ jQuery(document).ready(function($){
     menuSubmenu.show(); 
 
     $(document).ready(function(){
-      $(".header-nav li ul li").click(function{
-        alert('holy fuck');
+      $(".header-nav li ul li").click(function(){
       });
-});
+  });
 
 
 });

@@ -50,26 +50,6 @@ get_header(); ?>
 			</div>
 <!-- loop for displaying projects -->
 
-<div class="section-archive-partners">
-
-			<?php
-				global $post;
-				$school = $post_slug=$post->post_name;
-
-				if ( is_single( $school ) ) {
-
-					get_template_part( 'template-parts/school', $school);
-
-				} else {
-				  //everything else
-				}
-			?>
-
-</div><!-- .section-archive -->
-
-
-		<hr class="separate-white">
-
 		<div class="section-archive-partners">
 				<?php
                 global $post;
