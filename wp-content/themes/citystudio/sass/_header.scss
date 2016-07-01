@@ -14,7 +14,8 @@
   justify-content: space-between;
   background-color: #ffffff;
   @include iphone6 {
-    // position: fixed;
+    width: 100%;
+    position: fixed;
     z-index: 3;
   }
 }
@@ -158,6 +159,7 @@ margin-right: 0;
     padding: 3em 8em .5em;
     height: 544px;
     font-size: .8em;
+    position: fixed;
     }
   }
 
