@@ -37,14 +37,13 @@ jQuery(document).ready(function($){
   $('.hamburger').toggle(function() {
     $("i", this).addClass("fa-times-circle")
 }, function() {
-       $("i", this).removeClass("fa-times-circle");
-       $("i", this).addClass("fa-bars");
+     $("i", this).removeClass("fa-times-circle");
+     $("i", this).addClass("fa-bars");
 
 });
 
   var menuSubmenu = $(".menu").children().children();
-
-
+  
     menuSubmenu.show(); 
 
     $(document).ready(function(){
