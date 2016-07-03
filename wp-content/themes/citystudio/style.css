@@ -831,14 +831,12 @@ a {
       font-weight: 500; } }
 
 .header-nav ul li#menu-item-51 a {
-  background: url("../../images/arrow_down.png") no-repeat;
-  background-size: 25px 25px;
-  background-position: 65px 8px; }
+  background: url(../../images/arrow_down.png) 72px 15px no-repeat;
+  background-size: 13px 8px; }
   @media screen and (max-width: 375px) {
     .header-nav ul li#menu-item-51 a {
-      background: url("../../images/arrow_right.png") no-repeat;
-      background-size: 25px 25px;
-      background-position: 6%; } }
+      background: url(../../images/arrow_right.png) 20px no-repeat;
+      background-size: 9px 14px; } }
 
 .header-nav ul li#menu-item-51 ul li a {
   background: none; }
