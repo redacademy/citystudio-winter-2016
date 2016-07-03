@@ -868,6 +868,11 @@ a {
 
 .header-nav a:active {
   text-decoration: underline; }
+  .header-nav a:active ul li a {
+    display: block; }
+
+.header-nav a:not ul li a {
+  display: none; }
 
 .header-nav li ul {
   background-color: #f9f9f9; }

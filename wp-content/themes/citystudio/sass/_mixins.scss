@@ -56,7 +56,7 @@
 }
 
 @mixin iphone6-horizontal{
-	@media screen and (max-width: 375px){
+	@media screen and (max-width: 667px){
 	@content;
 	}
 }

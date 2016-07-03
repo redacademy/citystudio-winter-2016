@@ -29,11 +29,18 @@ window.onclick = function(e) {
 }
 
 jQuery(document).ready(function($){
-  $("#hamburgerMenu").click(function(e){
-    e.preventDefault();
-      $("i", this).toggleClass("fa-bars fa-times-circle");
 
+
+  $(".hamburger").click(function(){
+      $("i", this).removeClass("fa-bars");
     });
+  $('.hamburger').toggle(function() {
+    $("i", this).addClass("fa-times-circle")
+}, function() {
+       $("i", this).removeClass("fa-times-circle");
+       $("i", this).addClass("fa-bars");
+
+});
 
   var menuSubmenu = $(".menu").children().children();
 
@@ -41,7 +48,10 @@ jQuery(document).ready(function($){
     menuSubmenu.show(); 
 
     $(document).ready(function(){
-      $(".header-nav li ul li").click(function(){
+      $(".header-nav ul li#menu-item-51").toggle(function(){
+         $(this).children().children().css({"display": "block"});
+       },
+        function() { $(this).children().children().css({"display": "none"});
       });
   });
 
