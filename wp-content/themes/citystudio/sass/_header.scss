@@ -49,18 +49,24 @@
   justify-content: center;
   margin-right: 0.5rem;
 
+
   @include desktop {
     margin-right: 2rem;
   }
 }
 .icon-search {
   display: none;
+
   @include desktop {
     display: block;
     font-size: 2rem;
   }
   @include tablet {
     font-size: 1.75rem;
+  }
+
+  @include iphone6-horizontal{
+    display: none;
   }
   .fa {
     color: $light-blue;

@@ -730,6 +730,9 @@ a {
   @media screen and (max-width: 1024px) {
     .icon-search {
       font-size: 1.75rem; } }
+  @media screen and (max-width: 667px) {
+    .icon-search {
+      display: none; } }
   .icon-search .fa {
     color: #2cb5e8; }
     .icon-search .fa:hover {
