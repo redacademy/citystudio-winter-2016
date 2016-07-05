@@ -33,7 +33,7 @@ jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
       $("i", this).removeClass("fa-bars");
-        if ($(window).width() < 375){
+        if ($(window).width() <= 375){
         $('.header-container').css({"position": "fixed"})
       }
     });
