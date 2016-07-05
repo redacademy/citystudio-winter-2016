@@ -71,6 +71,7 @@ jQuery(document).ready(function($) {
   // Create an empty object to hold
   // the checked navigation values in the properties
   $('.sub-menu-theme').click(function() {
+
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();

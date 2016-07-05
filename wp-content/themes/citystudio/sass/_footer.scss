@@ -7,12 +7,16 @@
   flex-direction: column;
   background: $dark-blue;
   @include desktop {
-  flex-direction: row;
-}
+   flex-direction: row;
+  }
   @include iphone6 {
     position: relative;
     z-index: -1;
   }
+  @include iphone6-horizontal{
+
+  }
+
 }
 //Footer Branding----------------------
 .footer-branding-container {
@@ -42,7 +46,8 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   width: 190px;
-  @include desktop {
+  @include iphone6-horizontal {
+    display: inline;
     justify-content: flex-start;
     margin-bottom: 0px;
   }
@@ -76,12 +81,18 @@
   ul li {
     height: 5%;
   }
+  
+}
+
+.footer-info-block2{
+  @include iphone6-horizontal{
+      display: none;
+  }
 }
 
 .footer-info-block,
 .footer-info-block1,
 .footer-info-block2 {
-  display: none;
   @include desktop {
     display: block;
     color: white;
@@ -111,11 +122,11 @@
       color: $light_blue;
       text-decoration: underline;
     }
-  .menu-item {
-  background-color: transparent;
-}
+      .menu-item {
+      background-color: transparent;
+    }
   }
-  @include footer-1-col{
+  @include iphone6-horizontal{
     display: none;
   }
 }
