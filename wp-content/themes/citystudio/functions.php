@@ -69,7 +69,7 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
 /** Initialize search page***/
 
-function template_chooser($template)   
+function template_chooser($template)
 {
  global $wp_query;
  $post_type = get_query_var('post_type');
@@ -136,7 +136,7 @@ function slug_register_featured_image_url() {
 
  function add_my_post_types_to_query( $query ) {
 	 if ( is_home() && !is_admin() && $query->is_main_query() ) {
-			$query->set( 'post_type', array( 'project', 'partners', 'year', 'neighbourhood', 'theme') );
+			$query->set( 'post_type', array( 'project', 'partners', 'year', 'neighbourhood', 'themes') );
 		}
  }
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
@@ -207,3 +207,22 @@ require get_template_directory() . '/inc/template-tags.php';
  * Custom functions that act independently of the theme templates.
  */
 require get_template_directory() . '/inc/extras.php';
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function citystudio_widgets_init() {
+
+	register_sidebar( array(
+		'name'          => esc_html('searchform'),
+		'id'            => 'searchform',
+		'before_widget' => '<div class="searchform">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h2 class="rounded">',
+		'after_title'   => '</h2>',
+	) );
+
+}
+add_action( 'widgets_init', 'citystudio_widgets_init' );
+?>
