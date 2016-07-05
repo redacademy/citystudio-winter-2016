@@ -136,7 +136,8 @@ function slug_register_featured_image_url() {
 
  function add_my_post_types_to_query( $query ) {
 	 if ( is_home() && !is_admin() && $query->is_main_query() ) {
-			$query->set( 'post_type', array( 'project', 'partners', 'year', 'neighbourhood', 'themes') );
+
+			$query->set( 'post_type', array( 'project', 'partners', 'year', 'themes') );
 		}
  }
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
@@ -144,7 +145,7 @@ add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 add_action( 'rest_api_init', 'slug_register_featured_image_url' );
 
 function slug_get_featured_image_url( $object, $field_name, $request ) {
-    return wp_get_attachment_url( get_post_thumbnail_id( $object['id'] ));
+    return wp_get_attachment_url( get_post_thumbnail_id( $object['id']  ));
 }
 
 // Make the ACF image field the featured image field
