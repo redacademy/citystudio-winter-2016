@@ -174,7 +174,6 @@ jQuery(document).ready(function($) {
                     // galleryItems +=   featured();
                     galleryItems +=   'href="' + value.link + '">';
                     galleryItems +=   '<li class="gallery-image" style="background: url(' + value.featured_image_url + ');">';
-
                     galleryItems +=   '<div class="description">';
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';
