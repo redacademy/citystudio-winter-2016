@@ -33,13 +33,14 @@ jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
       $("i", this).removeClass("fa-bars");
+      $('.header-container').css({"position": "fixed"})
     });
   $('.hamburger').toggle(function() {
     $("i", this).addClass("fa-times-circle")
 }, function() {
      $("i", this).removeClass("fa-times-circle");
      $("i", this).addClass("fa-bars");
-
+     $('.header-container').css({"position": "relative"})
 });
 
   var menuSubmenu = $(".menu").children().children();

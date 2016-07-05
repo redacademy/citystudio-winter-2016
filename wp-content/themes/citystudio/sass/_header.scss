@@ -13,21 +13,21 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #ffffff;
-  // @include iphone6 {
-  //   width: 100%;
-  //   position: fixed;
-  //   z-index: 3;
-  // }
+
 }
 .site-branding {
   margin-right: 5em;
   @include desktop {
-  margin-right: 0;
+    margin-right: 0;
   }
+
 }
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
   width: 12rem;
+  @include iphone6-horizontal{
+    width: 18rem !important;
+  }
   @include desktop {
     width: 26rem;
     padding: 1.5rem 0 0.5rem 1rem;

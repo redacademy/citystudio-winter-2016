@@ -45,6 +45,10 @@
     font-size: 1.8rem;
     padding: 8.5% 12%;
   }
+
+  @include iphone6-horizontal{
+    font-size: 1rem;
+  }
   .orange-font {
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
   }

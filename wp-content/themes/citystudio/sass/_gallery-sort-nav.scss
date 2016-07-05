@@ -29,6 +29,10 @@
     transition: width .8s ease-in;
     margin: 17px 10px;
   }
+
+  @include iphone6-horizontal {
+    display: none;
+  }
 }
 .sort {
   display: flex;
@@ -383,6 +387,10 @@
   padding-left: 2em;
   }
   @include tablet{
+
+  }
+  @include iphone6-horizontal{
+    display: none;  
   }
  }
 .nav-description.fixed{
@@ -422,6 +430,9 @@
   height: 120px;
   display: block;
   @include iphone6{
+    display: none;
+  }
+  @include iphone6-horizontal{
     display: none;
   }
 }

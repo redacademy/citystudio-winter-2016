@@ -698,6 +698,9 @@ a {
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
   width: 12rem; }
+  @media screen and (max-width: 667px) {
+    .site-branding img {
+      width: 18rem !important; } }
   @media screen and (min-width: 480px) {
     .site-branding img {
       width: 26rem;
@@ -1303,20 +1306,11 @@ input[type='email']:focus {
   width: 100%;
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-pack: center;
-      justify-content: center; }
-=======
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      justify-content: center;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
->>>>>>> 7230348791b5622def9b75faa10f60d597b7b656
   .search-archive-header h1 {
     color: #fff;
     padding-top: 1rem;
@@ -1427,15 +1421,12 @@ input[type='email']:focus {
       cursor: pointer; }
 
 .alert-info {
-  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   text-align: center;
   margin: 1rem auto 5rem;
   border: 2px solid white;
@@ -1724,6 +1715,9 @@ object {
     .hero-blurb {
       font-size: 1.8rem;
       padding: 8.5% 12%; } }
+  @media screen and (max-width: 667px) {
+    .hero-blurb {
+      font-size: 1rem; } }
   .hero-blurb .orange-font {
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55); }
 
@@ -2204,6 +2198,9 @@ a {
           justify-content: space-between;
       transition: width .8s ease-in;
       margin: 17px 10px; } }
+  @media screen and (max-width: 667px) {
+    .nav-div {
+      display: none; } }
 
 .sort {
   display: -ms-flexbox;
@@ -2546,6 +2543,10 @@ a {
     transition: all .4s ease;
     padding-left: 2em; } }
 
+@media screen and (max-width: 667px) {
+  .sticky-navigation.fixed {
+    display: none; } }
+
 .nav-description.fixed {
   transition: all .8s ease;
   height: 80px;
@@ -2584,6 +2585,9 @@ a {
   height: 120px;
   display: block; }
   @media screen and (max-width: 375px) {
+    .gallery-description-container {
+      display: none; } }
+  @media screen and (max-width: 667px) {
     .gallery-description-container {
       display: none; } }
 
