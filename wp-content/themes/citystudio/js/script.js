@@ -33,7 +33,9 @@ jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
       $("i", this).removeClass("fa-bars");
-      $('.header-container').css({"position": "fixed"})
+        if ($(window).width() < 375){
+        $('.header-container').css({"position": "fixed"})
+      }
     });
   $('.hamburger').toggle(function() {
     $("i", this).addClass("fa-times-circle")
