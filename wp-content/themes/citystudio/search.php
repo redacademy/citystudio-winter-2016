@@ -12,11 +12,6 @@ get_header(); ?>
 						<?php get_search_form(); ?>
 					</div>
 				</header>
-				<div class="archive-blurb">
-					<p>
-						<?php the_field('archive_blurb') ?>
-					</p>
-				</div>
 				<div class="search-list-container">
 					<ul class="search-list">
 						<?php
@@ -27,25 +22,29 @@ $args = array(
     // The Query
 $the_query = new WP_Query( $args );
 if ( $the_query->have_posts() ) {
-        _e("<h2 style='font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
+        _e("<h2 style='display:none;font-weight:bold;color:#000'>Search Results for: ".get_query_var('s')."</h2>");
         while ( $the_query->have_posts() ) {
            $the_query->the_post();
                  ?>
-						<li style=
-		            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
-		             background-size: cover;
-								">
-						<a href="<?php echo get_the_permalink();?>">
-						</a>
-						</li>
+								 <a href="<?php echo get_the_permalink();?>">
+							 		<li style=
+							 				"background: url('<?php the_field('banner_image'); ?>') no-repeat center;
+							 				 background-size: cover;
+							 				">
+							 			<div class="tag-description">
+							 			 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
+							 			 <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+							 			</div>
+							 		</li>
+							 	</a>
 						<?php
 						        }
 						    }else{
 						?>
-						        <h2 style='font-weight:bold;color:#000'>Nothing Found</h2>
-						        <div class="alert alert-info">
-						          <p>Sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
-						        </div>
+						      <div class="alert alert-info">
+										<h2 style='font-weight:bold;color:#ffffff'>Nothing Found</h2>
+						        	<p>We're sorry, but nothing matched your search criteria. Please try again with some different keywords.</p>
+						      </div>
 						<?php } ?>
 					<?php wp_reset_query(); ?>
 					</ul>

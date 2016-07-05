@@ -10,7 +10,7 @@ get_header(); ?>
 				<header class="search-archive-header">
 					<h1>Project Archive</h1>
 					<div class="searchform-container">
-						<?php get_search_form(); ?>
+						<?php dynamic_sidebar( 'searchform' ); ?>
 					</div>
 				</header>
 				<div class="archive-blurb">
@@ -22,17 +22,17 @@ get_header(); ?>
 					<ul class="search-list">
 						<?php $loop = new WP_Query(array('post_type' => 'project', 'posts_per_page' => 12)); ?>
 						<?php while ($loop->have_posts()) : $loop->the_post(); ?>
-						<li style=
-		            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
-		             background-size: cover;
-								">
 						<a href="<?php echo get_the_permalink();?>">
-							<!-- <div class="tag-description">
-						 	 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
-						 	 <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
-						  </div> -->
+							<li style=
+			            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
+			             background-size: cover;
+									">
+								<div class="tag-description">
+							 	 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
+							 	 <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+							  </div>
+							</li>
 						</a>
-						</li>
 					<?php endwhile; wp_reset_query(); ?>
 					</ul>
 				</div>

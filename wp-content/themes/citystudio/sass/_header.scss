@@ -13,11 +13,11 @@
   -ms-flex-pack: justify;
   justify-content: space-between;
   background-color: #ffffff;
-  @include iphone6 {
-    width: 100%;
-    position: fixed;
-    z-index: 3;
-  }
+  // @include iphone6 {
+  //   width: 100%;
+  //   position: fixed;
+  //   z-index: 3;
+  // }
 }
 .site-branding {
   margin-right: 5em;
@@ -196,7 +196,7 @@
 }
 .header-nav a:active{
   text-decoration: underline;
-    ul li a{ 
+    ul li a{
       display: block;
    }
 }
