@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   h1 {
     color: #fff;
     padding-top: 1rem;
@@ -24,6 +25,7 @@
   width:100%;
   padding-right: 15rem;
   padding-left: 5.25rem;
+
   @include desktop {
     margin-top: 2rem;
   }
@@ -32,6 +34,7 @@
   background-color: #0082b9;
   fieldset {
     border: none;
+
   }
   label {
     display: -webkit-box;
@@ -52,6 +55,7 @@
     height: 1rem;
     border: 1px solid lightgrey;
     position: relative;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     @include desktop {
       height: 2.25rem;
     }
@@ -124,7 +128,7 @@ font-size: 1.1rem;
     width: 90%;
     margin: 0 auto;
     margin-top: 2rem;
-  li {
+  li, a {
       border: 1px solid transparent;
       flex: 0 0 30%;
       height: 250px;
@@ -135,4 +139,25 @@ font-size: 1.1rem;
       cursor: pointer;
     }
   }
+}
+
+.alert-info {
+display: flex;
+justify-content: center;
+flex-direction: column;
+text-align: center;
+margin: 1rem auto 5rem;
+border: 2px solid white;
+width: 65%;
+height: 250px;
+box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+p, h2 {
+color: #ffffff;
+font-weight: 300;
+margin: 1rem;
+}
+p {
+width: 80%;
+margin: 1rem 5rem 1rem 5rem;
+}
 }
