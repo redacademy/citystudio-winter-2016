@@ -14,15 +14,16 @@
   justify-content: space-between;
   background-color: #ffffff;
   @include iphone6 {
-    // position: fixed;
+    width: 100%;
+    position: fixed;
     z-index: 3;
   }
 }
 .site-branding {
-margin-right: 5em;
-@include desktop {
-margin-right: 0;
-}
+  margin-right: 5em;
+  @include desktop {
+  margin-right: 0;
+  }
 }
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -48,18 +49,24 @@ margin-right: 0;
   justify-content: center;
   margin-right: 0.5rem;
 
+
   @include desktop {
     margin-right: 2rem;
   }
 }
 .icon-search {
   display: none;
+
   @include desktop {
     display: block;
     font-size: 2rem;
   }
   @include tablet {
     font-size: 1.75rem;
+  }
+
+  @include iphone6-horizontal{
+    display: none;
   }
   .fa {
     color: $light-blue;
@@ -99,7 +106,6 @@ margin-right: 0;
 .hamburger-menu{
   width: 50px;
   height: 50px;
-
 }
 .dropdown-content {
   display: none;
@@ -111,8 +117,7 @@ margin-right: 0;
   top: 98px;
   z-index: 3;
   @include iphone6{
-    width: 27%;
-    width: 250px;
+    width: 186px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     margin-left: -126px;
     top: 70px;
@@ -123,15 +128,9 @@ margin-right: 0;
   transition: height .3s ease-in;
   text-decoration: none;
   display: block;
-  @include iphone6{
-    border: none !important;
-  }
   font-size: 22px;
     ul li{
       border-left: 2px solid grey !important;
-      @include iphone6{
-       border: none;
-      }
     }
 }
 .hamburger{
@@ -143,51 +142,22 @@ margin-right: 0;
 .show {
   display:block;
 }
+#primary-menu {
+  z-index: 3;
+  padding: .7em 0.7em;
+    @include iphone6{
+    padding: 3em 8em .5em;
+    height: 550px;
+    font-size: .8em;
+    position: fixed;
+    }
+  }
 .header-nav{
   border-top: 4px solid $light-blue;
   border-bottom: 4px solid $light-blue;
   background-color: #f7f9f9;
   @include iphone6{
     margin-left: -189px;
-  }
-}
-
-#primary-menu {
-  z-index: 3;
-  padding: .7em 0.7em;
-    @include iphone6{
-    padding: 3em 8em .5em;
-    height: 544px;
-    font-size: .8em;
-    }
-  }
-
-.header-nav ul {
-  *zoom:1;
-  list-style:none;
-  margin:0;
-  padding: 0em .2em 0 .3em;
-  background: #f9f9f9;
-
-  @include iphone6{
-    padding: 0;
-  }
-}
-.header-nav ul:before,.header-nav ul:after {
-  content:"";
-  display:table;
-}
-.header-nav ul:after {
-  clear:both;
-}
-.header-nav ul > li {
-  a{
-    img{
-      width: 30px;
-      height: 30px;
-      float: left;
-      margin-left: -9px;
-    }
   }
 }
 .header-nav a {
@@ -199,13 +169,25 @@ margin-right: 0;
   -moz-transition:height 300ms ease-in;
   -o-transition:height 300ms ease-in;
   transition:height 300ms ease-in;
+
     @include iphone6{
-      padding: 0px 2em 1em;
+      padding: 0px 2em 0em;
       font-size: 1.6em;
       font-weight: 500;
-      z-index: 8;
     }
 }
+.header-nav ul li#menu-item-51 a {
+    background: url(../../images/arrow_down.png) 72px 15px no-repeat;
+    background-size: 13px 8px;
+    @include iphone6{
+      background: url(../../images/arrow_right.png) 20px no-repeat;
+      background-size: 9px 14px;
+   }
+}
+.header-nav ul li#menu-item-51 ul li a {
+      background: none;
+  }
+
 .header-nav a:hover {
   font-weight: 700;
   background:#f7f9f9;
@@ -214,9 +196,44 @@ margin-right: 0;
 }
 .header-nav a:active{
   text-decoration: underline;
+    ul li a{ 
+      display: block;
+   }
+}
+.header-nav ul {
+  *zoom:1;
+  list-style:none;
+  margin:0;
+  padding: 0em .2em 0 .3em;
+  background: #f9f9f9;
+
+  @include iphone6{
+    padding: 0;
+  }
+}
+
+.header-nav ul:before,.header-nav ul:after {
+  content:"";
+  display:table;
+}
+.header-nav ul:after {
+  clear:both;
+
+}
+.header-nav ul > li {
+
+  a{
+    img{
+      width: 30px;
+      height: 30px;
+      float: left;
+      margin-left: -9px;
+    }
+  }
 }
 .header-nav li ul {
   background-color: #f9f9f9;
+
     @include iphone6{
       display: none;
       top: -3em;
@@ -249,8 +266,6 @@ margin-right: 0;
     height: 2.5em;
   }
 }
-.header-nav ul > li:hover ul li:last-child {
-}
 .menu-menu-container{
 
   @include iphone6{
@@ -263,25 +278,12 @@ margin-right: 0;
 .sub-menu{
   li a{
       font-size: 16px;
-
   }
   @include iphone6{
     margin: 1em;
 
     li a{
         margin: .4em 0;
-        font-size: 1.5em;
-    }
-  }
-}
-
-.sub-menu.show-menu{
-  @include iphone6{
-    transition: all .5s ease-in;
-    margin: 1em;
-    display: block;
-    top: -3em;
-    li a{
         font-size: 1.5em;
     }
   }

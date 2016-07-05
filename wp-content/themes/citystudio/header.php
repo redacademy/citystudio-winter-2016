@@ -37,7 +37,7 @@
 
 				<div class="search-gallery">
 					<span class="icon-search" aria-hidden="true">
-						<a href="<?php echo esc_url(home_url('/search-page?s='));?>"><i class="fa fa-search"></i></a>
+						<a href="<?php echo esc_url(home_url('home/search'));?>"><i class="fa fa-search"></i></a>
 					</span>
 				<div class="icon-menu">
 					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i></button>

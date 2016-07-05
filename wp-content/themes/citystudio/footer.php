@@ -45,11 +45,7 @@
 					<div class="footer-info-block1">
 						<h3>Keep Exploring</h3>
 
-	<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-keep-exploring' ) ); ?>
-							<!-- <li>Projects</li>
-							<li>Campus Courses</li>
-							<li>For Students</li>
-							<li>Participating Schools</li> -->
+					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-keep-exploring' ) ); ?>
 
 
 					</div>
@@ -57,11 +53,7 @@
 					<div class="footer-info-block2">
 						<h3>CITYSTUDIO</h3>
 					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-citystudio' ) ); ?>
-							<!-- <li>Contact Us</li>
-							<li>People</li>
-							<li>Consulting</li>
-							<li>Blog</li> -->
-
+			
 					</div>
 			</div><!-- end footer info container -->
 

@@ -67,11 +67,23 @@ function red_starter_minified_css( $stylesheet_uri, $stylesheet_dir_uri ) {
 }
 add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
+/** Initialize search page***/
+
+function template_chooser($template)   
+{
+ global $wp_query;
+ $post_type = get_query_var('post_type');
+ if( $wp_query->is_search && $post_type == 'projects' )
+ {
+	 return locate_template('search.php');  //  redirect to search.php
+ }
+ return $template;
+}
+add_filter('template_include', 'template_chooser');
+
 /**
  * Enqueue scripts and styles.
  */
-
-
 
 function citystudio_scripts() {
 	wp_enqueue_style ( 'font-awesome-cdn' , 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css', array(), '4.4.0');

@@ -150,6 +150,7 @@ jQuery(document).ready(function($) {
             var $gallery = $('.grid');
             var galleryItems = '';
 
+
               // Clear the Gallery after each sort data is added to repopulate the Gallery
               // $gallery.flickity('destroy'); -- how do we destroy the old grid now?
               $gallery.empty();

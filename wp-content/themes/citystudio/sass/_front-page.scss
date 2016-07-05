@@ -54,14 +54,15 @@
   color: #ee7600;
 }
 .homepage-titles {
-  margin: 1rem auto;
+  margin: 2rem auto;
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
   font-size: 1.7rem;
+  max-width: 94%;
   @include desktop {
     font-size: 2.3rem;
-    margin: 2.5em auto 1em;
+    margin: 2em auto 1em;
   }
 }
 .homepage-description {
@@ -100,13 +101,19 @@
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
   background-color: $color__background-lightblue;
-  padding: 4em;
+  padding: 2em;
+  @include desktop {
+    padding: 4em;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     max-width: 100%;
+    margin-bottom:0px;
+    @include desktop {
     margin-bottom: 3.5em;
+    }
   }
   li {
     height: 110px;
@@ -138,8 +145,14 @@
 }
 .featured {
   li {
+    flex: 1 0 50%;
+    max-width: 100px;
+    max-height: 100px;
+  @include desktop {
     flex: 1 0 30%;
     max-width: 300px;
+    max-height: 300px;
+  }
   }
 }
 .partners-title {
@@ -150,11 +163,20 @@
 }
 .featured-two {
   li {
-    flex: 1 0 30%;
+    // flex: 1 0 30%;
     cursor: auto;
+    flex: 1 0 50%;
+    max-width: 100px;
+    max-height: 100px;
+
+      @include desktop {
+      flex: 1 0 30%;
+      max-width: 200px;
+      max-height: 200px;
   }
   img {
-    max-width: 180px;
-    max-height: 180px;
+    max-width: 100px;
+    max-height: 100px;
+}
   }
 }
