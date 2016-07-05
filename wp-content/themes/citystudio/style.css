@@ -1803,6 +1803,10 @@ object {
       -webkit-flex: 1 0 25%;
           -ms-flex: 1 0 25%;
               flex: 1 0 25%; } }
+  .gallery-anchor li.gallery-image {
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important; }
 
 .gallery-anchor:first-child,
 .gallery-anchor:nth-child(6n),
@@ -1882,6 +1886,7 @@ object {
   text-transform: uppercase; }
 
 .featured-two li {
+  cursor: auto;
   -webkit-flex: 1 0 50%;
       -ms-flex: 1 0 50%;
           flex: 1 0 50%;

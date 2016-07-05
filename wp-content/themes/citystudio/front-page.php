@@ -49,7 +49,6 @@ get_header(); ?>
 
       <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
 
-        <?php $background = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() )); ?>
 
         <li style=
             "background: url('<?php the_field('banner_image'); ?>') no-repeat center;

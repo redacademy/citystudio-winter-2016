@@ -48,7 +48,7 @@ wp-content/*
 !wp-content/themes/
 !wp-content/uploads/
 
-# Ignore everythi	ng in "plugins" except certain plugins.
+# Ignore everything in "plugins" except certain plugins.
 # =============== #
 wp-content/plugins/*
 !wp-content/plugins/citystudio-custom-funcs/
@@ -57,5 +57,8 @@ wp-content/plugins/*
 # =============== #
 wp-content/themes/*
 !wp-content/themes/citystudio/
+
+
+wp-content/themes/citystudio/sass/foot-work.sass
 
 wp-content/themes/citystudio/gulpfile.js

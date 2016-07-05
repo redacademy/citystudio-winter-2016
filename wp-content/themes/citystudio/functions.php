@@ -69,7 +69,7 @@ add_filter( 'stylesheet_uri', 'red_starter_minified_css', 10, 2 );
 
 /** Initialize search page***/
 
-function template_chooser($template)   
+function template_chooser($template)
 {
  global $wp_query;
  $post_type = get_query_var('post_type');
@@ -132,11 +132,12 @@ function slug_register_featured_image_url() {
         )
     );
 }
+
 //Add the Project Custom Post Type to the Main Loop
 
  function add_my_post_types_to_query( $query ) {
 	 if ( is_home() && !is_admin() && $query->is_main_query() ) {
-			$query->set( 'post_type', array( 'project', 'partners', 'year', 'neighbourhood', 'theme') );
+			$query->set( 'post_type', array( 'project', 'partners', 'year', 'themes') );
 		}
  }
 add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
@@ -146,6 +147,25 @@ add_action( 'rest_api_init', 'slug_register_featured_image_url' );
 function slug_get_featured_image_url( $object, $field_name, $request ) {
     return wp_get_attachment_url( get_post_thumbnail_id( $object['id'] ));
 }
+
+// Make the ACF image field the featured image field
+
+function acf_set_featured_image( $value, $post_id, $field  ){
+
+		$field_image = get_field("banner_image");
+
+    if($value != ''){
+	    //Add the value which is the image ID to the _thumbnail_id meta data for the current post
+	    add_post_meta($post_id, '_thumbnail_id', $value);
+    }
+
+    return $value;
+}
+
+// acf/update_value/name={$field_name} - filter for a specific field based on it's name
+add_filter('acf/update_value/name=banner_image', 'acf_set_featured_image', 10, 3);
+
+
 
 // Custom function to return Subtitle Custom Field in API callback
 function project_subtitle() {
@@ -182,21 +202,21 @@ function get_project_excerpt( $object, $field_name, $request ) {
 }
 
 // Custom function to return Title Custom Field in API callback
-function featured_project() {
-    register_rest_field( 'project',
-        'featured_project',
-        array(
-            'get_callback'    => 'get_featured_project',
-            'update_callback' => null,
-            'schema'          => null,
-        )
-    );
-}
-add_action( 'rest_api_init', 'featured_project' );
-
-function get_featured_project( $object, $field_name, $request ) {
-		return get_post_meta( $object[ 'id' ], $field_name );
-}
+// function featured_project() {
+//     register_rest_field( 'project',
+//         'featured_project',
+//         array(
+//             'get_callback'    => 'get_featured_project',
+//             'update_callback' => null,
+//             'schema'          => null,
+//         )
+//     );
+// }
+// add_action( 'rest_api_init', 'featured_project' );
+//
+// function get_featured_project( $object, $field_name, $request ) {
+// 		return get_post_meta( $object[ 'id' ], $field_name );
+// }
 
 /**
  * Custom template tags for this theme.
