@@ -87,7 +87,7 @@ jQuery(document).ready(function($) {
   $('.sub-menu-part').click(function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
-      checkedPart = ($(this).text()).trim();
+      checkedPart = parseInt(($(this).text()).trim());
 
       $('.part-labels')
           .show()
@@ -100,7 +100,8 @@ jQuery(document).ready(function($) {
   $('.sub-menu-year').click(function() {
     if ($(this.checked)) {
       queryFilter.year = $(this).find('input').val();
-      checkedYear = ($(this).text()).trim();
+      checkedYear = parseInt(($(this).text()).trim());
+      // debugger;
 
       $('.year-labels')
           .show()
@@ -115,83 +116,56 @@ jQuery(document).ready(function($) {
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
-        return 'filter['+filter+']='+queryFilter[filter];
-      } else {
-        return false ;
-      }
-    }).filter(Boolean)
+        // debugger;
+        filteredQuery = 'filter['+filter+']='+queryFilter[filter];
+        return filteredQuery;
+      } 
+    }).filter(Array)
       .join('&');
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
+      // var helper = $(this).val();
       $.ajax({
-          type: 'GET',
+          type: 'GET',  
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
-
-          success: function(response) {
-
-            console.log(response);
-            // get the length of response and run this IF it is less than 10
-            // if ( response.length < 14 ) {
-            //
-            //   // this object holds the remaining slots left to fill
-            //   var objectPlaceholder = (14 - response.length);
-            //
-            //   // loop over the response.length to find empty slots to fill
-            //   for (var i = 0; i < objectPlaceholder; i++ ) {
-            //     // push an object into the blank slots
-            //     response.push(
-            //       { placeholder: true }
-            //     );
-            //   }
-            // }
-
+          // data: { name: helper},
+          success: function(response, data, status) {
+            var projects = response;
+            alert(status.responseText);
+            // debugger;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
-
-
               // Clear the Gallery after each sort data is added to repopulate the Gallery
-              // $gallery.flickity('destroy'); -- how do we destroy the old grid now?
               $gallery.empty();
-                $.each(response, function(index, value) {
-                  // if feature project checkbox is true add large class.
-                  // else if feature project checkoc is falso use reg class
-                  // function featured() {
-                  //   if ( value.featured_project[0] === '1') {
-                  //     return 'featured-rectangle';
-                  //   } else {
-                  //     return 'featured-square';
-                  //   }
-                  // }
-                  if ( response.length > 0 ) {
+              // debugger;
+              
+            if ( projects.length > 0 ) {
 
-                  //  debugger;
-
-                    // console.log(value.val());
+                $.each(projects, function(index, value) {
                     galleryItems +=   '<a class="gallery-anchor" ';
-                    // galleryItems +=   featured();
                     galleryItems +=   'href="' + value.link + '">';
                     galleryItems +=   '<li class="gallery-image" style="background: url(' + value.featured_image_url + ');">';
                     galleryItems +=   '<div class="description">';
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';
                     galleryItems +=     '<br>';
+                    // debugger;
                     galleryItems +=   '</div>';
                     galleryItems +=   '</li>';
                     galleryItems += '</a>';
-
-                  } else {
-
-                      alert('something');
-                      galleryItems += '<a><li><h1>Nothing found </h1></li></a>';
-                  }
-
+                    // debugger; 
                 });
-                $gallery.append(galleryItems);
-          } // close success
+                  $gallery.append(galleryItems);
+                  // debugger;  
+              }
+              else{
+               $gallery.append('<a><li><h1>No Projects Found! </h1><h2 style="text-align: center; font-size: 32px">Please Refresh and Try Again!</h2></li></a>'); 
+              }                
+          },
       }); // close ajax call
   } // close reload projects
 }); // document ready
