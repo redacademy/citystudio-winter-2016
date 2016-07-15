@@ -839,7 +839,7 @@ a {
   @media screen and (max-width: 375px) {
     .header-nav ul li.menu-item-has-children a {
       background: url(../../images/arrow_right.png) 0px no-repeat;
-      background-size: 9px 14px; } }
+      background-size: 10px 15px; } }
 
 .header-nav ul li.menu-item-has-children ul li a {
   background: none; }
