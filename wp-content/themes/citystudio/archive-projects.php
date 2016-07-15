@@ -2,7 +2,7 @@
 /**
  * Template Name: Projects
  *
- * @package RED_Starter_Theme
+ * @package CityStudio_Theme
  */
 
 get_header(); ?>

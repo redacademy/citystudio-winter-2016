@@ -130,12 +130,14 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',  
           dataType: 'json',
+          data: {
+              format: 'json'
+           },
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
-          // data: { name: helper},
           success: function(response, data, status) {
             var projects = response;
             alert(status.responseText);
-            // debugger;
+            alert(data);
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
