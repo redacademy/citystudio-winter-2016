@@ -88,7 +88,7 @@ jQuery(document).ready(function($) {
   $('.sub-menu-part').click(function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
-      checkedPart = parseInt(($(this).text()).trim());
+      checkedPart = ($(this).text()).trim();
 
       $('.part-labels')
           .show()
@@ -107,7 +107,6 @@ jQuery(document).ready(function($) {
       $('.year-labels')
           .show()
           .append('<label>' + checkedYear + '</label>');
-
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
