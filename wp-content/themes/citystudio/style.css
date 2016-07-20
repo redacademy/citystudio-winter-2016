@@ -839,7 +839,8 @@ a {
   @media screen and (max-width: 375px) {
     .header-nav ul li.menu-item-has-children a {
       background: url(../../images/arrow_right.png) 0px no-repeat;
-      background-size: 10px 15px; } }
+      background-size: 10px 15px;
+      padding-bottom: 0px; } }
 
 .header-nav ul li.menu-item-has-children ul li a {
   background: none; }
@@ -2236,13 +2237,13 @@ a {
     padding-top: 2px; }
 
 .open {
-  width: 480px;
+  width: 510px;
   height: 80px;
-  transition: width 1s ease-in; }
+  transition: all 1s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
-      min-width: 520px;
-      height: 90px;
+      min-width: 570px;
+      height: 89px;
       position: relative !important;
       -ms-flex-preferred-size: 25%;
           flex-basis: 25%;
@@ -2252,25 +2253,12 @@ a {
       opacity: 1; } }
   @media screen and (max-width: 1024px) {
     .open {
-      min-width: 480px; } }
-
-.close {
-  min-width: 20px;
-  transition: all .2s ease-in; }
-  @media screen and (min-width: 480px) {
-    .close {
-      width: 5rem; } }
-
-.close .refresh {
-  min-width: 25px;
-  transition: width .6s ease-in; }
+      min-width: 540px; } }
 
 .themes,
 .partners,
 .years,
 .refresh {
-  width: 5rem;
-  height: 5rem;
   border-radius: 45px; }
   @media screen and (min-width: 480px) {
     .themes,
@@ -2285,6 +2273,7 @@ a {
   background-size: 30px 45px;
   height: 5rem;
   width: 5rem;
+  right: 3em;
   background-color: #03648c;
   transition: all .5s ease-in; }
   @media screen and (min-width: 480px) {
@@ -2297,6 +2286,7 @@ a {
   background: url("../../assets/partners-icon.png") no-repeat center;
   background-size: 45px 60px;
   background-color: #03648c;
+  right: 5em;
   transition: all .5s ease-in; }
   @media screen and (min-width: 480px) {
     .partners {
@@ -2306,7 +2296,8 @@ a {
   background: url("../../assets/in-progress-icon.png") no-repeat center;
   background-size: 40px 43px;
   background-color: #03648c;
-  transition: all .5s ease-in; }
+  transition: all .5s ease-in;
+  right: 7em; }
   @media screen and (min-width: 480px) {
     .years {
       height: 5.6rem;
@@ -2317,14 +2308,20 @@ a {
   background-size: 35px 35px;
   border: 3px solid white;
   background-color: #0082b9;
-  transition: all 1s ease-in;
   height: 4.8rem; }
   @media screen and (min-width: 480px) {
     .refresh {
-      width: 5.6rem;
-      right: -2px;
+      width: 90px;
       background-size: 45px 45px;
       height: 5.6rem; } }
+
+#refresh.refresh.menu-item {
+  width: 87px;
+  position: absolute;
+  height: 85px;
+  right: -2px;
+  opacity: .9;
+  transition: all 1s ease-in; }
 
 .nav-sub-menu input[type=checkbox] {
   display: none; }
@@ -2509,14 +2506,14 @@ a {
       transition: all .8s ease;
       height: 80px;
       padding-top: 6px;
-      margin-left: 50%;
+      margin-left: 40%;
       margin-right: 4em;
       text-align: left;
       font-size: 1.3rem;
       font-family: "open_sans"; }
       .nav-description p {
-        padding: 6px;
-        width: 600px; }
+        padding: 3px;
+        width: 610px; }
       .nav-description img {
         height: 60px;
         width: 60px;

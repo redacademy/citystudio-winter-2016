@@ -20,7 +20,6 @@ jQuery(document).ready(function($) {
   // Sort navigation is open on page load on mobile
   $('#sort').resize(function(){
       $('#sort.nav-div').addClass('open');
-
   });
 
   $('#sort_nav').click(function() {
@@ -33,6 +32,8 @@ jQuery(document).ready(function($) {
   // Sort navigation dlides out on desktop when clicked
   $('#refresh').click(function() {
     $('#sort').toggleClass('open');
+    $('#refresh.refresh.menu-item').css("right", "-2px");
+
   }); // close sort
 
   $('#refresh').click(function() {

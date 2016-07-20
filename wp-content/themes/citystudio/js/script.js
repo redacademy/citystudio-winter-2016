@@ -49,11 +49,13 @@ jQuery(document).ready(function($){
   menuSubmenu.show(); 
 
   $(document).ready(function(){
+    if ($(window).width() <= 375){
     $(".header-nav ul li.menu-item-has-children").toggle(function(){
        $(this).children().children().css({"display": "block"});
      },
       function() { $(this).children().children().css({"display": "none"});
       });
+     }
     }
   );
 });
