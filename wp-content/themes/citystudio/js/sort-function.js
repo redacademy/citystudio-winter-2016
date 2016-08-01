@@ -184,9 +184,7 @@ jQuery(document).ready(function($) {
                     galleryItems += '</a>';
 
                   } else {
-
                       alert('something');
-                      galleryItems += '<a><li><h1>Nothing found </h1></li></a>';
                   }
 
                 });

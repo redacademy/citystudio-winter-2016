@@ -23,14 +23,13 @@
 
 .citystudio-teams {
 
-  padding-bottom: 2em;
-
   ul {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     flex: 0 0 100%;
     border-bottom: 2.5px dashed $light-blue;
+    padding-bottom: 2em;
   }
 }
 
@@ -85,16 +84,22 @@
   flex: 0 0 20%;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 70px;
-  height: 100%;
+  padding: 0 0.4em;
+  margin-bottom: 1em;
 
   h3 {
     text-decoration: none;
+
+    &.people-title {
+      font-size: 1.4em;
+    }
   }
 
   p {
     text-align: center;
   }
+
+
 }
 
 

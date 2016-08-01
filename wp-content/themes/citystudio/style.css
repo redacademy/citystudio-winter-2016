@@ -2885,22 +2885,21 @@ a {
     margin-bottom: 2em;
     text-align: center; }
 
-.citystudio-teams {
+.citystudio-teams ul {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex: 0 0 100%;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  border-bottom: 2.5px dashed #2cb5e8;
   padding-bottom: 2em; }
-  .citystudio-teams ul {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-flex: 0 0 100%;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    border-bottom: 2.5px dashed #2cb5e8; }
 
 .team {
   display: -webkit-flex;
@@ -2961,10 +2960,12 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 70px;
-  height: 100%; }
+  padding: 0 0.4em;
+  margin-bottom: 1em; }
   .leaders h3, .operations h3, .founders h3 {
     text-decoration: none; }
+    .leaders h3.people-title, .operations h3.people-title, .founders h3.people-title {
+      font-size: 1.4em; }
   .leaders p, .operations p, .founders p {
     text-align: center; }
 
