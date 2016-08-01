@@ -136,8 +136,8 @@ jQuery(document).ready(function($) {
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
             var projects = response;
-            alert(status.responseText);
-            alert(data);
+            // alert(status.responseText);
+            // alert(data);
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';

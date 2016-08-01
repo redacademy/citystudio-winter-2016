@@ -2220,7 +2220,7 @@ a {
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
-  transition: all .5s ease-in;
+  transition: all 1s ease-in;
   background-color: #0082b9; }
   .sort:hover {
     cursor: pointer; }
@@ -2239,7 +2239,7 @@ a {
 .open {
   width: 510px;
   height: 80px;
-  transition: all 1s ease-in; }
+  transition: all 2s ease-in; }
   @media screen and (min-width: 480px) {
     .open {
       min-width: 570px;
