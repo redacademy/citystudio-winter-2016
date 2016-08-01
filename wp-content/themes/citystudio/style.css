@@ -2496,24 +2496,24 @@ a {
       float: left;
       padding: 0;
       height: 130px;
-      transition: height 1.2s ease;
       padding-left: 2rem; } }
 
 .nav-description {
   padding: 0; }
   @media screen and (min-width: 480px) {
     .nav-description {
-      transition: all .8s ease;
+      transition: padding-right 1s ease;
       height: 80px;
       padding-top: 6px;
-      margin-left: 40%;
-      margin-right: 4em;
+      margin-left: 50%;
       text-align: left;
-      font-size: 1.3rem;
-      font-family: "open_sans"; }
+      font-size: 1.2rem;
+      font-family: "open_sans";
+      z-index: 1; }
       .nav-description p {
-        padding: 3px;
-        width: 610px; }
+        padding: 5px;
+        width: 27em;
+        margin-right: 20px; }
       .nav-description img {
         height: 60px;
         width: 60px;
@@ -2540,24 +2540,31 @@ a {
 
 @media screen and (min-width: 480px) {
   .sticky-navigation.fixed {
-    transition: all .4s ease;
     padding-left: 2em; } }
+
+@media screen and (max-width: 1024px) {
+  .sticky-navigation.fixed {
+    transition: none; } }
 
 @media screen and (max-width: 667px) {
   .sticky-navigation.fixed {
     display: none; } }
 
 .nav-description.fixed {
-  transition: all .8s ease;
+  /*transition: all .8s ease;*/
   height: 80px;
   padding-top: 6px;
-  margin-left: 50%;
+  margin-left: 60%;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: "open_sans"; }
+  @media screen and (max-width: 1024px) {
+    .nav-description.fixed {
+      transition: none; } }
   .nav-description.fixed p {
     padding: 6px;
-    width: 600px; }
+    width: 480px;
+    margin-right: 80px; }
 
 .nav-div.fixed {
   margin: 23px 0px; }
@@ -2594,6 +2601,18 @@ a {
 .fa-star {
   margin-top: .7em;
   margin-bottom: .2em; }
+
+.no-projects {
+  background-color: #006493;
+  text-align: center;
+  width: 100%;
+  padding-top: 5em;
+  height: 30vh;
+  transition: all 2s ease-in; }
+  .no-projects h1, .no-projects h2 {
+    color: white; }
+  .no-projects h2 {
+    font-size: 24px; }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles
