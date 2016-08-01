@@ -2,7 +2,7 @@
 /**
  * Template part for displaying single tag taxonomy
  *
- * @package RED_Starter_Theme
+ * @package CityStudio_Theme
  */
 
 ?>

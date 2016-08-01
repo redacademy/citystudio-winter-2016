@@ -2,7 +2,7 @@
 /**
  * The template for displaying archive pages.
  *
- * @package RED_Starter_Theme
+ * @package CityStudio_Theme
  */
 
 get_header(); ?>

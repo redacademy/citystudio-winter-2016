@@ -32,21 +32,15 @@ get_header(); ?>
         $args = array(
           'post_type' => 'project',
           'numberposts' => 12,
-          'meta_query_args' => array(
-              array(
-                'key' => 'featured_project',
-                'value' => 'true',
-                'compare' => 'IN',
-                'numberposts' => 4
-              )
-          )
+          'taxonomy' => 'year'
         );
+
+        // $loop = new WP_Query( array( 'post_type' => 'product', 'category_name' => 'year'));
+
 
         $latest_posts = get_posts( $args );?>
 
         <?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
-
-
       <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
 
 
