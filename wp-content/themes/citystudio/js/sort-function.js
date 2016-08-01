@@ -136,14 +136,11 @@ jQuery(document).ready(function($) {
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
             var projects = response;
-            alert(status.responseText);
-            alert(data);
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
               // Clear the Gallery after each sort data is added to repopulate the Gallery
               $gallery.empty();
-              // debugger;
 
             if ( projects.length > 0 ) {
 
@@ -155,16 +152,19 @@ jQuery(document).ready(function($) {
                     galleryItems +=     '<h2 class="description-title">' + value.title.rendered + '</h2>';
                     galleryItems +=     '<div class="subtitle"> ' + value.subtitle + ' </div>';
                     galleryItems +=     '<br>';
-                    // debugger;
                     galleryItems +=   '</div>';
                     galleryItems +=   '</li>';
                     galleryItems += '</a>';
-                  });
+                });
                   $gallery.append(galleryItems);
-                  // debugger;
               }
               else{
-               $gallery.append('<a><li><h1>No Projects Found! </h1><h2 style="text-align: center; font-size: 32px">Please Refresh and Try Again!</h2></li></a>');
+               $gallery.append('<div class="no-projects"' +
+                               '<li><h1>No Projects Found! :( ' +
+                               '</h1><h2>' +
+                               'Please Refresh and Try Again!</h2>' +
+                               '</li></div>'
+                  );
               }
           },
       }); // close ajax call

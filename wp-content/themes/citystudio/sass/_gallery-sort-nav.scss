@@ -29,7 +29,6 @@
     transition: width .8s ease-in;
     margin: 17px 10px;
   }
-
   @include iphone6-horizontal {
     display: none;
   }
@@ -46,7 +45,7 @@
   border-radius: 45px;
   margin-top: 0 auto;
   z-index: 2;
-  transition: all .5s ease-in;
+  transition: all 1s ease-in;
   background-color: #0082b9;
   &:hover {
     cursor: pointer;
@@ -67,7 +66,7 @@
 .open {
   width: 510px;
   height: 80px;
-  transition: all 1s ease-in;
+  transition: all 2s ease-in;
   @include desktop {
     min-width: 570px;
     height: 89px;
@@ -81,7 +80,6 @@
     min-width: 540px;
   }
 }
-
 .themes,
 .partners,
 .years,
@@ -326,31 +324,32 @@
 
 
 .sticky-navigation {
-    display: none;
-    padding-left: 85px;
+  display: none;
+  padding-left: 85px;
   @include desktop {
     display: inline-flex;
     float: left;
     padding: 0;
     height: 130px;
-    transition: height 1.2s ease;
     padding-left: 2rem;
   }
 }
 .nav-description {
   padding: 0;
   @include desktop {
-  transition: all .8s ease;
+  transition: padding-right 1s ease;
   height: 80px;
   padding-top: 6px;
-  margin-left: 40%;
-  margin-right: 4em;
+  margin-left: 50%;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: $fontfamily;
+  z-index: 1;
     p {
-      padding: 3px;
-      width: 610px
+      padding: 5px;
+      width: 27em;
+      margin-right: 20px;
+
     }
     img {
       height: 60px;
@@ -381,27 +380,31 @@
 }
 .sticky-navigation.fixed{
   @include desktop{
-  transition: all .4s ease;
-  padding-left: 2em;
+    padding-left: 2em;
   }
   @include tablet{
-
+    transition: none;
   }
   @include iphone6-horizontal{
     display: none;  
   }
  }
 .nav-description.fixed{
-  transition: all .8s ease;
+  /*transition: all .8s ease;*/
   height: 80px;
   padding-top: 6px;
-  margin-left: 50%;
+  margin-left: 60%;
   text-align: left;
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-family: $fontfamily;
+    @include tablet{
+      transition: none;
+    }
   p {
     padding: 6px;
-    width: 600px;}
+    width: 480px; 
+    margin-right: 80px;  
+  }
 }
 .nav-div.fixed{
   margin: 23px 0px;
@@ -439,3 +442,19 @@
   margin-bottom: .2em
 }
 
+.no-projects{
+  background-color: $dark-blue;
+  text-align: center;
+  width: 100%;
+  padding-top: 5em;
+  height: 30vh;
+  transition: all 2s ease-in;
+  h1, h2 {
+     color: white
+  }
+
+  h2{
+    font-size: 24px;
+  }
+
+}
