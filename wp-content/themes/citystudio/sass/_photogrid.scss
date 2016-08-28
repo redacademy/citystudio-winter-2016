@@ -13,42 +13,60 @@ a {
   padding-bottom: 4px;
   border-top: 2px solid lightgrey;
   border-bottom: 2px solid lightgrey;
-li {
-  list-style-type: none;
-  height: 100%;
-  }
+
+  li {
+    list-style-type: none;
+    height: 100%;
+    position: relative;
+
+      &:hover {
+        .description {
+          display: none;
+        }
+      }
+    }
 }
 
 .description {
   box-sizing: border-box;
+  background: rgba(0,100,147, 0.8);
   width: 100%;
   height: 100%;
-  opacity: 0;
+  opacity: 1;
   color: white;
   font-family: $fontfamily;
+  position: absolute;
+  bottom: 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+
 
   &:hover {
-    box-sizing: border-box;
-    opacity: 1;
-    background-color: transparentize($dark-blue, .1);
-    padding: 1rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    text-align: center;
+    // box-sizing: border-box;
+    // opacity: 1;
+    // padding: 1rem;
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: column;
+    // justify-content: center;
+    // text-align: center;
   }
-// &:hover:first-child{
-//   background-color: transparentize($city-blue, .1);
-// }
 }
 .description-title {
   font-size: 1.25rem;
   font-weight: bold;
+  margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: $fontfamily;
   color: #fff;
   text-decoration: none;
+  width: 100%;
+  text-align: center;
 }
 
 .subtitle {
