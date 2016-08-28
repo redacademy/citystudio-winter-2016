@@ -306,7 +306,7 @@
     word-break: break-word;
     line-height: 1.3em;
     label {
-      font-size: .75rem; 
+      font-size: .75rem;
     &::after {
       content: '';
       width: 0;
@@ -386,7 +386,7 @@
     transition: none;
   }
   @include iphone6-horizontal{
-    display: none;  
+    display: none;
   }
  }
 .nav-description.fixed{
@@ -402,8 +402,8 @@
     }
   p {
     padding: 6px;
-    width: 480px; 
-    margin-right: 80px;  
+    width: 480px;
+    margin-right: 80px;
   }
 }
 .nav-div.fixed{
@@ -430,10 +430,10 @@
 .gallery-description-container{
   height: 120px;
   display: block;
-  @include iphone6{
+  @include iphone6 {
     display: none;
   }
-  @include iphone6-horizontal{
+  @include iphone6-horizontal {
     display: none;
   }
 }
