@@ -1,10 +1,10 @@
-// -------------- HOME PAGE STYLES  ----------------------*
+ /*-------------- HOME PAGE STYLES  ----------------------**/
 .container {
   display: block;
   width: 100%;
 }
 
-// -------------- HEROBANNER STYLES  ----------------------*
+ /*-------------- HEROBANNER STYLES  ----------------------**/
 .hero {
   width: 100%;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat top center;
@@ -53,8 +53,8 @@
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
   }
 }
-//couldnt get variable going - riva **********************
-// $ciystudio-orange: #ff8000;
+/* couldnt get variable going - riva ***********************/
+/* $ciystudio-orange: #ff8000;*/
 .orange-font {
   color: #ee7600;
 }
@@ -111,7 +111,7 @@
     flex: 1 0 50%;
   }
 }
-// -------------- PARTNER SECTION STYLES  ----------------------*
+ /*-------------- PARTNER SECTION STYLES  ----------------------**/
 .homepage-partners-container {
   background-color: $color__background-lightblue;
   padding: 2em;
@@ -176,20 +176,19 @@
 }
 .featured-two {
   li {
-    // flex: 1 0 30%;
+    /*flex: 1 0 30%;*/
     cursor: auto;
     flex: 1 0 50%;
     max-width: 100px;
     max-height: 100px;
-
-      @include desktop {
+    @include desktop {
       flex: 1 0 30%;
       max-width: 200px;
       max-height: 200px;
-  }
-  img {
+    }
+    img {
     max-width: 100px;
     max-height: 100px;
-}
+    }
   }
 }

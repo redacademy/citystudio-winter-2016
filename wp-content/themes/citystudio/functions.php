@@ -201,6 +201,19 @@ function get_project_excerpt( $object, $field_name, $request ) {
 		return get_post_meta( $object[ 'id' ], $field_name );
 }
 
+// function get_category_link( $category ) {
+// 	    if ( ! is_object( $category ) )
+// 	            $category = (int) $category;
+
+// 	    $category = get_term_link( $category, 'category' );
+
+// 	    if ( is_wp_error( $category ) )
+// 	            return '';
+
+// 	    return $category;
+// }
+
+
 // Custom function to return Title Custom Field in API callback
 // function featured_project() {
 //     register_rest_field( 'project',

@@ -1680,10 +1680,12 @@ object {
   overflow: hidden;
   font-size: .9em; }
 
+/*-------------- HOME PAGE STYLES  ----------------------**/
 .container {
   display: block;
   width: 100%; }
 
+/*-------------- HEROBANNER STYLES  ----------------------**/
 .hero {
   width: 100%;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat top center;
@@ -1725,6 +1727,8 @@ object {
   .hero-blurb .orange-font {
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55); }
 
+/* couldnt get variable going - riva ***********************/
+/* $ciystudio-orange: #ff8000;*/
 .orange-font {
   color: #ee7600; }
 
@@ -1784,6 +1788,7 @@ object {
       -ms-flex: 1 0 50%;
           flex: 1 0 50%; } }
 
+/*-------------- PARTNER SECTION STYLES  ----------------------**/
 .homepage-partners-container {
   background-color: #f7f9f9;
   padding: 2em; }
@@ -1843,6 +1848,7 @@ object {
   text-transform: uppercase; }
 
 .featured-two li {
+  /*flex: 1 0 30%;*/
   cursor: auto;
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
@@ -2063,7 +2069,7 @@ a {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  width: 100%; }
+  width: 80%; }
   .partner-projects-gallery li {
     -ms-flex: 0 0 30%;
         flex: 0 0 30%;
@@ -2705,6 +2711,7 @@ a {
   .full-width-col h3 {
     padding-bottom: .5rem; }
 
+/*// IMAGE BAR*/
 .image-bar {
   width: 103%;
   display: -ms-flexbox;
@@ -2725,6 +2732,7 @@ a {
     margin-right: 1em;
     border-radius: 5%; }
 
+/*// TAG LINKS*/
 .tags-wrapper {
   margin-top: 0.75rem; }
 
@@ -2736,13 +2744,15 @@ a {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap; }
+  .tags .tag-url {
+    color: white;
+    text-decoration: none; }
   @media screen and (min-width: 480px) {
     .tags {
       width: 100%; } }
   .tags p {
     background-color: #DCDCDC;
     padding: 0.8rem 1rem;
-    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -ms-flexbox;
