@@ -1193,8 +1193,14 @@ input[type='email']:focus {
   @media screen and (max-width: 667px) {
     .social-icons-div {
       display: inline;
+<<<<<<< HEAD
       -ms-flex-pack: start;
           justify-content: flex-start;
+=======
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+>>>>>>> 9787d8da88c9e9e94dca9f64d1eb6b70548d6856
       margin-bottom: 0px; } }
 
 .social-icons {
@@ -1678,7 +1684,7 @@ object {
   color: #fff;
   text-align: center;
   overflow: hidden;
-  font-size: .9em; }
+  font-size: .4em; }
 
 .container {
   display: block;
@@ -2626,8 +2632,7 @@ a {
 .page-titles {
   color: white;
   font-family: "open_sans";
-  font-size: 1.5em;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  font-size: 1.5em; }
   @media screen and (min-width: 480px) {
     .page-titles {
       font-size: 4em; } }
@@ -2840,8 +2845,10 @@ a {
   padding: 0 0.4em;
   margin-bottom: 1em; }
   .leaders h3, .operations h3, .founders h3 {
-    text-decoration: none; }
-    .leaders h3.people-title, .operations h3.people-title, .founders h3.people-title {
+    text-decoration: none;
+    text-align: center;
+    width: 100%; }
+    .leaders h3 .people-title, .operations h3 .people-title, .founders h3 .people-title {
       font-size: 1.4em; }
   .leaders p, .operations p, .founders p {
     text-align: center; }

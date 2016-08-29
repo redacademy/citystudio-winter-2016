@@ -89,8 +89,10 @@
 
   h3 {
     text-decoration: none;
+    text-align: center;
+    width: 100%;
 
-    &.people-title {
+    .people-title {
       font-size: 1.4em;
     }
   }
@@ -99,10 +101,7 @@
     text-align: center;
   }
 
-
 }
-
-
 
 // Single Person Page
 
