@@ -25,3 +25,4 @@
   <a href="<?php the_sub_field('cta_link'); ?>" class="connect-button"><p>Connect</p></a>
 </div>
 <?php  endwhile; ?>
+<?php  endif; ?>
