@@ -22,6 +22,6 @@
   </div>
 <div class="connect">
   <label class="become-involved">Become Involved!</label>
-  <a href="<?php echo the_sub_field('cta_page_link'); ?>" class="connect-button"><p>Connect</p></a>
+  <a href="<?php echo the_sub_field('cta_link'); ?>" class="connect-button"><p>Connect</p></a>
 </div>
 <?php  endwhile; ?>
