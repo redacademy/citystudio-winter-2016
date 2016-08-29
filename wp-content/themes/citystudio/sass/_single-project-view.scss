@@ -10,7 +10,7 @@
     color: white;
     font-family: $fontfamily;
     font-size: 1.5em;
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    // box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
 
     @include desktop {
       font-size: 4em;
