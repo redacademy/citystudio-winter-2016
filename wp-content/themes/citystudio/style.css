@@ -1739,7 +1739,7 @@ object {
   color: #fff;
   text-align: center;
   overflow: hidden;
-  font-size: .9em; }
+  font-size: .4em; }
 
 .container {
   display: block;
@@ -3000,11 +3000,10 @@ a {
   margin-bottom: 1em; }
   .leaders h3, .operations h3, .founders h3 {
     text-decoration: none;
-    text-align: center; }
+    text-align: center;
+    width: 100%; }
     .leaders h3 .people-title, .operations h3 .people-title, .founders h3 .people-title {
-      font-size: 1.4em;
-      width: 100%;
-      text-align: center; }
+      font-size: 1.4em; }
   .leaders p, .operations p, .founders p {
     text-align: center; }
 
