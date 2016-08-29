@@ -131,6 +131,7 @@
 .cta_blurb{
   display: block;
   width: 70%;
+
   @include iphone6{
     width: 0;
   }
