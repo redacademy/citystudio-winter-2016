@@ -6,9 +6,7 @@
 get_header(); ?>
 
 <div class="front-page-main">
-
     <div class="hero">
-
         <div class="hero-blurb">
             <p>
             <b class="orange-font">CityStudio</b> is an experimentation and innovation hub for the <b class="orange-font">City of Vancouver</b> where staff, students and community members design and launch <b class="orange-font">projects</b> and solutions for the City.
@@ -17,9 +15,9 @@ get_header(); ?>
     </div> <!-- end hero -->
 
   <h1 class="homepage-titles">CityStudio Projects</h1>
-  <p class="homepage-description" style="display: none;">
-    We partner with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
-  </p>
+    <p class="homepage-description" style="display: none;">
+      We partner with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
+    </p>
 
   <div class="gallery-description-container">
     <div class="sticky-navigation">
@@ -37,13 +35,10 @@ get_header(); ?>
 
         // $loop = new WP_Query( array( 'post_type' => 'product', 'category_name' => 'year'));
 
-
         $latest_posts = get_posts( $args );?>
 
         <?php foreach ( $latest_posts as $post ) : setup_postdata( $post ); ?>
       <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
-
-
         <li style=
             "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
              background-size: cover;
