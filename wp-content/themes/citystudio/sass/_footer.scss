@@ -46,11 +46,11 @@
   margin-top: 0.5rem;
   margin-bottom: 0.5rem;
   width: 190px;
-  @include iphone6-horizontal {
-    display: inline;
-    justify-content: flex-start;
-    margin-bottom: 0px;
-  }
+  // @include iphone6-horizontal {
+  //   display: inline;
+  //   justify-content: flex-start;
+  //   margin-bottom: 5px;
+  // }
 }
 .social-icons {
   height: 1rem;
@@ -81,7 +81,7 @@
   ul li {
     height: 5%;
   }
-  
+
 }
 
 .footer-info-block2{

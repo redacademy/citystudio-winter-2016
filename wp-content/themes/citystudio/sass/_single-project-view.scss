@@ -9,9 +9,8 @@
   .page-titles {
     color: white;
     font-family: $fontfamily;
-    font-size: 1.5em;
-    // box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-
+    font-size: 1.25em;
+    box-shadow: none;
     @include desktop {
       font-size: 4em;
   }
@@ -21,35 +20,52 @@
 .project-hero{
   display: none;
   max-height: 500px;
-
+  height: 30vh;
 @include desktop {
   display: block;
-  }
+  height: 75vh;
+}
 }
 //SHORT DESCRIPTION
 .excerpt {
   margin: 2rem 1rem;
   font-family: $fontfamily;
-  text-align: left;
+  text-align: center;
   width: 85%;
-  font-size: 1em;
+  font-size: 1.2em;
   @include desktop {
     margin: 3.5rem 2rem;
     text-align: center;
     width: 65%;
-    font-size: 1.15em;
-  }
+    font-size: 2em;
+}
 }
 //PROJECT CREDIT COLUMNS
 
+.column-wrap {
+display: flex;
+flex-direction: column;
+background-color: $color__background-lightblue;
+padding: .5em;
+border-radius: 10px;
+width: 75%;
+@include desktop {
+justify-content: space-around;
+flex-direction: row;
+}
+}
 .col-one,
 .col-two {
   width: 85%;
+  padding-top: 1em;
 }
 @include desktop {
   .col-one,
   .col-two {
     width: 40.5%;
+  p {
+    width: 85%;
+}
   }
 }
 .col-one {
@@ -57,9 +73,6 @@
   -webkit-order: 1;
   -ms-flex-order: 1;
   order: 1;
-  @include desktop {
-    margin-left: 5.5em;
-}
 }
 .col-two {
   -webkit-box-ordinal-group: 3;
@@ -82,22 +95,28 @@
 .proj-detail-wrap {
   display: block;
   margin: 0 0 1.5em;
+  padding-left: .5em;
   font-size: 1rem;
   font-weight: normal;
   font-family: $fontfamily;
+@include desktop {
+padding-left: 0;
+}
   .media-links {
   margin-bottom: .5em;
   &:hover {
   color: $city-blue;
   text-decoration: underline;
-    }
-  }
+}
+}
 }
 
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
 .full-width-col {
-  margin: 1rem;
-  width: 80%;
+  display: flex;
+  justify-content: center;
+  margin: 2em;
+  width: 75.5%;
   font-family: $fontfamily;
   display: block;
   -webkit-box-ordinal-group: 4;
@@ -105,7 +124,7 @@
   -ms-flex-order: 3;
   order: 3;
   @include desktop {
-    margin: 1em 10em;
+    // margin: 1em 10em;
   }
   .scalability-wrap {
     margin-bottom: 1.5rem;
@@ -114,7 +133,7 @@
     padding-bottom: .5rem;
   }
 }
-/*// IMAGE BAR*/
+// IMAGE BAR
 .image-bar{
   width: 103%;
   display: flex;
@@ -125,6 +144,7 @@
   -webkit-order: 4;
   -ms-flex-order: 4;
   margin: 2em 0 2em 0;
+
   @include desktop {
 
   }
@@ -133,33 +153,29 @@
   width: 300px;
   margin-right: 1em;
   border-radius: 5%;
-  }
 }
-/*// TAG LINKS*/
+}
+// TAG LINKS
 .tags-wrapper {
   margin-top: 0.75rem;
 }
-
 .tags {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: .5rem;
-  width: 85%;
+  width: 100%;
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  .tag-url {
-    color: white;
-    text-decoration: none;
-  }
   @include desktop {
-    width: 100%;
+    width: 85%;
   }
   p {
-    background-color: #DCDCDC;
+    background-color:  darken($color__background-lightblue, 2);
     padding: 0.8rem 1rem;
+    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -webkit-box;
@@ -171,7 +187,7 @@
     -ms-flex-align: center;
     align-items: center;
     &:hover {
-      background-color: lighten(#DCDCDC, 5);
+      background-color: darken($color__background-lightblue, 6);
     }
   }
 }
