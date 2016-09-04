@@ -33,6 +33,10 @@ hr {
 	margin-bottom: $base__space-unit;
 }
 
+hr.separate {
+	border-bottom: 1px dashed $medium-blue;
+}
+
 ul, ol {
 	margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }

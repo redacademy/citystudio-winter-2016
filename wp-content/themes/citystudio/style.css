@@ -452,6 +452,9 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+hr.separate {
+  border-bottom: 1px dashed #0082b9; }
+
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -1739,7 +1742,7 @@ object {
   color: #fff;
   text-align: center;
   overflow: hidden;
-  font-size: .9em; }
+  font-size: .4em; }
 
 .container {
   display: block;
@@ -1956,46 +1959,41 @@ a {
   border-bottom: 2px solid lightgrey; }
   .grid li {
     list-style-type: none;
-    height: 100%;
-    position: relative; }
-    .grid li:hover .description {
-      display: none; }
+    height: 100%; }
 
 .description {
   box-sizing: border-box;
-  background: rgba(0, 100, 147, 0.8);
   width: 100%;
   height: 100%;
-  opacity: 1;
+  opacity: 0;
   color: white;
-  font-family: "open_sans";
-  position: absolute;
-  bottom: 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  text-align: center;
-  padding: 1rem; }
+  font-family: "open_sans"; }
+  .description:hover {
+    box-sizing: border-box;
+    opacity: 1;
+    background-color: rgba(0, 100, 147, 0.9);
+    padding: 1rem;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center; }
 
 .description-title {
   font-size: 1.25rem;
   font-weight: bold;
-  margin-top: 1rem;
   margin-bottom: 2rem;
   font-family: "open_sans";
   color: #fff;
-  text-decoration: none;
-  width: 100%;
-  text-align: center; }
+  text-decoration: none; }
 
 .subtitle {
   font-size: 1rem;
@@ -2757,14 +2755,14 @@ a {
 .page-titles {
   color: white;
   font-family: "open_sans";
-  font-size: 1.5em;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  font-size: 1.5em; }
   @media screen and (min-width: 480px) {
     .page-titles {
       font-size: 4em; } }
 
 .project-hero {
-  display: none; }
+  display: none;
+  max-height: 500px; }
   @media screen and (min-width: 480px) {
     .project-hero {
       display: block; } }
@@ -3005,8 +3003,10 @@ a {
   padding: 0 0.4em;
   margin-bottom: 1em; }
   .leaders h3, .operations h3, .founders h3 {
-    text-decoration: none; }
-    .leaders h3.people-title, .operations h3.people-title, .founders h3.people-title {
+    text-decoration: none;
+    text-align: center;
+    width: 100%; }
+    .leaders h3 .people-title, .operations h3 .people-title, .founders h3 .people-title {
       font-size: 1.4em; }
   .leaders p, .operations p, .founders p {
     text-align: center; }
@@ -3124,7 +3124,7 @@ article.people {
   background-color: #2cb5e8;
   margin: 15px auto;
   height: 100px;
-  width: 440px;
+  width: 30%;
   padding: .9em 0;
   color: white;
   text-align: center;
@@ -3136,7 +3136,9 @@ article.people {
     .connect {
       margin: 0; } }
   .connect .become-involved {
-    font-weight: bold; }
+    font-weight: bold;
+    display: inline-block;
+    width: 100%; }
   .connect p {
     color: white;
     font-weight: bold;
@@ -3153,12 +3155,9 @@ article.people {
     background-color: #2cb5e8;
     text-align: center;
     -webkit-transform: scale(1);
-    transform: scale(1);
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -ms-transform-origin: center center;
-    -o-transform-origin: center center;
-    transition: all .1s; }
+            transform: scale(1);
+    transition: all .1s;
+    display: inline; }
     .connect a:hover {
       background: #2cb5e8;
       -webkit-transform: scale(1.03);
@@ -3171,7 +3170,7 @@ article.people {
 
 .cta_blurb {
   display: block;
-  width: 136%; }
+  width: 70%; }
   @media screen and (max-width: 375px) {
     .cta_blurb {
       width: 0; } }
