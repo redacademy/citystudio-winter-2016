@@ -24,7 +24,7 @@
 
 @include desktop {
   display: block;
-  }
+}
 }
 //SHORT DESCRIPTION
 .excerpt {
@@ -38,7 +38,7 @@
     text-align: center;
     width: 65%;
     font-size: 1.15em;
-  }
+}
 }
 //PROJECT CREDIT COLUMNS
 
@@ -90,8 +90,8 @@
   &:hover {
   color: $city-blue;
   text-decoration: underline;
-    }
-  }
+}
+}
 }
 
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
@@ -114,7 +114,7 @@
     padding-bottom: .5rem;
   }
 }
-/*// IMAGE BAR*/
+// IMAGE BAR
 .image-bar{
   width: 103%;
   display: flex;
@@ -125,6 +125,7 @@
   -webkit-order: 4;
   -ms-flex-order: 4;
   margin: 2em 0 2em 0;
+
   @include desktop {
 
   }
@@ -133,13 +134,12 @@
   width: 300px;
   margin-right: 1em;
   border-radius: 5%;
-  }
 }
-/*// TAG LINKS*/
+}
+// TAG LINKS
 .tags-wrapper {
   margin-top: 0.75rem;
 }
-
 .tags {
   display: -webkit-inline-box;
   display: -webkit-inline-flex;
@@ -150,16 +150,13 @@
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
-  .tag-url {
-    color: white;
-    text-decoration: none;
-  }
   @include desktop {
     width: 100%;
   }
   p {
     background-color: #DCDCDC;
     padding: 0.8rem 1rem;
+    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -webkit-box;

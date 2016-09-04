@@ -452,6 +452,9 @@ hr {
   height: 1px;
   margin-bottom: 1.5em; }
 
+hr.separate {
+  border-bottom: 1px dashed #0082b9; }
+
 ul, ol {
   margin: 0 0 1.5em 3em; }
 
@@ -1193,14 +1196,8 @@ input[type='email']:focus {
   @media screen and (max-width: 667px) {
     .social-icons-div {
       display: inline;
-<<<<<<< HEAD
       -ms-flex-pack: start;
           justify-content: flex-start;
-=======
-      -webkit-justify-content: flex-start;
-          -ms-flex-pack: start;
-              justify-content: flex-start;
->>>>>>> 9787d8da88c9e9e94dca9f64d1eb6b70548d6856
       margin-bottom: 0px; } }
 
 .social-icons {
@@ -1686,12 +1683,10 @@ object {
   overflow: hidden;
   font-size: .4em; }
 
-/*-------------- HOME PAGE STYLES  ----------------------**/
 .container {
   display: block;
   width: 100%; }
 
-/*-------------- HEROBANNER STYLES  ----------------------**/
 .hero {
   width: 100%;
   background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat top center;
@@ -1733,8 +1728,6 @@ object {
   .hero-blurb .orange-font {
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55); }
 
-/* couldnt get variable going - riva ***********************/
-/* $ciystudio-orange: #ff8000;*/
 .orange-font {
   color: #ee7600; }
 
@@ -1794,7 +1787,6 @@ object {
       -ms-flex: 1 0 50%;
           flex: 1 0 50%; } }
 
-/*-------------- PARTNER SECTION STYLES  ----------------------**/
 .homepage-partners-container {
   background-color: #f7f9f9;
   padding: 2em; }
@@ -1854,7 +1846,6 @@ object {
   text-transform: uppercase; }
 
 .featured-two li {
-  /*flex: 1 0 30%;*/
   cursor: auto;
   -ms-flex: 1 0 50%;
       flex: 1 0 50%;
@@ -2075,7 +2066,7 @@ a {
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  width: 80%; }
+  width: 100%; }
   .partner-projects-gallery li {
     -ms-flex: 0 0 30%;
         flex: 0 0 30%;
@@ -2644,7 +2635,8 @@ a {
       font-size: 4em; } }
 
 .project-hero {
-  display: none; }
+  display: none;
+  max-height: 500px; }
   @media screen and (min-width: 480px) {
     .project-hero {
       display: block; } }
@@ -2716,7 +2708,6 @@ a {
   .full-width-col h3 {
     padding-bottom: .5rem; }
 
-/*// IMAGE BAR*/
 .image-bar {
   width: 103%;
   display: -ms-flexbox;
@@ -2737,7 +2728,6 @@ a {
     margin-right: 1em;
     border-radius: 5%; }
 
-/*// TAG LINKS*/
 .tags-wrapper {
   margin-top: 0.75rem; }
 
@@ -2749,15 +2739,13 @@ a {
   flex-wrap: wrap;
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap; }
-  .tags .tag-url {
-    color: white;
-    text-decoration: none; }
   @media screen and (min-width: 480px) {
     .tags {
       width: 100%; } }
   .tags p {
     background-color: #DCDCDC;
     padding: 0.8rem 1rem;
+    color: #000;
     border-radius: 5px;
     margin-right: 1rem;
     display: -ms-flexbox;
@@ -2969,7 +2957,7 @@ article.people {
   background-color: #2cb5e8;
   margin: 15px auto;
   height: 100px;
-  width: 440px;
+  width: 30%;
   padding: .9em 0;
   color: white;
   text-align: center;
@@ -2981,7 +2969,9 @@ article.people {
     .connect {
       margin: 0; } }
   .connect .become-involved {
-    font-weight: bold; }
+    font-weight: bold;
+    display: inline-block;
+    width: 100%; }
   .connect p {
     color: white;
     font-weight: bold;
@@ -2998,11 +2988,8 @@ article.people {
     background-color: #2cb5e8;
     text-align: center;
     transform: scale(1);
-    -webkit-transform-origin: center center;
-    -moz-transform-origin: center center;
-    -ms-transform-origin: center center;
-    -o-transform-origin: center center;
-    transition: all .1s; }
+    transition: all .1s;
+    display: inline; }
     .connect a:hover {
       background: #2cb5e8;
       transform: scale(1.03);
@@ -3013,7 +3000,7 @@ article.people {
 
 .cta_blurb {
   display: block;
-  width: 136%; }
+  width: 70%; }
   @media screen and (max-width: 375px) {
     .cta_blurb {
       width: 0; } }

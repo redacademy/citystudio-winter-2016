@@ -86,26 +86,29 @@ get_header();
                             ?>
 <!-- file media upload -->
 						<?php
-                if (have_rows('project_media_2'));
-                while (have_rows('project_media_2')) : the_row();
+                            if (have_rows('project_media_2'));
+                            while (have_rows('project_media_2')) : the_row();
                             ?>
 							<p class="media-links">
 								<?php if (get_sub_field('file_upload')): ?>
 									<a href="<?php the_sub_field('file_upload');
                             ?>" ><?php the_sub_field('file_name');
                             ?></a>
-								<?php endif; ?>
+								<?php endif;
+                            ?>
 							</p>
-						<?php endwhile; ?>
+							<?php endwhile;
+                            ?>
 <!-- embed video or image media-->
 						<div class="embed-container">
-							<?php the_field('embed_video'); ?>
+							<?php the_field('embed_video');
+                            ?>
 						</div>
 						<?php
-              } else {
-                  echo '';
-                }
-              ?>
+                        } else {
+                            echo '';
+                        }
+                        ?>
         </span>
       </div> <!-- end .col-two -->
     </div> <!-- end section-credits content-wrapper -->
@@ -164,26 +167,36 @@ get_header();
   <div class="tags-wrapper">
 		<h3>Tags:</h3>
 	<div class="tags">
-						<?php the_tags('<p class="tag-links"><a class="tag-url" href="', '</a><p>'); 
-               $id = get_the_id(); 
-               $terms = get_the_terms($id, 'partners');
-                          if (!empty($terms)) : foreach ($terms as $term) : $name = $term->name;
-                           echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'partners').'">'.$name.'</a>'.'</p>';
-    					    endforeach;
-    					  endif;
-                $terms = get_the_terms($id, 'season');
-                          if (!empty($terms)) : foreach ($terms as $term) : $name = $term->name;
-                             echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'season').'">'.$name.'</a>'.'</p>';
-                  endforeach; 
-                endif; 
-                $terms = get_the_terms($id, 'themes');
-                          if (!empty($terms)) : foreach ($terms as $term) : $name = $term->name;
-                           echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
-    				          endforeach;
-                   endif; ?>
-         
+						<?php the_tags('<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
+    					<?php $id = get_the_id(); ?>
+     				    <?php  $terms = get_the_terms($id, 'partners');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'partners').'">'.$name.'</a>'.'</p>';
+                             ?>
+    					      <?php endforeach; ?>
+    					    <?php endif; ?>
+    					      <?php  $terms = get_the_terms($id, 'season');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'season').'">'.$name.'</a>'.'</p>';
+                                ?>
+    				      <?php endforeach; ?>
+    				      <?php endif; ?>
+
+    				      <?php  $terms = get_the_terms($id, 'themes');
+                          if (!empty($terms)) : ?>
+    				        <?php foreach ($terms as $term)  :
+                                $name = $term->name;
+                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
+                                   ?>
+    				      <?php endforeach; ?>
+    				      <?php endif; ?>
     			  </div>
-    		  </div>
+
+    		</div>
     		</div>
     	</div>
 
