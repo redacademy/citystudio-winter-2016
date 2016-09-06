@@ -70,15 +70,15 @@ get_header();
 <!-- media fields -->
         <span class="proj-subtitle proj-detail-wrap">
 					<?php
-                        $value = get_field('activate_media');
-                        if ($value) {
-                            ?>
+            $value = get_field('activate_media');
+            if ($value) {
+                ?>
           <h3>Media:</h3>
 <!-- linking media -->
 					<?php
-                        if (have_rows('project_media'));
-                            while (have_rows('project_media')) : the_row();
-                            ?>
+            if (have_rows('project_media'));
+                while (have_rows('project_media')) : the_row();
+                ?>
 						<p class="media-links">
 							<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_title') ?> </a>
 						</p>
@@ -86,9 +86,9 @@ get_header();
                             ?>
 <!-- file media upload -->
 						<?php
-                            if (have_rows('project_media_2'));
-                            while (have_rows('project_media_2')) : the_row();
-                            ?>
+              if (have_rows('project_media_2'));
+              while (have_rows('project_media_2')) : the_row();
+              ?>
 							<p class="media-links">
 								<?php if (get_sub_field('file_upload')): ?>
 									<a href="<?php the_sub_field('file_upload');
@@ -120,13 +120,11 @@ get_header();
 	    		<h3>Description:</h3>
 						<span class="proj-description"><?php the_field('full_description'); ?></span>
 			</div>
-
 			<?php
+        $value = get_field('activate_scalability');
 
-                        $value = get_field('activate_scalability');
-
-                        if ($value) {
-                            ?>
+        if ($value) {
+            ?>
 			<div class="scalability-wrap">
 				<h3><?php the_field('scalability_title');
                             ?></h3>
@@ -134,17 +132,16 @@ get_header();
                             ?></span>
 			</div>
 		<?php
-                        } else {
-                            echo '';
-                        }
+          } else {
+              echo '';
+          }
         ?>
 
 		<?php
-
-                    $value = get_field('activate_stewardship');
-
-                    if ($value) {
-                        ?>
+      $value = get_field('activate_stewardship');
+      if ($value) {
+          ?>
+          
 			<div class="scalability-wrap">
 	    		<h3><?php the_field('stewardship_title');
                         ?></h3>
@@ -152,9 +149,9 @@ get_header();
                         ?></span>
 			</div>
 			<?php
-                    } else {
-                        echo '';
-                    }
+          } else {
+              echo '';
+          }
             ?>
 <!-- image bar -->
 <div class="image-bar">
