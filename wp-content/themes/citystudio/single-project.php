@@ -90,15 +90,9 @@ get_header();
 							<?php the_field('embed_video');
                             ?>
 						</div>
-						<?php
-                        } else {
-                            echo '';
-                        }
-                        ?>
         </span>
       </div> <!-- end .col-two -->
-<!-- =======
-	                        $value = get_field('activate_media');
+	                  <?php  $value = get_field('activate_media');
 	                        if ($value) {
 	                            ?>
 	          <h3>Media:</h3>
@@ -140,7 +134,6 @@ get_header();
 	        </span>
 	      </div> <!-- end .col-two -->
 			</div>
-<!-- >>>>>>> 43c19bde5d0420bc651a2b078991d97e49a9b030 --> 
     </div> <!-- end section-credits content-wrapper -->
 
     <!-- Project Details -->
