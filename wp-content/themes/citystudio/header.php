@@ -39,13 +39,15 @@
 					<span class="icon-search" aria-hidden="true">
 						<a href="<?php echo esc_url(home_url('home/search'));?>"><i class="fa fa-search"></i></a>
 					</span>
-				<div class="icon-menu">
-					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i></button>
-					<div id="hamburgerMenu" class="dropdown-content">
-						<nav class="header-nav">
-	  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav>
-					</div>
+					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i>
+					<div class="header-menu-title">MENU</div>	
+					</button>
+
+						<div id="hamburgerMenu" class="dropdown-content">
+							<nav class="header-nav">
+		  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+							</nav>
+						</div>
 				</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->

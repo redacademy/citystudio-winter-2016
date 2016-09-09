@@ -100,16 +100,16 @@ width: 75%;
   font-size: 1rem;
   font-weight: normal;
   font-family: $fontfamily;
-@include desktop {
-padding-left: 0;
-}
+  @include desktop {
+    padding-left: 0;
+  }
   .media-links {
   margin-bottom: .5em;
   &:hover {
-  color: $city-blue;
-  text-decoration: underline;
-}
-}
+    color: $city-blue;
+    text-decoration: underline;
+    }
+  }
 }
 
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP

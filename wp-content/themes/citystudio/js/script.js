@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
+
   $(window).scroll(function(){
+
     var sticky = $('.sticky-navigation'),
         nav = $('.gallery-description-container'),
         description = $('.nav-description'),
@@ -12,7 +14,7 @@ jQuery(document).ready(function($){
      }
       else if (scroll <= offset)  {
         sticky.removeClass("fixed");
-         description.removeClass("fixed");
+        description.removeClass("fixed");
     }
   });
 });
@@ -30,30 +32,40 @@ window.onclick = function(e) {
 jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
-      $("i", this).removeClass("fa-bars");
-        if ($(window).width() <= 375){
-        $('.header-container').css({"position": "fixed"})
+        var menuIcon = $("i", this);
+        menuIcon.removeClass("fa-bars");
+         if ($(window).width() <= 375){
+           $('.header-container').css({"position": "fixed"});
       }
   });
   $('.hamburger').toggle(function() {
-    $("i", this).addClass("fa-times-circle")
+      var menuIcon = $("i", this);
+      menuIcon.addClass("fa-times-circle");
     }, function() {
-     $("i", this).removeClass("fa-times-circle");
-     $("i", this).addClass("fa-bars");
-     $('.header-container').css({"position": "relative"})
+  
+     var menuIcon = $("i", this)
+
+     menuIcon.removeClass("fa-times-circle");
+     menuIcon.addClass("fa-bars");
+     $('.header-container').css({"position": "relative"});
     }
   );
 
   var menuSubmenu = $(".menu").children().children();
-  
   menuSubmenu.show(); 
 
+  //code for mobile view 
+
   $(document).ready(function(){
+    var callToAction = $(".call-to-action");
+        mobileMenuItem = $(".header-nav ul li.menu-item-has-children");
+        menuItem = mobileMenuItem.children().children();
     if ($(window).width() <= 375){
-    $(".header-nav ul li.menu-item-has-children").toggle(function(){
-       $(this).children().children().css({"display": "block"});
-     },
-      function() { $(this).children().children().css({"display": "none"});
+        callToAction.css({"display": "none"});
+        mobileMenuItem.toggle(function(){
+          menuItem.css({"display": "block"});
+        },
+        function() { menuItem.css({"display": "none"});
       });
      }
     }

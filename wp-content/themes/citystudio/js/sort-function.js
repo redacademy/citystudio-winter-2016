@@ -102,7 +102,6 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.year = $(this).find('input').val();
       checkedYear = parseInt(($(this).text()).trim());
-      // debugger;
 
       $('.year-labels')
           .show()
@@ -116,7 +115,6 @@ jQuery(document).ready(function($) {
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
-        // debugger;
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
         return filteredQuery;
       }
@@ -126,15 +124,12 @@ jQuery(document).ready(function($) {
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
-      // var helper = $(this).val();
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          data: {
-              format: 'json'
-           },
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
+            // alert(this.url)
             var projects = response;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
@@ -167,6 +162,7 @@ jQuery(document).ready(function($) {
                   );
               }
           },
+          error:function(exception){alert('Exeption:'+exception);}
       }); // close ajax call
   } // close reload projects
 }); // document ready
