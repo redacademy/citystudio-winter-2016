@@ -824,6 +824,9 @@ button.hamburger {
   display: flex; }
   button.hamburger:hover {
     color: #0082b9; }
+  @media screen and (max-width: 375px) {
+    button.hamburger {
+      top: 1.3em; } }
 
 .dropdown-content a:hover {
   background-color: #f1f1f1; }
@@ -833,11 +836,10 @@ button.hamburger {
   z-index: 3; }
 
 #primary-menu {
-  z-index: 3;
-  padding: .7em 0.7em; }
+  z-index: 3; }
   @media screen and (max-width: 375px) {
     #primary-menu {
-      height: 73.6vh;
+      height: 86vh;
       font-size: .8em;
       width: 100vw;
       display: -ms-flexbox;
@@ -852,7 +854,7 @@ button.hamburger {
   display: flex;
   width: 50%;
   padding-left: 2em;
-  height: 1.5em; }
+  height: 2em; }
   @media screen and (max-width: 375px) {
     .header-nav li a {
       display: -ms-flexbox;
@@ -865,10 +867,12 @@ button.hamburger {
   border-top: 4px solid #2cb5e8;
   border-bottom: 4px solid #2cb5e8;
   background-color: #f7f9f9;
-  padding: 2em 0em 2em 0em; }
+  padding-bottom: 2em;
+  padding-top: 2em; }
   @media screen and (max-width: 375px) {
     .header-nav {
-      width: 100vw; } }
+      width: 100vw;
+      padding: 0; } }
 
 .header-nav a {
   display: block;
@@ -946,8 +950,10 @@ button.hamburger {
   transition: height 300ms ease-in;
   border: none; }
 
+/* sub menu list item css*/
 .header-nav ul > li:hover ul li {
-  height: .95em; }
+  height: 1.6em;
+  padding: .4em; }
   @media screen and (max-width: 375px) {
     .header-nav ul > li:hover ul li {
       height: 2.5em; } }
@@ -961,7 +967,8 @@ button.hamburger {
 .sub-menu {
   padding: 0; }
   .sub-menu li a {
-    font-size: 16px; }
+    font-size: 16px;
+    padding-bottom: 1em; }
   @media screen and (max-width: 375px) {
     .sub-menu {
       margin: 0em 2em;

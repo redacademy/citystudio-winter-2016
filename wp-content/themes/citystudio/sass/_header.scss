@@ -166,6 +166,9 @@ button.hamburger{
   &:hover{
   color: $medium-blue;
  }
+ @include iphone6{
+   top: 1.3em;  
+ }
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
 .show {
@@ -174,22 +177,21 @@ button.hamburger{
 }
 #primary-menu {
   z-index: 3;
-  padding: .7em 0.7em;
   @include iphone6{
-    height: 73.6vh;
+    height: 86vh;
     font-size: .8em;
     width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    }
   }
+}
 
 .header-nav li a{
     display: flex;
     width: 50%;
     padding-left: 2em;
-    height: 1.5em;
+    height: 2em;
   @include iphone6{
     display: flex;
     width: 33vw;
@@ -201,9 +203,11 @@ button.hamburger{
   border-top: 4px solid $light-blue;
   border-bottom: 4px solid $light-blue;
   background-color: #f7f9f9;
-  padding: 2em 0em 2em 0em;
+  padding-bottom: 2em;
+  padding-top: 2em;
   @include iphone6{
     width: 100vw;
+    padding: 0;
   }
 }
 .header-nav a {
@@ -296,8 +300,10 @@ button.hamburger{
 
   }
 }
+/* sub menu list item css*/
 .header-nav ul > li:hover ul li {
-  height: .95em;
+  height: 1.6em;
+  padding: .4em;
   @include iphone6{
     height: 2.5em;
   }
@@ -314,6 +320,7 @@ button.hamburger{
   padding: 0;
   li a{
       font-size: 16px;
+      padding-bottom: 1em;
   }
   @include iphone6{
     margin: 0em 2em;
