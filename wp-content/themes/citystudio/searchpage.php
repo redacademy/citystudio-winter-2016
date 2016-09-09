@@ -8,7 +8,9 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="searchpage">
 				<header class="search-archive-header">
-					<h1>Project Archive</h1>
+					<div class="searchform-title">
+						<h1>Project Archive</h1>
+					</div>
 					<div class="searchform-container">
 						<?php dynamic_sidebar( 'searchform' ); ?>
 					</div>

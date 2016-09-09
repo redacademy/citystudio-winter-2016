@@ -1,4 +1,4 @@
-<div class="nav-div" id="sort">
+<div class="nav-div open" id="sort">
 	<div class="sort" id="sort_nav">
 		<label>Sort</label>
 	</div>

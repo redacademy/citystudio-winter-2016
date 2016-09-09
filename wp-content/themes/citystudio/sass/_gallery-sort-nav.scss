@@ -76,9 +76,6 @@
     transition: all .3s ease-in;
     opacity: 1;
   }
-  @include tablet{
-    min-width: 540px;
-  }
 }
 .themes,
 .partners,
@@ -268,23 +265,20 @@
   transition-delay: 4s;
 }
 .theme-labels {
-  right: 0px;
-  top: 0;
+
   label::after {
     left: 36%;
     opacity: 0;
   }
 }
 .part-labels {
-  right: 0;
-  top: 0;
+
   label::after {
     left: 31%;
   }
 }
 .year-labels {
-  right: 0;
-  top: 0;
+
   label::after {
     left: 32%;
   }
@@ -304,9 +298,9 @@
     color: #00A0DC;
     font-weight: 700;
     word-break: break-word;
-    line-height: 1.3em;
+    line-height: 1.2em;
     label {
-      font-size: .75rem; 
+      font-size: .8rem; 
     &::after {
       content: '';
       width: 0;
@@ -324,15 +318,9 @@
 
 
 .sticky-navigation {
-  display: none;
-  padding-left: 85px;
-  @include desktop {
     display: inline-flex;
-    float: left;
-    padding: 0;
-    height: 130px;
-    padding-left: 2rem;
-  }
+    justify-conter: center;
+  
 }
 .nav-description {
   padding: 0;
@@ -379,9 +367,8 @@
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
-  @include desktop{
-    padding-left: 2em;
-  }
+    display: flex;
+    justify-content: center;
   @include tablet{
     transition: none;
   }
@@ -428,8 +415,8 @@
 }
 
 .gallery-description-container{
-  height: 120px;
-  display: block;
+    display: flex;
+    justify-content: center;
   @include iphone6{
     display: none;
   }
@@ -438,8 +425,7 @@
   }
 }
 .fa-star{
-  margin-top: .7em;
-  margin-bottom: .2em
+  margin-top: .6em;
 }
 
 .no-projects{

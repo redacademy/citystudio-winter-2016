@@ -100,9 +100,8 @@ jQuery(document).ready(function($) {
   });
   $('.sub-menu-year').click(function() {
     if ($(this.checked)) {
-      queryFilter.year = parseInt($(this).find('input').val());
+      queryFilter.year = $(this).find('input').val();
       checkedYear = parseInt(($(this).text()).trim());
-      debugger;
 
       $('.year-labels')
           .show()
@@ -116,28 +115,22 @@ jQuery(document).ready(function($) {
   function filters(){
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
-        debugger;
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
-        debugger;
         return filteredQuery;
-        debugger;
       }
     }).filter(Array)
       .join('&');
-      debugger;
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
-      // var helper = $(this).val();
       $.ajax({
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
-            alert(this.url)
+            // alert(this.url)
             var projects = response;
-            debugger;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
