@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
   $(window).scroll(function(){
-
+ if ($('body').hasClass('front-page') ) {
     var sticky = $('.sticky-navigation'),
         nav = $('.gallery-description-container'),
         description = $('.nav-description'),
@@ -11,12 +11,13 @@ jQuery(document).ready(function($){
       if (scroll >= offset) {
          sticky.addClass("fixed");
          description.addClass("fixed");
-     }
-      else if (scroll <= offset)  {
-        sticky.removeClass("fixed");
-        description.removeClass("fixed");
-    }
-  });
+       }
+        else if (scroll <= offset)  {
+          sticky.removeClass("fixed");
+          description.removeClass("fixed");
+        } 
+      }
+    });
 });
 
 function myFunction() {

@@ -1122,6 +1122,10 @@ iframe {
   display: flex;
   -ms-flex-direction: row;
       flex-direction: row; }
+  @media screen and (max-width: 375px) {
+    .contact-content {
+      -ms-flex-direction: column;
+          flex-direction: column; } }
 
 .contact-info-container {
   display: -ms-flexbox;
@@ -1157,6 +1161,10 @@ iframe {
   .contact-form-container :-ms-input-placeholder {
     font-weight: bold;
     color: #0198d5; }
+  @media screen and (max-width: 375px) {
+    .contact-form-container {
+      width: 90%;
+      padding: 2em 0 0em 1.2em; } }
 
 .frm_form_field {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
@@ -1368,9 +1376,16 @@ input[type='email']:focus {
 
 .searchform-title {
   width: 60%; }
+  @media screen and (max-width: 375px) {
+    .searchform-title {
+      font-size: 1em;
+      width: 100%; } }
 
 .searchform-container {
   width: 40%; }
+  @media screen and (max-width: 375px) {
+    .searchform-container {
+      display: none; } }
 
 .search-form {
   margin-bottom: 0;
@@ -1435,7 +1450,6 @@ input[type='email']:focus {
 
 .archive-blurb {
   background: white;
-  padding: 2%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1443,7 +1457,7 @@ input[type='email']:focus {
   text-align: center; }
   .archive-blurb p {
     font-family: "open_sans";
-    width: 65%;
+    width: 85%;
     margin-top: 1rem;
     font-size: 1.1rem; }
 
@@ -1468,10 +1482,21 @@ input[type='email']:focus {
         flex: 0 0 30%;
     height: 250px;
     margin-bottom: 2em;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    border: 2px solid white; }
+    @media screen and (max-width: 375px) {
+      .search-list li, .search-list a {
+        margin: 0; } }
     .search-list li:hover, .search-list a:hover {
       border: 2px solid white;
       cursor: pointer; }
+  @media screen and (max-width: 375px) {
+    .search-list {
+      -ms-flex-direction: column;
+          flex-direction: column;
+      padding: 0;
+      margin: 0;
+      width: 100%; } }
 
 .alert-info {
   display: -ms-flexbox;
@@ -1705,6 +1730,10 @@ object {
     background-color: rgba(0, 100, 147, 0.95);
     padding: 1rem;
     cursor: pointer; }
+  @media screen and (max-width: 375px) {
+    .tag-description {
+      width: 100vw;
+      height: 100vh; } }
 
 .tag-description-title {
   -ms-flex: 0 1 100%;

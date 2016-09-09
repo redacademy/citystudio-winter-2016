@@ -50,6 +50,9 @@ iframe {
 .contact-content {
   display: flex;
   flex-direction: row;
+  @include iphone6{
+    flex-direction: column;
+  }
 }
 .contact-info-container {
   display: flex;
@@ -88,6 +91,11 @@ iframe {
     font-weight: bold;
     color: $city-blue;
   }
+  @include iphone6{
+    width: 90%;
+    padding: 2em 0 0em 1.2em;
+  }
+
 }
 .frm_form_field {
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);

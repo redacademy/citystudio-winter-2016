@@ -20,10 +20,18 @@
 
 .searchform-title{
   width: 60%;
+  @include iphone6{
+    font-size: 1em;
+    width: 100%;
+  }
 }
 
 .searchform-container{
   width: 40%;
+    @include iphone6{
+    display: none;
+  }
+
 }
 
 .search-form {
@@ -95,13 +103,12 @@
 
 .archive-blurb{
   background: white;
-  padding:2%;
   display: flex;
   justify-content: center;
   text-align: center;
   p {
   font-family: $fontfamily;
-  width:65%;
+  width:85%;
   margin-top: 1rem;
   font-size: 1.1rem;
   }
@@ -109,38 +116,49 @@
 
 //ARCHIVE GRID-----------------------
 
-  .search-list {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
-    flex-direction: row;
-    -webkit-flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 2rem;
+.search-list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 2rem;
+
   li, a {
       border: 1px solid transparent;
       flex: 0 0 30%;
       height: 250px;
       margin-bottom: 2em;
       box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+      border: 2px solid white;
+        @include iphone6 {
+          margin: 0;
+      }
     &:hover{
       border:2px solid white;
       cursor: pointer;
     }
+  }
+  @include iphone6 {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    width: 100%;
   }
 }
 
