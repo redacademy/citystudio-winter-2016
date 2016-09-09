@@ -29,7 +29,6 @@ get_header();
 
 <!-- Section Project Credits -->
 	<div class="section-credits content-wrapper">
-<<<<<<< HEAD
     <div class="excerpt"><?php the_field('excerpt'); ?></div>
 			<div class="column-wrap">
 	      <div class="col-one">
@@ -70,37 +69,6 @@ get_header();
 	          <h3>Staff Contact &amp; Partners:</h3>
 	          <?php the_field('staff_partners'); ?>
 	        </span>
-	<!-- media fields -->
-	        <span class="proj-subtitle proj-detail-wrap">
-=======
-      <div class="excerpt"><?php the_field('excerpt'); ?></div>
-      <div class="col-one">
-        <span class="proj-partners proj-detail-wrap">
-          <h3>School &amp; Course:</h3>
-				<p><?php the_field('participating_school'); ?>
-				 <?php if (have_rows('course_name'));
-                            while (have_rows('course_name')) : the_row(); ?>
-						<?php the_sub_field('course_name') ?>
-						<?php endwhile; ?></p>
-        </span>
-        <span class="proj-faculty proj-detail-wrap">
-          <h3>Faculty Member:</h3>
-          <p><?php the_field('faculty_members'); ?></p>
-        </span>
-				<span class="proj-date proj-detail-wrap">
-					<h3>Semester Completed:</h3>
-					<p><?php the_field('semester_completed'); ?> -
-					<?php the_field('year_completed'); ?> </p>
-				</span>
-				<span class="proj-subtitle proj-detail-wrap">
-					<h3>City Strategy &amp; Goal Area: </h3>
-					<p><?php the_field('city_strategy'); ?> -
-					<?php the_field('goal_area'); ?></p>
-				</span>
-				<span class="proj-subtitle proj-detail-wrap">
-				  <h3>Neighbourhood:</h3>
-					<?php the_field('neighbourhood'); ?>
-				</span>
       </div> <!-- end .col-one -->
 
       <div class="col-two">
