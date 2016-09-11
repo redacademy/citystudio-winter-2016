@@ -27,7 +27,7 @@ get_header(); ?>
 						<a href="<?php echo get_the_permalink();?>">
 							<li style=
 			            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
-			             background-size: cover;
+			             background-size: cover; height: 100%; width: 100%;
 									">
 								<div class="tag-description">
 							 	 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>

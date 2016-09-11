@@ -67,13 +67,17 @@ get_header(); ?>
 
 <!-- media links -->
 				<h3 class ="media-links-title"><span><?php echo the_field('school_abrev'); ?></span> in the media, publications, and press...</h3>
-				<div class="media-links-container">
+					<p class="media-links">
+							<?php the_field('no_media_option'); ?>
+					</p>
+					<div class="media-links-container">
 						<?php
                             // check if the repeater field has rows of data
                             if (have_rows('media_links'));
                             // loop through the rows of data
                             while (have_rows('media_links')) : the_row(); ?>
 							<p class="media-links">
+
 								<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
 							</p>
 							<?php endwhile; ?>

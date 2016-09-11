@@ -42,7 +42,7 @@ jQuery(document).ready(function($){
       var menuIcon = $("i", this);
       menuIcon.addClass("fa-times-circle");
     }, function() {
-  
+
      var menuIcon = $("i", this)
 
      menuIcon.removeClass("fa-times-circle");
@@ -52,9 +52,9 @@ jQuery(document).ready(function($){
   );
 
   var menuSubmenu = $(".menu").children().children();
-  menuSubmenu.show(); 
+  menuSubmenu.show();
 
-  //code for mobile view 
+  //code for mobile view
 
   $(document).ready(function(){
     var callToAction = $(".call-to-action");
@@ -71,9 +71,3 @@ jQuery(document).ready(function($){
     }
   );
 });
-
-
-
-
-
-
