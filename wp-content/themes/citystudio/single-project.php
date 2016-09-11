@@ -60,17 +60,6 @@ get_header();
 					</span>
 	      </div> <!-- end .col-one -->
 
-	      <div class="col-two">
-					<span class="proj-subtitle proj-detail-wrap">
-						<h3>Student Team:</h3>
-						<p><?php the_field('student_team'); ?></p>
-					</span>
-					<span class="proj-staff proj-detail-wrap">
-	          <h3>Staff Contact &amp; Partners:</h3>
-	          <?php the_field('staff_partners'); ?>
-	        </span>
-      </div> <!-- end .col-one -->
-
       <div class="col-two">
 				<span class="proj-subtitle proj-detail-wrap">
 					<h3>Student Team:</h3>

@@ -1,7 +1,8 @@
 jQuery(document).ready(function($){
 
   $(window).scroll(function(){
- if ($('body').hasClass('home page') ) {
+
+    if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
         nav = $('.gallery-description-container'),
         description = $('.nav-description'),
@@ -11,14 +12,14 @@ jQuery(document).ready(function($){
       if (scroll >= offset) {
          sticky.addClass("fixed");
          description.addClass("fixed");
-       }
+        }
         else if (scroll <= offset)  {
           sticky.removeClass("fixed");
           description.removeClass("fixed");
         } 
       }
     });
-});
+  });
 
 function myFunction() {
   var hamburger = document.getElementById("hamburgerMenu");
@@ -33,11 +34,11 @@ window.onclick = function(e) {
 jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
-      var menuIcon = $("i", this);
-      menuIcon.removeClass("fa-bars");
-       if ($(window).width() <= 375){
-         $('.header-container').css({"position": "fixed"});
-      }
+    var menuIcon = $("i", this);
+    menuIcon.removeClass("fa-bars");
+    if ($(window).width() <= 375){
+      $('.header-container').css({"position": "fixed"});
+    }
   });
   $('.hamburger').toggle(function() {
       var menuIcon = $("i", this);
