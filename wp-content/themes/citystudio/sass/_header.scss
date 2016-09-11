@@ -16,6 +16,10 @@
   background-color: #ffffff;
   z-index: 3;
 
+  @include iphone5{
+    position: fixed;
+  }
+
 }
 .site-branding {
   margin-right: 5em;
@@ -113,13 +117,11 @@
   position: absolute;
   background-color: #f7f9f9;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-  margin-left: 0em;
-  top: 92px;
-  width: 350px;
+  top: 6em;
+  width: 25vw;
   margin: 1em 0em;
   @include tablet{
     width: 350px;
-
   }
 
   @include iphone6{
@@ -130,6 +132,14 @@
     z-index: 3;
     position: fixed;
   }
+  @include iphone5{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    margin-left: -10em;
+    top: 60px;
+    z-index: 3;
+    position: fixed;
+  }
+
 }
 .dropdown-content a{
   transition: height .3s ease-in;
@@ -177,6 +187,9 @@ button.hamburger{
 }
 #primary-menu {
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   @include iphone6{
     height: 86vh;
     font-size: .8em;
@@ -185,6 +198,25 @@ button.hamburger{
     flex-direction: column;
     justify-content: center;
   }
+  @include iphone5{
+    height: 85vh
+  }
+}
+
+.header-nav{
+  border-top: 4px solid $light-blue;
+  border-bottom: 4px solid $light-blue;
+  background-color: #f7f9f9;
+  padding: 2em 0;
+  @include iphone6{
+    width: 100vw;
+    padding: 0;
+  }
+  @include iphone5{
+    width: 103vw;
+    height: 85.6vh;
+    }
+  
 }
 
 .header-nav li a{
@@ -199,17 +231,7 @@ button.hamburger{
     height: 1.5em;
   }
 }
-.header-nav{
-  border-top: 4px solid $light-blue;
-  border-bottom: 4px solid $light-blue;
-  background-color: #f7f9f9;
-  padding-bottom: 2em;
-  padding-top: 2em;
-  @include iphone6{
-    width: 100vw;
-    padding: 0;
-  }
-}
+
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
@@ -284,6 +306,13 @@ button.hamburger{
       position: absolute;
       left: 12em;
       z-index: -1;
+    }
+    @include iphone5{
+      top: 16.5em;
+      position: absolute;
+      left: 10em;
+      z-index: -1;
+      font-size: 12px;
     }
   }
 /*//sub menu css*/

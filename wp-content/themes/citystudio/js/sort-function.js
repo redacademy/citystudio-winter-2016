@@ -122,11 +122,8 @@ jQuery(document).ready(function($) {
         debugger;
         return filteredQuery;
       }
-        if (queryFilter[filter] == 'year'){
-          alert('success');
-        }
     }).filter(Array)
-      .join(' ');
+      .join('');
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
@@ -136,7 +133,7 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
-            alert(this.url)
+            // alert(this.url)
             var projects = response;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
