@@ -1,7 +1,7 @@
 jQuery(document).ready(function($){
 
   $(window).scroll(function(){
- if ($('body').hasClass('front-page') ) {
+ if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
         nav = $('.gallery-description-container'),
         description = $('.nav-description'),
