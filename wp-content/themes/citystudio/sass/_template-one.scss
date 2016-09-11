@@ -76,7 +76,7 @@ h2.page-titles {
   background-color: $light_blue;
   margin: 15px auto;
   height: 100px;
-  width: 30%;
+  width: 100%;
   max-width: 500px;
   padding: .9em 0;
   color: white;
@@ -89,6 +89,9 @@ h2.page-titles {
   }
   @include iphone6{
     margin: 0;
+  }
+  @include desktop {
+    width: 30%;
   }
   .become-involved{
     font-weight: bold;

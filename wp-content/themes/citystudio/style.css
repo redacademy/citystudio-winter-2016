@@ -1105,14 +1105,18 @@ button.hamburger {
       height: 150px; } }
 
 .citystudio-banner-short {
-  background: url("../../images/citystudio-logo-lighter.png"), #0082b9;
+  background: #0082b9;
   background-size: cover;
   background-position: center center;
   opacity: 0.9;
   width: 100%;
-  height: 150px;
+  height: 4em;
   overflow: hidden;
   margin-bottom: 4em; }
+  @media screen and (min-width: 480px) {
+    .citystudio-banner-short {
+      background: url("../../images/citystudio-logo-lighter.png"), #0082b9;
+      height: 150px; } }
 
 .contact-header {
   background-color: #0198d5;
@@ -1165,12 +1169,23 @@ iframe {
 .contact-content {
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -ms-flex-direction: row;
       flex-direction: row; }
   @media screen and (max-width: 375px) {
     .contact-content {
       -ms-flex-direction: column;
           flex-direction: column; } }
+=======
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  @media screen and (max-width: 375px) {
+    .contact-content {
+      -webkit-flex-direction: column;
+          -ms-flex-direction: column;
+              flex-direction: column; } }
+>>>>>>> sun-11
 
 .contact-info-container {
   display: -ms-flexbox;
@@ -1403,30 +1418,48 @@ input[type='email']:focus {
 # Search Page Styles
 --------------------------------------------------------------*/
 .search-archive-header {
-  background-color: #0198d5;
+  background-color: #0082b9;
   background-size: cover;
-  height: 4em;
+  height: 7em;
   width: 100%;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -ms-flex-direction: row;
       flex-direction: row;
   -ms-flex-pack: justify;
       justify-content: space-between;
+=======
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+>>>>>>> sun-11
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 480px) {
     .search-archive-header {
-      height: 7em; } }
+      background: url("../../images/citystudio-logo.png") center center no-repeat;
+      background-size: cover;
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      height: 150px; } }
   .search-archive-header h1 {
     color: #fff;
     padding-top: 1rem;
     font-family: "open_sans";
-    font-size: 1.5em;
-    margin-left: 1em; }
+    font-size: 1.75em;
+    margin-left: 0.6em; }
     @media screen and (min-width: 480px) {
       .search-archive-header h1 {
         font-size: 3em;
-        padding-top: 1.25rem; } }
+        padding-top: 0.75em;
+        margin-left: 2em; } }
 
 .searchform-title {
   width: 60%; }
@@ -1435,8 +1468,15 @@ input[type='email']:focus {
       margin-left: 1em; } }
 
 .searchform-container {
-  width: 40%;
+  width: 100%;
   margin-right: 1em; }
+<<<<<<< HEAD
+=======
+  @media screen and (min-width: 480px) {
+    .searchform-container {
+      width: 40%;
+      padding-top: 1em; } }
+>>>>>>> sun-11
 
 .search-form {
   margin-bottom: 0;
@@ -1457,14 +1497,12 @@ input[type='email']:focus {
     flex-direction: row;
     margin: 0 auto !important;
     width: 100%;
-    background-color: white;
-    border: none;
-    outline: none;
+    background-color: transparent;
+    border: #0198d5;
+    outline: #0198d5;
     border-radius: 5px;
     height: 1rem;
-    border: 1px solid lightgrey;
-    position: relative;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    position: relative; }
     @media screen and (min-width: 480px) {
       .searchpage label {
         height: 2.25rem; } }
@@ -1477,10 +1515,12 @@ input[type='email']:focus {
     border-radius: 5px;
     font-weight: 700;
     font-family: "open_sans";
-    width: 100%; }
+    width: 100%;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    padding-left: 0.5em; }
     @media screen and (min-width: 480px) {
       .searchpage input {
-        font-size: 1rem; } }
+        font-size: 1.5em; } }
     .searchpage input::-webkit-input-placeholder {
       color: #0198d5; }
     .searchpage input::-moz-placeholder {
@@ -1491,9 +1531,9 @@ input[type='email']:focus {
       color: #0198d5; }
   .searchpage .fa {
     color: #2cb5e8;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     top: 0.4rem;
-    right: 0.6rem;
+    right: 0.8rem;
     position: absolute; }
     .searchpage .fa:hover {
       cursor: pointer;
@@ -1501,6 +1541,10 @@ input[type='email']:focus {
 
 .archive-blurb {
   background: white;
+<<<<<<< HEAD
+=======
+  display: -webkit-flex;
+>>>>>>> sun-11
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: center;
@@ -1513,7 +1557,8 @@ input[type='email']:focus {
     font-size: 1.1rem; }
     @media screen and (min-width: 480px) {
       .archive-blurb p {
-        width: 65%; } }
+        width: 65%;
+        margin: 4em 0; } }
 
 .search-list {
   display: -ms-flexbox;
@@ -1528,7 +1573,7 @@ input[type='email']:focus {
       align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 1rem auto 0; }
+  margin: 1em auto 0; }
   @media screen and (min-width: 480px) {
     .search-list {
       margin: 2rem auto 0; } }
@@ -1538,26 +1583,26 @@ input[type='email']:focus {
     -ms-flex: 0 0 100%;
         flex: 0 0 100%;
     height: 250px;
+<<<<<<< HEAD
     margin-bottom: 1em;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+=======
+    margin-bottom: 1.5em;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    max-width: 90vw; }
+>>>>>>> sun-11
     @media screen and (min-width: 480px) {
       .search-list li,
       .search-list a {
         -ms-flex: 0 0 30%;
             flex: 0 0 30%;
         margin-bottom: 2em;
-        max-width: 400px; } }
+        max-width: 400px;
+        height: 300px; } }
     .search-list li:hover,
     .search-list a:hover {
       border: 1px solid white;
       cursor: pointer; }
-  @media screen and (max-width: 375px) {
-    .search-list {
-      -ms-flex-direction: column;
-          flex-direction: column;
-      padding: 0;
-      margin: 0;
-      width: 100%; } }
 
 .alert-info {
   display: -ms-flexbox;
@@ -2168,13 +2213,15 @@ a {
         text-align: left; } }
   .campus-course-container h3 {
     margin-bottom: 0.25rem; }
-  .campus-course-container li, .campus-course-container a {
+  .campus-course-container li,
+  .campus-course-container a {
     font-size: 0.85rem;
     line-height: 1.5rem;
     color: #0198d5;
     font-weight: 500;
     text-decoration: none; }
-    .campus-course-container li:hover, .campus-course-container a:hover {
+    .campus-course-container li:hover,
+    .campus-course-container a:hover {
       text-decoration: underline;
       color: #ee7600; }
   .campus-course-container li p {
@@ -2217,8 +2264,7 @@ a {
     border: 1px solid transparent;
     width: 340px;
     height: 250px;
-    margin: 0 auto;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem;
     list-style: none; }
   .partner-projects-gallery a:hover {
     text-decoration: none; }
@@ -2299,22 +2345,26 @@ a {
       margin-right: 4rem;
       width: 90%; } }
   .media-links-container .media-links {
-    width: 100%;
-    text-align: center;
-    margin-bottom: 1.5em;
-    color: #ffffff;
-    text-align: center; }
+    width: 100%; }
     @media screen and (min-width: 480px) {
       .media-links-container .media-links {
         width: 25%; } }
-    .media-links-container .media-links p, .media-links-container .media-links a {
+    .media-links-container .media-links p,
+    .media-links-container .media-links a {
       color: #ffffff;
       font-size: 0.9rem;
       font-family: "open_sans";
       font-weight: 550;
       text-decoration: none; }
-      .media-links-container .media-links p:hover, .media-links-container .media-links a:hover {
+      .media-links-container .media-links p:hover,
+      .media-links-container .media-links a:hover {
         text-decoration: underline; }
+
+.no-media {
+  text-align: center;
+  margin: 1.5em;
+  color: #ffffff;
+  font-family: "open_sans"; }
 
 .loader {
   opacity: 0.1;
@@ -2913,9 +2963,16 @@ a {
   -ms-flex-direction: column-reverse;
       flex-direction: column-reverse;
   height: 100%;
+<<<<<<< HEAD
   -ms-flex-pack: center;
       justify-content: center;
   padding: 1em;
+=======
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 1em;
+>>>>>>> sun-11
   max-width: 1280px;
   margin: 0 auto;
   z-index: -999; }
@@ -2924,6 +2981,7 @@ a {
       padding: 0 4em; } }
 
 .team-container {
+<<<<<<< HEAD
   margin: 4em 2em;
   display: -ms-flexbox;
   display: flex;
@@ -2931,23 +2989,59 @@ a {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center; }
+=======
+  margin: 4em 1em;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  @media screen and (min-width: 480px) {
+    .team-container {
+      margin: 4em 2em; } }
+>>>>>>> sun-11
   .team-container .section-titles {
     -ms-flex: 0 1 100%;
         flex: 0 1 100%;
     margin-bottom: 2em;
-    text-align: center; }
+    text-align: center;
+    font-size: 1.5em; }
+    @media screen and (min-width: 480px) {
+      .team-container .section-titles {
+        font-size: 2em; } }
 
 .citystudio-teams ul {
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: justify;
       justify-content: space-between;
   -ms-flex: 0 0 100%;
       flex: 0 0 100%;
+=======
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-flex: 0 0 75%;
+      -ms-flex: 0 0 75%;
+          flex: 0 0 75%;
+>>>>>>> sun-11
   border-bottom: 2.5px dashed #2cb5e8;
   padding-bottom: 2em; }
+  @media screen and (min-width: 480px) {
+    .citystudio-teams ul {
+      -webkit-flex: 0 0 100%;
+          -ms-flex: 0 0 100%;
+              flex: 0 0 100%; } }
 
 .team {
   display: -ms-flexbox;
@@ -3119,7 +3213,7 @@ h2.page-titles {
   background-color: #2cb5e8;
   margin: 15px auto;
   height: 100px;
-  width: 30%;
+  width: 100%;
   max-width: 500px;
   padding: .9em 0;
   color: white;
@@ -3131,6 +3225,9 @@ h2.page-titles {
   @media screen and (max-width: 375px) {
     .connect {
       margin: 0; } }
+  @media screen and (min-width: 480px) {
+    .connect {
+      width: 30%; } }
   .connect .become-involved {
     font-weight: bold;
     display: inline-block;
