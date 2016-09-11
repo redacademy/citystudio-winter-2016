@@ -695,6 +695,9 @@ a {
   justify-content: space-between;
   background-color: #ffffff;
   z-index: 3; }
+  @media screen and (max-width: 320px) {
+    .header-container {
+      position: fixed; } }
 
 .site-branding {
   margin-right: 5em; }
@@ -776,9 +779,8 @@ a {
   position: absolute;
   background-color: #f7f9f9;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  margin-left: 0em;
-  top: 92px;
-  width: 350px;
+  top: 6em;
+  width: 25vw;
   margin: 1em 0em; }
   @media screen and (max-width: 1024px) {
     .dropdown-content {
@@ -789,6 +791,13 @@ a {
       box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
       margin-left: -11.2em;
       top: 70px;
+      z-index: 3;
+      position: fixed; } }
+  @media screen and (max-width: 320px) {
+    .dropdown-content {
+      box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+      margin-left: -10em;
+      top: 60px;
       z-index: 3;
       position: fixed; } }
 
@@ -836,7 +845,13 @@ button.hamburger {
   z-index: 3; }
 
 #primary-menu {
-  z-index: 3; }
+  z-index: 3;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-direction: column;
+      flex-direction: column; }
   @media screen and (max-width: 375px) {
     #primary-menu {
       height: 86vh;
@@ -848,6 +863,23 @@ button.hamburger {
           flex-direction: column;
       -ms-flex-pack: center;
           justify-content: center; } }
+  @media screen and (max-width: 320px) {
+    #primary-menu {
+      height: 85vh; } }
+
+.header-nav {
+  border-top: 4px solid #2cb5e8;
+  border-bottom: 4px solid #2cb5e8;
+  background-color: #f7f9f9;
+  padding: 2em 0; }
+  @media screen and (max-width: 375px) {
+    .header-nav {
+      width: 100vw;
+      padding: 0; } }
+  @media screen and (max-width: 320px) {
+    .header-nav {
+      width: 103vw;
+      height: 85.6vh; } }
 
 .header-nav li a {
   display: -ms-flexbox;
@@ -862,17 +894,6 @@ button.hamburger {
       width: 33vw;
       padding-left: 4em;
       height: 1.5em; } }
-
-.header-nav {
-  border-top: 4px solid #2cb5e8;
-  border-bottom: 4px solid #2cb5e8;
-  background-color: #f7f9f9;
-  padding-bottom: 2em;
-  padding-top: 2em; }
-  @media screen and (max-width: 375px) {
-    .header-nav {
-      width: 100vw;
-      padding: 0; } }
 
 .header-nav a {
   display: block;
@@ -941,6 +962,13 @@ button.hamburger {
       position: absolute;
       left: 12em;
       z-index: -1; } }
+  @media screen and (max-width: 320px) {
+    .header-nav li ul {
+      top: 16.5em;
+      position: absolute;
+      left: 10em;
+      z-index: -1;
+      font-size: 12px; } }
 
 /*//sub menu css*/
 .header-nav li ul li {

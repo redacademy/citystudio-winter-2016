@@ -57,7 +57,6 @@ jQuery(document).ready(function($){
   menuSubmenu.show(); 
 
   //code for mobile view 
-
   $(document).ready(function(){
     var callToAction = $(".call-to-action");
 
@@ -70,10 +69,9 @@ jQuery(document).ready(function($){
         }, 
         function(){
           $(".sub-menu").css({"display": "none"});
-    }); 
-  };
-});
-
+      }); 
+    };
+  });
 });
 
 
