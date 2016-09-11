@@ -69,17 +69,7 @@ get_header();
 	          <h3>Staff Contact &amp; Partners:</h3>
 	          <?php the_field('staff_partners'); ?>
 	        </span>
-      </div> <!-- end .col-one -->
 
-      <div class="col-two">
-				<span class="proj-subtitle proj-detail-wrap">
-					<h3>Student Team:</h3>
-					<p><?php the_field('student_team'); ?></p>
-				</span>
-				<span class="proj-staff proj-detail-wrap">
-          <h3>Staff Contact &amp; Partners:</h3>
-          <?php the_field('staff_partners'); ?>
-        </span>
 <!-- media fields -->
         <span class="proj-subtitle proj-detail-wrap">
 					<?php
@@ -155,7 +145,7 @@ get_header();
       $value = get_field('activate_stewardship');
       if ($value) {
           ?>
-          
+
 			<div class="scalability-wrap">
 	    		<h3><?php the_field('stewardship_title');
                         ?></h3>

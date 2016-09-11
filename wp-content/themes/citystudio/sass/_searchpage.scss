@@ -5,47 +5,49 @@
   // background: url("../../images/citystudio-logo.png") center center no-repeat ;
   background-color: $city-blue;
   background-size: cover;
-  height: 7rem;
+  height: 4em;
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  @include desktop {
+    height: 7em;
+  }
   h1 {
     color: #fff;
     padding-top: 1rem;
     font-family: $fontfamily;
+    font-size: 1.5em;
+    margin-left: 1em;
+    @include desktop {
+      font-size: 3em;
+      padding-top: 1.25rem;
+    }
   }
 }
-
-.searchform-title{
+.searchform-title {
   width: 60%;
-  @include iphone6{
-    font-size: 1em;
-    width: 100%;
+  @include desktop {
+    margin-left: 1em;
   }
 }
-
-.searchform-container{
+.searchform-container {
   width: 40%;
-    @include iphone6{
-    display: none;
-  }
-
+  margin-right: 1em;
 }
-
 .search-form {
   margin-bottom: 0;
-  width:100%;
-  padding-right: 12rem;
+  width: 100%;
   @include desktop {
-    margin-top: 2rem;
+    margin-top: 2em;
   }
 }
 .searchpage {
   background-color: #0082b9;
   fieldset {
     border: none;
+    color: transparent;
   }
   label {
     display: -webkit-box;
@@ -84,36 +86,37 @@
     @include desktop {
       font-size: 1rem;
     }
-    &::placeholder{
-    color:$city-blue;
+    &::placeholder {
+      color: $city-blue;
     }
   }
-  .fa{
+  .fa {
     color: $light-blue;
     font-size: 1.25rem;
-    top: .4rem;
-    right:.6rem;
+    top: 0.4rem;
+    right: 0.6rem;
     position: absolute;
-    &:hover{
+    &:hover {
       cursor: pointer;
       color: $dark-blue;
     }
   }
 }
-
-.archive-blurb{
+.archive-blurb {
   background: white;
   display: flex;
   justify-content: center;
   text-align: center;
   p {
-  font-family: $fontfamily;
-  width:85%;
-  margin-top: 1rem;
-  font-size: 1.1rem;
+    font-family: $fontfamily;
+    width: 75%;
+    margin-top: 1rem;
+    font-size: 1.1rem;
+    @include desktop {
+      width: 65%;
+    }
   }
 }
-
 //ARCHIVE GRID-----------------------
 
 .search-list {
@@ -136,21 +139,24 @@
   align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 0 auto;
-  margin-top: 2rem;
-
-  li, a {
-      border: 1px solid transparent;
+  margin: 1rem auto 0;
+  @include desktop {
+    margin: 2rem auto 0;
+  }
+  li,
+  a {
+    border: 1px solid transparent;
+    flex: 0 0 100%;
+    height: 250px;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    @include desktop {
       flex: 0 0 30%;
-      height: 250px;
       margin-bottom: 2em;
-      box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-      border: 2px solid white;
-        @include iphone6 {
-          margin: 0;
-      }
-    &:hover{
-      border:2px solid white;
+      max-width: 400px;
+    }
+    &:hover {
+      border: 1px solid white;
       cursor: pointer;
     }
   }
@@ -161,7 +167,6 @@
     width: 100%;
   }
 }
-
 .alert-info {
   display: flex;
   justify-content: center;
@@ -172,13 +177,14 @@
   width: 65%;
   height: 250px;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  p, h2 {
+  p,
+  h2 {
     color: #ffffff;
     font-weight: 300;
     margin: 1rem;
-    }
-    p {
+  }
+  p {
     width: 80%;
-    margin: 1rem 5rem 1rem 5rem;
-    }
+    margin: 1rem 5rem;
+  }
 }
