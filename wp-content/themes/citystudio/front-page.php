@@ -50,7 +50,7 @@ get_header(); ?>
              border-bottom: 2px solid white;
              border-right: 2px solid white;">
           <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
-            <div class="subtitle"><?php the_field( 'subtitle' ); ?>
+            <div class="subtitle"><?php the_field( 'excerpt' ); ?>
             </div>
           </div>
         </li>
@@ -80,13 +80,13 @@ get_header(); ?>
             <?php endwhile; ?>
         </ul>
 
-        <ul class="featured-two">
+        <!-- <ul class="featured-two">
             <?php
               if( have_rows('partner_row_three') );
               while ( have_rows('partner_row_three') ) : the_row(); ?>
               <li style="background: url( ' <?php the_sub_field('school_logo') ?> ' )no-repeat center center;background-size: contain; ">
               </li>
             <?php endwhile; ?>
-        </ul>
+        </ul> -->
       </div>
 <?php get_footer(); ?>

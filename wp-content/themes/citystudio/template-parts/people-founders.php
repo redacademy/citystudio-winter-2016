@@ -20,7 +20,7 @@ $citystudio_founders = new WP_Query( $args ); ?>
 
   <h2 class="section-titles">Founder's Circle</h2>
 
-  <ul>
+  <ul class="people-list">
 
   <?php while ( $citystudio_founders->have_posts() ) : $citystudio_founders->the_post(); ?>
 

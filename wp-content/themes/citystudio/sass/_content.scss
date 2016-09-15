@@ -81,14 +81,14 @@
   margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
-  height: auto;
+  height: 3em;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include desktop {
-  background: url("../../images/citystudio-logo.png"), $medium-blue;
+  // background: url("../../images/citystudio-logo.png"), $medium-blue;
   background-size: cover;
   background-position: center center;
-  height: 150px;
+  height: 7em;
   }
 }
 

@@ -19,7 +19,7 @@ $citystudio_leadership = new WP_Query( $args ); ?>
   <div class="citystudio-team team-container">
     <h2 class="section-titles">Leadership Council</h2>
 
-    <ul>
+    <ul class="people-list">
 
     <?php while ( $citystudio_leadership->have_posts() ) : $citystudio_leadership->the_post(); ?>
 

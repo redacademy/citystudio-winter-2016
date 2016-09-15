@@ -19,7 +19,7 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
   <h2 class="section-titles">Operations Council</h2>
 
-  <ul>
+  <ul class="people-list">
 
   <?php while ( $citystudio_operations->have_posts() ) : $citystudio_operations->the_post(); ?>
 

@@ -60,12 +60,8 @@
 }
 .icon-search {
   display: none;
-  margin-right: 5em;
-
-  @include desktop {
-    display: block;
-    font-size: 2rem;
-  }
+  margin-right: 6em;
+  margin-top: 2px;
   @include tablet {
     font-size: 1.6rem;
   }
@@ -73,8 +69,14 @@
   @include iphone6-horizontal{
     display: none;
   }
+  @include desktop {
+    display: block;
+    font-size: 2rem;
+  }
+
   .fa {
     color: $light-blue;
+    font-size: 2rem;
     &:hover{
     color: $medium-blue;
     }
@@ -93,7 +95,7 @@
      }
   .fa {
     color: $light-blue;
-    font-size: 1.6rem;
+    font-size: 2rem;
     &:hover{
       color: $medium-blue;
      }
@@ -109,8 +111,8 @@
   }
 }
 .hamburger-menu{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 .dropdown-content {
   display: none;
@@ -165,9 +167,9 @@
 button.hamburger{
   color: #2cb5e8;
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 2em;
   position: absolute;
-  top: 2em;
+  top: 1.5em;
   right: 1em;
   background: 0 0;
   border: none;
@@ -177,7 +179,7 @@ button.hamburger{
   color: $medium-blue;
  }
  @include iphone6{
-   top: 1.3em;  
+   top: 1.3em;
  }
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -216,7 +218,7 @@ button.hamburger{
     width: 103vw;
     height: 85.6vh;
     }
-  
+
 }
 
 .header-nav li a{
@@ -250,11 +252,11 @@ button.hamburger{
     background-size: 13px 8px;
     @include iphone6{
       background: url(../../images/arrow_right.png) 30px no-repeat;
-      background-size: 10px 15px; 
+      background-size: 10px 15px;
    }
 }
 .header-nav ul li.menu-item-has-children ul li a {
-  background: none;  
+  background: none;
   @include iphone6{
     line-height: 25px;
     z-index: 5;
@@ -337,7 +339,7 @@ button.hamburger{
     height: 2.5em;
   }
 }
-.menu-menu-container{ 
+.menu-menu-container{
   @include iphone6{
     width: 100%;
     position: fixed;

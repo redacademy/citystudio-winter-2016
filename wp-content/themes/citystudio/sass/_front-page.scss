@@ -120,7 +120,7 @@
     max-width: 100%;
     margin-bottom: 0;
     @include desktop {
-      margin-bottom: 3.5em;
+      margin-bottom: 5.5em;
     }
   }
   li {
@@ -170,6 +170,9 @@
   text-transform: uppercase;
 }
 .featured-two {
+  ul {
+  margin-bottom: 1em;
+}
   li {
     // flex: 1 0 30%;
     cursor: auto;
