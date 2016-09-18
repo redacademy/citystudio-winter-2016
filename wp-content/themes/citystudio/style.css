@@ -1110,7 +1110,7 @@ button.hamburger {
   list-style: none; }
 
 .citystudio-banner {
-  background-color: #0082b9;
+  background: linear-gradient(to right, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
@@ -1124,10 +1124,7 @@ button.hamburger {
       height: 7em; } }
 
 .citystudio-banner-short {
-  background: #0082b9;
-  background-size: cover;
-  background-position: center center;
-  opacity: 0.9;
+  background: linear-gradient(to right, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   width: 100%;
   height: 4em;
   overflow: hidden;
@@ -1135,7 +1132,10 @@ button.hamburger {
   @media screen and (min-width: 480px) {
     .citystudio-banner-short {
       background: url("../../images/citystudio-logo-lighter.png"), #0082b9;
-      height: 150px; } }
+      background-size: cover;
+      background-position: center center;
+      height: 150px;
+      opacity: 0.9; } }
 
 .contact-header {
   background-color: #0198d5;
@@ -2246,7 +2246,7 @@ a {
       font-weight: bold; }
 
 .blue-overlay {
-  background-color: rgba(1, 152, 213, 0.7);
+  background: linear-gradient(to right, rgba(0, 118, 165, 0.75) 0%, rgba(0, 177, 234, 0.75) 80%, rgba(0, 118, 165, 0.75) 99%, rgba(0, 118, 165, 0.75) 100%);
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3126,6 +3126,12 @@ a {
     .tags p:hover {
       background-color: #e6ecec; }
 
+.team-citystudio-team {
+  position: relative; }
+  .team-citystudio-team .static-return-button {
+    position: absolute;
+    bottom: -46px; }
+
 .banner-inner {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3346,6 +3352,7 @@ h2.page-titles {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: contain;
+  margin-top: -15px;
   width: 100%;
   height: 500px; }
   @media screen and (max-width: 375px) {
@@ -3457,3 +3464,6 @@ h2.page-titles {
   @media screen and (max-width: 375px) {
     .cta_blurb {
       width: 0; } }
+
+.blue-gradient {
+  background: linear-gradient(to bottom, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%); }
