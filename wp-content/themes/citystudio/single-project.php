@@ -167,8 +167,18 @@ get_header();
 </div>
   <div class="tags-wrapper">
 		<h3>Tags:</h3>
+
+
 	<div class="tags">
-						<?php the_tags('<p class="tag-links"><a class="tag-url" href="', '</a><p>'); ?>
+	<?php echo get_the_tag_list('<p>Tags: ',', ', '</p>');?>
+
+
+      
+	
+	<!-- <a href="<?php echo get_tag_link($tag_id); ?>">tag name</a> -->
+						<!--<?php the_tags('<p class="tag-links">', '</p>'); ?>
+						<?php get_tag_link('<p>', '</p>'); ?>
+
     					<?php $id = get_the_id(); ?>
      				    <?php  $terms = get_the_terms($id, 'partners');
                           if (!empty($terms)) : ?>
@@ -194,7 +204,7 @@ get_header();
                                    echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
                                    ?>
     				      <?php endforeach; ?>
-    				      <?php endif; ?>
+    				      <?php endif; ?>-->
     			  </div>
 
     		</div>
