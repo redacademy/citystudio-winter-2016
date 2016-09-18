@@ -10,18 +10,23 @@
 
 
   <header class="page-header archive-header">
-      <?php
-        echo single_tag_title('<h2><span>Tag:</span> ', '</h2>' );
-      ?>
-    </header><!-- .page-header -->
+      <?php echo single_tag_title('<h2><span>Tag:</span> ', '</h2>' ); ?>
+  </header><!-- .page-header -->
 
-<?php
-  $args = array(
-  'post_type' => 'project',
-  'order'   => 'ASC',
-  
-);
-$tags = new WP_Query( $args ); ?>
+
+  <?php $tag_id = get_query_var('tag_id'); ?>
+
+  <?php
+    $args = array(
+      'post_type' => 'project',
+      'order'   => 'ASC',
+      'relation' => 'AND',
+      array(
+        'tag' => $tag_id,
+      );
+    );
+
+    $tags = new WP_Query( $args ); ?>
 
 <?php if ( $tags->have_posts() ) : ?>
 

@@ -10,9 +10,7 @@
   <?php if ( have_posts() ) : ?>
 
     <header class="page-header archive-header">
-      <?php
-            echo single_term_title('<h2><span>Tag:</span> ', '</h2>' );
-      ?>
+      <?php echo single_term_title('<h2><span>Tag:</span> ', '</h2>' ); ?>
     </header><!-- .page-header -->
 
       <div class="section-archives">
