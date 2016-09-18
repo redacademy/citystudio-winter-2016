@@ -16,6 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  flex-direction: column;
   @include desktop {
     margin: 4em 2em;
   }
@@ -26,7 +27,7 @@
     font-size: 1.5em;
     @include desktop {
       font-size: 2em;
-  margin-bottom: 2em;
+      margin-bottom: 2em;
     }
   }
 }
@@ -34,7 +35,7 @@
   ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     flex: 0 0 75%;
     @include desktop {
       flex: 0 0 100%;
@@ -63,6 +64,7 @@
   }
   h3 {
     flex: 0 2 100%;
+    line-height: 10px;
   }
   p {
     flex: 0 3 100%;
@@ -70,6 +72,8 @@
   }
   a {
     margin-bottom: 0.5em;
+    border: none;
+    outline: none;
   }
   &:hover {
     cursor: pointer;
@@ -85,6 +89,9 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+@include desktop {
+  flex-direction: row;
+  }
 }
 .leaders,
 .operations,
@@ -92,12 +99,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding: 0 0.4em;
-  margin-bottom: 1em;
+  padding:1em;
+  flex: 0 1 30%;
   h3 {
     text-decoration: none;
     text-align: center;
     width: 100%;
+  font-family: $fontfamily;
     .people-title {
       font-size: 1.4em;
       margin-bottom: 0.25em;
@@ -106,6 +114,7 @@
   p {
     text-align: center;
     margin-bottom: 0px;
+  font-family: $fontfamily;
   }
 }
 // Single Person Page
@@ -115,6 +124,7 @@ article.people {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  font-family: $fontfamily;
 }
 .person-left {
   flex: 0 1 30%;
@@ -122,6 +132,7 @@ article.people {
   overflow: hidden;
   max-width: 300px;
   max-height: 300px;
+  margin: 3em 0em 2em 3em;
 }
 .person-right {
   flex: 0 1 60%;
@@ -131,14 +142,20 @@ article.people {
   h1,
   p {
     color: $light-blue;
+    font-family: $fontfamily;
   }
 }
 .static-return-button {
   a {
     font-size: 1.3em;
+    font-family: $fontfamily;
     color: $light-blue;
     text-decoration: underline;
     text-transform: uppercase;
+    padding: 1em;
+    margin-left: 3em;
+    border: none;
+    outline: none;
   }
   a:hover {
     cursor: pointer;

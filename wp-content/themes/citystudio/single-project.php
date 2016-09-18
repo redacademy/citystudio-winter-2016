@@ -203,12 +203,17 @@ get_header();
 
     		</div>
     		</div>
+
     	</div>
 
+			<div class="static-return-button">
+				<a href="<?php echo esc_url( home_url( 'home/search' ) ); ?>"> << Back To Project Archive</a>
+			</div>
 
   </article><!-- #post-## -->
 
 	<?php endwhile; // End of the loop. ?>
+
 </div><!-- end single proj view container -->
 	</main><!-- #main -->
 </div><!-- #primary -->
