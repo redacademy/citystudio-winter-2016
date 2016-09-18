@@ -2,7 +2,7 @@
 /**
  * Template Name: Contact Page
  *
- * @package RED_Starter_Theme
+ * @package CityStudio
  */
 
 get_header(); ?>

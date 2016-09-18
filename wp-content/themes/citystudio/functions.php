@@ -166,6 +166,19 @@ function acf_set_featured_image( $value, $post_id, $field  ){
 add_filter('acf/update_value/name=banner_image', 'acf_set_featured_image', 10, 3);
 
 
+function wpse28145_add_custom_types( $query ) {
+    if( is_tag() && $query->is_main_query() ) {
+
+        // this gets all post types:
+        $post_types = get_post_types();
+
+        // alternately, you can add just specific post types using this line instead of the above:
+        // $post_types = array( 'post', 'your_custom_type' );
+
+        $query->set( 'post_type', $post_types );
+    }
+}
+add_filter( 'pre_get_posts', 'wpse28145_add_custom_types' );
 
 // Custom function to return Subtitle Custom Field in API callback
 function project_subtitle() {

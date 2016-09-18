@@ -19,11 +19,13 @@ jQuery(document).ready(function($) {
 
   // Sort navigation is open on page load on mobile
   $('#sort').resize(function(){
-      $('#sort.nav-div').addClass('open');
+      // take out for resizing(1)
+      // $('#sort.nav-div').addClass('open');
   });
 
   $('#sort_nav').click(function() {
-    $('#sort').toggleClass('open');
+    // take out for resizing(2)
+    // $('#sort').toggleClass('open');
     $('.theme-labels').toggleClass('show-labels');
     $('.part-labels').toggleClass('show-labels');
     $('.year-labels').toggleClass('show-labels');
@@ -31,7 +33,8 @@ jQuery(document).ready(function($) {
 
   // Sort navigation dlides out on desktop when clicked
   $('#refresh').click(function() {
-    $('#sort').toggleClass('open');
+    // take out for resizing(3)
+    // $('#sort').toggleClass('open');
     $('#refresh.refresh.menu-item').css("right", "-2px");
 
   }); // close sort
@@ -116,10 +119,11 @@ jQuery(document).ready(function($) {
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
+        debugger;
         return filteredQuery;
       }
     }).filter(Array)
-      .join('&');
+      .join('');
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data

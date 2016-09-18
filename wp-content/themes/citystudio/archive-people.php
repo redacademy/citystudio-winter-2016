@@ -10,20 +10,19 @@ get_header();
     <div class="">
       <div class="people-archive container">
 
-        <header class="citystudio-banner-short">
+        <header class="citystudio-banner">
           <div class="banner-inner">
             <h2 class="page-titles">People</h2>
           </div>
         </header>
 
       <?php get_template_part( 'template-parts/people', 'team' ); ?>
-
+	<hr class="separate">
       <?php get_template_part( 'template-parts/people', 'leadership' ); ?>
-
+	<hr class="separate">
       <?php get_template_part( 'template-parts/people', 'operations' ); ?>
-
+	<hr class="separate">
       <?php get_template_part( 'template-parts/people', 'founders' ); ?>
-
 
       </div><!-- .people-archive -->
     </div>

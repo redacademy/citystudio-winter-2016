@@ -16,6 +16,10 @@
   background-color: #ffffff;
   z-index: 3;
 
+  @include iphone5{
+    position: fixed;
+  }
+
 }
 .site-branding {
   margin-right: 5em;
@@ -56,12 +60,8 @@
 }
 .icon-search {
   display: none;
-  margin-right: 5em;
-
-  @include desktop {
-    display: block;
-    font-size: 2rem;
-  }
+  margin-right: 6em;
+  margin-top: 2px;
   @include tablet {
     font-size: 1.6rem;
   }
@@ -69,8 +69,14 @@
   @include iphone6-horizontal{
     display: none;
   }
+  @include desktop {
+    display: block;
+    font-size: 2rem;
+  }
+
   .fa {
     color: $light-blue;
+    font-size: 2rem;
     &:hover{
     color: $medium-blue;
     }
@@ -89,7 +95,7 @@
      }
   .fa {
     color: $light-blue;
-    font-size: 1.6rem;
+    font-size: 2rem;
     &:hover{
       color: $medium-blue;
      }
@@ -105,21 +111,19 @@
   }
 }
 .hamburger-menu{
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
 }
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f7f9f9;
   box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-  margin-left: 0em;
-  top: 92px;
-  width: 350px;
+  top: 6em;
+  width: 25vw;
   margin: 1em 0em;
   @include tablet{
     width: 350px;
-
   }
 
   @include iphone6{
@@ -130,6 +134,14 @@
     z-index: 3;
     position: fixed;
   }
+  @include iphone5{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
+    margin-left: -10em;
+    top: 60px;
+    z-index: 3;
+    position: fixed;
+  }
+
 }
 .dropdown-content a{
   transition: height .3s ease-in;
@@ -155,9 +167,9 @@
 button.hamburger{
   color: #2cb5e8;
   font-weight: 400;
-  font-size: 1.6em;
+  font-size: 2em;
   position: absolute;
-  top: 2em;
+  top: 1.5em;
   right: 1em;
   background: 0 0;
   border: none;
@@ -167,7 +179,7 @@ button.hamburger{
   color: $medium-blue;
  }
  @include iphone6{
-   top: 1.3em;  
+   top: 1.3em;
  }
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
@@ -177,6 +189,9 @@ button.hamburger{
 }
 #primary-menu {
   z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   @include iphone6{
     height: 86vh;
     font-size: .8em;
@@ -185,6 +200,25 @@ button.hamburger{
     flex-direction: column;
     justify-content: center;
   }
+  @include iphone5{
+    height: 85vh
+  }
+}
+
+.header-nav{
+  border-top: 4px solid $light-blue;
+  border-bottom: 4px solid $light-blue;
+  background-color: #f7f9f9;
+  padding: 2em 0;
+  @include iphone6{
+    width: 100vw;
+    padding: 0;
+  }
+  @include iphone5{
+    width: 103vw;
+    height: 85.6vh;
+    }
+
 }
 
 .header-nav li a{
@@ -199,17 +233,7 @@ button.hamburger{
     height: 1.5em;
   }
 }
-.header-nav{
-  border-top: 4px solid $light-blue;
-  border-bottom: 4px solid $light-blue;
-  background-color: #f7f9f9;
-  padding-bottom: 2em;
-  padding-top: 2em;
-  @include iphone6{
-    width: 100vw;
-    padding: 0;
-  }
-}
+
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
@@ -228,11 +252,11 @@ button.hamburger{
     background-size: 13px 8px;
     @include iphone6{
       background: url(../../images/arrow_right.png) 30px no-repeat;
-      background-size: 10px 15px; 
+      background-size: 10px 15px;
    }
 }
 .header-nav ul li.menu-item-has-children ul li a {
-  background: none;  
+  background: none;
   @include iphone6{
     line-height: 25px;
     z-index: 5;
@@ -285,6 +309,13 @@ button.hamburger{
       left: 12em;
       z-index: -1;
     }
+    @include iphone5{
+      top: 16.5em;
+      position: absolute;
+      left: 10em;
+      z-index: -1;
+      font-size: 12px;
+    }
   }
 /*//sub menu css*/
 .header-nav li ul li {
@@ -308,7 +339,7 @@ button.hamburger{
     height: 2.5em;
   }
 }
-.menu-menu-container{ 
+.menu-menu-container{
   @include iphone6{
     width: 100%;
     position: fixed;
@@ -326,4 +357,22 @@ button.hamburger{
     margin: 0em 2em;
     z-index: 3;
   }
+}
+
+.toggle-menu {
+
+        padding:20px;
+        float:left;
+        display:inline-block;
+        box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+        border-radius:3px;
+        background:#303030;
+        text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+        color:#777;
+        font-size:20px;
+        transition:color linear 0.15s;
+      }
+
+.header-nav ul.active {
+    display:none;
 }
