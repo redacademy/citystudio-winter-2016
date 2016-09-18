@@ -28,12 +28,14 @@
   }
 }
 .blue-overlay {
-  background-color: rgba(1, 152, 213, 0.7);
+  @include blue-to-blue-light;
+  // background-color: rgba(1, 152, 213, 0.5);
   display: flex;
   align-items: center;
   height: 100%;
   width: 100%;
   z-index: 2;
+
   @include desktop {
     height: 250px;
   }

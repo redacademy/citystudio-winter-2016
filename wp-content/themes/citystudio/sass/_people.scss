@@ -1,3 +1,12 @@
+.team-citystudio-team {
+  position: relative;
+
+  .static-return-button {
+    position: absolute;
+    bottom: -46px;
+  }
+}
+
 .banner-inner {
   display: flex;
   flex-direction: column-reverse;
@@ -11,6 +20,7 @@
     padding: 0 4em;
   }
 }
+
 .team-container {
   margin: 3em .5em;
   display: flex;

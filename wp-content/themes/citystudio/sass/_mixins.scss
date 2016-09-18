@@ -44,7 +44,7 @@
 @mixin footer-2-col{
 	@media screen and (max-width: 845px){
 	@content;
-	}	
+	}
 }
 
 @mixin iphone6{
@@ -69,4 +69,20 @@
 	@media screen and (max-width: 320px) {
 	@content;
 	}
+}
+
+// Gradient mixins
+
+@mixin blue-to-blue {
+	background: linear-gradient(to right,
+	rgba(2,119,167,1) 0%,
+	rgba(1,136,187,1) 24%,
+	rgba(0,165,220,0.9) 63%,
+	rgba(0,177,234,0.9) 80%
+	);
+}
+
+@mixin blue-to-blue-light {
+	background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100%
+	);
 }
