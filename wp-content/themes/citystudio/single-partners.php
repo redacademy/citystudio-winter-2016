@@ -81,7 +81,7 @@ get_header(); ?>
 								<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
 							</p>
 							<?php endwhile; ?>
-				</div>
+				 </div> <!--end media links container -->
 
   	</div><!-- end projects-container -->
 	</main><!-- #main -->

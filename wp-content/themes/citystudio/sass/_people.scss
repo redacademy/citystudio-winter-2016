@@ -44,15 +44,15 @@
 }
 .team {
   display: flex;
-  flex: 0 0 44%;
+  flex: 0 0 40%;
   flex-wrap: wrap;
   justify-content: center;
   max-height: 340px;
   align-items: center;
-  // flex-direction: column;
+  padding: 1em;
   text-align: center;
   @include desktop {
-    flex: 0 0 20%;
+    flex: 0 0 22%;
   }
   .team-pic {
     flex: 0 1 100%;
