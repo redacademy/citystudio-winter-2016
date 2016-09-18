@@ -11,7 +11,7 @@
   justify-content: left;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include desktop {
-    background: url("../../images/citystudio-logo.png") center center no-repeat;
+    background: url("../../images/citystudio-logo.png") center center no-repeat, $medium-blue;
     background-size: cover;
     flex-direction: row;
     justify-content: space-between;
@@ -52,7 +52,8 @@
   }
 }
 .searchpage {
-  background-color: #0082b9;
+// background-color: #f7f9f9;
+background-color: lighten($city-blue, 0.7);
   fieldset {
     border: none;
     color: transparent;
@@ -149,7 +150,7 @@
   width: 90%;
   margin: 1em auto 0;
   @include desktop {
-    margin: 2rem auto 0;
+    margin: 3rem auto 0;
   }
   li,
   a {
@@ -158,12 +159,11 @@
     height: 250px;
     margin-bottom: 1.5em;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-    max-width: 90vw;
     @include desktop {
       flex: 0 0 30%;
       margin-bottom: 2em;
-      max-width: 400px;
-      height: 300px;
+      width: 360px;
+      height: 250px;
     }
     &:hover {
       border: 1px solid white;

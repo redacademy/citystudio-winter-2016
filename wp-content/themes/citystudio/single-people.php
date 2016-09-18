@@ -8,7 +8,7 @@ get_header();
 <div id="primary" class="content-area single-projects">
 	<main id="main" class="site-main" role="main">
 
-		<header class="citystudio-banner-short">
+		<header class="citystudio-banner">
 			<div class="banner-inner">
 				<h2 class="page-titles">People</h2>
 			</div>

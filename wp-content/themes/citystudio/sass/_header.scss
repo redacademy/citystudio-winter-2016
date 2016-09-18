@@ -26,6 +26,10 @@
   @include desktop {
     margin-right: 0;
   }
+  a {
+    border: none;
+    outline: none;
+}
 }
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -83,6 +87,8 @@
   }
   a {
     color: #03648c;
+    border: none;
+    outline: none;
   }
 }
 .icon-menu {

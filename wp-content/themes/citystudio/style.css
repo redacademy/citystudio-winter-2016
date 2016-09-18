@@ -711,6 +711,9 @@ a {
   @media screen and (min-width: 480px) {
     .site-branding {
       margin-right: 0; } }
+  .site-branding a {
+    border: none;
+    outline: none; }
 
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
@@ -759,7 +762,9 @@ a {
     .icon-search .fa:hover {
       color: #0082b9; }
   .icon-search a {
-    color: #03648c; }
+    color: #03648c;
+    border: none;
+    outline: none; }
 
 .icon-menu {
   margin-top: 0.5rem;
@@ -1500,7 +1505,7 @@ input[type='email']:focus {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 480px) {
     .search-archive-header {
-      background: url("../../images/citystudio-logo.png") center center no-repeat;
+      background: url("../../images/citystudio-logo.png") center center no-repeat, #0082b9;
       background-size: cover;
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
@@ -1543,7 +1548,7 @@ input[type='email']:focus {
       margin-top: 2em; } }
 
 .searchpage {
-  background-color: #0082b9; }
+  background-color: #019bd9; }
   .searchpage fieldset {
     border: none;
     color: transparent; }
@@ -1638,7 +1643,7 @@ input[type='email']:focus {
   margin: 1em auto 0; }
   @media screen and (min-width: 480px) {
     .search-list {
-      margin: 2rem auto 0; } }
+      margin: 3rem auto 0; } }
   .search-list li,
   .search-list a {
     border: 1px solid transparent;
@@ -1647,8 +1652,7 @@ input[type='email']:focus {
             flex: 0 0 100%;
     height: 250px;
     margin-bottom: 1.5em;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    max-width: 90vw; }
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
     @media screen and (min-width: 480px) {
       .search-list li,
       .search-list a {
@@ -1656,8 +1660,8 @@ input[type='email']:focus {
             -ms-flex: 0 0 30%;
                 flex: 0 0 30%;
         margin-bottom: 2em;
-        max-width: 400px;
-        height: 300px; } }
+        width: 360px;
+        height: 250px; } }
     .search-list li:hover,
     .search-list a:hover {
       border: 1px solid white;
@@ -1837,8 +1841,8 @@ object {
       margin-top: 0.2rem; }
       @media screen and (min-width: 480px) {
         .tag-archives .archive-header h2 {
-          font-size: 4em;
-          margin-top: -1.25rem; } }
+          font-size: 3em;
+          margin-top: -0.25rem; } }
       .tag-archives .archive-header h2 span {
         color: #006493; }
   .tag-archives h1 {
@@ -1868,23 +1872,28 @@ object {
           -ms-flex-direction: row;
               flex-direction: row; } }
   .tag-gallery a {
+<<<<<<< HEAD
     -webkit-flex: 0 0 33%;
         -ms-flex: 0 0 33%;
             flex: 0 0 33%;
+=======
+    -webkit-flex: 0 0 30%;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+>>>>>>> sun-18
     background-position: center center !important;
     background-size: cover !important;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    max-width: 360px;
-    max-height: 280px;
-    margin-bottom: 1rem; }
+    max-width: 340px;
+    max-height: 250px;
+    margin-bottom: 2em; }
     @media screen and (min-width: 480px) {
       .tag-gallery a {
         margin: 0 auto 2rem;
         width: 360px;
-        height: 280px;
         font-size: 3rem; } }
   .tag-gallery li {
-    height: 300px; }
+    height: 250px; }
 
 .tag-description {
   display: -webkit-flex;
@@ -1944,16 +1953,21 @@ object {
 
 .tag-subtitle p {
   width: 100%;
+<<<<<<< HEAD
   -webkit-flex: 0 2 100%;
       -ms-flex: 0 2 100%;
           flex: 0 2 100%;
+=======
+  -webkit-flex: 0 1 100%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+>>>>>>> sun-18
   font-family: "open_sans";
-  font-size: 1rem;
   font-weight: 300;
   color: #fff;
   text-align: center;
   overflow: hidden;
-  font-size: 0.9em; }
+  font-size: 16px; }
 
 .container {
   display: block;
@@ -1964,10 +1978,17 @@ object {
   background-size: cover;
   display: -webkit-flex;
   display: -ms-flexbox;
+<<<<<<< HEAD
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
+=======
+  display: block;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+>>>>>>> sun-18
   border-bottom: 1px solid black;
   margin-bottom: 2rem;
   height: 425px; }
@@ -3155,7 +3176,14 @@ a {
           flex-wrap: wrap;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
+<<<<<<< HEAD
           justify-content: center; }
+=======
+          justify-content: center;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+>>>>>>> sun-18
   @media screen and (min-width: 480px) {
     .team-container {
       margin: 4em 2em; } }
@@ -3178,9 +3206,15 @@ a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+<<<<<<< HEAD
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+=======
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+>>>>>>> sun-18
   -webkit-flex: 0 0 75%;
       -ms-flex: 0 0 75%;
           flex: 0 0 75%; }
@@ -3225,14 +3259,21 @@ a {
   .team h3 {
     -webkit-flex: 0 2 100%;
         -ms-flex: 0 2 100%;
+<<<<<<< HEAD
             flex: 0 2 100%; }
+=======
+            flex: 0 2 100%;
+    line-height: 10px; }
+>>>>>>> sun-18
   .team p {
     -webkit-flex: 0 3 100%;
         -ms-flex: 0 3 100%;
             flex: 0 3 100%;
     text-align: center; }
   .team a {
-    margin-bottom: 0.5em; }
+    margin-bottom: 0.5em;
+    border: none;
+    outline: none; }
   .team:hover {
     cursor: pointer; }
     .team:hover img {
@@ -3251,6 +3292,14 @@ a {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap; }
+<<<<<<< HEAD
+=======
+  @media screen and (min-width: 480px) {
+    .people-list {
+      -webkit-flex-direction: row;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
+>>>>>>> sun-18
 
 .leaders,
 .operations,
@@ -3264,14 +3313,22 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+<<<<<<< HEAD
   padding: 0 0.4em;
   margin-bottom: 1em; }
+=======
+  padding: 1em;
+  -webkit-flex: 0 1 30%;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%; }
+>>>>>>> sun-18
   .leaders h3,
   .operations h3,
   .founders h3 {
     text-decoration: none;
     text-align: center;
-    width: 100%; }
+    width: 100%;
+    font-family: "open_sans"; }
     .leaders h3 .people-title,
     .operations h3 .people-title,
     .founders h3 .people-title {
@@ -3281,7 +3338,8 @@ a {
   .operations p,
   .founders p {
     text-align: center;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    font-family: "open_sans"; }
 
 article.people {
   max-width: 1130px;
@@ -3294,7 +3352,12 @@ article.people {
           flex-wrap: wrap;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
+<<<<<<< HEAD
           justify-content: space-between; }
+=======
+          justify-content: space-between;
+  font-family: "open_sans"; }
+>>>>>>> sun-18
 
 .person-left {
   -webkit-flex: 0 1 30%;
@@ -3303,7 +3366,8 @@ article.people {
   border-radius: 100%;
   overflow: hidden;
   max-width: 300px;
-  max-height: 300px; }
+  max-height: 300px;
+  margin: 3em 0em 2em 3em; }
 
 .person-right {
   -webkit-flex: 0 1 60%;
@@ -3314,13 +3378,19 @@ article.people {
   border-bottom: 2.5px dashed #2cb5e8; }
   .person-name h1,
   .person-name p {
-    color: #2cb5e8; }
+    color: #2cb5e8;
+    font-family: "open_sans"; }
 
 .static-return-button a {
   font-size: 1.3em;
+  font-family: "open_sans";
   color: #2cb5e8;
   text-decoration: underline;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding: 1em;
+  margin-left: 3em;
+  border: none;
+  outline: none; }
 
 .static-return-button a:hover {
   cursor: pointer;
