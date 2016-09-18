@@ -6,22 +6,15 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
-  background: url("../../images/CityStudio-LandingPage-bg.jpg") no-repeat top center;
   background-size: cover;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: block;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
+  display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
   margin-bottom: 2rem;
   height: 425px;
+
   @include desktop {
-    height: 80vh;
+    height: 60vh;
     margin-bottom: 4rem;
   }
 }
