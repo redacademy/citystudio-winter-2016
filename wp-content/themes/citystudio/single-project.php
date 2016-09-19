@@ -166,39 +166,40 @@ get_header();
 	<?php endwhile; ?>
 </div>
   <div class="tags-wrapper">
-		<h3>Tags:</h3>
-
-
+	<h3>Tags:</h3>
 	<div class="tags">
-	<?php echo get_the_tag_list('<p>Tags: ',', ', '</p>');?>
-						<?php get_tag_link('<p>', '</p>'); ?>
 
-    					<?php $id = get_the_id(); ?>
-     				    <?php  $terms = get_the_terms($id, 'partners');
-                          if (!empty($terms)) : ?>
-    				        <?php foreach ($terms as $term)  :
-                                $name = $term->name;
-                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'partners').'">'.$name.'</a>'.'</p>';
-                             ?>
-    					      <?php endforeach; ?>
-    					    <?php endif; ?>
-    					      <?php  $terms = get_the_terms($id, 'season');
-                          if (!empty($terms)) : ?>
-    				        <?php foreach ($terms as $term)  :
-                                $name = $term->name;
-                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'season').'">'.$name.'</a>'.'</p>';
-                                ?>
-    				      <?php endforeach; ?>
-    				      <?php endif; ?>
+		<?php
+			if(get_the_tag_list()) {
+		    	echo get_the_tag_list('<ul class="tag-list"><li>','</li><li>','</li></ul>');
+			}
+		?>
+					<?php $id = get_the_id(); ?>
+ 				    <?php  $terms = get_the_terms($id, 'partners');
+                      if (!empty($terms)) : ?>
+				        <?php foreach ($terms as $term)  :
+                            $name = $term->name;
+                               echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'partners').'">'.$name.'</a>'.'</p>';
+                         ?>
+					      <?php endforeach; ?>
+					    <?php endif; ?>
+					      <?php  $terms = get_the_terms($id, 'season');
+                      if (!empty($terms)) : ?>
+				        <?php foreach ($terms as $term)  :
+                            $name = $term->name;
+                               echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'season').'">'.$name.'</a>'.'</p>';
+                            ?>
+				      <?php endforeach; ?>
+				      <?php endif; ?>
 
-    				      <?php  $terms = get_the_terms($id, 'themes');
-                          if (!empty($terms)) : ?>
-    				        <?php foreach ($terms as $term)  :
-                                $name = $term->name;
-                                   echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
-                                   ?>
-    				      <?php endforeach; ?>
-    				      <?php endif; ?>
+				      <?php  $terms = get_the_terms($id, 'themes');
+                      if (!empty($terms)) : ?>
+				        <?php foreach ($terms as $term)  :
+                            $name = $term->name;
+                               echo '<p class="tag-links">'.'<a class="tag-url" href="'.get_term_link($term->slug, 'themes').'">'.$name.'</a>'.'</p>';
+                               ?>
+				      <?php endforeach; ?>
+				      <?php endif; ?>
     			  </div>
 
     		</div>

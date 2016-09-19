@@ -1,15 +1,11 @@
 <div class="nav-div open" id="sort">
-	<div class="sort" id="sort_nav">
-		<label>Sort</label>
-	</div>
-
 	<div class="themes sort-menu-item">
+		<p>Themes</p>
 		<?php $terms = get_terms( 'themes', array (
 			'hide_empty' => 0,
 		) ); ?>
 	  <?php if ( ! empty( $terms ) ) : ?>
-			<ul class="nav-sub-menu theme">
-				<li><span class="menu-title">Themes</span></li>
+			<ul class="nav-sub-menu">
 			<?php foreach( $terms as $term) : ?>
 				<li class="sub-menu-theme" >
 					<input type="checkbox" id="theme_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
@@ -23,8 +19,8 @@
 		<br>
 		</div>
 	</div>
-
 	<div class="partners sort-menu-item">
+		<p>Schools</p>
 		<?php $terms = get_terms( 'partners', array (
 			'hide_empty' => 0,
 		) ); ?>
@@ -46,6 +42,7 @@
 	</div>
 
 	<div class="years sort-menu-item">
+		<p>Year</p>
 		<?php $terms = get_terms( 'year', array (
 			'hide_empty' => 0,
 		) ); ?>
