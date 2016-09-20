@@ -68,6 +68,7 @@
   font-family: $fontfamily;
   text-align: center;
   width: 71%;
+
   @include desktop {
     padding-bottom: 4.5rem;
     max-width: 70%;
@@ -182,4 +183,13 @@
       max-height: 100px;
     }
   }
+}
+
+// Explore section
+
+.explore-section {
+  width: 100%;
+  display: block;
+  margin: 4em auto 8em;
+  text-align: center;
 }
