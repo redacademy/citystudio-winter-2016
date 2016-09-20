@@ -5,7 +5,7 @@ h2.page-titles {
   box-shadow: none;
   @include desktop {
     font-size: 3em;
-}
+  }
 }
 .wwd-content{
   display: block;
@@ -26,7 +26,6 @@ h2.page-titles {
   max-width: 928px;
   padding: 2rem;
   margin: 0 auto;
-
   h3{
     font-size: 1.25em;
     padding-bottom: 2%;
@@ -43,7 +42,7 @@ h2.page-titles {
     font-family: $fontfamily;
     @include desktop {
       font-size: 1em;
-  line-height: 1.8rem;
+      line-height: 1.8rem;
     }
   }
 }
