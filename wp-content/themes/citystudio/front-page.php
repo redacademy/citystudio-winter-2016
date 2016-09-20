@@ -7,7 +7,6 @@ get_header(); ?>
 
 <div class="front-page-main">
 
-
   <?php get_template_part ('template-parts/page-home/hero-banner'); ?>
 
   <?php get_template_part ('template-parts/page-home/intro'); ?>

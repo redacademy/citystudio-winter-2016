@@ -19,6 +19,7 @@
     width: 90vw;
     padding: 0 0.5em;
     height: 2.5rem;
+    text-transform: capitalize;
     @include desktop {
       height: 6.5rem;
       margin-bottom: 1.5rem;

@@ -58,19 +58,29 @@ jQuery(document).ready(function($) {
 
   }); // close refresh
 
-  // If the input label is visible,
-  // find nav-sub-menu and add class current-menu
-  $('.sort-menu-item').mouseover(function(){
-    var labelVisible = $(this).children('div').find('label').length;
-     if(!labelVisible){
-      $(this).children('.nav-sub-menu').addClass('current-menu');
-    }
-  });
+  $('.themes.sort-menu-item').click(function(){
+      $(this).toggleClass('toggle-menu-item');
+      $(this).children().toggleClass('toggle-menu-item');
+  })
+
+   $('.partners.sort-menu-item').click(function(){
+      $(this).toggleClass('toggle-menu-item');
+      $(this).children().toggleClass('toggle-menu-item');
+  })
+
+    $('.years.sort-menu-item').click(function(){
+      $(this).toggleClass('toggle-menu-item');
+      $(this).children().toggleClass('toggle-menu-item');
+  })
 
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.sort-menu-item').mouseout(function(){
       $(this).children('.nav-sub-menu').removeClass('current-menu');
    });
+
+  $('.themes').click(function(){
+    $(this).children('.nav-sub-menu').addClass('current-menu');
+  })
 
   // Create an empty object to hold
   // the checked navigation values in the properties
@@ -119,7 +129,6 @@ jQuery(document).ready(function($) {
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
-        debugger;
         return filteredQuery;
       }
     }).filter(Array)
@@ -133,7 +142,7 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
-            // alert(this.url)
+            alert(this.url)
             var projects = response;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
