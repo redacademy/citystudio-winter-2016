@@ -56,7 +56,7 @@ get_header(); ?>
                 $school = $post_slug = $post->post_name;
 
                 if (is_single($school)) {
-                    get_template_part('template-parts/school', $school);
+                    get_template_part('template-parts/page-schools/school', $school);
                 } else {
                     //everything else
                 }
