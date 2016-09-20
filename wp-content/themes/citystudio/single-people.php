@@ -14,42 +14,33 @@ get_header();
 			</div>
 		</header>
 
-	<?php while (have_posts()) : the_post(); ?>
+		<?php while (have_posts()) : the_post(); ?>
 
-  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container">
-
-    <!-- Section Project Credits -->
-    <div class="person-left">
-
-      <?php if( get_field('team_member_image') ): ?>
-        <img src="<?php the_field( 'team_member_image' ); ?>" />
-      <?php endif; ?>
-
-		</div>
-
-		<div class="person-right">
-
-			<div class="person-name">
-				<?php the_title('	<h1 class="people-title">', '</h1>' ); ?>
-				<p class="role"><?php the_field( 'team_member_role' ); ?></p>
+	  <article id="post-<?php the_ID(); ?>" <?php post_class(); ?> class="container">
+	    <!-- Section Project Credits -->
+	    <div class="person-left">
+	      <?php if( get_field('team_member_image') ): ?>
+	        <img src="<?php the_field( 'team_member_image' ); ?>" />
+	      <?php endif; ?>
 			</div>
 
-			<p>
-				<?php the_field( 'team_member_bio' ); ?>
-			</p>
+			<div class="person-right">
+				<div class="person-name">
+					<?php the_title('	<h1 class="people-title">', '</h1>' ); ?>
+					<p class="role"><?php the_field( 'team_member_role' ); ?></p>
+				</div>
 
-		</div>
+				<p><?php the_field( 'team_member_bio' ); ?></p>
+			</div>
 
-    <div class="static-return-button">
-      <a href="<?php echo esc_url( home_url( '/people' ) ); ?>"> << Back To People Page</a>
-    </div>
+	    <div class="static-return-button">
+	      <a href="<?php echo esc_url( home_url( '/people' ) ); ?>"> << Back To People Page</a>
+	    </div>
+	  </article><!-- #post-## -->
 
-
-  </article><!-- #post-## -->
-
-	<?php endwhile; // End of the loop. ?>
-</div><!-- end single proj view container -->
-	</main><!-- #main -->
+		<?php endwhile; // End of the loop. ?>
+		</main><!-- #main -->
+	</div><!-- end single proj view container -->
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

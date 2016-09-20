@@ -516,6 +516,8 @@ h3.people-title {
   border-radius: 10px;
   box-sizing: border-box;
   transition: background-color 0.5s ease; }
+  .button-blue:active, .button-blue:visited {
+    color: #fff; }
   .button-blue:hover {
     background-color: transparent;
     border: 1px solid #0082b9;

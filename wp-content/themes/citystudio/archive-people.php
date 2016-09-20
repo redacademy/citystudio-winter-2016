@@ -7,7 +7,6 @@ get_header();
 
 <div id="primary" class="content-area single-projects">
 	<main id="main" class="site-main" role="main">
-    <div class="">
       <div class="people-archive container">
 
         <header class="citystudio-banner">
@@ -16,16 +15,15 @@ get_header();
           </div>
         </header>
 
-      <?php get_template_part( 'template-parts/people', 'team' ); ?>
-	<hr class="separate">
-      <?php get_template_part( 'template-parts/people', 'leadership' ); ?>
-	<hr class="separate">
-      <?php get_template_part( 'template-parts/people', 'operations' ); ?>
-	<hr class="separate">
-      <?php get_template_part( 'template-parts/people', 'founders' ); ?>
+	      <?php get_template_part( 'template-parts/page-people/people', 'team' ); ?>
+					<hr class="separate">
+	      <?php get_template_part( 'template-parts/page-people/people', 'leadership' ); ?>
+					<hr class="separate">
+	      <?php get_template_part( 'template-parts/page-people/people', 'operations' ); ?>
+					<hr class="separate">
+	      <?php get_template_part( 'template-parts/page-people/people', 'founders' ); ?>
 
       </div><!-- .people-archive -->
-    </div>
 	</main><!-- #main -->
 </div><!-- #primary -->
 
