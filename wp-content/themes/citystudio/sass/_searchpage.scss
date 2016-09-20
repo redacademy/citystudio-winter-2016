@@ -52,7 +52,6 @@
   }
 }
 .searchpage {
-// background-color: #f7f9f9;
 background-color: lighten($city-blue, 0.7);
   fieldset {
     border: none;
@@ -76,15 +75,17 @@ background-color: lighten($city-blue, 0.7);
     border-radius: 5px;
     height: 1rem;
     position: relative;
+    box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);
+    &:active{
+    box-shadow: 0 6px 12px 0 rgba(0,0,0,.3);
+  }
     @include desktop {
       height: 2.25rem;
     }
   }
   input {
     border: none;
-    margin-top: 2rem;
     font-size: 1.5rem;
-    margin: auto 0.2rem;
     color: $light-blue;
     border-radius: 5px;
     font-weight: 700;
@@ -92,11 +93,11 @@ background-color: lighten($city-blue, 0.7);
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     padding-left: 0.5em;
-    @include desktop {
-      font-size: 1.5em;
-    }
     &::placeholder {
       color: $city-blue;
+    }
+    @include desktop {
+      font-size: 1.5em;
     }
   }
   .fa {
