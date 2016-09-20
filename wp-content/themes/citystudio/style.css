@@ -1518,15 +1518,16 @@ input[type='email']:focus {
     outline: #0198d5;
     border-radius: 5px;
     height: 1rem;
-    position: relative; }
+    position: relative;
+    box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.2); }
+    .searchpage label:active {
+      box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3); }
     @media screen and (min-width: 480px) {
       .searchpage label {
         height: 2.25rem; } }
   .searchpage input {
     border: none;
-    margin-top: 2rem;
     font-size: 1.5rem;
-    margin: auto 0.2rem;
     color: #2cb5e8;
     border-radius: 5px;
     font-weight: 700;
@@ -1534,9 +1535,6 @@ input[type='email']:focus {
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     padding-left: 0.5em; }
-    @media screen and (min-width: 480px) {
-      .searchpage input {
-        font-size: 1.5em; } }
     .searchpage input::-webkit-input-placeholder {
       color: #0198d5; }
     .searchpage input::-moz-placeholder {
@@ -1545,6 +1543,9 @@ input[type='email']:focus {
       color: #0198d5; }
     .searchpage input::placeholder {
       color: #0198d5; }
+    @media screen and (min-width: 480px) {
+      .searchpage input {
+        font-size: 1.5em; } }
   .searchpage .fa {
     color: #2cb5e8;
     font-size: 1.5rem;
@@ -2144,6 +2145,10 @@ a {
 
 .blue-overlay {
   background: linear-gradient(to right, rgba(0, 118, 165, 0.75) 0%, rgba(0, 177, 234, 0.75) 80%, rgba(0, 118, 165, 0.75) 99%, rgba(0, 118, 165, 0.75) 100%);
+<<<<<<< HEAD
+=======
+  display: -webkit-flex;
+>>>>>>> mon-19
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -2924,6 +2929,7 @@ sort-menu-item toggle-menu-item {
     .tags p:hover {
       background-color: #e6ecec; }
 
+<<<<<<< HEAD
 .tag-list {
   margin: .8em 0; }
   .tag-list li {
@@ -2940,6 +2946,8 @@ sort-menu-item toggle-menu-item {
   .tag-list a {
     text-transform: capitalize; }
 
+=======
+>>>>>>> mon-19
 .team-citystudio-team {
   position: relative; }
   .team-citystudio-team .static-return-button {
