@@ -2535,7 +2535,7 @@ a {
 .toggle-menu-item {
   display: block;
   opacity: 1;
-  height: 160px;
+  height: 175px;
   background-color: white;
   text-transform: none;
   border: 2px solid #0198d5;
@@ -2566,8 +2566,7 @@ sort-menu-item toggle-menu-item {
 .open .part,
 .open .year {
   bottom: 71px;
-  left: 0px;
-  width: 123px; }
+  left: -2px; }
   .open .theme::after,
   .open .part::after,
   .open .year::after {
@@ -2611,7 +2610,6 @@ sort-menu-item toggle-menu-item {
   background-color: #fff;
   width: 88px;
   height: 88px;
-  border-radius: 45px;
   border: 1.5px solid #006496;
   text-align: center;
   color: #00A0DC;

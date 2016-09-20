@@ -129,7 +129,6 @@ jQuery(document).ready(function($) {
     return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
-        debugger;
         return filteredQuery;
       }
     }).filter(Array)

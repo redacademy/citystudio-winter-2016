@@ -26,7 +26,6 @@
 		) ); ?>
 		<?php if ( ! empty( $terms ) ) : ?>
 			<ul class="nav-sub-menu part">
-				<li><span class="menu-title">Partners</span></li>
 				<?php foreach( $terms as $term) : ?>
 				<li class="sub-menu-part">
 					<input type="checkbox" id="partners_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
@@ -42,13 +41,12 @@
 	</div>
 
 	<div class="years sort-menu-item">
-		<p>Year</p>
+		<p>Years</p>
 		<?php $terms = get_terms( 'year', array (
 			'hide_empty' => 0,
 		) ); ?>
 		<?php if ( ! empty( $terms ) ) : ?>
 		<ul class="nav-sub-menu year">
-			<li><span class="menu-title">Year</span></li>
 				<?php foreach( $terms as $term) : ?>
 				<li class="sub-menu-year">
 					<input type="checkbox" id="year_val" name="<?php echo $term->name ?>" value="<?php echo $term->slug ?>" />
