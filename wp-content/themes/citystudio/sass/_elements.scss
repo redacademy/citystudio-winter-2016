@@ -102,3 +102,28 @@ h3.people-title {
 		cursor: pointer;
 	}
 }
+
+
+// Button styles
+
+.button-blue {
+	background-color: $medium-blue;
+	border: 1px solid $medium-blue;
+	color: #fff;
+	display: inline-block;
+	padding: 1.2% 3%;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	margin: 0 auto;
+	border-radius: 10px;
+	box-sizing: border-box;
+	transition: background-color 0.5s ease;
+
+	&:hover {
+		background-color: transparent;
+		border: 1px solid $medium-blue;
+		color: $medium-blue;
+		padding: 1.2% 3%;
+	}
+}

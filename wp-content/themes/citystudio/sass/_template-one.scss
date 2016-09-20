@@ -7,18 +7,17 @@ h2.page-titles {
     font-size: 3em;
 }
 }
-.wwd-content{
+.wwd-content {
   display: block;
   justify-content: center;
 }
-.template-hero{
+.template-hero {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: -15px;
+  background-size: cover;
   width: 100%;
   height: 500px;
-  @include iphone6{
+  @include iphone6 {
     height: 55%;
   }
 }

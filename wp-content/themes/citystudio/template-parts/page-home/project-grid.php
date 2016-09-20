@@ -22,3 +22,7 @@ if( $posts ): ?>
     </ul>
     <?php wp_reset_postdata(); // IMPORTANT - reset the $post object so the rest of the page works correctly ?>
 <?php endif; ?>
+
+<div class="explore-section">
+  <a class="button-blue" href="<?php get_template_directory(); ?>/projects">See More Projects</a>
+</div>

@@ -143,10 +143,6 @@ audio:not([controls]) {
 template {
   display: none; }
 
-a {
-  background-color: transparent;
-  border: none !important; }
-
 a:active,
 a:hover {
   outline: 0; }
@@ -507,6 +503,25 @@ h3.people-title {
   h3.people-title:hover {
     cursor: pointer; }
 
+.button-blue {
+  background-color: #0082b9;
+  border: 1px solid #0082b9;
+  color: #fff;
+  display: inline-block;
+  padding: 1.2% 3%;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease; }
+  .button-blue:hover {
+    background-color: transparent;
+    border: 1px solid #0082b9;
+    color: #0082b9;
+    padding: 1.2% 3%; }
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -745,7 +760,7 @@ a {
 .icon-search {
   display: none;
   margin-right: 6em;
-  margin-top: 2px; }
+  margin-top: 4px; }
   @media screen and (max-width: 1024px) {
     .icon-search {
       font-size: 1.6rem; } }
@@ -2154,6 +2169,12 @@ object {
     max-width: 100px;
     max-height: 100px; }
 
+.explore-section {
+  width: 100%;
+  display: block;
+  margin: 4em auto 8em;
+  text-align: center; }
+
 a {
   text-decoration: none; }
 
@@ -2180,27 +2201,27 @@ a {
   box-sizing: border-box;
   width: 100%;
   height: 100%;
-  opacity: 0;
   color: white;
-  font-family: "open_sans"; }
+  font-family: "open_sans";
+  background-color: rgba(2, 117, 167, 0.78);
+  padding: 1rem;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  transition: opacity 0.45s ease; }
   .description:hover {
-    box-sizing: border-box;
-    opacity: 1;
-    background-color: rgba(0, 100, 147, 0.9);
-    padding: 1rem;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center; }
+    opacity: 0; }
 
 .description-title {
   font-size: 1.25rem;
@@ -3205,9 +3226,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex: 0 0 44%;
-      -ms-flex: 0 0 44%;
-          flex: 0 0 44%;
+  -webkit-flex: 0 0 40%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
@@ -3218,12 +3239,13 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 1em;
   text-align: center; }
   @media screen and (min-width: 480px) {
     .team {
-      -webkit-flex: 0 0 20%;
-          -ms-flex: 0 0 20%;
-              flex: 0 0 20%; } }
+      -webkit-flex: 0 0 22%;
+          -ms-flex: 0 0 22%;
+              flex: 0 0 22%; } }
   .team .team-pic {
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
@@ -3376,8 +3398,7 @@ h2.page-titles {
 .template-hero {
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
-  margin-top: -15px;
+  background-size: cover;
   width: 100%;
   height: 500px; }
   @media screen and (max-width: 375px) {
@@ -3492,3 +3513,92 @@ h2.page-titles {
 
 .blue-gradient {
   background: linear-gradient(to bottom, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%); }
+
+.blog-banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 175px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  @media screen and (min-width: 480px) {
+    .blog-banner {
+      height: 250px; } }
+
+.title-container {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  padding: 3em 0 0 5em; }
+  .title-container h1 {
+    font-size: 2.5em;
+    text-align: left !important;
+    font-family: "open_sans";
+    color: white; }
+  .title-container h4 {
+    font-size: 1.25em;
+    font-weight: normal;
+    text-align: left;
+    font-family: "open_sans";
+    color: white;
+    width: 42.5%; }
+    @media screen and (min-width: 480px) {
+      .title-container h4 {
+        font-size: 1.25em; } }
+    .title-container h4 span {
+      font-weight: bold; }
+
+.blue-overlay-2 {
+  background-color: rgba(1, 152, 213, 0.7);
+  height: 100%;
+  width: 100%;
+  z-index: 2; }
+  @media screen and (min-width: 480px) {
+    .blue-overlay-2 {
+      height: 202px; } }
+
+.blog-sidebar {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 25%;
+  margin: 2em 1em; }
+
+.sidebar-item {
+  color: #0198d5;
+  font-size: 1em;
+  font-family: "open_sans";
+  font-weight: bold;
+  text-align: center;
+  margin: 1em 0; }
+  .sidebar-item h4 {
+    margin-bottom: 15px; }
+  .sidebar-item p {
+    margin-bottom: 10px;
+    font-size: 0.7em; }
+  .sidebar-item a {
+    color: #0198d5;
+    font-weight: normal; }
+    .sidebar-item a:hover {
+      text-decoration: underline;
+      color: #0082b9; }
