@@ -18,10 +18,6 @@ jQuery(document).ready(function($) {
   checkedYear = '';
 
   // Sort navigation is open on page load on mobile
-  $('#sort').resize(function(){
-      // take out for resizing(1)
-      // $('#sort.nav-div').addClass('open');
-  });
 
   $('#sort_nav').click(function() {
     // take out for resizing(2)
@@ -49,10 +45,10 @@ jQuery(document).ready(function($) {
       partners: '',
       year: ''
     }
-
-    $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
-    $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
-    $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    // append old icon
+    // $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    // $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    // $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
 
     reloadProjects();
 
@@ -75,11 +71,11 @@ jQuery(document).ready(function($) {
 
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.sort-menu-item').mouseout(function(){
-      $(this).children('.nav-sub-menu').removeClass('current-menu');
+      $(this).children('.nav-sub-menu').children().removeClass('current-menu');
    });
 
   $('.themes').click(function(){
-    $(this).children('.nav-sub-menu').addClass('current-menu');
+    $(this).children('.nav-sub-menu').children().addClass('current-menu');
   })
 
   // Create an empty object to hold
@@ -142,7 +138,6 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
-            alert(this.url)
             var projects = response;
             // create gallery method to append HTML to
             var $gallery = $('.grid');

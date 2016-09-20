@@ -17,11 +17,8 @@
   transition: width .4s ease-in;
   margin-right: 4em;
   @include desktop {
-    height: 89px;
-    width: 88px;
     z-index: 2 !important;
     position: relative !important;
-    border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,39 +59,65 @@
   }
 }
 .open {
-  transition: all 2s ease-in;
   width: 100%;
-  order: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .themes,
 .partners,
 .years,
 .refresh {
-  top: 25%;
   width: 250px;
   height: 40px;
   margin-right: 1em !important;
   border-radius: 5px;
+  cursor: pointer;
     p{
       display: flex;
-      justify-content: center;
-      color: white;
-      padding: .2em;
+      justify-content: flex-start;
+      color: #fff;
+      padding-left: 45px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      margin: 4px;
+      padding-top: 10px;
+    }
+  .fa-sort-desc{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
+    padding: 0;
+    margin: -10px;
     }
   }
 .themes {
-  background: url(../../assets/neighbourhood-icon.png) 10px 6px no-repeat #03648c;
+  background: url(../../assets/neighbourhood-icon.png) 7px 6px no-repeat #03648c;
   background-size: 15px 20px;
+  p{
+    margin: -6px;
+  }
 }
 .partners {
   background: url("../../assets/partners-icon.png") 7px 6px  no-repeat #03648c;
   background-size: 20px 27px;
+  p{
+    margin: -6px;
+  }
+  .fa-sort-desc{
+    margin: -8px;
+  }
 }
 .years {
   background: url(../../assets/in-progress-icon.png) 7px 6px no-repeat #03648c;
   background-size: 21px 20px;
+  p{
+    margin: -6px;
+  }
+  .fa-sort-desc{
+    margin: -8px;
+  }
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
@@ -122,8 +145,7 @@
     font-size: 15px;
     border-radius: 4px;
     top: 25px;
-    right: -2px;
-    width: 94%;
+    right: -3px;
     border-radius-left: 0;
     border-radius-right: 1px;
     &:hover {
@@ -134,8 +156,8 @@
   .sub-menu-part span,
   .sub-menu-year span {
     color: $city-blue;
-    font-size: 11px;
-    padding-left: 3em;
+    font-size: 12px;
+    padding-left: 2.7em;
   }
   .sub-menu-theme span:hover,
   .sub-menu-part span:hover,
@@ -151,30 +173,32 @@
   height: 30px;
 }
 
-.themes.sort-menu-item {
-  height: 30px
-}
-
 .toggle-menu-item{
-  display: block;
-  opacity: 1;
-  height: 175px;
-  background-color: white;
-  text-transform: none;
-  border: 2px solid $city-blue;
-  border-top-color: white;
-  border-top-right-sum: 0;
-  border-top-left-radius: 0;
+    display: block;
+    opacity: 1;
+    height: 175px;
+    width: 200px;
+    background-color: #fff;
+    text-transform: none;
+    border: 2px solid #0198d5;
+    border-top-color: #fff;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
 
   p{
-    color: $city-blue;
-    text-transform: uppercase;
-    border-right-color: #fff;
-    border-left-color: #fff;
-    height: 30px;
-    border-bottom-color: white;
+      color: $city-blue;
+      text-transform: uppercase;
+      border-right-color: #fff;
+      border-left-color: #fff;
+      border-bottom-color: white;
+      font-weight: 600;
+      font-size: 16px;
+      width: 80.9%;
+      border: 2px solid #0198d5;
+      border-radius: 5px;
     }
 }
+
 
 sort-menu-item toggle-menu-item{
   border-top: 1.7px solid white;
@@ -185,16 +209,17 @@ sort-menu-item toggle-menu-item{
     text-transform: uppercase;
     color: #006493;
     border-top-color: #0198d5;
-    border-radius: 2px;
+    border-radius: 5px;
     border-bottom-color: white;
+    width: 210px;
+    margin: 1.8em;
 }
 
 .open {
   .theme,
-  .part,
+  .partner,
   .year{
-    bottom: 71px;
-    left: -2px;
+    left: -6px;
     &::after {
       content: '';
       width: 0;
@@ -241,16 +266,17 @@ sort-menu-item toggle-menu-item{
 .part-labels,
 .year-labels {
     display: none;
-    position: relative;
+    position: absolute;
     background-color: #fff;
-    width: 88px;
-    height: 88px;
-    border: 1.5px solid #006496;
-    text-align: center;
+    border: 2px solid #0198d5;
     color: #00A0DC;
     font-weight: 700;
     word-break: break-word;
-    line-height: 1.2em;
+    top: 0px;
+    border-radius: 5px;
+    height: 1.7em;
+    width:  206px;;
+    text-align: center;
     label {
       font-size: .8rem; 
     &::after {
@@ -267,9 +293,8 @@ sort-menu-item toggle-menu-item{
   }
 }
 .sticky-navigation {
-    display: inline-flex;
-    justify-content: center;
-    width: 100%;
+  width: 100%;
+  border-bottom: 2px solid #d3d3d3;
 }
 .nav-description {
   padding: 0;
@@ -309,10 +334,6 @@ sort-menu-item toggle-menu-item{
   width: 100vw;
   z-index: 2;
   padding: 0;
-  p {
-    margin-right: 120px;
-    margin-bottom: 0;
-  }
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
@@ -326,16 +347,15 @@ sort-menu-item toggle-menu-item{
   }
  }
 .nav-description.fixed{
-  /*transition: all .8s ease;*/
   height: 80px;
   padding-top: 6px;
   margin-left: 60%;
   text-align: left;
   font-size: 1.2rem;
   font-family: $fontfamily;
-    @include tablet{
-      transition: none;
-    }
+  @include tablet{
+    transition: none;
+  }
   p {
     padding: 6px;
     width: 480px; 
@@ -373,9 +393,7 @@ sort-menu-item toggle-menu-item{
     display: none;
   }
 }
-.fa-star{
-  margin-top: .6em;
-}
+
 
 .no-projects{
   background-color: $dark-blue;
@@ -391,5 +409,4 @@ sort-menu-item toggle-menu-item{
   h2{
     font-size: 24px;
   }
-
 }
