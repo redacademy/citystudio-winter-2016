@@ -4,18 +4,15 @@ jQuery(document).ready(function($){
 
     if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
-        nav = $('.gallery-description-container'),
-        description = $('.nav-description'),
+        nav = $('.homepage-titles'),
         scroll = $(window).scrollTop(),
         offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
-         description.addClass("fixed");
         }
         else if (scroll <= offset)  {
           sticky.removeClass("fixed");
-          description.removeClass("fixed");
         } 
       }
     });
