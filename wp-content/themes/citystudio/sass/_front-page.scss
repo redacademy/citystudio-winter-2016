@@ -6,16 +6,17 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
-  background-size: cover;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   border-bottom: 1px solid black;
   margin-bottom: 2rem;
-  height: 425px;
-
+  // height: 425px;
+  background-repeat: no-repeat;
   @include desktop {
-    height: 60vh;
+    height: 70vh;
     margin-bottom: 4rem;
+background-size: cover;
   }
 }
 .hero-blurb {
@@ -146,13 +147,13 @@
 }
 .featured {
   li {
-    flex: 1 0 50%;
-    max-width: 100px;
-    max-height: 100px;
+    flex: 1 0 35%;
+    margin: .5em;
     @include desktop {
       flex: 1 0 30%;
       max-width: 300px;
       max-height: 300px;
+      margin: 0;
     }
   }
 }
@@ -169,13 +170,13 @@
   li {
     // flex: 1 0 30%;
     cursor: auto;
-    flex: 1 0 50%;
-    max-width: 100px;
-    max-height: 100px;
+    flex: 1 0 35%;
+    margin: 1em;
     @include desktop {
       flex: 1 0 30%;
       max-width: 200px;
       max-height: 200px;
+      margin: 0;
     }
     img {
       max-width: 100px;

@@ -99,11 +99,8 @@
     padding: 1rem;
     cursor: pointer;
   }
-  @include iphone6 {
-    width: 100vw;
-    height: 100vh;
-  }
 }
+
 .tag-description-title {
   flex: 0 1 100%;
   font-size: 1.3rem;
