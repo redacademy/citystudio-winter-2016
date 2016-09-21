@@ -2443,8 +2443,13 @@ a {
     padding-left: 45px;
     letter-spacing: 3px;
     font-weight: 500;
-    padding-top: 11px;
-    font-size: 14px; }
+    padding-top: 5px;
+    font-size: 14px;
+    width: 161px;
+    height: 23px;
+    border: 1px solid #0082b9;
+    margin: 0em !important;
+    border-radius: 5px; }
   .themes .fa-sort-desc,
   .partners .fa-sort-desc,
   .years .fa-sort-desc,
@@ -2480,6 +2485,9 @@ a {
   background-size: 15px 20px; }
   .themes p {
     margin: -6px; }
+  .themes:hover {
+    background: url(../../assets/neighbourhood-icon-blue.png) 7px 6px no-repeat white;
+    background-size: 15px 20px; }
 
 .partners {
   background: url("../../assets/icon-building-white.png") 7px 1px no-repeat #03648c;
@@ -2489,17 +2497,23 @@ a {
   .partners .fa-sort-desc {
     margin: -9px; }
   .partners .fa-sort-asc {
-    margin: 3px; }
+    margin: 5px; }
+  .partners:hover {
+    background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
+    background-size: 27px 28px; }
 
 .years {
-  background: url(../../assets/in-progress-icon.png) 7px 5px no-repeat #03648c;
+  background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
   background-size: 21px 20px; }
   .years p {
     margin: -6px; }
   .years .fa-sort-desc {
     margin: -9px; }
   .years .fa-sort-asc {
-    margin: 3px; }
+    margin: 5px; }
+  .years:hover {
+    background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
+    background-size: 21px 20px; }
 
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
@@ -2509,6 +2523,8 @@ a {
   border-radius: 45px;
   width: 90px;
   background-size: 45px 45px; }
+  .refresh:hover {
+    background-color: #2cb5e8; }
 
 #refresh.refresh.menu-item {
   width: 5em;
@@ -2529,8 +2545,9 @@ a {
   right: -2px;
   border-radius-left: 0;
   border-radius-right: 1px;
-  display: none .nav-sub-menu; }
-  .nav-sub-menu :hover {
+  display: none; }
+  .nav-sub-menu:hover {
+    transition: all 2s ease-in;
     cursor: pointer; }
   .nav-sub-menu .sub-menu-theme span,
   .nav-sub-menu .sub-menu-part span,
@@ -2550,31 +2567,37 @@ a {
   opacity: 0;
   height: 30px; }
   .sort-menu-item:hover {
-    background-color: #0082b9;
-    height: 31px; }
+    background-color: white;
+    transition: all .3s ease-in;
+    border: 1px solid #0198d5;
+    color: #0198d5; }
+    .sort-menu-item:hover p {
+      color: #0198d5; }
+  .sort-menu-item:not(.no-hover):hover {
+    /* only apply hover styling when the div does not have the class 'no-hover' */
+    border: none; }
 
 .toggle-menu-item {
   display: block;
   opacity: 1;
   height: 200px;
-  width: 198px;
+  width: 193px;
   background-color: #fff;
   text-transform: none;
-  border: 2px solid #0198d5;
+  border: 1px solid #0198d5;
   border-top-color: #fff;
   border-top-right-radius: 0;
   border-top-left-radius: 0; }
   .toggle-menu-item p {
     color: #0198d5;
     text-transform: uppercase;
-    border-right-color: #fff;
-    border-left-color: #fff;
-    border-bottom-color: white;
     font-weight: 600;
     font-size: 14px;
-    width: 80.7%;
-    border: 2px solid #0198d5;
-    border-radius: 5px; }
+    width: 164px;
+    border: 1px solid #0198d5;
+    border-radius: 5px;
+    text-decoration: underline;
+    margin: -1px !important; }
 
 sort-menu-item toggle-menu-item {
   border-top: 1.7px solid white; }
@@ -2584,16 +2607,14 @@ sort-menu-item toggle-menu-item {
   margin: 0;
   text-transform: uppercase;
   color: #006493;
-  border-top-color: #0198d5;
   border-radius: 5px;
-  border-bottom-color: white;
-  width: 210px;
+  width: 208px;
   margin: 1.8em 0; }
 
 .open .theme,
 .open .partner,
 .open .year {
-  left: -6px; }
+  left: -1px; }
   .open .theme::after,
   .open .partner::after,
   .open .year::after {
@@ -2635,14 +2656,14 @@ sort-menu-item toggle-menu-item {
   display: none;
   position: absolute;
   background-color: #fff;
-  border: 2px solid #0198d5;
+  border: 1px solid #0198d5;
   color: black;
   font-weight: 700;
   word-break: break-word;
   top: 0px;
   border-radius: 5px;
-  height: 1.7em;
-  width: 206px;
+  height: 1.8em;
+  width: 208px;
   text-align: center; }
   .theme-labels label,
   .part-labels label,

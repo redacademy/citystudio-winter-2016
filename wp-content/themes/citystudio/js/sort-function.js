@@ -25,11 +25,6 @@ jQuery(document).ready(function($) {
     $('.year-labels').toggleClass('show-labels');
   }); // close sort
 
-  // Sort navigation dlides out on desktop when clicked
-  $('#refresh').click(function() {
-    $('#refresh.refresh.menu-item').css("right", "-2px");
-  }); // close sort
-
   $('#refresh').click(function() {
     checkedTheme = '';
     checkedPart = '';
@@ -45,40 +40,28 @@ jQuery(document).ready(function($) {
     $('.part-labels').empty().hide();
     $('.year-labels').empty().hide();
 
+
     reloadProjects();
 
   }); // close refresh
 
   $('.theme-labels').click(function(){
-      $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $(this).empty().hide();
   });
 
-   $('.part-labels').click(function(){
-      $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+  $('.part-labels').click(function(){
+    $(this).empty().hide();
   });
 
-    $('.year-labels').click(function(){
-      $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+  $('.year-labels').click(function(){
+    $(this).empty().hide();
   });
 
   $('.themes.sort-menu-item').click(function(){
-      $(this).toggleClass('toggle-menu-item');
-      $(this).children().toggleClass('toggle-menu-item');
-     $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+    $(this).toggleClass('toggle-menu-item');
+    $(this).children().toggleClass('toggle-menu-item');
+    $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
-
-  $('.fa.fa-times').click(function(){
-    checkedTheme = '';
-    checkedPart = '';
-    checkedYear = '';
-
-    queryFilter = {
-      themes: '',
-      partners: '',
-      year: ''
-    }
-    reloadProjects();
-  })
 
    $('.partners.sort-menu-item').click(function(){
       $(this).toggleClass('toggle-menu-item');
@@ -86,11 +69,19 @@ jQuery(document).ready(function($) {
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
 
-    $('.years.sort-menu-item').click(function(){
+  $('.years.sort-menu-item').click(function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
+
+  $('.fa.fa-times').click(function(){
+    $('.theme-labels').empty().hide();
+    $('.part-labels').empty().hide();
+    $('.year-labels').empty().hide();
+
+    reloadProjects();
+  }) 
 
   // Remove class current-menu if mouse isn't hovering over menu-item
 

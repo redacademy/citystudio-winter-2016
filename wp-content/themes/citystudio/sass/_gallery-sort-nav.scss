@@ -79,9 +79,13 @@
       padding-left: 45px;
       letter-spacing: 3px;
       font-weight: 500;
-      padding-top: 11px;
+      padding-top: 5px;
       font-size: 14px;
-
+      width: 161px;
+      height: 23px;
+      border: 1px solid $medium_blue;
+      margin: 0em !important;
+      border-radius: 5px;
     }
   .fa-sort-desc{
     display: flex;
@@ -92,12 +96,12 @@
     margin: -12px;
     }
   .fa-sort-asc{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  font-size: 32px;
-  padding: 0;
-  margin: 0px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
+    padding: 0;
+    margin: 0px;
   }
   .fa-times{
     color: $medium_blue;
@@ -109,6 +113,10 @@
   p{
     margin: -6px;
   }
+  &:hover{
+    background: url(../../assets/neighbourhood-icon-blue.png) 7px 6px no-repeat white;
+    background-size: 15px 20px;
+  }
 }
 .partners {
   background: url("../../assets/icon-building-white.png") 7px 1px  no-repeat #03648c;
@@ -116,15 +124,20 @@
   p{
     margin: -6px;
   }
+
   .fa-sort-desc{
     margin: -9px;
   }
   .fa-sort-asc{
-    margin: 3px;
+    margin: 5px;
+  }
+   &:hover{
+    background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
+    background-size: 27px 28px;
   }
 }
 .years {
-  background: url(../../assets/in-progress-icon.png) 7px 5px no-repeat #03648c;
+  background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
   background-size: 21px 20px;
   p{
     margin: -6px;
@@ -133,7 +146,11 @@
     margin: -9px;
   }
   .fa-sort-asc{
-    margin: 3px;
+    margin: 5px;
+  }
+   &:hover{
+    background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
+    background-size: 21px 20px;
   }
 }
 .refresh {
@@ -144,13 +161,19 @@
   border-radius: 45px;
   width: 90px;
   background-size: 45px 45px;
+  &:hover{
+    background-color: $light-blue; 
+  };
 }
+
+
 #refresh.refresh.menu-item{
   width: 5em;
   height: 5em;
   opacity: .9;
   transition: all 1s ease-in;
 }
+
 .nav-sub-menu input[type=checkbox] {
   display: none;
 }
@@ -165,8 +188,9 @@
     right: -2px;
     border-radius-left: 0;
     border-radius-right: 1px;
-    display: none
+    display: none;
     &:hover {
+      transition: all 2s ease-in;
       cursor: pointer;
   }
 
@@ -190,34 +214,40 @@
   opacity: 0;
   height: 30px;
   &:hover{
-    background-color: $medium_blue;
-    height: 31px;
-  };
+    background-color: white;
+    transition: all .3s ease-in;
+    border: 1px solid $city-blue;
+    color: $city-blue;
+    p{
+      color: $city-blue;
+    }
+  }
+  &:not(.no-hover):hover { /* only apply hover styling when the div does not have the class 'no-hover' */
+    border: none;
+  }
 }
 
 .toggle-menu-item{
     display: block;
     opacity: 1;
     height: 200px;
-    width: 198px;
+    width: 193px;
     background-color: #fff;
     text-transform: none;
-    border: 2px solid #0198d5;
+    border: 1px solid #0198d5;
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-
   p{
-    color: $city-blue;
+    color: #0198d5;
     text-transform: uppercase;
-    border-right-color: #fff;
-    border-left-color: #fff;
-    border-bottom-color: white;
     font-weight: 600;
     font-size: 14px;
-    width: 80.7%;
-    border: 2px solid #0198d5;
+    width: 164px;
+    border: 1px solid #0198d5;
     border-radius: 5px;
+    text-decoration: underline;
+    margin: -1px !important;
   }
 }
 
@@ -230,10 +260,8 @@ sort-menu-item toggle-menu-item{
     margin: 0;
     text-transform: uppercase;
     color: #006493;
-    border-top-color: #0198d5;
     border-radius: 5px;
-    border-bottom-color: white;
-    width: 210px;
+    width: 208px;
     margin: 1.8em 0;
 }
 
@@ -241,7 +269,7 @@ sort-menu-item toggle-menu-item{
   .theme,
   .partner,
   .year{
-    left: -6px;
+    left: -1px;
     &::after {
       content: '';
       width: 0;
@@ -290,14 +318,14 @@ sort-menu-item toggle-menu-item{
     display: none;
     position: absolute;
     background-color: #fff;
-    border: 2px solid #0198d5;
+    border: 1px solid #0198d5;
     color: black;
     font-weight: 700;
     word-break: break-word;
     top: 0px;
     border-radius: 5px;
-    height: 1.7em;
-    width: 206px;;
+    height: 1.8em;
+    width: 208px;;
     text-align: center;
     label {
       font-size: .8rem; 
@@ -311,6 +339,7 @@ sort-menu-item toggle-menu-item{
       border-color: #fff transparent transparent;
       position: absolute;
     }
+   
   }
   .show-labels{
     display: block;
