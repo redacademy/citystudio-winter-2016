@@ -190,7 +190,7 @@ jQuery(document).ready(function($) {
                   );
               }
           },
-          error:function(exception){alert('Exeption:'+exception);}
+          error:function(exception){alert('Exception:'+exception);}
       }); // close ajax call
   } // close reload projects
 }); // document ready

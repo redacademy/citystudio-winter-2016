@@ -81,6 +81,7 @@
       font-weight: 500;
       padding-top: 11px;
       font-size: 14px;
+
     }
   .fa-sort-desc{
     display: flex;
@@ -164,6 +165,7 @@
     right: -2px;
     border-radius-left: 0;
     border-radius-right: 1px;
+    display: none
     &:hover {
       cursor: pointer;
   }
@@ -187,6 +189,10 @@
   position: relative;
   opacity: 0;
   height: 30px;
+  &:hover{
+    background-color: $medium_blue;
+    height: 31px;
+  };
 }
 
 .toggle-menu-item{
