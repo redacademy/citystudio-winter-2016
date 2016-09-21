@@ -75,13 +75,12 @@
   cursor: pointer;
     p{
       display: flex;
-      justify-content: flex-start;
       color: #fff;
       padding-left: 45px;
       letter-spacing: 3px;
       font-weight: 500;
-      margin: 4px;
-      padding-top: 10px;
+      padding-top: 11px;
+      font-size: 14px;
     }
   .fa-sort-desc{
     display: flex;
@@ -89,9 +88,20 @@
     width: 100%;
     font-size: 32px;
     padding: 0;
-    margin: -10px;
+    margin: -12px;
     }
+  .fa-sort-asc{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  font-size: 32px;
+  padding: 0;
+  margin: 0px;
   }
+  .fa-times{
+    color: $medium_blue;
+  }
+}
 .themes {
   background: url(../../assets/neighbourhood-icon.png) 7px 6px no-repeat #03648c;
   background-size: 15px 20px;
@@ -100,23 +110,29 @@
   }
 }
 .partners {
-  background: url("../../assets/partners-icon.png") 7px 6px  no-repeat #03648c;
-  background-size: 20px 27px;
+  background: url("../../assets/icon-building-white.png") 7px 1px  no-repeat #03648c;
+  background-size: 27px 28px;
   p{
     margin: -6px;
   }
   .fa-sort-desc{
-    margin: -8px;
+    margin: -9px;
+  }
+  .fa-sort-asc{
+    margin: 3px;
   }
 }
 .years {
-  background: url(../../assets/in-progress-icon.png) 7px 6px no-repeat #03648c;
+  background: url(../../assets/in-progress-icon.png) 7px 5px no-repeat #03648c;
   background-size: 21px 20px;
   p{
     margin: -6px;
   }
   .fa-sort-desc{
-    margin: -8px;
+    margin: -9px;
+  }
+  .fa-sort-asc{
+    margin: 3px;
   }
 }
 .refresh {
@@ -142,10 +158,10 @@
     position: absolute;
     padding: .5em;
     opacity: 0;
-    font-size: 15px;
+    font-size: 1em;
     border-radius: 4px;
     top: 25px;
-    right: -3px;
+    right: -2px;
     border-radius-left: 0;
     border-radius-right: 1px;
     &:hover {
@@ -157,7 +173,7 @@
   .sub-menu-year span {
     color: $city-blue;
     font-size: 12px;
-    padding-left: 2.7em;
+    padding-left: 3em;
   }
   .sub-menu-theme span:hover,
   .sub-menu-part span:hover,
@@ -176,8 +192,8 @@
 .toggle-menu-item{
     display: block;
     opacity: 1;
-    height: 175px;
-    width: 200px;
+    height: 200px;
+    width: 198px;
     background-color: #fff;
     text-transform: none;
     border: 2px solid #0198d5;
@@ -186,17 +202,17 @@
     border-top-left-radius: 0;
 
   p{
-      color: $city-blue;
-      text-transform: uppercase;
-      border-right-color: #fff;
-      border-left-color: #fff;
-      border-bottom-color: white;
-      font-weight: 600;
-      font-size: 16px;
-      width: 80.9%;
-      border: 2px solid #0198d5;
-      border-radius: 5px;
-    }
+    color: $city-blue;
+    text-transform: uppercase;
+    border-right-color: #fff;
+    border-left-color: #fff;
+    border-bottom-color: white;
+    font-weight: 600;
+    font-size: 14px;
+    width: 80.7%;
+    border: 2px solid #0198d5;
+    border-radius: 5px;
+  }
 }
 
 
@@ -212,7 +228,7 @@ sort-menu-item toggle-menu-item{
     border-radius: 5px;
     border-bottom-color: white;
     width: 210px;
-    margin: 1.8em;
+    margin: 1.8em 0;
 }
 
 .open {
@@ -269,16 +285,18 @@ sort-menu-item toggle-menu-item{
     position: absolute;
     background-color: #fff;
     border: 2px solid #0198d5;
-    color: #00A0DC;
+    color: black;
     font-weight: 700;
     word-break: break-word;
     top: 0px;
     border-radius: 5px;
     height: 1.7em;
-    width:  206px;;
+    width: 206px;;
     text-align: center;
     label {
       font-size: .8rem; 
+      text-transform: capitalize;
+      padding: 2px;
     &::after {
       content: '';
       width: 0;
@@ -337,14 +355,14 @@ sort-menu-item toggle-menu-item{
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
-    display: flex;
-    justify-content: center;
-  @include tablet{
-    transition: none;
-  }
-  @include iphone6-horizontal{
-    display: none;  
-  }
+  display: flex;
+  justify-content: center;
+    @include tablet{
+      transition: none;
+    }
+    @include iphone6-horizontal{
+      display: none;  
+    }
  }
 .nav-description.fixed{
   height: 80px;
@@ -384,8 +402,8 @@ sort-menu-item toggle-menu-item{
 }
 
 .gallery-description-container{
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
   @include iphone6{
     display: none;
   }
@@ -393,7 +411,6 @@ sort-menu-item toggle-menu-item{
     display: none;
   }
 }
-
 
 .no-projects{
   background-color: $dark-blue;
@@ -405,7 +422,6 @@ sort-menu-item toggle-menu-item{
   h1, h2 {
      color: white
   }
-
   h2{
     font-size: 24px;
   }

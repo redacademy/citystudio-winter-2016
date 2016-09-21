@@ -50,6 +50,11 @@ jQuery(document).ready(function($){
     }
   );
 
+
+  $('.sort-menu-item').click(function() {
+    
+  })
+
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 

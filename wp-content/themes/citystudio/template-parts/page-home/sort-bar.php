@@ -17,7 +17,7 @@
 				</ul>
 		  <?php endif; ?>
 			<div class="theme-labels">
-				<i class="fa fa-star" aria-hidden="true"></i>
+			 	<i class="fa fa-times" aria-hidden="true"></i>
 			</div>
 		</div>
 		<div class="partners sort-menu-item">
@@ -36,12 +36,12 @@
 			</ul>
 			<?php endif; ?>
 			<div class="part-labels">
-				<i class="fa fa-star" aria-hidden="true"></i>
+			 	<i class="fa fa-times" aria-hidden="true"></i>
 			</div>
 		</div>
 
 		<div class="years sort-menu-item">
-			<p>Years<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p>Semester<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'year', array (
 				'hide_empty' => 0,
 			) ); ?>
@@ -55,8 +55,7 @@
 			<?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
-			<div class="year-labels">
-				<i class="fa fa-star" aria-hidden="true"></i>
+			<div class="year-labels"><i class="fa fa-times" aria-hidden="true"></i>
 			</div>
 		</div>
 
