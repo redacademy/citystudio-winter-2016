@@ -1,0 +1,39 @@
+.blog-hero img {
+height: 500px;
+width: 100%;
+}
+
+.blog-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  p {
+  font-family: $fontfamily;
+  text-align: center;
+  width: 70%;
+}
+}
+
+.post_excerpt {
+  font-size: 1.5em;
+  font-family: $fontfamily;
+  width: 62.5%;
+  margin: 1em auto;
+  text-align: center;
+}
+
+.seperate-top {
+  border-bottom: 2.5px dashed #2cb5e8;
+  width: 45%;
+}
+
+.seperate {
+  border-bottom: 2.5px dashed #2cb5e8;
+  width: 45%;
+  margin-bottom: 5em;
+}
+
+.date2 {
+margin-top: 2em;
+}

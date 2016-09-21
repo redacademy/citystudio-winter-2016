@@ -49,7 +49,7 @@ get_header(); ?>
 
 					  <?php while ( $citystudio_blog->have_posts() ) : $citystudio_blog->the_post(); ?>
 						<?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-
+							<a href= '<?php echo get_permalink( $post->ID ); ?>'>
 							<li class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
 																										 background-size: cover;">
 								<div class="blog-credits">
@@ -57,12 +57,13 @@ get_header(); ?>
 									<h2>
 										<?php the_title(); ?>
 									</h2>
-										<?php the_excerpt(); ?>
-									<div class="categories">
+									<p><?php the_field('post_excerpt'); ?></p>
+									<div class="category">
 										<?php the_category(', '); ?>
 									</div>
 								</div>
 							</li>
+							</a>
 					      <?php endwhile; ?>
 					<?php else : ?>
 
