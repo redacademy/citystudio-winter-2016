@@ -6,17 +6,13 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
-  background-size: contain;
+  background-size: cover;
   display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-  margin-bottom: 2rem;
-  // height: 425px;
+  border-bottom: 1px solid #000;
   background-repeat: no-repeat;
   @include desktop {
-    height: 70vh;
-    margin-bottom: 4rem;
-background-size: cover;
+    height: 55vh;
+    margin-top: -1em;
   }
 }
 .hero-blurb {
@@ -29,7 +25,6 @@ background-size: cover;
   background: linear-gradient(to bottom, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
   filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
   font-family: $fontfamily;
-  padding: 22% 10%;
   display: flex;
   justify-content: center;
   z-index: 1;
@@ -45,8 +40,7 @@ background-size: cover;
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
   }
 }
-//couldnt get variable going - riva **********************
-// $ciystudio-orange: #ff8000;
+/*//couldnt get variable going - riva ***********************/
 .orange-font {
   color: #ee7600;
 }
@@ -63,9 +57,9 @@ background-size: cover;
     margin: 2em auto 1em;
   }
   span {
-color: $city-blue;
-font-weight: bold;
-}
+  color: $city-blue;
+  font-weight: bold;
+  }
 }
 .homepage-description {
   margin: 0 auto;

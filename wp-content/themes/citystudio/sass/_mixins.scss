@@ -24,7 +24,7 @@
 }
 
 @mixin tablet{
-	@media screen and (max-width: 1024px){
+	@media screen and (min-width: 1024px){
 	@content;
 	}
 }
@@ -47,17 +47,25 @@
 	}
 }
 
+
 @mixin iphone6{
-	@media screen and (max-width: 375px){
+	@media screen and (min-width: 375px){
 	@content;
 	}
 }
 
 @mixin iphone6-horizontal{
-	@media screen and (max-width: 667px){
+	@media screen and (min-width: 667px){
 	@content;
 	}
 }
+
+@mixin iphone6-plus {
+	@media screen and (min-width: 414px){
+	@content;
+	}
+}
+
 
 @mixin threecol {
 	@media screen and (min-width: 1000px) {
@@ -65,11 +73,7 @@
 	}
 }
 
-@mixin iphone5{
-	@media screen and (max-width: 320px) {
-	@content;
-	}
-}
+
 
 // Gradient mixins
 
