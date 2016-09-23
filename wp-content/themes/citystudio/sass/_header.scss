@@ -16,10 +16,6 @@
   background-color: #ffffff;
   z-index: 3;
 
-  @include iphone5{
-    position: fixed;
-  }
-
 }
 .site-branding {
   margin-right: 5em;
@@ -29,14 +25,11 @@
   a {
     border: none;
     outline: none;
-}
+  }
 }
 .site-branding img {
   padding: 1rem 0 0.5rem .5rem;
   width: 12em;
-  @include iphone6-horizontal{
-    width: 18rem !important;
-  }
   @include desktop {
     width: 26rem;
     padding: 1.5rem 0 0.5rem 1rem;
@@ -68,10 +61,6 @@
   margin-top: 4px;
   @include tablet {
     font-size: 1.6rem;
-  }
-
-  @include iphone6-horizontal{
-    display: none;
   }
   @include desktop {
     display: block;
@@ -132,22 +121,6 @@
     width: 350px;
   }
 
-  @include iphone6{
-    width: 100vw;
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-    margin-left: -11.2em;
-    top: 70px;
-    z-index: 3;
-    position: fixed;
-  }
-  @include iphone5{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,.2);
-    margin-left: -10em;
-    top: 60px;
-    z-index: 3;
-    position: fixed;
-  }
-
 }
 .dropdown-content a{
   transition: height .3s ease-in;
@@ -160,14 +133,8 @@
 }
 
 .header-menu-title{
-    margin: -7px;
-    padding: 0 .4em;
-    @include iphone6-horizontal{
-     display: none;
-  }
-  @include iphone6{
-     display: none;
-  }
+  margin: -7px;
+  padding: 0 .4em;
 }
 
 button.hamburger{
@@ -198,17 +165,6 @@ button.hamburger{
   display: flex;
   justify-content: center;
   flex-direction: column;
-  @include iphone6{
-    height: 86vh;
-    font-size: .8em;
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  @include iphone5{
-    height: 85vh
-  }
 }
 
 .header-nav{

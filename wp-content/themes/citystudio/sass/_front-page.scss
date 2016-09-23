@@ -74,7 +74,6 @@ font-weight: bold;
   font-family: $fontfamily;
   text-align: center;
   width: 71%;
-
   @include desktop {
     padding-bottom: 4.5rem;
     max-width: 70%;
@@ -82,32 +81,6 @@ font-weight: bold;
 span {
 font-weight: bold;
 }
-}
-// --------------New Gallery Styles  ----------------------*
-.grid {
-  display: flex;
-}
-.gallery-anchor {
-  flex: 1 0 100%;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 300px;
-  @include desktop {
-    flex: 1 0 25%;
-  }
-  li.gallery-image {
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-.gallery-anchor:first-child,
-.gallery-anchor:nth-child(6n),
-.gallery-anchor:nth-child(7n) {
-  flex: 1 0 100%;
-  @include desktop {
-    flex: 1 0 50%;
-  }
 }
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
