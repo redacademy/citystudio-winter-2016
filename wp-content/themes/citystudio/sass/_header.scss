@@ -14,7 +14,7 @@
   vertical-align: center;
   justify-content: space-between;
   background-color: #ffffff;
-  z-index: 3;  
+  z-index: 3;
   @include tablet{
     position: relative;
   }
@@ -54,18 +54,18 @@
 }
 .icon-search {
   display: none;
-  @include desktop {
-    font-size: 2rem;
-  }
   @include tablet{
     display: block;
-    padding: .3em 3em;
+    padding: .75em 3em;
     font-size: 2rem;
     margin-right: 2.5em;
   }
+  @include desktop {
+    font-size: 2rem;
+  }
   .fa {
     color: $light-blue;
-    &:hover{ 
+    &:hover{
     color: $medium-blue;
     }
   }
@@ -171,17 +171,13 @@ button.hamburger{
   font-weight: 400;
   font-size: 2em;
   position: absolute;
-  right: 0;
-  top: .6em;
+  right: .5em;
+  top: 1em;
   background: 0 0;
   border: none;
   display: flex;
   &:hover{
     color: $medium-blue;
-  }
-  @include iphone6{
-    right: 15px;
-    top: 15px;
   }
 }
 .dropdown-content a:hover {background-color: #f1f1f1}

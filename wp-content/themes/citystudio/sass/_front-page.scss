@@ -40,8 +40,8 @@
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
   }
 }
-/*//couldnt get variable going - riva ***********************/
-.orange-font {
+/*/
+/couldnt get variable going - riva ***********************/ .orange-font {
   color: #ee7600;
 }
 .homepage-titles {
@@ -57,8 +57,8 @@
     margin: 2em auto 1em;
   }
   span {
-  color: $city-blue;
-  font-weight: bold;
+    color: $city-blue;
+    font-weight: bold;
   }
 }
 .homepage-description {
@@ -69,7 +69,10 @@
   text-align: center;
   width: 90%;
   @include desktop {
-    width: 71%;
+    width: 64%;
+  }
+  span {
+    margin-top: 1em;
   }
 }
 // -------------- PARTNER SECTION STYLES  ----------------------*
@@ -120,7 +123,7 @@
 .featured {
   li {
     flex: 1 0 35%;
-    margin: .5em;
+    margin: 0.5em;
     @include desktop {
       flex: 1 0 30%;
       max-width: 300px;
@@ -137,8 +140,8 @@
 }
 .featured-two {
   ul {
-  margin-bottom: 1em;
-}
+    margin-bottom: 1em;
+  }
   li {
     // flex: 1 0 30%;
     cursor: auto;
@@ -156,9 +159,7 @@
     }
   }
 }
-
 // Explore section
-
 .explore-section {
   width: 100%;
   display: block;

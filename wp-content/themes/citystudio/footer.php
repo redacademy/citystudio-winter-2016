@@ -44,16 +44,12 @@
 
 					<div class="footer-info-block1">
 						<h3>Keep Exploring</h3>
-
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-keep-exploring' ) ); ?>
-
-
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-keep-exploring' ) ); ?>
 					</div>
 
 					<div class="footer-info-block2">
 						<h3>CITYSTUDIO</h3>
-					<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-citystudio' ) ); ?>
-			
+						<?php wp_nav_menu( array( 'theme_location' => 'footer-menu-citystudio' ) ); ?>
 					</div>
 			</div><!-- end footer info container -->
 
