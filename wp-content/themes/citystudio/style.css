@@ -819,6 +819,9 @@ a {
   position: absolute;
   z-index: -1;
   font-size: 12px; }
+  @media screen and (min-width: 480px) {
+    .header-nav li ul {
+      top: 165px; } }
 
 .menu-item {
   font-weight: 500;

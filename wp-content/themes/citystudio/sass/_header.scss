@@ -92,7 +92,6 @@
   }
 }
 
-
 /*----------- menu nav -------------*/
 .header-nav{
     border-top: 4px solid #2cb5e8;
@@ -131,6 +130,9 @@
   position: absolute;
   z-index: -1;
   font-size: 12px;
+  @include desktop{
+    top: 165px;
+  }
 }
 .menu-item {
   font-weight: 500;
