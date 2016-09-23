@@ -444,14 +444,10 @@ sort-menu-item toggle-menu-item{
   font-size: 26px;
 }
 
-.gallery-description-container{
-  display: flex;
-  justify-content: center;
-  @include iphone6{
-    display: none;
-  }
-  @include iphone6-horizontal{
-    display: none;
+.gallery-description{
+  display: none;
+  @include desktop{
+    display: block;
   }
 }
 

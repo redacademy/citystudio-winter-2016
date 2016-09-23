@@ -14,19 +14,17 @@
   vertical-align: center;
   justify-content: space-between;
   background-color: #ffffff;
-  z-index: 3;
-  /*position: fixed;*/
+  z-index: 3;  
   @include tablet{
     position: relative;
   }
 }
 .site-branding {
   width: 100vw;
-  height: 9vh;
   @include desktop {
     margin-right: 0;
   }
-  a {
+  a{
     border: none;
     outline: none;
   }
@@ -67,7 +65,7 @@
   }
   .fa {
     color: $light-blue;
-    &:hover{
+    &:hover{ 
     color: $medium-blue;
     }
   }
@@ -97,15 +95,15 @@
 
 /*----------- menu nav -------------*/
 .header-nav{
-  border-top: 4px solid #2cb5e8;
-  border-bottom: 4px solid #2cb5e8;
-  background-color: #f7f9f9;
-  width: 100vw;
-  padding: 1em;
-  position: absolute;
-  right: -8px;
-  top: 62px;
-  height: 82vh;
+    border-top: 4px solid #2cb5e8;
+    border-bottom: 4px solid #2cb5e8;
+    background-color: #f7f9f9;
+    width: 100vw;
+    padding: 1em;
+    position: absolute;
+    right: -8px;
+    top: 65px;
+    height: 81.6vh;
   @include iphone6{
     top: 68px;
     height: 83.8vh;
@@ -115,9 +113,8 @@
     height: 83.2vh;
   }
   @include desktop{
-    height: 83vh;
-    width: 100vw;
-    top: 85px;
+    width: 35vw;
+    height: 51vh;
     position: fixed;
   }
 }
@@ -196,7 +193,9 @@ button.hamburger{
   justify-content: center;
   flex-direction: column;
   padding: 2em 1.5em;
-
+  @include desktop{
+    padding: 1em 0.5em;
+  }
 }
 
 .header-nav a {

@@ -6,6 +6,7 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
+  height: 32vh;
   background-size: cover;
   display: flex;
   border-bottom: 1px solid #000;
@@ -17,7 +18,6 @@
 }
 .hero-blurb {
   text-align: center;
-  max-width: 2525px;
   font-size: 1rem;
   font-weight: bold;
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
@@ -28,8 +28,8 @@
   display: flex;
   justify-content: center;
   z-index: 1;
-  max-width: 100%;
   @include desktop {
+    width: 2525px;
     font-size: 1.8rem;
     padding: 8.5% 12%;
   }
@@ -67,12 +67,9 @@
   font-size: 1.15em;
   font-family: $fontfamily;
   text-align: center;
-  width: 71%;
+  width: 90%;
   @include desktop {
-    max-width: 70%;
-  }
-  span {
-  font-weight: bold;
+    width: 71%;
   }
 }
 // -------------- PARTNER SECTION STYLES  ----------------------*
