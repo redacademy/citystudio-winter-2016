@@ -40,7 +40,7 @@
 		</div>
 
 		<div class="years sort-menu-item">
-			<p>Semester<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p>Years<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'year', array (
 				'hide_empty' => 0,
 			) ); ?>

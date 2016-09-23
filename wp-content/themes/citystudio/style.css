@@ -1923,7 +1923,6 @@ object {
   width: 71%; }
   @media screen and (min-width: 480px) {
     .homepage-description {
-      padding-bottom: 4.5rem;
       max-width: 70%; } }
   .homepage-description span {
     font-weight: bold; }

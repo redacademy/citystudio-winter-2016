@@ -75,12 +75,11 @@ font-weight: bold;
   text-align: center;
   width: 71%;
   @include desktop {
-    padding-bottom: 4.5rem;
     max-width: 70%;
   }
-span {
-font-weight: bold;
-}
+  span {
+  font-weight: bold;
+  }
 }
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
