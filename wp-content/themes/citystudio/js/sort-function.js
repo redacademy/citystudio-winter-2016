@@ -18,25 +18,11 @@ jQuery(document).ready(function($) {
   checkedYear = '';
 
   // Sort navigation is open on page load on mobile
-  $('#sort').resize(function(){
-      // take out for resizing(1)
-      // $('#sort.nav-div').addClass('open');
-  });
 
   $('#sort_nav').click(function() {
-    // take out for resizing(2)
-    // $('#sort').toggleClass('open');
     $('.theme-labels').toggleClass('show-labels');
     $('.part-labels').toggleClass('show-labels');
     $('.year-labels').toggleClass('show-labels');
-  }); // close sort
-
-  // Sort navigation dlides out on desktop when clicked
-  $('#refresh').click(function() {
-    // take out for resizing(3)
-    // $('#sort').toggleClass('open');
-    $('#refresh.refresh.menu-item').css("right", "-2px");
-
   }); // close sort
 
   $('#refresh').click(function() {
@@ -50,36 +36,57 @@ jQuery(document).ready(function($) {
       year: ''
     }
 
-    $('.theme-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
-    $('.part-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
-    $('.year-labels').empty().append('<i class="fa fa-star" aria-hidden="true"></i><br>').hide();
+    $('.theme-labels').empty().hide();
+    $('.part-labels').empty().hide();
+    $('.year-labels').empty().hide();
+
 
     reloadProjects();
 
   }); // close refresh
 
+  $('.theme-labels').click(function(){
+    $(this).empty().hide();
+  });
+
+  $('.part-labels').click(function(){
+    $(this).empty().hide();
+  });
+
+  $('.year-labels').click(function(){
+    $(this).empty().hide();
+  });
+
   $('.themes.sort-menu-item').click(function(){
-      $(this).toggleClass('toggle-menu-item');
-      $(this).children().toggleClass('toggle-menu-item');
-  })
+    $(this).toggleClass('toggle-menu-item');
+    $(this).children().toggleClass('toggle-menu-item');
+    $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
 
    $('.partners.sort-menu-item').click(function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
-  })
+      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
 
-    $('.years.sort-menu-item').click(function(){
+  $('.years.sort-menu-item').click(function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
-  })
+      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
+
+  $('.fa.fa-times').click(function(){
+    $('.theme-labels').empty().hide();
+    $('.part-labels').empty().hide();
+    $('.year-labels').empty().hide();
+
+    reloadProjects();
+  }) 
 
   // Remove class current-menu if mouse isn't hovering over menu-item
-  $('.sort-menu-item').mouseout(function(){
-      $(this).children('.nav-sub-menu').removeClass('current-menu');
-   });
 
   $('.themes').click(function(){
-    $(this).children('.nav-sub-menu').addClass('current-menu');
+    $(this).children('.nav-sub-menu').children().addClass('current-menu');
   })
 
   // Create an empty object to hold
@@ -92,7 +99,7 @@ jQuery(document).ready(function($) {
 
       $('.theme-labels')
           .show()
-          .append('<label>' + checkedTheme + '</label>');
+          .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
@@ -142,7 +149,6 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
-            alert(this.url)
             var projects = response;
             // create gallery method to append HTML to
             var $gallery = $('.grid');
@@ -175,7 +181,7 @@ jQuery(document).ready(function($) {
                   );
               }
           },
-          error:function(exception){alert('Exeption:'+exception);}
+          error:function(exception){alert('Exception:'+exception);}
       }); // close ajax call
   } // close reload projects
 }); // document ready

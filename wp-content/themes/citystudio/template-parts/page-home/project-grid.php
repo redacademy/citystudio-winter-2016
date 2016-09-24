@@ -24,5 +24,5 @@ if( $posts ): ?>
 <?php endif; ?>
 
 <div class="explore-section">
-  <a class="button-blue" href="<?php get_template_directory(); ?>/home/search/">See More Projects</a>
+  <a class="button-blue" href="<?php get_template_directory(); ?>home/search/">See More Projects</a>
 </div>

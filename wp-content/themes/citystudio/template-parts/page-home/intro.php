@@ -1,5 +1,10 @@
 
-  <h1 class="homepage-titles">CityStudio Projects</h1>
-  <p class="homepage-description" style="display: none;">
-    We partner with local post-secondary schools to spur student-driven projects to make Vancouver a greener, healthier and liveable space. Check out what what students have done in the past using the gallery, and how you can get involved through your school below.
+  <h1 class="homepage-titles"><span>Explore</span> CityStudio Projects</h1>
+  <p class="homepage-description">
+  	<span>
+    We partner with local post-secondary schools to spur student-driven projects that make Vancouver a greener, healthier and more liveable space.
+    </span>
+    <span class="gallery-description">
+     <b>Check out the interactive gallery below</b> <br> using the sort filters to explore student projects!
+    </span>
   </p>

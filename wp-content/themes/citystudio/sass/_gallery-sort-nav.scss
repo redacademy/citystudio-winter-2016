@@ -17,11 +17,8 @@
   transition: width .4s ease-in;
   margin-right: 4em;
   @include desktop {
-    height: 89px;
-    width: 88px;
     z-index: 2 !important;
     position: relative !important;
-    border-radius: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -62,39 +59,99 @@
   }
 }
 .open {
-  transition: all 2s ease-in;
   width: 100%;
-  order: 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 .themes,
 .partners,
 .years,
 .refresh {
-  top: 25%;
   width: 250px;
-  height: 40px;
+  height: 50px;
   margin-right: 1em !important;
   border-radius: 5px;
+  cursor: pointer;
     p{
       display: flex;
-      justify-content: center;
-      color: white;
-      padding: .2em;
+      color: #fff;
+      padding-left: 45px;
+      letter-spacing: 3px;
+      font-weight: 500;
+      padding-top: 5px;
+      font-size: 14px;
+      width: 161px;
+      height: 23px;
+      border: 1px solid $medium_blue;
+      margin: 0em !important;
+      border-radius: 5px;
     }
+  .fa-sort-desc{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
+    padding: 0;
+    margin: -12px;
+    }
+  .fa-sort-asc{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    font-size: 32px;
+    padding: 0;
+    margin: 0px;
   }
+  .fa-times{
+    color: $medium_blue;
+  }
+}
 .themes {
-  background: url(../../assets/neighbourhood-icon.png) 10px 6px no-repeat #03648c;
+  background: url(../../assets/neighbourhood-icon.png) 7px 6px no-repeat #03648c;
   background-size: 15px 20px;
+  p{
+    margin: -6px;
+  }
+  &:hover{
+    background: url(../../assets/neighbourhood-icon-blue.png) 7px 6px no-repeat white;
+    background-size: 15px 20px;
+  }
 }
 .partners {
-  background: url("../../assets/partners-icon.png") 7px 6px  no-repeat #03648c;
-  background-size: 20px 27px;
+  background: url("../../assets/icon-building-white.png") 7px 1px  no-repeat #03648c;
+  background-size: 27px 28px;
+  p{
+    margin: -6px;
+  }
+
+  .fa-sort-desc{
+    margin: -9px;
+  }
+  .fa-sort-asc{
+    margin: 5px;
+  }
+   &:hover{
+    background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
+    background-size: 27px 28px;
+  }
 }
 .years {
-  background: url(../../assets/in-progress-icon.png) 7px 6px no-repeat #03648c;
+  background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
   background-size: 21px 20px;
+  p{
+    margin: -6px;
+  }
+  .fa-sort-desc{
+    margin: -9px;
+  }
+  .fa-sort-asc{
+    margin: 5px;
+  }
+   &:hover{
+    background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
+    background-size: 21px 20px;
+  }
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
@@ -104,13 +161,21 @@
   border-radius: 45px;
   width: 90px;
   background-size: 45px 45px;
+  &:hover{
+    background-color: $light-blue; 
+  };
 }
+
+
 #refresh.refresh.menu-item{
-  width: 5em;
-  height: 5em;
+  width: 4.1em;
+  height: 4em;
   opacity: .9;
   transition: all 1s ease-in;
+  margin-top: .5em;
+  margin-left: 1em;
 }
+
 .nav-sub-menu input[type=checkbox] {
   display: none;
 }
@@ -119,14 +184,15 @@
     position: absolute;
     padding: .5em;
     opacity: 0;
-    font-size: 15px;
+    font-size: 1em;
     border-radius: 4px;
     top: 25px;
     right: -2px;
-    width: 94%;
     border-radius-left: 0;
     border-radius-right: 1px;
+    display: none;
     &:hover {
+      transition: all 2s ease-in;
       cursor: pointer;
   }
 
@@ -134,7 +200,7 @@
   .sub-menu-part span,
   .sub-menu-year span {
     color: $city-blue;
-    font-size: 11px;
+    font-size: 12px;
     padding-left: 3em;
   }
   .sub-menu-theme span:hover,
@@ -149,32 +215,45 @@
   position: relative;
   opacity: 0;
   height: 30px;
-}
-
-.themes.sort-menu-item {
-  height: 30px
+  &:hover{
+    background-color: white;
+    transition: all .3s ease-in;
+    border: 1px solid $city-blue;
+    color: $city-blue;
+    p{
+      color: $city-blue;
+    }
+  }
+  &:not(.no-hover):hover { /* only apply hover styling when the div does not have the class 'no-hover' */
+    border: none;
+  }
 }
 
 .toggle-menu-item{
-  display: block;
-  opacity: 1;
-  height: 175px;
-  background-color: white;
-  text-transform: none;
-  border: 2px solid $city-blue;
-  border-top-color: white;
-  border-top-right-sum: 0;
-  border-top-left-radius: 0;
-
+    display: block;
+    opacity: 1;
+    height: 200px;
+    width: 193px;
+    background-color: #fff;
+    text-transform: none;
+    border: 1px solid #0198d5;
+    border-top-color: #fff;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
   p{
-    color: $city-blue;
+      /*color: $city-blue;*/
+    color: #0198d5;
     text-transform: uppercase;
-    border-right-color: #fff;
-    border-left-color: #fff;
-    height: 30px;
-    border-bottom-color: white;
-    }
+    font-weight: 600;
+    font-size: 14px;
+    width: 164px;
+    border: 1px solid #0198d5;
+    border-radius: 5px;
+    text-decoration: underline;
+    margin: -1px !important;
+  }
 }
+
 
 sort-menu-item toggle-menu-item{
   border-top: 1.7px solid white;
@@ -184,17 +263,16 @@ sort-menu-item toggle-menu-item{
     margin: 0;
     text-transform: uppercase;
     color: #006493;
-    border-top-color: #0198d5;
-    border-radius: 2px;
-    border-bottom-color: white;
+    border-radius: 5px;
+    width: 208px;
+    margin: 1.8em 0;
 }
 
 .open {
   .theme,
-  .part,
+  .partner,
   .year{
-    bottom: 71px;
-    left: -2px;
+    left: -1px;
     &::after {
       content: '';
       width: 0;
@@ -241,18 +319,21 @@ sort-menu-item toggle-menu-item{
 .part-labels,
 .year-labels {
     display: none;
-    position: relative;
+    position: absolute;
     background-color: #fff;
-    width: 88px;
-    height: 88px;
-    border: 1.5px solid #006496;
-    text-align: center;
-    color: #00A0DC;
+    border: 1px solid #0198d5;
+    color: black;
     font-weight: 700;
     word-break: break-word;
-    line-height: 1.2em;
+    top: 0px;
+    border-radius: 5px;
+    height: 1.8em;
+    width: 208px;;
+    text-align: center;
     label {
       font-size: .8rem; 
+      text-transform: capitalize;
+      padding: 2px;
     &::after {
       content: '';
       width: 0;
@@ -261,15 +342,19 @@ sort-menu-item toggle-menu-item{
       border-color: #fff transparent transparent;
       position: absolute;
     }
+   
   }
   .show-labels{
     display: block;
   }
 }
 .sticky-navigation {
-    display: inline-flex;
-    justify-content: center;
+  display: none;
+  @include tablet{
+    display: block;
     width: 100%;
+    border-bottom: 2px solid #d3d3d3;
+  }
 }
 .nav-description {
   padding: 0;
@@ -302,6 +387,7 @@ sort-menu-item toggle-menu-item{
   }
 }
 .fixed {
+
   position: fixed;
   top: 0;
   padding-top: 20px;
@@ -309,37 +395,32 @@ sort-menu-item toggle-menu-item{
   width: 100vw;
   z-index: 2;
   padding: 0;
-  p {
-    margin-right: 120px;
-    margin-bottom: 0;
-  }
   background-color: rgba(255,255,255, 1);
 }
 .sticky-navigation.fixed{
-    display: flex;
-    justify-content: center;
-  @include tablet{
-    transition: none;
-  }
-  @include iphone6-horizontal{
-    display: none;  
-  }
+  display: none;
+
+
+    @include tablet{
+      transition: none;
+      display: flex;
+      justify-content: center;
+    }
  }
 .nav-description.fixed{
-  /*transition: all .8s ease;*/
   height: 80px;
   padding-top: 6px;
   margin-left: 60%;
   text-align: left;
   font-size: 1.2rem;
   font-family: $fontfamily;
-    @include tablet{
-      transition: none;
-    }
+  @include tablet{
+    transition: none;
+  }
   p {
     padding: 6px;
-    width: 480px; 
-    margin-right: 80px;  
+    width: 480px;
+    margin-right: 80px;
   }
 }
 .nav-div.fixed{
@@ -363,18 +444,11 @@ sort-menu-item toggle-menu-item{
   font-size: 26px;
 }
 
-.gallery-description-container{
-    display: flex;
-    justify-content: center;
-  @include iphone6{
-    display: none;
+.gallery-description{
+  display: none;
+  @include desktop{
+    display: block;
   }
-  @include iphone6-horizontal{
-    display: none;
-  }
-}
-.fa-star{
-  margin-top: .6em;
 }
 
 .no-projects{
@@ -387,9 +461,7 @@ sort-menu-item toggle-menu-item{
   h1, h2 {
      color: white
   }
-
   h2{
     font-size: 24px;
   }
-
 }

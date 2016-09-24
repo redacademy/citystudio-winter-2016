@@ -157,15 +157,20 @@ article.people {
 }
 .static-return-button {
   a {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-family: $fontfamily;
     color: $light-blue;
     text-decoration: underline;
     text-transform: uppercase;
-    padding: 1em;
-    margin-left: 3em;
+    padding: 0em;
+    margin-left: 2em;
     border: none;
     outline: none;
+  @include desktop {
+    padding: 1em;
+    margin-left: 3em;
+    font-size: 1.3em;
+  }
   }
   a:hover {
     cursor: pointer;

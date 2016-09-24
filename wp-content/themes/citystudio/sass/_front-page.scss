@@ -6,21 +6,18 @@
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   width: 100%;
+  height: 32vh;
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  border-bottom: 1px solid black;
-  margin-bottom: 2rem;
-  height: 425px;
-
+  border-bottom: 1px solid #000;
+  background-repeat: no-repeat;
   @include desktop {
-    height: 60vh;
-    margin-bottom: 4rem;
+    height: 55vh;
+    margin-top: -1em;
   }
 }
 .hero-blurb {
   text-align: center;
-  max-width: 2525px;
   font-size: 1rem;
   font-weight: bold;
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
@@ -28,12 +25,11 @@
   background: linear-gradient(to bottom, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
   filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
   font-family: $fontfamily;
-  padding: 22% 10%;
   display: flex;
   justify-content: center;
   z-index: 1;
-  max-width: 100%;
   @include desktop {
+    width: 2525px;
     font-size: 1.8rem;
     padding: 8.5% 12%;
   }
@@ -44,9 +40,8 @@
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
   }
 }
-//couldnt get variable going - riva **********************
-// $ciystudio-orange: #ff8000;
-.orange-font {
+/*/
+/couldnt get variable going - riva ***********************/ .orange-font {
   color: #ee7600;
 }
 .homepage-titles {
@@ -56,48 +51,28 @@
   text-align: center;
   font-size: 1.7rem;
   max-width: 94%;
+  font-weight: normal;
   @include desktop {
     font-size: 2.3rem;
     margin: 2em auto 1em;
+  }
+  span {
+    color: $city-blue;
+    font-weight: bold;
   }
 }
 .homepage-description {
   margin: 0 auto;
   padding-bottom: 2rem;
-  font-size: 1rem;
+  font-size: 1.15em;
   font-family: $fontfamily;
   text-align: center;
-  width: 71%;
-
+  width: 90%;
   @include desktop {
-    padding-bottom: 4.5rem;
-    max-width: 70%;
+    width: 64%;
   }
-}
-// --------------New Gallery Styles  ----------------------*
-.grid {
-  display: flex;
-}
-.gallery-anchor {
-  flex: 1 0 100%;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 300px;
-  @include desktop {
-    flex: 1 0 25%;
-  }
-  li.gallery-image {
-    background-size: cover !important;
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-  }
-}
-.gallery-anchor:first-child,
-.gallery-anchor:nth-child(6n),
-.gallery-anchor:nth-child(7n) {
-  flex: 1 0 100%;
-  @include desktop {
-    flex: 1 0 50%;
+  span {
+    margin-top: 1em;
   }
 }
 // -------------- PARTNER SECTION STYLES  ----------------------*
@@ -147,13 +122,13 @@
 }
 .featured {
   li {
-    flex: 1 0 50%;
-    max-width: 100px;
-    max-height: 100px;
+    flex: 1 0 35%;
+    margin: 0.5em;
     @include desktop {
       flex: 1 0 30%;
       max-width: 300px;
       max-height: 300px;
+      margin: 0;
     }
   }
 }
@@ -165,18 +140,18 @@
 }
 .featured-two {
   ul {
-  margin-bottom: 1em;
-}
+    margin-bottom: 1em;
+  }
   li {
     // flex: 1 0 30%;
     cursor: auto;
-    flex: 1 0 50%;
-    max-width: 100px;
-    max-height: 100px;
+    flex: 1 0 35%;
+    margin: 1em;
     @include desktop {
       flex: 1 0 30%;
       max-width: 200px;
       max-height: 200px;
+      margin: 0;
     }
     img {
       max-width: 100px;
@@ -184,12 +159,10 @@
     }
   }
 }
-
 // Explore section
-
 .explore-section {
   width: 100%;
   display: block;
-  margin: 4em auto 8em;
+  margin: 4em auto 5em;
   text-align: center;
 }

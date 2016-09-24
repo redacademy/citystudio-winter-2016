@@ -109,7 +109,7 @@ h3.people-title {
 .button-blue {
 	background-color: $medium-blue;
 	border: 1px solid $medium-blue;
-	color: #fff;
+	color: #ffffff;
 	display: inline-block;
 	padding: 1.2% 3%;
 	text-transform: uppercase;
@@ -121,7 +121,7 @@ h3.people-title {
 	transition: background-color 0.5s ease;
 
 	&:active, &:visited {
-		color: #fff;
+		color: #ffffff;
 	}
 
 	&:hover {

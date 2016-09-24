@@ -31,9 +31,10 @@
   }
 }
 .searchform-title {
-  width: 60%;
+  width: 100%;
   @include desktop {
     margin-left: 1em;
+    width: 60%;
   }
 }
 .searchform-container {
@@ -73,11 +74,11 @@ background-color: lighten($city-blue, 0.7);
     border: $city-blue;
     outline: $city-blue;
     border-radius: 5px;
-    height: 1rem;
+    height: 2rem;
     position: relative;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);
     &:active{
-    box-shadow: 0 6px 12px 0 rgba(0,0,0,.3);
+    box-shadow: 2px 6px 12px 4px rgba(0,0,0,.5);
   }
     @include desktop {
       height: 2.25rem;

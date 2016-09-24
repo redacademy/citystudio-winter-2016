@@ -4,18 +4,15 @@ jQuery(document).ready(function($){
 
     if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
-        nav = $('.gallery-description-container'),
-        description = $('.nav-description'),
+        nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
         offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
-         description.addClass("fixed");
         }
-        else if (scroll <= offset)  {
+      else if (scroll <= offset)  {
           sticky.removeClass("fixed");
-          description.removeClass("fixed");
         } 
       }
     });
@@ -40,6 +37,7 @@ jQuery(document).ready(function($){
       $('.header-container').css({"position": "fixed"});
     }
   });
+
   $('.hamburger').toggle(function() {
       var menuIcon = $("i", this);
       menuIcon.addClass("fa-times-circle");
