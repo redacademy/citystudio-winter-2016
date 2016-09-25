@@ -36,9 +36,9 @@ jQuery(document).ready(function($) {
       year: ''
     }
 
-    $('.theme-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
+    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
 
 
     reloadProjects();
@@ -79,7 +79,6 @@ jQuery(document).ready(function($) {
   }); 
 
 
-  $('.fa fa-sort-desc').click('false');
   // Remove class current-menu if mouse isn't hovering over menu-item
 
   $('.themes').on('click', function(){

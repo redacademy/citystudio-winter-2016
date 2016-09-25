@@ -6,7 +6,7 @@ jQuery(document).ready(function($){
     var sticky = $('.sticky-navigation'),
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
-        offset = nav.offset().bottom
+        offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
