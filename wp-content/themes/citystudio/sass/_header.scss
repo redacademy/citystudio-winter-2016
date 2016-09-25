@@ -56,12 +56,12 @@
   display: none;
   @include tablet{
     display: block;
-    padding: .75em 3em;
-    font-size: 2rem;
-    margin-right: 2.5em;
+    padding: .75em 6em 0 0;
+    font-size: 2em;
+
   }
   @include desktop {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .fa {
     color: $light-blue;

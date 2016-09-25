@@ -22,8 +22,8 @@ li {
   flex: 1 0 100%;
   flex-wrap: wrap;
   width: 100%;
-  min-height: 300px;
-  min-width: 300px;
+  height: 300px;
+  width: 300px;
 
   @include desktop {
     flex: 1 0 25%;
@@ -31,7 +31,6 @@ li {
 
   .gallery-image-wrap {
     background-size: cover !important;
-    // border: 10px solid white;
     border-top: 10px solid white;
     border-bottom: 10px solid white;
     border-left: 5px solid white;

@@ -11,7 +11,7 @@ get_header();
 	<?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-    <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 12em; width: 100%; background-size: cover;">
+    <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 14em; width: 100%; background-size: cover;">
 			<div class="blue-overlay-3">
         <h2 class="page-titles"><?php the_title(); ?></h2>
 				<p class="post_excerpt"><?php the_field('post_excerpt'); ?></p>

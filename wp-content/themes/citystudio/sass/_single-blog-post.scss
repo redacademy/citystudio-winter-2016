@@ -1,6 +1,6 @@
 .blog-post-banner {
   width: 100%;
-  height: 12em;
+  height: 14em;
   display: block;
   h2 {
     text-align: center;
@@ -25,7 +25,7 @@
   width: 100%;
   z-index: 2;
   @include desktop {
-    height: 192px;
+    height: 14em;
   }
 }
 .blog-hero {
@@ -76,7 +76,7 @@
 .recent-news-block {
   background-color: $color__background-lightblue;
   width: 100%;
-  height: 335px;
+  height: 350px;
   margin: 1em 0 0;
   h2 {
     color: $city-blue;
@@ -90,7 +90,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: auto 2em;
+  margin: 1em 2em;
   li {
     position: relative;
     height: 210px;
