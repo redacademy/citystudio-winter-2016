@@ -19,13 +19,13 @@ jQuery(document).ready(function($) {
 
   // Sort navigation is open on page load on mobile
 
-  $('#sort_nav').click(function() {
+  $('#sort_nav').on('click', function() {
     $('.theme-labels').toggleClass('show-labels');
     $('.part-labels').toggleClass('show-labels');
     $('.year-labels').toggleClass('show-labels');
   }); // close sort
 
-  $('#refresh').click(function() {
+  $('#refresh').on('click', function() {
     checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
@@ -45,53 +45,58 @@ jQuery(document).ready(function($) {
 
   }); // close refresh
 
-  $('.theme-labels').click(function(){
+  $('.theme-labels').on('click', function(){
     $(this).empty().hide();
+    $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  $('.part-labels').click(function(){
+  $('.part-labels').on('click', function(){
     $(this).empty().hide();
+    $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  $('.year-labels').click(function(){
+  $('.year-labels').on('click', function(){
     $(this).empty().hide();
+    $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  $('.themes.sort-menu-item').click(function(){
+  $('.themes').on('click', function(){
     $(this).toggleClass('toggle-menu-item');
     $(this).children().toggleClass('toggle-menu-item');
     $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
 
-   $('.partners.sort-menu-item').click(function(){
+   $('.partners').on('click', function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
 
-  $('.years.sort-menu-item').click(function(){
+  $('.years').on('click', function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
-  });
+  }); 
 
-  $('.fa.fa-times').click(function(){
-    $('.theme-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
 
-    reloadProjects();
-  }) 
-
+  $('.fa fa-sort-desc').click('false');
   // Remove class current-menu if mouse isn't hovering over menu-item
 
-  $('.themes').click(function(){
+  $('.themes').on('click', function(){
     $(this).children('.nav-sub-menu').children().addClass('current-menu');
-  })
+    // alert('one click')
+  });
+
+  $('#refresh.refresh.menu-item').hover(function(){
+      $(".refresh-hover").css({"opacity": 1});
+  }, function(){
+      $(".refresh-hover").css({"opacity": 0});
+    } 
+  );
 
   // Create an empty object to hold
   // the checked navigation values in the properties
-  $('.sub-menu-theme').click(function() {
+  $('.sub-menu-theme').on('click', function() {
 
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
@@ -105,7 +110,7 @@ jQuery(document).ready(function($) {
     }
   });
 
-  $('.sub-menu-part').click(function() {
+  $('.sub-menu-part').on('click', function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
@@ -118,7 +123,7 @@ jQuery(document).ready(function($) {
       reloadProjects();
     }
   });
-  $('.sub-menu-year').click(function() {
+  $('.sub-menu-year').on('click', function() {
     if ($(this.checked)) {
       queryFilter.year = $(this).find('input').val();
       checkedYear = parseInt(($(this).text()).trim());

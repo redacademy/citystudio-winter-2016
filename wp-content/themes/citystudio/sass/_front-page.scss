@@ -12,13 +12,12 @@
   border-bottom: 1px solid #000;
   background-repeat: no-repeat;
   @include desktop {
-    height: 55vh;
-    margin-top: -1em;
+    height: 65vh;
   }
 }
 .hero-blurb {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
   background: -webkit-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
@@ -30,11 +29,7 @@
   z-index: 1;
   @include desktop {
     width: 2525px;
-    font-size: 1.8rem;
     padding: 8.5% 12%;
-  }
-  @include iphone6-horizontal {
-    font-size: 1rem;
   }
   .orange-font {
     text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
