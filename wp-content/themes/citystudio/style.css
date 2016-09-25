@@ -2715,8 +2715,7 @@ sort-menu-item toggle-menu-item {
   @media screen and (min-width: 1024px) {
     .sticky-navigation {
       display: block;
-      width: 100%;
-      border-bottom: 2px solid #d3d3d3; } }
+      width: 100%; } }
 
 .nav-description {
   padding: 0; }
