@@ -18,9 +18,7 @@ get_header();
 
 				<?php get_template_part('template-parts/page-project-single/details') ?>
 
-				<div class="static-return-button">
-					<a href="<?php echo esc_url( home_url( 'home/search' ) ); ?>"> << Back To Project Archive</a>
-				</div>
+				<?php get_template_part('template-parts/page-project-single/back-button') ?>
 
 		  </article><!-- #post-## -->
 

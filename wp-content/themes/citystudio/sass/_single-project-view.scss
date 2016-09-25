@@ -17,7 +17,7 @@
 }
 //HEROBANNER
 
-.project-hero{
+.project-hero {
   display: none;
   max-height: 500px;
   height: 30vh;
@@ -33,11 +33,14 @@
   text-align: center;
   width: 85%;
   font-size: 1.2em;
+  line-height: 1.4em;
+
   @include desktop {
     margin: 3.5rem 2rem;
     text-align: center;
     width: 65%;
-    font-size: 1.15em;
+    font-size: 1.5em;
+    line-height: 1.8em;
   }
 }
 //PROJECT CREDIT COLUMNS
@@ -114,35 +117,32 @@ width: 75%;
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
 .full-width-col {
   display: flex;
-  justify-content: center;
-  margin: 2em;
+  flex-wrap: wrap;
+  margin: 2em auto;
   width: 75.5%;
   font-family: $fontfamily;
-  display: block;
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
-  order: 3;
+
   @include desktop {
     // margin: 1em 10em;
   }
   .scalability-wrap {
     margin-bottom: 1.5rem;
+    flex-basis: 100%;
+    width: 100%;
   }
   h3 {
     padding-bottom: .5rem;
   }
 }
 // IMAGE BAR
-.image-bar{
-  width: 103%;
+.image-bar {
+  flex-basis: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  -webkit-box-ordinal-group: 5;
-  -webkit-order: 4;
-  -ms-flex-order: 4;
+  order: 4;
   margin: 2em 0 2em 0;
 
   @include desktop {
@@ -157,42 +157,49 @@ width: 75%;
 }
 // TAG LINKS
 .tags-wrapper {
+  flex-basis: 100%;
   margin-top: 0.75rem;
+  width: 100%;
 }
 .tags {
-  display: -webkit-inline-box;
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   margin-top: .5rem;
   width: 100%;
   flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
+
   @include desktop {
     width: 85%;
   }
-  p {
+
+  .tag-links {
     background-color:  darken($color__background-lightblue, 2);
     padding: 0.8rem 1rem;
     color: #000;
     border-radius: 5px;
     margin-right: 1rem;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
+
     &:hover {
       background-color: darken($color__background-lightblue, 6);
+      color: $dark-blue;
+    }
+  }
+
+  .tag-url {
+    text-decoration: none;
+    transition: all, .5s, ease;
+
+    &:visited, &:active {
+      color: $city-blue;
+      text-decoration: none;
+      transition: all, .5s, ease;
     }
   }
 }
 .tag-list{
   margin: .8em 0;
+
   li{
     text-transform: capitalize;
     display: inline;
@@ -206,5 +213,16 @@ width: 75%;
   }
   a{
     text-transform: capitalize;
+  }
+}
+
+
+// Back to Project Button
+
+.static-return-button {
+
+  a {
+    margin: 0;
+    padding: 0;
   }
 }

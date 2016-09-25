@@ -5,8 +5,34 @@
     position: absolute;
     bottom: -46px;
   }
+
+  .static-return-button {
+
+    a {
+      font-size: 1.1em;
+      font-family: $fontfamily;
+      color: $light-blue;
+      text-decoration: underline;
+      text-transform: uppercase;
+      padding: 0em;
+      margin-left: 2em;
+      border: none;
+      outline: none;
+
+      @include desktop {
+        padding: 1em;
+        margin-left: 3em;
+        font-size: 1.3em;
+      }
+    }
+    a:hover {
+      cursor: pointer;
+      filter:opacity(0.8);
+    }
+  }
 }
 
+// This should be in a more global place
 .banner-inner {
   display: flex;
   flex-direction: column-reverse;
@@ -16,8 +42,9 @@
   max-width: 1280px;
   margin: 0 auto;
   z-index: -999;
+
   @include desktop {
-    padding: 0 4em;
+    padding: 2% 4%;
   }
 }
 
@@ -153,27 +180,5 @@ article.people {
   p {
     color: $light-blue;
     font-family: $fontfamily;
-  }
-}
-.static-return-button {
-  a {
-    font-size: 1.1em;
-    font-family: $fontfamily;
-    color: $light-blue;
-    text-decoration: underline;
-    text-transform: uppercase;
-    padding: 0em;
-    margin-left: 2em;
-    border: none;
-    outline: none;
-  @include desktop {
-    padding: 1em;
-    margin-left: 3em;
-    font-size: 1.3em;
-  }
-  }
-  a:hover {
-    cursor: pointer;
-    filter:opacity(0.8);
   }
 }
