@@ -6,14 +6,10 @@ if( $posts ): ?>
     <?php foreach( $posts as $post): // variable must be called $post (IMPORTANT) ?>
         <?php setup_postdata($post); ?>
         <a class="gallery-anchor" href="<?php echo esc_url( get_permalink() ); ?>" >
-          <li style=
-              "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
-               background-size: cover;
-               border-top: 2px solid white;
-               border-bottom: 2px solid white;
-               border-right: 2px solid white;">
+          <li class="gallery-image-wrap" style=
+              "background: url('<?php the_field('banner_image'); ?>') no-repeat center ">
             <div class="description"><?php the_title( '<h2 class="description-title">', '</h2>'); ?>
-              <div class="subtitle"><?php the_field( 'excerpt' ); ?>
+              <div class="subtitle"><?php //the_field( 'excerpt' ); ?>
               </div>
             </div>
           </li>
