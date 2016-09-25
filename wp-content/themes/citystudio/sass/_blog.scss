@@ -66,7 +66,7 @@
   justify-content: center;
   width: 25%;
   margin: 2em 0 0 3em;
-  height: 85vh;
+  height: 69vh;
 }
 .sidebar-item {
   color: $city-blue;
@@ -85,7 +85,7 @@
   a {
     color: $city-blue;
     font-weight: normal;
-  outline: none;
+    outline: none;
     &:hover {
       text-decoration: underline;
       color: $dark-blue;
@@ -161,20 +161,23 @@
     padding-left: 1.5rem;
     line-height: 1em;
     margin-bottom: 0.5em;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    font-family: $fontfamily;
   }
   a {
     color: white;
     font-weight: lighter;
-  outline: none;
-    &:hover {
-      text-decoration: underline;
-    }
+    outline: none;
+    // &:hover {
+    //   text-decoration: underline;
+    // }
   }
 }
-.category {
+.category-p {
   padding-left: 1.5rem;
   a {
-    font-size: 0.8em;
+    font-size: 0.9em;
+    font-weight: 600;
+font-family: $fontfamily;
   }
 }
