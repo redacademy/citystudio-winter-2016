@@ -56,9 +56,10 @@
   display: none;
   @include tablet{
     display: block;
-    padding: .75em 3em;
+    padding: 0.75em 3em;
     font-size: 2rem;
     margin-right: 2.5em;
+    margin-top: .2em;
   }
   @include desktop {
     font-size: 2rem;
@@ -112,9 +113,8 @@
     height: 83.2vh;
   }
   @include desktop{
-    width: 35vw;
+    width: 25vw;
     height: 51vh;
-    position: fixed;
   }
 }
 .header-nav li a{
@@ -172,12 +172,17 @@ button.hamburger{
   font-size: 2em;
   position: absolute;
   right: .5em;
-  top: 1em;
+  top: .5em;
   background: 0 0;
   border: none;
   display: flex;
   &:hover{
     color: $medium-blue;
+  }
+
+  @include desktop{
+    top: 1.2em;
+    right: 1em;
   }
 }
 .dropdown-content a:hover {background-color: #f1f1f1}
