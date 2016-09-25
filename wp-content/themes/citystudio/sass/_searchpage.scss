@@ -122,10 +122,12 @@ background-color: lighten($city-blue, 0.7);
     font-family: $fontfamily;
     width: 75%;
     margin-top: 1rem;
-    font-size: 1.1rem;
+    font-size: 1.5em;
+    line-height: 1.8em;
+
     @include desktop {
-      width: 65%;
-      margin: 4em 0;
+      width: 90%;
+      margin: 2.5em 0;
     }
   }
 }

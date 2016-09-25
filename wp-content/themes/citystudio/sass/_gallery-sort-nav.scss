@@ -59,7 +59,7 @@
   }
 }
 .open {
-  width: 100%;
+  width: 99%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -162,7 +162,7 @@
   width: 90px;
   background-size: 45px 45px;
   &:hover{
-    background-color: $light-blue; 
+    background-color: $light-blue;
   };
 }
 
@@ -331,7 +331,7 @@ sort-menu-item toggle-menu-item{
     width: 208px;;
     text-align: center;
     label {
-      font-size: .8rem; 
+      font-size: .8rem;
       text-transform: capitalize;
       padding: 2px;
     &::after {
@@ -342,7 +342,7 @@ sort-menu-item toggle-menu-item{
       border-color: #fff transparent transparent;
       position: absolute;
     }
-   
+
   }
   .show-labels{
     display: block;

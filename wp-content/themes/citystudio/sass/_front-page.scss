@@ -5,12 +5,15 @@
 }
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
-  width: 100%;
-  height: 32vh;
-  background-size: cover;
-  display: flex;
-  border-bottom: 1px solid #000;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0 -3px 60px -4px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32vh;
+  width: 100%;
   @include desktop {
     height: 55vh;
     margin-top: -1em;
@@ -20,24 +23,23 @@
   text-align: center;
   font-size: 1rem;
   font-weight: bold;
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
-  background: -webkit-linear-gradient(top, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 5%,rgba(255,255,255, .3) 50%,rgba(255,255,255, 0 ) 100%);
-  filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#006496', endColorstr='#006496',GradientType=0 );
   font-family: $fontfamily;
   display: flex;
   justify-content: center;
   z-index: 1;
   @include desktop {
-    width: 2525px;
+    width: 70%;
+    margin: 0 auto;
     font-size: 1.8rem;
     padding: 8.5% 12%;
   }
   @include iphone6-horizontal {
     font-size: 1rem;
   }
-  .orange-font {
-    text-shadow: 1px 0 1px rgba(150, 150, 150, 0.55);
+  h3 {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #fff;
   }
 }
 .orange-font {
