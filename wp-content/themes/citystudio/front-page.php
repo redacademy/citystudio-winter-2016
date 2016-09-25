@@ -15,8 +15,8 @@ get_header(); ?>
 
   <?php get_template_part ('template-parts/page-home/project-grid'); ?>
 
-  <?php get_template_part ('template-parts/page-home/schools'); ?>
+  <?php get_template_part ('template-parts/recent-news-block'); ?>
 
-  <!-- <?php get_template_part ('template-parts/recent-news-block'); ?> -->
+  <?php get_template_part ('template-parts/page-home/schools'); ?>
 
 <?php get_footer(); ?>

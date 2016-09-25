@@ -12,12 +12,15 @@
     font-family: $fontfamily;
     margin: 0.5em 0 1em;
     text-align: center;
+    max-width: 75%;
   }
 }
 .blue-overlay-3 {
   @include blue-to-blue-light;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
   z-index: 2;
@@ -73,29 +76,31 @@
 .recent-news-block {
   background-color: $color__background-lightblue;
   width: 100%;
-  height: 325px;
+  height: 335px;
   margin: 1em 0 0;
   h2 {
     color: $city-blue;
     text-align: center;
     font-size: 2em;
     padding: 0.5em 1em;
-    // font-weight: bold;
+    font-weight: bold;
   }
 }
 .recent-news-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  margin: auto 2em;
   li {
     position: relative;
-    height: 200px;
-    width: 250px;
+    height: 210px;
+    width: 270px;
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
     &:hover {
-      -webkit-box-shadow: 3px 2px 51px 0 rgba(0,0,0,0.47);
-      -moz-box-shadow: 3px 2px 51px 0 rgba(0,0,0,0.47);
-      box-shadow: 3px 2px 51px 0 rgba(0,0,0,0.47);
+      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
+      top: 2px;
+      left: 2px;
     }
     img {
     height: 100%;
