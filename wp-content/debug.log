@@ -1,0 +1,1 @@
+[26-Sep-2016 22:05:37 UTC] PHP Deprecated:  Methods with the same name as their class will not be constructors in a future version of PHP; WP_Import has a deprecated constructor in /srv/www/citystudio/htdocs/wp-content/plugins/wordpress-importer/wordpress-importer.php on line 38

@@ -1,0 +1,147 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+html body {
+	font-size: 16px;
+	color: $citystudio-black;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: $color__text-main;
+	font-family: $font__main;
+	@include font-size(1);
+	line-height: $font__line-height-body;
+}
+
+/* Headings */
+
+h1, h2, h3, h4, h5, h6 {
+	clear: both;
+}
+
+/* Copy */
+
+p {
+	margin-bottom: $base__space-unit;
+}
+
+dfn, cite, em, i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 0 $base__space-unit;
+}
+
+address {
+	margin: 0 0 $base__space-unit;
+}
+
+pre {
+	background: $color__background-pre;
+	@include font-size(0.9375);
+	line-height: $font__line-height-pre;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code, kbd, tt, var {
+	font-family: $font__code;
+	@include font-size(0.9375);
+}
+
+abbr, acronym {
+	border-bottom: 1px dotted $color__border-abbr;
+	cursor: help;
+}
+
+mark, ins {
+	background: $color__background-ins;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+h1, .proj-subtitle {
+	color: $citystudio-black;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+h2 {
+	font-size: 3em;
+}
+
+h3 {
+	color: $citystudio-black;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+p {
+	color: $citystudio-black;
+}
+
+.title {
+	text-transform: uppercase;
+	font-weight: bold;
+	margin: 0 0 1em;
+
+		h1 {
+			font-size: 3em;
+			margin: 0 0;
+		}
+		h2 {
+			font-size: 2em;
+		}
+}
+
+.homepage-description {
+	p {
+		font-size: 1.5em;
+	}
+}
+
+.role {
+	font-style: italic;
+}
+
+// Banner Page Tiles
+
+// H2
+h2.page-titles {
+	color: #fff;
+	font-family: $fontfamily;
+	font-size: 3em;
+	font-weight: bold;
+}
+
+
+// Section Ttiles
+
+.section-titles {
+	color: $color__text-main;
+	font-family: $fontfamily;
+	font-size: 3em;
+	font-weight: 700;
+	text-transform: none;
+}
+
+// Links in paragraphs
+
+.single a {
+	color: $city-blue;
+	text-decoration: underline;
+
+	&:hover {
+		color: $dark-blue;
+	}
+}

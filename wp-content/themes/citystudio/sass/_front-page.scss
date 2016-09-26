@@ -1,0 +1,171 @@
+// -------------- HOME PAGE STYLES  ----------------------*
+.container {
+  display: block;
+  width: 100%;
+}
+// -------------- HEROBANNER STYLES  ----------------------*
+.hero {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 0px -3px 60px -4px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 32vh;
+  width: 100%;
+
+  @include desktop {
+    height: 55vh;
+    margin-top: -1em;
+  }
+}
+.hero-blurb {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  font-family: $fontfamily;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+
+  @include desktop {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.8rem;
+    padding: 8.5% 12%;
+  }
+
+  @include iphone6-horizontal {
+    font-size: 1rem;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    font-weight: 300;
+    color: #fff;
+  }
+}
+
+.homepage-titles {
+  margin: 2rem auto;
+  letter-spacing: 0.1rem;
+  font-family: $fontfamily;
+  text-align: center;
+  font-size: 1.7rem;
+  max-width: 94%;
+  font-weight: normal;
+  @include desktop {
+    font-size: 2.3rem;
+    margin: 2em auto 1em;
+  }
+  span {
+    color: $city-blue;
+    font-weight: bold;
+  }
+}
+.homepage-description {
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  font-size: 1.15em;
+  font-family: $fontfamily;
+  text-align: center;
+  width: 90%;
+  @include desktop {
+    width: 64%;
+  }
+  span {
+    margin-top: 1em;
+  }
+}
+// -------------- PARTNER SECTION STYLES  ----------------------*
+.homepage-partners-container {
+  background-color: $color__background-lightblue;
+  padding: 2em;
+  @include desktop {
+    padding: 4em;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 100%;
+    margin-bottom: 0;
+    @include desktop {
+      margin-bottom: 5.5em;
+    }
+  }
+  li {
+    height: 110px;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  h1 {
+    margin: 2rem 0 1rem;
+  }
+  p {
+    width: 74vw;
+    margin: 0 auto;
+    padding-bottom: 1rem;
+    font-size: 21px;
+  }
+  .partner-buttons {
+    text-align: center;
+    padding: 3%;
+  }
+  button {
+    font-weight: bold;
+    background-color: rgba(1,152,213,.8);
+    color: white;
+    border-radius: 7px;
+    padding: 0.5% 2%;
+    margin: 1rem 1rem 2rem;
+  }
+}
+.featured {
+  li {
+    flex: 1 0 35%;
+    margin: 0.5em;
+    @include desktop {
+      flex: 1 0 30%;
+      max-width: 300px;
+      max-height: 300px;
+      margin: 0;
+    }
+  }
+}
+.partners-title {
+  text-align: center;
+  color: white;
+  margin-top: 2.5rem;
+  text-transform: uppercase;
+}
+.featured-two {
+  ul {
+    margin-bottom: 1em;
+  }
+  li {
+    // flex: 1 0 30%;
+    cursor: auto;
+    flex: 1 0 35%;
+    margin: 1em;
+    @include desktop {
+      flex: 1 0 30%;
+      max-width: 200px;
+      max-height: 200px;
+      margin: 0;
+    }
+    img {
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}
+// Explore section
+.explore-section {
+  width: 100%;
+  display: block;
+  margin: 4em auto 5em;
+  text-align: center;
+}

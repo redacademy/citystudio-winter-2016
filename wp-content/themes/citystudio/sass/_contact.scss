@@ -1,0 +1,169 @@
+.contact-header {
+  // background: url("../../images/citystudio-logo.png") center center no-repeat ;
+  // background-color: $city-blue;
+  background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
+  opacity: 0.9;
+  background-size: cover;
+  height: 4em;
+  width: 100%;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  @include desktop {
+    height: 7em;
+  }
+  h1 {
+    color: #fff;
+    margin-left: 5.2%;
+    padding-top: 0.25em;
+    font-family: $fontfamily;
+    font-size: 2em;
+    @include desktop {
+      font-size: 3em;
+      padding-top: 0.35em;
+    }
+  }
+}
+iframe {
+  width: 100vw;
+  height: 40vh;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+}
+.contact-page-container {
+  background-color: #1b85b1;
+  padding-top: 2rem;
+  width: 100%;
+}
+.getintouch-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  @include desktop {
+    width: 100%;
+  }
+}
+.getintouch-block {
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 1.25rem;
+  width: 90%;
+  padding-top: -0.5em;
+  padding-left: 0.5em;
+  height: 2rem;
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  @include desktop {
+    height: 3rem;
+    margin-bottom: 1rem;
+    padding: 0.25em 0.75em;
+  }
+  h2 {
+    font-family: 'open_sans', bold;
+    font-size: 1.1em;
+    color: $light-blue;
+    font-weight: 900;
+    @include desktop {
+      margin-top: 0.2rem;
+    }
+  }
+}
+.contact-content {
+  display: flex;
+  flex-direction: column;
+  @include desktop {
+    flex-direction: row;
+  }
+}
+.contact-info-container {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+  @include desktop {
+    margin: 4em auto;
+  }
+  h3,
+  p {
+    color: #ffffff;
+    font-family: $fontfamily;
+  }
+  p {
+    font-weight: lighter;
+  }
+}
+.contact-form-container {
+  width: 40%;
+  padding: 2em 0 2em 4em;
+   ::-webkit-input-placeholder {
+    color: $city-blue;
+    font-weight: bold;
+  }
+   :-moz-placeholder {
+    color: $city-blue;
+    opacity: 1;
+    font-weight: bold;
+  }
+   ::-moz-placeholder {
+    color: $city-blue;
+    opacity: 1;
+    font-weight: bold;
+  }
+   :-ms-input-placeholder {
+    font-weight: bold;
+    color: $city-blue;
+  }
+  @include iphone6 {
+    width: 90%;
+    padding: 2em 0 0 1.2em;
+  }
+}
+.frm_primary_label {
+  padding: 0 0 25px 2px !important;
+}
+.frm_form_field {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  label {
+    color: #ffffff !important;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+    width: 80%;
+  }
+}
+#frm_field_68_container,
+#frm_field_67_container {
+  box-shadow: none !important;
+}
+#field_g5aab {
+  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+}
+.frm_other_input,
+#field_nmmsb {
+  width: 337px!important;
+  @include desktop {
+    width: 495px!important;
+  }
+}
+input[type='email']:focus {
+  font-weight: bold;
+}
+.frm_submit {
+  margin-top: 1em;
+  display: flex;
+  justify-content: center;
+  @include desktop {
+    margin-top: 2em;
+  }
+  input[type=submit] {
+    background-color: transparent !important;
+    border: 1px solid #ffffff !important;
+    color: #ffffff !important;
+    width: 150px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2) !important;
+	  transition: background-color 0.5s ease;
+    &:hover {
+      background-color: lighten($city-blue, .5) !important;
+    }
+  }
+}
