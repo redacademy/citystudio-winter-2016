@@ -204,7 +204,7 @@
   height: 30px;
   &:hover{
     background-color: white;
-    transition: all .1s ease;
+    transition: background .6s ease;
     border: 1px solid $city-blue;
     color: $city-blue;
     p{
@@ -215,7 +215,6 @@
     border: none;
   }
 }
-
 .toggle-menu-item{
     display: block;
     opacity: 1;
@@ -229,7 +228,6 @@
     border-top-left-radius: 0;
    z-index: 1; 
   p{
-      /*color: $city-blue;*/
     color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
@@ -318,6 +316,7 @@ sort-menu-item toggle-menu-item{
     height: 1.8em;
     width: 208px;;
     text-align: center;
+    padding-top: 2px;
     label {
       font-size: .8rem;
       text-transform: capitalize;

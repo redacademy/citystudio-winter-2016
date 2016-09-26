@@ -788,7 +788,7 @@ a {
   background-color: #f7f9f9;
   width: 100vw;
   position: absolute;
-  right: 0;
+  left: 0;
   top: 65px;
   height: 87.2vh; }
   @media screen and (min-width: 375px) {
@@ -801,10 +801,15 @@ a {
       height: 89.6vh; } }
   @media screen and (min-width: 480px) {
     .header-nav {
-      top: 85px;
-      width: 30vw;
+      top: 4em;
+      width: 37%;
       height: 56vh;
-      right: 0; } }
+      right: 0;
+      left: 63%; } }
+  @media screen and (min-width: 1024px) {
+    .header-nav {
+      top: 6em;
+      left: 69.5%; } }
 
 .header-nav li a {
   display: -ms-flexbox;
@@ -819,10 +824,13 @@ a {
   left: 140px;
   position: absolute;
   z-index: -1;
-  font-size: 12px; }
+  font-size: 10px; }
   @media screen and (min-width: 375px) {
     .header-nav li ul {
       top: 250px; } }
+  @media screen and (min-width: 480px) {
+    .header-nav li ul {
+      top: 180px; } }
   @media screen and (min-width: 1024px) {
     .header-nav li ul {
       top: 180px; } }
@@ -1853,7 +1861,7 @@ object {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  height: 32vh;
+  height: 39vh;
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
@@ -2284,7 +2292,7 @@ a {
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.25rem;
-  width: 90%;
+  width: 95%;
   padding: 0 1em;
   height: 2.5rem;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
@@ -2294,12 +2302,12 @@ a {
       margin-bottom: 1rem;
       padding: 0 0.5em; } }
   .title-block h2 {
-    font-family: 'open_sans', bold;
+    font-family: open_sans,bold;
     font-size: 1.25rem;
     color: #006493;
     font-weight: 900;
-    margin-top: 0.2rem;
-    text-transform: uppercase; }
+    margin-top: .2rem;
+    padding: 0 .3em; }
     @media screen and (min-width: 480px) {
       .title-block h2 {
         font-size: 3rem; } }
@@ -2570,7 +2578,7 @@ a {
   height: 30px; }
   .sort-menu-item:hover {
     background-color: white;
-    transition: all .1s ease;
+    transition: background .6s ease;
     border: 1px solid #0198d5;
     color: #0198d5; }
     .sort-menu-item:hover p {
@@ -2592,7 +2600,6 @@ a {
   border-top-left-radius: 0;
   z-index: 1; }
   .toggle-menu-item p {
-    /*color: $city-blue;*/
     color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
@@ -2668,7 +2675,8 @@ sort-menu-item toggle-menu-item {
   border-radius: 5px;
   height: 1.8em;
   width: 208px;
-  text-align: center; }
+  text-align: center;
+  padding-top: 2px; }
   .theme-labels label,
   .part-labels label,
   .year-labels label {
@@ -3335,38 +3343,47 @@ h2.page-titles {
 
 .cta_blurb {
   display: none; }
-  @media screen and (min-width: 480px) {
+  @media screen and (min-width: 1024px) {
     .cta_blurb {
       display: block;
-      width: 70%;
-      margin-left: 3em; } }
+      width: 30em; } }
 
 .call-to-action {
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
   position: relative;
   background-color: #f7f9f9;
-  padding: 40px;
+  padding: 2em;
   font-size: 18px; }
   .call-to-action .cta-heading {
     width: 90%;
     padding-bottom: 2%;
     font-family: "open_sans"; }
   .call-to-action .cta-content {
-    width: 100%; }
+    width: 100%;
+    margin: 1em 0em; }
     .call-to-action .cta-content p {
-      margin-right: 5em;
       font-family: "open_sans";
-      font-size: 0.8em;
-      margin-bottom: 0; }
+      font-size: 0.8em; }
+      @media screen and (min-width: 480px) {
+        .call-to-action .cta-content p {
+          display: none; } }
+  @media screen and (min-width: 480px) and (min-width: 1024px) {
+    .call-to-action .cta-content p {
+      display: block; } }
+  @media screen and (min-width: 1024px) {
+    .call-to-action {
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
 
 .connect {
   background-color: #2cb5e8;
   border-radius: 3px;
-  margin: 0 1em;
+  margin: 1em 0;
   height: 100px;
-  width: 100%;
-  max-width: 500px;
+  width: 16em;
   padding: 0.9em 0;
   color: white;
   position: relative;
@@ -3375,13 +3392,6 @@ h2.page-titles {
   .connect:hover {
     box-shadow: 0 0 12px #666666;
     transition: all 0.25s ease; }
-  @media screen and (min-width: 1024px) {
-    .connect {
-      margin-top: 0; } }
-  @media screen and (min-width: 480px) {
-    .connect {
-      width: 30%;
-      margin: auto 4em; } }
   .connect .become-involved {
     font-weight: bold;
     display: inline-block;

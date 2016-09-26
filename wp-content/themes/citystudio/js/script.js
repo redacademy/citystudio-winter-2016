@@ -1,5 +1,6 @@
 jQuery(document).ready(function($){
 
+
   $(window).scroll(function(){
 
     if ($('body').hasClass('home page') ) {
@@ -33,9 +34,6 @@ jQuery(document).ready(function($){
   $(".hamburger").click(function(){
     var menuIcon = $("i", this);
     menuIcon.removeClass("fa-bars");
-    if ($(window).width() <= 375){
-      $('.header-container').css({"position": "fixed"});
-    }
   });
 
   $('.hamburger').toggle(function() {
@@ -55,19 +53,17 @@ jQuery(document).ready(function($){
   menuSubmenu.show();
 
   //code for mobile view 
-  $(document).ready(function(){
     var callToAction = $(".call-to-action");
 
-    if ($(window).width() <= 375){
+    if ($(window).width() <= 414){
         callToAction.css({"display": "none"});
-
-      $("a[href*=#]").toggle(function() {
-
+        $('.header-container').css({"position": "fixed"});
+        $('.header-nav').css({"position": "fixed"});
+        $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
         }, 
         function(){
           $(".sub-menu").css({"display": "none"});
       }); 
     };
-  });
 });
