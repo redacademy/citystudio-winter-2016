@@ -15,7 +15,7 @@
   height: 39vh;
   width: 100%;
   @include desktop {
-    height: 65vh;
+    height: 72vh;
   }
 }
 .hero-blurb {
@@ -70,6 +70,7 @@
   width: 90%;
   @include desktop {
     width: 64%;
+    padding-bottom: 1em;
   }
   span {
     margin-top: 1em;

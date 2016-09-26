@@ -72,15 +72,17 @@ iframe {
     flex-direction: row;
   }
 }
+
+
 .contact-info-container {
   display: flex;
-  width: 50%;
+  width: 100%;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   align-items: center;
   margin: 0 auto;
   @include desktop {
-    margin: 4em auto;
+    margin: 2em 1em;
   }
   h3,
   p {
@@ -90,10 +92,11 @@ iframe {
   p {
     font-weight: lighter;
   }
+
 }
 .contact-form-container {
-  width: 40%;
-  padding: 2em 0 2em 4em;
+  width: 90%;
+  padding: 2em 0 2em 1em;
    ::-webkit-input-placeholder {
     color: $city-blue;
     font-weight: bold;
@@ -116,6 +119,19 @@ iframe {
     width: 90%;
     padding: 2em 0 0 1.2em;
   }
+  @include desktop{
+    width: 45%;
+    padding: 2em 0 2em 2.8em;
+  }
+}
+.contact-display{
+  width: 92%;
+}
+.contact-engagement{
+  width: 93%;
+}
+.contact-info-block{
+  width: 92%;
 }
 .frm_primary_label {
   padding: 0 0 25px 2px !important;
@@ -149,7 +165,7 @@ input[type='email']:focus {
 .frm_submit {
   margin-top: 1em;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   @include desktop {
     margin-top: 2em;
   }

@@ -1179,16 +1179,16 @@ iframe {
 .contact-info-container {
   display: -ms-flexbox;
   display: flex;
-  width: 50%;
+  width: 100%;
   -ms-flex-direction: column;
       flex-direction: column;
-  text-align: center;
+  text-align: left;
   -ms-flex-align: center;
       align-items: center;
   margin: 0 auto; }
   @media screen and (min-width: 480px) {
     .contact-info-container {
-      margin: 4em auto; } }
+      margin: 2em 1em; } }
   .contact-info-container h3,
   .contact-info-container p {
     color: #ffffff;
@@ -1197,8 +1197,8 @@ iframe {
     font-weight: lighter; }
 
 .contact-form-container {
-  width: 40%;
-  padding: 2em 0 2em 4em; }
+  width: 90%;
+  padding: 2em 0 2em 1em; }
   .contact-form-container ::-webkit-input-placeholder {
     color: #0198d5;
     font-weight: bold; }
@@ -1217,6 +1217,19 @@ iframe {
     .contact-form-container {
       width: 90%;
       padding: 2em 0 0 1.2em; } }
+  @media screen and (min-width: 480px) {
+    .contact-form-container {
+      width: 45%;
+      padding: 2em 0 2em 2.8em; } }
+
+.contact-display {
+  width: 92%; }
+
+.contact-engagement {
+  width: 93%; }
+
+.contact-info-block {
+  width: 92%; }
 
 .frm_primary_label {
   padding: 0 0 25px 2px !important; }
@@ -1251,8 +1264,8 @@ input[type='email']:focus {
   margin-top: 1em;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: center;
-      justify-content: center; }
+  -ms-flex-pack: start;
+      justify-content: flex-start; }
   @media screen and (min-width: 480px) {
     .frm_submit {
       margin-top: 2em; } }
@@ -1530,12 +1543,16 @@ input[type='email']:focus {
   text-align: center; }
   .archive-blurb p {
     font-family: "open_sans";
-    width: 75%;
+    width: 88%;
     margin-top: 1rem;
-    font-size: 1.5em;
-    line-height: 1.8em; }
+    font-size: 1em;
+    line-height: 1.5em; }
     @media screen and (min-width: 480px) {
       .archive-blurb p {
+        width: 75%;
+        margin-top: 1rem;
+        font-size: 1.5em;
+        line-height: 1.8em;
         width: 90%;
         margin: 2.5em 0; } }
 
@@ -1863,7 +1880,7 @@ object {
   width: 100%; }
   @media screen and (min-width: 480px) {
     .hero {
-      height: 65vh; } }
+      height: 72vh; } }
 
 .hero-blurb {
   text-align: center;
@@ -1915,7 +1932,8 @@ object {
   width: 90%; }
   @media screen and (min-width: 480px) {
     .homepage-description {
-      width: 64%; } }
+      width: 64%;
+      padding-bottom: 1em; } }
   .homepage-description span {
     margin-top: 1em; }
 
