@@ -7,23 +7,6 @@
   margin-left: 900px;
   padding: 2rem;
 }
-.nav-div {
-  width: 85px;
-  height: 85px;
-  border-radius: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-right: 4em;
-  @include desktop {
-    z-index: 2 !important;
-    position: relative !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 17px 10px;
-  }
-}
 .sort {
   display: flex;
   align-items: center;
@@ -89,6 +72,7 @@
     font-size: 32px;
     padding: 0;
     margin: -12px 9px;
+    pointer-events: none
     }
   .fa-sort-asc{
     display: flex;
@@ -160,9 +144,6 @@
   &:hover{
     background-color: $light-blue;
   };
-  span{
-    
-  }
 }
 #refresh.refresh.menu-item{
   width: 4.1em;
@@ -220,8 +201,7 @@
   height: 30px;
   &:hover{
     background-color: white;
-    /*taken out for for double click bug
-    transition: all .2s ease-in;*/
+    transition: background .6s ease;
     border: 1px solid $city-blue;
     color: $city-blue;
     p{
@@ -232,7 +212,6 @@
     border: none;
   }
 }
-
 .toggle-menu-item{
     display: block;
     opacity: 1;
@@ -244,8 +223,8 @@
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+   z-index: 1; 
   p{
-      /*color: $city-blue;*/
     color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
@@ -334,10 +313,11 @@ sort-menu-item toggle-menu-item{
     height: 1.8em;
     width: 208px;;
     text-align: center;
+    padding-top: 2px;
     label {
       font-size: .8rem;
       text-transform: capitalize;
-      padding: 2px;
+      margin-right: -20px;
     &::after {
       content: '';
       width: 0;
@@ -346,7 +326,6 @@ sort-menu-item toggle-menu-item{
       border-color: #fff transparent transparent;
       position: absolute;
     }
-
   }
   .show-labels{
     display: block;
@@ -354,78 +333,32 @@ sort-menu-item toggle-menu-item{
 }
 .sticky-navigation {
   display: none;
+  transition: all .3s ease;
+  height: 5em;
   @include tablet{
     display: block;
-    width: 100%;
   }
 }
-.nav-description {
-  padding: 0;
-  @include desktop {
-  transition: padding-right 1s ease;
-  height: 80px;
-  padding-top: 6px;
-  margin-left: 50%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: $fontfamily;
-  z-index: 1;
-    p {
-      padding: 5px;
-      width: 27em;
-      margin-right: 20px;
 
-    }
-    img {
-      height: 60px;
-      width: 60px;
-      margin-bottom: -20px;
-    }
-  }
-  @include tablet {
-    display: none;
-  }
-  @include iphone6 {
-    display: none;
-  }
-}
 .fixed {
-
   position: fixed;
   top: 0;
   padding-top: 20px;
-  height: 120px;
   width: 100vw;
   z-index: 2;
   padding: 0;
   background-color: rgba(255,255,255, 1);
+  opacity: 1;
+  height: 6em;
+  transition: all .3s ease;
 }
 .sticky-navigation.fixed{
   display: none;
-
-
     @include tablet{
-      transition: none;
+      transition: all .5s ease;
       display: flex;
-      justify-content: center;
     }
  }
-.nav-description.fixed{
-  height: 80px;
-  padding-top: 6px;
-  margin-left: 60%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: $fontfamily;
-  @include tablet{
-    transition: none;
-  }
-  p {
-    padding: 6px;
-    width: 480px;
-    margin-right: 80px;
-  }
-}
 .nav-div.fixed{
   margin: 23px 0px;
 }

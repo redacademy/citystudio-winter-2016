@@ -12,7 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 32vh;
+  height: 39vh;
   width: 100%;
   @include desktop {
     height: 65vh;
@@ -20,7 +20,7 @@
 }
 .hero-blurb {
   text-align: center;
-  font-size: .5rem;
+  font-size: 1rem;
   font-weight: bold;
   font-family: $fontfamily;
   display: flex;
@@ -29,14 +29,15 @@
   @include desktop {
     width: 70%;
     margin: 0 auto;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     padding: 8.5% 12%;
   }
-  @include iphone6-horizontal {
-    font-size: 1rem;
+  @include tablet{
+    h3{
+      font-size: 1.5rem;
+    }
   }
   h3 {
-    font-size: 1.6em;
     font-weight: 300;
     color: #fff;
   }
@@ -63,7 +64,6 @@
 }
 .homepage-description {
   margin: 0 auto;
-  padding-bottom: 2rem;
   font-size: 1.15em;
   font-family: $fontfamily;
   text-align: center;
