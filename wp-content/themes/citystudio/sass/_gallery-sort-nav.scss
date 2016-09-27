@@ -157,7 +157,9 @@
   color: $light-blue;
   padding-top: 2em;
   opacity: 0;
-  transition: all 1s ease-in;
+  position: absolute;
+  float: right;
+  right: 11em;
 }
 
 .nav-sub-menu input[type=checkbox] {

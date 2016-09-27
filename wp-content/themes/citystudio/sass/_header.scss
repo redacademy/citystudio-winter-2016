@@ -2,7 +2,6 @@
   display: block;
   max-width: 100%;
 }
-
 .header-container {
   max-width: 100%;
   display: flex;
@@ -37,17 +36,11 @@
 }
 .icon-search {
   position: relative;
-  @include desktop {
-    font-size: 1.9em;
-    padding-right: 7em;
-    top: .6em;
-    margin: auto 0;
-  }
     @include tablet{
     display: block;
     padding: 0.75em 3em;
     font-size: 2em;
-    margin-right: 2.5em;
+    margin-right: 4.5em;
   }
   .fa {
     color: $light-blue;
@@ -99,9 +92,6 @@
     top: 68px;
     height: 89vh;
   }
-  @include iphone6-plus{
-    top: 69px;
-    height: 89.6vh;
   @include desktop{
     top: 4em;
     width: 37%;
@@ -146,7 +136,6 @@
 }
 .dropdown-content {
   display: none;
-
 }
 .dropdown-content a{
   transition: height .3s ease-in;
@@ -172,7 +161,7 @@ button.hamburger{
   font-size: 2em;
   position: absolute;
   right: .5em;
-  top: 0.5em;
+  top: 55px;
   background: 0 0;
   border: none;
   display: flex;
@@ -272,7 +261,6 @@ button.hamburger{
 }
 .dropdown-content {
   display: none;
-
 }
 .dropdown-content a{
   transition: height .3s ease-in;
@@ -305,7 +293,6 @@ button.hamburger{
   &:hover{
     color: $medium-blue;
   }
-
   @include tablet{
     top: 1em;
     right: 1em;

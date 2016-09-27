@@ -40,7 +40,7 @@ jQuery(document).ready(function($) {
     partLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     yearLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
 
-      reloadProjects();
+    reloadProjects();
 
   }); // close refresh
 
@@ -97,7 +97,7 @@ jQuery(document).ready(function($) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();
 
-      $('.theme-labels')
+     themeLabel
           .show()
           .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
@@ -109,7 +109,7 @@ jQuery(document).ready(function($) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
 
-      $('.part-labels')
+      partLabel
           .show()
           .append('<label>' + checkedPart + '</label>');
 
@@ -122,7 +122,7 @@ jQuery(document).ready(function($) {
       queryFilter.year = $(this).find('input').val();
       checkedYear = parseInt(($(this).text()).trim());
 
-      $('.year-labels')
+      yearLabel
           .show()
           .append('<label>' + checkedYear + '</label>');
       $(this).parent().removeClass('current-menu');
@@ -146,7 +146,7 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters(),
+          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             // create gallery method to append HTML to

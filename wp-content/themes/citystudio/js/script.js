@@ -67,6 +67,11 @@ jQuery(document).ready(function($){
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 
-  //code for mobile view 
+
+// $('#refresh.refresh.menu-item').hover(function(){
+//   $('.refresh-hover').css({"display": "block"});
+// }, function(){
+//   $('.refresh-hover').css({"display": "none"})
+// })
  
 });
