@@ -51,6 +51,16 @@
   @include desktop {
     flex-basis: 20%;
   }
+
+  .menu-item {
+    font-weight: 500;
+    position: relative;
+    z-index: 0;
+    // background-color: white;
+    margin: 0.5em 0;
+    max-width: 100px;
+  }
+
 }
 
 .icon-search {
@@ -123,15 +133,6 @@
 .header-nav li a {
   display: inline;
   width: 100%;
-}
-
-.menu-item {
-  font-weight: 500;
-  position: relative;
-  z-index: 0;
-  // background-color: white;
-  margin: 0.5em 0;
-  max-width: 100px;
 }
 
 .hamburger-menu {
@@ -316,22 +317,6 @@
     z-index: 3;
   }
 }
-
-// .header-nav li ul {
-//   background-color: #f9f9f9;
-//   top: 197px;
-//   left: 180px;
-//   position: absolute;
-//   z-index: -1;
-//
-//   @include desktop{
-//     top: 165px;
-//   }
-//
-//   li {
-//     display: inline-block;
-//   }
-// }
 
 .sub-menu {
   visibility: hidden;
