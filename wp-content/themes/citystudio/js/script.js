@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
         }
       else if (scroll <= offset)  {
           sticky.removeClass("fixed");
-        } 
+        }
       }
     });
   });
@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
       var menuIcon = $("i", this);
       menuIcon.addClass("fa-times-circle");
     }, function() {
-  
+
      var menuIcon = $("i", this);
 
      menuIcon.removeClass("fa-times-circle");
@@ -52,18 +52,18 @@ jQuery(document).ready(function($){
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 
-  //code for mobile view 
+  //code for mobile view
     var callToAction = $(".call-to-action");
 
     if ($(window).width() <= 414){
         callToAction.css({"display": "none"});
-        $('.header-container').css({"position": "fixed"});
-        $('.header-nav').css({"position": "fixed"});
+        // $('.header-container').css({"position": "fixed"});
+        // $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
-        }, 
+        },
         function(){
           $(".sub-menu").css({"display": "none"});
-      }); 
+      });
     };
 });
