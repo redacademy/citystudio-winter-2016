@@ -4,76 +4,58 @@
 
 .header-container {
   max-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   vertical-align: center;
   justify-content: space-between;
   background-color: #ffffff;
+  padding: 1.8% 1% 1.2%;
   z-index: 3;
+
   @include tablet{
     position: relative;
   }
 }
 .site-branding {
-  width: 100vw;
+  flex-basis: 75%;
+  height: 100%;
+  order: 1;
+
   @include desktop {
     margin-right: 0;
   }
-  a{
-    border: none;
-    outline: none;
+
+  a {
+    display: inline-block;
+  }
+
+  .logo {
+    max-width: 450px ;
+    min-width: 200px ;
   }
 }
-.site-branding img {
-  width: 250px;
-  padding: .3em;
-  @include desktop {
-   width: 250px;
-  }
-  @include tablet{
-    width: 50%;
-  }
-}
-.search-gallery {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+
+.site-navigation {
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  margin-right: 0.5rem;
-  @include desktop {
-    margin-right: 2rem;
-  }
+  flex-basis: 20%;
+  height: 100%;
+  order: 2;
+  max-width: 250px;
+  position: relative;
+  justify-content: space-between;
 }
+
 .icon-search {
   display: none;
-  @include tablet{
+
+  @include tablet {
     display: block;
-<<<<<<< HEAD
-    padding: .75em 3em;
     font-size: 2rem;
-    margin-right: 2.5em;
   }
+
   @include desktop {
     font-size: 2rem;
-=======
-    padding: 0.75em 3em;
-    font-size: 2em;
-    margin-right: 2.5em;
-    margin-top: .2em;
-    // padding: .75em 6em 0 0;
-    // font-size: 2em;
-  }
-  @include desktop {
-    font-size: 2em;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
+
   }
   .fa {
     color: $light-blue;
@@ -87,6 +69,19 @@
     outline: none;
   }
 }
+
+.hamburger{
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  border: none;
+  display: flex;
+
+  &:hover {
+    color: $medium-blue;
+  }
+}
+
 .icon-menu {
   margin-top: 0.5rem;
   margin-right: 0.5rem;
@@ -105,53 +100,26 @@
 }
 
 /*----------- menu nav -------------*/
-.header-nav{
+.header-nav {
     border-top: 4px solid #2cb5e8;
     border-bottom: 4px solid #2cb5e8;
     background-color: #f7f9f9;
-    width: 100vw;
-<<<<<<< HEAD
-    padding: 1em;
-    position: absolute;
-    right: -8px;
-    top: 65px;
-    height: 81.6vh;
-  @include iphone6{
-    top: 68px;
-    height: 83.8vh;
-  }
-  @include iphone6-plus{
-    top: 84px;
-    height: 83.2vh;
-  }
-  @include desktop{
-    width: 35vw;
-    height: 51vh;
-    position: fixed;
-=======
-    position: absolute;
-    left: 0;
-    top: 65px;
-    height: 87.2vh;
-  @include iphone6{
-    top: 68px;
-    height: 88.8vh;
-  }
-  @include iphone6-plus{
-    top: 69px;
-    height: 89.6vh;
-  }
-  @include desktop{
     top: 4em;
-    width: 37%;
-    height: 56vh;
-    right: 0;
-    left: 63%;
-  }
-  @include tablet{
+    width: 100%;
+    height: auto;
+    padding: 10% 4% 0;
+
+  // @include desktop {
+  //   top: 4em;
+  //   width: 37%;
+  //   height: 56vh;
+  //   right: 0;
+  //   left: 63%;
+  // }
+
+  @include tablet {
     top: 6em;
     left: 69.5%;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .header-nav li a{
@@ -162,9 +130,8 @@
 }
 .header-nav li ul {
   background-color: #f9f9f9;
-<<<<<<< HEAD
-  top: 180px;
-  left: 170px;
+  top: 197px;
+  left: 140px;
   position: absolute;
   z-index: -1;
   font-size: 12px;
@@ -176,85 +143,44 @@
   font-weight: 500;
   height: 4em;
   z-index: 2;
-  width: 20%;
 }
-.hamburger-menu{
+.hamburger-menu {
   width: 70px;
   height: 70px;
 }
 .dropdown-content {
   display: none;
-
+  position: absolute;
+  right: 0;
+  min-width: 300px;
+  top: 70px;
 }
-.dropdown-content a{
+
+.dropdown-content a {
   transition: height .3s ease-in;
   text-decoration: none;
   display: block;
   font-size: 22px;
-  ul li{
+
+  ul li {
     border-left: 2px solid grey !important;
   }
 }
-.header-menu-title{
+.header-menu-title {
   display: none;
-  @include desktop{
+
+  @include desktop {
     display: block;
     margin: -7px;
     padding: 0 .4em;
   }
 }
 
-button.hamburger{
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  position: absolute;
-  right: .5em;
-  top: 1em;
-  background: 0 0;
-  border: none;
-  display: flex;
-  &:hover{
-    color: $medium-blue;
-  }
-}
-.dropdown-content a:hover {background-color: #f1f1f1}
-.show {
-  display:block;
-  z-index: 3;
-}
-#primary-menu {
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  padding: 2em 1.5em;
-  @include desktop{
-    padding: 1em 0.5em;
-  }
-}
 
-=======
-  top: 197px;
-  left: 140px;
-  position: absolute;
-  z-index: -1;
-  font-size: 10px;
-  @include iphone6{
-    top: 250px;
-  }
-  @include desktop{
-    top: 180px;
-  }
-}
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
   background-color: #f9f9f9;
-   -webkit-transition:none;
-  -moz-transition:height 300ms ease-in;
-  -o-transition:height 300ms ease-in;
   transition:height 300ms ease-in;
 }
 .header-nav ul li.menu-item-has-children a {
@@ -317,25 +243,11 @@ button.hamburger{
   overflow: hidden;
   height:0;
   width: 100%;
-<<<<<<< HEAD
-  -webkit-transition:height 300ms ease-in;
-  -moz-transition:height 300ms ease-in;
-  -o-transition:height 300ms ease-in;
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   transition:height 300ms ease-in;
   border: none;
 }
 /* sub menu list item css*/
 .header-nav ul > li:hover ul li {
-<<<<<<< HEAD
-  height: 1.6em;
-  padding: .4em;
-  @include iphone6{
-    height: 2.5em;
-  }
-}
-=======
   height: 2.5em;
   padding: .4em;
 }
@@ -353,7 +265,7 @@ button.hamburger{
   display: none;
 
 }
-.dropdown-content a{
+.dropdown-content a {
   transition: height .3s ease-in;
   text-decoration: none;
   display: block;
@@ -362,7 +274,7 @@ button.hamburger{
     border-left: 2px solid grey !important;
   }
 }
-.header-menu-title{
+.header-menu-title {
   display: none;
   @include desktop{
     display: block;
@@ -371,66 +283,50 @@ button.hamburger{
   }
 }
 
-button.hamburger{
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  position: absolute;
-  right: .5em;
-  top: .5em;
-  background: 0 0;
-  border: none;
-  display: flex;
-  &:hover{
-    color: $medium-blue;
-  }
-
-  @include tablet{
-    top: 1.2em;
-    right: 1em;
-  }
+.dropdown-content a:hover {
+  background-color: #f1f1f1
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
+
 .show {
   display:block;
   z-index: 3;
 }
+
 #primary-menu {
   z-index: 3;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   padding: 4em 0em 0em;
-  @include iphone6{
+
+  @include iphone6 {
     padding: 7em 0em 0em;
   }
-  @include desktop{
+
+  @include desktop {
     padding-top: 3em;
   }
 }
 
 
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
-.menu-menu-container{
-  @include iphone6{
+.menu-menu-container {
+
+  @include iphone6 {
     width: 100%;
     position: fixed;
     z-index: 3;
   }
 }
-.sub-menu{
+
+.sub-menu {
   padding: 0;
-<<<<<<< HEAD
-  li a{
-    font-size: 16px;
-    padding-bottom: 1em;
-=======
   top: 150px;
-  li a{
+
+  li a {
     font-size: 16px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
-  @include iphone6{
+
+  @include iphone6 {
     margin: 0em 2em;
     z-index: 3;
   }

@@ -1,91 +1,72 @@
 // -------------- HOME PAGE STYLES  ----------------------*
 .container {
   display: block;
-  width: 100%;
+  width: 100vw;
+}
+.front-page-main {
+  max-width: 100vw;
+  width: 100vw;
 }
 // -------------- HEROBANNER STYLES  ----------------------*
 .hero {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-<<<<<<< HEAD
-  box-shadow: inset 0px -3px 60px -4px #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 32vh;
-  width: 100%;
-
-  @include desktop {
-    height: 55vh;
-    margin-top: -1em;
-=======
   box-shadow: inset 0 -3px 60px -4px #000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 39vh;
   width: 100%;
+  @include tablet {
+    height: 43vh;
+  }
   @include desktop {
     height: 65vh;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .hero-blurb {
   text-align: center;
-  font-size: 1rem;
   font-weight: bold;
   font-family: $fontfamily;
   display: flex;
   justify-content: center;
   z-index: 1;
-<<<<<<< HEAD
-
+  width: 90%;
+  @include tablet {
+    width: 70%;
+    margin: 0 auto;
+    padding: 10.5% 14%;
+  }
   @include desktop {
     width: 70%;
     margin: 0 auto;
-    font-size: 1.8rem;
+    font-size: 1em;
     padding: 8.5% 12%;
   }
-
-  @include iphone6-horizontal {
-    font-size: 1rem;
-  }
-
   h3 {
-    font-size: 1.6em;
-=======
-  @include desktop {
-    width: 70%;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    padding: 8.5% 12%;
-  }
-  @include tablet{
-    h3{
-      font-size: 1.5rem;
-    }
-  }
-  h3 {
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
+    font-size: 1em;
     font-weight: 300;
     color: #fff;
+    @include tablet {
+      font-size: 1.6em;
+    }
+    @include desktop {
+      font-size: 1.6em;
+    }
   }
 }
-<<<<<<< HEAD
-
-=======
 .orange-font {
   color: #ee7600;
 }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .homepage-titles {
   margin: 2rem auto;
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
   font-size: 1.7rem;
-  max-width: 94%;
+  width: 99%;
+  max-width: 99%;
   font-weight: normal;
   @include desktop {
     font-size: 2.3rem;
@@ -97,29 +78,37 @@
   }
 }
 .homepage-description {
-  margin: 0 auto;
-<<<<<<< HEAD
-  padding-bottom: 2rem;
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
-  font-size: 1.15em;
-  font-family: $fontfamily;
-  text-align: center;
-  width: 90%;
+  display: none;
+  @include tablet {
+    width: 70%;
+    margin: 0 auto;
+    padding-bottom: 2rem;
+    font-size: 1.15em;
+    font-family: $fontfamily;
+    text-align: center;
+    width: 90%;
+    display: block;
+  }
   @include desktop {
     width: 64%;
+    display: block;
   }
   span {
     margin-top: 1em;
+    display: block;
   }
 }
-<<<<<<< HEAD
-=======
 // -------------- RECENT POSTS SECTION STYLES  ----------------------*
 .recent-posts-block {
   width: 100%;
-  height: 375px;
+  height: 800px;
   margin: 1em 0 0;
+  @include tablet {
+    height: 300px;
+  }
+  @include desktop {
+    height: 400px;
+  }
   h2 {
     color: $city-blue;
     text-align: center;
@@ -133,15 +122,51 @@
 }
 .recent-posts-list {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: auto 2em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
   max-width: 100%;
+  @include tablet {
+  margin: auto 2em;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  @include desktop {
+  margin: auto 2em;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  a {
+    height: 200px;
+    width: 250px;
+    margin: 1em;
+    @include tablet {
+      height: 160px;
+      width: 210px;
+      margin: 0;
+    }
+    @include desktop {
+      height: 240px;
+      width: 300px;
+      margin: 0;
+    }
+  }
   li {
     position: relative;
-    height: 240px;
-    width: 300px;
+    height: 200px;
+    width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+    @include tablet {
+      height: 160px;
+      width: 210px;
+    }
+    @include desktop {
+      height: 240px;
+      width: 300px;
+    }
     &:hover {
       box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
@@ -156,18 +181,33 @@
 }
 .title-div {
   width: 80%;
-  height: 30%;
-  bottom: 25px;
+  height: 43% !important;
+  bottom: 12px !important;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+  @include tablet {
+    height: 45%;
+    bottom: 12px;
+  }
+  @include desktop {
+    height: 30%;
+    bottom: 25px;
+  }
   p {
     color: white;
+    font-family: $fontfamily;
     padding: 0.5em;
     overflow: hidden;
+    font-size: 1em;
+    @include tablet {
+      font-size: 0.9em;
+    }
+    @include desktop {
+      font-size: 1em;
+    }
   }
 }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
   background-color: $color__background-lightblue;
@@ -217,6 +257,12 @@
   li {
     flex: 1 0 35%;
     margin: 0.5em;
+    @include tablet {
+      flex: 1 0 25%;
+      max-width: 200px;
+      max-height: 200px;
+      margin: 1.5em;
+    }
     @include desktop {
       flex: 1 0 30%;
       max-width: 300px;
@@ -236,19 +282,17 @@
     margin-bottom: 1em;
   }
   li {
-<<<<<<< HEAD
-    // flex: 1 0 30%;
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     cursor: auto;
     flex: 1 0 35%;
     margin: 1em;
-    @include desktop {
-<<<<<<< HEAD
-      flex: 1 0 30%;
-=======
+    @include tablet {
       flex: 1 0 25%;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
+      max-width: 200px;
+      max-height: 200px;
+      margin: 1.5em;
+    }
+    @include desktop {
+      flex: 1 0 25%;
       max-width: 200px;
       max-height: 200px;
       margin: 0;
@@ -259,11 +303,7 @@
     }
   }
 }
-<<<<<<< HEAD
-// Explore section
-=======
 // -------------- EXPLORE SECTION STYLES  ----------------------*
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .explore-section {
   width: 100%;
   display: block;

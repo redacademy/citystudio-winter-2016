@@ -52,10 +52,13 @@
   }
 }
 .school-mission-container {
-  margin: auto 1rem;
+  margin: auto 1em;
   font-family: $fontfamily;
-  width: 100%;
+  width: 90%;
   text-align: center;
+  @include tablet {
+  margin: auto 5em;
+}
   @include desktop {
     margin: auto 1.5em;
     width: 40%;
@@ -71,10 +74,14 @@
     }
   }
   .school-mission {
-    font-size: 0.9rem;
+    font-size: 0.9em;
     line-height: 1.25rem;
+    width: 95%;
+    @include tablet {
+  width: 100%;
+}
     @include desktop {
-      font-size: 1rem;
+      font-size: .9em;
       line-height: 1.4rem;
     }
   }
@@ -84,7 +91,7 @@
   max-height: 500px;
 }
 .campus-course-container {
-  margin: 1rem auto;
+  margin: 1.5em auto 0;
   @include desktop {
     margin: 2rem 0 1rem 5rem;
   }
@@ -94,12 +101,13 @@
       display: block;
     }
   }
-  .campus-courses {
+  .campus-course-div {
     font-family: $fontfamily;
     font-size: 1rem;
     text-align: center;
     @include desktop {
       text-align: left;
+      padding-top: 1em;
     }
   }
   h3 {
@@ -169,11 +177,7 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.25rem;
-<<<<<<< HEAD
-  width: 90%;
-=======
   width: 95%;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   padding: 0 1em;
   height: 2.5rem;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
@@ -183,21 +187,12 @@
     padding: 0 0.5em;
   }
   h2 {
-<<<<<<< HEAD
-    font-family: 'open_sans', bold;
-    font-size: 1.25rem;
-    color: $dark-blue;
-    font-weight: 900;
-    margin-top: 0.2rem;
-    text-transform: uppercase;
-=======
     font-family: open_sans,bold;
     font-size: 1.25rem;
     color: #006493;
     font-weight: 900;
     margin-top: .2rem;
     padding: 0 .3em;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     @include desktop {
       font-size: 3rem;
     }
@@ -223,11 +218,14 @@
   font-weight: bold;
   color: white;
   margin: 0.5rem 0 0.75rem 1rem;
+  @include tablet {
+    margin: .5em 0 .75em 2em;
+}
   span {
     text-transform: uppercase;
   }
   @include desktop {
-    margin: 0.5rem 0 0.75rem 7rem;
+    margin: 0.5em 0 0.75em 7em;
   }
 }
 .media-links-container {

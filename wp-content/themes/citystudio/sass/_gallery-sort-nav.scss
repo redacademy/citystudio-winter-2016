@@ -1,4 +1,3 @@
-
 // -------------- GALLERY NAV FUNCTION STYLES  ----------------------*
 .loader {
   opacity: 0.1;
@@ -7,31 +6,6 @@
   margin-left: 900px;
   padding: 2rem;
 }
-<<<<<<< HEAD
-.nav-div {
-  width: 85px;
-  height: 85px;
-  border-radius: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  transition: width .4s ease-in;
-  margin-right: 4em;
-  @include desktop {
-    z-index: 2 !important;
-    position: relative !important;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    transition: width .8s ease-in;
-    margin: 17px 10px;
-  }
-  @include iphone6-horizontal {
-    display: none;
-  }
-}
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .sort {
   display: flex;
   align-items: center;
@@ -62,11 +36,7 @@
   }
 }
 .open {
-<<<<<<< HEAD
-  width: 100%;
-=======
   width: 99%;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -96,24 +66,6 @@
     }
   .fa-sort-desc{
     display: flex;
-<<<<<<< HEAD
-    justify-content: center;
-    width: 100%;
-    font-size: 32px;
-    padding: 0;
-    margin: -12px;
-    }
-  .fa-sort-asc{
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    font-size: 32px;
-    padding: 0;
-    margin: 0px;
-  }
-  .fa-times{
-    color: $medium_blue;
-=======
     justify-content: flex-end;
     width: 100%;
     font-size: 32px;
@@ -133,7 +85,6 @@
     color: $medium_blue;
     float: right;
     margin: .3em .7em;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .themes {
@@ -153,14 +104,8 @@
   p{
     margin: -6px;
   }
-<<<<<<< HEAD
-
-  .fa-sort-desc{
-    margin: -9px;
-=======
   .fa-sort-desc{
     margin: -9px 9px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   .fa-sort-asc{
     margin: 5px;
@@ -177,11 +122,7 @@
     margin: -6px;
   }
   .fa-sort-desc{
-<<<<<<< HEAD
-    margin: -9px;
-=======
     margin: -9px 9px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   .fa-sort-asc{
     margin: 5px;
@@ -200,17 +141,9 @@
   width: 90px;
   background-size: 45px 45px;
   &:hover{
-<<<<<<< HEAD
-    background-color: $light-blue; 
-  };
-}
-
-
-=======
     background-color: $light-blue;
   };
 }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 #refresh.refresh.menu-item{
   width: 4.1em;
   height: 4em;
@@ -219,15 +152,12 @@
   margin-top: .5em;
   margin-left: 1em;
 }
-<<<<<<< HEAD
-=======
 .refresh-hover{
   color: $light-blue;
   padding-top: 2em;
   opacity: 0;
   transition: all 1s ease-in;
 }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 
 .nav-sub-menu input[type=checkbox] {
   display: none;
@@ -245,11 +175,7 @@
     border-radius-right: 1px;
     display: none;
     &:hover {
-<<<<<<< HEAD
-      transition: all 2s ease-in;
-=======
       transition: all 1s ease-in;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
       cursor: pointer;
   }
 
@@ -274,11 +200,7 @@
   height: 30px;
   &:hover{
     background-color: white;
-<<<<<<< HEAD
-    transition: all .3s ease-in;
-=======
     transition: background .6s ease;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     border: 1px solid $city-blue;
     color: $city-blue;
     p{
@@ -289,10 +211,6 @@
     border: none;
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .toggle-menu-item{
     display: block;
     opacity: 1;
@@ -304,13 +222,8 @@
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-<<<<<<< HEAD
+   z-index: 1;
   p{
-      /*color: $city-blue;*/
-=======
-   z-index: 1; 
-  p{
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
@@ -399,18 +312,11 @@ sort-menu-item toggle-menu-item{
     height: 1.8em;
     width: 208px;;
     text-align: center;
-<<<<<<< HEAD
-    label {
-      font-size: .8rem; 
-      text-transform: capitalize;
-      padding: 2px;
-=======
     padding-top: 2px;
     label {
       font-size: .8rem;
       text-transform: capitalize;
       margin-right: -20px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     &::after {
       content: '';
       width: 0;
@@ -419,10 +325,6 @@ sort-menu-item toggle-menu-item{
       border-color: #fff transparent transparent;
       position: absolute;
     }
-<<<<<<< HEAD
-   
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   .show-labels{
     display: block;
@@ -430,50 +332,6 @@ sort-menu-item toggle-menu-item{
 }
 .sticky-navigation {
   display: none;
-<<<<<<< HEAD
-  @include tablet{
-    display: block;
-    width: 100%;
-    border-bottom: 2px solid #d3d3d3;
-  }
-}
-.nav-description {
-  padding: 0;
-  @include desktop {
-  transition: padding-right 1s ease;
-  height: 80px;
-  padding-top: 6px;
-  margin-left: 50%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: $fontfamily;
-  z-index: 1;
-    p {
-      padding: 5px;
-      width: 27em;
-      margin-right: 20px;
-
-    }
-    img {
-      height: 60px;
-      width: 60px;
-      margin-bottom: -20px;
-    }
-  }
-  @include tablet {
-    display: none;
-  }
-  @include iphone6 {
-    display: none;
-  }
-}
-.fixed {
-
-  position: fixed;
-  top: 0;
-  padding-top: 20px;
-  height: 120px;
-=======
   transition: all .3s ease;
   height: 5em;
   @include tablet{
@@ -485,40 +343,10 @@ sort-menu-item toggle-menu-item{
   position: fixed;
   top: 0;
   padding-top: 20px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   width: 100vw;
   z-index: 2;
   padding: 0;
   background-color: rgba(255,255,255, 1);
-<<<<<<< HEAD
-}
-.sticky-navigation.fixed{
-  display: none;
-
-
-    @include tablet{
-      transition: none;
-      display: flex;
-      justify-content: center;
-    }
- }
-.nav-description.fixed{
-  height: 80px;
-  padding-top: 6px;
-  margin-left: 60%;
-  text-align: left;
-  font-size: 1.2rem;
-  font-family: $fontfamily;
-  @include tablet{
-    transition: none;
-  }
-  p {
-    padding: 6px;
-    width: 480px;
-    margin-right: 80px;
-  }
-}
-=======
   opacity: 1;
   height: 6em;
   transition: all .3s ease;
@@ -530,7 +358,6 @@ sort-menu-item toggle-menu-item{
       display: flex;
     }
  }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .nav-div.fixed{
   margin: 23px 0px;
 }

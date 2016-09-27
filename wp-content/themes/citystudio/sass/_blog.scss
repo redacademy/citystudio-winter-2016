@@ -65,13 +65,8 @@
   flex-direction: column;
   justify-content: center;
   width: 25%;
-<<<<<<< HEAD
-  margin: 2em 0em 0em 3em;
-  height: 85vh;
-=======
   margin: 2em 0 0 3em;
   height: 69vh;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 }
 .sidebar-item {
   color: $city-blue;
@@ -90,18 +85,6 @@
   a {
     color: $city-blue;
     font-weight: normal;
-<<<<<<< HEAD
-    &:hover {
-      text-decoration: underline;
-      color: $medium-blue;
-    }
-  }
-}
-
-.categories {
-  list-style-type: none;
-  padding-left:0px;
-=======
     outline: none;
     &:hover {
       text-decoration: underline;
@@ -112,7 +95,6 @@
 .categories {
   list-style-type: none;
   padding-left: 0;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   ul {
     margin: 0.5em 0;
   }
@@ -121,15 +103,9 @@
   }
   a {
     font-size: 0.9rem;
-<<<<<<< HEAD
-  }
-}
-
-=======
     outline: none;
   }
 }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 //CONTENT BLOCK
 .blog-archive-feed {
   display: flex;
@@ -144,14 +120,6 @@
   width: 750px;
   position: relative;
   margin-bottom: 4em;
-<<<<<<< HEAD
- &:hover {
-   -webkit-box-shadow: 3px 2px 51px 0px rgba(0,0,0,0.47);
- -moz-box-shadow: 3px 2px 51px 0px rgba(0,0,0,0.47);
- box-shadow: 3px 2px 51px 0px rgba(0,0,0,0.47);
-transition: all 0.25s ease;
-}
-=======
   box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
@@ -159,7 +127,6 @@ transition: all 0.25s ease;
     left: 3px;
     top: 3px;
   }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 }
 .blog-credits {
   width: 80%;
@@ -194,32 +161,13 @@ transition: all 0.25s ease;
     padding-left: 1.5rem;
     line-height: 1em;
     margin-bottom: 0.5em;
-<<<<<<< HEAD
-    font-size: 0.9em;
-=======
     font-size: 0.8em;
     font-family: $fontfamily;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   a {
     color: white;
     font-weight: lighter;
-<<<<<<< HEAD
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
-.category {
-  padding-left: 1.5rem;
-  a {
-  font-size: 0.8em;
-}
-=======
     outline: none;
-    // &:hover {
-    //   text-decoration: underline;
-    // }
   }
 }
 .category-p {
@@ -229,5 +177,4 @@ transition: all 0.25s ease;
     font-weight: 600;
 font-family: $fontfamily;
   }
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 }

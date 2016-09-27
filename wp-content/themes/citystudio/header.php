@@ -35,12 +35,12 @@
 				  	</a>
 				</div><!-- .site-branding -->
 
-				<div class="search-gallery">
+				<div class="site-navigation">
 					<span class="icon-search" aria-hidden="true">
 						<a href="<?php echo esc_url(home_url('home/search'));?>"><i class="fa fa-search"></i></a>
 					</span>
 					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i>
-					<div class="header-menu-title">MENU</div>	
+					<div class="header-menu-title">MENU</div>
 					</button>
 
 						<div id="hamburgerMenu" class="dropdown-content">

@@ -22,24 +22,17 @@ li {
   flex: 1 0 100%;
   flex-wrap: wrap;
   width: 100%;
-<<<<<<< HEAD
-  min-height: 300px;
-  min-width: 300px;
-=======
   height: 300px;
   width: 300px;
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
-
+  @include tablet {
+    flex: 1 0 50%;
+  }
   @include desktop {
     flex: 1 0 25%;
   }
 
   .gallery-image-wrap {
     background-size: cover !important;
-<<<<<<< HEAD
-    // border: 10px solid white;
-=======
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     border-top: 10px solid white;
     border-bottom: 10px solid white;
     border-left: 5px solid white;
