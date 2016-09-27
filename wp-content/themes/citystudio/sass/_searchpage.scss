@@ -3,7 +3,7 @@
 --------------------------------------------------------------*/
 
 .search-archive-header {
-  background-color: $medium-blue;
+  background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   background-size: cover;
   height: 8em;
   width: 100%;
@@ -12,6 +12,7 @@
   justify-content: left;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include tablet {
+  background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
     height: 5em;
     flex-direction: row;
     justify-content: space-between;
@@ -33,11 +34,12 @@
     @include tablet {
       padding-top: 0.7em;
       text-align: left;
+    margin-left: 2.6%;
     }
     @include desktop {
       font-size: 3em;
       padding-top: 0.75em;
-      margin-left: 2em;
+      margin-left: 5.2%;
     }
   }
 }
@@ -130,12 +132,12 @@
   p {
     font-family: $fontfamily;
     width: 75%;
-    margin-top: 1em;
-    font-size: 1em;
+    margin: 1em;
+    font-size: .9em;
     line-height: 1.8em;
     @include tablet {
       width: 75%;
-      margin: 1em;
+      margin: 2em;
       font-size: 1.25em;
     }
     @include desktop {
@@ -150,12 +152,17 @@ font-size: 1.5em;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 1rem;
   width: 90%;
   margin: 1em auto 0;
+  @include tablet {
+    justify-content: space-around;
+    margin: 2em auto 0;
+  }
   @include desktop {
+    justify-content: space-around;
     margin: 3rem auto 0;
   }
   li,
@@ -165,6 +172,7 @@ font-size: 1.5em;
     height: 250px;
     margin-bottom: 1.5em;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    max-width: 350px;
     @include tablet {
       flex: 0 0 47%;
     }
@@ -172,7 +180,9 @@ font-size: 1.5em;
       flex: 0 0 30%;
       margin-bottom: 2em;
       width: 360px;
-      height: 250px;
+      height: 240px;
+      max-height: 250px;
+      max-width: 360px;
     }
     &:hover {
       border: 1px solid white;

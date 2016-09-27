@@ -37,12 +37,14 @@
   align-items: center;
 }
 .icon-search {
+  display: none;
   position: relative;
   @include tablet{
   padding-right: 6em;
   padding-bottom: 2.3em;
   }
   @include desktop {
+  display: none;
     font-size: 1.9em;
     padding-right: 7em;
     top: .6em;

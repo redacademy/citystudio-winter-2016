@@ -733,7 +733,7 @@ a {
   @media screen and (min-width: 1024px) {
     .site-branding img {
       width: 250px; } }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .site-branding img {
       width: 50%; } }
 
@@ -749,13 +749,15 @@ a {
           align-items: center; }
 
 .icon-search {
+  display: none;
   position: relative; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .icon-search {
       padding-right: 6em;
       padding-bottom: 2.3em; } }
   @media screen and (min-width: 1024px) {
     .icon-search {
+      display: none;
       font-size: 1.9em;
       padding-right: 7em;
       top: .6em;
@@ -765,7 +767,7 @@ a {
     color: #2cb5e8;
     font-size: 1em;
     position: absolute; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .icon-search .fa {
         font-size: 1.8em; } }
     @media screen and (min-width: 1024px) {
@@ -811,7 +813,7 @@ a {
       height: 56vh;
       right: 0;
       left: 63%; } }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .header-nav {
       top: 6em;
       left: 69.5%; } }
@@ -878,7 +880,7 @@ button.hamburger {
   display: flex; }
   button.hamburger:hover {
     color: #0082b9; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     button.hamburger {
       top: 0.7em; } }
   @media screen and (min-width: 1024px) {
@@ -996,7 +998,7 @@ button.hamburger {
   display: flex; }
   button.hamburger:hover {
     color: #0082b9; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     button.hamburger {
       top: 1.2em;
       right: 1em; } }
@@ -1232,7 +1234,8 @@ iframe {
   display: flex;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
-          flex-direction: column; }
+          flex-direction: column;
+  width: 100%; }
   @media screen and (min-width: 1024px) {
     .contact-content {
       -webkit-flex-direction: row;
@@ -1251,7 +1254,7 @@ iframe {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 auto; }
+  margin: 0 auto 2.5em; }
   @media screen and (min-width: 1024px) {
     .contact-info-container {
       margin: 4em auto; } }
@@ -1263,8 +1266,8 @@ iframe {
     font-weight: lighter; }
 
 .contact-form-container {
-  width: 40%;
-  padding: 2em 0 2em 4em; }
+  width: 90%;
+  margin: 2em auto; }
   .contact-form-container ::-webkit-input-placeholder {
     color: #0198d5;
     font-weight: bold; }
@@ -1279,16 +1282,26 @@ iframe {
   .contact-form-container :-ms-input-placeholder {
     font-weight: bold;
     color: #0198d5; }
-  @media screen and (min-width: 375px) {
+  @media screen and (min-width: 600px) {
     .contact-form-container {
       width: 90%;
-      padding: 2em 0 0 1.2em; } }
+      margin: 2em auto; } }
+  @media screen and (min-width: 1024px) {
+    .contact-form-container {
+      width: 40%;
+      margin: 2em 0 0 4em; } }
 
 .frm_primary_label {
   padding: 0 0 25px 2px !important; }
 
 .frm_form_field {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  @media screen and (min-width: 600px) {
+    .frm_form_field {
+      width: 100%; } }
+  @media screen and (min-width: 1024px) {
+    .frm_form_field {
+      width: 100%; } }
   .frm_form_field label {
     color: #ffffff !important;
     padding-bottom: 10px;
@@ -1304,14 +1317,17 @@ iframe {
 
 .frm_other_input,
 #field_nmmsb {
-  width: 337px !important; }
+  width: 100% !important; }
   @media screen and (min-width: 1024px) {
     .frm_other_input,
     #field_nmmsb {
-      width: 495px !important; } }
+      width: 50% !important; } }
 
 input[type='email']:focus {
   font-weight: bold; }
+
+.frm_style_formidable-style.with_frm_style select {
+  color: #0198d5; }
 
 .frm_submit {
   margin-top: 1em;
@@ -1323,7 +1339,10 @@ input[type='email']:focus {
           justify-content: center; }
   @media screen and (min-width: 1024px) {
     .frm_submit {
-      margin-top: 2em; } }
+      margin-bottom: 1em;
+      -webkit-justify-content: flex-start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; } }
   .frm_submit input[type=submit] {
     background-color: transparent !important;
     border: 1px solid #ffffff !important;
@@ -1492,7 +1511,7 @@ input[type='email']:focus {
 # Search Page Styles
 --------------------------------------------------------------*/
 .search-archive-header {
-  background-color: #0082b9;
+  background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   background-size: cover;
   height: 8em;
   width: 100%;
@@ -1506,8 +1525,9 @@ input[type='email']:focus {
       -ms-flex-pack: left;
           justify-content: left;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .search-archive-header {
+      background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
       height: 5em;
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
@@ -1533,15 +1553,16 @@ input[type='email']:focus {
     padding: 0.5em;
     font-size: 1.75em;
     text-align: center; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .search-archive-header h1 {
         padding-top: 0.7em;
-        text-align: left; } }
+        text-align: left;
+        margin-left: 2.6%; } }
     @media screen and (min-width: 1024px) {
       .search-archive-header h1 {
         font-size: 3em;
         padding-top: 0.75em;
-        margin-left: 2em; } }
+        margin-left: 5.2%; } }
 
 .searchform-title {
   width: 100%; }
@@ -1553,7 +1574,7 @@ input[type='email']:focus {
 .searchform-container {
   width: 100%;
   margin-right: 1em; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .searchform-container {
       width: 100%;
       padding-top: 1em; } }
@@ -1639,13 +1660,13 @@ input[type='email']:focus {
   .archive-blurb p {
     font-family: "open_sans";
     width: 75%;
-    margin-top: 1em;
-    font-size: 1em;
+    margin: 1em;
+    font-size: .9em;
     line-height: 1.8em; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .archive-blurb p {
         width: 75%;
-        margin: 1em;
+        margin: 2em;
         font-size: 1.25em; } }
     @media screen and (min-width: 1024px) {
       .archive-blurb p {
@@ -1663,17 +1684,26 @@ input[type='email']:focus {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
   padding: 1rem;
   width: 90%;
   margin: 1em auto 0; }
+  @media screen and (min-width: 600px) {
+    .search-list {
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
+      margin: 2em auto 0; } }
   @media screen and (min-width: 1024px) {
     .search-list {
+      -webkit-justify-content: space-around;
+          -ms-flex-pack: distribute;
+              justify-content: space-around;
       margin: 3rem auto 0; } }
   .search-list li,
   .search-list a {
@@ -1683,8 +1713,9 @@ input[type='email']:focus {
             flex: 0 0 100%;
     height: 250px;
     margin-bottom: 1.5em;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
-    @media screen and (min-width: 720px) {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    max-width: 350px; }
+    @media screen and (min-width: 600px) {
       .search-list li,
       .search-list a {
         -webkit-flex: 0 0 47%;
@@ -1698,7 +1729,9 @@ input[type='email']:focus {
                 flex: 0 0 30%;
         margin-bottom: 2em;
         width: 360px;
-        height: 250px; } }
+        height: 240px;
+        max-height: 250px;
+        max-width: 360px; } }
     .search-list li:hover,
     .search-list a:hover {
       border: 1px solid white;
@@ -2017,7 +2050,7 @@ object {
           align-items: center;
   height: 39vh;
   width: 100%; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .hero {
       height: 43vh; } }
   @media screen and (min-width: 1024px) {
@@ -2036,7 +2069,7 @@ object {
           justify-content: center;
   z-index: 1;
   width: 90%; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .hero-blurb {
       width: 70%;
       margin: 0 auto;
@@ -2048,12 +2081,12 @@ object {
       font-size: 1em;
       padding: 8.5% 12%; } }
   .hero-blurb h3 {
-    font-size: 1em;
+    font-size: 0.9em;
     font-weight: 300;
     color: #fff; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .hero-blurb h3 {
-        font-size: 1.6em; } }
+        font-size: 1.2em; } }
     @media screen and (min-width: 1024px) {
       .hero-blurb h3 {
         font-size: 1.6em; } }
@@ -2067,20 +2100,21 @@ object {
   font-family: "open_sans";
   text-align: center;
   font-size: 1.7rem;
-  width: 99%;
+  width: 90%;
   max-width: 99%;
   font-weight: normal; }
   @media screen and (min-width: 1024px) {
     .homepage-titles {
       font-size: 2.3rem;
-      margin: 2em auto 1em; } }
+      margin: 2em auto 1em;
+      width: 99%; } }
   .homepage-titles span {
     color: #0198d5;
     font-weight: bold; }
 
 .homepage-description {
   display: none; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .homepage-description {
       width: 70%;
       margin: 0 auto;
@@ -2102,9 +2136,9 @@ object {
   width: 100%;
   height: 800px;
   margin: 1em 0 0; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .recent-posts-block {
-      height: 300px; } }
+      height: auto; } }
   @media screen and (min-width: 1024px) {
     .recent-posts-block {
       height: 400px; } }
@@ -2117,6 +2151,12 @@ object {
 
 .extra-margin {
   margin-bottom: 1.5em; }
+  @media screen and (min-width: 600px) {
+    .extra-margin {
+      margin-bottom: 1em; } }
+  @media screen and (min-width: 1024px) {
+    .extra-margin {
+      margin-bottom: 1.5em; } }
 
 .recent-posts-list {
   display: -webkit-flex;
@@ -2131,9 +2171,12 @@ object {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin: 0;
   max-width: 100%; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .recent-posts-list {
       margin: auto 2em;
       -webkit-flex-direction: row;
@@ -2163,11 +2206,11 @@ object {
     height: 200px;
     width: 250px;
     margin: 1em; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .recent-posts-list a {
-        height: 160px;
-        width: 210px;
-        margin: 0; } }
+        height: 200px;
+        width: 250px;
+        margin: 1em; } }
     @media screen and (min-width: 1024px) {
       .recent-posts-list a {
         height: 240px;
@@ -2178,10 +2221,10 @@ object {
     height: 200px;
     width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.25); }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .recent-posts-list li {
-        height: 160px;
-        width: 210px; } }
+        height: 200px;
+        width: 250px; } }
     @media screen and (min-width: 1024px) {
       .recent-posts-list li {
         height: 240px;
@@ -2202,7 +2245,7 @@ object {
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0, 118, 165, 0.75) 0%, rgba(0, 177, 234, 0.75) 80%, rgba(0, 118, 165, 0.75) 99%, rgba(0, 118, 165, 0.75) 100%); }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .title-div {
       height: 45%;
       bottom: 12px; } }
@@ -2216,7 +2259,7 @@ object {
     padding: 0.5em;
     overflow: hidden;
     font-size: 1em; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .title-div p {
         font-size: 0.9em; } }
     @media screen and (min-width: 1024px) {
@@ -2271,7 +2314,7 @@ object {
       -ms-flex: 1 0 35%;
           flex: 1 0 35%;
   margin: 0.5em; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .featured li {
       -webkit-flex: 1 0 25%;
           -ms-flex: 1 0 25%;
@@ -2303,7 +2346,7 @@ object {
       -ms-flex: 1 0 35%;
           flex: 1 0 35%;
   margin: 1em; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .featured-two li {
       -webkit-flex: 1 0 25%;
           -ms-flex: 1 0 25%;
@@ -2360,7 +2403,7 @@ a {
   width: 100%;
   height: 300px;
   width: 300px; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .gallery-anchor {
       -webkit-flex: 1 0 50%;
           -ms-flex: 1 0 50%;
@@ -2427,16 +2470,19 @@ a {
     .partners-banner {
       height: 250px; } }
   .partners-banner h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: "open_sans";
     color: white;
     font-weight: normal;
     text-align: center;
     width: 65%;
     margin: 0 auto; }
+    @media screen and (min-width: 600px) {
+      .partners-banner h1 {
+        font-size: 1.75em; } }
     @media screen and (min-width: 1024px) {
       .partners-banner h1 {
-        font-size: 2.5rem; } }
+        font-size: 2.25em; } }
     .partners-banner h1 span {
       font-weight: bold; }
 
@@ -2481,7 +2527,7 @@ a {
   font-family: "open_sans";
   width: 90%;
   text-align: center; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .school-mission-container {
       margin: auto 5em;
       width: 75%; } }
@@ -2502,7 +2548,7 @@ a {
     font-size: 0.9em;
     line-height: 1.25rem;
     width: 95%; }
-    @media screen and (min-width: 720px) {
+    @media screen and (min-width: 600px) {
       .school-mission-container .school-mission {
         width: 100%; } }
     @media screen and (min-width: 1024px) {
@@ -2591,10 +2637,18 @@ a {
             flex: 0 0 30%;
     margin-bottom: 2em;
     border: 1px solid transparent;
-    width: 340px;
-    height: 250px;
-    margin: 0 auto 1.5rem;
+    width: 300px;
+    height: 210px;
+    margin: 1em;
     list-style: none; }
+    @media screen and (min-width: 600px) {
+      .partner-projects-gallery li {
+        width: 300px;
+        height: 210px; } }
+    @media screen and (min-width: 1024px) {
+      .partner-projects-gallery li {
+        width: 320px;
+        height: 230px; } }
   .partner-projects-gallery a:hover {
     text-decoration: none; }
 
@@ -2605,7 +2659,8 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100%; }
+  width: 99%;
+  max-width: 100%; }
 
 .title-block {
   background-color: #fff;
@@ -2614,7 +2669,7 @@ a {
   font-size: 1.25rem;
   width: 95%;
   padding: 0 1em;
-  height: 2.5rem;
+  height: auto;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 1024px) {
     .title-block {
@@ -2626,8 +2681,9 @@ a {
     font-size: 1.25rem;
     color: #006493;
     font-weight: 900;
-    margin-top: 0.2rem;
-    padding: 0 0.3em; }
+    margin: 0.2rem;
+    padding: 0.1em;
+    line-height: 1.3em; }
     @media screen and (min-width: 1024px) {
       .title-block h2 {
         font-size: 3rem; } }
@@ -2649,9 +2705,9 @@ a {
   font-family: "open_sans";
   font-weight: bold;
   color: white;
-  margin: 0.5rem 0 0.75rem 1rem;
+  margin: 0.5rem 0 0.75rem 2em;
   width: 90%; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .media-links-title {
       margin: 0.5em 0 0.75em 2em;
       width: 90%; } }
@@ -2659,7 +2715,7 @@ a {
     text-transform: uppercase; }
   @media screen and (min-width: 1024px) {
     .media-links-title {
-      margin: 0.5em 0 0.75em 7em; } }
+      margin: 0.5em 0 0.75em 3em; } }
 
 .media-links-container {
   display: -webkit-flex;
@@ -2675,19 +2731,23 @@ a {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   width: 90%;
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem; }
-  @media screen and (min-width: 1024px) {
+  margin-top: 1.5em;
+  margin-left: 2em; }
+  @media screen and (min-width: 600px) {
     .media-links-container {
       -webkit-flex-direction: row;
           -ms-flex-direction: row;
-              flex-direction: row;
-      margin-left: 4rem;
-      margin-right: 4rem;
+              flex-direction: row; } }
+  @media screen and (min-width: 1024px) {
+    .media-links-container {
+      margin: auto 4em;
       width: 90%; } }
   .media-links-container .media-links {
     width: 100%; }
+    @media screen and (min-width: 600px) {
+      .media-links-container .media-links {
+        width: 35%;
+        margin: 1em 2em; } }
     @media screen and (min-width: 1024px) {
       .media-links-container .media-links {
         width: 25%; } }
@@ -3042,7 +3102,7 @@ sort-menu-item toggle-menu-item {
   display: none;
   transition: all .3s ease;
   height: 5em; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .sticky-navigation {
       display: block; } }
 
@@ -3060,7 +3120,7 @@ sort-menu-item toggle-menu-item {
 
 .sticky-navigation.fixed {
   display: none; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .sticky-navigation.fixed {
       transition: all .5s ease;
       display: -webkit-flex;
@@ -3761,7 +3821,7 @@ h2.page-titles {
 
 .cta_blurb {
   display: none; }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .cta_blurb {
       display: block;
       width: 30em; } }
@@ -3790,10 +3850,10 @@ h2.page-titles {
       @media screen and (min-width: 1024px) {
         .call-to-action .cta-content p {
           display: none; } }
-  @media screen and (min-width: 1024px) and (min-width: 720px) {
+  @media screen and (min-width: 1024px) and (min-width: 600px) {
     .call-to-action .cta-content p {
       display: block; } }
-  @media screen and (min-width: 720px) {
+  @media screen and (min-width: 600px) {
     .call-to-action {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;

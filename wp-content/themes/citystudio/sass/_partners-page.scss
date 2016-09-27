@@ -1,6 +1,6 @@
 //TOP PORTION STYLES
-.content-area{
-width: 100vw;
+.content-area {
+  width: 100vw;
 }
 .partners-banner {
   background-position: center center;
@@ -15,15 +15,18 @@ width: 100vw;
     height: 250px;
   }
   h1 {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-family: $fontfamily;
     color: white;
     font-weight: normal;
     text-align: center;
     width: 65%;
     margin: 0 auto;
+    @include tablet {
+      font-size: 1.75em;
+    }
     @include desktop {
-      font-size: 2.5rem;
+      font-size: 2.25em;
     }
     span {
       font-weight: bold;
@@ -32,7 +35,6 @@ width: 100vw;
 }
 .blue-overlay {
   @include blue-to-blue-light;
-  // background-color: rgba(1, 152, 213, 0.5);
   display: flex;
   align-items: center;
   height: 100%;
@@ -162,10 +164,18 @@ width: 100vw;
     flex: 0 0 30%;
     margin-bottom: 2em;
     border: 1px solid transparent;
-    width: 340px;
-    height: 250px;
-    margin: 0 auto 1.5rem;
+    width: 300px;
+    height: 210px;
+    margin: 1em;
     list-style: none;
+    @include tablet {
+      width: 300px;
+      height: 210px;
+    }
+    @include desktop {
+      width: 320px;
+      height: 230px;
+    }
   }
   a:hover {
     text-decoration: none;
@@ -174,7 +184,8 @@ width: 100vw;
 .title-block-container {
   display: flex;
   justify-content: center;
-  width: 100%;
+  width: 99%;
+  max-width: 100%;
 }
 .title-block {
   background-color: #fff;
@@ -183,7 +194,7 @@ width: 100vw;
   font-size: 1.25rem;
   width: 95%;
   padding: 0 1em;
-  height: 2.5rem;
+  height: auto;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   @include desktop {
     height: 5rem;
@@ -195,8 +206,9 @@ width: 100vw;
     font-size: 1.25rem;
     color: #006493;
     font-weight: 900;
-    margin-top: 0.2rem;
-    padding: 0 0.3em;
+    margin: 0.2rem;
+    padding: 0.1em;
+    line-height: 1.3em;
     @include desktop {
       font-size: 3rem;
     }
@@ -221,7 +233,7 @@ width: 100vw;
   font-family: $fontfamily;
   font-weight: bold;
   color: white;
-  margin: 0.5rem 0 0.75rem 1rem;
+  margin: 0.5rem 0 0.75rem 2em;
   width: 90%;
   @include tablet {
     margin: 0.5em 0 0.75em 2em;
@@ -231,7 +243,7 @@ width: 100vw;
     text-transform: uppercase;
   }
   @include desktop {
-    margin: 0.5em 0 0.75em 7em;
+    margin: 0.5em 0 0.75em 3em;
   }
 }
 .media-links-container {
@@ -240,17 +252,22 @@ width: 100vw;
   flex-direction: column;
   flex-wrap: wrap;
   width: 90%;
-  margin-top: 1.5rem;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-top: 1.5em;
+  margin-left: 2em;
+ @include tablet {
+  flex-direction: row;
+
+}
   @include desktop {
-    flex-direction: row;
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin: auto 4em;
     width: 90%;
   }
   .media-links {
     width: 100%;
+    @include tablet {
+      width: 35%;
+    margin: 1em 2em;
+    }
     @include desktop {
       width: 25%;
     }
