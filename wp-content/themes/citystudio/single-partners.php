@@ -28,7 +28,7 @@ get_header(); ?>
 						<img src="<?php the_field('logo'); ?>" alt="School Logo" />
           </div>
 
-          <div class="campus-courses">
+          <div class="campus-course-div">
             <h3>Campus Courses</h3>
             	<ul class="campus-courses">
 								<?php if (have_rows('school_courses'));
