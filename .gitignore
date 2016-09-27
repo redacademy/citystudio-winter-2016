@@ -58,7 +58,4 @@ wp-content/plugins/*
 wp-content/themes/*
 !wp-content/themes/citystudio/
 
-
-wp-content/themes/citystudio/sass/foot-work.sass
-
 wp-content/themes/citystudio/gulpfile.js
