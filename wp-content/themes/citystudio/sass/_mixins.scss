@@ -18,13 +18,13 @@
 }
 
 @mixin desktop{
-	@media screen and (min-width: 480px){
+	@media screen and (min-width: 1024px){
 	@content;
 	}
 }
 
 @mixin tablet{
-	@media screen and (min-width: 1024px){
+	@media screen and (min-width: 720px){
 	@content;
 	}
 }
@@ -59,12 +59,12 @@
 	@content;
 	}
 }
-
-@mixin iphone6-plus {
-	@media screen and (min-width: 414px){
-	@content;
-	}
-}
+//
+// @mixin iphone6-plus {
+// 	@media screen and (min-width: 414px){
+// 	@content;
+// 	}
+// }
 
 
 @mixin threecol {
@@ -83,7 +83,7 @@
 	rgba(1,136,187,1) 24%,
 	rgba(0,165,220,0.9) 63%,
 	rgba(0,177,234,0.9) 80%
-	
+
 	);
 }
 

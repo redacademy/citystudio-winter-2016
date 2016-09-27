@@ -1,5 +1,6 @@
 .site-header{
   display: block;
+  max-width: 100%;
 }
 
 .header-container {
@@ -8,9 +9,6 @@
   justify-content: space-between;
   background-color: #ffffff;
   z-index: 3;
-  @include tablet{
-    position: relative;
-  }
 }
 .site-branding {
   width: 100vw;
@@ -35,24 +33,32 @@
 .search-gallery {
   display: flex;
   justify-content: center;
-  margin-right: 0.5rem;
-  @include desktop {
-    margin-right: 2rem;
-  }
+  align-items: center;
 }
 .icon-search {
-  display: none;
-  @include tablet{
+  position: relative;
+  @include desktop {
+    font-size: 1.9em;
+    padding-right: 7em;
+    top: .6em;
+    margin: auto 0;
+  }
+    @include tablet{
     display: block;
     padding: 0.75em 3em;
     font-size: 2em;
     margin-right: 2.5em;
   }
-  @include desktop {
-    font-size: 2em;
-  }
   .fa {
     color: $light-blue;
+    font-size: 1em;
+    position: absolute;
+    @include tablet {
+    font-size: 1.8em;
+    }
+    @include desktop {
+      font-size: 1em;
+    }
     &:hover{
     color: $medium-blue;
     }
@@ -64,10 +70,9 @@
   }
 }
 .icon-menu {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  margin-left: 3rem;
-  margin-right: 5em;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
   &:hover{
       color: $medium-blue;
      }
@@ -97,6 +102,12 @@
   @include iphone6-plus{
     top: 69px;
     height: 89.6vh;
+  @include desktop{
+    top: 4em;
+    width: 37%;
+    height: 56vh;
+    right: 0;
+    left: 63%;
   }
   @include tablet{
     top: 6em;
@@ -118,21 +129,67 @@
   left: 140px;
   position: absolute;
   z-index: -1;
-  font-size: 10px;
-  @include iphone6{
-    top: 250px;
+  font-size: 12px;
+  @include desktop{
+    top: 165px;
+  }
+}
+.menu-item {
+  font-weight: 500;
+  height: 4em;
+  z-index: 2;
+  width: 20%;
+}
+.hamburger-menu{
+  width: 70px;
+  height: 70px;
+}
+.dropdown-content {
+  display: none;
+
+}
+.dropdown-content a{
+  transition: height .3s ease-in;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  ul li{
+    border-left: 2px solid grey !important;
+  }
+}
+.header-menu-title{
+  display: none;
+  @include desktop{
+    display: block;
+    margin: -7px;
+    padding: 0 .4em;
+  }
+}
+
+button.hamburger{
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: .5em;
+  top: 0.5em;
+  background: 0 0;
+  border: none;
+  display: flex;
+  &:hover{
+    color: $medium-blue;
+  }
+  @include tablet {
+  top: 0.7em;
   }
   @include desktop{
-    top: 180px;
+  top: 1.3em;
   }
 }
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
   background-color: #f9f9f9;
-   -webkit-transition:none;
-  -moz-transition:height 300ms ease-in;
-  -o-transition:height 300ms ease-in;
   transition:height 300ms ease-in;
 }
 .header-nav ul li.menu-item-has-children a {
@@ -272,8 +329,6 @@ button.hamburger{
     padding-top: 3em;
   }
 }
-
-
 .menu-menu-container{
   @include iphone6{
     width: 100%;

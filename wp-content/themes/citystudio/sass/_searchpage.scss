@@ -2,14 +2,19 @@
 # Search Page Styles
 --------------------------------------------------------------*/
 .search-archive-header {
-  background-color:$medium-blue;
+  background-color: $medium-blue;
   background-size: cover;
-  height: 7em;
+  height: 8em;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: left;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  @include tablet {
+    height: 5em;
+    flex-direction: row;
+    justify-content: space-between;
+  }
   @include desktop {
     background: url("../../images/citystudio-logo.png") center center no-repeat, $medium-blue;
     background-size: cover;
@@ -18,11 +23,16 @@
     height: 150px;
   }
   h1 {
-    color: #fff;
-    padding-top: 1rem;
     font-family: $fontfamily;
     font-size: 1.75em;
-    margin-left: 0.6em;
+    color: #fff;
+    padding: 0.5em;
+    font-size: 1.75em;
+    text-align: center;
+    @include tablet {
+      padding-top: 0.7em;
+      text-align: left;
+    }
     @include desktop {
       font-size: 3em;
       padding-top: 0.75em;
@@ -39,6 +49,10 @@
 .searchform-container {
   width: 100%;
   margin-right: 1em;
+  @include tablet {
+    width: 100%;
+    padding-top: 1em;
+  }
   @include desktop {
     width: 40%;
     padding-top: 1em;
@@ -52,20 +66,14 @@
   }
 }
 .searchpage {
-background-color: lighten($city-blue, 0.7);
+  background-color: lighten($city-blue, 0.7);
+  width: 100%;
   fieldset {
     border: none;
     color: transparent;
   }
   label {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: row;
-    -ms-flex-direction: row;
     flex-direction: row;
     margin: 0 auto !important;
     width: 100%;
@@ -73,14 +81,14 @@ background-color: lighten($city-blue, 0.7);
     border: $city-blue;
     outline: $city-blue;
     border-radius: 5px;
-    height: 2rem;
+    height: 2.2em;
     position: relative;
     box-shadow: 0 4px 6px 0 rgba(0,0,0,.2);
-    &:active{
-    box-shadow: 2px 6px 12px 4px rgba(0,0,0,.5);
-  }
+    &:active {
+      box-shadow: 2px 6px 12px 4px rgba(0,0,0,.5);
+    }
     @include desktop {
-      height: 2.25rem;
+      height: 2.25em;
     }
   }
   input {
@@ -103,8 +111,8 @@ background-color: lighten($city-blue, 0.7);
   .fa {
     color: $light-blue;
     font-size: 1.5rem;
-    top: 0.4rem;
-    right: 0.8rem;
+    top: 0.2em;
+    right: 0.5em;
     position: absolute;
     &:hover {
       cursor: pointer;
@@ -119,37 +127,33 @@ background-color: lighten($city-blue, 0.7);
   text-align: center;
   p {
     font-family: $fontfamily;
-    width: 88%;
     margin-top: 1rem;
     font-size: 1em;
     line-height: 1.5em;
     @include desktop{  
     width: 75%;
-    margin-top: 1rem;
-    font-size: 1.5em;
+    margin-top: 1em;
+    font-size: 1em;
     line-height: 1.8em;
     width: 90%;
     margin: 2.5em 0;
+    @include tablet {
+      width: 75%;
+      margin: 1em;
+      font-size: 1.25em;
+    }
+    @include desktop {
+      width: 75%;
+      margin: 2.5em 0;
+      font-size: 1.5em;
     }
   }
 }
 //ARCHIVE GRID-----------------------
 .search-list {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -165,6 +169,9 @@ background-color: lighten($city-blue, 0.7);
     height: 250px;
     margin-bottom: 1.5em;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    @include tablet {
+      flex: 0 0 47%;
+    }
     @include desktop {
       flex: 0 0 30%;
       margin-bottom: 2em;
