@@ -733,7 +733,7 @@ a {
     display: inline-block; }
   .site-branding .logo {
     max-width: 200px; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .site-branding .logo {
         max-width: 400px; } }
 
@@ -749,7 +749,7 @@ a {
   position: relative;
   -ms-flex-pack: justify;
       justify-content: space-between; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .site-navigation {
       -ms-flex-preferred-size: 15%;
           flex-basis: 15%; } }
@@ -760,7 +760,7 @@ a {
 
 .icon-search {
   display: none; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .icon-search {
       display: block;
       font-size: 2rem; } }
@@ -932,7 +932,7 @@ a {
   display: flex; }
   .dropdown-content a:hover .hamburger:hover {
     color: #0082b9; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .dropdown-content a:hover .hamburger {
       top: 1em;
       right: 1em; } }
@@ -1213,7 +1213,7 @@ iframe {
   .contact-form-container :-ms-input-placeholder {
     font-weight: bold;
     color: #0198d5; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .contact-form-container {
       width: 90%;
       margin: 2em auto; } }
@@ -1236,7 +1236,7 @@ iframe {
 
 .frm_form_field {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .frm_form_field {
       width: 100%; } }
   @media screen and (min-width: 1024px) {
@@ -1460,7 +1460,7 @@ input[type='email']:focus {
   -ms-flex-pack: left;
       justify-content: left;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .search-archive-header {
       background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
       height: 5em;
@@ -1484,7 +1484,7 @@ input[type='email']:focus {
     padding: 0.5em;
     font-size: 1.75em;
     text-align: center; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .search-archive-header h1 {
         padding-top: 0.7em;
         text-align: left;
@@ -1505,7 +1505,7 @@ input[type='email']:focus {
 .searchform-container {
   width: 100%;
   margin-right: 1em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .searchform-container {
       width: 100%;
       padding-top: 1em; } }
@@ -1590,7 +1590,7 @@ input[type='email']:focus {
     margin: 1em;
     font-size: .9em;
     line-height: 1.8em; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .archive-blurb p {
         width: 75%;
         margin: 2em;
@@ -1615,7 +1615,7 @@ input[type='email']:focus {
   padding: 1rem;
   width: 90%;
   margin: 1em auto 0; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .search-list {
       -ms-flex-pack: distribute;
           justify-content: space-around;
@@ -1634,7 +1634,7 @@ input[type='email']:focus {
     margin-bottom: 1.5em;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     max-width: 350px; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .search-list li,
       .search-list a {
         -ms-flex: 0 0 47%;
@@ -1945,7 +1945,7 @@ object {
   @media screen and (min-width: 1024px) {
     .hero {
       height: 65vh; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .hero {
       height: 50vh; } }
 
@@ -1959,7 +1959,7 @@ object {
   -ms-flex-pack: center;
       justify-content: center;
   z-index: 1; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .hero-blurb {
       width: 70%;
       margin: 0 auto;
@@ -1974,7 +1974,7 @@ object {
     font-size: 0.9em;
     font-weight: 300;
     color: #fff; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .hero-blurb h3 {
         font-size: 1.2em; } }
     @media screen and (min-width: 1024px) {
@@ -2004,7 +2004,7 @@ object {
 
 .homepage-description {
   display: none; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .homepage-description {
       width: 70%;
       margin: 0 auto;
@@ -2027,7 +2027,7 @@ object {
   width: 100%;
   height: 800px;
   margin: 1em 0 0; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .recent-posts-block {
       height: auto; } }
   @media screen and (min-width: 1024px) {
@@ -2042,7 +2042,7 @@ object {
 
 .extra-margin {
   margin-bottom: 1.5em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .extra-margin {
       margin-bottom: 1em; } }
   @media screen and (min-width: 1024px) {
@@ -2062,7 +2062,7 @@ object {
       flex-wrap: wrap;
   margin: 0;
   max-width: 100%; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .recent-posts-list {
       margin: auto 2em;
       -ms-flex-direction: row;
@@ -2086,7 +2086,7 @@ object {
     height: 200px;
     width: 250px;
     margin: 1em; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .recent-posts-list a {
         height: 200px;
         width: 250px;
@@ -2101,7 +2101,7 @@ object {
     height: 200px;
     width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.25); }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .recent-posts-list li {
         height: 200px;
         width: 250px; } }
@@ -2125,7 +2125,7 @@ object {
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0, 118, 165, 0.75) 0%, rgba(0, 177, 234, 0.75) 80%, rgba(0, 118, 165, 0.75) 99%, rgba(0, 118, 165, 0.75) 100%); }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .title-div {
       height: 45%;
       bottom: 12px; } }
@@ -2139,7 +2139,7 @@ object {
     padding: 0.5em;
     overflow: hidden;
     font-size: 1em; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .title-div p {
         font-size: 0.9em; } }
     @media screen and (min-width: 1024px) {
@@ -2190,7 +2190,7 @@ object {
   -ms-flex: 1 0 35%;
       flex: 1 0 35%;
   margin: 0.5em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .featured li {
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
@@ -2219,7 +2219,7 @@ object {
   -ms-flex: 1 0 35%;
       flex: 1 0 35%;
   margin: 1em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .featured-two li {
       -ms-flex: 1 0 25%;
           flex: 1 0 25%;
@@ -2269,7 +2269,7 @@ a {
   width: 100%;
   height: 300px;
   width: 300px; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .gallery-anchor {
       -ms-flex: 1 0 50%;
           flex: 1 0 50%; } }
@@ -2338,7 +2338,7 @@ a {
     text-align: center;
     width: 65%;
     margin: 0 auto; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .partners-banner h1 {
         font-size: 1.75em; } }
     @media screen and (min-width: 1024px) {
@@ -2381,7 +2381,7 @@ a {
   font-family: "open_sans";
   width: 90%;
   text-align: center; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .school-mission-container {
       margin: auto 5em;
       width: 75%; } }
@@ -2402,7 +2402,7 @@ a {
     font-size: 0.9em;
     line-height: 1.25rem;
     width: 95%; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .school-mission-container .school-mission {
         width: 100%; } }
     @media screen and (min-width: 1024px) {
@@ -2487,7 +2487,7 @@ a {
     height: 210px;
     margin: 1em;
     list-style: none; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .partner-projects-gallery li {
         width: 300px;
         height: 210px; } }
@@ -2551,7 +2551,7 @@ a {
   color: white;
   margin: 0.5rem 0 0.75rem 2em;
   width: 90%; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .media-links-title {
       margin: 0.5em 0 0.75em 2em;
       width: 90%; } }
@@ -2573,7 +2573,7 @@ a {
   width: 90%;
   margin-top: 1.5em;
   margin-left: 2em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .media-links-container {
       -ms-flex-direction: row;
           flex-direction: row; } }
@@ -2583,7 +2583,7 @@ a {
       width: 90%; } }
   .media-links-container .media-links {
     width: 100%; }
-    @media screen and (min-width: 600px) {
+    @media screen and (min-width: 720px) {
       .media-links-container .media-links {
         width: 35%;
         margin: 1em 2em; } }
@@ -2678,6 +2678,12 @@ a {
     border: 1px solid #0082b9;
     margin: 0em !important;
     border-radius: 5px; }
+    @media screen and (min-width: 720px) {
+      .themes p,
+      .partners p,
+      .years p,
+      .refresh p {
+        width: 125px; } }
   .themes .fa-sort-desc,
   .partners .fa-sort-desc,
   .years .fa-sort-desc,
@@ -2764,12 +2770,29 @@ a {
   transition: all 1s ease-in;
   margin-top: .5em;
   margin-left: 1em; }
+  @media screen and (min-width: 720px) {
+    #refresh.refresh.menu-item {
+      margin-top: .3; } }
 
 .refresh-hover {
   color: #2cb5e8;
   padding-top: 2em;
   opacity: 0;
+  position: absolute;
   transition: all 1s ease-in; }
+  @media screen and (min-width: 720px) {
+    .refresh-hover {
+      display: none; } }
+  @media screen and (min-width: 1024px) {
+    .refresh-hover {
+      display: block;
+      right: 5.5em; } }
+  @media screen and (min-width: 1196px) {
+    .refresh-hover {
+      right: 7em; } }
+  @media screen and (min-width: 1396px) {
+    .refresh-hover {
+      right: 12em; } }
 
 .nav-sub-menu input[type=checkbox] {
   display: none; }
@@ -2785,6 +2808,9 @@ a {
   border-radius-left: 0;
   border-radius-right: 1px;
   display: none; }
+  @media screen and (min-width: 720px) {
+    .nav-sub-menu {
+      right: -1px; } }
   .nav-sub-menu:hover {
     transition: all 1s ease-in;
     cursor: pointer; }
@@ -2794,6 +2820,11 @@ a {
     color: #0198d5;
     font-size: 12px;
     padding-left: 3em; }
+    @media screen and (min-width: 720px) {
+      .nav-sub-menu .sub-menu-theme span,
+      .nav-sub-menu .sub-menu-part span,
+      .nav-sub-menu .sub-menu-year span {
+        padding-left: 1em; } }
   .nav-sub-menu .sub-menu-theme span:hover,
   .nav-sub-menu .sub-menu-part span:hover,
   .nav-sub-menu .sub-menu-year span:hover {
@@ -2828,6 +2859,9 @@ a {
   border-top-right-radius: 0;
   border-top-left-radius: 0;
   z-index: 1; }
+  @media screen and (min-width: 720px) {
+    .toggle-menu-item {
+      width: 155px; } }
   .toggle-menu-item p {
     color: #0198d5;
     text-transform: uppercase;
@@ -2838,6 +2872,10 @@ a {
     border-radius: 5px;
     text-decoration: underline;
     margin: -1px !important; }
+    @media screen and (min-width: 720px) {
+      .toggle-menu-item p {
+        width: 151px;
+        padding-left: 20px; } }
 
 sort-menu-item toggle-menu-item {
   border-top: 1.7px solid white; }
@@ -2850,6 +2888,9 @@ sort-menu-item toggle-menu-item {
   border-radius: 5px;
   width: 208px;
   margin: 1.8em 0; }
+  @media screen and (min-width: 720px) {
+    .open .sort-menu-item {
+      width: 171px; } }
 
 .open .theme,
 .open .partner,
@@ -2906,6 +2947,11 @@ sort-menu-item toggle-menu-item {
   width: 208px;
   text-align: center;
   padding-top: 2px; }
+  @media screen and (min-width: 720px) {
+    .theme-labels,
+    .part-labels,
+    .year-labels {
+      width: 170px; } }
   .theme-labels label,
   .part-labels label,
   .year-labels label {
@@ -2931,7 +2977,7 @@ sort-menu-item toggle-menu-item {
   display: none;
   transition: all .3s ease;
   height: 5em; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .sticky-navigation {
       display: block; } }
 
@@ -2949,7 +2995,7 @@ sort-menu-item toggle-menu-item {
 
 .sticky-navigation.fixed {
   display: none; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .sticky-navigation.fixed {
       transition: all .5s ease;
       display: -ms-flexbox;
@@ -3012,7 +3058,7 @@ sort-menu-item toggle-menu-item {
   @media screen and (min-width: 1024px) {
     .page-titles {
       font-size: 2.5em; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .page-titles {
       font-size: 3em; } }
 
@@ -3365,7 +3411,7 @@ sort-menu-item toggle-menu-item {
   @media screen and (min-width: 1024px) {
     .banner-inner {
       padding: 2% 4%; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .banner-inner {
       padding: 1% 4%; } }
 
@@ -3580,7 +3626,7 @@ h2.page-titles {
 
 .cta_blurb {
   display: none; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .cta_blurb {
       display: block;
       width: 30em; } }
@@ -3607,10 +3653,10 @@ h2.page-titles {
       @media screen and (min-width: 1024px) {
         .call-to-action .cta-content p {
           display: none; } }
-  @media screen and (min-width: 1024px) and (min-width: 600px) {
+  @media screen and (min-width: 1024px) and (min-width: 720px) {
     .call-to-action .cta-content p {
       display: block; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .call-to-action {
       -ms-flex-pack: distribute;
           justify-content: space-around; } }

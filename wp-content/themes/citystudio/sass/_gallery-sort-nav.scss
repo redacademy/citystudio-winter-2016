@@ -1,3 +1,4 @@
+
 // -------------- GALLERY NAV FUNCTION STYLES  ----------------------*
 .loader {
   opacity: 0.1;
@@ -63,6 +64,9 @@
       border: 1px solid $medium_blue;
       margin: 0em !important;
       border-radius: 5px;
+      @include tablet{
+        width: 125px;
+      }
     }
   .fa-sort-desc{
     display: flex;
@@ -151,12 +155,29 @@
   transition: all 1s ease-in;
   margin-top: .5em;
   margin-left: 1em;
+  @include tablet{
+    margin-top: .3;
+  }
 }
 .refresh-hover{
   color: $light-blue;
   padding-top: 2em;
   opacity: 0;
-  transition: all 1s ease-in;
+  position: absolute;
+  transition: all 1s ease-in; 
+  @include tablet{
+    display: none;
+  }
+  @include desktop{
+    display: block;
+    right: 5.5em;
+  }
+  @include sort-hover{
+    right: 7em;
+  }
+  @include mid-break{
+    right: 12em;
+  }
 }
 
 .nav-sub-menu input[type=checkbox] {
@@ -174,6 +195,9 @@
     border-radius-left: 0;
     border-radius-right: 1px;
     display: none;
+    @include tablet{
+      right: -1px;
+    }
     &:hover {
       transition: all 1s ease-in;
       cursor: pointer;
@@ -185,6 +209,9 @@
     color: $city-blue;
     font-size: 12px;
     padding-left: 3em;
+    @include tablet{
+      padding-left: 1em;
+    }
   }
   .sub-menu-theme span:hover,
   .sub-menu-part span:hover,
@@ -222,7 +249,10 @@
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-   z-index: 1;
+    z-index: 1; 
+   @include tablet{
+    width: 155px;
+   }
   p{
     color: #0198d5;
     text-transform: uppercase;
@@ -233,6 +263,10 @@
     border-radius: 5px;
     text-decoration: underline;
     margin: -1px !important;
+    @include tablet{
+      width: 151px;
+      padding-left: 20px;
+    }
   }
 }
 
@@ -248,6 +282,9 @@ sort-menu-item toggle-menu-item{
     border-radius: 5px;
     width: 208px;
     margin: 1.8em 0;
+    @include tablet{
+      width: 171px;
+    }
 }
 
 .open {
@@ -313,6 +350,9 @@ sort-menu-item toggle-menu-item{
     width: 208px;;
     text-align: center;
     padding-top: 2px;
+    @include tablet{
+      width: 170px;
+    }
     label {
       font-size: .8rem;
       text-transform: capitalize;
