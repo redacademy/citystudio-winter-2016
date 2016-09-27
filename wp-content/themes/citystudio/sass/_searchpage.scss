@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Search Page Styles
 --------------------------------------------------------------*/
+
 .search-archive-header {
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   background-size: cover;
@@ -131,12 +132,12 @@
   p {
     font-family: $fontfamily;
     width: 75%;
-    margin-top: 1em;
-    font-size: 1em;
+    margin: 1em;
+    font-size: .9em;
     line-height: 1.8em;
     @include tablet {
       width: 75%;
-      margin: 1em;
+      margin: 2em;
       font-size: 1.25em;
     }
     @include desktop {
