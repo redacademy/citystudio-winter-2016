@@ -4,13 +4,7 @@ jQuery(document).ready(function($) {
     
     var navDiv = $('.nav-div');
 
-    $('#sort_nav').remove();
-    navDiv.addClass('notransition').css("background-color", "#006496");
   }
-
-  var themeLabel = $('.theme-labels'),
-      partLabel = $('.part-labels'),
-      yearLabel = $('.year-labels');
 
   // queryFilter holds an empty object for the checked navigation values/properties
   var queryFilter = {
@@ -36,25 +30,25 @@ jQuery(document).ready(function($) {
       year: ''
     }
 
-    themeLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    partLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    yearLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
 
       reloadProjects();
 
   }); // close refresh
 
-  themeLabel.on('click', function(){
+  $('.theme-labels').on('click', function(){
     $(this).empty().hide();
     $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  partLabel.on('click', function(){
+  $('.part-labels').on('click', function(){
     $(this).empty().hide();
     $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  yearLabel.on('click', function(){
+  $('.year-labels').on('click', function(){
     $(this).empty().hide();
     $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
@@ -96,11 +90,12 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();
-
+      debugger;
       $('.theme-labels')
           .show()
           .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
+      debugger;
       reloadProjects();
     }
   });
@@ -149,6 +144,7 @@ jQuery(document).ready(function($) {
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
             var projects = response;
+            // debugger
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
