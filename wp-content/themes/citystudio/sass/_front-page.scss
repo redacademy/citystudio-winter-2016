@@ -12,25 +12,29 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 39vh;
+  height: 50vh;
   width: 100%;
-  @include desktop {
-    height: 72vh;
+  @include desktop{
+    height: 50vh;
+  }
+  @include tablet {
+    height: 71vh;
   }
 }
 .hero-blurb {
   text-align: center;
-  font-size: 1rem;
+  font-size: 1.3rem;
   font-weight: bold;
   font-family: $fontfamily;
   display: flex;
   justify-content: center;
   z-index: 1;
+
   @include desktop {
     width: 70%;
     margin: 0 auto;
-    font-size: 1.5rem;
-    padding: 8.5% 12%;
+    font-size: 1.3rem;
+    padding: 2% 4%;
   }
   @include tablet{
     h3{

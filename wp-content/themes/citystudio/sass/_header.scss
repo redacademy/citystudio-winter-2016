@@ -4,14 +4,7 @@
 
 .header-container {
   max-width: 100%;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  vertical-align: center;
   justify-content: space-between;
   background-color: #ffffff;
   z-index: 3;
@@ -40,12 +33,7 @@
   }
 }
 .search-gallery {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
   margin-right: 0.5rem;
   @include desktop {
@@ -60,8 +48,6 @@
     font-size: 2em;
     margin-right: 2.5em;
     margin-top: .2em;
-    // padding: .75em 6em 0 0;
-    // font-size: 2em;
   }
   @include desktop {
     font-size: 2em;
@@ -100,30 +86,26 @@
     border-top: 4px solid #2cb5e8;
     border-bottom: 4px solid #2cb5e8;
     background-color: #f7f9f9;
-    width: 100vw;
-    position: absolute;
-    left: 0;
+    width: 100%;
+    position: fixed;
+    left: 0px;
     top: 65px;
-    height: 87.2vh;
+    height: 88.5vh;
   @include iphone6{
     top: 68px;
-    height: 88.8vh;
+    height: 89vh;
   }
   @include iphone6-plus{
     top: 69px;
     height: 89.6vh;
   }
-  @include desktop{
-    top: 4em;
-    width: 37%;
-    height: 56vh;
-    right: 0;
-    left: 63%;
-  }
   @include tablet{
     top: 6em;
-    left: 69.5%;
-  }
+    left: 75%;
+    position: absolute;
+    height: 55.6vh;
+    width: 25%;
+    }
 }
 .header-nav li a{
   display: flex;
