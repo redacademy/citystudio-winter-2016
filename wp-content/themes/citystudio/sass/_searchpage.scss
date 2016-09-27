@@ -36,7 +36,6 @@
     @include desktop {
       font-size: 3em;
       padding-top: 0.75em;
-      margin-left: 2em;
     }
   }
 }
@@ -128,10 +127,16 @@
   text-align: center;
   p {
     font-family: $fontfamily;
+    margin-top: 1rem;
+    font-size: 1em;
+    line-height: 1.5em;
+    @include desktop{
     width: 75%;
     margin-top: 1em;
     font-size: 1em;
     line-height: 1.8em;
+    width: 90%;
+    margin: 2.5em 0;
     @include tablet {
       width: 75%;
       margin: 1em;
@@ -140,7 +145,7 @@
     @include desktop {
       width: 75%;
       margin: 2.5em 0;
-font-size: 1.5em;
+      font-size: 1.5em;
     }
   }
 }

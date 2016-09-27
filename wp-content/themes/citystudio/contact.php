@@ -35,34 +35,33 @@ get_header(); ?>
 						<?php the_field('media_comm_title') ?>
 					</h3>
 					<p class="content">
-							<?php the_field('contact_email') ?>
+						<?php the_field('contact_email') ?>
 					</p>
 				</div>
 
-				<div class="contact-info-block">
+				<div class="contact-engagement">
 					<h3 class="contact-title">
-							<?php the_field('for_speaking_engagements') ?>
+						<?php the_field('for_speaking_engagements') ?>
 					</h3>
 					<p class="content">
-							<?php the_field('for_speaking_engagements_email') ?>
+						<?php the_field('for_speaking_engagements_email') ?>
 					</p>
 				</div>
 
-				<div class="contact-info-block">
+				<div class="contact-display">
 					<h3 class="contact-title">
-							<?php the_field('phone_title') ?>
+						<?php the_field('phone_title') ?>
 					</h3>
-					<p class="content">
-							<?php the_field('phone_number') ?>
-					</p>
-				</div>
 
-				<div class="contact-info-block">
+					<p class="content">
+						<?php the_field('phone_number') ?>
+					</p>
+
 					<h3 class="contact-title">
-							<?php the_field('address_title') ?>
+						<?php the_field('address_title') ?>
 					</h3>
 					<p class="content">
-							<?php the_field('address') ?>
+						<?php the_field('address') ?>
 					</p>
 				</div>
 			</div>

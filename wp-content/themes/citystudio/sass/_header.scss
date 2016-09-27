@@ -1,20 +1,16 @@
 .site-header{
   display: block;
+  max-width: 100%;
 }
 
 .header-container {
   max-width: 100%;
-  align-items: center;
   display: flex;
-  vertical-align: center;
   justify-content: space-between;
   background-color: #ffffff;
   padding: 1.8% 1% 1.2%;
   z-index: 3;
 
-  @include tablet{
-    position: relative;
-  }
 }
 .site-branding {
   flex-basis: 75%;
@@ -55,10 +51,17 @@
 
   @include desktop {
     font-size: 2rem;
-
   }
   .fa {
     color: $light-blue;
+    font-size: 1em;
+    position: absolute;
+    @include tablet {
+    font-size: 1.8em;
+    }
+    @include desktop {
+      font-size: 1em;
+    }
     &:hover{
     color: $medium-blue;
     }
@@ -83,10 +86,9 @@
 }
 
 .icon-menu {
-  margin-top: 0.5rem;
-  margin-right: 0.5rem;
-  margin-left: 3rem;
-  margin-right: 5em;
+  display: flex;
+  align-items: center;
+  margin: auto 0;
   &:hover{
       color: $medium-blue;
      }
@@ -101,26 +103,21 @@
 
 /*----------- menu nav -------------*/
 .header-nav {
-    border-top: 4px solid #2cb5e8;
-    border-bottom: 4px solid #2cb5e8;
-    background-color: #f7f9f9;
-    top: 4em;
-    width: 100%;
-    height: auto;
-    padding: 10% 4% 0;
-
-  // @include desktop {
-  //   top: 4em;
-  //   width: 37%;
-  //   height: 56vh;
-  //   right: 0;
-  //   left: 63%;
-  // }
+  border-top: 4px solid #2cb5e8;
+  border-bottom: 4px solid #2cb5e8;
+  background-color: #f7f9f9;
+  top: 4em;
+  width: 100%;
+  height: auto;
+  padding: 10% 4% 0;
 
   @include tablet {
     top: 6em;
-    left: 69.5%;
-  }
+    left: 75%;
+    position: absolute;
+    height: 55.6vh;
+    width: 25%;
+    }
 }
 .header-nav li a{
   display: flex;
@@ -135,10 +132,43 @@
   position: absolute;
   z-index: -1;
   font-size: 12px;
+
   @include desktop{
     top: 165px;
   }
 }
+.menu-item {
+  font-weight: 500;
+  height: 4em;
+  z-index: 2;
+  width: 20%;
+}
+.hamburger-menu{
+  width: 70px;
+  height: 70px;
+}
+.dropdown-content {
+  display: none;
+
+}
+.dropdown-content a{
+  transition: height .3s ease-in;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  ul li{
+    border-left: 2px solid grey !important;
+  }
+}
+.header-menu-title{
+  display: none;
+  @include desktop{
+    display: block;
+    margin: -7px;
+    padding: 0 .4em;
+  }
+}
+
 .menu-item {
   font-weight: 500;
   height: 4em;
@@ -285,6 +315,25 @@
 
 .dropdown-content a:hover {
   background-color: #f1f1f1
+
+  button.hamburger {
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  background: 0 0;
+  border: none;
+  display: flex;
+  &:hover{
+    color: $medium-blue;
+  }
+
+  @include tablet{
+    top: 1em;
+    right: 1em;
+  }
 }
 
 .show {
@@ -307,7 +356,6 @@
     padding-top: 3em;
   }
 }
-
 
 .menu-menu-container {
 

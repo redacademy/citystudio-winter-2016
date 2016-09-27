@@ -9,11 +9,14 @@
   .page-titles {
     color: white;
     font-family: $fontfamily;
-    font-size: 1.25em;
+    font-size: 1.6em;
     box-shadow: none;
     @include desktop {
-      font-size: 4em;
-  }
+      font-size: 2.5em;
+    }
+    @include tablet{
+      font-size: 3em;
+    }
 }
 //HEROBANNER
 
@@ -102,6 +105,7 @@ width: 75%;
   font-size: 1rem;
   font-weight: normal;
   font-family: $fontfamily;
+  width: 100%;
   @include desktop {
     padding-left: 0;
   }
@@ -176,10 +180,9 @@ width: 75%;
     padding: 0.8rem 1rem;
     color: #000;
     border-radius: 5px;
-    margin-right: 1rem;
+    margin-right: .5rem;
     display: flex;
     align-items: center;
-
     &:hover {
       background-color: darken($color__background-lightblue, 6);
       color: $dark-blue;
@@ -198,9 +201,9 @@ width: 75%;
   }
 }
 .tag-list{
-  margin: .8em 0;
-
-  li{
+    margin-top: 0.8em;
+    margin-bottom: 2em;
+    li{
     text-transform: capitalize;
     display: inline;
     padding: .8rem 1rem;

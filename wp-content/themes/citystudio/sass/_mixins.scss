@@ -24,7 +24,8 @@
 }
 
 @mixin tablet{
-	@media screen and (min-width: 600px){
+	@media screen and (min-width: 720px){
+
 	@content;
 	}
 }
@@ -60,20 +61,11 @@
 	}
 }
 
-@mixin iphone6-plus {
-	@media screen and (min-width: 414px){
-	@content;
-	}
-}
-
-
 @mixin threecol {
 	@media screen and (min-width: 1000px) {
 	@content;
 	}
 }
-
-
 
 // Gradient mixins
 
