@@ -27,27 +27,33 @@
 	<body <?php body_class(); ?>>
 		<div id="page" class="hfeed site">
 			<a class="skip-link screen-reader-text" href="#content"><?php esc_html('Skip to content'); ?></a>
+
 		<header id="masthead" class="site-header" role="banner">
 			<div class="header-container">
+
 				<div class="site-branding">
 					<a href="<?php echo esc_url(home_url([1]));?>">
-				    	<img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
-				  	</a>
-				</div><!-- .site-branding -->
+				    <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
+				  </a>
+				</div>
 
 				<div class="search-gallery">
-					<span class="icon-search" aria-hidden="true">
+
+					<div class="icon-search">
 						<a href="<?php echo esc_url(home_url('home/search'));?>"><i class="fa fa-search"></i></a>
-					</span>
-					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu"><i class="fa fa-bars"></i>
-					<div class="header-menu-title">MENU</div>	
+					</div>
+
+					<button onclick="myFunction()" class="hamburger" i="hamburgerMenu">
+						<i class="fa fa-bars"></i>
+						<div class="header-menu-title">MENU</div>
 					</button>
 
-						<div id="hamburgerMenu" class="dropdown-content">
-							<nav class="header-nav">
-		  						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-							</nav>
-						</div>
-				</div>
+					<div id="hamburgerMenu" class="dropdown-content">
+						<nav class="header-nav">
+		  				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+						</nav>
+					</div>
+
+				</div><!-- close search gallery -->
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->
