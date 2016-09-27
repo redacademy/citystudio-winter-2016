@@ -1,6 +1,10 @@
 .blog-post-banner {
   width: 100%;
+<<<<<<< HEAD
   height: 12em;
+=======
+  height: 14em;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   display: block;
   h2 {
     text-align: center;
@@ -12,17 +16,30 @@
     font-family: $fontfamily;
     margin: 0.5em 0 1em;
     text-align: center;
+<<<<<<< HEAD
+=======
+    max-width: 75%;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .blue-overlay-3 {
   @include blue-to-blue-light;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+=======
+  justify-content: center;
+  align-items: center;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   height: 100%;
   width: 100%;
   z-index: 2;
   @include desktop {
+<<<<<<< HEAD
     height: 192px;
+=======
+    height: 14em;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .blog-hero {
@@ -73,20 +90,29 @@
 .recent-news-block {
   background-color: $color__background-lightblue;
   width: 100%;
+<<<<<<< HEAD
   height: 325px;
+=======
+  height: 350px;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   margin: 1em 0 0;
   h2 {
     color: $city-blue;
     text-align: center;
     font-size: 2em;
     padding: 0.5em 1em;
+<<<<<<< HEAD
     // font-weight: bold;
+=======
+    font-weight: bold;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .recent-news-list {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+<<<<<<< HEAD
   li {
     position: relative;
     height: 200px;
@@ -96,6 +122,19 @@
       -moz-box-shadow: 3px 2px 51px 0 rgba(0,0,0,0.47);
       box-shadow: 3px 2px 51px 0 rgba(0,0,0,0.47);
       transition: all 0.25s ease;
+=======
+  margin: 1em 2em;
+  li {
+    position: relative;
+    height: 210px;
+    width: 270px;
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+    &:hover {
+      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
+      transition: all 0.25s ease;
+      top: 2px;
+      left: 2px;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     }
     img {
     height: 100%;

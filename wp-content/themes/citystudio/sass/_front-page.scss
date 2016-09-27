@@ -8,6 +8,7 @@
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+<<<<<<< HEAD
   box-shadow: inset 0px -3px 60px -4px #000;
   display: flex;
   justify-content: center;
@@ -18,6 +19,16 @@
   @include desktop {
     height: 55vh;
     margin-top: -1em;
+=======
+  box-shadow: inset 0 -3px 60px -4px #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 39vh;
+  width: 100%;
+  @include desktop {
+    height: 65vh;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .hero-blurb {
@@ -28,6 +39,7 @@
   display: flex;
   justify-content: center;
   z-index: 1;
+<<<<<<< HEAD
 
   @include desktop {
     width: 70%;
@@ -42,11 +54,31 @@
 
   h3 {
     font-size: 1.6em;
+=======
+  @include desktop {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 1.5rem;
+    padding: 8.5% 12%;
+  }
+  @include tablet{
+    h3{
+      font-size: 1.5rem;
+    }
+  }
+  h3 {
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     font-weight: 300;
     color: #fff;
   }
 }
+<<<<<<< HEAD
 
+=======
+.orange-font {
+  color: #ee7600;
+}
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .homepage-titles {
   margin: 2rem auto;
   letter-spacing: 0.1rem;
@@ -66,7 +98,10 @@
 }
 .homepage-description {
   margin: 0 auto;
+<<<<<<< HEAD
   padding-bottom: 2rem;
+=======
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   font-size: 1.15em;
   font-family: $fontfamily;
   text-align: center;
@@ -78,6 +113,61 @@
     margin-top: 1em;
   }
 }
+<<<<<<< HEAD
+=======
+// -------------- RECENT POSTS SECTION STYLES  ----------------------*
+.recent-posts-block {
+  width: 100%;
+  height: 375px;
+  margin: 1em 0 0;
+  h2 {
+    color: $city-blue;
+    text-align: center;
+    font-size: 2em;
+    padding: 0.5em 1em;
+    font-weight: bold;
+  }
+}
+.extra-margin {
+  margin-bottom: 1.5em;
+}
+.recent-posts-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: auto 2em;
+  max-width: 100%;
+  li {
+    position: relative;
+    height: 240px;
+    width: 300px;
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+    &:hover {
+      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
+      transition: all 0.25s ease;
+      top: 2px;
+      left: 2px;
+    }
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+.title-div {
+  width: 80%;
+  height: 30%;
+  bottom: 25px;
+  color: white;
+  position: absolute;
+  background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+  p {
+    color: white;
+    padding: 0.5em;
+    overflow: hidden;
+  }
+}
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
   background-color: $color__background-lightblue;
@@ -146,12 +236,19 @@
     margin-bottom: 1em;
   }
   li {
+<<<<<<< HEAD
     // flex: 1 0 30%;
+=======
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     cursor: auto;
     flex: 1 0 35%;
     margin: 1em;
     @include desktop {
+<<<<<<< HEAD
       flex: 1 0 30%;
+=======
+      flex: 1 0 25%;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
       max-width: 200px;
       max-height: 200px;
       margin: 0;
@@ -162,7 +259,11 @@
     }
   }
 }
+<<<<<<< HEAD
 // Explore section
+=======
+// -------------- EXPLORE SECTION STYLES  ----------------------*
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .explore-section {
   width: 100%;
   display: block;

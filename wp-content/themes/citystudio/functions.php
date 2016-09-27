@@ -4,7 +4,11 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
+<<<<<<< HEAD
  * @package RED_Starter_Theme
+=======
+ * @package Citystuido_Theme
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
  */
 
 // require_once('wp-advanced-search/wpas.php');

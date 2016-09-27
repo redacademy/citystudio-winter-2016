@@ -1,6 +1,6 @@
-<div class="recent-news-block">
-  <h2>Recent News</h2>
-  <ul class="recent-news-list">
+<div class="recent-posts-block">
+  <h1 class="homepage-titles extra-margin">Recent News</h1>
+  <ul class="recent-posts-list">
   <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
 
   <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>

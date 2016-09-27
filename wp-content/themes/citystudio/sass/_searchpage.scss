@@ -172,6 +172,11 @@ background-color: lighten($city-blue, 0.7);
     &:hover {
       border: 1px solid white;
       cursor: pointer;
+<<<<<<< HEAD
+=======
+      box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
+      transition: all 0.25s ease;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     }
   }
 }

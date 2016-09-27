@@ -54,12 +54,10 @@
 			<?php endforeach; ?>
 			</ul>
 			<?php endif; ?>
-			<div class="year-labels"><i class="fa fa-times" aria-hidden="true"></i>
-			</div>
+			<div class="year-labels"><i class="fa fa-times" aria-hidden="true"></i></div>
 		</div>
 
-		<div class="refresh menu-item" id="refresh">
-			<span></span>
-		</div>
+		<div class="refresh menu-item" id="refresh"></div>
+		<span class="refresh-hover">Refresh The Gallery</span>
 	</div>
 </div>

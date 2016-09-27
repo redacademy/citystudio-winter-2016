@@ -56,12 +56,24 @@
   display: none;
   @include tablet{
     display: block;
+<<<<<<< HEAD
     padding: .75em 3em;
     font-size: 2rem;
     margin-right: 2.5em;
   }
   @include desktop {
     font-size: 2rem;
+=======
+    padding: 0.75em 3em;
+    font-size: 2em;
+    margin-right: 2.5em;
+    margin-top: .2em;
+    // padding: .75em 6em 0 0;
+    // font-size: 2em;
+  }
+  @include desktop {
+    font-size: 2em;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   .fa {
     color: $light-blue;
@@ -98,6 +110,7 @@
     border-bottom: 4px solid #2cb5e8;
     background-color: #f7f9f9;
     width: 100vw;
+<<<<<<< HEAD
     padding: 1em;
     position: absolute;
     right: -8px;
@@ -115,6 +128,30 @@
     width: 35vw;
     height: 51vh;
     position: fixed;
+=======
+    position: absolute;
+    left: 0;
+    top: 65px;
+    height: 87.2vh;
+  @include iphone6{
+    top: 68px;
+    height: 88.8vh;
+  }
+  @include iphone6-plus{
+    top: 69px;
+    height: 89.6vh;
+  }
+  @include desktop{
+    top: 4em;
+    width: 37%;
+    height: 56vh;
+    right: 0;
+    left: 63%;
+  }
+  @include tablet{
+    top: 6em;
+    left: 69.5%;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
 }
 .header-nav li a{
@@ -125,6 +162,7 @@
 }
 .header-nav li ul {
   background-color: #f9f9f9;
+<<<<<<< HEAD
   top: 180px;
   left: 170px;
   position: absolute;
@@ -196,6 +234,20 @@ button.hamburger{
   }
 }
 
+=======
+  top: 197px;
+  left: 140px;
+  position: absolute;
+  z-index: -1;
+  font-size: 10px;
+  @include iphone6{
+    top: 250px;
+  }
+  @include desktop{
+    top: 180px;
+  }
+}
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
@@ -265,20 +317,100 @@ button.hamburger{
   overflow: hidden;
   height:0;
   width: 100%;
+<<<<<<< HEAD
   -webkit-transition:height 300ms ease-in;
   -moz-transition:height 300ms ease-in;
   -o-transition:height 300ms ease-in;
+=======
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   transition:height 300ms ease-in;
   border: none;
 }
 /* sub menu list item css*/
 .header-nav ul > li:hover ul li {
+<<<<<<< HEAD
   height: 1.6em;
   padding: .4em;
   @include iphone6{
     height: 2.5em;
   }
 }
+=======
+  height: 2.5em;
+  padding: .4em;
+}
+.menu-item {
+  font-weight: 500;
+  height: 4em;
+  z-index: 2;
+  width: 20%;
+}
+.hamburger-menu{
+  width: 70px;
+  height: 70px;
+}
+.dropdown-content {
+  display: none;
+
+}
+.dropdown-content a{
+  transition: height .3s ease-in;
+  text-decoration: none;
+  display: block;
+  font-size: 22px;
+  ul li{
+    border-left: 2px solid grey !important;
+  }
+}
+.header-menu-title{
+  display: none;
+  @include desktop{
+    display: block;
+    margin: -7px;
+    padding: 0 .4em;
+  }
+}
+
+button.hamburger{
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: .5em;
+  top: .5em;
+  background: 0 0;
+  border: none;
+  display: flex;
+  &:hover{
+    color: $medium-blue;
+  }
+
+  @include tablet{
+    top: 1.2em;
+    right: 1em;
+  }
+}
+.dropdown-content a:hover {background-color: #f1f1f1}
+.show {
+  display:block;
+  z-index: 3;
+}
+#primary-menu {
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4em 0em 0em;
+  @include iphone6{
+    padding: 7em 0em 0em;
+  }
+  @include desktop{
+    padding-top: 3em;
+  }
+}
+
+
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 .menu-menu-container{
   @include iphone6{
     width: 100%;
@@ -288,9 +420,15 @@ button.hamburger{
 }
 .sub-menu{
   padding: 0;
+<<<<<<< HEAD
   li a{
     font-size: 16px;
     padding-bottom: 1em;
+=======
+  top: 150px;
+  li a{
+    font-size: 16px;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   }
   @include iphone6{
     margin: 0em 2em;

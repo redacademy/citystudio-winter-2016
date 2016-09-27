@@ -1,5 +1,9 @@
 jQuery(document).ready(function($){
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   $(window).scroll(function(){
 
     if ($('body').hasClass('home page') ) {
@@ -33,9 +37,12 @@ jQuery(document).ready(function($){
   $(".hamburger").click(function(){
     var menuIcon = $("i", this);
     menuIcon.removeClass("fa-bars");
+<<<<<<< HEAD
     if ($(window).width() <= 375){
       $('.header-container').css({"position": "fixed"});
     }
+=======
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   });
 
   $('.hamburger').toggle(function() {
@@ -55,6 +62,7 @@ jQuery(document).ready(function($){
   menuSubmenu.show();
 
   //code for mobile view 
+<<<<<<< HEAD
   $(document).ready(function(){
     var callToAction = $(".call-to-action");
 
@@ -63,11 +71,23 @@ jQuery(document).ready(function($){
 
       $("a[href*=#]").toggle(function() {
 
+=======
+    var callToAction = $(".call-to-action");
+
+    if ($(window).width() <= 414){
+        callToAction.css({"display": "none"});
+        $('.header-container').css({"position": "fixed"});
+        $('.header-nav').css({"position": "fixed"});
+        $("a[href*=#]").toggle(function() {
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
           $(".sub-menu").css({"display": "block"});
         }, 
         function(){
           $(".sub-menu").css({"display": "none"});
       }); 
     };
+<<<<<<< HEAD
   });
+=======
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 });

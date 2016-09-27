@@ -169,7 +169,11 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.25rem;
+<<<<<<< HEAD
   width: 90%;
+=======
+  width: 95%;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
   padding: 0 1em;
   height: 2.5rem;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
@@ -179,12 +183,21 @@
     padding: 0 0.5em;
   }
   h2 {
+<<<<<<< HEAD
     font-family: 'open_sans', bold;
     font-size: 1.25rem;
     color: $dark-blue;
     font-weight: 900;
     margin-top: 0.2rem;
     text-transform: uppercase;
+=======
+    font-family: open_sans,bold;
+    font-size: 1.25rem;
+    color: #006493;
+    font-weight: 900;
+    margin-top: .2rem;
+    padding: 0 .3em;
+>>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
     @include desktop {
       font-size: 3rem;
     }
