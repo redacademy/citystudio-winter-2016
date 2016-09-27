@@ -17,6 +17,17 @@
 	}
 }
 
+@mixin mid-break{
+	@media screen and (min-width: 1396px){
+	@content;
+	}
+}
+@mixin sort-hover{
+	@media screen and (min-width: 1196px){
+	@content;
+	}
+}
+
 @mixin desktop{
 	@media screen and (min-width: 1024px){
 	@content;

@@ -9,7 +9,7 @@
   .page-titles {
     color: white;
     font-family: $fontfamily;
-    font-size: 1.6em;
+    font-size: 1.3em;
     box-shadow: none;
     @include desktop {
       font-size: 2.5em;
@@ -21,9 +21,9 @@
 //HEROBANNER
 
 .project-hero {
-  display: none;
+ display: none;
   max-height: 500px;
-  height: 30vh;
+  height: 45vh;
 @include desktop {
   display: block;
   height: 75vh;
@@ -145,47 +145,48 @@ width: 75%;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   order: 4;
-  margin: 2em 0 2em 0;
-
   @include desktop {
 
   }
   img {
-  height: 200px;
-  width: 300px;
-  margin-right: 1em;
-  border-radius: 5%;
-}
+    height: 200px;
+    width: 300px;
+    margin-right: 1em;
+    margin-top: 1em;
+    border-radius: 5%;
+  }
 }
 // TAG LINKS
 .tags-wrapper {
   flex-basis: 100%;
-  margin-top: 0.75rem;
   width: 100%;
 }
 .tags {
   display: inline-flex;
-  margin-top: .5rem;
   width: 100%;
   flex-wrap: wrap;
 
   @include desktop {
     width: 85%;
   }
-
+}
   .tag-links {
     background-color:  darken($color__background-lightblue, 2);
-    padding: 0.8rem 1rem;
+    padding: .8rem 1rem;
     color: #000;
-    border-radius: 5px;
-    margin-right: .5rem;
     display: flex;
     align-items: center;
+    margin: 0 .5em 0.5em 0em;
+    border-radius: .3em;
+    height: 1.3em;
     &:hover {
       background-color: darken($color__background-lightblue, 6);
       color: $dark-blue;
+    }
+    a{
+      text-decoration: none;
     }
   }
 
@@ -199,26 +200,28 @@ width: 75%;
       transition: all, .5s, ease;
     }
   }
-}
+
 .tag-list{
-    margin-top: 0.8em;
-    margin-bottom: 2em;
     li{
-    text-transform: capitalize;
-    display: inline;
-    padding: .8rem 1rem;
-    color: #000;
-    border-radius: 5px;
-    margin-right: .5rem;
-    width: 100%;
-    flex-wrap: wrap;
-    background-color:  darken($color__background-lightblue, 2);
-  }
+      padding: .7rem 1rem;
+      color: #000;
+      border-radius: 5px;
+      margin-right: .5rem;
+      display: inline-flex;
+      margin-bottom: .4em;
+      background-color:  darken($color__background-lightblue, 2);
+    }
   a{
     text-transform: capitalize;
+    text-decoration: none;
   }
 }
 
+.tag-li{
+  a{
+    width: 100%;
+  }
+}
 
 // Back to Project Button
 

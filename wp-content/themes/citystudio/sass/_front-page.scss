@@ -26,14 +26,16 @@
   }
 }
 .hero-blurb {
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-family: $fontfamily;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    font-family: open_sans;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    z-index: 1;
+    margin-top: 2em;
   @include tablet {
     width: 70%;
     margin: 0 auto;
@@ -49,9 +51,7 @@
     font-size: 1em;
     font-weight: 300;
     color: #fff;
-    @include tablet {
-      font-size: 1.6em;
-    }
+
     @include desktop {
       font-size: 1.6em;
     }
