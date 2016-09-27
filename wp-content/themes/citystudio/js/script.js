@@ -4,8 +4,8 @@ jQuery(document).ready(function($){
 
     if ($(window).width() <= 414){
         callToAction.css({"display": "none"});
-        $('.header-container').css({"position": "fixed"});
-        $('.header-nav').css({"position": "fixed"});
+        // $('.header-container').css({"position": "fixed"});
+        // $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
         }, 
