@@ -766,8 +766,6 @@ a {
           flex-basis: 15%; } }
   @media screen and (min-width: 1024px) {
     .site-navigation {
-<<<<<<< HEAD
-<<<<<<< HEAD
       -ms-flex-preferred-size: 20%;
           flex-basis: 20%; } }
   .site-navigation .menu-item {
@@ -776,15 +774,6 @@ a {
     z-index: 0;
     margin: 0.5em 0;
     max-width: 100px; }
-=======
-      -webkit-flex-basis: 20%;
-          -ms-flex-preferred-size: 20%;
-              flex-basis: 20%; } }
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-      -ms-flex-preferred-size: 20%;
-          flex-basis: 20%; } }
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 
 .icon-search {
   display: none; }
@@ -843,6 +832,13 @@ a {
 .header-nav li a {
   display: inline;
   width: 100%; }
+
+.menu-item {
+  font-weight: 500;
+  position: relative;
+  z-index: 0;
+  margin: 0.5em 0;
+  max-width: 100px; }
 
 .hamburger-menu {
   width: 70px;
@@ -1333,19 +1329,8 @@ input[type='email']:focus {
       order: 1; }
   @media screen and (min-width: 1024px) {
     .footer-branding-container {
-<<<<<<< HEAD
-<<<<<<< HEAD
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%; } }
-=======
-      -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-              flex-basis: 50%; } }
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%; } }
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 
 .footer-logo {
   max-width: 275px;
@@ -1368,25 +1353,13 @@ input[type='email']:focus {
     height: auto; }
   @media screen and (min-width: 1024px) {
     .footer-logo {
-<<<<<<< HEAD
-<<<<<<< HEAD
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
       margin: 0; } }
-=======
-      -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-              flex-basis: 50%; } }
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%; } }
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 
 .social-icons-div {
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
   width: 200px;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -1398,22 +1371,6 @@ input[type='email']:focus {
   @media screen and (min-width: 1024px) {
     .social-icons-div {
       margin: 1em 0; } }
-=======
-  width: 100%;
-<<<<<<< HEAD
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2; }
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -ms-flex-order: 2;
-      order: 2; }
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 
 .social-icons {
   height: 1.5rem;
@@ -1424,30 +1381,14 @@ input[type='email']:focus {
 .footer-info-container {
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-<<<<<<< HEAD
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-order: 2;
       order: 2;
-=======
-  -webkit-flex-basis: 100%;
-      -ms-flex-preferred-size: 100%;
-          flex-basis: 100%;
-  -webkit-order: 2;
-      -ms-flex-order: 2;
-          order: 2;
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
-  -ms-flex-order: 2;
-      order: 2;
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
   margin: 1.5em auto; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .footer-info-container {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
@@ -1455,17 +1396,6 @@ input[type='email']:focus {
           flex-wrap: nowrap; } }
   @media screen and (min-width: 1024px) {
     .footer-info-container {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-      -webkit-flex-basis: 50%;
-          -ms-flex-preferred-size: 50%;
-              flex-basis: 50%;
->>>>>>> 8f8e6fa8ef0d42d47968796f4e682342db62cc4d
-=======
-      -ms-flex-preferred-size: 50%;
-          flex-basis: 50%;
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
       margin: 0; } }
 
 .footer-info-block ul li {
@@ -1486,7 +1416,7 @@ input[type='email']:focus {
       flex-basis: 100%;
   width: 100%;
   margin: 1em auto; }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 720px) {
     .footer-info-block,
     .footer-info-block1,
     .footer-info-block2 {
