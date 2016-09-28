@@ -20,7 +20,6 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-<<<<<<< HEAD
 define('DB_NAME', 'citystudio');
 
 /** MySQL database username */
@@ -28,15 +27,7 @@ define('DB_USER', 'root');
 
 /** MySQL database password */
 define('DB_PASSWORD', 'root');
-=======
-define('DB_NAME', 'city-studio2016');
 
-/** MySQL database username */
-define('DB_USER', 'adam');
-
-/** MySQL database password */
-define('DB_PASSWORD', 'Sjbea5ratm');
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
