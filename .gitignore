@@ -33,7 +33,7 @@ access_log
 # =============== #
 wp-content/themes/citystudio/node_modules/
 wp-content/themes/citystudio/gulpfile.js
-
+wp-content/debug.log
 # Ignore everything in the root except the "wp-content" directory.
 # =============== #
 /*
@@ -47,6 +47,7 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 !wp-content/uploads/
+
 
 # Ignore everything in "plugins" except certain plugins.
 # =============== #
