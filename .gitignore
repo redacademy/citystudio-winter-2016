@@ -44,6 +44,7 @@ wp-content/*
 !wp-content/plugins/
 !wp-content/themes/
 !wp-content/uploads/
+debug.log
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
