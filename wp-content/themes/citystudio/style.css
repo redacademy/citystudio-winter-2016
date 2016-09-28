@@ -2864,11 +2864,11 @@ a {
       color: #0198d5; }
 
 .theme-selection,
-.partner-selection,
+.partners-selection,
 .years-selection {
   color: white; }
   .theme-selection:hover,
-  .partner-selection:hover,
+  .partners-selection:hover,
   .years-selection:hover {
     color: #0198d5; }
 

@@ -65,6 +65,6 @@ jQuery(document).ready(function($){
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 
-  //code for mobile view
+  //code for mobile vie
 
 });

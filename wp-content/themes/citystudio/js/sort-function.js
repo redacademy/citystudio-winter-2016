@@ -59,24 +59,6 @@ jQuery(document).ready(function($) {
     $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
-  $('.themes').on('click', function(){
-    $(this).children().toggleClass('toggle-menu-item');
-    // $(this).find('.nav-sub-menu')toggleClass('toggle-menu-item');
-    $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
-  });
-
-   $('.partners').on('click', function(){
-      $(this).toggleClass('toggle-menu-item');
-      $(this).children().toggleClass('toggle-menu-item');
-      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
-  });
-
-  $('.years').on('click', function(){
-      $(this).toggleClass('toggle-menu-item');
-      $(this).children().toggleClass('toggle-menu-item');
-      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
-  }); 
-
   // Remove class current-menu if mouse isn't hovering over menu-item
 
   $('.themes').on('click', function(){
@@ -138,7 +120,7 @@ jQuery(document).ready(function($) {
         return filteredQuery;
       }
     }).filter(Array)
-      .join('');
+      .join('&');
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
