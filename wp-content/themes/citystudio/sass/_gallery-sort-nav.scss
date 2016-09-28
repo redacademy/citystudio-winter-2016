@@ -57,7 +57,7 @@
   cursor: pointer;
     p{
       display: flex;
-      color: #fff;
+      /*color: #fff;*/
       padding-left: 45px;
       letter-spacing: 3px;
       font-weight: 500;
@@ -65,11 +65,10 @@
       font-size: 14px;
       width: 161px;
       height: 30px;
-      border: 1px solid $medium_blue;
       margin: 0em !important;
       border-radius: 5px;
       @include tablet{
-        width: 171px;
+            width: 173px;
       }
     }
   .fa-sort-desc{
@@ -86,8 +85,7 @@
     justify-content: flex-end;
     width: 100%;
     font-size: 32px;
-    padding: 0px 9px;
-    margin: 0;
+    margin: -20px -5px;
   }
   .fa-times{
     color: $medium_blue;
@@ -189,21 +187,19 @@
 }
 
 .nav-sub-menu {
-    position: absolute;
+    position: relative;
     padding: .5em;
     opacity: 0;
     font-size: 1em;
     border-radius: 4px;
-    top: 25px;
-    right: -2px;
+    right: 2px;
     border-radius-left: 0;
     border-radius-right: 1px;
     display: none;
-    @include tablet{
-      right: -1px;
-    }
+    border: 1px solid $city-blue;
+    background-color: white;
     &:hover {
-      transition: all 1s ease-in;
+      transition: background-color 1s ease-in;
       cursor: pointer;
   }
 
@@ -232,70 +228,56 @@
   &:hover{
     background-color: white;
     transition: background .6s ease;
-    border: 1px solid $city-blue;
-    color: $city-blue;
-    p{
-      color: $city-blue;
-    }
-  }
-  &:not(.no-hover):hover { /* only apply hover styling when the div does not have the class 'no-hover' */
-    border: none;
   }
 }
 .toggle-menu-item{
-    display: block;
+    display: flex;
+    flex-direction: column;
     opacity: 1;
-    height: 200px;
-    width: 171px;
-    background-color: #fff;
+    height: 230px;
+    width: 174px;
     text-transform: none;
-    border: 1px solid #0198d5;
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
-    z-index: 1; 
-   @include tablet{
-    width: 155px;
-   }
+    z-index: 1;
+    right: 1px;
   p{
-    color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    width: 171px;
-    border: 1px solid #0198d5;
     border-radius: 5px;
-    text-decoration: underline;
-    margin: -1px !important;
-    @include tablet{
-      width: 151px;
-      padding-left: 20px;
+   &:hover{
+      color: $city-blue;
     }
   }
 }
 
-
-sort-menu-item toggle-menu-item{
-  border-top: 1.7px solid white;
+.theme-selection,
+.partner-selection,
+.years-selection{
+  color: white;
+  &:hover{
+    color: $city-blue;
+  }
 }
+
 .open .sort-menu-item {
-    opacity: .9;
-    margin: 0;
-    text-transform: uppercase;
-    color: #006493;
-    border-radius: 5px;
-    width: 208px;
-    margin: 1.8em 0;
-    @include tablet{
-      width: 171px;
-    }
+  opacity: .9;
+  margin: 0;
+  text-transform: uppercase;
+  color: #006493;
+  border-radius: 5px;
+  width: 208px;
+  margin: 1.8em 0;
+  width: 175px;
+  border: 1px solid $city-blue;
 }
 
 .open {
   .theme,
   .partner,
   .year{
-    left: -1px;
     &::after {
       content: '';
       width: 0;
@@ -329,7 +311,7 @@ sort-menu-item toggle-menu-item{
 }
 .part-labels {
   label::after {
-    left: 31%;
+
   }
 }
 .year-labels {
@@ -351,12 +333,9 @@ sort-menu-item toggle-menu-item{
     top: 0px;
     border-radius: 5px;
     height: 1.8em;
-    width: 208px;;
+    width: 175px;
     text-align: center;
     padding-top: 2px;
-    @include tablet{
-      width: 170px;
-    }
     label {
       font-size: .8rem;
       text-transform: capitalize;

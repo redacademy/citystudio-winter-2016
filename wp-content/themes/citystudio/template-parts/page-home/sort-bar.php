@@ -1,7 +1,7 @@
 <div class="sticky-navigation">
 	<div class="nav-div open" id="sort">
 		<div class="themes sort-menu-item" id="themes">
-			<p>Themes<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
+			<p class="theme-selection">Themes<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'themes', array (
 				'hide_empty' => 0,
 			) ); ?>
@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="partners sort-menu-item">
-			<p>Schools<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p class="partners-selection">Schools<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'partners', array (
 				'hide_empty' => 0,
 			) ); ?>
@@ -40,7 +40,7 @@
 		</div>
 
 		<div class="years sort-menu-item">
-			<p>Years<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p class="years-selection">Years<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'year', array (
 				'hide_empty' => 0,
 			) ); ?>

@@ -2305,7 +2305,8 @@ a {
   margin-bottom: 2rem;
   font-family: "open_sans";
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  z-index: -1; }
 
 .subtitle {
   font-size: 1rem;
@@ -2671,7 +2672,7 @@ a {
   .refresh p {
     display: -ms-flexbox;
     display: flex;
-    color: #fff;
+    /*color: #fff;*/
     padding-left: 45px;
     letter-spacing: 3px;
     font-weight: 500;
@@ -2679,7 +2680,6 @@ a {
     font-size: 14px;
     width: 161px;
     height: 30px;
-    border: 1px solid #0082b9;
     margin: 0em !important;
     border-radius: 5px; }
     @media screen and (min-width: 720px) {
@@ -2687,7 +2687,7 @@ a {
       .partners p,
       .years p,
       .refresh p {
-        width: 171px; } }
+        width: 173px; } }
   .themes .fa-sort-desc,
   .partners .fa-sort-desc,
   .years .fa-sort-desc,
@@ -2711,8 +2711,7 @@ a {
         justify-content: flex-end;
     width: 100%;
     font-size: 32px;
-    padding: 0px 9px;
-    margin: 0; }
+    margin: -20px -5px; }
   .themes .fa-times,
   .partners .fa-times,
   .years .fa-times,
@@ -2802,21 +2801,19 @@ a {
   display: none; }
 
 .nav-sub-menu {
-  position: absolute;
+  position: relative;
   padding: .5em;
   opacity: 0;
   font-size: 1em;
   border-radius: 4px;
-  top: 25px;
-  right: -2px;
+  right: 2px;
   border-radius-left: 0;
   border-radius-right: 1px;
-  display: none; }
-  @media screen and (min-width: 720px) {
-    .nav-sub-menu {
-      right: -1px; } }
+  display: none;
+  border: 1px solid #0198d5;
+  background-color: white; }
   .nav-sub-menu:hover {
-    transition: all 1s ease-in;
+    transition: background-color 1s ease-in;
     cursor: pointer; }
   .nav-sub-menu .sub-menu-theme span,
   .nav-sub-menu .sub-menu-part span,
@@ -2842,47 +2839,38 @@ a {
   height: 30px; }
   .sort-menu-item:hover {
     background-color: white;
-    transition: background .6s ease;
-    border: 1px solid #0198d5;
-    color: #0198d5; }
-    .sort-menu-item:hover p {
-      color: #0198d5; }
-  .sort-menu-item:not(.no-hover):hover {
-    /* only apply hover styling when the div does not have the class 'no-hover' */
-    border: none; }
+    transition: background .6s ease; }
 
 .toggle-menu-item {
-  display: block;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   opacity: 1;
-  height: 200px;
-  width: 171px;
-  background-color: #fff;
+  height: 230px;
+  width: 174px;
   text-transform: none;
-  border: 1px solid #0198d5;
   border-top-color: #fff;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
-  z-index: 1; }
-  @media screen and (min-width: 720px) {
-    .toggle-menu-item {
-      width: 155px; } }
+  z-index: 1;
+  right: 1px; }
   .toggle-menu-item p {
-    color: #0198d5;
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    width: 171px;
-    border: 1px solid #0198d5;
-    border-radius: 5px;
-    text-decoration: underline;
-    margin: -1px !important; }
-    @media screen and (min-width: 720px) {
-      .toggle-menu-item p {
-        width: 151px;
-        padding-left: 20px; } }
+    border-radius: 5px; }
+    .toggle-menu-item p:hover {
+      color: #0198d5; }
 
-sort-menu-item toggle-menu-item {
-  border-top: 1.7px solid white; }
+.theme-selection,
+.partner-selection,
+.years-selection {
+  color: white; }
+  .theme-selection:hover,
+  .partner-selection:hover,
+  .years-selection:hover {
+    color: #0198d5; }
 
 .open .sort-menu-item {
   opacity: .9;
@@ -2891,24 +2879,19 @@ sort-menu-item toggle-menu-item {
   color: #006493;
   border-radius: 5px;
   width: 208px;
-  margin: 1.8em 0; }
-  @media screen and (min-width: 720px) {
-    .open .sort-menu-item {
-      width: 171px; } }
+  margin: 1.8em 0;
+  width: 175px;
+  border: 1px solid #0198d5; }
 
-.open .theme,
-.open .partner,
-.open .year {
-  left: -1px; }
-  .open .theme::after,
-  .open .partner::after,
-  .open .year::after {
-    content: '';
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-color: #fff transparent transparent;
-    position: absolute; }
+.open .theme::after,
+.open .partner::after,
+.open .year::after {
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: #fff transparent transparent;
+  position: absolute; }
 
 .current-menu {
   display: block; }
@@ -2929,9 +2912,6 @@ sort-menu-item toggle-menu-item {
   left: 36%;
   opacity: 0; }
 
-.part-labels label::after {
-  left: 31%; }
-
 .year-labels label::after {
   left: 32%; }
 
@@ -2948,14 +2928,9 @@ sort-menu-item toggle-menu-item {
   top: 0px;
   border-radius: 5px;
   height: 1.8em;
-  width: 208px;
+  width: 175px;
   text-align: center;
   padding-top: 2px; }
-  @media screen and (min-width: 720px) {
-    .theme-labels,
-    .part-labels,
-    .year-labels {
-      width: 170px; } }
   .theme-labels label,
   .part-labels label,
   .year-labels label {
