@@ -7,8 +7,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <!-- "info main top section -->
-      <header class="title-banner blog-banner" style="background-image: url( '<?php the_field('blog_banner_image'); ?> ' ); ">
-				<div class="blue-overlay-2 title-container">
+<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+      <header class="title-banner blog-banner" style="background-image:  linear-gradient(to right, rgba(2,119,167,0.7) 0%,rgba(203,173,201,0.7) 100%), url( '<?php echo $thumb['0'];?> ' ); ">
+				<div class="title-container">
 	        <h1>CityStudio Blog</h1>
           <h4><span>Keep your finger on the pulse.</span> CityStudio news, upcoming opportunities to get involved and find out what we are up to.</h4>
 				</div>
@@ -32,6 +33,9 @@ get_header(); ?>
           </div>
           <div class="sidebar-item">
             <h4>Newsboard</h4>
+						<p>
+							Check back soon :)
+						</p>
           </div>
         </div>
 
@@ -74,5 +78,3 @@ get_header(); ?>
 
     </main><!-- #main -->
     </div><!-- #primary -->
-
-    <?php get_footer(); ?>
