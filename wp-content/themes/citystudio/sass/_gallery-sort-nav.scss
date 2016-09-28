@@ -85,7 +85,7 @@
     justify-content: flex-end;
     width: 100%;
     font-size: 32px;
-    margin: -20px -5px;
+    margin: -22px 14px;
   }
   .fa-times{
     color: $medium_blue;
@@ -110,12 +110,6 @@
   p{
     margin: -6px;
   }
-  .fa-sort-desc{
-    margin: -9px 9px;
-  }
-  .fa-sort-asc{
-    margin: 5px;
-  }
    &:hover{
     background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
     background-size: 27px 28px;
@@ -126,12 +120,6 @@
   background-size: 21px 20px;
   p{
     margin: -6px;
-  }
-  .fa-sort-desc{
-    margin: -9px 9px;
-  }
-  .fa-sort-asc{
-    margin: 5px;
   }
    &:hover{
     background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
@@ -210,7 +198,7 @@
     font-size: 12px;
     padding-left: 3em;
     @include tablet{
-      padding-left: 1em;
+      padding-left: 1.2em;
     }
   }
   .sub-menu-theme span:hover,
@@ -235,7 +223,7 @@
     flex-direction: column;
     opacity: 1;
     height: 230px;
-    width: 174px;
+    width: 175px;
     text-transform: none;
     border-top-color: #fff;
     border-top-right-radius: 0;
@@ -246,7 +234,8 @@
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    border-radius: 5px;
+    border-radius: 5px 5px 0 0;
+    padding: .8em 1.6em;
    &:hover{
       color: $city-blue;
     }
@@ -254,7 +243,7 @@
 }
 
 .theme-selection,
-.partner-selection,
+.partners-selection,
 .years-selection{
   color: white;
   &:hover{
@@ -262,8 +251,14 @@
   }
 }
 
+.selected{
+  background-color: white;
+  color: $city-blue;
+  border-radius-bottom-left: 0; 
+}
+
 .open .sort-menu-item {
-  opacity: .9;
+  opacity: .97;
   margin: 0;
   text-transform: uppercase;
   color: #006493;
@@ -327,17 +322,19 @@
     position: absolute;
     background-color: #fff;
     border: 1px solid #0198d5;
-    color: black;
+    color: #000;
     font-weight: 700;
     word-break: break-word;
-    top: 0px;
+    top: -1px;
     border-radius: 5px;
-    height: 1.8em;
+    height: 1.90em;
     width: 175px;
     text-align: center;
-    padding-top: 2px;
+    padding-top: 1px;
+    margin-right: 1x;
+    left: -1px;
     label {
-      font-size: .8rem;
+      font-size: .7rem;
       text-transform: capitalize;
       margin-right: -20px;
     &::after {
