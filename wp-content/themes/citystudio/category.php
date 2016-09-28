@@ -23,7 +23,7 @@ if ( have_posts() ) : ?>
     <div class="sidebar-item">
       <?php wp_list_categories(); ?>
     </div>
-    <div class="sidebar-item">
+    <div class="social-media-item">
       <h4>Social Media</h4>
       <p>
         <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>

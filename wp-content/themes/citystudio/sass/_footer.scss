@@ -20,14 +20,11 @@
 }
 
 .footer-logo {
-  max-width: 275px;
   margin-bottom: 1em;
   flex-basis: 100%;
   order: 1;
   margin: 0 auto;
   padding: 0;
-  justify-content: center;
-  text-align: center;
   display: block;
   margin: 0 auto;
 
@@ -40,13 +37,22 @@
 
   @include desktop {
     flex-basis: 50%;
+    order: 1;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    max-width: 0;
   }
 }
 .social-icons-div {
   display: flex;
-  width: 100%;
+  width: 95vw;
   flex-basis: 100%;
   order: 2;
+  justify-content: center;
+  @include desktop{
+  justify-content: initial;
+  }
 }
 .social-icons {
   height: 1rem;
@@ -62,12 +68,13 @@
   }
 }
 .footer-info-container {
-  display: flex;
   flex-basis: 100%;
   order: 2;
   margin: 1.5em auto;
+  display: none;
 
   @include desktop {
+    display: flex;
     flex-basis: 50%;
     margin: 0;
   }
