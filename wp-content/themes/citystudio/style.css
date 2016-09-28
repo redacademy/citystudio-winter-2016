@@ -2711,7 +2711,7 @@ a {
         justify-content: flex-end;
     width: 100%;
     font-size: 32px;
-    margin: -20px -5px; }
+    margin: -22px 14px; }
   .themes .fa-times,
   .partners .fa-times,
   .years .fa-times,
@@ -2734,10 +2734,6 @@ a {
   background-size: 27px 28px; }
   .partners p {
     margin: -6px; }
-  .partners .fa-sort-desc {
-    margin: -9px 9px; }
-  .partners .fa-sort-asc {
-    margin: 5px; }
   .partners:hover {
     background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
     background-size: 27px 28px; }
@@ -2747,10 +2743,6 @@ a {
   background-size: 21px 20px; }
   .years p {
     margin: -6px; }
-  .years .fa-sort-desc {
-    margin: -9px 9px; }
-  .years .fa-sort-asc {
-    margin: 5px; }
   .years:hover {
     background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
     background-size: 21px 20px; }
@@ -2825,7 +2817,7 @@ a {
       .nav-sub-menu .sub-menu-theme span,
       .nav-sub-menu .sub-menu-part span,
       .nav-sub-menu .sub-menu-year span {
-        padding-left: 1em; } }
+        padding-left: 1.2em; } }
   .nav-sub-menu .sub-menu-theme span:hover,
   .nav-sub-menu .sub-menu-part span:hover,
   .nav-sub-menu .sub-menu-year span:hover {
@@ -2848,7 +2840,7 @@ a {
       flex-direction: column;
   opacity: 1;
   height: 230px;
-  width: 174px;
+  width: 175px;
   text-transform: none;
   border-top-color: #fff;
   border-top-right-radius: 0;
@@ -2859,7 +2851,8 @@ a {
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
-    border-radius: 5px; }
+    border-radius: 5px 5px 0 0;
+    padding: .8em 1.6em; }
     .toggle-menu-item p:hover {
       color: #0198d5; }
 
@@ -2872,8 +2865,13 @@ a {
   .years-selection:hover {
     color: #0198d5; }
 
+.selected {
+  background-color: white;
+  color: #0198d5;
+  border-radius-bottom-left: 0; }
+
 .open .sort-menu-item {
-  opacity: .9;
+  opacity: .97;
   margin: 0;
   text-transform: uppercase;
   color: #006493;
@@ -2922,19 +2920,21 @@ a {
   position: absolute;
   background-color: #fff;
   border: 1px solid #0198d5;
-  color: black;
+  color: #000;
   font-weight: 700;
   word-break: break-word;
-  top: 0px;
+  top: -1px;
   border-radius: 5px;
-  height: 1.8em;
+  height: 1.90em;
   width: 175px;
   text-align: center;
-  padding-top: 2px; }
+  padding-top: 1px;
+  margin-right: 1x;
+  left: -1px; }
   .theme-labels label,
   .part-labels label,
   .year-labels label {
-    font-size: .8rem;
+    font-size: .7rem;
     text-transform: capitalize;
     margin-right: -20px; }
     .theme-labels label::after,

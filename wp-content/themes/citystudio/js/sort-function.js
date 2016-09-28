@@ -59,6 +59,25 @@ jQuery(document).ready(function($) {
     $(this, "label").append('<i class="fa fa-times" aria-hidden="true"></i>');
   });
 
+  $('.themes.sort-menu-item').click(function(){
+    $(this).toggleClass('toggle-menu-item');
+    $(this).children().toggleClass('toggle-menu-item');
+    $('.theme-selection').toggleClass('selected');
+    $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
+   $('.partners.sort-menu-item').click(function(){
+      $(this).toggleClass('toggle-menu-item');
+      $(this).children().toggleClass('toggle-menu-item');
+      $('.partners-selection').toggleClass('selected');
+      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
+  $('.years.sort-menu-item').click(function(){
+      $(this).toggleClass('toggle-menu-item');
+      $(this).children().toggleClass('toggle-menu-item');
+      $('.years-selection').toggleClass('selected');
+      $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
+  });
+
   // Remove class current-menu if mouse isn't hovering over menu-item
 
   $('.themes').on('click', function(){

@@ -20,7 +20,7 @@
 			</div>
 		</div>
 		<div class="partners sort-menu-item">
-			<p class="partners-selection">Schools<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p class="partners-selection">Schools<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'partners', array (
 				'hide_empty' => 0,
 			) ); ?>
@@ -40,7 +40,7 @@
 		</div>
 
 		<div class="years sort-menu-item">
-			<p class="years-selection">Years<i class="fa fa-sort-desc fa-lg" aria-hidden="true"></i></p>
+			<p class="years-selection">Years<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'year', array (
 				'hide_empty' => 0,
 			) ); ?>
