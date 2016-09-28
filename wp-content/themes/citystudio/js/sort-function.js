@@ -60,8 +60,8 @@ jQuery(document).ready(function($) {
   });
 
   $('.themes').on('click', function(){
-    $(this).toggleClass('toggle-menu-item');
     $(this).children().toggleClass('toggle-menu-item');
+    // $(this).find('.nav-sub-menu')toggleClass('toggle-menu-item');
     $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
 
