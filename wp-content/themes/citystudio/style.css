@@ -2681,7 +2681,6 @@ a {
   .refresh p {
     display: -ms-flexbox;
     display: flex;
-    /*color: #fff;*/
     padding-left: 45px;
     letter-spacing: 3px;
     font-weight: 500;
@@ -2790,13 +2789,13 @@ a {
   @media screen and (min-width: 1024px) {
     .refresh-hover {
       display: block;
-      right: 5.5em; } }
+      right: 2.5em; } }
   @media screen and (min-width: 1196px) {
     .refresh-hover {
       right: 7em; } }
   @media screen and (min-width: 1396px) {
     .refresh-hover {
-      right: 12em; } }
+      right: 13em; } }
 
 .nav-sub-menu input[type=checkbox] {
   display: none; }
