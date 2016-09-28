@@ -6,7 +6,7 @@
   <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
   <a href="<?php the_permalink() ?>">
   <li> <?php if (has_post_thumbnail()) : ?>
-      <?php the_post_thumbnail('small'); ?>
+      <?php the_post_thumbnail('thumb'); ?>
     <?php endif; ?>
     <div class="title-div">
         <p><?php the_title(); ?></p>

@@ -25,7 +25,6 @@
 
 @mixin tablet{
 	@media screen and (min-width: 600px){
-
 	@content;
 	}
 }

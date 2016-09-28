@@ -1,46 +1,15 @@
 <?php
 /**
-<<<<<<< HEAD
- * The template for displaying all single posts.
- *
- * Template Name: Blog
- */
-
-=======
  * Template Name: Blog Archive Page.
  */
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5
 get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<<<<<<< HEAD
-		<div class="page-title">
-			<h1>Home</h1>
-		</div>
-		<?php while ( have_posts() ) : the_post(); ?>
-
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
-
-			<?php the_post_navigation(); ?>
-
-			<?php
-				// If comments are open or we have at least one comment, load up the comment template.
-				if ( comments_open() || get_comments_number() ) :
-					comments_template();
-				endif;
-			?>
-
-		<?php endwhile; // End of the loop. ?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
-
-<?php get_footer(); ?>
-=======
 <!-- "info main top section -->
-      <header class="title-banner blog-banner" style="background-image: url( '<?php the_field('blog_banner_image'); ?> ' ); ">
-				<div class="blue-overlay-2 title-container">
+<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+      <header class="title-banner blog-banner" style="background-image:  linear-gradient(to right, rgba(2,119,167,0.7) 0%,rgba(203,173,201,0.7) 100%), url( '<?php echo $thumb['0'];?> ' ); ">
+				<div class="title-container">
 	        <h1>CityStudio Blog</h1>
           <h4><span>Keep your finger on the pulse.</span> CityStudio news, upcoming opportunities to get involved and find out what we are up to.</h4>
 				</div>
@@ -64,6 +33,9 @@ get_header(); ?>
           </div>
           <div class="sidebar-item">
             <h4>Newsboard</h4>
+						<p>
+							Check back soon :)
+						</p>
           </div>
         </div>
 
@@ -81,7 +53,7 @@ get_header(); ?>
 
 					  <?php while ( $citystudio_blog->have_posts() ) : $citystudio_blog->the_post(); ?>
 						<?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
-							<a href= "<?php echo get_permalink( $post->ID ); ?>">
+							<a href= '<?php echo get_permalink( $post->ID ); ?>'>
 							<li class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
 																										 background-size: cover;">
 								<div class="blog-credits">
@@ -90,7 +62,7 @@ get_header(); ?>
 										<?php the_title(); ?>
 									</h2>
 									<p><?php the_field('post_excerpt'); ?></p>
-									<div class="category-p">
+									<div class="category">
 										<?php the_category(', '); ?>
 									</div>
 								</div>
@@ -106,6 +78,3 @@ get_header(); ?>
 
     </main><!-- #main -->
     </div><!-- #primary -->
-
-    <?php get_footer(); ?>
->>>>>>> 98a885c6f6638cdafde44a740e78cab0adaf3da5

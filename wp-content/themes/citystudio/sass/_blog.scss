@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 2em;
   @include desktop {
     height: 250px;
   }
@@ -16,10 +17,8 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  padding: 1.5em 0 0 1.5em;
-  @include desktop {
-    padding: 3em 0 0 5em;
-  }
+  width: 80%;
+  @include desktop {}
   h1 {
     font-size: 2em;
     text-align: left !important;
@@ -45,15 +44,6 @@
     }
   }
 }
-.blue-overlay-2 {
-  background: linear-gradient(to right, rgba(2,119,167,0.7) 0%,rgba(203,173,201,0.7) 100%);
-  height: 153px;
-  width: 100%;
-  z-index: 2;
-  @include desktop {
-    height: 202px;
-  }
-}
 //MAIN CONTENT CONTAINER
 .blog-content-container {
   display: flex;
@@ -61,12 +51,20 @@
 }
 //SIDEBAR
 .blog-sidebar {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 25%;
-  margin: 2em 0 0 3em;
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 15%;
+    margin: 4em;
+    height:60vh;
+  }
+  @include desktop {
   height: 69vh;
+    width: 25%;
+    margin: 2em 0 0 3em;
+  }
 }
 .sidebar-item {
   color: $city-blue;
@@ -80,7 +78,10 @@
   }
   p {
     margin-bottom: 10px;
+    color: $city-blue;
+    font-family: $fontfamily;
     font-size: 0.9em;
+    font-weight: lighter;
   }
   a {
     color: $city-blue;
@@ -111,16 +112,30 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 4em 0 0 4em;
+  margin: 2em auto;
+  @include tablet{
+      margin: 0 auto;
+  }
+  @include desktop {
+    margin: 4em 0 0 4em;
+  }
 }
 .blog-featured-image {
   display: flex;
   justify-content: flex-start;
-  height: 300px;
-  width: 750px;
   position: relative;
-  margin-bottom: 4em;
   box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+  height: 225px;
+  width: 300px;
+  margin: 1em;
+@include tablet {
+width: 435px;
+}
+  @include desktop {
+    height: 300px;
+    width: 750px;
+    margin-bottom: 4em;
+  }
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
     transition: all 0.25s ease;
@@ -130,12 +145,16 @@
 }
 .blog-credits {
   width: 80%;
-  height: 60%;
+  height: 55%;
   box-sizing: border-box;
-  margin-top: 2em;
+  margin-top: 5em;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+  @include tablet {
+    height: 64%;
+    margin-top: 2em;
+  }
   .date {
     font-size: 0.7em;
     padding: 0.75em 0.75em 0 0;
@@ -148,21 +167,36 @@
     color: white;
   }
   h2 {
-    font-size: 2em;
+    font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 1rem 1.5rem;
+    padding: 0.5rem 0 1rem 1rem;
     line-height: 1.15em;
-    &:hover {
-      text-decoration: underline;
+    @include tablet {
+    font-size: 1.25em;
+    }
+    @include desktop {
+      font-size: 2em;
+      padding: 0.5rem 0 1rem 1.5rem;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   p {
-    font-weight: lighter;
-    padding-left: 1.5rem;
-    line-height: 1em;
-    margin-bottom: 0.5em;
-    font-size: 0.8em;
-    font-family: $fontfamily;
+    display: none;
+    @include tablet {
+    display: block;
+  font-size: 0.8em;
+padding:0 1em;
+    }
+    @include desktop {
+      font-weight: lighter;
+      padding-left: 1.5em;
+      line-height: 1em;
+      margin: 0.5em;
+      font-size: 0.8em;
+      font-family: $fontfamily;
+    }
   }
   a {
     color: white;
@@ -170,11 +204,15 @@
     outline: none;
   }
 }
-.category-p {
-  padding-left: 1.5rem;
-  a {
-    font-size: 0.9em;
-    font-weight: 600;
-font-family: $fontfamily;
+.category {
+  display: none;
+  @include desktop {
+    display: block;
+    padding-left: 1.5em !important;
+    a {
+      font-size: 0.9em;
+      font-weight: 600;
+      font-family: $fontfamily;
+    }
   }
 }

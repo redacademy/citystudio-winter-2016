@@ -1,8 +1,7 @@
-.site-header{
+.site-header {
   display: block;
   max-width: 100%;
 }
-
 .header-container {
   align-items: center;
   max-width: 100%;
@@ -11,30 +10,24 @@
   // background-color: #ffffff;
   padding: 1.8% 1% 1.2%;
   z-index: 3;
-
 }
 .site-branding {
   flex-basis: 75%;
   height: 100%;
   order: 1;
-
   @include desktop {
     margin-right: 0;
   }
-
   a {
     display: inline-block;
   }
-
   .logo {
     max-width: 200px;
-
     @include tablet {
       max-width: 400px;
     }
   }
 }
-
 .site-navigation {
   display: flex;
   flex-basis: 10%;
@@ -43,11 +36,9 @@
   max-width: 250px;
   position: relative;
   justify-content: space-between;
-
   @include tablet {
     flex-basis: 15%;
   }
-
   @include desktop {
     flex-basis: 20%;
   }
@@ -62,26 +53,21 @@
   }
 
 }
-
 .icon-search {
   display: none;
-
   @include tablet {
     display: block;
     font-size: 2rem;
   }
-
   @include desktop {
     font-size: 2rem;
   }
-
   .fa {
     color: $light-blue;
     font-size: 1em;
     position: absolute;
-
-    &:hover{
-    color: $medium-blue;
+    &:hover {
+      color: $medium-blue;
     }
   }
   a {
@@ -90,35 +76,31 @@
     outline: none;
   }
 }
-
-.hamburger{
+.hamburger {
   color: #2cb5e8;
   font-weight: 400;
   font-size: 2em;
   border: none;
   display: flex;
-
   &:hover {
     color: $medium-blue;
   }
 }
-
 .icon-menu {
   display: flex;
   align-items: center;
   margin: auto 0;
-  &:hover{
-      color: $medium-blue;
-     }
+  &:hover {
+    color: $medium-blue;
+  }
   .fa {
     color: $light-blue;
     font-size: 2rem;
-    &:hover{
+    &:hover {
       color: $medium-blue;
-     }
+    }
   }
 }
-
 /*----------- menu nav -------------*/
 .header-nav {
   border-top: 4px solid #2cb5e8;
@@ -129,17 +111,24 @@
   height: auto;
   padding: 10% 4%;
 }
-
 .header-nav li a {
   display: inline;
   width: 100%;
+}
+
+.menu-item {
+  font-weight: 500;
+  position: relative;
+  z-index: 0;
+  // background-color: white;
+  margin: 0.5em 0;
+  max-width: 100px;
 }
 
 .hamburger-menu {
   width: 70px;
   height: 70px;
 }
-
 .dropdown-content {
   // display: none;
   position: absolute;
@@ -147,43 +136,35 @@
   min-width: 450px;
   top: 70px;
 }
-
 .dropdown-content a {
-  transition: height .3s ease-in;
+  transition: height 0.3s ease-in;
   text-decoration: none;
   display: block;
   font-size: 22px;
-
   ul li {
     border-left: 2px solid grey !important;
   }
 }
 .header-menu-title {
   display: none;
-
   @include desktop {
     display: block;
     margin: -7px;
-    padding: 0 .4em;
+    padding: 0 0.4em;
   }
 }
-
-
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
   // background-color: #f9f9f9;
   // transition: height 300ms ease-in;
 }
-
 .header-nav ul li.menu-item-has-children {
   width: 100%;
   position: relative;
 }
-
 .header-nav ul li.menu-item-has-children ul li a {
   background: none;
-
   @include iphone6 {
     line-height: 25px;
     z-index: 5;
@@ -194,23 +175,19 @@
   color: $medium_blue !important;
   text-decoration: underline;
 }
-
-.header-nav a:active{
+.header-nav a:active {
   text-decoration: underline;
-
   ul li a {
     display: block;
- }
+  }
 }
-
 .header-nav ul {
-  *zoom:1;
+  *zoom: 1;
   list-style: none;
   margin: 0;
-  padding: 0em 0em 0 .9em;
+  padding: 0 0 0 0.9em;
   // background: #f9f9f9;
 }
-
 // .header-nav ul:before,.header-nav ul:after {
 //   content:"";
 //   display:table;
@@ -218,9 +195,7 @@
 // .header-nav ul:after {
 //   clear:both;
 // }
-
 .header-nav ul > li {
-
   a {
     img {
       width: 30px;
@@ -230,13 +205,12 @@
     }
   }
 }
-
-/*//sub menu css*/
-.header-nav li ul li {
+/*/
+/sub menu css*/ .header-nav li ul li {
   overflow: hidden;
   height: auto;
   width: 100%;
-  transition:height 300ms ease-in;
+  transition: height 300ms ease-in;
   border: none;
 }
 /* sub menu list item css*/
@@ -244,63 +218,54 @@
 //   height: 2.5em;
 //   padding: .4em;
 // }
-
-.hamburger-menu{
+.hamburger-menu {
   width: 70px;
   height: 70px;
 }
 .dropdown-content {
   display: none;
-
 }
 .dropdown-content a {
-  transition: height .3s ease-in;
+  transition: height 0.3s ease-in;
   text-decoration: none;
   display: block;
   font-size: 22px;
-
   ul li {
     border-left: 2px solid grey !important;
   }
 }
 .header-menu-title {
   display: none;
-  @include desktop{
+  @include desktop {
     display: block;
     margin: -7px;
-    padding: 0 .4em;
+    padding: 0 0.4em;
   }
 }
-
 .dropdown-content a:hover {
-
   .hamburger {
     color: #2cb5e8;
     font-weight: 400;
     font-size: 2em;
     position: absolute;
-    right: .5em;
-    top: .5em;
+    right: 0.5em;
+    top: 0.5em;
     background: 0 0;
     border: none;
     display: flex;
-
     &:hover {
       color: $medium-blue;
     }
-
     @include tablet {
       top: 1em;
       right: 1em;
     }
   }
 }
-
 .show {
-  display:block;
+  display: block;
   z-index: 3;
 }
-
 #primary-menu {
   z-index: 0;
   display: flex;
@@ -308,9 +273,7 @@
   flex-direction: column;
   margin-left: 2.5em;
 }
-
 .menu-menu-container {
-
   @include iphone6 {
     width: 100%;
     position: fixed;
@@ -334,38 +297,32 @@
   flex-direction: column;
   justify-content: space-between;
   border-left: 2px solid $city-blue;
-
   li {
     display: inline-block;
   }
-
   li a {
     font-size: 16px;
   }
 }
-
-#menu-item-698{
-
+#menu-item-698 {
   &:hover {
     .sub-menu {
       visibility: visible !important;
     }
   }
 }
-
 .toggle-menu {
-  padding:20px;
-  float:left;
-  display:inline-block;
-  box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-  border-radius:3px;
-  background:#303030;
-  text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-  color:#777;
-  font-size:20px;
-  transition:color linear 0.15s;
+  padding: 20px;
+  float: left;
+  display: inline-block;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.15);
+  border-radius: 3px;
+  background: #303030;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.5);
+  color: #777;
+  font-size: 20px;
+  transition: color linear 0.15s;
 }
-
 .header-nav ul.active {
-    display:none;
+  display: none;
 }

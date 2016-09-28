@@ -20,13 +20,13 @@
 
 // ** MySQL settings ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'citystudio');
+define('DB_NAME', 'citystudio-winter-2016');
 
 /** MySQL database username */
-define('DB_USER', 'wp');
+define('DB_USER', 'riva_r');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'wp');
+define('DB_PASSWORD', 'Sham21bhala');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -62,7 +62,7 @@ define('NONCE_SALT',       ',>k5Emk<3[AdS+y+VO*[7(V%EKTTEUwO1qYrP@5bA`[il2!pZJoZ
  * You can have multiple installations in one database if you give each
  * a unique prefix. Only numbers, letters, and underscores please!
  */
-$table_prefix = 'wp_';
+$table_prefix = 'ra16wt_';
 
 
 define('WP_DEBUG', true);
