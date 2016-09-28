@@ -42,8 +42,6 @@ window.onclick = function(e) {
   ('dropdown-content').show;
 }
 
-
-
 jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
@@ -67,6 +65,6 @@ jQuery(document).ready(function($){
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 
-  //code for mobile view
+  //code for mobile vie
 
 });
