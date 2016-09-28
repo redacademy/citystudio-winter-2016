@@ -42,5 +42,4 @@ get_header();
 		</main><!-- #main -->
 	</div><!-- end single proj view container -->
 </div><!-- #primary -->
-
 <?php get_footer(); ?>
