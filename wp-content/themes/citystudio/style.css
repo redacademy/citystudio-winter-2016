@@ -3956,12 +3956,18 @@ h2.page-titles {
           justify-content: center;
       width: 15%;
       margin: 4em;
-      height: 35vh; } }
+      height: 35vh;
+      margin: 5em 3em; } }
   @media screen and (min-width: 1024px) {
     .blog-sidebar {
-      height: 50vh;
       width: 100%;
-      margin: .8em 2em; } }
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin: 1em 4em; } }
 
 .fixed-sidebar {
   position: fixed;
@@ -4023,7 +4029,7 @@ h2.page-titles {
       margin: 0 auto; } }
   @media screen and (min-width: 1024px) {
     .blog-archive-feed {
-      margin: 1em 0 0 4em;
+      margin: 0em 3em 0 0em;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-pack: end;
