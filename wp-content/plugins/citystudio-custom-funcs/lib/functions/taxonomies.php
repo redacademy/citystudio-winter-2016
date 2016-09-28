@@ -114,17 +114,17 @@ function year_taxonomy() {
 		'items_list'                 => __( 'Years list', 'text_domain' ),
 		'items_list_navigation'      => __( 'Years list navigation', 'text_domain' ),
 	);
-	$args = array(
+  $args = array(
 		'labels'                     => $labels,
 		'hierarchical'               => true,
 		'public'                     => true,
 		'show_ui'                    => true,
-  		'show_in_rest'               => true,
+    	'show_in_rest'               => true,
 		'show_admin_column'          => true,
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'year', array( 'project' ), $args );
+	register_taxonomy( 'years', array( 'project' ), $args );
 
 }
 add_action( 'init', 'year_taxonomy', 0 );

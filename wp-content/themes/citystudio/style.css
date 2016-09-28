@@ -1366,8 +1366,8 @@ input[type='email']:focus {
   margin: 1.5em auto; }
   @media screen and (min-width: 600px) {
     .footer-info-container {
-      -ms-flex-preferred-size: 30%;
-          flex-basis: 30%;
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap; } }
   @media screen and (min-width: 1024px) {
