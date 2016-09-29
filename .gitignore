@@ -62,4 +62,8 @@ wp-content/themes/*
 # Ignore npm packages #
 # =================== #
 wp-content/themes/citystudio/node_modules/
+<<<<<<< HEAD
 wp-content/themes/citystudio/gulpfile.js
+=======
+wp-content/themes/citystudio/gulpfile.js
+>>>>>>> 683aed8459ec68495f2d904c4a17336834090d2c
