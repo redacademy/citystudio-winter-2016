@@ -35,13 +35,13 @@
 }
 
 @mixin tablet{
-	@media screen and (min-width: 720px){
+	@media screen and (min-width: 600px){
 	@content;
 	}
 }
 
 @mixin footer {
-	@media screen and (min-width: 540px){
+	@media screen and (min-width: 550px){
 	@content;
 	}
 }
@@ -71,8 +71,8 @@
 	}
 }
 //
-// @mixin iphone6-plus {
-// 	@media screen and (min-width: 414px){
+// @mixin 2-col-grid {
+// 	@media screen and (min-width: 450px){
 // 	@content;
 // 	}
 // }
