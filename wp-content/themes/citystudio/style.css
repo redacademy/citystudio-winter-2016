@@ -2803,7 +2803,7 @@ a {
 
 .nav-sub-menu {
   position: relative;
-  padding: .5em;
+  padding: .3em .5em;
   opacity: 0;
   font-size: 1em;
   border-radius: 4px;
@@ -2848,7 +2848,7 @@ a {
   -ms-flex-direction: column;
       flex-direction: column;
   opacity: 1;
-  height: 230px;
+  height: 245px;
   width: 175px;
   text-transform: none;
   border-top-color: #fff;
