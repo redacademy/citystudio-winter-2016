@@ -29,36 +29,37 @@ access_log
 *.tar
 *.zip
 
-# Ignore npm packages #
-# =============== #
-wp-content/themes/citystudio/node_modules/
-wp-content/themes/citystudio/gulpfile.js
-
-# Ignore everything in the root except the "wp-content" directory.
-# =============== #
+# Ignore everything in the root except the "wp-content" directory. #
+# ================================================================ #
 /*
-.gitignore
+
+wp-config.php
+!.gitignore
 !wp-content/
 !README.md
 
-# Ignore everything in "wp-content" except the "plugins" and "themes".
-# =============== #
+# Ignore everything in "wp-content" except the "plugins", "themes", and "uploads" directories. #
+# ============================================================================================ #
 wp-content/*
+wp-content/debug.log
 !wp-content/plugins/
 !wp-content/themes/
 !wp-content/uploads/
 
-# Ignore everything in "plugins" except certain plugins.
-# =============== #
+# Ignore everything in "plugins" except certain plugins. #
+# ========================================================== #
+
 wp-content/plugins/*
+
 !wp-content/plugins/citystudio-custom-funcs/
 
-# Ignore everything in "themes" except the active theme.
-# =============== #
+
+# Ignore everything in "themes" except the active theme. #
+# ========================================================== #
 wp-content/themes/*
 !wp-content/themes/citystudio/
 
-
-wp-content/themes/citystudio/sass/foot-work.sass
-
+# Ignore npm packages #
+# =================== #
+wp-content/themes/citystudio/node_modules/
 wp-content/themes/citystudio/gulpfile.js
