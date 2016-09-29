@@ -1327,15 +1327,8 @@ input[type='email']:focus {
           flex-basis: 50%; } }
 
 .footer-logo {
-  margin-bottom: 1em;
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   -ms-flex-order: 1;
-      order: 1;
-  margin: 0 auto;
-  padding: 0;
-  display: block;
-  margin: 0 auto; }
+      order: 1; }
   .footer-logo img {
     opacity: .4;
     min-width: 275px;
