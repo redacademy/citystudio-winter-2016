@@ -57,7 +57,7 @@ get_header(); ?>
 							<li class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
 																										 background-size: cover;">
 								<div class="blog-credits">
-									<p class="date"><?php echo get_the_date('F j, Y'); ?></p>
+									<div class="date"><p><?php echo get_the_date('F j, Y'); ?></p></div>
 									<h2>
 										<?php the_title(); ?>
 									</h2>

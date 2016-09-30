@@ -4340,7 +4340,8 @@ article.people {
   box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.25);
   height: 225px;
   width: 300px;
-  margin: 1em; }
+  margin: 1em;
+  border-radius: 5px; }
   @media screen and (min-width: 600px) {
     .blog-featured-image {
       width: 435px; } }
@@ -4359,31 +4360,23 @@ article.people {
   width: 80%;
   height: 55%;
   box-sizing: border-box;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-top: 5em;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0, 118, 165, 0.75) 0%, rgba(0, 177, 234, 0.75) 80%, rgba(0, 118, 165, 0.75) 99%, rgba(0, 118, 165, 0.75) 100%); }
   @media screen and (min-width: 600px) {
     .blog-credits {
-      height: 64%;
-      margin-top: 2em; } }
-  .blog-credits .date {
-    font-size: 0.7em;
-    padding: 0.75em 0.75em 0 0;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-    margin-bottom: 0; }
+      height: 68%;
+      margin-top: 3em; } }
   .blog-credits h2,
   .blog-credits p {
     color: white; }
   .blog-credits h2 {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 1rem 1rem;
+    padding: 0.5rem 0 .5rem 1rem;
     line-height: 1.15em; }
     @media screen and (min-width: 600px) {
       .blog-credits h2 {
@@ -4391,7 +4384,7 @@ article.people {
     @media screen and (min-width: 1024px) {
       .blog-credits h2 {
         font-size: 2em;
-        padding: 0.5rem 0 1rem 1.5rem; }
+        padding: 0.5rem 0 .5rem 1.5rem; }
         .blog-credits h2:hover {
           text-decoration: underline; } }
   .blog-credits p {
@@ -4400,7 +4393,8 @@ article.people {
       .blog-credits p {
         display: block;
         font-size: 0.8em;
-        padding: 0 1em; } }
+        padding: .5em;
+        max-width: 90%; } }
     @media screen and (min-width: 1024px) {
       .blog-credits p {
         font-weight: lighter;
@@ -4413,6 +4407,17 @@ article.people {
     color: white;
     font-weight: lighter;
     outline: none; }
+
+.date {
+  font-size: 0.9em;
+  padding: 0;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 0; }
 
 .category {
   display: none; }
