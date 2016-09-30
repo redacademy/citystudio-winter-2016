@@ -89,13 +89,7 @@
 // Gradient mixins
 
 @mixin blue-to-blue {
-	background: linear-gradient(to right,
-	rgba(2,119,167,1) 0%,
-	rgba(1,136,187,1) 24%,
-	rgba(0,165,220,0.9) 63%,
-	rgba(0,177,234,0.9) 80%
-
-	);
+	background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
 }
 
 @mixin blue-to-blue-light {

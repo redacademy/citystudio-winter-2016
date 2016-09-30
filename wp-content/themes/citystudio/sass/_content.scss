@@ -77,6 +77,9 @@
 // Page Headers
 
 .citystudio-banner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   @include blue-to-blue;
   margin-bottom: 0;
   opacity: 0.9;
@@ -85,15 +88,45 @@
   height: 100%;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  
   @include desktop {
-  // background: url("../../images/citystudio-logo.png"), $medium-blue;
   background-size: cover;
   background-position: center center;
   min-height: 6em;
   height: 100%;
   }
 }
+
+h2.page-titles {
+  color: white;
+  font-family: $fontfamily;
+  font-size: 1.5em;
+  box-shadow: none;
+  margin-left: 1.5em;
+  @include desktop {
+    font-size: 3em;
+  }
+}
+
+// This should be in a more global place
+// .banner-inner {
+//   display: flex;
+//   // flex-direction: column-reverse;
+//   height: 0;
+//   justify-content: center;
+//   padding-left: 3.2%;
+//   margin-top: 2em;
+//   z-index: -999;
+//   max-width: 99%;
+//   width: 99%;
+//   @include tablet {
+//     padding: 1% 4%;
+//     margin-top: 1.5em;
+//   }
+//   @include desktop {
+//     padding: 2% 4%;
+//     margin-top: 1.5em;
+//   }
+// }
 
 .citystudio-banner-short {
   @include blue-to-blue;

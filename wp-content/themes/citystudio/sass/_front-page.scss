@@ -58,10 +58,10 @@
   font-family: $fontfamily;
   text-align: center;
   font-size: 1.7rem;
-  width: 99%;
-  max-width: 99%;
+  width: 80%;
   font-weight: normal;
   @include tablet {
+    width: 99%;
     font-size: 2em;
   }
   @include desktop {

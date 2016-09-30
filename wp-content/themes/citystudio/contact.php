@@ -30,24 +30,6 @@ get_header(); ?>
 		 </div>
 			<div class="contact-info-container">
 
-				<div class="contact-info-block">
-					<h3 class="contact-title">
-						<?php the_field('media_comm_title') ?>
-					</h3>
-					<p class="content">
-						<?php the_field('contact_email') ?>
-					</p>
-				</div>
-
-				<div class="contact-engagement">
-					<h3 class="contact-title">
-						<?php the_field('for_speaking_engagements') ?>
-					</h3>
-					<p class="content">
-						<?php the_field('for_speaking_engagements_email') ?>
-					</p>
-				</div>
-
 				<div class="contact-display">
 					<h3 class="contact-title">
 						<?php the_field('phone_title') ?>
