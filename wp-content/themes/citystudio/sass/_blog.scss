@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
-  @include desktop {
+  @include tablet {
     height: 250px;
   }
 }
@@ -23,7 +23,7 @@
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
-    @include desktop {
+    @include tablet {
       font-size: 2.5em;
     }
   }
@@ -33,11 +33,13 @@
     text-align: left;
     font-family: $fontfamily;
     color: white;
-    width: 85%;
+    width: 75%;
     @include tablet {
-      width: 42.5%;
+      width: 50%;
+      font-size: 1em;
     }
     @include desktop {
+      width: 42.5%;
       font-size: 1.15em;
     }
     span {
@@ -64,23 +66,23 @@
   }
   @include desktop {
     height: 35vh;
-    width: 30%;
+    width: 20%;
     display: flex;
     justify-content: inherit;
     align-items: flex-start;
     margin: 1em 4em;
   }
 }
-.fixed-sidebar {
-  position: fixed;
-  top: 0;
-  width: 30%;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 1em 4em;
-}
+// .fixed-sidebar {
+//   position: fixed;
+//   top: 0;
+//   width: 20%;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   margin: 1em 4em;
+// }
 .sidebar-item {
   color: $city-blue;
   font-size: 1em;
@@ -125,46 +127,35 @@
 }
 //CONTENT BLOCK
 .blog-archive-feed {
+  width: 90%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2em auto;
   @include tablet {
-    margin: 0 auto;
+  width: 80%;
+    margin: 0 3em 0 0;
   }
   @include desktop {
-    margin: 0 3em 0 0;
     flex-direction: row;
     justify-content: flex-end;
   }
-  // a {
-  //   height: 225px;
-  //   width: 300px;
-  //   @include tablet {
-  //     width: 435px;
-  //   }
-  //   @include desktop {
-  //     height: 300px;
-  //     width: 750px;
-  //     margin-bottom: 4em;
-  //   }
-  // }
 }
 .blog-featured-image {
   display: flex;
   justify-content: flex-start;
   position: relative;
   box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-  height: 225px;
-  width: 300px;
+  height: 250px;
   margin: 1em;
   border-radius: 5px;
+  width: 100%;
   @include tablet {
-    width: 435px;
+
+    height: 300px;
+    margin-bottom: 2em;
   }
   @include desktop {
-    height: 300px;
-    width: 750px;
     margin-bottom: 4em;
   }
   &:hover {
@@ -175,6 +166,8 @@
   }
 }
 .blog-credits {
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 80%;
   height: 55%;
   box-sizing: border-box;
@@ -191,34 +184,38 @@
   h2,
   p {
     color: white;
+    max-width: 90%;
   }
   h2 {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 .5rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.15em;
+    &:hover {
+      text-decoration: underline;
+    }
     @include tablet {
-      font-size: 1.25em;
+      font-size: 1.5em;
     }
     @include desktop {
       font-size: 2em;
-      padding: 0.5rem 0 .5rem 1.5rem;
-      &:hover {
-        text-decoration: underline;
-      }
+      padding: 0.5rem 0 0.5rem 1.5rem;
     }
   }
   p {
-    display: none;
+    display: block;
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8em;
+    padding-left: 1.5em;
+    margin-bottom: 0;
     @include tablet {
-      display: block;
-      font-size: 0.8em;
-      padding: .5em;
-      max-width: 90%;
+      padding: 0.5em 0.5em 0.5em 1.5em;
     }
     @include desktop {
       font-weight: lighter;
-      padding-left: 1.5em;
       line-height: 1em;
       margin: 0.5em;
       font-size: 0.8em;
@@ -231,24 +228,32 @@
     outline: none;
   }
 }
-
 .date {
-  font-size: 0.9em;
-  padding:0;
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 0;
+  display: none;
+  @include tablet {
+    display: block;
+    font-size: 0.7em;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
 }
-
 .category {
   display: none;
-  @include desktop {
+  @include tablet {
     display: block;
+    padding-left: 1.1em !important;
+  }
+  @include desktop {
     padding-left: 1.5em !important;
-    a {
-      font-size: 0.9em;
-      font-weight: 600;
-      font-family: $fontfamily;
+  }
+  a {
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: $fontfamily;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

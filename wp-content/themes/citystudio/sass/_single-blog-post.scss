@@ -89,44 +89,33 @@ margin-left: 1em;
 .recent-news-block {
   background-color: $color__background-lightblue;
   width: 100%;
-  height: auto;
   margin: 1em 0 0;
-  @include tablet {
-    height: auto;
-  }
-  @include desktop {
-    height: 475px;
-  }
   h2 {
     color: $city-blue;
     text-align: center;
     font-size: 2em;
-    padding:1.5em;
+    padding:1em;
     font-weight: bold;
   }
 }
-.extra-margin {
-  margin-bottom: 1.5em;
-@include tablet {
-margin-bottom: 1em;
-}
-@include desktop {
-margin-bottom: 1.5em;
-}
-}
+
 .recent-news-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  margin-bottom: 2em;
   max-width: 100%;
+  min-height: 750px;
   @include tablet {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+height: auto;
   }
+  @include desktop {
+min-height: 300px;
+}
   a {
     height: 200px;
     width: 250px;
