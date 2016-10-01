@@ -73,16 +73,16 @@
     margin: 1em 4em;
   }
 }
-// .fixed-sidebar {
-//   position: fixed;
-//   top: 0;
-//   width: 20%;
-//   padding: 0;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: flex-start;
-//   margin: 1em 4em;
-// }
+ .fixed-sidebar {
+   position: fixed;
+   top: 0;
+   width: 20%;
+   padding: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+   margin: 1em 4em;
+}
 .sidebar-item {
   color: $city-blue;
   font-size: 1em;

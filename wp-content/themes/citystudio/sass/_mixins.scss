@@ -70,12 +70,21 @@
 	@content;
 	}
 }
+//
+// @mixin 2-col-grid {
+// 	@media screen and (min-width: 450px){
+// 	@content;
+// 	}
+// }
+
 
 @mixin threecol {
 	@media screen and (min-width: 1000px) {
 	@content;
 	}
 }
+
+
 
 // Gradient mixins
 
