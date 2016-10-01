@@ -20,7 +20,9 @@ jQuery(document).ready(function($){
     var sticky = $('.sticky-navigation'),
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
-        offset = nav.offset().top
+        offset = nav.offset().top;
+        console.log(offset);  
+        console.log(scroll);
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
@@ -29,18 +31,25 @@ jQuery(document).ready(function($){
           sticky.removeClass("fixed");
         }
       }
-    });
+
+    if ($('body').hasClass('blog') ) {
+
+      var bar = $('.blog-content-container'),
+          sideBar =$('.blog-sidebar'),
+          blogScroll = $(window).scrollTop(),
+          blogOffset = bar.offset().top;
+          console.log(blogOffset);
+          console.log(blogScroll);
+
+      if (blogScroll >= blogOffset) {
+         sideBar.addClass("fixed-sidebar");
+        }
+      else if(blogScroll <= blogOffset) {
+         sideBar.removeClass("fixed-sidebar");
+        }
+    }
   });
 
-function myFunction() {
-  var hamburger = document.getElementById("hamburgerMenu");
-  hamburger.classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outnerside of it
-window.onclick = function(e) {
-  e.preventDefault;
-  ('dropdown-content').show;
-}
 
 
 
@@ -69,4 +78,16 @@ jQuery(document).ready(function($){
 
   //code for mobile view
 
+  });
 });
+
+
+function myFunction() {
+  var hamburger = document.getElementById("hamburgerMenu");
+  hamburger.classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outnerside of it
+window.onclick = function(e) {
+  e.preventDefault;
+  ('dropdown-content').show;
+}

@@ -1,5 +1,5 @@
 <div class="recent-posts-block">
-  <h1 class="homepage-titles extra-margin">Recent News</h1>
+  <h1 class="homepage-titles">Recent News</h1>
   <ul class="recent-posts-list">
   <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
 

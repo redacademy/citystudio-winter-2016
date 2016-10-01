@@ -13,8 +13,9 @@ get_header(); ?>
 					<h2 class="page-titles"><?php the_title(); ?></h2>
 				</div>
 			</header>
-
-			<div class="template-hero" style="background-image: url( '<?php the_field( 'banner_image' ); ?> ' ); "></div>
+			<div class="hero-wrap">
+				<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>
+			</div>
 			<div class="wwd-content">
 				<div class="section-header">
 					<?php

@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
-  @include desktop {
+  @include tablet {
     height: 250px;
   }
 }
@@ -18,13 +18,12 @@
   flex-direction: column;
   justify-content: flex-start;
   width: 80%;
-  @include desktop {}
   h1 {
     font-size: 2em;
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
-    @include desktop {
+    @include tablet {
       font-size: 2.5em;
     }
   }
@@ -34,10 +33,14 @@
     text-align: left;
     font-family: $fontfamily;
     color: white;
-    width: 85%;
+    width: 75%;
+    @include tablet {
+      width: 50%;
+      font-size: 1em;
+    }
     @include desktop {
-      font-size: 1.15em;
       width: 42.5%;
+      font-size: 1.15em;
     }
     span {
       font-weight: bold;
@@ -58,14 +61,28 @@
     justify-content: center;
     width: 15%;
     margin: 4em;
-    height:60vh;
+    height: 45vh;
+    margin: 5em 3em;
   }
   @include desktop {
-  height: 69vh;
-    width: 25%;
-    margin: 2em 0 0 3em;
+    height: 35vh;
+    width: 20%;
+    display: flex;
+    justify-content: inherit;
+    align-items: flex-start;
+    margin: 1em 4em;
   }
 }
+// .fixed-sidebar {
+//   position: fixed;
+//   top: 0;
+//   width: 20%;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   margin: 1em 4em;
+// }
 .sidebar-item {
   color: $city-blue;
   font-size: 1em;
@@ -75,6 +92,7 @@
   margin: 1em 0;
   h4 {
     margin-bottom: 15px;
+    padding-left: 1em;
   }
   p {
     margin-bottom: 10px;
@@ -109,15 +127,18 @@
 }
 //CONTENT BLOCK
 .blog-archive-feed {
+  width: 90%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2em auto;
-  @include tablet{
-      margin: 0 auto;
+  @include tablet {
+  width: 80%;
+    margin: 0 3em 0 0;
   }
   @include desktop {
-    margin: 4em 0 0 4em;
+    flex-direction: row;
+    justify-content: flex-end;
   }
 }
 .blog-featured-image {
@@ -125,15 +146,16 @@
   justify-content: flex-start;
   position: relative;
   box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-  height: 225px;
-  width: 300px;
+  height: 250px;
   margin: 1em;
-@include tablet {
-width: 435px;
-}
-  @include desktop {
+  border-radius: 5px;
+  width: 100%;
+  @include tablet {
+
     height: 300px;
-    width: 750px;
+    margin-bottom: 2em;
+  }
+  @include desktop {
     margin-bottom: 4em;
   }
   &:hover {
@@ -144,54 +166,56 @@ width: 435px;
   }
 }
 .blog-credits {
+  overflow: hidden;
+  text-overflow: ellipsis;
   width: 80%;
   height: 55%;
   box-sizing: border-box;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
   margin-top: 5em;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
   @include tablet {
-    height: 64%;
-    margin-top: 2em;
-  }
-  .date {
-    font-size: 0.7em;
-    padding: 0.75em 0.75em 0 0;
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 0;
+    height: 68%;
+    margin-top: 3em;
   }
   h2,
   p {
     color: white;
+    max-width: 90%;
   }
   h2 {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 1rem 1rem;
+    padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.15em;
+    &:hover {
+      text-decoration: underline;
+    }
     @include tablet {
-    font-size: 1.25em;
+      font-size: 1.5em;
     }
     @include desktop {
       font-size: 2em;
-      padding: 0.5rem 0 1rem 1.5rem;
-      &:hover {
-        text-decoration: underline;
-      }
+      padding: 0.5rem 0 0.5rem 1.5rem;
     }
   }
   p {
-    display: none;
-    @include tablet {
     display: block;
-  font-size: 0.8em;
-padding:0 1em;
+    width: 90%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 0.8em;
+    padding-left: 1.5em;
+    margin-bottom: 0;
+    @include tablet {
+      padding: 0.5em 0.5em 0.5em 1.5em;
     }
     @include desktop {
       font-weight: lighter;
-      padding-left: 1.5em;
       line-height: 1em;
       margin: 0.5em;
       font-size: 0.8em;
@@ -204,15 +228,32 @@ padding:0 1em;
     outline: none;
   }
 }
+.date {
+  display: none;
+  @include tablet {
+    display: block;
+    font-size: 0.7em;
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 0;
+  }
+}
 .category {
   display: none;
-  @include desktop {
+  @include tablet {
     display: block;
+    padding-left: 1.1em !important;
+  }
+  @include desktop {
     padding-left: 1.5em !important;
-    a {
-      font-size: 0.9em;
-      font-weight: 600;
-      font-family: $fontfamily;
+  }
+  a {
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: $fontfamily;
+    &:hover {
+      text-decoration: underline;
     }
   }
 }

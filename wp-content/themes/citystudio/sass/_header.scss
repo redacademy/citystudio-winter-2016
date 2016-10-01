@@ -47,10 +47,10 @@
   display: none;
   @include tablet {
     display: block;
-    font-size: 2rem;
+    font-size: 2em;
   }
   @include desktop {
-    font-size: 2rem;
+    font-size: 2em;
   }
   .fa {
     color: $light-blue;

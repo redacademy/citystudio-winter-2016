@@ -22,10 +22,11 @@
     height: 65vh;
   }
   @include tablet {
-    height: 50vh;
+    height: 60vh;
   }
 }
 .hero-blurb {
+<<<<<<< HEAD
   text-align: center;
   font-size: 1.3rem;
   font-weight: bold;
@@ -34,26 +35,36 @@
   justify-content: center;
   z-index: 1;
 
-  @include tablet {
-    width: 70%;
-    margin: 0 auto;
-    padding: 10.5% 14%;
-  }
-  @include desktop {
-    width: 70%;
-    margin: 0 auto;
-    font-size: 1em;
+=======
+    text-align: center;
+    font-weight: 700;
+    font-family: $fontfamily;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+    width: 80%;
     padding: 8.5% 12%;
+>>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
+  @include tablet {
+    margin: 0 auto;
   }
   h3 {
+<<<<<<< HEAD
     font-size: 0.9em;
     font-weight: 300;
     color: #fff;
     @include tablet {
       font-size: 1.2em;
+=======
+    font-size: 1.1em;
+    font-weight: 300;
+    color: #fff;
+    @include tablet {
+      font-size: 1.5em;
+>>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
     }
     @include desktop {
-      font-size: 1.6em;
+      font-size: 2em;
     }
   }
 }
@@ -61,18 +72,30 @@
   color: #ee7600;
 }
 .homepage-titles {
-  margin: 2rem auto;
+  margin: 2em auto;
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
   font-size: 1.7rem;
+<<<<<<< HEAD
   width: 90%;
   max-width: 99%;
+=======
+  width: 80%;
+>>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   font-weight: normal;
+  @include tablet {
+    width: 99%;
+    font-size: 2em;
+  }
   @include desktop {
+<<<<<<< HEAD
     font-size: 2.3rem;
     margin: 2em auto 1em;
     width: 99%;
+=======
+    font-size: 2.3em;
+>>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   }
   span {
     color: $city-blue;
@@ -85,20 +108,14 @@
     width: 70%;
     margin: 0 auto;
     padding-bottom: 2rem;
-    font-size: 1.15em;
+    font-size: 1.25em;
     font-family: $fontfamily;
     text-align: center;
-    width: 90%;
+    width: 75%;
     display: block;
   }
   @include desktop {
-    width: 64%;
     padding-bottom: 1em;
-    display: block;
-  }
-  span {
-    margin-top: 1em;
-    display: block;
   }
 }
 // -------------- RECENT POSTS SECTION STYLES  ----------------------*
@@ -120,6 +137,7 @@
     font-weight: bold;
   }
 }
+<<<<<<< HEAD
 .extra-margin {
   margin-bottom: 1.5em;
 @include tablet {
@@ -129,6 +147,9 @@ margin-bottom: 1em;
 margin-bottom: 1.5em;
 }
 }
+=======
+
+>>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
 .recent-posts-list {
   display: flex;
   flex-direction: column;
@@ -165,6 +186,7 @@ margin-bottom: 1.5em;
     }
   }
   li {
+  border-radius: 10px;
     position: relative;
     height: 200px;
     width: 250px;
@@ -184,6 +206,7 @@ margin-bottom: 1.5em;
       left: 2px;
     }
     img {
+  border-radius: 10px;
       height: 100%;
       width: 100%;
     }
@@ -195,6 +218,8 @@ margin-bottom: 1.5em;
   bottom: 12px !important;
   color: white;
   position: absolute;
+  border-top-right-radius: 10px;
+border-bottom-right-radius: 10px;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
   @include tablet {
     height: 45%;
@@ -317,6 +342,6 @@ margin-bottom: 1.5em;
 .explore-section {
   width: 100%;
   display: block;
-  margin: 4em auto 5em;
+  margin: 5em auto;
   text-align: center;
 }

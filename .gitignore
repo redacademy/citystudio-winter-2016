@@ -33,7 +33,7 @@ access_log
 # ================================================================ #
 /*
 
-wp-config.php
+../../../wp-config.php
 !.gitignore
 !wp-content/
 !README.md
@@ -61,3 +61,5 @@ wp-content/themes/*
 
 # Ignore npm packages #
 # =================== #
+wp-content/themes/citystudio/node_modules/*
+wp-content/themes/citystudio/gulpfile.js
