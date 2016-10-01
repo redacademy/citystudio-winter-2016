@@ -509,30 +509,6 @@ h3.people-title {
   h3.people-title:hover {
     cursor: pointer; }
 
-button {
-  background-color: transparent; }
-
-.button-blue {
-  background-color: #0082b9;
-  border: 1px solid #0082b9;
-  color: #ffffff;
-  display: inline-block;
-  padding: 1.2% 3%;
-  text-transform: uppercase;
-  font-weight: lighter;
-  letter-spacing: 2px;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-sizing: border-box;
-  transition: background-color 0.5s ease; }
-  .button-blue:active, .button-blue:visited {
-    color: #ffffff; }
-  .button-blue:hover {
-    background-color: transparent;
-    border: 1px solid #0082b9;
-    color: #0082b9;
-    padding: 1.2% 3%; }
-
 a,
 a:hover,
 a:active,
@@ -1120,7 +1096,8 @@ a {
   min-height: 4em;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  padding: 0 4%; }
   @media screen and (min-width: 1024px) {
     .citystudio-banner {
       background-size: cover;
@@ -1724,7 +1701,8 @@ input[type='email']:focus {
           align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 1em auto 0; }
+  margin: 1em auto 0;
+  list-style: none; }
   @media screen and (min-width: 600px) {
     .search-list {
       -webkit-justify-content: space-around;
@@ -4465,16 +4443,47 @@ article.people {
     display: none; }
 
 .js-load-more {
-  display: block;
-  width: 150px;
-  margin: 0 auto 4em;
-  border: 1px solid white;
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #ffffff;
+  display: inline-block;
+  padding: 1.2% 3%;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 0 auto;
   border-radius: 10px;
-  color: #fff;
-  padding: 2% 6%; }
-  .js-load-more:visited, .js-load-more:active {
-    color: #fff; }
+  box-sizing: border-box;
+  transition: background-color 0.5s ease; }
+  .js-load-more:visited, .js-load-more:active, .js-load-more:focus {
+    color: #fff;
+    outline: none; }
   .js-load-more:hover {
     transition: all .5s ease;
     background-color: #fff;
     color: #0082b9; }
+
+button {
+  background-color: transparent; }
+
+.button-blue {
+  background-color: #0082b9;
+  border: 1px solid #0082b9;
+  color: #ffffff;
+  display: inline-block;
+  padding: 1.2% 3%;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-sizing: border-box;
+  transition: background-color 0.5s ease; }
+  .button-blue:active, .button-blue:visited {
+    color: #ffffff;
+    outline: none; }
+  .button-blue:hover {
+    background-color: transparent;
+    border: 1px solid #0082b9;
+    color: #0082b9;
+    padding: 1.2% 3%; }
