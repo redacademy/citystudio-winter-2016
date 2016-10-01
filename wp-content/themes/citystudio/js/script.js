@@ -42,8 +42,6 @@ window.onclick = function(e) {
   ('dropdown-content').show;
 }
 
-
-
 jQuery(document).ready(function($){
 
   $(".hamburger").click(function(){
