@@ -16,7 +16,7 @@ $citystudio_founders = new WP_Query( $args ); ?>
 <?php /* Start the Loop */ ?>
 
 
-<div class="citystudio-team team-container">
+<div class="citystudio-team team-container other-height-wrap">
 
   <h2 class="section-titles">Founder's Circle</h2>
 

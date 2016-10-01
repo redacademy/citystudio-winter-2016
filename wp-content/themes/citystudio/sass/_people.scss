@@ -1,20 +1,32 @@
 .team-citystudio-team {
-  position: relative;
+  // position: relative;
 }
 
+.team-height-wrap {
+  min-height: 400px;
+  margin: auto 0;
+}
+
+.other-height-wrap {
+min-height: 280px;
+margin: auto 0;
+display: flex;
+align-items: center;
+}
 .team-container {
-  margin: 3em auto;
+  // margin: 3em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  align-items: center;
+  align-items:center;
+
   @include tablet {
-    margin: 3em auto;
+    // margin: 3em auto;
   }
   @include desktop {
-    margin: 4em auto;
+    // margin: 4em auto;
   }
   .section-titles {
     flex: 0 1 100%;
@@ -23,9 +35,17 @@
     font-size: 1.5em;
     @include desktop {
       font-size: 2em;
-      margin-bottom: 2em;
+      margin: 1em;
     }
   }
+}
+
+.section-one-h2{
+margin: 3em !important;
+}
+
+.team-ul-special {
+min-height: 350px !important;
 }
 .citystudio-teams {
   ul {
@@ -34,7 +54,7 @@
     justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
-    height: 300px;
+    min-height: 200px;
     @include tablet {
       flex: 0 0 80%;
     }
@@ -103,6 +123,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   @include tablet {
     flex-direction: row;
   }
@@ -118,6 +139,7 @@
   justify-content: center;
   padding: 1em;
   flex: 0 1 20%;
+  max-height: 110px;
   @include tablet {
     flex: 0 1 40%;
   }

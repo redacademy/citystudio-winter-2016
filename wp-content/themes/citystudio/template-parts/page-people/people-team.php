@@ -16,11 +16,11 @@ $citystudio_team = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams team-container">
+<div class="citystudio-teams team-container team-height-wrap">
 
-  <h2 class="section-titles">CityStudio Vancouver Team</h2>
+  <h2 class="section-titles section-one-h2">CityStudio Vancouver Team</h2>
 
-  <ul>
+  <ul class="team-ul-special">
 
   <?php while ( $citystudio_team->have_posts() ) : $citystudio_team->the_post(); ?>
 

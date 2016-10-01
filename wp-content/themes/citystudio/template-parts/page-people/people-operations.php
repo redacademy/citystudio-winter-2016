@@ -15,7 +15,7 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams team-container">
+<div class="citystudio-teams team-container other-height-wrap">
 
   <h2 class="section-titles">Operations Council</h2>
 
