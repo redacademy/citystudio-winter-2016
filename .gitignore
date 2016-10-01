@@ -32,6 +32,7 @@ access_log
 # Ignore everything in the root except the "wp-content" directory. #
 # ================================================================ #
 /*
+
 wp-config.php
 !.gitignore
 !wp-content/
@@ -40,20 +41,14 @@ wp-config.php
 # Ignore everything in "wp-content" except the "plugins", "themes", and "uploads" directories. #
 # ============================================================================================ #
 wp-content/*
+../../debug.log
 !wp-content/plugins/
 !wp-content/themes/
 !wp-content/uploads/
-debug.log
 
 # Ignore everything in "plugins" except certain plugins. #
 # ========================================================== #
 
-<<<<<<< HEAD
-=======
-# Ignore everything in "plugins" except certain plugins. #
-# ========================================================== #
-
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352
 wp-content/plugins/*
 
 !wp-content/plugins/citystudio-custom-funcs/
@@ -66,9 +61,3 @@ wp-content/themes/*
 
 # Ignore npm packages #
 # =================== #
-wp-content/themes/citystudio/node_modules/
-<<<<<<< HEAD
-wp-content/themes/citystudio/gulpfile.js
-=======
-wp-content/themes/citystudio/gulpfile.js
->>>>>>> ac3b9a9fc7f292d3e5d86ea9ad64511fde098352

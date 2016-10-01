@@ -94,7 +94,7 @@ jQuery(document).ready(function($) {
   });
   $('.sub-menu-year').click(function() {
     if ($(this.checked)) {
-      queryFilter.years = parseInt($(this).find('input').val());
+      queryFilter.year = $(this).find('input').val();
       checkedYear = parseInt(($(this).text()).trim());
       $('.year-labels')
           .show()
@@ -106,33 +106,23 @@ jQuery(document).ready(function($) {
   // A Function that returns the object queryFilter's properties
   // and concatenates them into a url with + signs creates API call
   function filters(){
-    var mappedObject = Object.keys(queryFilter).map(function(filter){
-      console.log("filter", filter);
+    return Object.keys(queryFilter).map(function(filter){
       if(queryFilter[filter] !== '') {
         filteredQuery = 'filter['+filter+']='+queryFilter[filter];
         return filteredQuery;
       }
     }).filter(Array)
-      .join('&');
-
-    var mappedObjectUrl = mappedObject.split('&&').join('&');
-    console.log('mappedobject', mappedObjectUrl);
-
-    return mappedObjectUrl;
+      .join('');
   } //close filters function
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
-    console.log("url", api_vars.rest_url+'wp/v2/project?'+filters());
       $.ajax({
           type: 'GET',
           dataType: 'json',
           url: api_vars.rest_url+'wp/v2/project?'+filters(),
           success: function(response, data, status) {
             var projects = response;
-            console.log("response", response);
-            console.log("data", data);
-            console.log("status", status);
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
