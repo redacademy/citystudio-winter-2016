@@ -28,7 +28,7 @@ get_header(); ?>
 								$loop = new WP_Query(
 									array(
 										'post_type' => 'project',
-										'posts_per_page' => 10,
+										'posts_per_page' => 12,
 										'paged' => $currentPage,
 									)
 								);

@@ -424,6 +424,9 @@ h2.page-titles {
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
+*a {
+  outline: none !important; }
+
 html {
   box-sizing: border-box;
   font-size: 16px;
@@ -1696,6 +1699,9 @@ input[type='email']:focus {
         margin: 2.5em 0;
         font-size: 1.5em; } }
 
+.search-list-inner {
+  padding: 5% 0 0; }
+
 .search-list {
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1714,20 +1720,20 @@ input[type='email']:focus {
           align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 1em auto 0;
+  margin: 0 auto;
   list-style: none; }
   @media screen and (min-width: 600px) {
     .search-list {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
               justify-content: space-around;
-      margin: 2em auto 0; } }
+      margin: 0 auto; } }
   @media screen and (min-width: 1024px) {
     .search-list {
       -webkit-justify-content: space-around;
           -ms-flex-pack: distribute;
               justify-content: space-around;
-      margin: 3rem auto 0; } }
+      margin: 30 auto; } }
   .search-list li,
   .search-list a {
     border: 1px solid transparent;
