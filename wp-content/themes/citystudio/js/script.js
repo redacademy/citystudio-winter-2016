@@ -21,8 +21,6 @@ jQuery(document).ready(function($){
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
         offset = nav.offset().top;
-        console.log(offset);  
-        console.log(scroll);
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
@@ -38,9 +36,7 @@ jQuery(document).ready(function($){
           sideBar =$('.blog-sidebar'),
           blogScroll = $(window).scrollTop(),
           blogOffset = bar.offset().top;
-          console.log(blogOffset);
-          console.log(blogScroll);
-
+          
       if (blogScroll >= blogOffset) {
          sideBar.addClass("fixed-sidebar");
         }
