@@ -1391,6 +1391,7 @@ input[type='email']:focus {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background: #006493;
+<<<<<<< HEAD
   padding: 4% 2%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
@@ -1432,13 +1433,37 @@ input[type='email']:focus {
       -ms-flex-order: 1;
           order: 1; }
 >>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
+=======
+  padding: 2%; }
+
+.footer-branding-container {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-order: 1;
+      order: 1; }
+  @media screen and (min-width: 720px) {
+    .footer-branding-container {
+      width: 40vw; } }
+  @media screen and (min-width: 1024px) {
+    .footer-branding-container {
+      width: 25%; } }
+
+.footer-logo {
+  -ms-flex-order: 1;
+      order: 1;
+  text-align: center; }
+>>>>>>> footer
   .footer-logo img {
     opacity: .4;
     min-width: 275px;
     width: 275px;
     height: auto; }
+  @media screen and (min-width: 720px) {
+    .footer-logo {
+      text-align: left; } }
   @media screen and (min-width: 1024px) {
     .footer-logo {
+<<<<<<< HEAD
       -webkit-flex-basis: 50%;
           -ms-flex-preferred-size: 50%;
 <<<<<<< HEAD
@@ -1453,6 +1478,13 @@ input[type='email']:focus {
       margin: 0 auto;
       max-width: 0; } }
 >>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
+=======
+      -ms-flex-order: 1;
+          order: 1;
+      padding: 0;
+      display: block;
+      margin: 0 auto; } }
+>>>>>>> footer
 
 .social-icons-div {
   display: -webkit-flex;
@@ -1462,6 +1494,7 @@ input[type='email']:focus {
   width: 100%;
 =======
   width: 95vw;
+<<<<<<< HEAD
 >>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   -webkit-flex-basis: 100%;
       -ms-flex-preferred-size: 100%;
@@ -1476,6 +1509,15 @@ input[type='email']:focus {
       -ms-flex-pack: center;
           justify-content: center; }
   @media screen and (min-width: 1024px) {
+=======
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-order: 2;
+      order: 2;
+  -ms-flex-pack: center;
+      justify-content: center; }
+  @media screen and (min-width: 720px) {
+>>>>>>> footer
     .social-icons-div {
       -webkit-justify-content: initial;
           -ms-flex-pack: initial;
@@ -1513,6 +1555,10 @@ input[type='email']:focus {
 =======
   margin: 1.5em auto;
   display: none; }
+  @media screen and (min-width: 720px) {
+    .footer-info-container {
+      display: -ms-flexbox;
+      display: flex; } }
   @media screen and (min-width: 1024px) {
     .footer-info-container {
       display: -webkit-flex;
@@ -1524,8 +1570,8 @@ input[type='email']:focus {
               flex-basis: 50%;
       margin: 0; } }
 
-.footer-info-block ul li {
-  height: 5%; }
+.footer-info-block ul {
+  padding: 2%; }
 
 .footer-info-block,
 .footer-info-block1,
@@ -1533,6 +1579,7 @@ input[type='email']:focus {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+<<<<<<< HEAD
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -1543,6 +1590,16 @@ input[type='email']:focus {
   min-width: 200px;
   font-family: "open_sans"; }
   @media screen and (min-width: 1024px) {
+=======
+  -ms-flex-direction: column;
+      flex-direction: column;
+  -ms-flex-align: center;
+      align-items: center;
+  color: #fff;
+  width: 18vw;
+  text-align: center; }
+  @media screen and (min-width: 720px) {
+>>>>>>> footer
     .footer-info-block h3,
     .footer-info-block1 h3,
     .footer-info-block2 h3 {
@@ -1567,7 +1624,7 @@ input[type='email']:focus {
       font-size: 0.85rem;
       width: 100%;
       opacity: 0.7;
-      line-height: 1.75em; }
+      line-height: 2em; }
     .footer-info-block li:hover, .footer-info-block a:hover,
     .footer-info-block1 li:hover,
     .footer-info-block1 a:hover,
@@ -1580,7 +1637,17 @@ input[type='email']:focus {
     .footer-info-block1 .menu-item,
     .footer-info-block2 .menu-item {
       background-color: transparent;
-      height: 2em; } }
+      margin: 0; } }
+  @media screen and (min-width: 1024px) {
+    .footer-info-block,
+    .footer-info-block1,
+    .footer-info-block2 {
+      width: 15vw; } }
+  @media screen and (min-width: 1396px) {
+    .footer-info-block,
+    .footer-info-block1,
+    .footer-info-block2 {
+      width: 12vw; } }
 
 .copyright {
   background-color: #006493;
