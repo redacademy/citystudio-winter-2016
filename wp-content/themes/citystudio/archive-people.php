@@ -9,7 +9,7 @@ get_header();
 	<main id="main" class="site-main" role="main">
       <div class="people-archive container">
 
-        <header class="citystudio-banner">
+        <header class="citystudio-banner people-margin">
             <h2 class="page-titles">People</h2>
         </header>
 

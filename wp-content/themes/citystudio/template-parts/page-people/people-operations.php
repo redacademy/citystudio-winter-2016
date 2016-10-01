@@ -15,9 +15,12 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams team-container other-height-wrap">
+<div class="team-container">
+  <div class=" other-height-wrap citystudio-team">
 
   <h2 class="section-titles">Operations Council</h2>
+<div class="people-wrap">
+
 
   <ul class="people-list">
 
@@ -30,7 +33,8 @@ $citystudio_operations = new WP_Query( $args ); ?>
 
       <?php endwhile; ?>
   </ul>
-
+</div>
+</div>
 </div>
 <?php else : ?>
 
