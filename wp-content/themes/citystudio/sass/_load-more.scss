@@ -13,9 +13,21 @@
 }
 
 .js-load-more {
-  width: 20%;
-  margin: 0 auto;
+  display: block;
+  width: 150px;
+  margin: 0 auto 4em;
   border: 1px solid white;
   border-radius: 10px;
   color: #fff;
+  padding: 2% 6%;
+
+  &:visited, &:active{
+    color: #fff;
+  }
+
+  &:hover {
+    transition: all .5s ease;
+    background-color: #fff;
+    color: $medium-blue;
+  }
 }
