@@ -18,24 +18,14 @@
   align-items: center;
   height: 50vh;
   width: 100%;
-   @include desktop {
-    height: 65vh;
-  }
   @include tablet {
     height: 60vh;
   }
+   @include desktop {
+    height: 75vh;
+  }
 }
 .hero-blurb {
-<<<<<<< HEAD
-  text-align: center;
-  font-size: 1.3rem;
-  font-weight: bold;
-  font-family: $fontfamily;
-  display: flex;
-  justify-content: center;
-  z-index: 1;
-
-=======
     text-align: center;
     font-weight: 700;
     font-family: $fontfamily;
@@ -44,24 +34,15 @@
     z-index: 1;
     width: 80%;
     padding: 8.5% 12%;
->>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   @include tablet {
     margin: 0 auto;
   }
   h3 {
-<<<<<<< HEAD
-    font-size: 0.9em;
-    font-weight: 300;
-    color: #fff;
-    @include tablet {
-      font-size: 1.2em;
-=======
     font-size: 1.1em;
     font-weight: 300;
     color: #fff;
     @include tablet {
       font-size: 1.5em;
->>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
     }
     @include desktop {
       font-size: 2em;
@@ -77,25 +58,14 @@
   font-family: $fontfamily;
   text-align: center;
   font-size: 1.7rem;
-<<<<<<< HEAD
-  width: 90%;
-  max-width: 99%;
-=======
   width: 80%;
->>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   font-weight: normal;
   @include tablet {
     width: 99%;
     font-size: 2em;
   }
   @include desktop {
-<<<<<<< HEAD
-    font-size: 2.3rem;
-    margin: 2em auto 1em;
-    width: 99%;
-=======
     font-size: 2.3em;
->>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
   }
   span {
     color: $city-blue;
@@ -124,7 +94,7 @@
   height: 800px;
   margin: 1em 0 0;
   @include tablet {
-    height: auto;
+    height: 300px;
   }
   @include desktop {
     height: 400px;
@@ -137,25 +107,12 @@
     font-weight: bold;
   }
 }
-<<<<<<< HEAD
-.extra-margin {
-  margin-bottom: 1.5em;
-@include tablet {
-margin-bottom: 1em;
-}
-@include desktop {
-margin-bottom: 1.5em;
-}
-}
-=======
 
->>>>>>> b3d6e5e25a4482ad70a14e1cbf6caa06a480dfd9
 .recent-posts-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   margin: 0;
   max-width: 100%;
   @include tablet {
@@ -175,9 +132,9 @@ margin-bottom: 1.5em;
     width: 250px;
     margin: 1em;
     @include tablet {
-      height: 200px;
-      width: 250px;
-      margin: 1em;
+      height: 160px;
+      width: 210px;
+      margin: 0;
     }
     @include desktop {
       height: 240px;
@@ -192,8 +149,8 @@ margin-bottom: 1.5em;
     width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
     @include tablet {
-      height: 200px;
-      width: 250px;
+      height: 160px;
+      width: 210px;
     }
     @include desktop {
       height: 240px;

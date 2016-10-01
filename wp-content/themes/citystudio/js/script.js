@@ -21,7 +21,7 @@ jQuery(document).ready(function($){
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
         offset = nav.offset().top;
-        console.log(offset);  
+        console.log(offset);
         console.log(scroll);
 
       if (scroll >= offset) {
