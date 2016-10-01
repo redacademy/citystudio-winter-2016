@@ -27,13 +27,14 @@
 }
 .hero-blurb {
     text-align: center;
+    font-size: 1rem;
     font-weight: 700;
-    font-family: $fontfamily;
+    font-family: open_sans;
     display: flex;
+    -ms-flex-pack: center;
     justify-content: center;
     z-index: 1;
-    width: 80%;
-    padding: 8.5% 12%;
+    margin-top: 2em;
   @include tablet {
     margin: 0 auto;
   }

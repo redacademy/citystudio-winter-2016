@@ -1,5 +1,57 @@
 .team-citystudio-team {
   position: relative;
+<<<<<<< HEAD
+=======
+
+  .static-return-button {
+    position: absolute;
+    bottom: -46px;
+  }
+
+  .static-return-button {
+
+    a {
+      font-size: 1.1em;
+      font-family: $fontfamily;
+      color: $light-blue;
+      text-decoration: underline;
+      text-transform: uppercase;
+      padding: 0em;
+      margin-left: 2em;
+      border: none;
+      outline: none;
+
+      @include desktop {
+        padding: 1em;
+        margin-left: 3em;
+        font-size: 1.3em;
+      }
+    }
+    a:hover {
+      cursor: pointer;
+      filter:opacity(0.8);
+    }
+  }
+}
+
+// This should be in a more global place
+.banner-inner {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 0em;
+    justify-content: center;
+    padding-left: 1em;
+    max-width: 1280px;
+    margin-top: 6.5em;
+    z-index: -999;
+    padding-bottom: 2em;
+  @include desktop {
+    padding: 2% 4%;
+  }
+  @include tablet {
+    padding: 1% 4%;
+  }
+>>>>>>> update_styles
 }
 
 .team-container {

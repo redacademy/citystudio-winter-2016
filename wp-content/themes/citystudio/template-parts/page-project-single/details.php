@@ -43,7 +43,7 @@
 
       <div class="tags">
         <?php if(get_the_tag_list()) {
-          echo get_the_tag_list('<ul class="tag-list"><li>','</li><li>','</li></ul>');
+          echo get_the_tag_list('<ul class="tag-list"><li class="tag-li">','</li><li>','</li></ul>');
         } ?>
 
         <?php $id = get_the_id(); ?>

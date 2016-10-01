@@ -2,10 +2,10 @@ jQuery(document).ready(function($){
 
    var callToAction = $(".call-to-action");
 
-    if ($(window).width() <= 414){
+    if ($(window).width() <= 720){
         callToAction.css({"display": "none"});
-        // $('.header-container').css({"position": "fixed"});
-        // $('.header-nav').css({"position": "fixed"});
+        $('.header-container').css({"position": "fixed"});
+        $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
         },
@@ -112,4 +112,5 @@ jQuery(document).ready(function($){
         });
       });
   }
+ 
 });

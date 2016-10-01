@@ -5,6 +5,11 @@ jQuery(document).ready(function($) {
     $('.nav-div').css("background-color", "#006496");
   }
   // queryFilter holds an empty object for the checked navigation values/properties
+ 
+  var themeLabel = $('.theme-labels'),
+      partLabel = $('.part-labels'),
+      yearLabel = $('.year-labels');
+
   var queryFilter = {
     themes: '',
     partners: '',
@@ -14,89 +19,75 @@ jQuery(document).ready(function($) {
   checkedTheme = '',
   checkedPart = '',
   checkedYear = '';
-  // Sort navigation is open on page load on mobile
-  $('#sort_nav').click(function() {
-    $('.theme-labels').toggleClass('show-labels');
-    $('.part-labels').toggleClass('show-labels');
-    $('.year-labels').toggleClass('show-labels');
-  }); // close sort
+
   $('#refresh').click(function() {
     checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
+
     queryFilter = {
       themes: '',
       partners: '',
       year: ''
     }
-    $('.theme-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
+
+    themeLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    partLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    yearLabel.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+
     reloadProjects();
+
   }); // close refresh
-  $('.theme-labels').click(function(){
-    $(this).empty().hide();
-  });
-  $('.part-labels').click(function(){
-    $(this).empty().hide();
-  });
-  $('.year-labels').click(function(){
-    $(this).empty().hide();
-  });
-  $('.themes.sort-menu-item').click(function(){
+
+  $('.themes.sort-menu-item').on('click', function(){
     $(this).toggleClass('toggle-menu-item');
     $(this).children().toggleClass('toggle-menu-item');
     $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
-   $('.partners.sort-menu-item').click(function(){
+   $('.partners.sort-menu-item').on('click', function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
-  $('.years.sort-menu-item').click(function(){
+  $('.years.sort-menu-item').on('click', function(){
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
   });
-  $('.fa.fa-times').click(function(){
-    $('.theme-labels').empty().hide();
-    $('.part-labels').empty().hide();
-    $('.year-labels').empty().hide();
-    reloadProjects();
-  })
   // Remove class current-menu if mouse isn't hovering over menu-item
-  $('.themes').click(function(){
+  $('.themes').on('click', function(){
     $(this).children('.nav-sub-menu').children().addClass('current-menu');
   })
   // Create an empty object to hold
   // the checked navigation values in the properties
-  $('.sub-menu-theme').click(function() {
+  $('.sub-menu-theme').on('click', function() {
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();
-      $('.theme-labels')
+      themeLabel
           .show()
           .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
   });
-  $('.sub-menu-part').click(function() {
+  $('.sub-menu-part').on('click', function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
-      $('.part-labels')
+      partLabel
           .show()
           .append('<label>' + checkedPart + '</label>');
       $(this).parent().removeClass('current-menu');
       reloadProjects();
     }
   });
-  $('.sub-menu-year').click(function() {
+  $('.sub-menu-year').on('click', function() {
     if ($(this.checked)) {
       queryFilter.years = parseInt($(this).find('input').val());
       checkedYear = parseInt(($(this).text()).trim());
-      $('.year-labels')
+
+      yearLabel
           .show()
           .append('<label>' + checkedYear + '</label>');
       $(this).parent().removeClass('current-menu');
@@ -127,7 +118,7 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters(),
+          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             console.log("response", response);
