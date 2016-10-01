@@ -20,9 +20,7 @@ jQuery(document).ready(function($){
     var sticky = $('.sticky-navigation'),
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
-        offset = nav.offset().top;
-        console.log(offset);
-        console.log(scroll);
+        offset = nav.offset().top
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
@@ -31,25 +29,18 @@ jQuery(document).ready(function($){
           sticky.removeClass("fixed");
         }
       }
-
-    if ($('body').hasClass('blog') ) {
-
-      var bar = $('.blog-content-container'),
-          sideBar =$('.blog-sidebar'),
-          blogScroll = $(window).scrollTop(),
-          blogOffset = bar.offset().top;
-          console.log(blogOffset);
-          console.log(blogScroll);
-
-      if (blogScroll >= blogOffset) {
-         sideBar.addClass("fixed-sidebar");
-        }
-      else if(blogScroll <= blogOffset) {
-         sideBar.removeClass("fixed-sidebar");
-        }
-    }
+    });
   });
 
+function myFunction() {
+  var hamburger = document.getElementById("hamburgerMenu");
+  hamburger.classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outnerside of it
+window.onclick = function(e) {
+  e.preventDefault;
+  ('dropdown-content').show;
+}
 
 
 
@@ -78,16 +69,34 @@ jQuery(document).ready(function($){
 
   //code for mobile view
 
-  });
 });
 
 
-function myFunction() {
-  var hamburger = document.getElementById("hamburgerMenu");
-  hamburger.classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outnerside of it
-window.onclick = function(e) {
-  e.preventDefault;
-  ('dropdown-content').show;
-}
+// Load More
+jQuery(document).ready(function($){
+  if ($('body').hasClass('page-template-searchpage') && $('.js-page-numbers').length > 0)  {
+      var $loadMoreLink = $('.js-load-more'),
+        nextPageNum = parseInt($('.js-page-numbers .current').html()) + 1;
+
+      $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNum );
+
+      $(document).on('click', '.js-load-more', function (event) {
+        event.preventDefault();
+        var $this = $(this),
+          url = $this.attr('href');
+
+        $('.js-next-search-list').load(url + ' ul.search-list > a' ,function (response) {
+          var nextPageNumber = $('.js-next-search-list .search-post').last().data().nextPage;
+          if (nextPageNumber !== undefined) {
+            console.log("nextPageNumber", nextPageNumber);
+            $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNumber );
+          }
+
+          $('.js-next-search-list')
+            .removeClass('js-next-search-list')
+            .addClass('search-list');
+          $('.search-list-inner').append('<div class="js-next-search-list" />');
+        });
+      });
+  }
+});
