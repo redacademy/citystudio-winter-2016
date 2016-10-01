@@ -36,7 +36,6 @@
   }
 }
 .open {
-
   display: none;
   @include tablet{
     width: 100%;
@@ -57,7 +56,6 @@
   cursor: pointer;
     p{
       display: flex;
-      /*color: #fff;*/
       padding-left: 45px;
       letter-spacing: 3px;
       font-weight: 500;
@@ -160,13 +158,13 @@
   }
   @include desktop{
     display: block;
-    right: 5.5em;
+    right: 2.5em;
   }
   @include sort-hover{
     right: 7em;
   }
   @include mid-break{
-    right: 12em;
+    right: 13em;
   }
 }
 
