@@ -54,7 +54,12 @@ function myFunction() {
 // Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
   e.preventDefault;
-  ('dropdown-content').show;
+  $('.dropdown-content').show;
+
+  if($('.dropdown-content').is(":visible")) {
+      $('.dropdown-content').hide();
+  }
+
 }
 
 jQuery(document).ready(function($){
@@ -84,11 +89,11 @@ jQuery(document).ready(function($){
 });
 
 // Add an off menu click functionality
-$(document).click(function(event) {
-  if($('.dropdown-content').is(":visible")) {
-      $('.dropdown-content').hide();
-  }
-})
+// $(document).click(function(event) {
+//   if($('.dropdown-content').is(":visible")) {
+//       $('.dropdown-content').hide();
+//   }
+// })
 
 
 // Load More
