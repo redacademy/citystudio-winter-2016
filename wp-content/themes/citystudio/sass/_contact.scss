@@ -5,12 +5,14 @@
   height: 4em;
   width: 100%;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  @include tablet {
+    min-height: 5em;
+  }
   @include desktop {
     min-height: 6em;
   }
   h1 {
     color: #fff;
-    margin-left: 5.2%;
     font-family: $fontfamily;
     font-size: 2em;
     @include desktop {

@@ -33,7 +33,7 @@ get_header();
 				<p><?php the_field( 'team_member_bio' ); ?></p>
 			</div>
 
-	    <div class="static-return-button">
+	    <div class="static-return-button ppl-return">
 	      <a href="<?php echo esc_url( home_url( '/people' ) ); ?>"> << Back To People Page</a>
 	    </div>
 	  </article><!-- #post-## -->
