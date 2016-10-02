@@ -34,9 +34,10 @@ hr {
   margin-bottom: $base__space-unit;
 }
 hr.separate {
+  margin: 1em auto;
+  display: inline-block;
   border-bottom: 2.5px dashed $light-blue;
-  width: 90%;
-  margin: 3em auto;
+  width: 100%;
 }
 ul,
 ol {

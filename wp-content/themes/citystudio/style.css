@@ -456,9 +456,10 @@ hr {
   margin-bottom: 1.5em; }
 
 hr.separate {
+  margin: 1em auto;
+  display: inline-block;
   border-bottom: 2.5px dashed #2cb5e8;
-  width: 90%;
-  margin: 3em auto; }
+  width: 100%; }
 
 ul,
 ol {
@@ -2867,7 +2868,8 @@ a {
     width: 161px;
     height: 30px;
     margin: 0em !important;
-    border-radius: 5px; }
+    border-radius: 5px;
+    color: #ffffff; }
     @media screen and (min-width: 600px) {
       .themes p,
       .partners p,
@@ -3654,8 +3656,32 @@ a {
 .team-citystudio-team {
   position: relative; }
 
+.people-margin {
+  margin-bottom: 1em; }
+
+.team-height-wrap {
+  min-height: 600px;
+  margin: auto 0;
+  display: block; }
+  @media screen and (min-width: 600px) {
+    .team-height-wrap {
+      min-height: 500px; } }
+  @media screen and (min-width: 1024px) {
+    .team-height-wrap {
+      min-height: 500px; } }
+
+.other-height-wrap {
+  min-height: 500px;
+  margin: auto 0;
+  display: block; }
+  @media screen and (min-width: 600px) {
+    .other-height-wrap {
+      min-height: 300px; } }
+  @media screen and (min-width: 1024px) {
+    .other-height-wrap {
+      min-height: 280px; } }
+
 .team-container {
-  margin: 3em auto;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
@@ -3665,6 +3691,9 @@ a {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-flex-direction: column;
       -ms-flex-direction: column;
           flex-direction: column;
@@ -3672,49 +3701,73 @@ a {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  @media screen and (min-width: 600px) {
-    .team-container {
-      margin: 3em auto; } }
-  @media screen and (min-width: 1024px) {
-    .team-container {
-      margin: 4em auto; } }
   .team-container .section-titles {
+    display: block;
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
             flex: 0 1 100%;
-    margin-bottom: 1.5em;
     text-align: center;
+    margin: 1em 0 0.5em;
     font-size: 1.5em; }
+    @media screen and (min-width: 600px) {
+      .team-container .section-titles {
+        margin: 1em 0 0; } }
     @media screen and (min-width: 1024px) {
       .team-container .section-titles {
         font-size: 2em;
-        margin-bottom: 2em; } }
+        margin: 1em; } }
 
-.citystudio-teams ul {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.section-one-h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: "open_sans";
+  font-weight: bold;
+  margin: 2em 0;
+  height: 40px; }
+
+.team-ul-special {
+  min-height: 350px !important; }
+
+.people-wrap {
+  display: block; }
+
+.citystudio-team ul {
+  display: block;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center;
   -webkit-flex: 0 0 75%;
       -ms-flex: 0 0 75%;
           flex: 0 0 75%;
   max-width: 100%;
-  height: 300px; }
+  min-height: 300px; }
   @media screen and (min-width: 600px) {
-    .citystudio-teams ul {
+    .citystudio-team ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      min-height: 200px;
       -webkit-flex: 0 0 80%;
           -ms-flex: 0 0 80%;
-              flex: 0 0 80%; } }
+              flex: 0 0 80%;
+      padding: 1em; } }
   @media screen and (min-width: 1024px) {
-    .citystudio-teams ul {
+    .citystudio-team ul {
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-flex: 0 0 100%;
           -ms-flex: 0 0 100%;
-              flex: 0 0 100%; } }
+              flex: 0 0 100%;
+      min-height: 100px;
+      padding: 0; } }
 
 .team {
   display: -webkit-flex;
@@ -3737,9 +3790,9 @@ a {
   text-align: center; }
   @media screen and (min-width: 1024px) {
     .team {
-      -webkit-flex: 0 0 22%;
-          -ms-flex: 0 0 22%;
-              flex: 0 0 22%; } }
+      -webkit-flex: 0 1 22%;
+          -ms-flex: 0 1 22%;
+              flex: 0 1 22%; } }
   .team .team-pic {
     -webkit-flex: 0 1 100%;
         -ms-flex: 0 1 100%;
@@ -3793,7 +3846,10 @@ a {
           flex-direction: column;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
+          flex-wrap: wrap;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
   @media screen and (min-width: 600px) {
     .people-list {
       -webkit-flex-direction: row;
@@ -3820,7 +3876,8 @@ a {
   padding: 1em;
   -webkit-flex: 0 1 20%;
       -ms-flex: 0 1 20%;
-          flex: 0 1 20%; }
+          flex: 0 1 20%;
+  min-height: 100px; }
   @media screen and (min-width: 600px) {
     .leaders,
     .operations,
@@ -3928,7 +3985,7 @@ article.people {
     font-size: 1em; }
     @media screen and (min-width: 600px) {
       .person-right p {
-        font-size: .9em; } }
+        font-size: 0.9em; } }
     @media screen and (min-width: 1024px) {
       .person-right p {
         max-width: 80%;
