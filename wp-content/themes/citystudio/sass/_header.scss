@@ -7,7 +7,6 @@
   max-width: 100%;
   display: flex;
   justify-content: space-between;
-  // background-color: #ffffff;
   padding: 1.8% 1% 1.2%;
   z-index: 3;
 }
@@ -67,12 +66,15 @@
   }
 }
 .hamburger {
-  color: #2cb5e8;
+  color: $light-blue;
   font-weight: 400;
   font-size: 2em;
   border: none;
   display: flex;
   &:hover {
+    color: $medium-blue;
+  }
+  &:active {
     color: $medium-blue;
   }
 }
@@ -86,7 +88,10 @@
   .fa {
     color: $light-blue;
     font-size: 2rem;
-    &:hover {
+    &:hover, &:visited {
+      color: $medium-blue;
+    }
+    &:active {
       color: $medium-blue;
     }
   }
