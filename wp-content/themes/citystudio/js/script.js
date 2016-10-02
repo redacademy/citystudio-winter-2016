@@ -37,7 +37,7 @@ jQuery(document).ready(function($){
           sideBar =$('.blog-sidebar'),
           blogScroll = $(window).scrollTop(),
           blogOffset = bar.offset().top;
-          
+
       if (blogScroll >= blogOffset) {
          sideBar.addClass("fixed-sidebar");
         }
@@ -81,8 +81,14 @@ jQuery(document).ready(function($){
   menuSubmenu.show();
 
   //code for mobile view
-
 });
+
+// Add an off menu click functionality
+$(document).click(function(event) {
+  if($('.dropdown-content').is(":visible")) {
+      $('.dropdown-content').hide();
+  }
+})
 
 
 // Load More
