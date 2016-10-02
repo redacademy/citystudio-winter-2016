@@ -66,6 +66,9 @@
       margin: 0em !important;
       border-radius: 5px;
       color: #ffffff;
+      &:hover{
+        color: $city-blue;
+      }
       @include tablet{
         width: 173px;
       }
@@ -85,6 +88,7 @@
     width: 100%;
     font-size: 32px;
     margin: -22px 14px;
+    line-height: 1em;
   }
   .fa-times{
     color: $medium_blue;
@@ -153,15 +157,15 @@
   padding-top: 2em;
   opacity: 0;
   position: absolute;
-  transition: all 1s ease-in; 
+  transition: all 1s ease-in;
   @include tablet{
     display: none;
   }
   @include desktop{
     display: block;
-    right: 5.5em;
+    right: 2.5em;
   }
-  @include sort-hover{
+  @include sort-hover {
     right: 7em;
   }
   @include mid-break{
@@ -185,13 +189,10 @@
     display: none;
     border: 1px solid $city-blue;
     background-color: white;
-    @include tablet{
-      right: -1px;
-    }
     &:hover {
       transition: background-color 1s ease-in;
       cursor: pointer;
-   }
+  }
 
   .sub-menu-theme span,
   .sub-menu-part span,
@@ -200,7 +201,7 @@
     font-size: 12px;
     padding-left: 3em;
     @include tablet{
-      padding-left: 1em;
+      padding-left: 1.2em;
     }
   }
   .sub-menu-theme span:hover,
@@ -230,31 +231,26 @@
     border-top-color: #fff;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
+    z-index: 1;
     right: 1px;
-    z-index: 1; 
-   @include tablet{
-    width: 155px;
-   }
+    background: white;
+    color: $city-blue;
+    &:hover{
+      color: $city-blue
+    }
   p{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .8em 1.6em;
+    padding: .3em 2em;
+    color: $city-blue;
    &:hover{
       color: $city-blue;
-    width: 164px;
-    border: 1px solid #0198d5;
-    border-radius: 5px;
-    text-decoration: underline;
-    margin: -1px !important;
-    @include tablet{
-      width: 151px;
-      padding-left: 20px;
-      }
     }
   }
 }
+
 .theme-selection,
 .partners-selection,
 .years-selection{
@@ -271,16 +267,15 @@
 }
 
 .open .sort-menu-item {
-    opacity: .9;
-    margin: 0;
-    text-transform: uppercase;
-    color: #006493;
-    border-radius: 5px;
-    width: 208px;
-    margin: 1.8em 0;
-    @include tablet{
-      width: 171px;
-    }
+  opacity: .97;
+  margin: 0;
+  text-transform: uppercase;
+  color: #006493;
+  border-radius: 5px;
+  width: 208px;
+  margin: 1.8em 0;
+  width: 175px;
+  border: 1px solid $city-blue;
 }
 
 .open {
@@ -347,9 +342,6 @@
     padding-top: 1px;
     margin-right: 1x;
     left: -1px;
-    @include tablet{
-      width: 170px;
-    }
     label {
       font-size: .7rem;
       text-transform: capitalize;
@@ -371,6 +363,8 @@
   display: none;
   transition: all .3s ease;
   height: 5em;
+  @include desktop{
+  }
   @include tablet{
     display: block;
   }
