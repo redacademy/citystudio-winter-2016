@@ -4,17 +4,12 @@
 }
 .header-container {
   align-items: center;
-  max-width: 100%;
   display: flex;
   justify-content: space-between;
-  // background-color: #ffffff;
-  padding: 1.8% 1% 1.2%;
+  background-color: #ffffff;
   z-index: 3;
 }
 .site-branding {
-  flex-basis: 75%;
-  height: 100%;
-  order: 1;
   @include desktop {
     margin-right: 0;
   }
@@ -40,7 +35,7 @@
     width: 48%;
   }
   @include desktop {
-   width: 40%;
+    width: 100%;
   }
 }
 .site-navigation {
@@ -66,11 +61,12 @@
   }
   @include desktop {
     font-size: 2em;
-  justify-content: center;
-  margin-top: 1.5em;
-  @include desktop{
-    margin-top: 2em;
+    justify-content: center;
+    /*margin-top: 1.5em;*/
   }
+  @include desktop{
+/*    margin-top: 2em;
+*/  }
 }
 .icon-search {
     position: relative;
@@ -86,9 +82,7 @@
     color: $light-blue;
     font-size: 1em;
     position: absolute;
-    &:hover {
-      color: $medium-blue;
- 
+
     @include desktop {
       font-size: 1em;
     }
@@ -128,70 +122,30 @@
   }
 }
 /*----------- menu nav -------------*/
-.header-nav {
+
+.header-nav{
   border-top: 4px solid #2cb5e8;
   border-bottom: 4px solid #2cb5e8;
   background-color: #f7f9f9;
-  top: 4em;
-  width: 100%;
+  width: 80%;
   height: auto;
   padding: 10% 4%;
-}
-.header-nav li a {
-  display: inline;
-  width: 100%;
-}
-.header-nav{
-    border-top: 4px solid #2cb5e8;
-    border-bottom: 4px solid #2cb5e8;
-    background-color: #f7f9f9;
-    width: 100%;
-    position: fixed;
-    left: 0px;
-    top: 3.8em;
-    height: 85.8vh;
-  @include iphone6{
-    top: 3.9em;
-    height: 89.6vh;
-  }
-  @include tablet{
-    top: 4.5em;
-    left: 56%;
-    position: absolute;
-    height: 55.6vh;
-    width: 44%;
-    }
-  @include desktop{
-    top: 5em;
-    width: 34%;
-    height: 56vh;
-    right: 0;
-    left: 66%;
-  }
-  @include mid-break{
-    top: 5em;
-    width: 25%;
-    height: 56vh;
-    right: 0;
-    left: 75%;
-  }
+  margin-top: 3em;
+  margin-left: 6.6em;
 }
 .header-nav li a{
   display: flex;
-  width: 100px;
-  padding-left: 3em;
+  width: 140px;
+  padding-left: 2em;
   height: 1.5em;
 }
 .header-nav li ul {
   background-color: #f9f9f9;
-  top: 150px;
-  left: 140px;
+  left: 160px;
+  top: 0;
   position: absolute;
-  z-index: -1;
   font-size: 10px;
-  @include desktop{
-    top: 180px;
-  }
+  width: 120px;
 }
 .menu-item {
   font-weight: 500;
@@ -199,18 +153,16 @@
   z-index: 0;
   // background-color: white;
   margin: 0.5em 0;
-  max-width: 100px;
+  max-width: 200px;
 }
 .hamburger-menu {
   width: 70px;
   height: 70px;
 }
 .dropdown-content {
-  // display: none;
   position: absolute;
   right: 0;
   min-width: 450px;
-  top: 70px;
   display: none;
 }
 .dropdown-content a {
@@ -245,13 +197,9 @@ button.hamburger{
     color: $medium-blue;
   }
   @include tablet{
-    top: .7em;
-    right: 1em;
+   top: 0;
   }
-  @include desktop{
-    top: 1em;
-  }
-}
+ }
 
 .header-nav a {
   display: block;
@@ -361,8 +309,10 @@ button.hamburger{
       right: 1em;
     }
   }
+} 
+.dropdown-content a:hover {
+  background-color: #f1f1f1
 }
-.dropdown-content a:hover {background-color: #f1f1f1}
 .show {
   display: block;
   z-index: 3;
@@ -372,13 +322,9 @@ button.hamburger{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-left: 2.5em;
-  padding: 2.2em 0 0;
   @include iphone6{
-    padding: 3.2em 0 0;
   }
   @include desktop{
-    padding-top: 3em;
   }
 }
 .menu-menu-container {
@@ -388,33 +334,15 @@ button.hamburger{
     z-index: 3;
   }
 }
-// .header-nav li ul {
-//   background-color: #f9f9f9;
-//   top: 197px;
-//   left: 180px;
-//   position: absolute;
-//   z-index: -1;
-//
-//   @include desktop{
-//     top: 165px;
-//   }
-//
-//   li {
-//     display: inline-block;
-//   }
-// }
 .sub-menu {
   visibility: hidden;
   display: inline-block;
   position: absolute;
   font-size: 12px;
-  min-height: 250px;
+  min-height: 235px;
   padding: 2% 7%;
-  top: -93px;
   width: 230px;
   left: 115px;
-  z-index: 1000;
-  padding: 2% 4%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

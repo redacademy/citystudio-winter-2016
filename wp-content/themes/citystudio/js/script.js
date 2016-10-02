@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 
    var callToAction = $(".call-to-action");
 
-    if ($(window).width() <= 720){
+    if ($(window).width() <= 600){
         callToAction.css({"display": "none"});
         $('.header-container').css({"position": "fixed"});
         $('.header-nav').css({"position": "fixed"});

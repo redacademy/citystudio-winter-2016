@@ -191,7 +191,7 @@
     &:hover {
       transition: background-color 1s ease-in;
       cursor: pointer;
-  }
+   }
 
   .sub-menu-theme span,
   .sub-menu-part span,
@@ -251,10 +251,10 @@
     @include tablet{
       width: 151px;
       padding-left: 20px;
+      }
     }
   }
 }
-
 .theme-selection,
 .partners-selection,
 .years-selection{
