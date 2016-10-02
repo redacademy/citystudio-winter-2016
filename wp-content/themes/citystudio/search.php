@@ -15,8 +15,8 @@ get_header(); ?>
 				<div class="search-list-container">
 					<ul class="search-list">
 						<?php
-$s=get_search_query();
-$args = array(
+						$s=get_search_query();
+						$args = array(
                 's' =>$s
             );
     // The Query

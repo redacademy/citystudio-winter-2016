@@ -4,106 +4,103 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
   background: $dark-blue;
-  @include desktop {
-   flex-direction: row;
-  }
-  @include iphone6 {
-    position: relative;
-    z-index: -1;
-  }
-  @include iphone6-horizontal{
-
-  }
-
+  padding: 2%;
 }
+
 //Footer Branding----------------------
 .footer-branding-container {
-  margin-left: 0.5rem;
-  margin-top: 1em;
+  flex-basis: 100%;
+  order: 1;
+  @include tablet{
+    width: 40vw;
+  }
   @include desktop {
-    margin-left: 3em;
-    margin-top: 1em;
+    width: 25%;
   }
 }
+
 .footer-logo {
-  display: block;
-  height: 3rem;
-  width: 11em;
+  order: 1;
+  text-align: center;
   img {
-    opacity: 0.4;
+    opacity: .4;
+    min-width: 275px;
+    width: 275px;
+    height: auto;
+  }
+  @include tablet{
+    text-align: left;
   }
   @include desktop {
-    width: 17em;
-    margin-bottom: 1em;
+    order: 1;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
   }
 }
 .social-icons-div {
   display: flex;
-  align-items: flex-start;
+  width: 95vw;
+  flex-basis: 100%;
+  order: 2;
   justify-content: center;
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-  width: 190px;
-  // @include iphone6-horizontal {
-  //   display: inline;
-  //   justify-content: flex-start;
-  //   margin-bottom: 5px;
-  // }
+  @include tablet{
+    justify-content: initial;
+  }
 }
 .social-icons {
   height: 1rem;
   width: 1rem;
   max-width: 50%;
-  margin-top: .5rem;
-  margin-right: 1.5rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  height: 1.5rem;
+  width: 1.5rem;
+
   &:hover {
     cursor: pointer;
   }
-  @include desktop {
-    margin-right: 2rem;
-    margin-top: 1rem;
-    height: 1.5rem;
-    width: 1.5rem;
-  }
 }
 .footer-info-container {
-  margin: 0;
+  flex-basis: 100%;
+  order: 2;
+  margin: 1.5em auto;
   display: none;
+  @include tablet{
+    display: flex;
+  }
+
   @include desktop {
     display: flex;
-    flex-direction: row;
-    margin-right: 2rem;
+    flex-basis: 50%;
+    margin: 0;
   }
 }
+
 .footer-info-block {
-  ul li {
-    height: 5%;
+  ul {
+    padding: 2%;
   }
 
 }
-
-.footer-info-block2{
-  @include iphone6-horizontal{
-      display: none;
-  }
-}
-
 .footer-info-block,
 .footer-info-block1,
 .footer-info-block2 {
-  @include desktop {
-    display: block;
-    color: white;
-    width: 40%;
-    font-family: sans-serif;
-    margin: 3rem 2rem 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 18vw;
+    text-align: center;
+  @include tablet {
     h3 {
       margin-bottom: 0.25rem;
       opacity: 0.9;
       font-size: 1rem;
     }
+
     h3,
     li, a {
       color: white;
@@ -111,23 +108,30 @@
       text-align: center;
       text-decoration: none;
     }
-    ul li {
+
+    li {
       font-size: 0.85rem;
-      width: 9rem;
+      width: 100%;
       opacity: 0.7;
-      line-height: 1.75em;
+      line-height: 2em;
     }
+
     li:hover, a:hover {
       cursor: pointer;
       color: $light_blue;
       text-decoration: underline;
     }
-      .menu-item {
+
+    .menu-item {
       background-color: transparent;
+      margin: 0;
     }
   }
-  @include iphone6-horizontal{
-    display: none;
+  @include desktop{
+    width: 15vw;
+  }
+  @include mid-break{
+    width: 12vw;
   }
 }
 .copyright {

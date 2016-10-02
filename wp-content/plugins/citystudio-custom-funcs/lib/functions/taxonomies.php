@@ -124,7 +124,7 @@ function year_taxonomy() {
 		'show_in_nav_menus'          => true,
 		'show_tagcloud'              => true,
 	);
-	register_taxonomy( 'year', array( 'project' ), $args );
+	register_taxonomy( 'years', array( 'project' ), $args );
 
 }
 add_action( 'init', 'year_taxonomy', 0 );

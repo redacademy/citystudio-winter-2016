@@ -148,6 +148,11 @@ font-size: 1.5em;
   }
 }
 //ARCHIVE GRID-----------------------
+
+.search-list-inner {
+  padding: 5% 0 0;
+}
+
 .search-list {
   display: flex;
   flex-direction: row;
@@ -156,14 +161,16 @@ font-size: 1.5em;
   align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 1em auto 0;
+  margin: 0 auto;
+  list-style: none;
+
   @include tablet {
     justify-content: space-around;
-    margin: 2em auto 0;
+    margin: 0 auto;
   }
   @include desktop {
     justify-content: space-around;
-    margin: 3rem auto 0;
+    margin: 30 auto;
   }
   li,
   a {

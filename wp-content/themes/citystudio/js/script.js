@@ -21,8 +21,6 @@ jQuery(document).ready(function($){
         nav = $('.homepage-description'),
         scroll = $(window).scrollTop(),
         offset = nav.offset().top;
-        console.log(offset);  
-        console.log(scroll);
 
       if (scroll >= offset) {
          sticky.addClass("fixed");
@@ -31,6 +29,7 @@ jQuery(document).ready(function($){
           sticky.removeClass("fixed");
         }
       }
+    });
 
     if ($('body').hasClass('blog') ) {
 
@@ -38,8 +37,6 @@ jQuery(document).ready(function($){
           sideBar =$('.blog-sidebar'),
           blogScroll = $(window).scrollTop(),
           blogOffset = bar.offset().top;
-          console.log(blogOffset);
-          console.log(blogScroll);
 
       if (blogScroll >= blogOffset) {
          sideBar.addClass("fixed-sidebar");
@@ -50,6 +47,15 @@ jQuery(document).ready(function($){
     }
   });
 
+function myFunction() {
+  var hamburger = document.getElementById("hamburgerMenu");
+  hamburger.classList.toggle("show");
+}
+// Close the dropdown menu if the user clicks outnerside of it
+window.onclick = function(e) {
+  e.preventDefault;
+  ('dropdown-content').show;
+}
 
 jQuery(document).ready(function($){
 
@@ -74,18 +80,42 @@ jQuery(document).ready(function($){
   var menuSubmenu = $(".menu").children().children();
   menuSubmenu.show();
 
-  //code for mobile vie
-
-  });
+  //code for mobile view
 });
 
+// Add an off menu click functionality
+$(document).click(function(event) {
+  if($('.dropdown-content').is(":visible")) {
+      $('.dropdown-content').hide();
+  }
+})
 
-function myFunction() {
-  var hamburger = document.getElementById("hamburgerMenu");
-  hamburger.classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outnerside of it
-window.onclick = function(e) {
-  e.preventDefault;
-  ('dropdown-content').show;
-}
+
+// Load More
+jQuery(document).ready(function($){
+  if ($('body').hasClass('page-template-searchpage') && $('.js-page-numbers').length > 0)  {
+      var $loadMoreLink = $('.js-load-more'),
+        nextPageNum = parseInt($('.js-page-numbers .current').html()) + 1;
+
+      $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNum );
+
+      $(document).on('click', '.js-load-more', function (event) {
+        event.preventDefault();
+        var $this = $(this),
+          url = $this.attr('href');
+
+        $('.js-next-search-list').load(url + ' ul.search-list > a' ,function (response) {
+          var nextPageNumber = $('.js-next-search-list .search-post').last().data().nextPage;
+          if (nextPageNumber !== undefined) {
+            console.log("nextPageNumber", nextPageNumber);
+            $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNumber );
+          }
+
+          $('.js-next-search-list')
+            .removeClass('js-next-search-list')
+            .addClass('search-list');
+          $('.search-list-inner').append('<div class="js-next-search-list" />');
+        });
+      });
+  }
+});

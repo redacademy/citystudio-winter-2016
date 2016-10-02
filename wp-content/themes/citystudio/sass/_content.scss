@@ -88,6 +88,8 @@
   height: 100%;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  padding: 0 4%;
+
   @include desktop {
   background-size: cover;
   background-position: center center;
