@@ -148,9 +148,8 @@
       margin: 2em;
       font-size: 1.25em;
     }
-   
-    }
   }
+}
 //ARCHIVE GRID-----------------------
 .search-list {
   display: flex;
@@ -201,6 +200,7 @@
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
+      }
     }
   }
 }

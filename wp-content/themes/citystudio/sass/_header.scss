@@ -4,12 +4,13 @@
 }
 .header-container {
   align-items: center;
-  max-width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  // background-color: #ffffff;
+  background-color: #ffffff;
   padding: 1.8% 1% 1.2%;
   z-index: 3;
+
 }
 .site-branding {
   flex-basis: 75%;
@@ -33,15 +34,8 @@
   }
 }
 .site-branding img {
-  width: 250px;
+  width: 65vw;
   padding: .3em;
-
-  @include tablet{
-    width: 48%;
-  }
-  @include desktop {
-   width: 40%;
-  }
 }
 .site-navigation {
   display: flex;
@@ -59,21 +53,8 @@
   }
 }
 .icon-search {
-  display: none;
-  @include tablet {
-    display: block;
-    font-size: 2em;
-  }
-  @include desktop {
-    font-size: 2em;
-  justify-content: center;
-  margin-top: 1.5em;
-  @include desktop{
-    margin-top: 2em;
-  }
-}
-.icon-search {
     position: relative;
+
     @include tablet{
     display: block;
     font-size: 2em;
@@ -83,12 +64,10 @@
     margin-right: 7.5em;
   }
   .fa {
-    color: $light-blue;
-    font-size: 1em;
-    position: absolute;
-    &:hover {
-      color: $medium-blue;
- 
+    color: #2cb5e8;
+    font-size: 1.4em;
+    margin-right: 2.7em;
+    margin-top: .1em;
     @include desktop {
       font-size: 1em;
     }
@@ -128,15 +107,7 @@
   }
 }
 /*----------- menu nav -------------*/
-.header-nav {
-  border-top: 4px solid #2cb5e8;
-  border-bottom: 4px solid #2cb5e8;
-  background-color: #f7f9f9;
-  top: 4em;
-  width: 100%;
-  height: auto;
-  padding: 10% 4%;
-}
+
 .header-nav li a {
   display: inline;
   width: 100%;
@@ -147,10 +118,10 @@
     background-color: #f7f9f9;
     width: 100%;
     position: fixed;
-    left: 0px;
-    top: 3.8em;
-    height: 85.8vh;
-  @include iphone6{
+    left: 0;
+    top: 4em;
+    height: 88.8vh;
+/*  @include iphone6{
     top: 3.9em;
     height: 89.6vh;
   }
@@ -174,17 +145,16 @@
     height: 56vh;
     right: 0;
     left: 75%;
-  }
+  }*/
 }
 .header-nav li a{
   display: flex;
-  width: 100px;
+  width: 220px;
   padding-left: 3em;
   height: 1.5em;
 }
 .header-nav li ul {
   background-color: #f9f9f9;
-  top: 150px;
   left: 140px;
   position: absolute;
   z-index: -1;
@@ -197,7 +167,6 @@
   font-weight: 500;
   position: relative;
   z-index: 0;
-  // background-color: white;
   margin: 0.5em 0;
   max-width: 100px;
 }
@@ -234,10 +203,9 @@
 button.hamburger{
   color: #2cb5e8;
   font-weight: 400;
-  font-size: 2em;
+  font-size: 1.5em;
   position: absolute;
   right: .5em;
-  top: .5em;
   background: 0 0;
   border: none;
   display: flex;
@@ -245,11 +213,8 @@ button.hamburger{
     color: $medium-blue;
   }
   @include tablet{
-    top: .7em;
+    top: 0;
     right: 1em;
-  }
-  @include desktop{
-    top: 1em;
   }
 }
 
@@ -372,7 +337,6 @@ button.hamburger{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  margin-left: 2.5em;
   padding: 2.2em 0 0;
   @include iphone6{
     padding: 3.2em 0 0;
@@ -388,21 +352,7 @@ button.hamburger{
     z-index: 3;
   }
 }
-// .header-nav li ul {
-//   background-color: #f9f9f9;
-//   top: 197px;
-//   left: 180px;
-//   position: absolute;
-//   z-index: -1;
-//
-//   @include desktop{
-//     top: 165px;
-//   }
-//
-//   li {
-//     display: inline-block;
-//   }
-// }
+
 .sub-menu {
   visibility: hidden;
   display: inline-block;
@@ -420,7 +370,7 @@ button.hamburger{
   justify-content: space-between;
   border-left: 2px solid $city-blue;
   li {
-    display: inline-block;
+    display: block;
   }
   li a {
     font-size: 16px;

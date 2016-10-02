@@ -1,13 +1,9 @@
 .team-citystudio-team {
   position: relative;
-<<<<<<< HEAD
-=======
-
   .static-return-button {
     position: absolute;
     bottom: -46px;
   }
-
   .static-return-button {
 
     a {
@@ -51,7 +47,6 @@
   @include tablet {
     padding: 1% 4%;
   }
->>>>>>> update_styles
 }
 
 .team-container {
@@ -207,13 +202,13 @@ article.people {
 .person-left {
   display: none;
   @include tablet {
-display: block;
-flex: 0 1 30%;
-border-radius: 50%;
-overflow: hidden;
-max-width: 200px;
-max-height: 200px;
-margin: 1em 0 2em 4em;
+    display: block;
+    flex: 0 1 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 1em 0 2em 4em;
 }
   @include desktop {
     display: block;
@@ -275,9 +270,7 @@ flex: 0 0 60%;
     color: $light-blue;
     font-family: $fontfamily;
   }
-}
-
-
+} 
   .static-return-button {
     position: absolute;
     bottom: -46px;
