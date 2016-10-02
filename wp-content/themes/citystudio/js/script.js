@@ -59,7 +59,7 @@ window.onclick = function(e) {
 
 jQuery(document).ready(function($){
 
-  $(".hamburger").click(function(){
+  $(".hamburger").on('click', function(){
     var menuIcon = $("i", this);
     menuIcon.removeClass("fa-bars");
   });
@@ -69,11 +69,9 @@ jQuery(document).ready(function($){
       menuIcon.addClass("fa-times-circle");
     }, function() {
 
-     var menuIcon = $("i", this);
-
-     menuIcon.removeClass("fa-times-circle");
-     menuIcon.addClass("fa-bars");
-     $('.header-container').css({"position": "relative"});
+       menuIcon.removeClass("fa-times-circle");
+       menuIcon.addClass("fa-bars");
+       $('.header-container').css({"position": "relative"});
     }
   );
 
