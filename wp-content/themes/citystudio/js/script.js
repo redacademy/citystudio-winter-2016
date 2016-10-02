@@ -54,7 +54,12 @@ function myFunction() {
 // Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
   e.preventDefault;
-  ('dropdown-content').show;
+  ('.dropdown-content').show;
+
+  // if($('.dropdown-content').is(":visable")){
+  //   $('.dropdown-content').hide();
+  // }
+
 }
 
 jQuery(document).ready(function($){
