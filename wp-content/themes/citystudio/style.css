@@ -3177,8 +3177,13 @@ a {
     width: 161px;
     height: 30px;
     margin: 0em !important;
+<<<<<<< HEAD
     border-radius: 5px; }
 <<<<<<< HEAD
+=======
+    border-radius: 5px;
+    color: #ffffff; }
+>>>>>>> 38ec1e1630ba740a5971dea2b0d6682ff7781e55
     @media screen and (min-width: 600px) {
 =======
     @media screen and (min-width: 720px) {
