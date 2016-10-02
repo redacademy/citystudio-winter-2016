@@ -2,136 +2,97 @@
 # Elements
 --------------------------------------------------------------*/
 
-html {
-	box-sizing: border-box;
-	@include font-size(1);
+*, a, a:hover, a:active, a:focus {
+  outline: 0 !important;
 }
 
+html {
+  box-sizing: border-box;
+  @include font-size(1);
+}
 *,
 *:before,
-*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
-	box-sizing: inherit;
+*:after {
+  /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+  box-sizing: inherit;
 }
-
 body {
-	background: $color__background-body; /* Fallback for when there is no custom background color defined. */
+  background: $color__background-body;
+  /* Fallback for when there is no custom background color defined. */
 }
-
-blockquote, q {
-	quotes: "" "";
-
-	&:before,
-	&:after {
-		content: "";
-	}
+blockquote,
+q {
+  quotes: "" "";
+  &:before,
+  &:after {
+    content: "";
+  }
 }
-
 hr {
-	border: 0;
-	height: 1px;
-	margin-bottom: $base__space-unit;
+  border: 0;
+  height: 1px;
+  margin-bottom: $base__space-unit;
 }
-
 hr.separate {
-	border-bottom: 2.5px dashed $light-blue;
-	width: 98%;
-	margin-top: 3em;
-	margin-bottom: 2em;
+  margin: 1em auto;
+  display: inline-block;
+  border-bottom: 2.5px dashed $light-blue;
+  width: 100%;
 }
-
-ul, ol {
-	margin: 0 0 $base__space-unit ($base__space-unit * 2);
-}
-
-ul {
-	list-style: none;
-	margin: 0px;
-}
-
+ul,
 ol {
-	list-style: decimal;
+  margin: 0 0 $base__space-unit ($base__space-unit * 2);
 }
-
+ul {
+  list-style: none;
+  margin: 0;
+}
+ol {
+  list-style: decimal;
+}
 li > ul,
 li > ol {
-	margin-bottom: 0;
-	margin-left: $base__space-unit;
+  margin-bottom: 0;
+  margin-left: $base__space-unit;
 }
-
 dt {
-	font-weight: bold;
+  font-weight: bold;
 }
-
 dd {
-	margin: 0 $base__space-unit $base__space-unit;
+  margin: 0 $base__space-unit $base__space-unit;
 }
-
 img {
-	height: auto; /* Make sure images are scaled correctly. */
-	max-width: 100%; /* Adhere to container width. */
+  height: auto;
+  /* Make sure images are scaled correctly. */
+  max-width: 100%;
+  /* Adhere to container width. */
 }
-
 table {
-	margin: 0 0 $base__space-unit;
-	width: 100%;
+  margin: 0 0 $base__space-unit;
+  width: 100%;
 }
-
 /* Content Wrapper for All Pages */
-
 .content-wrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-wrap: wrap;
   margin: 0 auto;
+  width: 100%;
 }
-
 // Anchor Styles for People Page
-
 h3.people-title {
-	color: $medium-blue;
-	text-decoration: underline;
-	font-weight: 700;
-	font-family: $fontfamily;
-	font-size: 1em;
-
-	&:hover {
-		cursor: pointer;
-	}
+  color: $medium-blue;
+  text-decoration: underline;
+  font-weight: 700;
+  font-family: $fontfamily;
+  font-size: 1em;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
-
-// Button styles
-
-button {
-	background-color: transparent;
-}
-
-.button-blue {
-	background-color: $medium-blue;
-	border: 1px solid $medium-blue;
-	color: #ffffff;
-	display: inline-block;
-	padding: 1.2% 3%;
-	text-transform: uppercase;
-	font-weight: lighter;
-	letter-spacing: 2px;
-	margin: 0 auto;
-	border-radius: 10px;
-	box-sizing: border-box;
-	transition: background-color 0.5s ease;
-
-	&:active, &:visited {
-		color: #ffffff;
-	}
-
-	&:hover {
-		background-color: transparent;
-		border: 1px solid $medium-blue;
-		color: $medium-blue;
-		padding: 1.2% 3%;
-	}
+a,
+a:hover,
+a:active,
+a:focus {
+  outline: none;
 }

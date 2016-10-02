@@ -1,84 +1,88 @@
 .team-citystudio-team {
   position: relative;
-
-  .static-return-button {
-    position: absolute;
-    bottom: -46px;
-  }
-
-  .static-return-button {
-
-    a {
-      font-size: 1.1em;
-      font-family: $fontfamily;
-      color: $light-blue;
-      text-decoration: underline;
-      text-transform: uppercase;
-      padding: 0em;
-      margin-left: 2em;
-      border: none;
-      outline: none;
-
-      @include desktop {
-        padding: 1em;
-        margin-left: 3em;
-        font-size: 1.3em;
-      }
-    }
-    a:hover {
-      cursor: pointer;
-      filter:opacity(0.8);
-    }
-  }
 }
-
-// This should be in a more global place
-.banner-inner {
-    display: flex;
-    flex-direction: column-reverse;
-    height: 0em;
-    justify-content: center;
-    padding-left: 1em;
-    max-width: 1280px;
-    margin-top: 2em;
-    z-index: -999;
-
-  @include desktop {
-    padding: 2% 4%;
-  }
+.people-margin {
+  margin-bottom: 1em;
+}
+.team-height-wrap {
+  min-height: 600px;
+  margin: auto 0;
+  display: block;
   @include tablet {
-    padding: 1% 4%;
+    min-height: 500px;
+  }
+  @include desktop {
+    min-height: 500px;
   }
 }
-
+.other-height-wrap {
+  min-height: 500px;
+  margin: auto 0;
+  display: block;
+  @include tablet {
+    min-height: 300px;
+  }
+  @include desktop {
+    min-height: 280px;
+  }
+}
 .team-container {
-  margin: 3em .5em;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
-  @include desktop {
-    margin: 4em 2em;
-  }
+  width: 100%;
+  align-items: center;
   .section-titles {
+    display: block;
     flex: 0 1 100%;
-    margin-bottom: 1.5em;
     text-align: center;
+    margin: 1em 0 0.5em;
     font-size: 1.5em;
+    @include tablet {
+      margin: 1em 0 0;
+    }
     @include desktop {
       font-size: 2em;
-      margin-bottom: 2em;
+      margin: 1em;
     }
   }
 }
-.citystudio-teams {
+.section-one-h2 {
+  text-align: center;
+  font-size: 2em;
+  font-family: $fontfamily;
+  font-weight: bold;
+  margin: 2em 0;
+  height: 40px;
+}
+.team-ul-special {
+  min-height: 350px !important;
+}
+.people-wrap {
+  display: block;
+}
+.citystudio-team {
   ul {
-    display: flex;
+    display: block;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     flex: 0 0 75%;
+    max-width: 100%;
+    min-height: 300px;
+    @include tablet {
+      display: flex;
+      min-height: 200px;
+      flex: 0 0 80%;
+      padding: 1em;
+    }
     @include desktop {
+      display: flex;
       flex: 0 0 100%;
+      min-height: 100px;
+      padding: 0;
     }
   }
 }
@@ -92,19 +96,32 @@
   padding: 1em;
   text-align: center;
   @include desktop {
-    flex: 0 0 22%;
+    flex: 0 1 22%;
   }
   .team-pic {
     flex: 0 1 100%;
-    border-radius: 100%;
+    border-radius: 50%;
     overflow: hidden;
     max-width: 200px;
     max-height: 200px;
     margin-bottom: 1em;
+    height: 150px;
+    width: 150px;
+    @include tablet {
+      height: 175px;
+      width: 175px;
+    }
+    @include desktop {
+      height: 200px;
+      width: 200px;
+    }
   }
   h3 {
     flex: 0 2 100%;
-    line-height: 10px;
+    line-height: 18px;
+    @include desktop {
+      line-height: 10px;
+    }
   }
   p {
     flex: 0 3 100%;
@@ -129,8 +146,12 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-@include desktop {
-  flex-direction: row;
+  align-items: center;
+  @include tablet {
+    flex-direction: row;
+  }
+  @include desktop {
+    flex-direction: row;
   }
 }
 .leaders,
@@ -139,13 +160,20 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding:1em;
+  padding: 1em;
   flex: 0 1 20%;
+  min-height: 100px;
+  @include tablet {
+    flex: 0 1 40%;
+  }
+  @include desktop {
+    flex: 0 1 20%;
+  }
   h3 {
     text-decoration: none;
     text-align: center;
     width: 100%;
-  font-family: $fontfamily;
+    font-family: $fontfamily;
     .people-title {
       font-size: 1.4em;
       margin-bottom: 0.25em;
@@ -153,8 +181,9 @@
   }
   p {
     text-align: center;
-    margin-bottom: 0px;
-  font-family: $fontfamily;
+    margin-bottom: 0;
+    font-family: $fontfamily;
+    max-width: 200px;
   }
 }
 // Single Person Page
@@ -165,23 +194,109 @@ article.people {
   flex-wrap: wrap;
   justify-content: space-between;
   font-family: $fontfamily;
+  width: 100%;
+  height: auto;
 }
 .person-left {
-  flex: 0 1 30%;
-  border-radius: 100%;
-  overflow: hidden;
-  max-width: 300px;
-  max-height: 300px;
-  margin: 3em 0em 2em 3em;
+  display: none;
+  @include tablet {
+    display: block;
+    flex: 0 1 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 1em 0 2em 4em;
+  }
+  @include desktop {
+    display: block;
+    flex: 0 1 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 250px;
+    max-height: 250px;
+    margin-left: 9%;
+  }
 }
 .person-right {
-  flex: 0 1 60%;
+  flex: 0 1 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: auto 1.5em;
+  height: auto;
+  @include tablet {
+    flex: 0 0 55%;
+  }
+  @include desktop {
+    margin: auto 0;
+    flex: 0 0 60%;
+  }
+  p {
+    margin-top: 1.5em;
+    max-width: 90%;
+    font-size: 1em;
+    @include tablet {
+      font-size: 0.9em;
+    }
+    @include desktop {
+      max-width: 80%;
+      font-size: 1em;
+    }
+  }
+  .role {
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
 }
 .person-name {
   border-bottom: 2.5px dashed $light-blue;
+  width: 95%;
+  @include desktop {
+    width: 85%;
+  }
+  h1 {
+    @include tablet {
+      font-size: 1.5em;
+    }
+    @include desktop {
+      font-size: 1.75em;
+    }
+  }
   h1,
   p {
     color: $light-blue;
     font-family: $fontfamily;
+  }
+}
+.static-return-button {
+  position: absolute;
+  bottom: -46px;
+}
+.static-return-button {
+  a {
+    font-size: 1.1em;
+    font-family: $fontfamily;
+    color: $light-blue;
+    text-decoration: underline;
+    text-transform: uppercase;
+    padding: 0;
+    margin-left: 1em;
+    border: none;
+    outline: none;
+    @include tablet {
+      padding: 1em;
+      margin-left: 2em;
+      font-size: 1.2em;
+    }
+    @include desktop {
+      padding: 1em;
+      margin-left: 3em;
+      font-size: 1.3em;
+    }
+  }
+  a:hover {
+    cursor: pointer;
+    filter:opacity(0.8);
   }
 }

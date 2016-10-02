@@ -1,6 +1,7 @@
 /*--------------------------------------------------------------
 # Search Page Styles
 --------------------------------------------------------------*/
+
 .search-archive-header {
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   background-size: cover;
@@ -131,12 +132,12 @@
   p {
     font-family: $fontfamily;
     width: 75%;
-    margin-top: 1em;
-    font-size: 1em;
+    margin: 1em;
+    font-size: .9em;
     line-height: 1.8em;
     @include tablet {
       width: 75%;
-      margin: 1em;
+      margin: 2em;
       font-size: 1.25em;
     }
     @include desktop {
@@ -147,6 +148,11 @@ font-size: 1.5em;
   }
 }
 //ARCHIVE GRID-----------------------
+
+.search-list-inner {
+  padding: 5% 0 0;
+}
+
 .search-list {
   display: flex;
   flex-direction: row;
@@ -155,14 +161,16 @@ font-size: 1.5em;
   align-items: center;
   padding: 1rem;
   width: 90%;
-  margin: 1em auto 0;
+  margin: 0 auto;
+  list-style: none;
+
   @include tablet {
     justify-content: space-around;
-    margin: 2em auto 0;
+    margin: 0 auto;
   }
   @include desktop {
     justify-content: space-around;
-    margin: 3rem auto 0;
+    margin: 30 auto;
   }
   li,
   a {

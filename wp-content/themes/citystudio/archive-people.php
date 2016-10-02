@@ -5,14 +5,12 @@
 get_header();
 ?>
 
-<div id="primary" class="content-area single-projects">
+<div id="primary" class="content-area single-people">
 	<main id="main" class="site-main" role="main">
       <div class="people-archive container">
 
-        <header class="citystudio-banner">
-          <div class="banner-inner">
+        <header class="citystudio-banner people-margin">
             <h2 class="page-titles">People</h2>
-          </div>
         </header>
 
 	      <?php get_template_part( 'template-parts/page-people/people', 'team' ); ?>

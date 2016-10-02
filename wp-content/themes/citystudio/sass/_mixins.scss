@@ -17,6 +17,17 @@
 	}
 }
 
+@mixin mid-break{
+	@media screen and (min-width: 1396px){
+	@content;
+	}
+}
+@mixin sort-hover{
+	@media screen and (min-width: 1196px){
+	@content;
+	}
+}
+
 @mixin desktop{
 	@media screen and (min-width: 1024px){
 	@content;
@@ -25,13 +36,12 @@
 
 @mixin tablet{
 	@media screen and (min-width: 600px){
-
 	@content;
 	}
 }
 
 @mixin footer {
-	@media screen and (min-width: 540px){
+	@media screen and (min-width: 550px){
 	@content;
 	}
 }
@@ -60,6 +70,13 @@
 	@content;
 	}
 }
+//
+// @mixin 2-col-grid {
+// 	@media screen and (min-width: 450px){
+// 	@content;
+// 	}
+// }
+
 
 @mixin threecol {
 	@media screen and (min-width: 1000px) {
@@ -67,16 +84,12 @@
 	}
 }
 
+
+
 // Gradient mixins
 
 @mixin blue-to-blue {
-	background: linear-gradient(to right,
-	rgba(2,119,167,1) 0%,
-	rgba(1,136,187,1) 24%,
-	rgba(0,165,220,0.9) 63%,
-	rgba(0,177,234,0.9) 80%
-
-	);
+	background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
 }
 
 @mixin blue-to-blue-light {
