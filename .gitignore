@@ -29,54 +29,53 @@ access_log
 *.tar
 *.zip
 
-# Ignore everything in the root except the "wp-content" directory. #
-# ================================================================ #
+# Ignore npm packages #
+# =============== #
+wp-content/themes/citystudio/node_modules/
+wp-content/themes/citystudio/gulpfile.js
+
+# Ignore everything in the root except the "wp-content" directory.
+# =============== #
 /*
 
 wp-config.php
 wp-content/uploads/*
-wp-content/blogs.dir/
 wp-content/upgrade/*
 wp-content/backup-db/*
-wp-content/advanced-cache.php
-wp-content/wp-cache-config.php
+wp-content/advanced.cache.php
+wp-content/wp-cache.config.php
 wp-content/cache/*
 wp-content/cache/supercache/*
 
 .gitattributes
-_wpeprivate
+_weprivate
 wp-content/object-cache.php
 wp-content/mu-plugins/mu-plugin.php
 wp-content/mu-plugins/slt-force-strong-passwords.php
 wp-content/mu-plugins/limit-login-attempts
 wp-content/mu-plugins/wpengine-common
 
-!.gitignore
+.gitignore
 !wp-content/
 !README.md
 
-# Ignore everything in "wp-content" except the "plugins", "themes", and "uploads" directories. #
-# ============================================================================================ #
+# Ignore everything in "wp-content" except the "plugins" and "themes".
+# =============== #
 wp-content/*
-../../debug.log
 !wp-content/plugins/
 !wp-content/themes/
-!wp-content/uploads/
 
-# Ignore everything in "plugins" except certain plugins. #
-# ========================================================== #
-
+# Ignore everything in "plugins" except certain plugins.
+# =============== #
 wp-content/plugins/*
-
 !wp-content/plugins/citystudio-custom-funcs/
 
-
-# Ignore everything in "themes" except the active theme. #
-# ========================================================== #
+# Ignore everything in "themes" except the active theme.
+# =============== #
 wp-content/themes/*
 !wp-content/themes/citystudio/
 
-# Ignore npm packages #
-# =================== #
-wp-content/themes/citystudio/node_modules/*
+
+wp-content/themes/citystudio/sass/foot-work.sass
+
 wp-content/themes/citystudio/gulpfile.js

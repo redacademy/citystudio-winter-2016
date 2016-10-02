@@ -54,7 +54,12 @@ function myFunction() {
 // Close the dropdown menu if the user clicks outnerside of it
 window.onclick = function(e) {
   e.preventDefault;
-  ('dropdown-content').show;
+  $('.dropdown-content').show;
+
+  if($('.dropdown-content').is(":visible")) {
+      $('.dropdown-content').hide();
+  }
+
 }
 
 jQuery(document).ready(function($){
@@ -84,11 +89,41 @@ jQuery(document).ready(function($){
 });
 
 // Add an off menu click functionality
-$(document).click(function(event) {
-  if($('.dropdown-content').is(":visible")) {
-      $('.dropdown-content').hide();
+// $(document).click(function(event) {
+//   if($('.dropdown-content').is(":visible")) {
+//       $('.dropdown-content').hide();
+//   }
+// })
+
+
+// Load More
+jQuery(document).ready(function($){
+  if ($('body').hasClass('page-template-searchpage') && $('.js-page-numbers').length > 0)  {
+      var $loadMoreLink = $('.js-load-more'),
+        nextPageNum = parseInt($('.js-page-numbers .current').html()) + 1;
+
+      $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNum );
+
+      $(document).on('click', '.js-load-more', function (event) {
+        event.preventDefault();
+        var $this = $(this),
+          url = $this.attr('href');
+
+        $('.js-next-search-list').load(url + ' ul.search-list > a' ,function (response) {
+          var nextPageNumber = $('.js-next-search-list .search-post').last().data().nextPage;
+          if (nextPageNumber !== undefined) {
+            console.log("nextPageNumber", nextPageNumber);
+            $loadMoreLink.attr('href', window.location.href + '?pagenum=' + nextPageNumber );
+          }
+
+          $('.js-next-search-list')
+            .removeClass('js-next-search-list')
+            .addClass('search-list');
+          $('.search-list-inner').append('<div class="js-next-search-list" />');
+        });
+      });
   }
-})
+});
 
 
 // Load More
