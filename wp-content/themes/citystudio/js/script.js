@@ -31,6 +31,9 @@ jQuery(document).ready(function($){
       }
     });
 
+
+  $(window).scroll(function(){
+
     if ($('body').hasClass('blog') ) {
 
       var bar = $('.blog-content-container'),
@@ -46,6 +49,7 @@ jQuery(document).ready(function($){
         }
     }
   });
+});
 
 function myFunction() {
   var hamburger = document.getElementById("hamburgerMenu");

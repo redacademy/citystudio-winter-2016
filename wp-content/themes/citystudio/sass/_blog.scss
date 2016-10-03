@@ -133,12 +133,15 @@
   flex-wrap: wrap;
   margin: 2em auto;
   @include tablet {
-  width: 80%;
-    margin: 0 3em 0 0;
+    width: 80%;
+    position: absolute;
+    right: 0em;
+    margin: 0;
+    left: 15em;
   }
   @include desktop {
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
   }
 }
 .blog-featured-image {
@@ -149,9 +152,8 @@
   height: 250px;
   margin: 1em;
   border-radius: 5px;
-  width: 100%;
+  width: 80%;
   @include tablet {
-
     height: 300px;
     margin-bottom: 2em;
   }
