@@ -11,12 +11,12 @@
 //Footer Branding----------------------
 .footer-branding-container {
   flex-basis: 100%;
+  width: 100%;
   order: 1;
-  @include tablet{
-    width: 40vw;
-  }
-  @include desktop {
-    width: 25%;
+
+  @include tablet {
+    flex-basis: 40%;
+    width: 40%;
   }
 }
 
@@ -67,14 +67,15 @@
   order: 2;
   margin: 1.5em auto;
   display: none;
-  @include tablet{
-    display: flex;
-  }
+  width: 100%;
 
-  @include desktop {
+
+  @include tablet{
+    flex-basis: 60%;
+    width: 60%;
     display: flex;
-    flex-basis: 50%;
     margin: 0;
+    justify-content: flex-end;
   }
 }
 
