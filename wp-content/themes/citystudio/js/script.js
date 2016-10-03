@@ -2,7 +2,7 @@ jQuery(document).ready(function($){
 
    var callToAction = $(".call-to-action");
 
-    if ($(window).width() <= 600){
+    if ($(window).width() <= 414){
         callToAction.css({"display": "none"});
         $('.header-container').css({"position": "fixed"});
         $('.header-nav').css({"position": "fixed"});
@@ -28,8 +28,8 @@ jQuery(document).ready(function($){
       else if (scroll <= offset)  {
           sticky.removeClass("fixed");
         }
-      }
-    });
+      } 
+  });
 
 
   $(window).scroll(function(){
@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
           sideBar =$('.blog-sidebar'),
           blogScroll = $(window).scrollTop(),
           blogOffset = bar.offset().top;
-          
+
       if (blogScroll >= blogOffset) {
          sideBar.addClass("fixed-sidebar");
         }
@@ -49,45 +49,30 @@ jQuery(document).ready(function($){
         }
     }
   });
+
 });
-
-function myFunction() {
-  var hamburger = document.getElementById("hamburgerMenu");
-  hamburger.classList.toggle("show");
-}
-// Close the dropdown menu if the user clicks outnerside of it
-window.onclick = function(e) {
-  e.preventDefault;
-  $('.dropdown-content').show;
-
-  // if($('.dropdown-content').is(":visable")){
-  //   $('.dropdown-content').hide();
-  // }
-
-}
 
 jQuery(document).ready(function($){
 
-  $(".hamburger").on('click', function(){
+  $('.hamburger').on('click', function(){
     var menuIcon = $("i", this);
     menuIcon.removeClass("fa-bars");
   });
 
   $('.hamburger').toggle(function() {
+      $('.dropdown-content').show();
       var menuIcon = $("i", this);
       menuIcon.addClass("fa-times-circle");
-    }, function() {
 
-       menuIcon.removeClass("fa-times-circle");
-       menuIcon.addClass("fa-bars");
-       $('.header-container').css({"position": "relative"});
+    }, function() {
+      $('.dropdown-content').hide();
+     var menuIcon = $("i", this);
+     menuIcon.removeClass("fa-times-circle");
+     menuIcon.addClass("fa-bars");
     }
   );
 
-  var menuSubmenu = $(".menu").children().children();
-  menuSubmenu.show();
-
-  //code for mobile view
+  // Close the dropdown menu if the user clicks outnerside of i
 
 // Add an off menu click functionality
 // $(document).click(function(event) {
@@ -95,6 +80,12 @@ jQuery(document).ready(function($){
 //       $('.dropdown-content').hide();
 //   }
 });
+
+function showMenu() {
+  var hamburger = document.getElementById("hamburgerMenu");
+  hamburger.classList.toggle("show");
+
+}
 
 
 // Load More
