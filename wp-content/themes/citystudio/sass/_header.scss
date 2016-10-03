@@ -6,8 +6,9 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  background-color: #ffffff;
-  z-index: 3;
+  z-index: 2;
+  background: white;
+  width: 100%;
 }
 .site-branding {
   @include desktop {
@@ -32,9 +33,6 @@
   padding: .3em;
 
   @include tablet{
-    width: 48%;
-  }
-  @include desktop {
     width: 100%;
   }
 }
@@ -97,12 +95,15 @@
   }
 }
 .hamburger {
-  color: #2cb5e8;
+  color: $light-blue;
   font-weight: 400;
   font-size: 2em;
   border: none;
   display: flex;
   &:hover {
+    color: $medium-blue;
+  }
+  &:active {
     color: $medium-blue;
   }
 }
@@ -116,22 +117,31 @@
   .fa {
     color: $light-blue;
     font-size: 2rem;
-    &:hover{
+    &:hover, &:visited {
+      color: $medium-blue;
+    }
+    &:active {
       color: $medium-blue;
     }
   }
 }
 /*----------- menu nav -------------*/
 
-.header-nav{
+.header-nav {
   border-top: 4px solid #2cb5e8;
   border-bottom: 4px solid #2cb5e8;
   background-color: #f7f9f9;
-  width: 80%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
   padding: 10% 4%;
   margin-top: 3em;
-  margin-left: 6.6em;
+  left: 0;
+
+  @include tablet {
+    width: 80%;
+    height: 450px;
+    margin-left: 6em;
+  }
 }
 .header-nav li a{
   display: flex;
@@ -162,8 +172,13 @@
 .dropdown-content {
   position: absolute;
   right: 0;
-  min-width: 450px;
+  width: 100vw;
   display: none;
+  z-index: 3;
+
+  @include tablet {
+    width: 450px;
+  }
 }
 .dropdown-content a {
   transition: height 0.3s ease-in;
@@ -187,9 +202,7 @@ button.hamburger{
   color: #2cb5e8;
   font-weight: 400;
   font-size: 2em;
-  position: absolute;
   right: .5em;
-  top: .5em;
   background: 0 0;
   border: none;
   display: flex;
@@ -199,13 +212,16 @@ button.hamburger{
   @include tablet{
    top: 0;
   }
+  @include desktop{
+    position: absolute;
+  }
  }
 
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
-  // background-color: #f9f9f9;
-  // transition: height 300ms ease-in;
+  /*background-color: #f9f9f9;*/
+  /*transition: height 300ms ease-in;*/
 }
 .header-nav ul li.menu-item-has-children {
   width: 100%;
@@ -297,7 +313,6 @@ button.hamburger{
     font-size: 2em;
     position: absolute;
     right: 0.5em;
-    top: 0.5em;
     background: 0 0;
     border: none;
     display: flex;
@@ -322,10 +337,6 @@ button.hamburger{
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  @include iphone6{
-  }
-  @include desktop{
-  }
 }
 .menu-menu-container {
   @include iphone6 {
