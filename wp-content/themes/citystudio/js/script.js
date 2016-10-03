@@ -56,9 +56,9 @@ window.onclick = function(e) {
   e.preventDefault;
   $('.dropdown-content').show;
 
-  if($('.dropdown-content').is(":visible")) {
-      $('.dropdown-content').hide();
-  }
+  // if($('.dropdown-content').is(":visable")){
+  //   $('.dropdown-content').hide();
+  // }
 
 }
 
@@ -90,7 +90,7 @@ jQuery(document).ready(function($){
 //   if($('.dropdown-content').is(":visible")) {
 //       $('.dropdown-content').hide();
 //   }
-// })
+});
 
 
 // Load More
