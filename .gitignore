@@ -38,6 +38,10 @@ wp-content/themes/citystudio/gulpfile.js
 # =============== #
 /*
 
+wp-content/uploads/formidable/css/formidablepro.css
+wp-content/uploads/formidable/css/index.php
+wp-content/uploads/formidable/index.php
+
 wp-config.php
 wp-content/uploads/*
 wp-content/upgrade/*
