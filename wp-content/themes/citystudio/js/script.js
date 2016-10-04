@@ -65,28 +65,19 @@ jQuery(document).ready(function($){
       menuIcon.addClass("fa-times-circle");
 
     }, function() {
-      $('.dropdown-content').hide();
+     $('.dropdown-content').hide();
      var menuIcon = $("i", this);
      menuIcon.removeClass("fa-times-circle");
      menuIcon.addClass("fa-bars");
     }
   );
 
-  // Close the dropdown menu if the user clicks outnerside of i
-
-// Add an off menu click functionality
-// $(document).click(function(event) {
-//   if($('.dropdown-content').is(":visible")) {
-//       $('.dropdown-content').hide();
-//   }
 });
 
 function showMenu() {
   var hamburger = document.getElementById("hamburgerMenu");
   hamburger.classList.toggle("show");
-
 }
-
 
 // Load More
 jQuery(document).ready(function($){

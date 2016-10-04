@@ -70,6 +70,13 @@ jQuery(document).ready(function($) {
     reloadProjects();
   
   });
+
+  $('#refresh').hover(
+    function(){
+      $('.refresh-hover').css({"opacity": 1});
+  }, function () {
+     $('.refresh-hover').css({"opacity": 0});
+  });
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.themes').on('click', function(){
     $(this).children('.nav-sub-menu').children().addClass('current-menu');

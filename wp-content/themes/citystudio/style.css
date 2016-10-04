@@ -768,7 +768,8 @@ a {
   @media screen and (min-width: 600px) {
     .site-navigation {
       -ms-flex-preferred-size: 15%;
-          flex-basis: 15%; } }
+          flex-basis: 15%;
+      margin-right: 1em; } }
   @media screen and (min-width: 1024px) {
     .site-navigation {
       -ms-flex-preferred-size: 20%;
@@ -778,21 +779,10 @@ a {
   display: none; }
   @media screen and (min-width: 600px) {
     .icon-search {
-      display: block;
-      font-size: 2em; } }
-  @media screen and (min-width: 1024px) {
-    .icon-search {
-      font-size: 2em;
-      -ms-flex-pack: center;
-          justify-content: center; } }
-
-.icon-search {
-  position: relative; }
-  @media screen and (min-width: 600px) {
-    .icon-search {
+      position: relative;
       display: block;
       font-size: 2em;
-      margin-right: 4.5em; } }
+      margin-right: 3.5em; } }
   @media screen and (min-width: 1024px) {
     .icon-search {
       margin-right: 7.5em; } }
@@ -802,7 +792,8 @@ a {
     position: absolute; }
     @media screen and (min-width: 1024px) {
       .icon-search .fa {
-        font-size: 1em; } }
+        font-size: 1em;
+        margin: -0.5em 0; } }
     .icon-search .fa:hover {
       color: #0082b9; }
   .icon-search a {
@@ -846,18 +837,18 @@ a {
   width: 100vw;
   height: 100vh;
   padding: 10% 4%;
-  margin-top: 3em;
+  margin-top: 2.9em;
   left: 0; }
   @media screen and (min-width: 600px) {
     .header-nav {
       width: 80%;
       height: 450px;
-      margin-left: 6em; } }
+      margin-left: 7em; } }
 
 .header-nav li a {
   display: -ms-flexbox;
   display: flex;
-  width: 140px;
+  width: 150px;
   padding-left: 2em;
   height: 1.5em; }
 
@@ -923,7 +914,8 @@ button.hamburger {
       top: 0; } }
   @media screen and (min-width: 1024px) {
     button.hamburger {
-      position: absolute; } }
+      position: absolute;
+      margin: -0.5em 0; } }
 
 .header-nav a {
   display: block;
@@ -1198,16 +1190,22 @@ h2.page-titles {
       height: 150px;
       opacity: 0.9; } }
 
+.banner-inner {
+  margin-top: 4em; }
+  @media screen and (min-width: 600px) {
+    .banner-inner {
+      margin: 0; } }
+
 .contact-header {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   opacity: 0.9;
   background-size: cover;
-  height: 4em;
+  height: 6.6em;
   width: 100%;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 600px) {
     .contact-header {
-      min-height: 5em; } }
+      height: 3em; } }
   @media screen and (min-width: 1024px) {
     .contact-header {
       min-height: 6em; } }
@@ -2408,12 +2406,12 @@ a {
       height: 250px; } }
   .partners-banner h1 {
     font-size: 1.5rem;
-    font-family: "open_sans";
-    color: white;
-    font-weight: normal;
+    color: #fff;
+    font-weight: 400;
     text-align: center;
-    width: 65%;
-    margin: 0 auto; }
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 2em; }
     @media screen and (min-width: 600px) {
       .partners-banner h1 {
         font-size: 1.75em; } }
@@ -2431,7 +2429,7 @@ a {
       align-items: center;
   height: 100%;
   width: 100%;
-  z-index: 2; }
+  z-index: 1; }
   @media screen and (min-width: 1024px) {
     .blue-overlay {
       height: 250px; } }

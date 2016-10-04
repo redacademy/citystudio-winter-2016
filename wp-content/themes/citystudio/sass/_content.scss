@@ -127,3 +127,10 @@ h2.page-titles {
   opacity: 0.9;
   }
 }
+
+.banner-inner{
+  margin-top: 4em;
+  @include tablet{
+    margin: 0;
+  }
+}

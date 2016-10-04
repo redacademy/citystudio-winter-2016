@@ -17,12 +17,12 @@
   }
   h1 {
     font-size: 1.5rem;
-    font-family: $fontfamily;
-    color: white;
-    font-weight: normal;
+    color: #fff;
+    font-weight: 400;
     text-align: center;
-    width: 65%;
+    width: 100%;
     margin: 0 auto;
+    margin-top: 2em;
     @include tablet {
       font-size: 1.75em;
     }
@@ -40,7 +40,7 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  z-index: 2;
+  z-index: 1;
   @include desktop {
     height: 250px;
   }
