@@ -140,7 +140,7 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&[posts_per_page]=16',
+          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             console.log("response", response);
