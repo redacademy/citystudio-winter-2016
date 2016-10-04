@@ -5,6 +5,11 @@ jQuery(document).ready(function($) {
     $('.nav-div').css("background-color", "#006496");
   }
   // queryFilter holds an empty object for the checked navigation values/properties
+  
+  var themeLabels = $('.theme-labels');
+  var partLabels = $('.part-labels');
+  var yearLabels = $('.year-labels');
+
   var queryFilter = {
     themes: '',
     partners: '',
@@ -25,22 +30,22 @@ jQuery(document).ready(function($) {
       partners: '',
       year: ''
     }
-    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     reloadProjects();
 
   }); // close refresh
 
-  $('.theme-labels').on('click', function(){
+  themeLabels.on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
-  $('.part-labels').on('click', function(){
+  partLabels.on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
-  $('.year-labels').on('click', function(){
+  yearLabels.on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
@@ -63,9 +68,9 @@ jQuery(document).ready(function($) {
   });
 
   $('.fa.fa-times').on('click', function(){
-    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    yearLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
    
     reloadProjects();
   
@@ -87,7 +92,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();
-      $('.theme-labels')
+      themeLabels
           .show()
           .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
@@ -98,7 +103,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
-      $('.part-labels')
+      partLabels
           .show()
           .append('<label>' + checkedPart + '</label>');
       $(this).parent().removeClass('current-menu');
@@ -109,7 +114,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.years = parseInt($(this).find('input').val());
       checkedYear = parseInt(($(this).text()).trim());
-      $('.year-labels')
+      yearLabels
           .show()
           .append('<label>' + checkedYear + '</label>');
       $(this).parent().removeClass('current-menu');
