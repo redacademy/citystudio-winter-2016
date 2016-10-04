@@ -71,19 +71,6 @@ get_header(); ?>
 
 
       </div> <!-- end blog content container -->
-
-
-
-
-
-
-
-
-
-
-
-
-
     </main><!-- #main -->
     </div><!-- #primary -->
 
