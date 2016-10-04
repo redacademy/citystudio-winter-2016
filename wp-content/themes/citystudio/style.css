@@ -1331,14 +1331,14 @@ input[type='email']:focus {
 .footer-branding-container {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  width: 100%;
   -ms-flex-order: 1;
       order: 1; }
   @media screen and (min-width: 600px) {
     .footer-branding-container {
-      -ms-flex-preferred-size: 40%;
-          flex-basis: 40%;
-      width: 40%; } }
+      width: 40vw; } }
+  @media screen and (min-width: 1024px) {
+    .footer-branding-container {
+      width: 25%; } }
 
 .footer-logo {
   -ms-flex-order: 1;
@@ -1392,18 +1392,18 @@ input[type='email']:focus {
   -ms-flex-order: 2;
       order: 2;
   margin: 1.5em auto;
-  display: none;
-  width: 100%; }
+  display: none; }
   @media screen and (min-width: 600px) {
     .footer-info-container {
-      -ms-flex-preferred-size: 60%;
-          flex-basis: 60%;
-      width: 60%;
+      display: -ms-flexbox;
+      display: flex; } }
+  @media screen and (min-width: 1024px) {
+    .footer-info-container {
       display: -ms-flexbox;
       display: flex;
-      margin: 0;
-      -ms-flex-pack: end;
-          justify-content: flex-end; } }
+      -ms-flex-preferred-size: 50%;
+          flex-basis: 50%;
+      margin: 0; } }
 
 .footer-info-block ul {
   padding: 2%; }
