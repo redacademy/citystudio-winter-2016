@@ -26,7 +26,6 @@ get_header(); ?>
                         background-size: cover;
                         background-size: cover;
                         display: block;
-                        border-radius: 5px;
                         ">
                 <div class="tag-description">
                   <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
