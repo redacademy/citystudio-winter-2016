@@ -31,8 +31,8 @@ jQuery(document).ready(function($) {
       year: ''
     }
     themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    partLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    yearLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     reloadProjects();
 
   }); // close refresh
@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 
   $('.fa.fa-times').on('click', function(){
     themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    partLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     yearLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
    
     reloadProjects();
