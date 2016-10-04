@@ -33,7 +33,7 @@ if ( $the_query->have_posts() ) {
 							 				">
 							 			<div class="tag-description">
 							 			 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
-							 			 <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+							 			
 							 			</div>
 							 		</li>
 							 	</a>

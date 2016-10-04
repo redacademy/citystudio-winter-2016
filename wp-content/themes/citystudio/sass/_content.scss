@@ -74,8 +74,6 @@
 }
 
 
-// Page Headers
-
 .citystudio-banner {
   display: flex;
   justify-content: flex-start;
@@ -127,5 +125,12 @@ h2.page-titles {
   background-position: center center;
   height: 150px;
   opacity: 0.9;
+  }
+}
+
+.banner-inner{
+  margin-top: 4em;
+  @include tablet{
+    margin: 0;
   }
 }

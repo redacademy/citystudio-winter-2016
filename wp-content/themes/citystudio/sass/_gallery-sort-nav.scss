@@ -66,8 +66,11 @@
       margin: 0em !important;
       border-radius: 5px;
       color: #ffffff;
+      &:hover{
+        color: $city-blue;
+      }
       @include tablet{
-            width: 173px;
+        width: 173px;
       }
     }
   .fa-sort-desc{
@@ -85,6 +88,7 @@
     width: 100%;
     font-size: 32px;
     margin: -22px 14px;
+    line-height: 1em;
   }
   .fa-times{
     color: $medium_blue;
@@ -229,12 +233,18 @@
     border-top-left-radius: 0;
     z-index: 1;
     right: 1px;
+    background: white;
+    color: $city-blue;
+    &:hover{
+      color: $city-blue
+    }
   p{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .8em 1.6em;
+    padding: .3em 2em;
+    color: $city-blue;
    &:hover{
       color: $city-blue;
     }
@@ -289,6 +299,10 @@
   font-weight: bold;
   color: $dark-blue;
 }
+.show{
+  display: block;
+}
+
 .show-label {
   display: block;
   color: $city-blue;
