@@ -24,7 +24,7 @@ get_header(); ?>
         </div>
 
 				<div class="campus-course-container">
-          <div class="logo">
+          <div class="school-logo">
 						<img src="<?php the_field('logo'); ?>" alt="School Logo" />
           </div>
 
@@ -69,9 +69,6 @@ get_header(); ?>
 
 <!-- media links -->
 				<h3 class ="media-links-title"><span><?php echo the_field('school_abrev'); ?></span> in the media, publications, and press...</h3>
-					<div class="no-media">
-							<?php the_field('no_media_option'); ?>
-					</div>
 					<div class="media-links-container">
 						<?php
                             // check if the repeater field has rows of data
@@ -83,6 +80,9 @@ get_header(); ?>
 								<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
 							</p>
 							<?php endwhile; ?>
+							<div class="no-media">
+									<?php the_field('no_media_option'); ?>
+							</div>
 				 </div> <!--end media links container -->
 
   	</div><!-- end projects-container -->

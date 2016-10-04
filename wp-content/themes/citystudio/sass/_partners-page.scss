@@ -13,7 +13,7 @@
   justify-content: center;
   align-items: center;
   @include tablet {
-    height: 135px;
+    height: 225px;
     margin: 0;
   }
   h1 {
@@ -21,14 +21,13 @@
     color: #fff;
     font-weight: 400;
     text-align: center;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
-    margin-top: 2em;
     @include tablet {
-      font-size: 1.75em;
+      font-size: 2em;
     }
     @include desktop {
-      font-size: 2.25em;
+      font-size: 2.5em;
     }
     span {
       font-weight: bold;
@@ -42,21 +41,12 @@
   height: 100%;
   width: 100%;
   z-index: 1;
-  @include tablet{
-     h1{
-      margin-top: 0;
-    }
-  }
-
-  @include desktop {
-    height: 120px;
-  }
 }
 .info-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   margin: 1.5em 0.25em;
   @include tablet {
@@ -69,17 +59,15 @@
 .school-mission-container {
   margin: auto 1em;
   font-family: $fontfamily;
-  width: 90%;
+  width: 85%;
   text-align: center;
   @include tablet {
-    margin: auto 3em;
     width: 50%;
     text-align: left;
+    padding: 1em;
   }
   @include desktop {
-    margin: auto 1.5em;
-    width: 40%;
-    padding-right: 2em;
+    padding: 2em 2em 2em 0;
   }
   h3 {
     font-size: 1.25em;
@@ -91,7 +79,6 @@
   }
   .school-mission {
     font-size: 1em;
-    width: 95%;
     @include tablet {
       width: 100%;
     }
@@ -101,30 +88,39 @@
     }
   }
 }
-.logo img {
-  @include tablet {
-    max-width: 210px;
-  max-height: 330px;
-  }
-  @include desktop {
-    max-width: 400px;
-    max-height: 500px;
-  }
-}
+
 .campus-course-container {
-  margin: 1.5em auto 0;
+  margin: 1em auto 0;
 @include tablet {
     margin: 0 2em 0 0;
 }
   @include desktop {
-    margin: 2rem 0 1rem 5rem;
+    margin: 2em 2em 1em 0;
   }
-  .logo {
-    display: none;
+
+  .school-logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  @include tablet {
+justify-content: flex-start;
+}
+  img {
+    padding: 1em;
+    max-width: 300px;
+  max-height: 400px;
     @include tablet {
-      display: block;
+    padding: 0;
+      max-width: 300px;
+    max-height: 400px;
+    }
+    @include desktop {
+      max-width: 400px;
+      max-height: 500px;
     }
   }
+  }
+
   .campus-course-div {
     font-family: $fontfamily;
     font-size: 1rem;
@@ -181,6 +177,7 @@
   justify-content: space-around;
   width: 100%;
   li {
+border: 1px solid transparent;
     flex: 0 0 30%;
     margin-bottom: 2em;
     width: 300px;
@@ -192,12 +189,16 @@
       height: 210px;
     }
     @include desktop {
-      width: 320px;
-      height: 230px;
+      height: 240px;
+      width: 330px;
     }
+ &:hover {
+    border: 1px solid #ffffff;
+}
   }
-  a:hover {
+  a, a:hover {
     text-decoration: none;
+
   }
 }
 .title-block-container {
@@ -210,12 +211,17 @@
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.25rem;
-  width: 95%;
+  width: 85%;
   padding: 0 1em;
   height: auto;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  margin-top: 1em;
   @include tablet {
     width: 85%;
+    min-height: 3rem;
+    height: auto;
+    margin-top: 0;
+
   }
   @include desktop {
     height: 5rem;
@@ -230,6 +236,9 @@
     margin: 0.2rem;
     padding: 0.1em;
     line-height: 1.3em;
+    @include tablet {
+    font-size: 2rem;
+    }
     @include desktop {
       font-size: 3rem;
     }
@@ -284,10 +293,10 @@
     width: 90%;
   }
   .media-links {
-    width: 100%;
+    width: 90%;
     @include tablet {
       width: 35%;
-    margin: 1em 2em;
+    padding: 1em 2em;
     }
     @include desktop {
       width: 25%;
@@ -307,7 +316,7 @@
 }
 .no-media {
   text-align: center;
-  margin: 1.5em;
+  padding: 1em 0 2.5em 0;
   color: #ffffff;
   font-family: $fontfamily;
 }
