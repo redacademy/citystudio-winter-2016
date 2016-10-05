@@ -388,10 +388,8 @@
 }
 .sticky-navigation {
   display: none;
-  transition: all .3s ease;
+  transition: height .3s ease;
   height: 5em;
-  @include desktop{
-  }
   @include tablet{
     display: block;
   }
@@ -407,7 +405,7 @@
   background-color: rgba(255,255,255, 1);
   opacity: 1;
   height: 6em;
-  transition: all .3s ease;
+  transition: all .5s ease;
 }
 .sticky-navigation.fixed{
   display: none;

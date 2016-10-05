@@ -18,17 +18,26 @@ jQuery(document).ready(function($){
 
     if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
-        nav = $('.homepage-description'),
+        grid = $('.homepage-description'),
+        explore = $('.explore-section'),
         scroll = $(window).scrollTop(),
-        offset = nav.offset().top;
+        bottomOffset = grid.offset().top,
+        topOffset = explore.offset().top;
+        console.log(topOffset);
+        console.log(scroll);
 
-      if (scroll >= offset) {
+      if (scroll >= bottomOffset) {
          sticky.addClass("fixed");
         }
-      else if (scroll <= offset)  {
+      if(scroll >= topOffset) {
+        sticky.removeClass("fixed");
+      }
+      else if (scroll <= bottomOffset)  {
           sticky.removeClass("fixed");
         }
       } 
+
+
   });
 
   $(window).scroll(function(){
@@ -48,6 +57,20 @@ jQuery(document).ready(function($){
         }
     }
   });
+
+  // $(window).scroll(function(){
+  //   if ($('body').hasClass('home page') ) {
+  //       scroll = $(window).scrollTop(),
+  //       explore = $('.explore-section'),
+  //       topOffset = explore.offset().top;
+  //       console.log(topOffset);
+  //      if (scroll >= bottomOffset) {
+
+  //      }
+  //     }
+  //  });  
+
+
 });
 
 jQuery(document).ready(function($){
