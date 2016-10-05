@@ -56,20 +56,23 @@
   cursor: pointer;
     p{
       display: flex;
-      padding-left: 45px;
       letter-spacing: 3px;
       font-weight: 500;
       padding-top: 5px;
-      font-size: 14px;
-      width: 161px;
       height: 30px;
-      margin: 0em !important;
+      margin: 0 !important;
       border-radius: 5px;
       color: #ffffff;
+      width: 148px;
+      font-size: 12px;
+      padding-left: 3em;
       &:hover{
         color: $city-blue;
       }
-      @include tablet{
+
+      @include desktop{
+        font-size: 14px;
+        padding-left: 45px;
         width: 173px;
       }
     }
@@ -79,7 +82,7 @@
     width: 100%;
     font-size: 32px;
     padding: 0;
-    margin: -12px 9px;
+    margin: -12px 6px;
     pointer-events: none
     }
   .fa-sort-asc{
@@ -93,7 +96,10 @@
   .fa-times{
     color: $medium_blue;
     float: right;
-    margin: .3em .7em;
+    margin: .2em;
+    @include desktop{
+      margin: .3em .7em;
+    }
   }
 }
 .themes {
@@ -108,25 +114,31 @@
   }
 }
 .partners {
-  background: url("../../assets/icon-building-white.png") 7px 1px  no-repeat #03648c;
+  background: url("../../assets/icon-building-white.png") 2px 1px  no-repeat #03648c;
   background-size: 27px 28px;
   p{
     margin: -6px;
   }
    &:hover{
-    background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
+    background: url(../../assets/icon-building-blue.png) 2px 1px no-repeat white;
     background-size: 27px 28px;
+  }
+  .fa-sort-desc{
+    padding: 3px
   }
 }
 .years {
-  background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
+  background: url(../../assets/years-icon-white.png) 4px 5px no-repeat #03648c;
   background-size: 21px 20px;
   p{
     margin: -6px;
   }
    &:hover{
-    background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
+    background: url(../../assets/years-icon-blue.png) 4px 5px no-repeat white;
     background-size: 21px 20px;
+  }
+  .fa-sort-desc{
+    padding: 3px
   }
 }
 .refresh {
@@ -147,9 +159,7 @@
   opacity: .9;
   transition: all 1s ease-in;
   margin-top: .5em;
-  margin-left: 1em;
-  @include tablet{
-    margin-top: .3;
+  @include desktop{
   }
 }
 .refresh-hover{
@@ -161,15 +171,12 @@
   @include tablet{
     display: none;
   }
-  @include desktop{
-    display: block;
-    right: 2.5em;
-  }
   @include sort-hover {
-    right: 7em;
+    display: block;
+    right: 5em;
   }
   @include mid-break{
-    right: 13em;
+    right: 14em;
   }
 }
 
@@ -179,7 +186,7 @@
 
 .nav-sub-menu {
     position: relative;
-    padding: .3em .5em;
+    padding: 0 .5em;
     opacity: 0;
     font-size: 1em;
     border-radius: 4px;
@@ -192,16 +199,19 @@
     &:hover {
       transition: background-color 1s ease-in;
       cursor: pointer;
-  }
+    }
+    @include desktop{
+      padding: .3em .5em;
+    }
 
   .sub-menu-theme span,
   .sub-menu-part span,
   .sub-menu-year span {
     color: $city-blue;
-    font-size: 12px;
-    padding-left: 3em;
-    @include tablet{
-      padding-left: 1.2em;
+    font-size: 10px;
+    padding-left: 1.2em;
+    @include desktop{
+      font-size: 12px;
     }
   }
   .sub-menu-theme span:hover,
@@ -225,8 +235,8 @@
     display: flex;
     flex-direction: column;
     opacity: 1;
-    height: 245px;
-    width: 175px;
+    height: 235px;
+    width: 150px;
     text-transform: none;
     border-top-color: #fff;
     border-top-right-radius: 0;
@@ -238,15 +248,22 @@
     &:hover{
       color: $city-blue
     }
+    @include desktop{
+      width: 175px;
+      height: 245px;
+    }
   p{
     text-transform: uppercase;
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .3em 2em;
+    padding: .3em 1.3em;
     color: $city-blue;
    &:hover{
       color: $city-blue;
+    }
+    @include desktop{
+      padding: .3em 1.6em;
     }
   }
 }
@@ -267,15 +284,17 @@
 }
 
 .open .sort-menu-item {
+  width: 150px;
   opacity: .97;
-  margin: 0;
   text-transform: uppercase;
   color: #006493;
   border-radius: 5px;
-  width: 208px;
   margin: 1.8em 0;
-  width: 175px;
   border: 1px solid $city-blue;
+  @include desktop{
+    opacity: .97;
+    width: 175px;
+  }
 }
 
 .open {
@@ -340,16 +359,17 @@
     word-break: break-word;
     top: -1px;
     border-radius: 5px;
-    height: 1.90em;
-    width: 175px;
+    height: 2.1em;
+    width: 150px;
     text-align: center;
     padding-top: 1px;
     margin-right: 1x;
     left: -1px;
+    font-size: 15px;
     label {
       font-size: .7rem;
       text-transform: capitalize;
-      margin-right: -20px;
+      margin-right: -6px;
     &::after {
       content: '';
       width: 0;
@@ -361,6 +381,11 @@
   }
   .show-labels{
     display: block;
+  }
+  @include desktop{
+    width: 175px;
+    height: 1.90em;
+    font-size: 16px;
   }
 }
 .sticky-navigation {

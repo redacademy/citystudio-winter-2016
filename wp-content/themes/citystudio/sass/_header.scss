@@ -54,13 +54,13 @@
 }
 
 .icon-search {
-    display: none;
-    @include tablet{
+  display: none;
+  @include tablet{
     position: relative;
     display: block;
     font-size: 2em;
     margin-right: 3.5em;
-  }
+   }
   @include desktop{
     margin-right: 7.5em;
   }
@@ -149,7 +149,6 @@
   font-weight: 500;
   position: relative;
   z-index: 0;
-  /*background-color: white;*/
   margin: 0.5em 0;
   max-width: 200px;
 }
@@ -347,6 +346,7 @@ button.hamburger{
   flex-direction: column;
   justify-content: space-between;
   border-left: 2px solid $city-blue;
+  transition: all 1s ease-in;
   li {
     display: inline-block;
   }

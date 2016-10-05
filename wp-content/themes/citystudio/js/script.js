@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
         $('.header-container').css({"position": "fixed"});
         $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
-          $(".sub-menu").css({"display": "block"});
+          $(".sub-menu").css({"display": "block"});  
         },
         function(){
           $(".sub-menu").css({"display": "none"});
@@ -31,7 +31,6 @@ jQuery(document).ready(function($){
       } 
   });
 
-
   $(window).scroll(function(){
 
     if ($('body').hasClass('blog') ) {
@@ -49,7 +48,6 @@ jQuery(document).ready(function($){
         }
     }
   });
-
 });
 
 jQuery(document).ready(function($){
@@ -71,6 +69,8 @@ jQuery(document).ready(function($){
      menuIcon.addClass("fa-bars");
     }
   );
+
+
 
 });
 

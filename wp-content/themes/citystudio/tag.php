@@ -29,7 +29,6 @@ get_header(); ?>
                         ">
                 <div class="tag-description">
                   <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
-
                 </div>
               </li>
             </a>
