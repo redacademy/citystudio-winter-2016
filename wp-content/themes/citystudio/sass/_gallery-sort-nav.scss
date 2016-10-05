@@ -159,8 +159,6 @@
   opacity: .9;
   transition: all 1s ease-in;
   margin-top: .5em;
-  @include desktop{
-  }
 }
 .refresh-hover{
   color: $light-blue;

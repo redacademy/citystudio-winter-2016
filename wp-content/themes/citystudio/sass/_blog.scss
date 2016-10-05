@@ -4,20 +4,26 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 175px;
+  height: 275px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
   @include tablet {
+    height: 210px;
+  }
+  @include desktop {
     height: 250px;
   }
 }
 .title-container {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  width: 80%;
+  justify-content: center;
+  width: 85%;
+  @include desktop{
+    width: 82%;
+  }
   h1 {
     font-size: 2em;
     text-align: left !important;
@@ -35,11 +41,10 @@
     color: white;
     width: 75%;
     @include tablet {
-      width: 50%;
       font-size: 1em;
     }
     @include desktop {
-      width: 42.5%;
+      width: 55.5%;
       font-size: 1.15em;
     }
     span {
@@ -59,29 +64,24 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 15%;
-    margin: 4em;
+    width: 25%;
     height: 45vh;
-    margin: 5em 3em;
-  }
-  @include desktop {
-    height: 35vh;
-    width: 20%;
-    display: flex;
-    justify-content: inherit;
-    align-items: flex-start;
-    margin: 1em 4em;
+    margin: 2em 1em;
   }
 }
  .fixed-sidebar {
-   position: fixed;
-   top: 0;
-   width: 20%;
-   padding: 0;
-   display: flex;
-   flex-direction: column;
-   align-items: flex-start;
-   margin: 1em 4em;
+  display: none;
+  @include tablet{
+    position: fixed;
+    top: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  @include desktop{
+    transition: all 1s ease;
+  }
 }
 .sidebar-item {
   color: $city-blue;
@@ -127,21 +127,26 @@
 }
 //CONTENT BLOCK
 .blog-archive-feed {
-  width: 90%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin: 2em auto;
+  /*margin: 2em auto;*/
   @include tablet {
     width: 80%;
     position: absolute;
-    right: 0em;
-    margin: 0;
-    left: 15em;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
   }
   @include desktop {
-    flex-direction: row;
-    justify-content: center;
+    width: 70%;
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap-reverse;
   }
 }
 .blog-featured-image {
@@ -150,15 +155,16 @@
   position: relative;
   box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
   height: 250px;
-  margin: 1em;
+  margin: 0 2em 2em;
   border-radius: 5px;
   width: 80%;
   @include tablet {
     height: 300px;
+    margin: 0 2em;
     margin-bottom: 2em;
   }
   @include desktop {
-    margin-bottom: 4em;
+    margin-bottom: 3em;
   }
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
@@ -185,7 +191,7 @@
   h2,
   p {
     color: white;
-    max-width: 90%;
+    max-width: 100%;
   }
   h2 {
     font-size: 1.5em;
