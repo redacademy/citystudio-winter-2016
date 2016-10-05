@@ -23,7 +23,7 @@ if ( have_posts() ) : ?>
     <div class="sidebar-item">
       <?php wp_list_categories(); ?>
     </div>
-    <div class="social-media-item">
+    <div class="sidebar-item">
       <h4>Social Media</h4>
       <p>
         <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
@@ -38,7 +38,7 @@ if ( have_posts() ) : ?>
     <div class="sidebar-item">
       <h4>Newsboard</h4>
     </div>
-  </div><!-- end blog sidebar div -->
+  </div>
 
   <div class="category-post-container">
   <?php while ( have_posts() ) : the_post(); ?>

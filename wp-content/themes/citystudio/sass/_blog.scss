@@ -55,6 +55,7 @@
 //SIDEBAR
 .blog-sidebar {
   display: none;
+
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -64,6 +65,7 @@
     height: 45vh;
     margin: 5em 3em;
   }
+
   @include desktop {
     height: 35vh;
     width: 20%;
@@ -90,10 +92,12 @@
   font-weight: bold;
   text-align: center;
   margin: 1em 0;
+
   h4 {
     margin-bottom: 15px;
     padding-left: 1em;
   }
+
   p {
     margin-bottom: 10px;
     color: $city-blue;
@@ -101,16 +105,19 @@
     font-size: 0.9em;
     font-weight: lighter;
   }
-  a {
+
+  a, &:visited, &:active  {
     color: $city-blue;
     font-weight: normal;
     outline: none;
+
     &:hover {
       text-decoration: underline;
       color: $dark-blue;
     }
   }
 }
+
 .categories {
   list-style-type: none;
   padding-left: 0;
@@ -132,13 +139,14 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2em auto;
+
   @include tablet {
     width: 80%;
-    position: absolute;
     right: 0em;
     margin: 0;
     left: 15em;
   }
+
   @include desktop {
     flex-direction: row;
     justify-content: center;
@@ -242,16 +250,14 @@
 }
 .category {
   display: none;
+  
   @include tablet {
     display: block;
-    padding-left: 1.1em !important;
   }
-  @include desktop {
-    padding-left: 1.5em !important;
-  }
+
   a {
     font-size: 0.9em;
-    font-weight: 600;
+    font-weight: 300;
     font-family: $fontfamily;
     &:hover {
       text-decoration: underline;

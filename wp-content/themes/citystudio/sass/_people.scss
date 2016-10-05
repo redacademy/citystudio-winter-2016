@@ -45,11 +45,22 @@
     @include tablet {
       margin: 1em 0 0;
     }
-    
+
     @include desktop {
       font-size: 2em;
       margin: 1em;
     }
+  }
+
+  ul {
+    list-style: none;
+    flex-basis: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+    display: flex;
+    max-width: 90%;
+    margin: 0 auto;
+    justify-content: space-between;
   }
 }
 .section-one-h2 {
