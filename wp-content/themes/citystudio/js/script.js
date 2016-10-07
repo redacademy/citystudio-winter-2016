@@ -29,6 +29,7 @@ jQuery(document).ready(function($){
       if (scroll >= bottomOffset) {
          sticky.addClass("fixed");
         }
+        
       if(scroll >= topOffset) {
         sticky.removeClass("fixed");
       }
@@ -36,7 +37,6 @@ jQuery(document).ready(function($){
           sticky.removeClass("fixed");
         }
       } 
-
 
   });
 
@@ -57,19 +57,6 @@ jQuery(document).ready(function($){
         }
     }
   });
-
-  // $(window).scroll(function(){
-  //   if ($('body').hasClass('home page') ) {
-  //       scroll = $(window).scrollTop(),
-  //       explore = $('.explore-section'),
-  //       topOffset = explore.offset().top;
-  //       console.log(topOffset);
-  //      if (scroll >= bottomOffset) {
-
-  //      }
-  //     }
-  //  });  
-
 
 });
 
