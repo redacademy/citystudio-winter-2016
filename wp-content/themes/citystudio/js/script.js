@@ -28,27 +28,27 @@ jQuery(document).ready(function($){
       else if (scroll <= offset)  {
           sticky.removeClass("fixed");
         }
-      } 
+      }
   });
 
 
-  $(window).scroll(function(){
-
-    if ($('body').hasClass('blog') ) {
-
-      var bar = $('.blog-content-container'),
-          sideBar =$('.blog-sidebar'),
-          blogScroll = $(window).scrollTop(),
-          blogOffset = bar.offset().top;
-
-      if (blogScroll >= blogOffset) {
-         sideBar.addClass("fixed-sidebar");
-        }
-      else if(blogScroll <= blogOffset) {
-         sideBar.removeClass("fixed-sidebar");
-        }
-    }
-  });
+  // $(window).scroll(function(){
+  //
+  //   if ($('body').hasClass('blog') ) {
+  //
+  //     var bar = $('.blog-content-container'),
+  //         sideBar =$('.blog-sidebar'),
+  //         blogScroll = $(window).scrollTop(),
+  //         blogOffset = bar.offset().top;
+  //
+  //     if (blogScroll >= blogOffset) {
+  //        sideBar.addClass("fixed-sidebar");
+  //       }
+  //     else if(blogScroll <= blogOffset) {
+  //        sideBar.removeClass("fixed-sidebar");
+  //       }
+  //   }
+  // });
 
 });
 
