@@ -2140,7 +2140,8 @@ object {
   max-width: 100%; }
   @media screen and (min-width: 600px) {
     .recent-posts-list {
-      margin: auto 2em;
+      width: 75%;
+      margin: 0 auto;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-pack: distribute;
@@ -2149,7 +2150,6 @@ object {
           align-items: flex-start; } }
   @media screen and (min-width: 1024px) {
     .recent-posts-list {
-      margin: auto 2em;
       -ms-flex-direction: row;
           flex-direction: row;
       -ms-flex-pack: distribute;
@@ -2185,10 +2185,9 @@ object {
         height: 240px;
         width: 300px; } }
     .recent-posts-list li:hover {
-      box-shadow: 4px 5px 20px 0 rgba(0, 0, 0, 0.35);
+      box-shadow: 4px 5px 20px 0 rgba(0, 0, 0, 0.25);
       transition: all 0.25s ease;
-      top: 2px;
-      left: 2px; }
+      bottom: 2px; }
     .recent-posts-list li img {
       border-radius: 10px;
       height: 100%;
