@@ -175,9 +175,11 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-top: 5em;
+  padding: 2%;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+
   @include tablet {
     height: 68%;
     margin-top: 3em;
@@ -185,13 +187,12 @@
   h2,
   p {
     color: white;
-    max-width: 90%;
   }
   h2 {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.15em;
+
     &:hover {
       text-decoration: underline;
     }
@@ -200,7 +201,6 @@
     }
     @include desktop {
       font-size: 2em;
-      padding: 0.5rem 0 0.5rem 1.5rem;
     }
   }
   p {
@@ -210,15 +210,12 @@
     overflow: hidden;
     white-space: nowrap;
     font-size: 0.8em;
-    padding-left: 1.5em;
-    margin-bottom: 0;
+    margin: 1em 0;
     @include tablet {
-      padding: 0.5em 0.5em 0.5em 1.5em;
     }
     @include desktop {
       font-weight: lighter;
       line-height: 1em;
-      margin: 0.5em;
       font-size: 0.8em;
       font-family: $fontfamily;
     }
@@ -242,6 +239,8 @@
 }
 .category {
   display: none;
+  position: absolute;
+  bottom: 13px;
   @include tablet {
     display: block;
     padding-left: 1.1em !important;
