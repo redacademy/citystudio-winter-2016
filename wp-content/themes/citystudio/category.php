@@ -12,11 +12,35 @@ get_header();
   // Check if there are any posts to display
   if ( have_posts() ) : ?>
 
+<<<<<<< HEAD
   <header class="citystudio-banner">
     <div class="banner-inner">
       <h2 class="page-titles">Category: <?php single_cat_title(); ?></h2>
     </div>
   </header>
+=======
+<div class="blog-content-container">
+  <div class="blog-sidebar">
+    <div class="sidebar-item">
+      <?php wp_list_categories(); ?>
+    </div>
+    <div class="sidebar-item">
+      <h4>Social Media</h4>
+      <p>
+        <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
+      </p>
+      <p>
+        <a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">TWITTER</a>
+      </p>
+      <p>
+        <a href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a>
+      </p>
+    </div>
+    <div class="sidebar-item">
+      <h4>Newsboard</h4>
+    </div>
+  </div>
+>>>>>>> b10e9d775fe1d85582df0a42664b6211ca2b551a
 
   <div class="blog-content-container">
     <div class="blog-sidebar">
