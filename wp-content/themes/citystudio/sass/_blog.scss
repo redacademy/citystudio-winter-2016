@@ -132,7 +132,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   margin: 2em auto;
-  
+
   @include tablet {
     width: 80%;
     right: 0em;
@@ -241,13 +241,11 @@
   display: none;
   position: absolute;
   bottom: 13px;
+
   @include tablet {
     display: block;
-    padding-left: 1.1em !important;
   }
-  @include desktop {
-    padding-left: 1.5em !important;
-  }
+  
   a {
     font-size: 0.9em;
     font-weight: 600;

@@ -4260,11 +4260,7 @@ article.people {
   bottom: 13px; }
   @media screen and (min-width: 600px) {
     .category {
-      display: block;
-      padding-left: 1.1em !important; } }
-  @media screen and (min-width: 1024px) {
-    .category {
-      padding-left: 1.5em !important; } }
+      display: block; } }
   .category a {
     font-size: 0.9em;
     font-weight: 600;
