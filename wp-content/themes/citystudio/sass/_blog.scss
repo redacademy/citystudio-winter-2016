@@ -153,7 +153,6 @@
   flex-wrap: wrap;
   @include tablet {
     width: 80%;
-    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
@@ -162,7 +161,6 @@
   }
   @include desktop {
     width: 70%;
-    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
