@@ -79,14 +79,13 @@
   justify-content: flex-start;
   align-items: center;
   @include blue-to-blue;
-  margin-bottom: 0;
-  opacity: 0.9;
-  width: 100%;
-  min-height: 4em;
-  height: 100%;
-  overflow: hidden;
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  padding: 0 4%;
+    margin-bottom: 0;
+    opacity: 0.9;
+    width: 100%;
+    min-height: 4em;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
 @include tablet {
   min-height: 5em;
 }

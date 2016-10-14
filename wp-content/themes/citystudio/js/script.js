@@ -3,9 +3,6 @@ jQuery(document).ready(function($){
    var callToAction = $(".call-to-action");
 
     if ($(window).width() <= 414){
-        callToAction.css({"display": "none"});
-        $('.header-container').css({"position": "fixed"});
-        $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
         },
@@ -20,22 +17,28 @@ jQuery(document).ready(function($){
     var sticky = $('.sticky-navigation'),
         grid = $('.homepage-titles'),
         explore = $('.explore-section'),
-        scroll = $(window).scrollTop(),
+        scroll = $(window).scrollTop() + 50,
         bottomOffset = grid.offset().top,
-        topOffset = explore.offset().top;
-        console.log(topOffset);
-        console.log(scroll);
+        topOffset = explore.offset().top - 100;
+        console.log(topOffset, 'top');
+        console.log(scroll, 'scroll');
 
       if (scroll >= bottomOffset) {
          sticky.addClass("fixed");
+          sticky.animate({"opacity": 1}, 0);
+           sticky.css('height', '5em');
         }
         
       if(scroll >= topOffset) {
         sticky.removeClass("fixed");
+         sticky.animate({"opacity": 0}, 0);
       }
-      else if (scroll <= bottomOffset)  {
+
+      else if (scroll <= (bottomOffset) )  {
           sticky.removeClass("fixed");
+          sticky.animate({"opacity": 0}, 0);
         }
+
       }
   });
 
