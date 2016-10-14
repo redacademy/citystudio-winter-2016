@@ -57,11 +57,7 @@
 }
 
 .container{
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	            -ms-grid-row-align: center;
-	        align-items: center;
+  align-items: center;
 }
 
 .site-footer{
@@ -82,19 +78,18 @@
   margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
-  min-height: 4em;
+  min-height: 2em;
   height: 100%;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  padding: 0 4%;
-@include tablet {
-  min-height: 5em;
-}
+  @include tablet {
+    min-height: 5em;
+  }
   @include desktop {
-  background-size: cover;
-  background-position: center center;
-  min-height: 6em;
-  height: 100%;
+    background-size: cover;
+    background-position: center center;
+    min-height: 6em;
+    height: 100%;
   }
 }
 
@@ -105,7 +100,7 @@ h2.page-titles {
   box-shadow: none;
   margin-left: 1.5em;
   @include tablet {
-      font-size: 2em;
+    font-size: 2em;
   }
   @include desktop {
     font-size: 3em;
@@ -119,12 +114,12 @@ h2.page-titles {
   height: 4em;
   overflow: hidden;
   margin-bottom: 4em;
-@include desktop {
-  background: url("../../images/citystudio-logo-lighter.png"), $medium-blue;
-  background-size: cover;
-  background-position: center center;
-  height: 150px;
-  opacity: 0.9;
+  @include desktop {
+    background: url("../../images/citystudio-logo-lighter.png"), $medium-blue;
+    background-size: cover;
+    background-position: center center;
+    height: 150px;
+    opacity: 0.9;
   }
 }
 

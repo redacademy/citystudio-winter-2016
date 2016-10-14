@@ -720,6 +720,7 @@ a {
   max-width: 100%; }
 
 .header-container {
+  position: fixed;
   -ms-flex-align: center;
       align-items: center;
   display: -ms-flexbox;
@@ -729,6 +730,9 @@ a {
   z-index: 2;
   background: white;
   width: 100%; }
+  @media screen and (min-width: 600px) {
+    .header-container {
+      position: relative; } }
 
 @media screen and (min-width: 1024px) {
   .site-branding {
@@ -858,7 +862,7 @@ a {
   top: 0;
   position: absolute;
   font-size: 10px;
-  width: 120px; }
+  width: 130px; }
 
 .menu-item {
   font-weight: 500;
@@ -1102,11 +1106,8 @@ button.hamburger {
   display: block; }
 
 .container {
-  -webkit-box-align: center;
-  -webkit-align-items: center;
   -ms-flex-align: center;
-  -ms-grid-row-align: center;
-  align-items: center; }
+      align-items: center; }
 
 .site-footer {
   width: 100vw;
@@ -1126,11 +1127,10 @@ button.hamburger {
   margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
-  min-height: 4em;
+  min-height: 2em;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-  padding: 0 4%; }
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
   @media screen and (min-width: 600px) {
     .citystudio-banner {
       min-height: 5em; } }
@@ -2404,15 +2404,16 @@ a {
       height: 225px;
       margin: 0; } }
   .partners-banner h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     color: #fff;
     font-weight: 400;
     text-align: center;
-    width: 80%;
-    margin: 0 auto; }
+    width: 85%;
+    margin: 3em 2em 0; }
     @media screen and (min-width: 600px) {
       .partners-banner h1 {
-        font-size: 2em; } }
+        font-size: 1.8em;
+        margin: 0em 2em 0; } }
     @media screen and (min-width: 1024px) {
       .partners-banner h1 {
         font-size: 2.5em; } }
@@ -3074,11 +3075,13 @@ a {
     display: block; }
 
 .sticky-navigation {
-  display: none;
+  position: relative;
+  visibility: hidden;
   transition: height .3s ease;
   height: 5em; }
   @media screen and (min-width: 600px) {
     .sticky-navigation {
+      visibility: visible;
       display: block; } }
 
 .fixed {
@@ -3094,12 +3097,14 @@ a {
   transition: all .5s ease; }
 
 .sticky-navigation.fixed {
-  display: none; }
+  visibility: hidden; }
   @media screen and (min-width: 600px) {
     .sticky-navigation.fixed {
       transition: all .5s ease;
+      visibility: visible;
       display: -ms-flexbox;
-      display: flex; } }
+      display: flex;
+      height: 6em; } }
 
 .nav-div.fixed {
   margin: 23px 0px; }
@@ -3534,6 +3539,11 @@ a {
 
 .team-citystudio-team {
   position: relative; }
+
+h2.page-titles {
+  font-size: 2em;
+  margin-left: 1em;
+  padding: 7% 0; }
 
 .people-margin {
   margin-bottom: 1em; }
@@ -4304,8 +4314,39 @@ article.people {
     .category a:hover {
       text-decoration: underline; }
 
-.category {
-  padding-left: 0; }
+.category-banner {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+      justify-content: center;
+  -ms-flex-align: center;
+      align-items: center;
+  margin-bottom: 2em; }
+
+.page-titles {
+  padding-left: 0;
+  height: 75px; }
+
+.category-sidebar {
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .category-sidebar {
+      height: 0;
+      width: 20%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-direction: column;
+          flex-direction: column;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin: 2em 4em; } }
+
+.category-banner-inner {
+  width: 100%; }
 
 .blog-item {
   margin: 2em; }
@@ -4315,10 +4356,12 @@ article.people {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
-  width: 75%;
+  width: 70%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 4em 0 0 4em; }
+  margin: 4em 0;
+  left: 20em;
+  position: relative; }
   .category-post-container h2,
   .category-post-container a,
   .category-post-container p,
