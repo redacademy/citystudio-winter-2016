@@ -364,10 +364,12 @@
   }
 }
 .sticky-navigation {
-  display: none;
+  position: relative;
+  visibility: hidden;
   transition: height .3s ease;
   height: 5em;
   @include tablet{
+    visibility: visible;
     display: block;
   }
 }
@@ -385,10 +387,12 @@
   transition: all .5s ease;
 }
 .sticky-navigation.fixed{
-  display: none;
+  visibility: hidden;
     @include tablet{
       transition: all .5s ease;
+      visibility: visible;
       display: flex;
+      height: 6em;
     }
  }
 .nav-div.fixed{

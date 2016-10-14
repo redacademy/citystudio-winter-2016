@@ -3,12 +3,16 @@
   max-width: 100%;
 }
 .header-container {
+  position: fixed;
   align-items: center;
   display: flex;
   justify-content: space-between;
   z-index: 2;
   background: white;
   width: 100%;
+  @include tablet{
+    position: relative;
+  }
 }
 .site-branding {
   @include desktop {
@@ -143,7 +147,7 @@
   top: 0;
   position: absolute;
   font-size: 10px;
-  width: 120px;
+  width: 130px;
 }
 .menu-item {
   font-weight: 500;
