@@ -39,25 +39,25 @@ jQuery(document).ready(function($){
     }
   });
 
-  $(window).scroll(function(){
-
-    if ($('body').hasClass('blog') ) {
-
-      var bar = $('.blog-content-container'),
-          sideBar = $('.blog-sidebar'),
-          blogArchive = $('.blog-archive-feed'),
-          blogScroll = $(window).scrollTop(),
-          blogOffset = bar.offset().top;
-      if (blogScroll >= blogOffset) {
-         sideBar.addClass("fixed-sidebar");
-         blogArchive.addClass('additional');
-        }
-      else if(blogScroll <= blogOffset) {
-         sideBar.removeClass("fixed-sidebar");
-         blogArchive.removeClass('additional');
-        }
-    }
-  });
+  // $(window).scroll(function(){
+  //
+  //   if ($('body').hasClass('blog') ) {
+  //
+  //     var bar = $('.blog-content-container'),
+  //         sideBar = $('.blog-sidebar'),
+  //         blogArchive = $('.blog-archive-feed'),
+  //         blogScroll = $(window).scrollTop(),
+  //         blogOffset = bar.offset().top;
+  //     if (blogScroll >= blogOffset) {
+  //        sideBar.addClass("fixed-sidebar");
+  //        blogArchive.addClass('additional');
+  //       }
+  //     else if(blogScroll <= blogOffset) {
+  //        sideBar.removeClass("fixed-sidebar");
+  //        blogArchive.removeClass('additional');
+  //       }
+  //   }
+  // });
 
 });
 

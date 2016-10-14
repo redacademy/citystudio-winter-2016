@@ -12,7 +12,7 @@ get_header(); ?>
 
 	<header class="contact-header citystudio-banner">
 		<div class="banner-inner">
-			<h1>Contact Us</h1>
+			<h1 class="page-titles">Contact Us</h1>
 		</div>
 	</header>
 <div class="map">
