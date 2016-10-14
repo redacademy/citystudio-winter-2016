@@ -6,7 +6,7 @@
       <?php
         if( have_rows('partner_row') );
         while ( have_rows('partner_row') ) : the_row(); ?>
-        <li style="background: url( '<?php the_sub_field('school_logo'); ?> ' ) no-repeat center center;background-size: contain; "><a href='<?php  ?>'/>√
+        <li style="background: url( '<?php the_sub_field('school_logo'); ?> ' ) no-repeat center center;background-size: contain; ">
         </li>
       <?php endwhile; ?>
     </ul>
@@ -29,5 +29,5 @@
         <?php endwhile; ?>
     </ul>
 
-    
+
   </div>
