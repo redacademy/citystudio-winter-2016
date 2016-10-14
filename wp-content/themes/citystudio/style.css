@@ -4304,6 +4304,7 @@ article.people {
     .category a:hover {
       text-decoration: underline; }
 
+<<<<<<< HEAD
 .category-banner {
   background-position: center center;
   background-repeat: no-repeat;
@@ -4337,6 +4338,11 @@ article.people {
 
 .category-banner-inner {
   /*margin-top: 8em;*/ }
+=======
+.category {
+  padding-left: 0;
+  width: 100%; }
+>>>>>>> feature
 
 .blog-item {
   margin: 2em; }
@@ -4349,9 +4355,15 @@ article.people {
   width: 70%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+<<<<<<< HEAD
   margin: 0em 0;
   position: relative;
   left: 23em; }
+=======
+  margin: 4em 0;
+  left: 20em;
+  position: relative; }
+>>>>>>> feature
   .category-post-container h2,
   .category-post-container a,
   .category-post-container p,
