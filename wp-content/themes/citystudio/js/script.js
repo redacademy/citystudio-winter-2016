@@ -48,14 +48,16 @@ jQuery(document).ready(function($){
           blogArchive = $('.blog-archive-feed'),
           blogScroll = $(window).scrollTop(),
           blogOffset = bar.offset().top;
+
       if (blogScroll >= blogOffset) {
          sideBar.addClass("fixed-sidebar");
          blogArchive.addClass('additional');
-        }
+      }
+
       else if(blogScroll <= blogOffset) {
          sideBar.removeClass("fixed-sidebar");
          blogArchive.removeClass('additional');
-        }
+      }
     }
   });
 
@@ -63,24 +65,24 @@ jQuery(document).ready(function($){
 
 jQuery(document).ready(function($){
 
-    var menuIcon = $(".fa-bars", this);
-        hamburger = $('.hamburger'); 
+  var menuIcon = $(".fa-bars", this);
+      hamburger = $('.hamburger'); 
 
-    hamburger.toggle(function(e) {
-    $('.dropdown-content').css({"visibility": "visible"});
-      menuIcon.removeClass("fa-bars");
-      menuIcon.addClass("fa-times-circle");
-    }, function() {
-
-     $('.dropdown-content').css({"visibility": "hidden"});
-     menuIcon.removeClass("fa-times-circle");
-     menuIcon.addClass("fa-bars");
+  hamburger.toggle(function(e) {
     
-   });
+  $('.dropdown-content').css({"visibility": "visible"});
+    menuIcon.removeClass("fa-bars");
+    menuIcon.addClass("fa-times-circle");
+  }, function() {
+
+  $('.dropdown-content').css({"visibility": "hidden"});
+    menuIcon.removeClass("fa-times-circle");
+    menuIcon.addClass("fa-bars");
+  });
 
   $('.header-container').on('click', function() {
-     $('.dropdown-content').css({"visibility": "hidden"});
-    });
+    $('.dropdown-content').css({"visibility": "hidden"});
+  });
   
 });
 
@@ -123,8 +125,28 @@ jQuery(document).ready(function($){
   if ($('body').hasClass('archive category')) {
     $('#page').css({"width": "100vw"});
     $('.site-footer').css({"width": "100vw"});
-    $('#masthead').css({"position": "absolute"});
-    $('#masthead').css({"margin-top": "-2.5em"});
-    $('#masthead').css({"width": "100%"});
+    $('#masthead').css({"position": "absolute", 
+                        "margin-top": "-2.5em", 
+                        "width": "100%"}
+                      );
+    $('.citystudio-banner').css({"position": "relative", 
+                                "top": "3.8em"});
+    $('h2.page-titles').css({"padding": "8% 0"})
+    if ($(window).width() >= 600 ) {
+      $('#masthead').css({ "margin-top": "-1em"});
+    }
+    if ($(window).width() >= 1195 ) {
+      $('#masthead').css({ "margin-top": "1em"});
+     }
+      if ($('body').hasClass('category-semester-news')){
+    $('.category-post-container').css({"width": "38%", "height": "29vw"})
   }
+  }
+
+ 
+
+  if ($('body').hasClass('single')){
+    $('h2.page-titles').css({"padding": 0})
+  }
+
 });

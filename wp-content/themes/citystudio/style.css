@@ -4104,7 +4104,7 @@ article.people {
           justify-content: center;
       width: 26%;
       height: 45vh;
-      margin: 5em .5em; } }
+      margin: 2em .5em; } }
   @media screen and (min-width: 1024px) {
     .blog-sidebar {
       height: 35vh;
@@ -4131,7 +4131,7 @@ article.people {
           flex-direction: column;
       -ms-flex-pack: center;
           justify-content: center;
-      margin: 3.5em 0; } }
+      margin: 2.5em 0; } }
   @media screen and (min-width: 1024px) {
     .fixed-sidebar {
       margin: 5.5em 4em; } }
@@ -4327,13 +4327,19 @@ article.people {
       align-items: center;
   margin-bottom: 2em; }
 
+.sidebar-item {
+  padding-left: 0;
+  margin: 4em 0 -20px; }
+  .sidebar-item a {
+    font-weight: 300; }
+
 .page-titles {
   padding-left: 0;
   height: 75px; }
 
 .category-sidebar {
   display: none; }
-  @media screen and (min-width: 1024px) {
+  @media screen and (min-width: 600px) {
     .category-sidebar {
       height: 0;
       width: 20%;
