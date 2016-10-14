@@ -13,9 +13,6 @@ get_header(); ?>
         </div>
       </header>
 
-      <div id="content" role="main">
-
-
         <div class="blog-sidebar">
           <div class="sidebar-item">
             <?php wp_list_categories(); ?>
@@ -36,14 +33,37 @@ get_header(); ?>
             <h4>Newsboard</h4>
           </div>
         </div>
+
       <div class="blog-content-container">
         <?php
         // Check if there are any posts to display
         if ( have_posts() ) : ?>
+
           <div class="category-post-container">
+             <?php while ( have_posts() ) : the_post(); ?>
+
+      <?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb' );?>
+
+      <a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>">
+      <div class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
+                                    background-size: cover;">
+        <div class="blog-credits">
+          <p class="date"><?php echo get_the_date('F j, Y'); ?></p>
+          <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+          <p><?php the_field('post_excerpt'); ?></p>
+        </div>
+
+      </div><!-- end blog-featured-image div -->
+      </a>
+
+    <?php endwhile;
+    else: ?>
+    </div><!-- end category post container -->
+
+  <p>Sorry, no posts matched your criteria.</p>
           </div><!-- end category post container -->
+
         <?php endif; ?>
-      </div>
       </div><!-- end blog content container -->
   </main><!-- #main -->
 </div><!-- #primary -->

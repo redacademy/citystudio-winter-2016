@@ -4319,7 +4319,9 @@ article.people {
   width: 75%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 4em 0; }
+  margin: 4em 0;
+  left: 20em;
+  position: relative; }
   .category-post-container h2,
   .category-post-container a,
   .category-post-container p,
