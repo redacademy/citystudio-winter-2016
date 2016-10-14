@@ -80,7 +80,7 @@ jQuery(document).ready(function($){
    });
 
 
-  $('html').bind('click', function() {
+  $('.header-container').bind('click', function() {
 
      $('.dropdown-content').css({"visibility": "hidden"});
      menuIcon.removeClass("fa-times-circle");
@@ -120,5 +120,16 @@ jQuery(document).ready(function($){
         $('.search-list-inner').append('<div class="js-next-search-list" />');
       });
     });
+  }
+});
+
+// ---  temporary fix for category.php styles
+jQuery(document).ready(function($){
+  if ($('body').hasClass('archive category')) {
+    $('#page').css({"width": "100vw"});
+    $('.site-footer').css({"width": "100vw"});
+    $('#masthead').css({"position": "absolute"});
+    $('#masthead').css({"margin-top": "-2.5em"});
+    $('#masthead').css({"width": "100%"});
   }
 });
