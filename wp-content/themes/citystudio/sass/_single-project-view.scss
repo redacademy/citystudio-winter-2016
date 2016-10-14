@@ -142,26 +142,22 @@ width: 75%;
 }
 // IMAGE BAR
 .image-bar {
-  flex-basis: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  order: 4;
-  @include desktop {
-
+  overflow-x:scroll;
+  white-space: nowrap;
+  @include tablet {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   }
   img {
     height: 200px;
-    width: 300px;
-    margin-right: 1em;
-    margin-top: 1em;
     border-radius: 5%;
   }
 }
 // TAG LINKS
 .tags-wrapper {
+  margin-top: 2em;
   flex-basis: 100%;
   width: 100%;
 }

@@ -21,20 +21,20 @@
   @include tablet {
     height: 60vh;
   }
-   @include desktop {
+  @include desktop {
     height: 75vh;
   }
 }
 .hero-blurb {
-    text-align: center;
-    font-size: 1rem;
-    font-weight: 700;
-    font-family: open_sans;
-    display: flex;
-    -ms-flex-pack: center;
-    justify-content: center;
-    z-index: 1;
-    margin-top: 2em;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family:$fontfamily;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 2em;
+  padding:8%;
   @include tablet {
     margin: 0 auto;
   }
@@ -49,6 +49,9 @@
       font-size: 2em;
     }
   }
+p {
+margin-bottom: 0;
+}
 }
 .orange-font {
   color: #ee7600;
@@ -94,15 +97,12 @@
   width: 100%;
   height: 800px;
   margin: 1em 0 0;
-
   @include tablet {
-    height: 300px;
+    height: 570px;
   }
-
   @include desktop {
     height: 400px;
   }
-
   h2 {
     color: $city-blue;
     text-align: center;
@@ -111,53 +111,46 @@
     font-weight: bold;
   }
 }
-
 .recent-posts-list {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  max-width: 100%;
-
+  width: 90%;
+  margin: 0 auto;
   @include tablet {
-    width: 75%;
-    margin: 0 auto;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
   @include desktop {
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
   }
   a {
     height: 200px;
     width: 250px;
     margin: 1em;
-    @include tablet {
-      height: 160px;
-      width: 210px;
-      margin: 0;
-    }
+    // @include tablet {
+    //   height: 160px;
+    //   width: 210px;
+    // }
     @include desktop {
       height: 240px;
       width: 300px;
       margin: 0;
     }
   }
-
   li {
-  border-radius: 10px;
+    border-radius: 10px;
     position: relative;
     height: 200px;
     width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-    @include tablet {
-      height: 160px;
-      width: 210px;
-    }
+    // @include tablet {
+    //   height: 160px;
+    //   width: 210px;
+    // }
     @include desktop {
       height: 240px;
       width: 300px;
@@ -168,7 +161,7 @@
       bottom: 2px;
     }
     img {
-  border-radius: 10px;
+      border-radius: 10px;
       height: 100%;
       width: 100%;
     }
@@ -181,7 +174,7 @@
   color: white;
   position: absolute;
   border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
   @include tablet {
     height: 45%;
@@ -223,9 +216,12 @@ border-bottom-right-radius: 10px;
     }
   }
   li {
-    height: 110px;
+    height: 4em;
+    @include tablet {
+      height: 6em;
+    }
     &:hover {
-      // cursor: pointer;
+      cursor: pointer;
     }
   }
   h1 {

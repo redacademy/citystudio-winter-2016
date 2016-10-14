@@ -7,9 +7,11 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<div class="searchpage">
 				<header class="search-archive-header">
-					<h1>Project Archive</h1>
+					<div class="searchform-title">
+						<h1>Project Archive</h1>
+					</div>
 					<div class="searchform-container">
-						<?php get_search_form(); ?>
+						<?php dynamic_sidebar( 'searchform' ); ?>
 					</div>
 				</header>
 				<div class="search-list-container">
@@ -33,7 +35,7 @@ if ( $the_query->have_posts() ) {
 							 				">
 							 			<div class="tag-description">
 							 			 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
-							 			
+
 							 			</div>
 							 		</li>
 							 	</a>

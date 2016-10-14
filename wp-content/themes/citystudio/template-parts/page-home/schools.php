@@ -1,5 +1,5 @@
 
-<h1 class="homepage-titles">Participating Schools</h1>
+<h1 class="homepage-titles">Partners</h1>
 
   <div class="homepage-partners-container">
     <ul class="featured">
@@ -20,12 +20,12 @@
         <?php endwhile; ?>
     </ul>
 
-    <!-- <ul class="featured-two">
+    <ul class="featured-two">
         <?php
           if( have_rows('partner_row_three') );
           while ( have_rows('partner_row_three') ) : the_row(); ?>
           <li style="background: url( ' <?php the_sub_field('school_logo') ?> ' )no-repeat center center;background-size: contain; ">
           </li>
         <?php endwhile; ?>
-    </ul> -->
+    </ul>
   </div>

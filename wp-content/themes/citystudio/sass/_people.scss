@@ -41,34 +41,28 @@
     margin: 1em 0 0.5em;
     font-size: 1.5em;
     @include tablet {
-      margin: 1em 0 0;
+      margin: 2em 0 1em;
     }
     @include desktop {
       font-size: 2em;
-      margin: 1em;
+      margin: 2em 0;
     }
   }
 }
-.section-one-h2 {
-  text-align: center;
-  font-size: 2em;
-  font-family: $fontfamily;
-  font-weight: bold;
-  margin: 2em 0;
-  height: 40px;
-}
+
 .team-ul-special {
   min-height: 350px !important;
 }
 .people-wrap {
   display: block;
 }
-.citystudio-team {
+.citystudio-teams {
+display: block;
   ul {
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
     min-height: 300px;
@@ -79,6 +73,7 @@
       padding: 1em;
     }
     @include desktop {
+    flex-direction: row;
       display: flex;
       flex: 0 0 100%;
       min-height: 100px;
