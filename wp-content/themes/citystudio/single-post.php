@@ -15,7 +15,7 @@ get_header();
     <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 14em; width: 100%; background-size: cover;">
 
 			<div class="blue-overlay-3">
-        <h2 class="page-titles"><?php the_title(); ?></h2>
+        <h2 class="blog-page-titles"><?php the_title(); ?></h2>
 				<p class="post_excerpt"><?php the_field('post_excerpt'); ?></p>
 			</div>
     </header>

@@ -63,7 +63,7 @@ get_header(); ?>
 									</h2>
 									<p><?php the_field('post_excerpt'); ?></p>
 									<div class="category">
-										<?php the_category(', '); ?>
+										<!-- <?php the_category(', '); ?> -->
 									</div>
 								</div>
 							</li>

@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
         sticky.animate({"opacity": 1}, 0);
         sticky.css('height', '5em');
       }
-        
+
       if(scroll >= topOffset) {
         sticky.removeClass("fixed");
         sticky.animate({"opacity": 0}, 0);
@@ -39,32 +39,32 @@ jQuery(document).ready(function($){
     }
   });
 
-  $(window).scroll(function(){
-  
-    if ($('body').hasClass('blog') ) {
-  
-      var bar = $('.blog-content-container'),
-          sideBar = $('.blog-sidebar'),
-          blogArchive = $('.blog-archive-feed'),
-          blogScroll = $(window).scrollTop(),
-          blogOffset = bar.offset().top;
-      if (blogScroll >= blogOffset) {
-         sideBar.addClass("fixed-sidebar");
-         blogArchive.addClass('additional');
-        }
-      else if(blogScroll <= blogOffset) {
-         sideBar.removeClass("fixed-sidebar");
-         blogArchive.removeClass('additional');
-        }
-    }
-  });
+  // $(window).scroll(function(){
+  //
+  //   if ($('body').hasClass('blog') ) {
+  //
+  //     var bar = $('.blog-content-container'),
+  //         sideBar = $('.blog-sidebar'),
+  //         blogArchive = $('.blog-archive-feed'),
+  //         blogScroll = $(window).scrollTop(),
+  //         blogOffset = bar.offset().top;
+  //     if (blogScroll >= blogOffset) {
+  //        sideBar.addClass("fixed-sidebar");
+  //        blogArchive.addClass('additional');
+  //       }
+  //     else if(blogScroll <= blogOffset) {
+  //        sideBar.removeClass("fixed-sidebar");
+  //        blogArchive.removeClass('additional');
+  //       }
+  //   }
+  // });
 
 });
 
 jQuery(document).ready(function($){
 
     var menuIcon = $(".fa-bars", this);
-        hamburger = $('.hamburger'); 
+        hamburger = $('.hamburger');
 
     hamburger.toggle(function(e) {
     $('.dropdown-content').css({"visibility": "visible"});
@@ -75,13 +75,13 @@ jQuery(document).ready(function($){
      $('.dropdown-content').css({"visibility": "hidden"});
      menuIcon.removeClass("fa-times-circle");
      menuIcon.addClass("fa-bars");
-    
+
    });
 
   $('.header-container').on('click', function() {
      $('.dropdown-content').css({"visibility": "hidden"});
     });
-  
+
 });
 
 function showMenu() {
