@@ -6,7 +6,7 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-<!-- "info main top section -->
+<!-- info main top section -->
       <header class="title-banner blog-banner" style="background-image: url( '<?php the_field('blog_banner_image'); ?> ' ); ">
 				<div class="blue-overlay-2 title-container">
 	        <h1>CityStudio Blog</h1>

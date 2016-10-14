@@ -12,13 +12,11 @@ get_header();
   // Check if there are any posts to display
   if ( have_posts() ) : ?>
 
-<<<<<<< HEAD
   <header class="citystudio-banner">
     <div class="banner-inner">
       <h2 class="page-titles">Category: <?php single_cat_title(); ?></h2>
     </div>
   </header>
-=======
 <div class="blog-content-container">
   <div class="blog-sidebar">
     <div class="sidebar-item">
@@ -39,12 +37,7 @@ get_header();
     <div class="sidebar-item">
       <h4>Newsboard</h4>
     </div>
-<<<<<<< HEAD
-  </div>
->>>>>>> b10e9d775fe1d85582df0a42664b6211ca2b551a
-=======
   </div><!-- end blog sidebar div -->
->>>>>>> b70945011c6305e771e8ad0d9a85917ea68ceb32
 
   <div class="blog-content-container">
     <div class="blog-sidebar">
