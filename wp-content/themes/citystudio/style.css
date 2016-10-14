@@ -1126,7 +1126,7 @@ button.hamburger {
   margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
-  min-height: 4em;
+  min-height: 2em;
   height: 100%;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
@@ -4304,7 +4304,6 @@ article.people {
     .category a:hover {
       text-decoration: underline; }
 
-<<<<<<< HEAD
 .category-banner {
   background-position: center center;
   background-repeat: no-repeat;
@@ -4337,12 +4336,7 @@ article.people {
       margin: 2em 4em; } }
 
 .category-banner-inner {
-  /*margin-top: 8em;*/ }
-=======
-.category {
-  padding-left: 0;
   width: 100%; }
->>>>>>> feature
 
 .blog-item {
   margin: 2em; }
@@ -4355,15 +4349,9 @@ article.people {
   width: 70%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-<<<<<<< HEAD
-  margin: 0em 0;
-  position: relative;
-  left: 23em; }
-=======
   margin: 4em 0;
   left: 20em;
   position: relative; }
->>>>>>> feature
   .category-post-container h2,
   .category-post-container a,
   .category-post-container p,
