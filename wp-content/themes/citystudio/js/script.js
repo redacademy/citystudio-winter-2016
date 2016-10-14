@@ -7,7 +7,7 @@ jQuery(document).ready(function($){
         $('.header-container').css({"position": "fixed"});
         $('.header-nav').css({"position": "fixed"});
         $("a[href*=#]").toggle(function() {
-          $(".sub-menu").css({"display": "block"});  
+          $(".sub-menu").css({"display": "block"});
         },
         function(){
           $(".sub-menu").css({"display": "none"});
@@ -36,19 +36,18 @@ jQuery(document).ready(function($){
       else if (scroll <= bottomOffset)  {
           sticky.removeClass("fixed");
         }
-      } 
-
+      }
   });
 
+
   // $(window).scroll(function(){
-
+  //
   //   if ($('body').hasClass('blog') ) {
-
+  //
   //     var bar = $('.blog-content-container'),
   //         sideBar =$('.blog-sidebar'),
   //         blogScroll = $(window).scrollTop(),
   //         blogOffset = bar.offset().top;
-
   //     if (blogScroll >= blogOffset) {
   //        sideBar.addClass("fixed-sidebar");
   //       }
@@ -79,8 +78,6 @@ jQuery(document).ready(function($){
      menuIcon.addClass("fa-bars");
     }
   );
-
-
 
 });
 

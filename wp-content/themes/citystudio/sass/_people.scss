@@ -34,65 +34,59 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
-
+  .section-one-title {
+    font-weight: bold;
+    font-family: $fontfamily;
+    display: block;
+    flex: 0 1 100%;
+    text-align: center;
+        margin: 2em 0 1em;
+    font-size: 1.5em;
+    @include desktop {
+      font-size: 2em;
+      margin: 2em 0;
+    }
+  }
   .section-titles {
     display: block;
     flex: 0 1 100%;
     text-align: center;
     margin: 1em 0 0.5em;
     font-size: 1.5em;
-
     @include tablet {
-      margin: 1em 0 0;
+      margin:0 0 1em;
     }
-
     @include desktop {
       font-size: 2em;
-      margin: 1em;
     }
   }
+}
 
-  ul {
-    list-style: none;
-    flex-basis: 100%;
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    max-width: 90%;
-    margin: 0 auto;
-    justify-content: space-between;
-  }
-}
-.section-one-h2 {
-  text-align: center;
-  font-size: 2em;
-  font-family: $fontfamily;
-  font-weight: bold;
-  margin: 2em 0;
-  height: 40px;
-}
 .team-ul-special {
   min-height: 350px !important;
 }
 .people-wrap {
   display: block;
 }
-.citystudio-team {
+.citystudio-teams {
+display: block;
   ul {
-    display: block;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
     min-height: 300px;
     @include tablet {
+    flex-direction: row;
       display: flex;
       min-height: 200px;
       flex: 0 0 80%;
       padding: 1em;
     }
     @include desktop {
+    flex-direction: row;
       display: flex;
       flex: 0 0 100%;
       min-height: 100px;
@@ -109,11 +103,9 @@
   align-items: center;
   padding: 1em;
   text-align: center;
-
   @include desktop {
     flex: 0 1 22%;
   }
-
   .team-pic {
     flex: 0 1 100%;
     border-radius: 50%;
@@ -123,18 +115,15 @@
     margin-bottom: 1em;
     height: 150px;
     width: 150px;
-
     @include tablet {
       height: 175px;
       width: 175px;
     }
-
     @include desktop {
       height: 200px;
       width: 200px;
     }
   }
-
   h3 {
     flex: 0 2 100%;
     line-height: 18px;
@@ -142,18 +131,15 @@
       line-height: 10px;
     }
   }
-
   p {
     flex: 0 3 100%;
     text-align: center;
   }
-
   a {
     margin-bottom: 0.5em;
     border: none;
     outline: none;
   }
-
   &:hover {
     cursor: pointer;
     img {

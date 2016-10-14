@@ -24,7 +24,7 @@ get_header();
     <div class="sidebar-item">
       <?php wp_list_categories(); ?>
     </div>
-    <div class="sidebar-item">
+    <div class="social-media-item">
       <h4>Social Media</h4>
       <p>
         <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
@@ -39,8 +39,12 @@ get_header();
     <div class="sidebar-item">
       <h4>Newsboard</h4>
     </div>
+<<<<<<< HEAD
   </div>
 >>>>>>> b10e9d775fe1d85582df0a42664b6211ca2b551a
+=======
+  </div><!-- end blog sidebar div -->
+>>>>>>> b70945011c6305e771e8ad0d9a85917ea68ceb32
 
   <div class="blog-content-container">
     <div class="blog-sidebar">

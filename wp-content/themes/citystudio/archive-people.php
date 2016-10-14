@@ -4,6 +4,7 @@
 */
 get_header();
 ?>
+
 <div id="primary" class="content-area single-people">
 	<main id="main" class="site-main" role="main">
       <div class="people-archive container">
@@ -21,7 +22,7 @@ get_header();
 	      <?php get_template_part( 'template-parts/page-people/people', 'operations' ); ?>
 					<hr class="separate">
 	      <?php get_template_part( 'template-parts/page-people/people', 'founders' ); ?>
-
+					<hr class="separate">
       </div><!-- .people-archive -->
 	</main><!-- #main -->
 </div><!-- #primary -->

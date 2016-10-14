@@ -60,7 +60,6 @@
 //SIDEBAR
 .blog-sidebar {
   display: none;
-
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -69,7 +68,6 @@
     height: 45vh;
     margin: 2em 1em;
   }
-
   @include desktop {
     height: 35vh;
     width: 20%;
@@ -100,12 +98,10 @@
   font-weight: bold;
   text-align: center;
   margin: 1em 0;
-
   h4 {
     margin-bottom: 15px;
     padding-left: 1em;
   }
-
   p {
     margin-bottom: 10px;
     color: $city-blue;
@@ -113,19 +109,16 @@
     font-size: 0.9em;
     font-weight: lighter;
   }
-
-  a, &:visited, &:active  {
+  a {
     color: $city-blue;
     font-weight: normal;
     outline: none;
-
     &:hover {
       text-decoration: underline;
       color: $dark-blue;
     }
   }
 }
-
 .categories {
   list-style-type: none;
   padding-left: 0;
@@ -161,7 +154,6 @@
     margin: 0;
     left: 15em;
   }
-
   @include desktop {
     width: 70%;
     position: absolute;
@@ -203,6 +195,7 @@
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
   margin-top: 5em;
+  padding: 2%;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
@@ -218,8 +211,8 @@
   h2 {
     font-size: 1.5em;
     font-weight: normal;
-    padding: 0.5rem 0 0.5rem 1rem;
     line-height: 1.15em;
+
     &:hover {
       text-decoration: underline;
     }
@@ -228,7 +221,6 @@
     }
     @include desktop {
       font-size: 2em;
-      padding: 0.5rem 0 0.5rem 1.5rem;
     }
   }
   p {
@@ -238,15 +230,12 @@
     overflow: hidden;
     white-space: nowrap;
     font-size: 0.8em;
-    padding-left: 1.5em;
-    margin-bottom: 0;
+    margin: 1em 0;
     @include tablet {
-      padding: 0.5em 0.5em 0.5em 1.5em;
     }
     @include desktop {
       font-weight: lighter;
       line-height: 1em;
-      margin: 0.5em;
       font-size: 0.8em;
       font-family: $fontfamily;
     }
@@ -270,14 +259,16 @@
 }
 .category {
   display: none;
-  
+  position: absolute;
+  bottom: 13px;
+
   @include tablet {
     display: block;
   }
 
   a {
     font-size: 0.9em;
-    font-weight: 300;
+    font-weight: 600;
     font-family: $fontfamily;
     &:hover {
       text-decoration: underline;

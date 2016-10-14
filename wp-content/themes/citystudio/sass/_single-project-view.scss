@@ -142,26 +142,22 @@ width: 75%;
 }
 // IMAGE BAR
 .image-bar {
-  flex-basis: 100%;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  order: 4;
-  @include desktop {
-
+  overflow-x:scroll;
+  white-space: nowrap;
+  @include tablet {
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
   }
   img {
     height: 200px;
-    width: 300px;
-    margin-right: 1em;
-    margin-top: 1em;
     border-radius: 5%;
   }
 }
 // TAG LINKS
 .tags-wrapper {
+  margin-top: 2em;
   flex-basis: 100%;
   width: 100%;
 }
@@ -176,7 +172,7 @@ width: 75%;
 }
   .tag-links {
     background-color:  darken($color__background-lightblue, 2);
-    padding: 4%;
+    padding: 1.5rem 1.5rem;
     color: #000;
     display: flex;
     align-items: center;
@@ -205,7 +201,7 @@ width: 75%;
 
 .tag-list{
     li{
-      padding: 0.75rem 1rem;
+      padding: .7rem 1rem;
       color: #000;
       border-radius: 5px;
       margin-right: .5rem;

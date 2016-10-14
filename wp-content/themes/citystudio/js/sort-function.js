@@ -5,11 +5,6 @@ jQuery(document).ready(function($) {
     $('.nav-div').css("background-color", "#006496");
   }
   // queryFilter holds an empty object for the checked navigation values/properties
-  
-  var themeLabels = $('.theme-labels');
-  var partLabels = $('.part-labels');
-  var yearLabels = $('.year-labels');
-
   var queryFilter = {
     themes: '',
     partners: '',
@@ -30,22 +25,22 @@ jQuery(document).ready(function($) {
       partners: '',
       year: ''
     }
-    themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    partLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    yearLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
     reloadProjects();
 
   }); // close refresh
 
-  themeLabels.on('click', function(){
+  $('.theme-labels').on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
-  partLabels.on('click', function(){
+  $('.part-labels').on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
-  yearLabels.on('click', function(){
+  $('.year-labels').on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
   });
 
@@ -68,9 +63,9 @@ jQuery(document).ready(function($) {
   });
 
   $('.fa.fa-times').on('click', function(){
-    themeLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    partLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
-    yearLabels.empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.theme-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.part-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
+    $('.year-labels').empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
    
     reloadProjects();
   
@@ -92,7 +87,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.themes = $(this).find('input').val();
       checkedTheme = ($(this).text()).trim();
-      themeLabels
+      $('.theme-labels')
           .show()
           .append('<label>' + checkedTheme +'</label>');
       $(this).parent().removeClass('current-menu');
@@ -103,7 +98,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
       checkedPart = ($(this).text()).trim();
-      partLabels
+      $('.part-labels')
           .show()
           .append('<label>' + checkedPart + '</label>');
       $(this).parent().removeClass('current-menu');
@@ -114,7 +109,7 @@ jQuery(document).ready(function($) {
     if ($(this.checked)) {
       queryFilter.years = parseInt($(this).find('input').val());
       checkedYear = parseInt(($(this).text()).trim());
-      yearLabels
+      $('.year-labels')
           .show()
           .append('<label>' + checkedYear + '</label>');
       $(this).parent().removeClass('current-menu');

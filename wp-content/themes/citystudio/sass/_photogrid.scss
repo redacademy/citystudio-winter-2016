@@ -53,8 +53,8 @@ flex: 1 0 50%
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
   &:hover {
-    opacity: 0;
-    transition: all 0.45s ease;
+    // opacity: 0;
+    // transition: all 0.45s ease;
   }
 }
 .description-title {
@@ -64,6 +64,9 @@ flex: 1 0 50%
   font-family: $fontfamily;
   color: #fff;
   text-decoration: none;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
 .subtitle {
   font-size: 1rem;
