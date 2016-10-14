@@ -18,7 +18,7 @@ jQuery(document).ready(function($){
 
     if ($('body').hasClass('home page') ) {
     var sticky = $('.sticky-navigation'),
-        grid = $('.homepage-description'),
+        grid = $('.homepage-titles'),
         explore = $('.explore-section'),
         scroll = $(window).scrollTop(),
         bottomOffset = grid.offset().top,
@@ -40,44 +40,52 @@ jQuery(document).ready(function($){
   });
 
 
-  // $(window).scroll(function(){
-  //
-  //   if ($('body').hasClass('blog') ) {
-  //
-  //     var bar = $('.blog-content-container'),
-  //         sideBar =$('.blog-sidebar'),
-  //         blogScroll = $(window).scrollTop(),
-  //         blogOffset = bar.offset().top;
-  //     if (blogScroll >= blogOffset) {
-  //        sideBar.addClass("fixed-sidebar");
-  //       }
-  //     else if(blogScroll <= blogOffset) {
-  //        sideBar.removeClass("fixed-sidebar");
-  //       }
-  //   }
-  // });
+  $(window).scroll(function(){
+  
+    if ($('body').hasClass('blog') ) {
+  
+      var bar = $('.blog-content-container'),
+          sideBar = $('.blog-sidebar'),
+          blogArchive = $('.blog-archive-feed'),
+          blogScroll = $(window).scrollTop(),
+          blogOffset = bar.offset().top;
+      if (blogScroll >= blogOffset) {
+         sideBar.addClass("fixed-sidebar");
+         blogArchive.addClass('additional');
+        }
+      else if(blogScroll <= blogOffset) {
+         sideBar.removeClass("fixed-sidebar");
+         blogArchive.removeClass('additional');
+        }
+    }
+  });
 
 });
 
 jQuery(document).ready(function($){
 
-  $('.hamburger').on('click', function(){
     var menuIcon = $("i", this);
-    menuIcon.removeClass("fa-bars");
-  });
+        hamburger = $('.hamburger'); 
 
-  $('.hamburger').toggle(function() {
-      $('.dropdown-content').show();
-      var menuIcon = $("i", this);
+    hamburger.toggle(function(e) {
+    $('.dropdown-content').css({"visibility": "visible"});
+      menuIcon.removeClass("fa-bars");
       menuIcon.addClass("fa-times-circle");
-
     }, function() {
-     $('.dropdown-content').hide();
-     var menuIcon = $("i", this);
+
+     $('.dropdown-content').css({"visibility": "hidden"});
      menuIcon.removeClass("fa-times-circle");
      menuIcon.addClass("fa-bars");
-    }
-  );
+    
+   });
+
+
+  $('html').bind('click', function() {
+
+     $('.dropdown-content').css({"visibility": "hidden"});
+     menuIcon.removeClass("fa-times-circle");
+     menuIcon.addClass("fa-bars");
+    });
 
 });
 

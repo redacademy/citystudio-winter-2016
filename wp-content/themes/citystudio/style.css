@@ -767,8 +767,8 @@ a {
       justify-content: space-between; }
   @media screen and (min-width: 600px) {
     .site-navigation {
-      -ms-flex-preferred-size: 15%;
-          flex-basis: 15%;
+      -ms-flex-preferred-size: 10%;
+          flex-basis: 10%;
       margin-right: 1em; } }
   @media screen and (min-width: 1024px) {
     .site-navigation {
@@ -836,7 +836,7 @@ a {
   background-color: #f7f9f9;
   width: 100vw;
   height: 100vh;
-  padding: 10% 4%;
+  padding: 5% 4%;
   margin-top: 2.9em;
   left: 0; }
   @media screen and (min-width: 600px) {
@@ -864,19 +864,18 @@ a {
   font-weight: 500;
   position: relative;
   z-index: 0;
-  /*background-color: white;*/
   margin: 0.5em 0;
   max-width: 200px; }
 
 .hamburger-menu {
-  width: 70px;
-  height: 70px; }
+  width: 80px;
+  height: 80px; }
 
 .dropdown-content {
   position: absolute;
   right: 0;
   width: 100vw;
-  display: none;
+  visibility: hidden;
   z-index: 2; }
   @media screen and (min-width: 600px) {
     .dropdown-content {
@@ -890,9 +889,27 @@ a {
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
 
+.dropdown-content a:hover .hamburger {
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: 0.5em;
+  background: 0 0;
+  border: none;
+  display: -ms-flexbox;
+  display: flex; }
+  .dropdown-content a:hover .hamburger:hover {
+    color: #0082b9; }
+  @media screen and (min-width: 600px) {
+    .dropdown-content a:hover .hamburger {
+      top: 1em;
+      right: 1em; } }
+
 .header-menu-title {
-  display: none; }
-  @media screen and (min-width: 1024px) {
+  display: none;
+  text-transform: uppercase; }
+  @media screen and (min-width: 600px) {
     .header-menu-title {
       display: block;
       margin: -7px;
@@ -967,45 +984,6 @@ button.hamburger {
 .hamburger-menu {
   width: 70px;
   height: 70px; }
-
-.dropdown-content {
-  display: none; }
-
-.dropdown-content a {
-  transition: height 0.3s ease-in;
-  text-decoration: none;
-  display: block;
-  font-size: 22px; }
-  .dropdown-content a ul li {
-    border-left: 2px solid grey !important; }
-
-.header-menu-title {
-  display: none; }
-  @media screen and (min-width: 1024px) {
-    .header-menu-title {
-      display: block;
-      margin: -7px;
-      padding: 0 0.4em; } }
-
-.dropdown-content a:hover .hamburger {
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  position: absolute;
-  right: 0.5em;
-  background: 0 0;
-  border: none;
-  display: -ms-flexbox;
-  display: flex; }
-  .dropdown-content a:hover .hamburger:hover {
-    color: #0082b9; }
-  @media screen and (min-width: 600px) {
-    .dropdown-content a:hover .hamburger {
-      top: 1em;
-      right: 1em; } }
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1; }
 
 .show {
   display: block;
@@ -2096,7 +2074,7 @@ object {
   color: #ee7600; }
 
 .homepage-titles {
-  margin: 2em auto;
+  margin: 1em auto;
   letter-spacing: 0.1rem;
   font-family: "open_sans";
   text-align: center;
@@ -3145,11 +3123,9 @@ a {
   font-weight: bold;
   font-size: 26px; }
 
-.gallery-description {
-  /*display: none;*/ }
-  @media screen and (min-width: 600px) {
-    .gallery-description {
-      display: block; } }
+@media screen and (min-width: 600px) {
+  .gallery-description {
+    display: block; } }
 
 .no-projects {
   background-color: #006493;
@@ -4116,12 +4092,24 @@ article.people {
           flex-direction: column;
       -ms-flex-pack: center;
           justify-content: center;
-      width: 25%;
+      width: 26%;
       height: 45vh;
-      margin: 2em 1em; } }
+      margin: 5em .5em; } }
+  @media screen and (min-width: 1024px) {
+    .blog-sidebar {
+      height: 35vh;
+      width: 20%;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-pack: inherit;
+          justify-content: inherit;
+      -ms-flex-align: start;
+          align-items: flex-start;
+      margin: 1em 4em; } }
 
 .fixed-sidebar {
-  display: none; }
+  display: none;
+  transition: all .7s ease; }
   @media screen and (min-width: 600px) {
     .fixed-sidebar {
       position: fixed;
@@ -4132,10 +4120,20 @@ article.people {
       -ms-flex-direction: column;
           flex-direction: column;
       -ms-flex-pack: center;
-          justify-content: center; } }
+          justify-content: center;
+      margin: 3.5em 0; } }
   @media screen and (min-width: 1024px) {
     .fixed-sidebar {
-      transition: all 1s ease; } }
+      margin: 5.5em 4em; } }
+
+.additional {
+  position: relative;
+  left: 13%;
+  width: 74.5% !important; }
+  @media screen and (min-width: 1024px) {
+    .additional {
+      left: 16%;
+      width: 68.5% !important; } }
 
 .sidebar-item {
   color: #0198d5;
@@ -4179,29 +4177,23 @@ article.people {
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  /*margin: 2em auto;*/ }
+      flex-wrap: wrap; }
   @media screen and (min-width: 600px) {
     .blog-archive-feed {
       width: 80%;
-<<<<<<< HEAD
-      position: absolute;
+      /*position: absolute;*/
       right: 0;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: end;
           justify-content: flex-end;
       -ms-flex-wrap: wrap-reverse;
-          flex-wrap: wrap-reverse; } }
-=======
-      right: 0em;
-      margin: 0;
-      left: 15em; } }
->>>>>>> b10e9d775fe1d85582df0a42664b6211ca2b551a
+          flex-wrap: wrap-reverse;
+      margin: 1em auto; } }
   @media screen and (min-width: 1024px) {
     .blog-archive-feed {
       width: 70%;
-      position: absolute;
+      /*position: absolute;*/
       right: 0;
       display: -ms-flexbox;
       display: flex;
@@ -4218,13 +4210,12 @@ article.people {
   position: relative;
   box-shadow: 3px 4px 8px 0 rgba(0, 0, 0, 0.25);
   height: 250px;
-  margin: 0 2em 2em;
+  margin: 0 1em 2em;
   border-radius: 5px;
-  width: 80%; }
+  width: 90% !important; }
   @media screen and (min-width: 600px) {
     .blog-featured-image {
       height: 300px;
-      margin: 0 2em;
       margin-bottom: 2em; } }
   @media screen and (min-width: 1024px) {
     .blog-featured-image {
@@ -4253,12 +4244,8 @@ article.people {
       margin-top: 3em; } }
   .blog-credits h2,
   .blog-credits p {
-<<<<<<< HEAD
     color: white;
     max-width: 100%; }
-=======
-    color: white; }
->>>>>>> b70945011c6305e771e8ad0d9a85917ea68ceb32
   .blog-credits h2 {
     font-size: 1.5em;
     font-weight: normal;

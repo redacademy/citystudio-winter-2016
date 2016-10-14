@@ -22,3 +22,4 @@ if( $posts ): ?>
 <div class="explore-section">
   <a class="button-blue" href="<?php get_template_directory(); ?>home/search/">See More Projects</a>
 </div>
+<h1 class="homepage-titles"><span>Explore</span> CityStudio Projects</h1>

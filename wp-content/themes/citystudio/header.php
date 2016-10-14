@@ -36,13 +36,9 @@
 				    <img src="<?php bloginfo('template_directory'); ?>/images/citystudio-logo.png" class="logo" alt="Citystudio logo">
 				  </a>
 				</div>
-
 				<div class="site-navigation">
-					<span class="icon-search" aria-hidden="true">
-						<a href="<?php echo esc_url(home_url('home/search'));?>"><i class="fa fa-search"></i></a>
-					</span>
 					<button onclick="showMenu()" class="hamburger" id="hamburgerMenu"><i class="fa fa-bars"></i>
-						<div class="header-menu-title">MENU</div>
+						<div class="header-menu-title">Menu</div>
 					</button>
 
 					<div class="dropdown-content">

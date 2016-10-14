@@ -64,9 +64,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 25%;
+    width: 26%;
     height: 45vh;
-    margin: 2em 1em;
+    margin: 5em .5em;
   }
   @include desktop {
     height: 35vh;
@@ -79,6 +79,7 @@
 }
  .fixed-sidebar {
   display: none;
+  transition: all .7s ease;
   @include tablet{
     position: fixed;
     top: 0;
@@ -86,10 +87,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 3.5em 0;
   }
   @include desktop{
-    transition: all 1s ease;
+    margin: 5.5em 4em;
   }
+}
+.additional{
+    position: relative;
+    left: 13%;
+    width: 74.5%!important;
+    @include desktop{
+      left: 16%;
+      width: 68.5%!important;
+    }
+
 }
 .sidebar-item {
   color: $city-blue;
@@ -141,22 +153,16 @@
   flex-wrap: wrap;
   @include tablet {
     width: 80%;
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap-reverse;
-    margin: 2em auto;
-
-  @include tablet {
-    width: 80%;
-    right: 0em;
-    margin: 0;
-    left: 15em;
+    margin: 1em auto;
   }
   @include desktop {
     width: 70%;
-    position: absolute;
+    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
@@ -164,17 +170,16 @@
   }
 }
 .blog-featured-image {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-  height: 250px;
-  margin: 0 2em 2em;
-  border-radius: 5px;
-  width: 80%;
+    display: flex;
+    justify-content: flex-start;
+    position: relative;
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+    height: 250px;
+    margin: 0 1em 2em;
+    border-radius: 5px;
+    width: 90% !important;
   @include tablet {
     height: 300px;
-    margin: 0 2em;
     margin-bottom: 2em;
   }
   @include desktop {
@@ -261,7 +266,6 @@
   display: none;
   position: absolute;
   bottom: 13px;
-
   @include tablet {
     display: block;
   }
