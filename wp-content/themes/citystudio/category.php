@@ -5,70 +5,39 @@
 get_header();
 ?>
 
-<section id="primary" class="site-content">
-  <div id="content" role="main">
+<div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+<!-- "info main top section -->
+  
+
 
   <?php
   // Check if there are any posts to display
   if ( have_posts() ) : ?>
 
-<<<<<<< HEAD
-  <header class="citystudio-banner">
-    <div class="banner-inner">
-      <h2 class="page-titles">Category: <?php single_cat_title(); ?></h2>
-    </div>
-  </header>
-=======
-<div class="blog-content-container">
-  <div class="blog-sidebar">
-    <div class="sidebar-item">
-      <?php wp_list_categories(); ?>
-    </div>
-    <div class="social-media-item">
-      <h4>Social Media</h4>
-      <p>
-        <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
-      </p>
-      <p>
-        <a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">TWITTER</a>
-      </p>
-      <p>
-        <a href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a>
-      </p>
-    </div>
-    <div class="sidebar-item">
-      <h4>Newsboard</h4>
-    </div>
-<<<<<<< HEAD
-  </div>
->>>>>>> b10e9d775fe1d85582df0a42664b6211ca2b551a
-=======
-  </div><!-- end blog sidebar div -->
->>>>>>> b70945011c6305e771e8ad0d9a85917ea68ceb32
-
-  <div class="blog-content-container">
-    <div class="blog-sidebar">
-      <div class="sidebar-item">
-        <?php wp_list_categories(); ?>
-      </div>
-      <div class="social-media-item">
-        <h4>Social Media</h4>
-        <p>
-          <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
-        </p>
-        <p>
-          <a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">TWITTER</a>
-        </p>
-        <p>
-          <a href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a>
-        </p>
-      </div>
-      <div class="sidebar-item">
-        <h4>Newsboard</h4>
-      </div>
-    </div><!-- end blog sidebar div -->
+       <div class="category-sidebar">
+          <div class="sidebar-item">
+            <?php wp_list_categories(); ?>
+          </div>
+          <div class="sidebar-item">
+            <h4>Social Media</h4>
+            <p>
+              <a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
+            </p>
+            <p>
+              <a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">TWITTER</a>
+            </p>
+            <p>
+              <a href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a>
+            </p>
+          </div>
+          <div class="sidebar-item">
+            <h4>Newsboard</h4>
+          </div>
+        </div>
 
     <div class="category-post-container">
+  
     <?php while ( have_posts() ) : the_post(); ?>
 
       <?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumb' );?>
@@ -89,13 +58,11 @@ get_header();
     else: ?>
     </div><!-- end category post container -->
 
-  <p>Sorry, no posts matched your criteria.</p>
+  <p>Sorry, no posts matched your criteria.</p> -->
   <?php endif; ?>
   </div><!-- end blog content container -->
 
-
-  </div><!-- end content div -->
-</section>
-
+</main>
+</div>
 
 <?php get_footer(); ?>

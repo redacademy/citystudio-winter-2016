@@ -122,3 +122,14 @@ jQuery(document).ready(function($){
     });
   }
 });
+
+
+jQuery(document).ready(function($){
+  if ($('body').hasClass('archive category')) {
+    $('#page').css({"width": "100vw"});
+    $('.site-footer').css({"width": "100vw"});
+    $('#masthead').css({"position": "absolute"});
+    $('#masthead').css({"margin-top": "-2.5em"});
+    $('#masthead').css({"width": "100%"});
+  }
+});
