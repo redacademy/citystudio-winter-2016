@@ -767,8 +767,8 @@ a {
       justify-content: space-between; }
   @media screen and (min-width: 600px) {
     .site-navigation {
-      -ms-flex-preferred-size: 15%;
-          flex-basis: 15%;
+      -ms-flex-preferred-size: 10%;
+          flex-basis: 10%;
       margin-right: 1em; } }
   @media screen and (min-width: 1024px) {
     .site-navigation {
@@ -836,7 +836,7 @@ a {
   background-color: #f7f9f9;
   width: 100vw;
   height: 100vh;
-  padding: 10% 4%;
+  padding: 5% 4%;
   margin-top: 2.9em;
   left: 0; }
   @media screen and (min-width: 600px) {
@@ -868,14 +868,15 @@ a {
   max-width: 200px; }
 
 .hamburger-menu {
-  width: 70px;
-  height: 70px; }
+  width: 80px;
+  height: 80px; }
 
 .dropdown-content {
   position: absolute;
   right: 0;
   width: 100vw;
-  display: none;
+  /*display: none;*/
+  visibility: hidden;
   z-index: 2; }
   @media screen and (min-width: 600px) {
     .dropdown-content {
@@ -889,9 +890,27 @@ a {
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
 
+.dropdown-content a:hover .hamburger {
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: 0.5em;
+  background: 0 0;
+  border: none;
+  display: -ms-flexbox;
+  display: flex; }
+  .dropdown-content a:hover .hamburger:hover {
+    color: #0082b9; }
+  @media screen and (min-width: 600px) {
+    .dropdown-content a:hover .hamburger {
+      top: 1em;
+      right: 1em; } }
+
 .header-menu-title {
-  display: none; }
-  @media screen and (min-width: 1024px) {
+  display: none;
+  text-transform: uppercase; }
+  @media screen and (min-width: 600px) {
     .header-menu-title {
       display: block;
       margin: -7px;
@@ -966,45 +985,6 @@ button.hamburger {
 .hamburger-menu {
   width: 70px;
   height: 70px; }
-
-.dropdown-content {
-  display: none; }
-
-.dropdown-content a {
-  transition: height 0.3s ease-in;
-  text-decoration: none;
-  display: block;
-  font-size: 22px; }
-  .dropdown-content a ul li {
-    border-left: 2px solid grey !important; }
-
-.header-menu-title {
-  display: none; }
-  @media screen and (min-width: 1024px) {
-    .header-menu-title {
-      display: block;
-      margin: -7px;
-      padding: 0 0.4em; } }
-
-.dropdown-content a:hover .hamburger {
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  position: absolute;
-  right: 0.5em;
-  background: 0 0;
-  border: none;
-  display: -ms-flexbox;
-  display: flex; }
-  .dropdown-content a:hover .hamburger:hover {
-    color: #0082b9; }
-  @media screen and (min-width: 600px) {
-    .dropdown-content a:hover .hamburger {
-      top: 1em;
-      right: 1em; } }
-
-.dropdown-content a:hover {
-  background-color: #f1f1f1; }
 
 .show {
   display: block;
@@ -2076,7 +2056,7 @@ object {
   color: #ee7600; }
 
 .homepage-titles {
-  margin: 2em auto;
+  margin: 1em auto;
   letter-spacing: 0.1rem;
   font-family: "open_sans";
   text-align: center;

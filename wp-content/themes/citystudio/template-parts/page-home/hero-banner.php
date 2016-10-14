@@ -6,3 +6,5 @@
     </h3>
   </div>
 </div> <!-- end hero -->
+
+  <h1 class="homepage-titles"><span>Explore</span> CityStudio Projects</h1>

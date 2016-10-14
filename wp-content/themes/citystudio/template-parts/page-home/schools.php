@@ -1,12 +1,12 @@
 
-<h1 class="homepage-titles">Participating Schools</h1>
+<h1 class="homepage-titles">Partners</h1>
 
   <div class="homepage-partners-container">
     <ul class="featured">
       <?php
         if( have_rows('partner_row') );
         while ( have_rows('partner_row') ) : the_row(); ?>
-        <li style="background: url( '<?php the_sub_field('school_logo'); ?> ' ) no-repeat center center;background-size: contain; ">
+        <li style="background: url( '<?php the_sub_field('school_logo'); ?> ' ) no-repeat center center;background-size: contain; "><a href='<?php  ?>'/>√
         </li>
       <?php endwhile; ?>
     </ul>
