@@ -4305,7 +4305,8 @@ article.people {
       text-decoration: underline; }
 
 .category {
-  padding-left: 0; }
+  padding-left: 0;
+  width: 100%; }
 
 .blog-item {
   margin: 2em; }
@@ -4318,7 +4319,7 @@ article.people {
   width: 75%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 4em 0 0 4em; }
+  margin: 4em 0; }
   .category-post-container h2,
   .category-post-container a,
   .category-post-container p,

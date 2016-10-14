@@ -1,5 +1,6 @@
 .category {
   padding-left: 0;
+  width: 100%;
 }
 .blog-item {
   margin: 2em;
@@ -9,7 +10,7 @@
   flex-direction: column;
   width: 75%;
   flex-wrap: wrap;
-  margin: 4em 0 0 4em;
+  margin: 4em 0;
   h2,
   a,
   p,
