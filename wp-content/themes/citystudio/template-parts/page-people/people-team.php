@@ -18,7 +18,7 @@ $citystudio_team = new WP_Query( $args ); ?>
 
 <div class="citystudio-teams team-container">
 
-  <h2 class="section-titles">CityStudio Vancouver Team</h2>
+  <h2 class="section-one-title">CityStudio Vancouver Team</h2>
 
   <ul>
 
