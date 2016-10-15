@@ -1,14 +1,11 @@
 //HEADER/BANNER
 .blog-banner {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 275px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 2em;
+background-repeat: no-repeat;
+background-position: center center;
+background-size: cover;
   @include tablet {
     height: 210px;
   }
@@ -16,11 +13,25 @@
     height: 250px;
   }
 }
+.gradient-overlay {
+background: linear-gradient(to right, rgba(2,119,167,0.7) 0%,rgba(203,173,201,0.7) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
 .title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 85%;
+  margin-top: 3em;
+  @include tablet {
+      margin-top: 0em;
+  }
   @include desktop{
     width: 82%;
   }
@@ -73,7 +84,7 @@
     width: 20%;
     display: flex;
     justify-content: inherit;
-    align-items: flex-start;
+    align-items: center;
     margin: 1em 4em;
   }
 }
@@ -154,19 +165,17 @@
   @include tablet {
     width: 80%;
     /*position: absolute;*/
-    right: 0;
+    // right: 0;
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
+    align-items: center;
+    // justify-content: flex-end;
+    // flex-wrap: wrap-reverse;
     margin: 1em auto;
   }
   @include desktop {
     width: 70%;
-    /*position: absolute;*/
-    right: 0;
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
+    align-items: center;
   }
 }
 .blog-featured-image {
@@ -217,7 +226,7 @@
     font-size: 1.5em;
     font-weight: normal;
     line-height: 1.15em;
-
+    margin: .5em 0;
     &:hover {
       text-decoration: underline;
     }
@@ -256,7 +265,6 @@
   @include tablet {
     display: block;
     font-size: 0.7em;
-    padding: 0.5em 1em;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0;
@@ -278,4 +286,32 @@
       text-decoration: underline;
     }
   }
+}
+
+.blog-pagination {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  width: 40%;
+  color: $city-blue;
+  font-size: 1.2em;
+  font-weight: bold;
+
+  a, &:focus, &:active, &:visited {
+    color: $city-blue;
+    text-decoration: none;
+  }
+
+  a[rel=next] {
+    margin-right: 1em;
+    text-align: right;
+  }
+
+  a[rel=prev] {
+    margin-left: 1em;
+    text-align: left;
+  }
+  a:hover {
+  color: $dark-blue;
+}
 }
