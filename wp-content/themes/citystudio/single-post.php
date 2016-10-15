@@ -12,7 +12,7 @@ get_header();
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 14em; width: 100%; background-size: cover;">
+    <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 15em; width: 100%; background-size: cover;">
 
 			<div class="blue-overlay-3">
         <h2 class="blog-page-titles"><?php the_title(); ?></h2>

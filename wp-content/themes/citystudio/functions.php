@@ -100,8 +100,6 @@ function citystudio_scripts() {
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0' );
 
-	wp_enqueue_script( 'click-function.js', get_template_directory_uri() . '/js/home-transitions.js', array('jquery'), '2.2.0'  );
-
 	wp_enqueue_script( 'sort-function.js', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), '2.2.0'  );
 
 }

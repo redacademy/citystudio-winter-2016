@@ -17,7 +17,7 @@ jQuery(document).ready(function($){
     var sticky = $('.sticky-navigation'),
         grid = $('.homepage-titles'),
         explore = $('.explore-section'),
-        scroll = $(window).scrollTop() + 50,
+        scroll = $(window).scrollTop(),
         bottomOffset = grid.offset().top,
         topOffset = explore.offset().top - 100;
 

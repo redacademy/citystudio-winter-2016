@@ -6,16 +6,19 @@
   justify-content: center;
 }
 // HEADER
-  .page-titles {
+h1.page-titles {
     color: white;
     font-family: $fontfamily;
-    font-size: 1.3em;
+    font-size: 1.5em;
     box-shadow: none;
+  padding: 3.5% 7%;
     @include tablet {
       font-size: 2.5em;
+    padding: 1% 7%;
     }
     @include desktop{
       font-size: 3em;
+  padding: 0 7%;
     }
 }
 //HEROBANNER
