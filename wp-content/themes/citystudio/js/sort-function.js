@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
   // Sort navigation is open on page load on mobile
 
   $('#refresh').on('click', function() {
+
     checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
@@ -31,6 +32,10 @@ jQuery(document).ready(function($) {
     reloadProjects();
 
   }); // close refresh
+
+  $('.refresh').on('click', function(){
+      $(this).toggleClass('.rotated');
+  })
 
   $('.theme-labels').on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
@@ -72,7 +77,9 @@ jQuery(document).ready(function($) {
   });
 
   $('#refresh').hover(
+
     function(){
+      $('.refresh').addClass("rotate");
       $('.refresh-hover').css({"opacity": 1});
   }, function () {
      $('.refresh-hover').css({"opacity": 0});

@@ -160,16 +160,14 @@ box-shadow: none;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
   width: 90%;
-  margin: 1em auto 0;
+  margin: 0 auto;
   @include tablet {
     justify-content: space-around;
-    margin: 2em auto 0;
   }
   @include desktop {
     justify-content: space-around;
-    margin: 3rem auto 0;
+    /*margin: 3rem auto 0;*/
   }
   li, a {
     border: 1px solid transparent;
@@ -178,7 +176,7 @@ box-shadow: none;
     max-height: 240px;
     max-width: 330px;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  margin-bottom: 1.5em;
+    margin-bottom: 1.5em;
     @include tablet {
       flex: 0 0 47%;
       min-height: 240px;
