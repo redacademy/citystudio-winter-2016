@@ -1,30 +1,37 @@
 //HEADER/BANNER
 .blog-banner {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   width: 100%;
   height: 275px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 2em;
-
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
   @include tablet {
     height: 210px;
   }
-
   @include desktop {
     height: 250px;
   }
+}
+.gradient-overlay {
+  background: linear-gradient(to right, rgba(2,119,167,0.7) 0%,rgba(203,173,201,0.7) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }
 .title-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   width: 85%;
-
-  @include desktop{
+  margin-top: 3em;
+  @include tablet {
+    margin-top: 0;
+  }
+  @include desktop {
     width: 82%;
   }
   h1 {
@@ -32,7 +39,6 @@
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
-
     @include tablet {
       font-size: 2.5em;
     }
@@ -44,78 +50,60 @@
     font-family: $fontfamily;
     color: white;
     width: 75%;
-
     @include tablet {
       font-size: 1em;
     }
-
     @include desktop {
       width: 55.5%;
       font-size: 1.15em;
     }
-
     span {
       font-weight: bold;
     }
   }
 }
-
 //MAIN CONTENT CONTAINER
-.blog-content-container {
-  display: flex;
-  flex-direction: row;
-}
-
 //SIDEBAR
 .blog-sidebar {
   display: none;
-
   @include tablet {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: block;
     width: 26%;
-    height: 45vh;
-    margin: 2em .5em;
+    margin-left: 2em;
   }
-
   @include desktop {
-    height: 35vh;
+    margin-left: 0;
     width: 20%;
-    display: flex;
-    justify-content: inherit;
-    align-items: flex-start;
-    margin: 1em 4em;
   }
 }
- .fixed-sidebar {
-  display: none;
-  transition: all .7s ease;
-
-  @include tablet{
-    position: fixed;
-    top: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2.5em 0;
-  }
-
-  @include desktop{
-    margin: 5.5em 4em;
-  }
+.inner-sidebar {
+  display: flex;
+  flex-direction: column;
 }
-.additional{
-    position: relative;
-    left: 13%;
-    width: 74.5%!important;
-
-    @include desktop {
-      left: 16%;
-      width: 68.5%!important;
-    }
-
+// .fixed-sidebar {
+//   display: none;
+//   transition: all 0.7s ease;
+//   @include tablet {
+//     position: fixed;
+//     top: 0;
+//     padding: 0;
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     margin: 3.5em 0;
+//   }
+//   @include desktop {
+//     margin: 5.5em 4em;
+//   }
+// }
+.additional {
+  position: relative;
+  left: 13%;
+  width: 74.5%!important;
+  @include desktop {
+    left: 16%;
+    width: 68.5%!important;
+  }
 }
 .sidebar-item {
   color: $city-blue;
@@ -124,12 +112,10 @@
   font-weight: bold;
   text-align: center;
   margin: 1em 0;
-
   h4 {
     margin-bottom: 15px;
     padding-left: 1em;
   }
-
   p {
     margin-bottom: 10px;
     color: $city-blue;
@@ -137,12 +123,10 @@
     font-size: 0.9em;
     font-weight: lighter;
   }
-
   a {
     color: $city-blue;
     font-weight: normal;
     outline: none;
-
     &:hover {
       text-decoration: underline;
       color: $dark-blue;
@@ -152,72 +136,56 @@
 .categories {
   list-style-type: none;
   padding-left: 0;
-
   ul {
     margin: 0.5em 0;
   }
-
   li {
     margin-bottom: 5px;
   }
-
   a {
     font-size: 0.9rem;
     outline: none;
   }
 }
-
 //CONTENT BLOCK
 .blog-archive-feed {
-  width: 100%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-
+  margin: 0 auto;
   @include tablet {
-    width: 80%;
-    right: 0;
+    width: 65%;
     display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
-    margin: 1em auto;
+    align-items: flex-end;
+    margin-top: 1em;
   }
-
   @include desktop {
     width: 70%;
-    right: 0;
-    display: flex;
-    justify-content: flex-end;
-    flex-wrap: wrap-reverse;
   }
 }
-
 .blog-featured-image {
-    display: flex;
-    justify-content: flex-start;
-    position: relative;
-    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-    height: 250px;
-    margin: 0 1em 2em;
-    border-radius: 5px;
-    width: 90% !important;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+  height: 250px;
+  margin-bottom: 2em;
+  border-radius: 5px;
+  width: 100%;
+  @include tablet {
+    height: 300px;
 
-    @include tablet {
-      height: 300px;
-      margin-bottom: 2em;
   }
-
   @include desktop {
     margin-bottom: 3em;
   }
-
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
     transition: all 0.25s ease;
     left: 3px;
   }
 }
-
 .blog-credits {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -235,31 +203,26 @@
     height: 68%;
     margin-top: 3em;
   }
-
   h2,
   p {
     color: white;
     max-width: 100%;
   }
-
   h2 {
     font-size: 1.5em;
     font-weight: normal;
     line-height: 1.15em;
-
+    margin: 0.5em 0;
     &:hover {
       text-decoration: underline;
     }
-
     @include tablet {
       font-size: 1.5em;
     }
-
     @include desktop {
       font-size: 2em;
     }
   }
-
   p {
     display: block;
     width: 90%;
@@ -268,7 +231,7 @@
     white-space: nowrap;
     font-size: 0.8em;
     margin: 1em 0;
-
+    @include tablet {}
     @include desktop {
       font-weight: lighter;
       line-height: 1em;
@@ -276,27 +239,65 @@
       font-family: $fontfamily;
     }
   }
-
   a {
     color: white;
     font-weight: lighter;
     outline: none;
   }
 }
-
 .date {
   display: none;
   @include tablet {
     display: block;
     font-size: 0.7em;
-    padding: 0.5em 1em;
     display: flex;
     justify-content: flex-end;
     margin-bottom: 0;
   }
 }
-
-.category {
+.category-links {
   display: none;
   position: absolute;
+  bottom: 13px;
+  @include tablet {
+    display: block;
+  }
+  a {
+    font-size: 0.9em;
+    font-weight: 600;
+    font-family: $fontfamily;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.blog-pagination {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  color: $city-blue;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 auto 2em;
+  @include tablet {
+  width: 40%;
+}
+  a,
+  &:focus,
+  &:active,
+  &:visited {
+    color: $city-blue;
+    text-decoration: none;
+  }
+  a[rel=next] {
+    margin-right: 1em;
+    text-align: right;
+  }
+  a[rel=prev] {
+    margin-left: 1em;
+    text-align: left;
+  }
+  a:hover {
+    color: $dark-blue;
+  }
 }
