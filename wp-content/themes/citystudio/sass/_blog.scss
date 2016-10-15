@@ -247,6 +247,7 @@
 }
 .date {
   display: none;
+
   @include tablet {
     display: block;
     font-size: 0.7em;
@@ -255,6 +256,7 @@
     margin-bottom: 0;
   }
 }
+
 .category-links {
   display: none;
   position: absolute;

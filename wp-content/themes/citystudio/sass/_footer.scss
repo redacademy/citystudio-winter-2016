@@ -1,5 +1,6 @@
 // FOOTER STYLES---------------------
 .site-footer {
+  flex-wrap: wrap;
   width: 100%;
   display: flex;
   align-items: center;
@@ -145,17 +146,21 @@ display: flex !important;
     width: 12vw;
   }
 }
+
 .copyright {
+  flex-basis: 100%;
+  width: 100%;
+  order: 3;
   background-color: $dark-blue;
   display: flex;
   justify-content: center;
-  width: 100%;
-  margin: 0 auto;
+  margin: 2em auto 0.2em;
   color: transparentize(white, .3);
   font-family: $fontfamily;
   font-size: 0.5rem;
   line-height: 1.25rem;
   letter-spacing: 0.5px;
+
   @include desktop {
     font-size: 0.6rem;
   }

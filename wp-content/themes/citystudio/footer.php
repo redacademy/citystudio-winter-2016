@@ -54,6 +54,6 @@
 			</div><!-- end footer info container -->
 
 
+			<div class="copyright">© Copyright <?php echo date("Y") ?> CityStudio Vancouver</div>
 		</footer><!-- #colophon -->
-		<div class="copyright">© Copyright <?php echo date("Y") ?> CityStudio Vancouver</div>
 	</div><!-- #content -->
