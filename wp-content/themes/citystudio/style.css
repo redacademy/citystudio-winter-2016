@@ -2101,9 +2101,9 @@ object {
   letter-spacing: 0.1rem;
   font-family: "open_sans";
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 2.2em;
   width: 80%;
-  font-weight: normal; }
+  font-weight: bold; }
   @media screen and (min-width: 750px) {
     .homepage-titles {
       width: 99%;
@@ -2114,6 +2114,14 @@ object {
   .homepage-titles span {
     color: #0198d5;
     font-weight: bold; }
+
+.home-recent-news .homepage-titles {
+  font-family: "open_sans";
+  font-size: 2.2em;
+  margin: 1em auto;
+  letter-spacing: 0.1rem;
+  color: #2D2D2D;
+  font-weight: bold; }
 
 .homepage-description {
   display: none; }
@@ -2233,97 +2241,51 @@ object {
 
 .homepage-partners-container {
   background-color: #f7f9f9;
-  padding: 2em; }
-  @media screen and (min-width: 1024px) {
-    .homepage-partners-container {
-      padding: 4em; } }
-  .homepage-partners-container ul {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 5% 2%; }
+  .homepage-partners-container .home-partners {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-height: 150px;
+    min-height: 80px;
+    width: 100%;
+    margin: 2.5em auto;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     -ms-flex-pack: distribute;
-        justify-content: space-around;
-    max-width: 100%;
-    margin-bottom: 0; }
-    @media screen and (min-width: 1024px) {
-      .homepage-partners-container ul {
-        margin-bottom: 5.5em; } }
-  .homepage-partners-container li {
-    height: 4em; }
+        justify-content: space-around; }
     @media screen and (min-width: 750px) {
-      .homepage-partners-container li {
-        height: 6em; } }
-    .homepage-partners-container li:hover {
-      cursor: pointer; }
-  .homepage-partners-container h1 {
-    margin: 2rem 0 1rem; }
-  .homepage-partners-container p {
-    width: 74vw;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    font-size: 21px; }
-  .homepage-partners-container .partner-buttons {
-    text-align: center;
-    padding: 3%; }
-  .homepage-partners-container button {
-    font-weight: bold;
-    background-color: rgba(1, 152, 213, 0.8);
-    color: white;
-    border-radius: 7px;
-    padding: 0.5% 2%;
-    margin: 1rem 1rem 2rem; }
-
-.featured li {
-  -ms-flex: 1 0 35%;
-      flex: 1 0 35%;
-  margin: 0.5em; }
-  @media screen and (min-width: 750px) {
-    .featured li {
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 1.5em; } }
-  @media screen and (min-width: 1024px) {
-    .featured li {
-      -ms-flex: 1 0 30%;
-          flex: 1 0 30%;
-      max-width: 300px;
-      max-height: 300px;
-      margin: 0; } }
-
-.partners-title {
-  text-align: center;
-  color: white;
-  margin-top: 2.5rem;
-  text-transform: uppercase; }
-
-.featured-two ul {
-  margin-bottom: 1em; }
-
-.featured-two li {
-  cursor: auto;
-  -ms-flex: 1 0 35%;
-      flex: 1 0 35%;
-  margin: 1em; }
-  @media screen and (min-width: 750px) {
-    .featured-two li {
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 1.5em; } }
-  @media screen and (min-width: 1024px) {
-    .featured-two li {
-      -ms-flex: 1 0 25%;
-          flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 0; } }
-  .featured-two li img {
-    max-width: 100px;
-    max-height: 100px; }
+      .homepage-partners-container .home-partners {
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap; } }
+    .homepage-partners-container .home-partners .feat-logo-link {
+      display: inline-block;
+      -ms-flex-preferred-size: 30%;
+          flex-basis: 30%;
+      width: 30%;
+      height: 80px;
+      margin-bottom: 1em; }
+      @media screen and (min-width: 750px) {
+        .homepage-partners-container .home-partners .feat-logo-link {
+          -ms-flex-preferred-size: 20%;
+              flex-basis: 20%;
+          width: 20%;
+          margin: 0; } }
+    .homepage-partners-container .home-partners .feat-logo {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      display: inline-block;
+      background-position: center center;
+      background-repeat: no-repeat; }
+      .homepage-partners-container .home-partners .feat-logo img {
+        max-width: 100px;
+        max-height: 100px; }
 
 .explore-section {
   width: 100%;
@@ -4336,7 +4298,7 @@ a:focus {
           justify-content: space-around;
       -ms-flex-align: start;
           align-items: flex-start;
-      padding: 5% 0 10%; } }
+      padding: 2% 0 10%; } }
   .recent-news-list a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
