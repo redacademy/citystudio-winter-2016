@@ -4168,8 +4168,6 @@ article.people {
       text-decoration: underline; }
 
 .blog-pagination {
-  -ms-flex-preferred-size: 100%;
-      flex-basis: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
