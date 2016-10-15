@@ -100,8 +100,6 @@ function citystudio_scripts() {
 
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0' );
 
-	wp_enqueue_script( 'click-function.js', get_template_directory_uri() . '/js/home-transitions.js', array('jquery'), '2.2.0'  );
-
 	wp_enqueue_script( 'sort-function.js', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), '2.2.0'  );
 
 }
@@ -214,23 +212,6 @@ function get_project_excerpt( $object, $field_name, $request ) {
 		return get_post_meta( $object[ 'id' ], $field_name );
 }
 
-// Custom function to return Title Custom Field in API callback
-// function featured_project() {
-//     register_rest_field( 'project',
-//         'featured_project',
-//         array(
-//             'get_callback'    => 'get_featured_project',
-//             'update_callback' => null,
-//             'schema'          => null,
-//         )
-//     );
-// }
-// add_action( 'rest_api_init', 'featured_project' );
-//
-// function get_featured_project( $object, $field_name, $request ) {
-// 		return get_post_meta( $object[ 'id' ], $field_name );
-// }
-
 /**
  * Custom template tags for this theme.
  */
@@ -258,4 +239,6 @@ function citystudio_widgets_init() {
 
 }
 add_action( 'widgets_init', 'citystudio_widgets_init' );
+
+
 ?>

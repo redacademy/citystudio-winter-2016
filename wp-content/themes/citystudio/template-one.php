@@ -17,7 +17,7 @@ get_header(); ?>
 				<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>
 			</div>
 			<div class="wwd-content">
-				<div class="section-header">
+				<div class="inner-column">
 					<?php
                         // check if the repeater field has rows of data
                         if( have_rows('main_section') );

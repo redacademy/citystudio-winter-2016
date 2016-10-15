@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Blog Archive Page.
+ * Template Name: Blog
  */
 get_header(); ?>
 
@@ -78,5 +78,4 @@ get_header(); ?>
 
     </main><!-- #main -->
     </div><!-- #primary -->
-
 <?php get_footer(); ?>

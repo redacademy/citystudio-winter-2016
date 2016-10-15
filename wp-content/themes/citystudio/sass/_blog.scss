@@ -9,9 +9,11 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 2em;
+  
   @include tablet {
     height: 210px;
   }
+
   @include desktop {
     height: 250px;
   }
@@ -21,6 +23,7 @@
   flex-direction: column;
   justify-content: center;
   width: 85%;
+
   @include desktop{
     width: 82%;
   }
@@ -29,6 +32,7 @@
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
+
     @include tablet {
       font-size: 2.5em;
     }
@@ -40,26 +44,32 @@
     font-family: $fontfamily;
     color: white;
     width: 75%;
+
     @include tablet {
       font-size: 1em;
     }
+
     @include desktop {
       width: 55.5%;
       font-size: 1.15em;
     }
+
     span {
       font-weight: bold;
     }
   }
 }
+
 //MAIN CONTENT CONTAINER
 .blog-content-container {
   display: flex;
   flex-direction: row;
 }
+
 //SIDEBAR
 .blog-sidebar {
   display: none;
+
   @include tablet {
     display: flex;
     flex-direction: column;
@@ -68,6 +78,7 @@
     height: 45vh;
     margin: 5em .5em;
   }
+
   @include desktop {
     height: 35vh;
     width: 20%;
@@ -80,15 +91,17 @@
  .fixed-sidebar {
   display: none;
   transition: all .7s ease;
-  @include tablet{
-    position: fixed;
-    top: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 3.5em 0;
+
+    @include tablet{
+      position: fixed;
+      top: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: 3.5em 0;
   }
+
   @include desktop{
     margin: 5.5em 4em;
   }
@@ -97,7 +110,8 @@
     position: relative;
     left: 13%;
     width: 74.5%!important;
-    @include desktop{
+
+    @include desktop {
       left: 16%;
       width: 68.5%!important;
     }
@@ -110,10 +124,12 @@
   font-weight: bold;
   text-align: center;
   margin: 1em 0;
+
   h4 {
     margin-bottom: 15px;
     padding-left: 1em;
   }
+
   p {
     margin-bottom: 10px;
     color: $city-blue;
@@ -121,10 +137,12 @@
     font-size: 0.9em;
     font-weight: lighter;
   }
+
   a {
     color: $city-blue;
     font-weight: normal;
     outline: none;
+
     &:hover {
       text-decoration: underline;
       color: $dark-blue;
@@ -134,41 +152,46 @@
 .categories {
   list-style-type: none;
   padding-left: 0;
+
   ul {
     margin: 0.5em 0;
   }
+
   li {
     margin-bottom: 5px;
   }
+
   a {
     font-size: 0.9rem;
     outline: none;
   }
 }
+
 //CONTENT BLOCK
 .blog-archive-feed {
   width: 100%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+
   @include tablet {
     width: 80%;
-    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap-reverse;
     margin: 1em auto;
   }
+
   @include desktop {
     width: 70%;
-    /*position: absolute;*/
     right: 0;
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap-reverse;
   }
 }
+
 .blog-featured-image {
     display: flex;
     justify-content: flex-start;
@@ -178,19 +201,23 @@
     margin: 0 1em 2em;
     border-radius: 5px;
     width: 90% !important;
-  @include tablet {
-    height: 300px;
-    margin-bottom: 2em;
+
+    @include tablet {
+      height: 300px;
+      margin-bottom: 2em;
   }
+
   @include desktop {
     margin-bottom: 3em;
   }
+
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
     transition: all 0.25s ease;
     left: 3px;
   }
 }
+
 .blog-credits {
   overflow: hidden;
   text-overflow: ellipsis;
@@ -208,11 +235,13 @@
     height: 68%;
     margin-top: 3em;
   }
+
   h2,
   p {
     color: white;
     max-width: 100%;
   }
+
   h2 {
     font-size: 1.5em;
     font-weight: normal;
@@ -221,13 +250,16 @@
     &:hover {
       text-decoration: underline;
     }
+
     @include tablet {
       font-size: 1.5em;
     }
+
     @include desktop {
       font-size: 2em;
     }
   }
+
   p {
     display: block;
     width: 90%;
@@ -236,8 +268,7 @@
     white-space: nowrap;
     font-size: 0.8em;
     margin: 1em 0;
-    @include tablet {
-    }
+
     @include desktop {
       font-weight: lighter;
       line-height: 1em;
@@ -245,12 +276,14 @@
       font-family: $fontfamily;
     }
   }
+
   a {
     color: white;
     font-weight: lighter;
     outline: none;
   }
 }
+
 .date {
   display: none;
   @include tablet {
@@ -262,20 +295,8 @@
     margin-bottom: 0;
   }
 }
+
 .category {
   display: none;
   position: absolute;
-  bottom: 13px;
-  @include tablet {
-    display: block;
-  }
-
-  a {
-    font-size: 0.9em;
-    font-weight: 600;
-    font-family: $fontfamily;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }

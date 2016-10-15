@@ -10,60 +10,45 @@ get_header();
 
 	<?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-    <header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; height: 14em; width: 100%; background-size: cover;">
+			<header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; background-size: cover;">
+				<div class="blue-overlay-3">
+					<h2 class="blog-page-titles"><?php the_title(); ?></h2>
+					<p class="post_excerpt"><?php the_field('post_excerpt'); ?></p>
+				</div>
+			</header>
 
-			<div class="blue-overlay-3">
-        <h2 class="blog-page-titles"><?php the_title(); ?></h2>
-				<p class="post_excerpt"><?php the_field('post_excerpt'); ?></p>
-			</div>
-    </header>
+			<?php while (have_posts()) : the_post(); ?>
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+					<div class="inner-column">
+						<div class="single-blog-hero">
+							<?php if (has_post_thumbnail()) : ?>
+								<?php the_post_thumbnail('large'); ?>
+							<?php endif; ?>
+						</div>
 
-	<?php while (have_posts()) : the_post(); ?>
+						<div class="blog-content">
+							<p class="date-single"><?php echo get_the_date('F j, Y'); ?></p>
 
-  <div class="blog-hero">
-  		      <?php if (has_post_thumbnail()) : ?>
-  			      <?php the_post_thumbnail('large'); ?>
-  			    <?php endif; ?>
-  </div>
+							<p><?php the_content(); ?></p>
 
-  <div class="blog-content">
-    <p class="date date2"><?php echo get_the_date('F j, Y'); ?></p>
-    <hr class="seperate-top">
-  	<p><?php the_content(); ?></p>
-    <hr class="seperate">
-		<div class="blog-nav">
-			<?php previous_post_link(); ?>
-			<?php next_post_link(); ?>
-		</div>
-  </div>
+							<hr class="separate">
 
-	<div class="recent-news-block">
-	  <h2>Recent News</h2>
-	  <ul class="recent-news-list">
-	  <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>
+							<div class="blog-nav">
+								<?php previous_post_link(); ?>
+								<?php next_post_link(); ?>
+							</div>
+						</div>
+					</div>
+				</article>
 
-	  <?php while ($the_query -> have_posts()) : $the_query -> the_post(); ?>
-	  <a href="<?php the_permalink() ?>">
-	  <li> <?php if (has_post_thumbnail()) : ?>
-	      <?php the_post_thumbnail('small'); ?>
-	    <?php endif; ?>
-	    <div class="title-div">
-	        <p><?php the_title(); ?></p>
-	    </div>
-
-	  </li>
-	  </a>
-
-	<?php endwhile;wp_reset_postdata();?>
-	  </ul>
-	</div>
-
-</article>
-
-		<?php endwhile;?>
-  </main><!-- #main -->
+				<div class="single-recent-news recent-news-block">
+					<div class="inner-column-wide">
+						<?php get_template_part('template-parts/components/recent-posts'); ?>
+					</div>
+				</div>
+			<?php endwhile;?>
+	</main><!-- #main -->
 </div><!-- #primary -->
 
-    <?php get_footer(); ?>
+<?php get_footer(); ?>

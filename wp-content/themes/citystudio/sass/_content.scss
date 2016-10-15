@@ -10,6 +10,34 @@
   }
 }
 
+/* Global Inner Wrapper Class */
+
+.inner-column {
+  width: 90%;
+  margin: 2em auto;
+
+  @include tablet {
+    width: 780px;
+  }
+
+  @include desktop {
+
+  }
+}
+
+.inner-column-wide {
+  width: 90%;
+  margin: 0 auto;
+
+  @include tablet {
+    width: 920px;
+  }
+
+  @include desktop {
+
+  }
+}
+
 /* Posts and pages */
 
 .sticky {

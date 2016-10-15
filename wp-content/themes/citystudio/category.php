@@ -63,7 +63,7 @@ get_header(); ?>
     else: ?>
     </div><!-- end category post container -->
 
-  <p>Sorry, no posts matched your criteria.</p> -->
+  <p>Sorry, no posts matched your criteria.</p> 
   <?php endif; ?>
   </div><!-- end blog content container -->
 

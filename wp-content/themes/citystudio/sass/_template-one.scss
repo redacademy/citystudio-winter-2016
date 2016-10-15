@@ -2,41 +2,38 @@
   display: block;
   justify-content: center;
   margin-top: 2em;
-}
-.template-hero {
-  margin-top: 2em;
-  width: 100%;
-  height: auto;
-}
-.section-header {
-  width: 75%;
-  margin: 2em auto;
-  @include tablet {
-    width: 75%;
-  }
-  @include desktop {
-    width: 65%;
-  }
+
   h3 {
     font-size: 1.25em;
     padding-bottom: 2%;
     width: 170px;
     font-family: $fontfamily;
+
     @include desktop {
       font-size: 1.5em;
       padding-bottom: 1%;
     }
   }
+
   p {
     font-size: 1em;
     line-height: 1.5rem;
     font-family: $fontfamily;
+
     @include desktop {
       font-size: 1em;
       line-height: 1.8rem;
     }
   }
 }
+.template-hero {
+  margin-top: 2em;
+  width: 100%;
+  height: auto;
+}
+
+
+
 //Call to action block
 .cta_blurb {
   display: none;

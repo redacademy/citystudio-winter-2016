@@ -57,6 +57,3 @@
 		</footer><!-- #colophon -->
 		<div class="copyright">© Copyright <?php echo date("Y") ?> CityStudio Vancouver</div>
 	</div><!-- #content -->
-		<?php wp_footer(); ?>
-	</body>
-</html>
