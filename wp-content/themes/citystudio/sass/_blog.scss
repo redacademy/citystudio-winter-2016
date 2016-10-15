@@ -274,6 +274,7 @@
   }
 }
 .blog-pagination {
+  flex-basis: 100%;
   display: flex;
   justify-content: space-between;
   width: 80%;
@@ -281,9 +282,10 @@
   font-size: 1.2em;
   font-weight: bold;
   margin: 0 auto 2em;
+
   @include tablet {
-  width: 40%;
-}
+    width: 40%;
+  }
   a,
   &:focus,
   &:active,

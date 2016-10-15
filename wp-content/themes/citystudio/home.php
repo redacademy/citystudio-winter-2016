@@ -48,7 +48,7 @@ get_header(); ?>
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 					  $args = array(
 					  'post_type' => 'post',
-						'posts_per_page' => 3,
+						'posts_per_page' => 5,
  						'paged' => $paged,
 						'orderby' => 'date',
 						'page_slug' => 'blog',
@@ -63,7 +63,7 @@ get_header(); ?>
 
 						<?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 							<a href= '<?php echo get_permalink( $post->ID ); ?>'>
-							<li class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
+							<div class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
 																										 background-size: cover;">
 								<div class="blog-credits">
 									<div class="date"><?php echo get_the_date('F j, Y'); ?></div>
@@ -75,7 +75,7 @@ get_header(); ?>
 										<?php the_category(', '); ?>
 									</div>
 								</div>
-							</li>
+							</div>
 							</a>
 					      <?php endwhile; ?>
 

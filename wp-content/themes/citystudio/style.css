@@ -4153,7 +4153,6 @@ article.people {
           justify-content: flex-end;
       margin-bottom: 0; } }
 
-<<<<<<< HEAD
 .category-links {
   display: none;
   position: absolute;
@@ -4169,6 +4168,8 @@ article.people {
       text-decoration: underline; }
 
 .blog-pagination {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
@@ -4193,8 +4194,6 @@ article.people {
   .blog-pagination a:hover {
     color: #006493; }
 
-=======
->>>>>>> sat-15
 .category-banner {
   background-position: center center;
   background-repeat: no-repeat;
