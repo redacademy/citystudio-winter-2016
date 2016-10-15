@@ -16,7 +16,7 @@ get_header(); ?>
       <?php echo single_term_title('<h2><span>Tag:</span> ', '</h2>' ); ?>
     </header><!-- .page-header -->
 
-        <div class="section-archives">
+        <div class="tag-section-archives">
 
         <ul class="tag-gallery">
         <?php while ( have_posts() ) : the_post(); ?>

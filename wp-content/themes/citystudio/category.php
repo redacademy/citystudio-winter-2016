@@ -32,7 +32,11 @@ get_header(); ?>
             </p>
           </div>
           <div class="sidebar-item">
-            <h4>Newsboard</h4>
+            <h4>Newsboard</h4> 
+            <p>
+              Check back soon :)
+            </p>         
+
           </div>
         </div>
 

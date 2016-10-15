@@ -34,7 +34,7 @@ get_header(); ?>
           <div class="sidebar-item">
             <h4>Newsboard</h4>
 						<p>
-							Check back soon :)
+							Check back soon :)...
 						</p>
           </div>
         </div>

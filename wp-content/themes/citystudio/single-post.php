@@ -10,7 +10,6 @@ get_header();
 
 	<?php $featimg = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 
-
 			<header class="blog-post-banner" style="background: url('<?php echo $featimg['0'];?>') no-repeat center center; background-size: cover;">
 				<div class="blue-overlay-3">
 					<h2 class="blog-page-titles"><?php the_title(); ?></h2>
@@ -49,6 +48,7 @@ get_header();
 				</div>
 			<?php endwhile;?>
 	</main><!-- #main -->
+
 </div><!-- #primary -->
 
 <?php get_footer(); ?>

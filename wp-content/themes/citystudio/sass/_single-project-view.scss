@@ -11,7 +11,7 @@ h1.page-titles {
     font-family: $fontfamily;
     font-size: 1.5em;
     box-shadow: none;
-  padding: 3.5% 7%;
+    padding: 3.5% 7%;
     @include tablet {
       font-size: 2.5em;
     padding: 1% 7%;
