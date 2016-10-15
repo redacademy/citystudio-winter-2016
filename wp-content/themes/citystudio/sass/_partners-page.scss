@@ -181,6 +181,7 @@
   }
   li {
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    border: 1px solid transparent;
     flex: 0 0 30%;
     margin-bottom: 2em;
     width: 300px;
@@ -200,6 +201,7 @@
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
+  border: 1px solid #ffffff;
     }
   }
 }

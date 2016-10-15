@@ -48,7 +48,7 @@ get_header(); ?>
 						$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 					  $args = array(
 					  'post_type' => 'post',
-						'posts_per_page' => 3,
+						'posts_per_page' => 5,
  						'paged' => $paged,
 						'orderby' => 'date',
 						'page_slug' => 'blog',

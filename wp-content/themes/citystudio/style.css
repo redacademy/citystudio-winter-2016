@@ -2591,6 +2591,7 @@ a {
     outline: 0; }
   .partner-projects-gallery li {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    border: 1px solid transparent;
     -ms-flex: 0 0 30%;
         flex: 0 0 30%;
     margin-bottom: 2em;
@@ -2610,7 +2611,8 @@ a {
       z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.35);
-      transition: all 0.25s ease; }
+      transition: all 0.25s ease;
+      border: 1px solid #ffffff; }
 
 .title-block-container {
   display: -ms-flexbox;
@@ -3507,6 +3509,8 @@ h1.page-titles {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
+  -ms-flex-direction: column;
+      flex-direction: column;
   width: 100%;
   align-items: center; }
   .team-container .section-one-title {
@@ -3527,7 +3531,7 @@ h1.page-titles {
     -ms-flex: 0 1 100%;
         flex: 0 1 100%;
     text-align: center;
-    margin: 0 0 2em .5em;
+    margin: 1em 0 0.5em;
     font-size: 1.5em; }
     @media screen and (min-width: 750px) {
       .team-container .section-titles {
@@ -3544,11 +3548,45 @@ h1.page-titles {
 
 .citystudio-teams {
   display: block; }
+  .citystudio-teams ul {
+    -ms-flex-direction: column;
+        flex-direction: column;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: center;
+        justify-content: center;
+    -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+    max-width: 100%;
+    min-height: 300px; }
+    @media screen and (min-width: 750px) {
+      .citystudio-teams ul {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        display: -ms-flexbox;
+        display: flex;
+        min-height: 200px;
+        -ms-flex: 0 0 80%;
+            flex: 0 0 80%;
+        padding: 1em; } }
+    @media screen and (min-width: 1024px) {
+      .citystudio-teams ul {
+        -ms-flex-direction: row;
+            flex-direction: row;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+        min-height: 100px;
+        padding: 0; } }
 
 .team {
   display: -ms-flexbox;
   display: flex;
-  /*flex: 0 0 40%;*/
+  -ms-flex: 0 0 40%;
+      flex: 0 0 40%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: center;
