@@ -3,11 +3,6 @@
   position: relative;
 }
 
-h2.page-titles{
-  font-size: 2em;
-  margin-left: 1em;
-  padding: 7% 0;
-}
 .people-margin {
   margin-bottom: 1em;
 }
@@ -38,7 +33,6 @@ h2.page-titles{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   width: 100%;
   align-items: center;
   .section-one-title {
@@ -58,7 +52,7 @@ h2.page-titles{
     display: block;
     flex: 0 1 100%;
     text-align: center;
-    margin: 1em 0 0.5em;
+    margin: 0 0 2em .5em;
     font-size: 1.5em;
     @include tablet {
       margin:0 0 1em;
@@ -78,32 +72,33 @@ h2.page-titles{
 .citystudio-teams {
 display: block;
   ul {
-    flex-direction: column;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+ /*   flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
-    min-height: 300px;
-    @include tablet {
-    flex-direction: row;
+    min-height: 300px;*/
+/*    @include tablet {
+      flex-direction: row;
       display: flex;
       min-height: 200px;
       flex: 0 0 80%;
       padding: 1em;
     }
     @include desktop {
-    flex-direction: row;
+      flex-direction: row;
       display: flex;
       flex: 0 0 100%;
       min-height: 100px;
       padding: 0;
     }
+  }*/
   }
 }
 .team {
   display: flex;
-  flex: 0 0 40%;
+  /*flex: 0 0 40%;*/
   flex-wrap: wrap;
   justify-content: center;
   max-height: 340px;

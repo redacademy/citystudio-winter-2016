@@ -2,6 +2,13 @@
 # Page Templates
 --------------------------------------------------------------*/
 /* Tag Archive Page */
+
+.tag-section-archives{
+  @include desktop {
+      width: 100%;
+  }
+}
+
 .tag-archives {
   background-color: $medium-blue;
   padding-top: 2em;
@@ -16,17 +23,19 @@
     box-sizing: border-box;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     font-size: 1.5rem;
-    width: 90vw;
+    width: 80vw;
     padding: 0 0.5em;
     height: 2.5rem;
     text-transform: capitalize;
+    margin: 2em 0 0;
+
     @include tablet {
+      width: 90vw;
       height: 4rem;
-      margin-bottom: 1rem;
+      margin-top: 0;
     }
     @include desktop {
-      height: 6.5rem;
-      margin-bottom: 1.5rem;
+      height: 5rem;
     }
     h2 {
       font-family: 'open_sans', bold;
@@ -39,7 +48,7 @@
         margin-top: -0.25rem;
       }
       @include desktop {
-        font-size: 3em;
+        font-size: 2.5em;
       }
       span {
         color: $dark-blue;
@@ -57,14 +66,12 @@
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  width: 90%;
-  margin: 1em auto;
+  width: 400px;
   @include tablet {
     justify-content: space-around;
-    margin: 2em auto 0;
-  }
-  a {
-    margin-bottom: 1.5em;
+    margin: 2em 3em 0em 0em;
+    display: flex;
+    width: 100%;
   }
   li,
   a {
@@ -74,6 +81,7 @@
     max-height: 240px;
     max-width: 330px;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    margin-bottom: 2em;
     @include tablet {
       flex: 0 0 47%;
       min-height: 240px;
@@ -84,8 +92,7 @@
       flex: 0 0 30%;
     }
     &:hover {
-      // border: 1px solid white;
-      z-index: 1;
+        z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;

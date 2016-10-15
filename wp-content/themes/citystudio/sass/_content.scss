@@ -82,6 +82,7 @@
   height: 100%;
   overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  font-weight: 700;
   @include tablet {
     min-height: 5em;
   }
@@ -92,21 +93,6 @@
     height: 100%;
   }
 }
-
-h2.page-titles {
-  color: white;
-  font-family: $fontfamily;
-  font-size: 1.5em;
-  box-shadow: none;
-  margin-left: 1.5em;
-  @include tablet {
-    font-size: 2em;
-  }
-  @include desktop {
-    font-size: 3em;
-  }
-}
-
 
 .citystudio-banner-short {
   @include blue-to-blue;
@@ -124,7 +110,7 @@ h2.page-titles {
 }
 
 .banner-inner{
-  margin-top: 4em;
+  margin-top: 5em;
   @include tablet{
     margin: 0;
   }
