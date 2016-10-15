@@ -87,14 +87,20 @@
     text-decoration: none;
   }
 
+  .blog-nav-right {
+    text-align: right;
+  }
+
+  .blog-nav-left {
+    text-align: left;
+  }
+
   a[rel=next] {
     margin-right: 1em;
-    text-align: right;
   }
 
   a[rel=prev] {
     margin-left: 1em;
-    text-align: left;
   }
 }
 

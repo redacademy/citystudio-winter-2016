@@ -16,15 +16,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 400px;
   width: 100%;
+
   @include tablet {
-    height: 60vh;
-  }
-  @include desktop {
-    height: 75vh;
+    height: 500px;
   }
 }
+
 .hero-blurb {
   text-align: center;
   font-size: 1rem;
@@ -74,7 +73,7 @@ margin-bottom: 0;
   @include desktop {
     font-size: 2.3em;
   }
-  
+
   span {
     color: $city-blue;
     font-weight: bold;

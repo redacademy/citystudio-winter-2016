@@ -286,6 +286,7 @@
 
 .date {
   display: none;
+
   @include tablet {
     display: block;
     font-size: 0.7em;
@@ -294,9 +295,4 @@
     justify-content: flex-end;
     margin-bottom: 0;
   }
-}
-
-.category {
-  display: none;
-  position: absolute;
 }

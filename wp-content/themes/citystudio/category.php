@@ -1,6 +1,6 @@
 <?php
 /**
-* Category Template: Categories Template
+* 
 */
 get_header(); ?>
 
@@ -32,10 +32,10 @@ get_header(); ?>
             </p>
           </div>
           <div class="sidebar-item">
-            <h4>Newsboard</h4> 
+            <h4>Newsboard</h4>
             <p>
               Check back soon :)
-            </p>         
+            </p>
 
           </div>
         </div>
@@ -67,7 +67,7 @@ get_header(); ?>
     else: ?>
     </div><!-- end category post container -->
 
-  <p>Sorry, no posts matched your criteria.</p> 
+  <p>Sorry, no posts matched your criteria.</p>
   <?php endif; ?>
   </div><!-- end blog content container -->
 
