@@ -8,10 +8,8 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<header class="citystudio-banner">
-				<div class="banner-inner">
-					<h2 class="page-titles"><?php the_title(); ?></h2>
-				</div>
+			<header class="contact-header citystudio-banner">
+					<h1 class="page-titles">About Us</h1>
 			</header>
 			<div class="hero-wrap">
 				<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>
