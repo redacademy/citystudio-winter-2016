@@ -402,12 +402,6 @@ p {
 .role {
   font-style: italic; }
 
-h2.page-titles {
-  color: #fff;
-  font-family: "open_sans";
-  font-size: 3em;
-  font-weight: bold; }
-
 .section-titles {
   color: #404040;
   font-family: "open_sans";
@@ -1130,7 +1124,9 @@ button.hamburger {
   min-height: 2em;
   height: 100%;
   overflow: hidden;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  color: white; }
   @media screen and (min-width: 600px) {
     .citystudio-banner {
       min-height: 5em; } }
@@ -1140,19 +1136,6 @@ button.hamburger {
       background-position: center center;
       min-height: 6em;
       height: 100%; } }
-
-h2.page-titles {
-  color: white;
-  font-family: "open_sans";
-  font-size: 1.5em;
-  box-shadow: none;
-  margin-left: 1.5em; }
-  @media screen and (min-width: 600px) {
-    h2.page-titles {
-      font-size: 2em; } }
-  @media screen and (min-width: 1024px) {
-    h2.page-titles {
-      font-size: 3em; } }
 
 .citystudio-banner-short {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
@@ -1169,7 +1152,7 @@ h2.page-titles {
       opacity: 0.9; } }
 
 .banner-inner {
-  margin-top: 4em; }
+  margin-top: 5em; }
   @media screen and (min-width: 600px) {
     .banner-inner {
       margin: 0; } }
@@ -1898,6 +1881,10 @@ object {
 # Page Templates
 --------------------------------------------------------------*/
 /* Tag Archive Page */
+@media screen and (min-width: 1024px) {
+  .tag-section-archives {
+    width: 100%; } }
+
 .tag-archives {
   background-color: #0082b9;
   padding-top: 2em; }
@@ -1914,18 +1901,19 @@ object {
     box-sizing: border-box;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
-    width: 90vw;
+    width: 80vw;
     padding: 0 0.5em;
     height: 2.5rem;
-    text-transform: capitalize; }
+    text-transform: capitalize;
+    margin: 2em 0 0; }
     @media screen and (min-width: 600px) {
       .tag-archives .archive-header {
+        width: 90vw;
         height: 4rem;
-        margin-bottom: 1rem; } }
+        margin-top: 0; } }
     @media screen and (min-width: 1024px) {
       .tag-archives .archive-header {
-        height: 6.5rem;
-        margin-bottom: 1.5rem; } }
+        height: 5rem; } }
     .tag-archives .archive-header h2 {
       font-family: 'open_sans', bold;
       font-size: 1em;
@@ -1938,7 +1926,7 @@ object {
           margin-top: -0.25rem; } }
       @media screen and (min-width: 1024px) {
         .tag-archives .archive-header h2 {
-          font-size: 3em; } }
+          font-size: 2.5em; } }
       .tag-archives .archive-header h2 span {
         color: #006493; }
   .tag-archives h1 {
@@ -1956,15 +1944,15 @@ object {
   -ms-flex-align: center;
       align-items: center;
   padding: 1rem;
-  width: 90%;
-  margin: 1em auto; }
+  width: 400px; }
   @media screen and (min-width: 600px) {
     .tag-gallery {
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      margin: 2em auto 0; } }
-  .tag-gallery a {
-    margin-bottom: 1.5em; }
+      margin: 2em 3em 0em 0em;
+      display: -ms-flexbox;
+      display: flex;
+      width: 100%; } }
   .tag-gallery li,
   .tag-gallery a {
     border: 1px solid transparent;
@@ -1973,7 +1961,8 @@ object {
     height: 240px;
     max-height: 240px;
     max-width: 330px;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em; }
     @media screen and (min-width: 600px) {
       .tag-gallery li,
       .tag-gallery a {
@@ -3561,11 +3550,6 @@ h1.page-titles {
 .team-citystudio-team {
   position: relative; }
 
-h2.page-titles {
-  font-size: 2em;
-  margin-left: 1em;
-  padding: 7% 0; }
-
 .people-margin {
   margin-bottom: 1em; }
 
@@ -3600,8 +3584,6 @@ h2.page-titles {
       justify-content: center;
   -ms-flex-align: center;
       align-items: center;
-  -ms-flex-direction: column;
-      flex-direction: column;
   width: 100%;
   align-items: center; }
   .team-container .section-one-title {
@@ -3622,7 +3604,7 @@ h2.page-titles {
     -ms-flex: 0 1 100%;
         flex: 0 1 100%;
     text-align: center;
-    margin: 1em 0 0.5em;
+    margin: 0 0 2em .5em;
     font-size: 1.5em; }
     @media screen and (min-width: 600px) {
       .team-container .section-titles {
@@ -3639,45 +3621,11 @@ h2.page-titles {
 
 .citystudio-teams {
   display: block; }
-  .citystudio-teams ul {
-    -ms-flex-direction: column;
-        flex-direction: column;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -ms-flex-pack: center;
-        justify-content: center;
-    -ms-flex: 0 0 75%;
-        flex: 0 0 75%;
-    max-width: 100%;
-    min-height: 300px; }
-    @media screen and (min-width: 600px) {
-      .citystudio-teams ul {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        display: -ms-flexbox;
-        display: flex;
-        min-height: 200px;
-        -ms-flex: 0 0 80%;
-            flex: 0 0 80%;
-        padding: 1em; } }
-    @media screen and (min-width: 1024px) {
-      .citystudio-teams ul {
-        -ms-flex-direction: row;
-            flex-direction: row;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-        min-height: 100px;
-        padding: 0; } }
 
 .team {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 0 0 40%;
-      flex: 0 0 40%;
+  /*flex: 0 0 40%;*/
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: center;
@@ -4348,10 +4296,6 @@ article.people {
 
 .sidebar-item a {
   font-weight: 500; }
-
-.page-titles {
-  padding-left: 0;
-  height: 75px; }
 
 .category-sidebar {
   display: none; }
