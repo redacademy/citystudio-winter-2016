@@ -148,7 +148,9 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          // url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          // temp fix for api_var/rest_url issue
+          url: 'http://localhost:3000/citystudio-winter-2016/wp-json/wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             console.log("response", response);
