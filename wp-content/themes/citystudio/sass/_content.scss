@@ -29,12 +29,8 @@
   width: 90%;
   margin: 0 auto;
 
-  @include tablet {
-    width: 920px;
-  }
-
   @include desktop {
-
+    width: 920px;
   }
 }
 

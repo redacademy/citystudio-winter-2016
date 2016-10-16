@@ -185,12 +185,11 @@
   margin: 1em auto 0;
 
   @include tablet {
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 2em auto 0;
   }
 
   @include desktop {
-    justify-content: space-around;
     margin: 3rem auto 0;
   }
 
