@@ -17,6 +17,7 @@ jQuery(document).ready(function($) {
   // Sort navigation is open on page load on mobile
 
   $('#refresh').on('click', function() {
+
     checkedTheme = '';
     checkedPart = '';
     checkedYear = '';
@@ -31,6 +32,10 @@ jQuery(document).ready(function($) {
     reloadProjects();
 
   }); // close refresh
+
+  $('.refresh').on('click', function(){
+      $(this).toggleClass('.rotated');
+  })
 
   $('.theme-labels').on('click', function(){
     $(this).empty().append('<i class="fa fa-times" aria-hidden="true"></i>').hide();
@@ -72,9 +77,12 @@ jQuery(document).ready(function($) {
   });
 
   $('#refresh').hover(
+
     function(){
+      $('.refresh').toggleClass("rotate");
       $('.refresh-hover').css({"opacity": 1});
   }, function () {
+    $('.refresh').toggleClass("rotate");
      $('.refresh-hover').css({"opacity": 0});
   });
   // Remove class current-menu if mouse isn't hovering over menu-item
@@ -136,7 +144,7 @@ jQuery(document).ready(function($) {
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
-    console.log("url", api_vars.rest_url+'wp/v2/project?'+filters());
+    // console.log("url", api_vars.rest_url+'wp/v2/project?'+filters());
       $.ajax({
           type: 'GET',
           dataType: 'json',

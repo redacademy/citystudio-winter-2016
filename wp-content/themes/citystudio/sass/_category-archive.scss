@@ -10,7 +10,6 @@
 }
 
 .sidebar-item {
-
   a {
     font-weight: 500;
   }
@@ -18,12 +17,10 @@
 
 .category-sidebar {
   display: none;
-
   @include tablet {
     display: block;
     width: 30%;
   }
-
   @include desktop {
     display: flex;
     flex-direction: column;
@@ -54,17 +51,17 @@
     &:hover {
       text-decoration: underline;
     }
-}
+  }
   p {
     margin: 0.5em 0 0 0;
     line-height: 1.25em;
   }
   .content-contain {
-  padding: 1em;
+    padding: 1em;
   }
 }
 
 .blue-overlay-4 {
-background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
-height: 100%;
+  background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+  height: 100%;
 }

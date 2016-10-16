@@ -42,7 +42,6 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-left: .5em;
   }
 }
 .themes,
@@ -51,13 +50,13 @@
 .refresh {
   width: 250px;
   height: 50px;
-  margin-right: 1em !important;
+  margin-right: .3em !important;
   border-radius: 5px;
   cursor: pointer;
     p{
       display: flex;
-      padding-left: 45px;
-      letter-spacing: 3px;
+      padding-left: 40px;
+      letter-spacing: 2px;
       font-weight: 500;
       padding-top: 5px;
       font-size: 14px;
@@ -70,7 +69,7 @@
         color: $city-blue;
       }
       @include tablet{
-        width: 173px;
+        width: 167px;
       }
     }
   .fa-sort-desc{
@@ -87,7 +86,7 @@
     justify-content: flex-end;
     width: 100%;
     font-size: 32px;
-    margin: -22px 14px;
+    margin: -21px 8px;
     line-height: 1em;
   }
   .fa-times{
@@ -117,6 +116,9 @@
     background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
     background-size: 27px 28px;
   }
+  .fa-sort-desc{
+    margin: -8px 8px;
+  }
 }
 .years {
   background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
@@ -128,6 +130,9 @@
     background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
     background-size: 21px 20px;
   }
+  .fa-sort-desc{
+    margin: -8px 8px;
+  }
 }
 .refresh {
   background: url("../../assets/refresh.png") no-repeat center;
@@ -136,10 +141,10 @@
   background-color: #0082b9;
   border-radius: 45px;
   width: 90px;
-  background-size: 45px 45px;
+  background-size: 40px 40px;
   &:hover{
     background-color: $light-blue;
-  };
+  }
 }
 #refresh.refresh.menu-item{
   width: 4.1em;
@@ -147,9 +152,11 @@
   opacity: .9;
   transition: all 1s ease-in;
   margin-top: .5em;
-  margin-left: 1em;
   @include tablet{
     margin-top: .3;
+  }
+  @include desktop{
+    margin-left: 1em;
   }
 }
 .refresh-hover{
@@ -201,7 +208,10 @@
     font-size: 12px;
     padding-left: 3em;
     @include tablet{
-      padding-left: 1.2em;
+      padding-left: .5em;
+    }
+    @include desktop{
+      padding-left: 1em;
     }
   }
   .sub-menu-theme span:hover,
@@ -226,7 +236,7 @@
     flex-direction: column;
     opacity: 1;
     height: 245px;
-    width: 175px;
+    width: 165px;
     text-transform: none;
     border-top-color: #fff;
     border-top-right-radius: 0;
@@ -243,11 +253,15 @@
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .3em 2em;
+    padding: .5em 1em 0;
     color: $city-blue;
+    width: 163px;
    &:hover{
       color: $city-blue;
     }
+  }
+  @include desktop{
+    width: 175px;
   }
 }
 
@@ -272,10 +286,12 @@
   text-transform: uppercase;
   color: #006493;
   border-radius: 5px;
-  width: 208px;
-  margin: 1.8em 0;
-  width: 175px;
+  width: 165px;
+  margin: 1.8em  .4em;
   border: 1px solid $city-blue;
+  @include desktop{
+    width: 175px;
+  }
 }
 
 .open {
@@ -341,7 +357,7 @@
     top: -1px;
     border-radius: 5px;
     height: 1.90em;
-    width: 175px;
+    width: 167px;
     text-align: center;
     padding-top: 1px;
     margin-right: 1x;
@@ -349,7 +365,7 @@
     label {
       font-size: .7rem;
       text-transform: capitalize;
-      margin-right: -20px;
+      margin-right: -15px;
     &::after {
       content: '';
       width: 0;
@@ -359,11 +375,15 @@
       position: absolute;
     }
   }
+  @include desktop{
+    width: 175px;
+  }
   .show-labels{
     display: block;
   }
 }
 .sticky-navigation {
+  display: none;
   position: relative;
   visibility: hidden;
   transition: height .3s ease;
@@ -435,4 +455,17 @@
   h2{
     font-size: 24px;
   }
+}
+.rotate {
+    -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -o-transition:.5s;
+    -ms-transition:.5s;
+    -moz-transition:.5s;
+    -webkit-transition:.5s;
+    transition:.5s;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }
