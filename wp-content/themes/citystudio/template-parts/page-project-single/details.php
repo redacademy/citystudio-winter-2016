@@ -1,6 +1,6 @@
 <!-- Project Details -->
 <div class="section-credits content-wrapper">
-  <div class="full-width-col">
+  <div class="inner-column-wide">
 
     <div class="scalability-wrap">
       <h3>Description:</h3>
@@ -37,6 +37,7 @@
           <img src ="<?php the_sub_field('additional_image') ?>" />
       <?php endwhile; ?>
     </div>
+
 
     <div class="tags-wrapper">
       <h3>Tags:</h3>
