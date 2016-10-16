@@ -415,6 +415,44 @@ p {
   .single a:hover {
     color: #006493; }
 
+.blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5 p {
+  text-align: left;
+  width: 100%; }
+
+.blog-content h1 {
+  font-size: 2em;
+  font-weight: 300; }
+
+.blog-content h2 {
+  font-size: 1.5em;
+  font-weight: 300; }
+
+.blog-content h3 {
+  font-size: 1.2em;
+  font-weight: 600;
+  letter-spacing: 1px; }
+
+.blog-content a, .blog-content a:focus, .blog-content a:visited, .blog-content a:active {
+  text-decoration: none;
+  color: #0198d5;
+  font-weight: 600; }
+  .blog-content a:hover, .blog-content a:focus:hover, .blog-content a:visited:hover, .blog-content a:active:hover {
+    text-decoration: underline; }
+
+.blog-content blockquote {
+  text-align: left;
+  width: 100%;
+  padding: 2% 5%;
+  font-style: italic;
+  font-weight: 300;
+  font-size: 1.2em; }
+  .blog-content blockquote p {
+    color: #006493; }
+
+.blog-content img {
+  margin-bottom: 2em;
+  margin-top: 2em; }
+
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -2132,7 +2170,7 @@ object {
 .home-recent-news .homepage-titles {
   font-family: "open_sans";
   font-size: 2.2em;
-  margin: 1em auto;
+  margin: 0.5em auto;
   letter-spacing: 0.1rem;
   color: #2D2D2D;
   font-weight: bold; }
@@ -2254,7 +2292,6 @@ object {
         font-size: 1em; } }
 
 .homepage-partners-container {
-  background-color: #f7f9f9;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -2265,7 +2302,7 @@ object {
         flex-basis: 100%;
     max-height: 150px;
     min-height: 80px;
-    width: 100%;
+    width: 90%;
     margin: 2.5em auto;
     display: -ms-flexbox;
     display: flex;
@@ -3359,13 +3396,13 @@ h1.page-titles {
   .blog-post-banner h2 {
     color: white;
     font-family: "open_sans";
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin: 0.5em 0 0;
     width: 98%; }
     @media screen and (min-width: 750px) {
       .blog-post-banner h2 {
-        font-size: 2em; } }
+        font-size: 2.6em; } }
     @media screen and (min-width: 1024px) {
       .blog-post-banner h2 {
         font-size: 3em; } }
@@ -3450,9 +3487,6 @@ h1.page-titles {
 
 .hentry {
   margin: 0; }
-
-.single-recent-news {
-  background-color: #f7f9f9; }
 
 .team-citystudio-team {
   position: relative; }
@@ -4276,11 +4310,14 @@ a:active,
 a:focus {
   outline: none; }
 
-.recent-news-block h2 {
-  color: #0198d5;
-  text-align: center;
-  font-size: 2em;
-  font-weight: bold; }
+.recent-news-block {
+  background-color: #f7f9f9;
+  padding: 4% 0; }
+  .recent-news-block h2 {
+    color: #0198d5;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold; }
 
 .recent-post-image {
   background-size: cover;
@@ -4311,7 +4348,7 @@ a:focus {
           justify-content: space-around;
       -ms-flex-align: start;
           align-items: flex-start;
-      padding: 2% 0 10%; } }
+      padding: 2% 0; } }
   .recent-news-list a {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;

@@ -1,6 +1,8 @@
 
 
 .recent-news-block {
+  background-color: $color__background-offwhite;
+  padding: 4% 0;
 
   h2 {
     color: $city-blue;
@@ -35,7 +37,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 2% 0 10%;
+    padding: 2% 0;
   }
 
   a {

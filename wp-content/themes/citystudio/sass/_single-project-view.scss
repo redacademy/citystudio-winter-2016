@@ -56,7 +56,7 @@ h1.page-titles {
 .column-wrap {
 display: flex;
 flex-direction: column;
-background-color: $color__background-lightblue;
+background-color: $color__background-offwhite;
 padding: .5em;
 border-radius: 10px;
 width: 75%;
@@ -174,7 +174,7 @@ width: 75%;
   }
 }
   .tag-links {
-    background-color:  darken($color__background-lightblue, 2);
+    background-color:  darken($color__background-offwhite, 2);
     padding: 1.5rem 1.5rem;
     color: #000;
     display: flex;
@@ -183,7 +183,7 @@ width: 75%;
     border-radius: .3em;
     height: 1.3em;
     &:hover {
-      background-color: darken($color__background-lightblue, 6);
+      background-color: darken($color__background-offwhite, 6);
       color: $dark-blue;
     }
     a{
@@ -210,7 +210,7 @@ width: 75%;
       margin-right: .5rem;
       display: inline-flex;
       margin-bottom: .4em;
-      background-color:  darken($color__background-lightblue, 2);
+      background-color:  darken($color__background-offwhite, 2);
     }
   a{
     text-transform: capitalize;
