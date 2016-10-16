@@ -1,19 +1,33 @@
+
 .site-header {
   display: block;
+  background: white;
   max-width: 100%;
-}
-.header-container {
   position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.header-container {
   align-items: center;
   display: flex;
   justify-content: space-between;
-  z-index: 2;
-  background: white;
-  width: 100%;
+
   @include tablet{
     position: relative;
   }
 }
+
+#primary {
+  position: relative;
+  margin-top: 3.5em;
+
+  @include tablet {
+    margin-top: 7em;
+  }
+}
+
 .site-branding {
   @include desktop {
     margin-right: 0;
@@ -22,6 +36,7 @@
     display: inline-block;
   }
 }
+
 .logo {
     max-width: 200px;
     @include tablet {
@@ -32,6 +47,7 @@
     outline: none;
   }
 }
+
 .site-branding img {
   width: 250px;
   padding: .3em;

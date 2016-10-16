@@ -40,9 +40,14 @@
 
 .blog-content-container {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
   max-width: 1100px;
-  margin: 0 auto;
+  margin: 2em auto 0 ;
+  width: 90%;
+}
+
+#main {
+  min-height: 700px;
 }
 
 /* Posts and pages */
@@ -109,32 +114,44 @@
   justify-content: flex-start;
   align-items: center;
   @include blue-to-blue;
-  margin-bottom: 0;
+  // margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
   min-height: 2em;
   height: 100%;
-  overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   font-weight: 700;
   color: white;
+  padding: 2% 0;
+
   @include tablet {
     min-height: 5em;
   }
+
   @include desktop {
     background-size: cover;
     background-position: center center;
     min-height: 6em;
     height: 100%;
   }
+
+  .page-titles {
+    font-size: 2.5em;
+
+    @include tablet {
+      font-size: 3em;
+    }
+  }
 }
 
 .citystudio-banner-short {
+
   @include blue-to-blue;
-  width: 100%;
-  height: 4em;
-  overflow: hidden;
-  margin-bottom: 4em;
+    width: 100%;
+    height: 4em;
+    overflow: hidden;
+    margin-bottom: 4em;
+
   @include desktop {
     background: url("../../images/citystudio-logo-lighter.png"), $medium-blue;
     background-size: cover;
@@ -144,9 +161,7 @@
   }
 }
 
-.banner-inner{
-  margin-top: 5em;
-  @include tablet{
-    margin: 0;
-  }
+.banner-inner {
+  margin: 0 auto;
+  width: 90%;
 }
