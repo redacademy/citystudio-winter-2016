@@ -25,9 +25,8 @@
 #primary {
   position: relative;
   margin-top: 3.5em;
-
   @include tablet {
-    margin-top: 7em;
+    margin-top: 0;
   }
 }
 
