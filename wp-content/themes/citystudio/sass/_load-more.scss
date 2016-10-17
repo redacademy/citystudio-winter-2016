@@ -1,8 +1,6 @@
-
 .js-page-numbers {
-  width: 85%;
-  margin: 0 auto;
-  padding-bottom: 4%;
+  width: 100%;
+  padding: 6%;
   display: block;
   height: auto;
   text-align: center;
@@ -10,15 +8,14 @@
     display: none;
   }
 }
-
-.js-load-more {
+a.js-load-more {
   border: 1px solid white;
   border-radius: 10px;
   box-sizing: border-box;
-  color: #fffff;
+  color: #ffffff;
   display: inline-block;
   width: 55%;
-  padding: 2% 3%;
+  /*padding: 2% 3%;*/
   letter-spacing: 2px;
   margin: 0 auto;
   border-radius: 10px;
@@ -27,21 +24,19 @@
   color: $dark-blue;
   display: inline-block;
   text-transform: uppercase;
-  letter-spacing: 2px;
   margin: 0 auto;
   padding: 2.2% 0;
-  text-transform: uppercase;
   transition: background-color 0.5s ease;
   width: 200px;
   font-size: 1em;
   &:active,
-  &:visited {
+  &:visited,
+  &:focus {
     color: #ffffff !important;
+    outline: none;
   }
-
   &:hover {
     background-color: #ffffff;
-    color: $city-blue;
     padding: 1.2% 0;
     font-weight: lighter;
     background-color: transparent;
@@ -55,5 +50,6 @@
     font-size: 1.1em;
     padding: 1.5% 3%;
     width: 25%;
+    outline: none;
   }
 }

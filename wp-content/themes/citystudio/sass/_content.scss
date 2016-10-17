@@ -110,7 +110,6 @@
   justify-content: flex-start;
   align-items: center;
   @include blue-to-blue;
-  // margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
   min-height: 2em;
@@ -118,7 +117,7 @@
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   font-weight: 700;
   color: white;
-  padding: 2% 0;
+  padding: 2% 4%;
 
   @include tablet {
     min-height: 5em;
@@ -156,3 +155,8 @@
     opacity: 0.9;
   }
 }
+
+/*.banner-inner {
+  margin: 0 auto;
+  width: 100%;
+}*/
