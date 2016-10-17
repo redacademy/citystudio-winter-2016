@@ -4,13 +4,13 @@ if ( ! defined('ABSPATH') ) {
 }
 
 class FrmAppHelper {
-	public static $db_version = 32; //version of the database we are moving to
-	public static $pro_db_version = 36;
+	public static $db_version = 35; //version of the database we are moving to
+	public static $pro_db_version = 37;
 
 	/**
 	 * @since 2.0
 	 */
-	public static $plug_version = '2.02.03';
+	public static $plug_version = '2.02.09';
 
     /**
      * @since 1.07.02
@@ -66,9 +66,10 @@ class FrmAppHelper {
 	}
 
 	public static function get_affiliate() {
+		return '';
 		$affiliate_id = apply_filters( 'frm_affiliate_link', get_option('frm_aff') );
 		$affiliate_id = strtolower( $affiliate_id );
-		$allowed_affiliates = array( 'mojo' );
+		$allowed_affiliates = array();
 		if ( ! in_array( $affiliate_id, $allowed_affiliates ) ) {
 			$affiliate_id = false;
 		}
@@ -177,7 +178,8 @@ class FrmAppHelper {
      * Check if value contains blank value or empty array
      *
      * @since 2.0
-     * @param $value - value to check
+     * @param mixed $value - value to check
+	 * @param string
      * @return boolean
      */
     public static function is_empty_value( $value, $empty = '' ) {
@@ -257,12 +259,6 @@ class FrmAppHelper {
         return $value;
     }
 
-	/**
-	 *
-	 * @param string $param
-	 * @param mixed $default
-	 * @param string $sanitize
-	 */
 	public static function get_post_param( $param, $default = '', $sanitize = '' ) {
 		return self::get_simple_request( array( 'type' => 'post', 'param' => $param, 'default' => $default, 'sanitize' => $sanitize ) );
 	}
@@ -273,6 +269,7 @@ class FrmAppHelper {
 	 * @param string $param
 	 * @param string $sanitize
 	 * @param string $default
+	 * @return string|array
 	 */
 	public static function simple_get( $param, $sanitize = 'sanitize_text_field', $default = '' ) {
 		return self::get_simple_request( array( 'type' => 'get', 'param' => $param, 'default' => $default, 'sanitize' => $sanitize ) );
@@ -282,6 +279,8 @@ class FrmAppHelper {
 	 * Get a GET/POST/REQUEST value and sanitize it
 	 *
 	 * @since 2.0.6
+	 * @param array $args
+	 * @return string|array
 	 */
 	public static function get_simple_request( $args ) {
 		$defaults = array(
@@ -356,6 +355,9 @@ class FrmAppHelper {
 	/**
 	 * Sanitize the value, and allow some HTML
 	 * @since 2.0
+	 * @param string $value
+	 * @param array $allowed
+	 * @return string
 	 */
 	public static function kses( $value, $allowed = array() ) {
 		$html = array(
@@ -439,17 +441,44 @@ class FrmAppHelper {
 
         if ( 'get_posts' == $type ) {
             $results = get_posts($query);
+		} else if ( 'get_associative_results' == $type ) {
+			global $wpdb;
+			$results = $wpdb->get_results( $query, OBJECT_K );
         } else {
             global $wpdb;
             $results = $wpdb->{$type}($query);
         }
 
+		self::set_cache( $cache_key, $results, $group, $time );
+
+		return $results;
+	}
+
+	public static function set_cache( $cache_key, $results, $group = '', $time = 300 ) {
 		if ( ! self::prevent_caching() ) {
+			self::add_key_to_group_cache( $cache_key, $group );
 			wp_cache_set( $cache_key, $results, $group, $time );
 		}
+	}
 
-        return $results;
-    }
+	/**
+	 * Keep track of the keys cached in each group so they can be deleted
+	 * in Redis and Memcache
+	 */
+	public static function add_key_to_group_cache( $key, $group ) {
+		$cached = self::get_group_cached_keys( $group );
+		$cached[ $key ] = $key;
+		wp_cache_set( 'cached_keys', $cached, $group, 300 );
+	}
+
+	public static function get_group_cached_keys( $group ) {
+		$cached = wp_cache_get( 'cached_keys', $group );
+		if ( ! $cached ) {
+			$cached = array();
+		}
+
+		return $cached;
+	}
 
     /**
      * Data that should be stored for a long time can be stored in a transient.
@@ -477,10 +506,10 @@ class FrmAppHelper {
      * @since 2.0
      * @param string $cache_key
      */
-	public static function delete_cache_and_transient( $cache_key ) {
-        delete_transient($cache_key);
-        wp_cache_delete($cache_key);
-    }
+	public static function delete_cache_and_transient( $cache_key, $group = 'default' ) {
+		delete_transient($cache_key);
+		wp_cache_delete( $cache_key, $group );
+	}
 
     /**
      * Delete all caching in a single group
@@ -488,31 +517,18 @@ class FrmAppHelper {
      * @since 2.0
      *
      * @param string $group The name of the cache group
-     * @return boolean True or False
      */
 	public static function cache_delete_group( $group ) {
-    	global $wp_object_cache;
+		$cached_keys = self::get_group_cached_keys( $group );
 
-		if ( is_callable( array( $wp_object_cache, '__get' ) ) ) {
-			$group_cache = $wp_object_cache->__get('cache');
-		} elseif ( is_callable( array( $wp_object_cache, 'redis_status' ) ) && $wp_object_cache->redis_status() ) {
-			// check if the object cache is overridden by Redis
-			$wp_object_cache->flush();
-			$group_cache = array();
-		} else {
-			// version < 4.0 fallback
-			$group_cache = $wp_object_cache->cache;
-		}
-
-		if ( isset( $group_cache[ $group ] ) ) {
-			foreach ( $group_cache[ $group ] as $k => $v ) {
-				wp_cache_delete( $k, $group );
+		if ( ! empty( $cached_keys ) ) {
+			foreach ( $cached_keys as $key ) {
+				wp_cache_delete( $key, $group );
 			}
-			return true;
-		}
 
-    	return false;
-    }
+			wp_cache_delete( 'cached_keys', $group );
+		}
+	}
 
     /**
      * Check a value from a shortcode to see if true or false.
@@ -1720,7 +1736,7 @@ class FrmAppHelper {
 			'offset'    => apply_filters( 'frm_scroll_offset', 4 ),
 			'nonce'     => wp_create_nonce( 'frm_ajax' ),
 			'id'        => __( 'ID', 'formidable' ),
-			'loading_text' => __( 'Options are loading...', 'formidable' ),
+			'no_results' => __( 'No results match', 'formidable' ),
 		) );
 
 		if ( $location == 'admin' ) {
@@ -1747,6 +1763,7 @@ class FrmAppHelper {
 				'default_conf'      => __( 'The entered values do not match', 'formidable' ),
 				'enter_email'       => __( 'Enter Email', 'formidable' ),
 				'confirm_email'     => __( 'Confirm Email', 'formidable' ),
+				'css_invalid_size'  => __( 'In certain browsers (e.g. Firefox) text will not display correctly if the field height is too small relative to the field padding and text size. Please increase your field height or decrease your field padding.', 'formidable' ),
 				'enter_password'    => __( 'Enter Password', 'formidable' ),
 				'confirm_password'  => __( 'Confirm Password', 'formidable' ),
 				'import_complete'   => __( 'Import Complete', 'formidable' ),

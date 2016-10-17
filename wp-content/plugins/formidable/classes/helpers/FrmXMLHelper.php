@@ -81,7 +81,7 @@ class FrmXMLHelper {
 
 	public static function import_xml_terms( $terms, $imported ) {
         foreach ( $terms as $t ) {
-			if ( term_exists((string) $t->term_slug, (string) $t->term_taxonomy) ) {
+			if ( term_exists( (string) $t->term_slug, (string) $t->term_taxonomy ) ) {
 			    continue;
 			}
 
@@ -139,7 +139,7 @@ class FrmXMLHelper {
                 'editable'      => (int) $item->editable,
                 'status'        => (string) $item->status,
                 'parent_form_id' => isset($item->parent_form_id) ? (int) $item->parent_form_id : 0,
-                'created_at'    => date('Y-m-d H:i:s', strtotime((string) $item->created_at)),
+                'created_at'    => date( 'Y-m-d H:i:s', strtotime( (string) $item->created_at ) ),
             );
 
             $form['options'] = FrmAppHelper::maybe_json_decode($form['options']);
@@ -205,6 +205,8 @@ class FrmXMLHelper {
 
             // Send pre 2.0 form options through function that creates actions
             self::migrate_form_settings_to_actions( $form['options'], $form_id, $imported, $switch = true );
+
+			do_action( 'frm_after_import_form', $form_id, $form );
 
 		    unset($form, $item);
 		}
@@ -426,6 +428,7 @@ class FrmXMLHelper {
 
 	/**
 	* Updates the custom style setting on import
+	* Convert the post slug to an ID
 	*
 	* @since 2.0.19
 	* @param array $form
@@ -453,8 +456,32 @@ class FrmXMLHelper {
 			if ( $style_id ) {
 				$form['options']['custom_style'] = $style_id;
 			} else {
+				// save the old style to maybe update after styles import
+				$form['options']['old_style'] = $form['options']['custom_style'];
+
 				// Set to default
 				$form['options']['custom_style'] = 1;
+			}
+		}
+	}
+
+	/**
+	 * After styles are imported, check for any forms that were linked
+	 * and link them back up.
+	 *
+	 * @since 2.2.7
+	 */
+	private static function update_custom_style_setting_after_import( $form_id ) {
+		$form = FrmForm::getOne( $form_id );
+
+		if ( $form && isset( $form->options['old_style'] ) ) {
+			$form = (array) $form;
+			$saved_style = $form['options']['custom_style'];
+			$form['options']['custom_style'] = $form['options']['old_style'];
+			self::update_custom_style_setting_on_import( $form );
+			$has_changed = ( $form['options']['custom_style'] != $saved_style && $form['options']['custom_style'] != $form['options']['old_style'] );
+			if ( $has_changed ) {
+				FrmForm::update( $form['id'], $form );
 			}
 		}
 	}
@@ -481,8 +508,8 @@ class FrmXMLHelper {
 				'post_id'       => (int) $item->post_id,
 				'post_parent'   => (int) $item->post_parent,
 				'menu_order'    => (int) $item->menu_order,
-				'post_content'  => FrmFieldsHelper::switch_field_ids((string) $item->content),
-				'post_excerpt'  => FrmFieldsHelper::switch_field_ids((string) $item->excerpt),
+				'post_content'  => FrmFieldsHelper::switch_field_ids( (string) $item->content ),
+				'post_excerpt'  => FrmFieldsHelper::switch_field_ids( (string) $item->excerpt ),
 				'is_sticky'     => (string) $item->is_sticky,
 				'comment_status' => (string) $item->comment_status,
 				'post_date'     => (string) $item->post_date,
@@ -699,10 +726,15 @@ class FrmXMLHelper {
     }
 
 	private static function maybe_update_stylesheet( $imported ) {
-		if ( ( isset( $imported['imported']['styles'] ) && ! empty( $imported['imported']['styles'] ) ) || ( isset( $imported['updated']['styles'] ) && ! empty( $imported['updated']['styles'] ) ) ) {
+		$new_styles = isset( $imported['imported']['styles'] ) && ! empty( $imported['imported']['styles'] );
+		$updated_styles = isset( $imported['updated']['styles'] ) && ! empty( $imported['updated']['styles'] );
+		if ( $new_styles || $updated_styles ) {
 			if ( is_admin() && function_exists( 'get_filesystem_method' ) ) {
 				$frm_style = new FrmStyle();
 				$frm_style->update( 'default' );
+			}
+			foreach ( $imported['forms'] as $form_id ) {
+				self::update_custom_style_setting_after_import( $form_id );
 			}
 		}
 	}

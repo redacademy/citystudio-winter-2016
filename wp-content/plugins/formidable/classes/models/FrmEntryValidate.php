@@ -111,10 +111,10 @@ class FrmEntryValidate {
 			$value = preg_match( '/^(https?|ftps?|mailto|news|feed|telnet):/is', $value ) ? $value : 'http://' . $value;
         }
 
-        //validate the url format
-        if ( ! preg_match('/^http(s)?:\/\/([\da-z\.-]+)\.([\da-z\.-]+)/i', $value) ) {
+        // validate the url format
+		if ( ! preg_match('/^http(s)?:\/\/(?:localhost|(?:[\da-z\.-]+\.[\da-z\.-]+))/i', $value) ) {
 			$errors[ 'field' . $args['id'] ] = FrmFieldsHelper::get_error_msg( $field, 'invalid' );
-        }
+		}
     }
 
 	public static function validate_email_field( &$errors, $field, $value, $args ) {
@@ -154,14 +154,13 @@ class FrmEntryValidate {
 	}
 
 	public static function validate_phone_field( &$errors, $field, $value, $args ) {
-		if ( $field->type != 'phone' ) {
-			return;
-		}
+		if ( $field->type == 'phone' || ( $field->type == 'text' && FrmField::is_option_true_in_object( $field, 'format' ) ) ) {
 
-		$pattern = self::phone_format( $field );
+			$pattern = self::phone_format( $field );
 
-		if ( ! preg_match( $pattern, $value ) ) {
-			$errors[ 'field' . $args['id'] ] = FrmFieldsHelper::get_error_msg( $field, 'invalid' );
+			if ( ! preg_match( $pattern, $value ) ) {
+				$errors[ 'field' . $args['id'] ] = FrmFieldsHelper::get_error_msg( $field, 'invalid' );
+			}
 		}
 	}
 

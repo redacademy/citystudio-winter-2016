@@ -194,6 +194,7 @@ class FrmProLookupFieldsController{
 
 			// Watch Lookup Fields
 			$lookup_fields = self::get_lookup_fields_for_watch_row( $field );
+			$field['watch_lookup'] = array_filter( $field['watch_lookup'] );
 			require( FrmAppHelper::plugin_path() . '/pro/classes/views/lookup-fields/back-end/watch.php' );
 
 			// Filter options
@@ -205,6 +206,9 @@ class FrmProLookupFieldsController{
 			// Dynamic Default Value
 			require( FrmAppHelper::plugin_path() . '/pro/classes/views/frmpro-fields/back-end/dynamic-default-value.php' );
 		}
+
+		FrmProFieldsController::show_visibility_option( $field );
+		FrmProFieldsController::show_conditional_logic_option( $field );
 	}
 
 	/**
@@ -273,26 +277,9 @@ class FrmProLookupFieldsController{
 	 * @return array $lookup_fields
 	 */
 	private static function get_lookup_fields_for_watch_row( $field ) {
-		$parent_form_id = self::get_current_form_id_on_form_builder( $field );
+		$parent_form_id = isset( $field['parent_form_id'] ) ? $field['parent_form_id'] : $field['form_id'];
 		$lookup_fields = self::get_limited_lookup_fields_in_form( $parent_form_id, $field['form_id'] );
 		return $lookup_fields;
-	}
-
-	/**
-	 * Get the ID of the form being edited on the form builder page
-	 *
-	 * @since 2.01.0
-	 * @param array $field
-	 * @return int $parent_form_id
-	 */
-	private static function get_current_form_id_on_form_builder( $field ) {
-		if ( isset( $_GET['id'] ) ) {
-			$parent_form_id = (int) $_GET['id'];
-		} else {
-			$parent_form_id = $field['form_id'];
-		}
-
-		return $parent_form_id;
 	}
 
 	/**
@@ -879,7 +866,7 @@ class FrmProLookupFieldsController{
 
 		// TODO: Maybe add current user filter here, or maybe add it in final call
 		if ( self::need_to_filter_values_for_current_user( $child_field->field_options ) ) {
-			$args['e.user_id'] = get_current_user_id();
+			$args['user_id'] = get_current_user_id();
 		}
 
 		foreach ( $parent_field_ids as $i => $p_field_id ) {
@@ -1014,12 +1001,12 @@ class FrmProLookupFieldsController{
 			return;
 		}
 
-		if ( $order == 'no_order' ) {
-			// do nothing
-		} else if ( $order == 'ascending' ) {
-			sort( $final_values );
-		} else if ( $order == 'descending' ) {
-			rsort( $final_values );
+		if ( $order == 'ascending' || $order == 'descending' ) {
+			natcasesort( $final_values );
+			if ( $order == 'descending' ) {
+				$final_values = array_reverse( $final_values );
+			}
+			$final_values = array_values( $final_values );
 		}
 	}
 

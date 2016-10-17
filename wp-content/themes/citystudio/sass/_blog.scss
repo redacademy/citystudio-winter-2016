@@ -26,34 +26,28 @@
   flex-direction: column;
   justify-content: center;
   width: 85%;
-  margin-top: 3em;
-  @include tablet {
-    margin-top: 0;
-  }
   @include desktop {
     width: 82%;
   }
   h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
-    @include tablet {
-      font-size: 2.5em;
-    }
   }
   h4 {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: normal;
     text-align: left;
     font-family: $fontfamily;
     color: white;
-    width: 75%;
+    width: 80%;
     @include tablet {
       font-size: 1em;
+      width:75%
     }
     @include desktop {
-      width: 55.5%;
+      width: 45%;
       font-size: 1.15em;
     }
     span {
