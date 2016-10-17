@@ -84,6 +84,7 @@
 .searchpage {
   background-color: lighten($city-blue, 0.7);
   width: 100%;
+  min-height: 700px;
 
   fieldset {
     border: none;

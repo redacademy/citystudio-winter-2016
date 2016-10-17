@@ -1690,7 +1690,8 @@ input[type='email']:focus {
 
 .searchpage {
   background-color: #019bd9;
-  width: 100%; }
+  width: 100%;
+  min-height: 700px; }
   .searchpage fieldset {
     border: none;
     color: transparent;
@@ -2382,6 +2383,10 @@ a {
     .gallery-anchor {
       -ms-flex: 1 0 25%;
           flex: 1 0 25%; } }
+  .gallery-anchor:hover {
+    box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.35);
+    position: relative;
+    bottom: 1px; }
   .gallery-anchor .gallery-image-wrap {
     background-size: cover !important;
     border-top: 5px solid white;
@@ -3186,16 +3191,13 @@ h1.page-titles {
   color: white;
   font-family: "open_sans";
   font-size: 1.5em;
-  box-shadow: none;
-  padding: 3.5% 7%; }
+  box-shadow: none; }
   @media screen and (min-width: 750px) {
     h1.page-titles {
-      font-size: 2.5em;
-      padding: 1% 7%; } }
+      font-size: 2.5em; } }
   @media screen and (min-width: 1024px) {
     h1.page-titles {
-      font-size: 3em;
-      padding: 0 7%; } }
+      font-size: 3em; } }
 
 .project-hero {
   display: none;
@@ -4294,7 +4296,7 @@ article.people {
   width: 200px;
   font-size: 1em; }
   .js-load-more:active, .js-load-more:visited {
-    color: #ffffff; }
+    color: #ffffff !important; }
   .js-load-more:hover {
     background-color: #ffffff;
     color: #0198d5;
