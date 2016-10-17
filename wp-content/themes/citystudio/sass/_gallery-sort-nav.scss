@@ -176,7 +176,7 @@
     right: 7em;
   }
   @include mid-break{
-    right: 13em;
+    right: 15em;
   }
 }
 
@@ -253,9 +253,9 @@
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .5em 1em 0;
+    padding: .5em 1.4em 0;
     color: $city-blue;
-    width: 163px;
+    width: 173px;
    &:hover{
       color: $city-blue;
     }
@@ -376,7 +376,7 @@
     }
   }
   @include desktop{
-    width: 173px;
+    width: 175px;
   }
   .show-labels{
     display: block;
@@ -462,10 +462,10 @@
     -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
+    -o-transition:.6s;
+    -ms-transition:.6s;
+    -moz-transition:.6s;
+    -webkit-transition:.6s;
+    transition:.6s;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }

@@ -82,7 +82,8 @@ jQuery(document).ready(function($) {
       $('.refresh').addClass("rotate");
       $('.refresh-hover').css({"opacity": 1});
   }, function () {
-     $('.refresh-hover').css({"opacity": 0});
+      $('.refresh').removeClass("rotate");
+      $('.refresh-hover').css({"opacity": 0});
   });
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.themes').on('click', function(){
