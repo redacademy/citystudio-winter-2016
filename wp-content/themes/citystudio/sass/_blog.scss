@@ -61,20 +61,20 @@
     }
   }
 }
-//MAIN CONTENT CONTAINER
+//now pulls in code from category-sidebar
 //SIDEBAR
-.blog-sidebar {
-  display: none;
-  @include tablet {
-    display: block;
-    width: 26%;
-    margin-left: 2em;
-  }
-  @include desktop {
-    margin-left: 0;
-    width: 20%;
-  }
-}
+// .blog-sidebar {
+//   display: none;
+//   @include tablet {
+//     display: block;
+//     width: 26%;
+//     margin-left: 2em;
+//   }
+//   @include desktop {
+//     margin-left: 0;
+//     width: 20%;
+//   }
+// }
 .inner-sidebar {
   display: flex;
   flex-direction: column;
@@ -113,7 +113,6 @@
   margin: 1em 0;
   h4 {
     margin-bottom: 15px;
-    padding-left: 1em;
   }
   p {
     margin-bottom: 10px;

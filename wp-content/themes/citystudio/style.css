@@ -565,7 +565,8 @@ button {
 a,
 a:hover,
 a:active,
-a:focus {
+a:focus,
+a:visited {
   outline: none; }
 
 /*--------------------------------------------------------------
@@ -1197,7 +1198,7 @@ button.hamburger {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
   font-weight: 700;
   color: white;
-  padding: 2% 0; }
+  padding: 2% 4%; }
   @media screen and (min-width: 750px) {
     .citystudio-banner {
       min-height: 5em; } }
@@ -1229,7 +1230,7 @@ button.hamburger {
 
 .banner-inner {
   margin: 0 auto;
-  width: 90%; }
+  width: 100%; }
 
 .contact-header {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
@@ -1439,7 +1440,7 @@ input[type='email']:focus {
   -ms-flex-pack: justify;
       justify-content: space-between;
   background: #006493;
-  padding: 2%; }
+  padding: 2% 2% 0 2%; }
 
 .footer-branding-container {
   -ms-flex-preferred-size: 100%;
@@ -2315,7 +2316,7 @@ object {
       -ms-flex-preferred-size: 30%;
           flex-basis: 30%;
       width: 30%;
-      height: 80px;
+      height: 90px;
       margin-bottom: 2em; }
       @media screen and (min-width: 750px) {
         .homepage-partners-container .home-partners .feat-logo-link {
@@ -3978,18 +3979,6 @@ article.people {
     .title-container h4 span {
       font-weight: bold; }
 
-.blog-sidebar {
-  display: none; }
-  @media screen and (min-width: 750px) {
-    .blog-sidebar {
-      display: block;
-      width: 26%;
-      margin-left: 2em; } }
-  @media screen and (min-width: 1024px) {
-    .blog-sidebar {
-      margin-left: 0;
-      width: 20%; } }
-
 .inner-sidebar {
   display: -ms-flexbox;
   display: flex;
@@ -4013,8 +4002,7 @@ article.people {
   text-align: center;
   margin: 1em 0; }
   .sidebar-item h4 {
-    margin-bottom: 15px;
-    padding-left: 1em; }
+    margin-bottom: 15px; }
   .sidebar-item p {
     margin-bottom: 10px;
     color: #0198d5;
@@ -4207,7 +4195,11 @@ article.people {
   @media screen and (min-width: 750px) {
     .category-sidebar {
       display: block;
-      width: 30%; } }
+      width: 30%;
+      background-color: #f7f9f9;
+      margin: 1em 2em 0 0;
+      border-radius: 5px;
+      height: 100%; } }
   @media screen and (min-width: 1024px) {
     .category-sidebar {
       display: -ms-flexbox;
@@ -4251,19 +4243,18 @@ article.people {
 
 .js-page-numbers {
   width: 100%;
-  margin: 4em auto 0;
-  padding: 4%;
+  padding: 6%;
   display: block;
   height: auto;
   text-align: center; }
   .js-page-numbers .page-numbers {
     display: none; }
 
-.js-load-more {
+a.js-load-more {
   border: 1px solid white;
   border-radius: 10px;
   box-sizing: border-box;
-  color: #fffff;
+  color: #ffffff;
   display: inline-block;
   letter-spacing: 2px;
   margin: 0 auto;
@@ -4271,13 +4262,15 @@ article.people {
   text-transform: uppercase;
   transition: background-color 0.5s ease;
   width: 200px; }
-  .js-load-more:active, .js-load-more:visited {
-    color: #ffffff !important; }
-  .js-load-more:hover {
+  a.js-load-more:active, a.js-load-more:visited, a.js-load-more:focus {
+    color: #ffffff !important;
+    outline: none; }
+  a.js-load-more:hover {
     background-color: #ffffff;
     border: 1px solid #ffffff;
     color: #0198d5;
-    padding: 1.2% 0; }
+    padding: 1.2% 0;
+    outline: none; }
 
 .recent-news-block {
   background-color: #f7f9f9;
@@ -4286,7 +4279,8 @@ article.people {
     color: #0198d5;
     text-align: center;
     font-size: 2em;
-    font-weight: bold; }
+    font-weight: bold;
+    line-height: 2em; }
 
 .recent-post-image {
   background-size: cover;
