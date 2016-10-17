@@ -1,6 +1,8 @@
 
 
 .recent-news-block {
+  background-color: $color__background-offwhite;
+  padding: 4% 0;
 
   h2 {
     color: $city-blue;
@@ -35,7 +37,7 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
-    padding: 5% 0 10%;
+    padding: 2% 0;
   }
 
   a {
@@ -102,5 +104,40 @@
     @include desktop {
       font-size: 1em;
     }
+  }
+}
+
+// Return Links
+
+.return-wrapper {
+  margin: 4em 0 2em;
+}
+
+.static-return-button {
+
+  font-size: 1.1em;
+  font-family: $fontfamily;
+  color: $light-blue;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+
+  &:visited, &:focus, &:active {
+    color: $light-blue;
+    text-decoration: none !important;
+  }
+
+  @include tablet {
+    font-size: 1.2em;
+  }
+
+  @include desktop {
+    font-size: 1.3em;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
   }
 }

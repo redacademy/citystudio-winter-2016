@@ -34,8 +34,12 @@ get_header();
 							<hr class="separate">
 
 							<div class="blog-nav">
-								<?php previous_post_link(); ?>
-								<?php next_post_link(); ?>
+								<div class="blog-nav-left">
+									<?php previous_post_link(); ?>
+								</div>
+								<div class="blog-nav-right">
+									<?php next_post_link(); ?>
+								</div>
 							</div>
 						</div>
 					</div>

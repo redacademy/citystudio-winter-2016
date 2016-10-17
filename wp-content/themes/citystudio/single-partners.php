@@ -6,46 +6,13 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-			<!-- "info main top section -->
-      <header class="title-banner partners-banner" style="background-image: url( '<?php the_field('partner_banner_image'); ?> ' ); ">
-				<div class="blue-overlay">
-	        <h1>CityStudio Partner: <span><?php the_field('school_name'); ?></span>
-	        </h1>
-				</div>
-      </header>
 
-      <div class="info-main">
-        <div class="school-mission-container">
-          <h3>School's mission or vision</h3>
+			<?php get_template_part('template-parts/page-schools/school-header'); ?>
 
-					<div class="school-mission">
-            <?php the_field('school_mission'); ?>
-          </div>
-        </div>
-
-				<div class="campus-course-container">
-          <div class="school-logo">
-						<img src="<?php the_field('logo'); ?>" alt="School Logo" />
-          </div>
-
-          <div class="campus-course-div">
-            <h3>Campus Courses</h3>
-            	<ul class="campus-courses">
-								<?php if (have_rows('school_courses'));
-                  while (have_rows('school_courses')) : the_row(); ?>
-										<li>
-											<a href ="<?php the_sub_field('course_link') ?>"><?php the_sub_field('course_name') ?> </a>
-										</li>
-									<?php endwhile; ?>
-
-									<p><?php the_field('no_courses_option'); ?></p>
-            	</ul>
-          </div>
-        </div>
-      </div> <!-- close info-main -->
+      <?php get_template_part('template-parts/page-schools/school-description'); ?>
 
 			<!-- start past projects display -->
-    	<div class="projects-container">
+    	<div class="projects-container full-width">
 				<div class="title-block-container">
 	      	<div class="title-block">
 	        	<h2>Past Projects By: <span><?php the_field('school_abrev'); ?></span></h2>

@@ -6,13 +6,13 @@
   h2 {
     color: white;
     font-family: $fontfamily;
-    font-size: 1.5em;
+    font-size: 2em;
     text-align: center;
     margin: 0.5em 0 0;
     width: 98%;
 
     @include tablet {
-      font-size: 2em;
+      font-size: 2.6em;
     }
 
     @include desktop {
@@ -87,14 +87,20 @@
     text-decoration: none;
   }
 
+  .blog-nav-right {
+    text-align: right;
+  }
+
+  .blog-nav-left {
+    text-align: left;
+  }
+
   a[rel=next] {
     margin-right: 1em;
-    text-align: right;
   }
 
   a[rel=prev] {
     margin-left: 1em;
-    text-align: left;
   }
 }
 
@@ -104,8 +110,4 @@
 
 .hentry {
   margin: 0;
-}
-
-.single-recent-news {
-  background-color: $color__background-lightblue;
 }

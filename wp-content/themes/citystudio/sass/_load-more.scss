@@ -13,42 +13,27 @@
 }
 
 .js-load-more {
-  width: 20%;
-  margin: 0 auto;
   border: 1px solid white;
   border-radius: 10px;
-  color: #fff;
-}
-
-
-.js-load-more {
-  background-color: #ffffff;
-  border: 1px solid $dark-blue;
-  color:$dark-blue;
+  box-sizing: border-box;
+  color: #fffff;
   display: inline-block;
-  padding: 1.2% 3%;
-  text-transform: uppercase;
-
   letter-spacing: 2px;
   margin: 0 auto;
-  border-radius: 10px;
-  box-sizing: border-box;
+  padding: 1.2% 0;
+  text-transform: uppercase;
   transition: background-color 0.5s ease;
+  width: 200px;
+
   &:active,
   &:visited {
-    color: #ffffff;
+    color: #ffffff !important;
   }
+
   &:hover {
-  font-weight: lighter;
-    background-color: transparent;
+    background-color: #ffffff;
     border: 1px solid #ffffff;
-    color: #ffffff;
-    padding: 1.2% 3%;
+    color: $city-blue;
+    padding: 1.2% 0;
   }
-}
-a,
-a:hover,
-a:active,
-a:focus {
-  outline: none;
 }

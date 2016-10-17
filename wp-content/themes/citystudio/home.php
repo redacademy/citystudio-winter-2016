@@ -17,31 +17,8 @@ get_header(); ?>
 				</div>
       </header>
       <div class="blog-content-container">
-        <div class="blog-sidebar">
-					<div class="inner-sidebar">
-	          <div class="sidebar-item">
-							<?php wp_list_categories(); ?>
-	          </div>
-	          <div class="sidebar-item">
-	            <h4>Social Media</h4>
-							<p>
-								<a href="https://www.facebook.com/CityStudioVancouver/">FACEBOOK</a>
-							</p>
-							<p>
-								<a href="https://twitter.com/CityStudioVan?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">TWITTER</a>
-							</p>
-							<p>
-								<a href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a>
-							</p>
-	          </div>
-	          <div class="sidebar-item">
-	            <h4>Newsboard</h4>
-							<p>
-								Check back soon :)...
-							</p>
-	          </div>
-					</div>
-        </div>
+
+				<?php get_template_part('template-parts/component-sidebar') ?>
 
         <div class="blog-archive-feed">
 					<?php
@@ -63,7 +40,7 @@ get_header(); ?>
 
 						<?php $blogfeatureimage = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
 							<a href= '<?php echo get_permalink( $post->ID ); ?>'>
-							<li class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
+							<div class="blog-featured-image" style="background: url('<?php echo $blogfeatureimage['0'];?>') no-repeat center;
 																										 background-size: cover;">
 								<div class="blog-credits">
 									<div class="date"><?php echo get_the_date('F j, Y'); ?></div>
@@ -75,7 +52,7 @@ get_header(); ?>
 										<?php the_category(', '); ?>
 									</div>
 								</div>
-							</li>
+							</div>
 							</a>
 					      <?php endwhile; ?>
 

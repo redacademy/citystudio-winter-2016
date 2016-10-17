@@ -277,35 +277,16 @@ article.people {
     font-family: $fontfamily;
   }
 }
-.static-return-button a {
-  font-size: 1.1em;
-  font-family: $fontfamily;
-  color: $light-blue;
-  text-decoration: underline;
-  text-transform: uppercase;
-  padding: 0;
-  border: none;
-  outline: none;
-  @include tablet {
-    padding: 1em;
-    font-size: 1.2em;
-  }
-  @include desktop {
-    padding: 1em;
-    font-size: 1.3em;
-  }
-  a:hover {
-    cursor: pointer;
-    filter:opacity(0.8);
-  }
-}
+
 .ppl-return {
   position: absolute;
   bottom: -46px;
   margin-left: 1em;
+
   @include tablet {
     margin-left: 2em;
   }
+
   @include desktop {
     margin-left: 3em;
   }

@@ -11,14 +11,12 @@ h1.page-titles {
     font-family: $fontfamily;
     font-size: 1.5em;
     box-shadow: none;
-    padding: 3.5% 7%;
+
     @include tablet {
       font-size: 2.5em;
-    padding: 1% 7%;
     }
     @include desktop{
       font-size: 3em;
-  padding: 0 7%;
     }
 }
 //HEROBANNER
@@ -27,26 +25,24 @@ h1.page-titles {
  display: none;
   max-height: 500px;
   height: 45vh;
-@include desktop {
-  display: block;
-  height: 75vh;
+
+  @include desktop {
+    display: block;
+    height: 75vh;
   }
 }
+
 //SHORT DESCRIPTION
-.excerpt {
-  margin: 2rem 1rem;
+.project-excerpt {
+  margin: 2em auto;
   font-family: $fontfamily;
   text-align: center;
   width: 85%;
   font-size: 1.2em;
   line-height: 1.4em;
-  @include tablet {
-    width: 75%;
-  }
+
   @include desktop {
-    margin: 3.5rem 2rem;
     text-align: center;
-    width: 65%;
     font-size: 1.5em;
     line-height: 1.8em;
   }
@@ -54,12 +50,13 @@ h1.page-titles {
 //PROJECT CREDIT COLUMNS
 
 .column-wrap {
-display: flex;
-flex-direction: column;
-background-color: $color__background-lightblue;
-padding: .5em;
-border-radius: 10px;
-width: 75%;
+  display: flex;
+  flex-direction: column;
+  background-color: $color__background-offwhite;
+  padding: .5em;
+  border-radius: 10px;
+  width: 100%;
+
   @include desktop {
     justify-content: space-around;
     flex-direction: row;
@@ -80,16 +77,11 @@ width: 75%;
   }
 }
 .col-one {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
 }
 .col-two {
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
+
   h3 {
     font-family: $fontfamily;
   }
@@ -97,9 +89,6 @@ width: 75%;
 
 @include desktop {
   .col-two {
-    -webkit-box-ordinal-group: 3;
-    -webkit-order: 2;
-    -ms-flex-order: 2;
     order: 2;
   }
 }
@@ -111,38 +100,44 @@ width: 75%;
   font-weight: normal;
   font-family: $fontfamily;
   width: 100%;
+
   @include desktop {
     padding-left: 0;
   }
+
   .media-links {
-  margin-bottom: .5em;
-  &:hover {
-    color: $city-blue;
-    text-decoration: underline;
+    margin-bottom: .5em;
+
+    &:hover {
+      color: $city-blue;
+      text-decoration: underline;
     }
   }
 }
 
 //FULL WIDTH COLUMN: DESCRIPTION/SCALABILITY/STEWARDSHIP
-.full-width-col {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 2em auto;
-  width: 75%;
-  font-family: $fontfamily;
+.section-credits {
 
-  @include desktop {
-    // margin: 1em 10em;
-  }
-  .scalability-wrap {
-    margin-bottom: 1.5rem;
-    flex-basis: 100%;
-    width: 100%;
-  }
-  h3 {
-    padding-bottom: .5rem;
+  .inner-column-wide {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2em auto;
+    font-family: $fontfamily;
+
+    @include desktop {
+      // margin: 1em 10em;
+    }
+    .scalability-wrap {
+      margin-bottom: 1.5rem;
+      flex-basis: 100%;
+      width: 100%;
+    }
+    h3 {
+      padding-bottom: .5rem;
+    }
   }
 }
+
 // IMAGE BAR
 .image-bar {
   width: 100%;
@@ -174,7 +169,7 @@ width: 75%;
   }
 }
   .tag-links {
-    background-color:  darken($color__background-lightblue, 2);
+    background-color:  darken($color__background-offwhite, 2);
     padding: 1.5rem 1.5rem;
     color: #000;
     display: flex;
@@ -183,7 +178,7 @@ width: 75%;
     border-radius: .3em;
     height: 1.3em;
     &:hover {
-      background-color: darken($color__background-lightblue, 6);
+      background-color: darken($color__background-offwhite, 6);
       color: $dark-blue;
     }
     a{
@@ -203,32 +198,24 @@ width: 75%;
   }
 
 .tag-list{
-    li{
-      padding: .7rem 1rem;
-      color: #000;
-      border-radius: 5px;
-      margin-right: .5rem;
-      display: inline-flex;
-      margin-bottom: .4em;
-      background-color:  darken($color__background-lightblue, 2);
-    }
-  a{
+  li {
+    padding: .7rem 1rem;
+    color: #000;
+    border-radius: 5px;
+    margin-right: .5rem;
+    display: inline-flex;
+    margin-bottom: .4em;
+    background-color:  darken($color__background-offwhite, 2);
+  }
+  a {
     text-transform: capitalize;
     text-decoration: none;
   }
 }
 
-.tag-li{
-  a{
-    width: 100%;
-  }
-}
+.tag-li {
 
-// Back to Project Button
-
-.static-return-button {
   a {
-    margin: 0;
-    padding: 0;
+    width: 100%;
   }
 }
