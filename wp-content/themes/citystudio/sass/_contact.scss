@@ -2,9 +2,10 @@
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   opacity: 0.9;
   background-size: cover;
-  height: 6.6em;
+  max-height: 6.6em;
   width: 100%;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  padding: 2% 4%;
   @include tablet {
     height: 3em;
   }
@@ -85,7 +86,7 @@ iframe {
   margin: 0 auto 2.5em;
   @include tablet {
     width: 40%;
-  margin: 2em auto;
+    margin: 2em auto;
   }
   h3,
   p {
@@ -93,7 +94,7 @@ iframe {
     font-family: $fontfamily;
     font-size: 1em;
     @include desktop {
-        font-size: 1.25em;
+      font-size: 1.25em;
     }
   }
   p {
@@ -124,14 +125,13 @@ iframe {
   @include tablet {
     width: 50%;
     min-width: 40%;
-    margin:  2em 0 0 1em;
+    margin: 2em 0 0 1em;
   }
   @include desktop {
     width: 40%;
     margin: 2em 0 0 2em;
   }
 }
-
 .frm_primary_label {
   padding: 0 0 25px 2px !important;
 }
@@ -146,13 +146,35 @@ iframe {
   label {
     color: #ffffff !important;
     padding-bottom: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 80%;
+    font-family: $fontfamily;
+    font-weight: lighter;
   }
 }
-#frm_field_68_container,
+#frm_field_64_container,
+#frm_field_65_container,
+#frm_field_66_container,
 #frm_field_67_container {
   box-shadow: none !important;
+  margin: 1em 0;
+  label {
+    display: none;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 2%;
+  }
+}
+,
+#frm_field_68_container {
+  box-shadow: none !important;
+}
+#field_nmmsb-otext {
+  display: none;
 }
 #field_g5aab {
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
@@ -180,6 +202,8 @@ input[type='email']:focus {
   }
   input[type=submit] {
     background-color: transparent !important;
+    border-radius: 5px;
+    padding: 2%;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     width: 150px !important;
@@ -191,4 +215,10 @@ input[type='email']:focus {
       background-color: lighten($city-blue, .5) !important;
     }
   }
+  img {
+    display: none;
+  }
+}
+.frm_form_fields fieldset {
+  border: none !important;
 }
