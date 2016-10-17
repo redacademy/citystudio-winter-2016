@@ -23,17 +23,17 @@ jQuery(document).ready(function($){
 
       if (scroll >= bottomOffset) {
         sticky.addClass("fixed");
-        sticky.animate({"opacity": 1}, 0);
-        sticky.css('height', '5em');
+        sticky.show();
       }
 
       if(scroll >= topOffset) {
         sticky.removeClass("fixed");
-        sticky.animate({"opacity": 0}, 0);
+        sticky.hide();
       }
 
       else if (scroll <= (bottomOffset) )  {
         sticky.removeClass("fixed");
+
       }
 
     }
