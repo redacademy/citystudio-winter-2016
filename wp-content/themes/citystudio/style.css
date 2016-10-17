@@ -3238,14 +3238,9 @@ a {
   .no-projects h2 {
     font-size: 24px; }
 
-.rotate1 {
-  transform: rotate(360deg);
-  transition: .6s;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
-
-.rotate2 {
-  transform: rotate(-360deg);
-  transition: .6s;
+.rotate {
+  transform: rotate(180deg);
+  transition: .2s;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
 
 /*--------------------------------------------------------------
