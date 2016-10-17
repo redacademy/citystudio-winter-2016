@@ -19,7 +19,7 @@ jQuery(document).ready(function($){
         explore = $('.explore-section'),
         scroll = $(window).scrollTop(),
         bottomOffset = grid.offset().top,
-        topOffset = explore.offset().top - 100;
+        topOffset = explore.offset().top;
 
       if (scroll >= bottomOffset) {
         sticky.addClass("fixed");
