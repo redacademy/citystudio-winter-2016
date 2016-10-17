@@ -143,12 +143,12 @@ jQuery(document).ready(function($) {
   // function that queries the database for the values captured in the inputs
   // re-creates the grid based on returned data
   function reloadProjects() {
-    console.log("url", api_vars.rest_url+'wp/v2/project?'+filters());
+    // console.log("url", api_vars.rest_url+'wp/v2/project?'+filters());
       $.ajax({
           type: 'GET',
           dataType: 'json',
           // url: api_vars.rest_url+'/wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
-          url: 'https://localhost:3000/citystudio-winter/wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          url: 'http://localhost:3000/citystudio-winter-2016/wp-json/wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             console.log("response", response);
