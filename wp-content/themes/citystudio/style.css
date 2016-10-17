@@ -3052,11 +3052,18 @@ a {
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .5em 1.4em 0;
+    padding: .5em 1em 0;
     color: #0198d5;
-    width: 173px; }
+    width: 163px; }
     .toggle-menu-item p:hover {
       color: #0198d5; }
+    @media screen and (min-width: 1024px) {
+      .toggle-menu-item p {
+        width: 173px;
+        padding: .5em 1.4em 0; } }
+  @media screen and (min-width: 750px) {
+    .toggle-menu-item {
+      width: 165px; } }
   @media screen and (min-width: 1024px) {
     .toggle-menu-item {
       width: 175px; } }

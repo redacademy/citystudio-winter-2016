@@ -253,12 +253,19 @@
     font-weight: 600;
     font-size: 14px;
     border-radius: 5px 5px 0 0;
-    padding: .5em 1.4em 0;
+    padding: .5em 1em 0;
     color: $city-blue;
-    width: 173px;
+    width: 163px;
    &:hover{
       color: $city-blue;
     }
+    @include desktop{
+        width: 173px;
+        padding: .5em 1.4em 0;
+    }
+  }
+  @include tablet{
+    width: 165px;
   }
   @include desktop{
     width: 175px;
@@ -375,6 +382,7 @@
       position: absolute;
     }
   }
+
   @include desktop{
     width: 175px;
   }
