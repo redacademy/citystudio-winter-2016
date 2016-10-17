@@ -1137,9 +1137,11 @@ button.hamburger {
   margin: 2em auto 0;
   width: 90%; }
 
+/*
+took out to fix tag
 #main {
-  min-height: 700px; }
-
+  min-height: 700px;
+}*/
 /* Posts and pages */
 .sticky {
   display: block; }
@@ -2899,7 +2901,7 @@ a {
   background-color: #0082b9;
   border-radius: 45px;
   width: 90px;
-  background-size: 40px 40px; }
+  background-size: 45px 45px; }
   .refresh:hover {
     background-color: #2cb5e8; }
 
@@ -3102,7 +3104,7 @@ a {
   .year-labels label {
     font-size: .7rem;
     text-transform: capitalize;
-    margin-right: -15px; }
+    margin-right: -20px; }
     .theme-labels label::after,
     .part-labels label::after,
     .year-labels label::after {
@@ -3117,7 +3119,7 @@ a {
     .theme-labels,
     .part-labels,
     .year-labels {
-      width: 175px; } }
+      width: 173px; } }
   .theme-labels .show-labels,
   .part-labels .show-labels,
   .year-labels .show-labels {
