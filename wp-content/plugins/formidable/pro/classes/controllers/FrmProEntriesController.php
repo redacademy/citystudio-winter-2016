@@ -68,6 +68,7 @@ class FrmProEntriesController{
 				$keep_scripts = array(
 					'recaptcha-api', 'jquery-frm-rating', 'jquery-chosen',
 					'google_jsapi', 'dropzone',
+					'jquery-maskedinput',
 					'flashcanvas', 'jquery-signaturepad', 'frm-signature', // Remove these after add-on update
 				);
 				$keep_styles = array( 'dashicons', 'jquery-theme' );
@@ -712,7 +713,8 @@ class FrmProEntriesController{
 		$args['errors'] = self::get_posted_form_errors( $frm_vars, $args['form'] );
 		$field_args = array(
 			'parent_form_id' => $args['form']->id,
-			'fields' => $args['fields']
+			'fields' => $args['fields'],
+			'save_draft_click' => FrmProFormsHelper::saving_draft(),
 		);
 		$args['values'] = self::setup_entry_values_for_editing( $entry, $field_args );
 		$args['submit_text'] = self::get_submit_button_text_for_editing_entry( $entry, $args['values'], $args['form'] );
@@ -748,7 +750,8 @@ class FrmProEntriesController{
 		$entry = FrmEntry::getOne( $entry_id );
 		$field_args = array(
 			'parent_form_id' => $args['form']->id,
-			'fields' => $args['fields']
+			'fields' => $args['fields'],
+			'save_draft_click' => true,
 		);
 		$args['values'] = self::setup_entry_values_for_editing( $entry, $field_args );
 		$args['submit_text'] = self::get_submit_button_text_for_editing_entry( $entry, $args['values'], $args['form'] );
@@ -877,7 +880,7 @@ class FrmProEntriesController{
 	 *
 	 * @param object $entry
 	 * @param array $args (always contains 'parent_form_id' and 'fields'; if repeating, will contain 'parent_field_id',
-	 *     'key_pointer' and 'repeating')
+	 *     'key_pointer' and 'repeating'; if embedded, will contain in_embed_form)
 	 * @return array $values
 	 */
 	public static function setup_entry_values_for_editing( $entry, $args ) {
@@ -1390,101 +1393,67 @@ class FrmProEntriesController{
 		$defaults = array( 'html' => 0, 'type' => $field->type, 'keepjs' => 0 );
 		$atts = array_merge( $defaults, $atts );
 
-        switch ( $atts['type'] ) {
-            case 'user_id':
-                $value = FrmProFieldsHelper::get_display_name($value);
-            break;
-            case 'date':
-                $value = FrmProFieldsHelper::get_date($value);
-            break;
-            case 'file':
-                $old_value = $value;
-                if ( $atts['html'] ) {
-                    $value = '<div class="frm_file_container">';
-                } else {
-                    $value = '';
+		if ( $atts['type'] == 'image' ) {
+			$atts['html'] = true;
+		} elseif ( isset( $atts['show'] ) && empty( $atts['show'] ) ) {
+			unset( $atts['show'] );
+		}
+
+		if ( $atts['type'] == 'file' && $atts['html'] && $atts['sep'] == ', ' ) {
+			$atts['sep'] = '';
+			$atts['show_image'] = true;
+			if ( ! isset( $atts['add_link'] ) ) {
+				$atts['add_link'] = true;
+			}
+		}
+
+        if ( $atts['type'] == 'data' ) {
+
+            if ( ! is_numeric($value) ) {
+                if ( ! is_array($value) ) {
+                    $value = explode($atts['sep'], $value);
                 }
 
-                foreach ( (array) $old_value as $mid ) {
-                    if ( $atts['html'] ){
-                        $img = FrmProFieldsHelper::get_file_icon($mid);
-                        $value .= $img;
-						if ( $atts['show_filename'] && $img && preg_match( '/wp-includes\/images\/(crystal|media)/', $img ) ) {
-                            //prevent two filenames
-                            $atts['show_filename'] = $show_filename = false;
+                if ( is_array($value) ) {
+                    $new_value = '';
+                    foreach ( $value as $entry_id ) {
+                        if ( ! empty( $new_value ) ) {
+                            $new_value .= $atts['sep'];
                         }
 
-                        unset($img);
-
-                        if ( $atts['html'] && $atts['show_filename'] ) {
-                            $value .= '<br/>' . FrmProFieldsHelper::get_file_name($mid) . '<br/>';
-                        }
-
-                        if ( isset( $show_filename ) ) {
-                            //if skipped filename, show it for the next file
-                            $atts['show_filename'] = true;
-                            unset($show_filename);
-                        }
-                    } else if ( $mid ) {
-                        $value .= FrmProFieldsHelper::get_file_name($mid) . $atts['sep'];
-                    }
-                }
-
-                $value = rtrim($value, $atts['sep']);
-                if ( $atts['html'] ) {
-                    $value .= '</div>';
-                }
-            break;
-
-            case 'data':
-                if ( ! is_numeric($value) ) {
-                    if ( ! is_array($value) ) {
-                        $value = explode($atts['sep'], $value);
-                    }
-
-                    if ( is_array($value) ) {
-                        $new_value = '';
-                        foreach ( $value as $entry_id ) {
-                            if ( ! empty( $new_value ) ) {
-                                $new_value .= $atts['sep'];
-                            }
-
-                            if ( is_numeric($entry_id) ) {
-                                $new_value .= FrmProFieldsHelper::get_data_value($entry_id, $field, $atts);
-                            } else {
-                                $new_value .= $entry_id;
-                            }
-                        }
-                        $value = $new_value;
-                    }
-                } else {
-                    //replace item id with specified field
-                    $new_value = FrmProFieldsHelper::get_data_value($value, $field, $atts);
-
-					if ( FrmProField::is_list_field( $field ) ) {
-                        $linked_field = FrmField::getOne($field->field_options['form_select']);
-                        if ( $linked_field && $linked_field->type == 'file' ) {
-                            $old_value = explode(', ', $new_value);
-                            $new_value = '';
-                            foreach ( $old_value as $v ) {
-								$new_value .= '<img src="' . esc_url( $v ) . '" class="frm_image_from_url" alt="" />';
-                                if ( $atts['show_filename'] ) {
-                                    $new_value .= '<br/>'. $v;
-                                }
-                                unset($v);
-                            }
+                        if ( is_numeric($entry_id) ) {
+                            $new_value .= FrmProFieldsHelper::get_data_value($entry_id, $field, $atts);
                         } else {
-                            $new_value = $value;
+                            $new_value .= $entry_id;
                         }
                     }
-
                     $value = $new_value;
                 }
-            break;
+			} else {
+                //replace item id with specified field
+                $new_value = FrmProFieldsHelper::get_data_value($value, $field, $atts);
 
-            case 'image':
-				$value = FrmProFieldsHelper::get_image_display_value( $value, array( 'html' => true ) );
-            break;
+				if ( FrmProField::is_list_field( $field ) ) {
+                    $linked_field = FrmField::getOne($field->field_options['form_select']);
+                    if ( $linked_field && $linked_field->type == 'file' ) {
+                        $old_value = explode(', ', $new_value);
+                        $new_value = '';
+                        foreach ( $old_value as $v ) {
+							$new_value .= '<img src="' . esc_url( $v ) . '" class="frm_image_from_url" alt="" />';
+                            if ( $atts['show_filename'] ) {
+                                $new_value .= '<br/>'. $v;
+                            }
+                            unset($v);
+                        }
+                    } else {
+                        $new_value = $value;
+                    }
+                }
+
+                $value = $new_value;
+            }
+        } else {
+			$value = FrmProFieldsHelper::get_display_value( $value, $field, $atts );
         }
 
         if ( ! $atts['keepjs'] ) {
@@ -2360,7 +2329,7 @@ class FrmProEntriesController{
 		$link .= '<span class="frm_edit_link_container">';
 		$link .= '<a href="#" class="frm_inplace_edit frm_edit_link ' . esc_attr( $atts['class'] ) . '" id="' . esc_attr( $atts['html_id'] ) . '" title="' . esc_attr( $atts['title'] ) . '"';
 		foreach ( $data as $name => $label ) {
-			$link .= ' data-' . sanitize_title( $name ) . '="' . esc_attr( $label ) .'"';
+            $link .= ' data-' . str_replace( '_', '', sanitize_title( $name ) ) . '="' . esc_attr( $label ) .'"';
 		}
 		$link .= '>' . wp_kses_post( $atts['label'] ) . "</a>\n";
 		$link .= '</span>';
@@ -2533,7 +2502,14 @@ class FrmProEntriesController{
 			$atts['html'] = 1;
 		}
 
-		if ( ! empty( $atts['format'] ) || ( isset($atts['show']) && ! empty($atts['show']) ) ) {
+		$tested_field_types = array( 'time' );
+
+		if ( in_array( $field->type, $tested_field_types ) || ! empty( $atts['format'] ) || ( isset($atts['show']) && ! empty($atts['show']) ) ) {
+
+			if ( empty( $atts['format'] ) ) {
+				unset( $atts['format'] );
+			}
+			
 			$value = FrmFieldsHelper::get_display_value($value, $field, $atts);
 		} else {
 			$value = FrmEntriesHelper::display_value( $value, $field, $atts);
@@ -2713,9 +2689,9 @@ class FrmProEntriesController{
             }
 			$response['errors'] = $obj;
 
-			$frm_settings = FrmAppHelper::get_settings();
+			$invalid_msg = FrmFormsHelper::get_invalid_error_message( array( 'form' => $form ) );
 			$response['error_message'] = FrmFormsHelper::get_success_message( array(
-				'message' => $frm_settings->invalid_msg, 'form' => $form,
+				'message' => $invalid_msg, 'form' => $form,
 				'entry_id' => 0, 'class' => 'frm_error_style',
 			) );
         }

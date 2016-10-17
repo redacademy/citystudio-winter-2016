@@ -290,6 +290,15 @@ form label.frm_primary_label input{font-size:12px;}
 	margin-top:10px;
 }
 
+.upgrade_to_pro{
+    background: #fff;
+    padding: 10px 25px 25px;
+}
+
+.upgrade_to_pro .error{
+	display:none;
+}
+
 .update-nag.frm-update-to-pro{
 	display:block;
 	text-align:center;
@@ -323,10 +332,8 @@ form label.frm_primary_label input{font-size:12px;}
 	border:1px solid #BB3E01;
 }
 
-.frm_pro_heading{
-	position:absolute;
-	left:285px;
-	line-height: 2.3em !important;
+.frm_pro_heading span{
+	margin-top:20px;
 }
 
 .upgrade_to_pro .frm_check_icon{
@@ -671,8 +678,19 @@ label input[type="checkbox"], label input[type="radio"] {vertical-align:inherit;
 }
 #postbox-container-1 #taxonomy-linkcategory #frm-html-tags{display:none;max-height:none;padding-right:0;}
 #postbox-container-1 .frm_field_list #frm-insert-fields .button{
-	text-align:center;width:46%;float:left;padding-left:0;padding-right:0;font-size:11px !important; margin-bottom:6px;
-	border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;
+	text-align:center;
+	width:46%;
+	float:left;
+	padding-left:0;
+	padding-right:0;
+	font-size:11px !important;
+	margin-bottom:6px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+}
+#postbox-container-1 .frm_field_list #frm-insert-fields .frmbutton.dropdown{
+	position:relative;
 }
 .frm_field_list #frm-insert-fields .button a{
 	display:block;
@@ -1502,6 +1520,7 @@ span.howto{display:inline;}
 /* Star Rating */
 .frm_form_fields div.rating-cancel, .frm_form_fields div.star-rating{
 	float:left;width:17px;height:17px;cursor:pointer;display:block;background:transparent;overflow:hidden;
+	clear:none;
 }
 .frm_form_fields div.rating-cancel{display:none !important;}
 .frm_form_fields div.rating-cancel a:before{font:16px/1 'dashicons';content:'\f460';color:#CDCDCD;}

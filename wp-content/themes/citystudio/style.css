@@ -765,7 +765,8 @@ a {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: justify;
-      justify-content: space-between; }
+      justify-content: space-between;
+  max-width: 100vw; }
   @media screen and (min-width: 750px) {
     .header-container {
       position: relative; } }
@@ -1203,7 +1204,7 @@ took out to fix tag
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
   font-weight: 700;
   color: white;
-  padding: 2% 4%; }
+  padding: 0% 4%; }
   @media screen and (min-width: 750px) {
     .citystudio-banner {
       min-height: 5em; } }
@@ -1241,9 +1242,10 @@ took out to fix tag
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   opacity: 0.9;
   background-size: cover;
-  height: 6.6em;
+  max-height: 6.6em;
   width: 100%;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+  padding: 2% 4%; }
   @media screen and (min-width: 750px) {
     .contact-header {
       height: 3em; } }
@@ -1387,12 +1389,41 @@ iframe {
   .frm_form_field label {
     color: #ffffff !important;
     padding-bottom: 10px;
-    font-size: 0.9em;
-    width: 80%; }
+    font-size: 1em;
+    width: 80%;
+    font-family: "open_sans";
+    font-weight: lighter; }
 
-#frm_field_68_container,
+#frm_field_64_container,
+#frm_field_65_container,
+#frm_field_66_container,
 #frm_field_67_container {
+  box-shadow: none !important;
+  margin: 1em 0; }
+  #frm_field_64_container label,
+  #frm_field_65_container label,
+  #frm_field_66_container label,
+  #frm_field_67_container label {
+    display: none; }
+  #frm_field_64_container input,
+  #frm_field_64_container textarea,
+  #frm_field_65_container input,
+  #frm_field_65_container textarea,
+  #frm_field_66_container input,
+  #frm_field_66_container textarea,
+  #frm_field_67_container input,
+  #frm_field_67_container textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 2%; }
+
+
+#frm_field_68_container {
   box-shadow: none !important; }
+
+#field_nmmsb-otext {
+  display: none; }
 
 #field_g5aab {
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2); }
@@ -1424,6 +1455,8 @@ input[type='email']:focus {
           justify-content: flex-start; } }
   .frm_submit input[type=submit] {
     background-color: transparent !important;
+    border-radius: 5px;
+    padding: 2%;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     width: 150px !important;
@@ -1433,6 +1466,11 @@ input[type='email']:focus {
     transition: background-color 0.5s ease; }
     .frm_submit input[type=submit]:hover {
       background-color: #019ad8 !important; }
+  .frm_submit img {
+    display: none; }
+
+.frm_form_fields fieldset {
+  border: none !important; }
 
 .site-footer {
   -ms-flex-wrap: wrap;
@@ -1984,13 +2022,12 @@ object {
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box;
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     font-size: 1.5rem;
-    width: 80vw;
-    padding: 0 0.5em;
-    height: 2.5rem;
+    width: 88vw;
+    padding: 0 .5em;
+    min-height: 2.5rem;
     text-transform: capitalize;
-    margin: 2em 0 0; }
+    margin: .5em 0; }
     @media screen and (min-width: 750px) {
       .tag-archives .archive-header {
         width: 90vw;
@@ -2172,13 +2209,15 @@ object {
     color: #0198d5;
     font-weight: bold; }
 
-.home-recent-news .homepage-titles {
-  font-family: "open_sans";
-  font-size: 2.2em;
-  margin: 0.5em auto;
-  letter-spacing: 0.1rem;
-  color: #2D2D2D;
-  font-weight: bold; }
+.home-recent-news {
+  display: block; }
+  .home-recent-news .homepage-titles {
+    font-family: "open_sans";
+    font-size: 2.2em;
+    margin: 0.5em auto;
+    letter-spacing: 0.1rem;
+    color: #2D2D2D;
+    font-weight: bold; }
 
 .homepage-description {
   display: none; }
@@ -2449,7 +2488,7 @@ a {
       align-items: center; }
   @media screen and (min-width: 750px) {
     .partners-banner {
-      height: 300px;
+      height: 15em;
       margin: 0; } }
   .partners-banner h1 {
     font-size: 1.3rem;
@@ -3232,7 +3271,7 @@ h1.page-titles {
       height: 75vh; } }
 
 .project-excerpt {
-  margin: 2em auto;
+  margin: 1em auto;
   font-family: "open_sans";
   text-align: center;
   width: 85%;
@@ -3981,35 +4020,29 @@ article.people {
       flex-direction: column;
   -ms-flex-pack: center;
       justify-content: center;
-  width: 85%;
-  margin-top: 3em; }
-  @media screen and (min-width: 750px) {
-    .title-container {
-      margin-top: 0; } }
+  width: 85%; }
   @media screen and (min-width: 1024px) {
     .title-container {
       width: 82%; } }
   .title-container h1 {
-    font-size: 2em;
+    font-size: 2.5em;
     text-align: left !important;
     font-family: "open_sans";
     color: white; }
-    @media screen and (min-width: 750px) {
-      .title-container h1 {
-        font-size: 2.5em; } }
   .title-container h4 {
-    font-size: 0.9em;
+    font-size: 1em;
     font-weight: normal;
     text-align: left;
     font-family: "open_sans";
     color: white;
-    width: 75%; }
+    width: 80%; }
     @media screen and (min-width: 750px) {
       .title-container h4 {
-        font-size: 1em; } }
+        font-size: 1em;
+        width: 75%; } }
     @media screen and (min-width: 1024px) {
       .title-container h4 {
-        width: 55.5%;
+        width: 45%;
         font-size: 1.15em; } }
     .title-container h4 span {
       font-weight: bold; }

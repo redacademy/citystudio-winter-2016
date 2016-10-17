@@ -612,7 +612,8 @@ class FrmFormsController {
 
         unset($end_section_values, $last_order, $open, $reset_fields);
 
-        $values = FrmAppHelper::setup_edit_vars($form, 'forms', $fields, true);
+		$args = array( 'parent_form_id' => $form->id );
+        $values = FrmAppHelper::setup_edit_vars( $form, 'forms', $fields, true, array(), $args );
 
         $edit_message = __( 'Form was Successfully Updated', 'formidable' );
         if ( $form->is_template && $message == $edit_message ) {
@@ -1154,7 +1155,7 @@ class FrmFormsController {
         }
 
         $values = FrmEntriesHelper::setup_new_vars($fields, $form, true);
-        $created = ( isset( $frm_vars['created_entries'] ) && isset( $frm_vars['created_entries'][ $form->id ] ) ) ? $frm_vars['created_entries'][ $form->id ]['entry_id'] : 0;
+        $created = self::just_created_entry( $form->id );
         $conf_method = apply_filters('frm_success_filter', 'message', $form, $form->options, 'create');
 
         if ( $created && is_numeric($created) && $conf_method != 'message' ) {
@@ -1189,6 +1190,14 @@ class FrmFormsController {
 
 		do_action( 'frm_after_entry_processed', array( 'entry_id' => $created, 'form' => $form ) );
     }
+
+	/**
+	 * @since 2.2.7
+	 */
+	public static function just_created_entry( $form_id ) {
+		global $frm_vars;
+		return ( isset( $frm_vars['created_entries'] ) && isset( $frm_vars['created_entries'][ $form_id ] ) && isset( $frm_vars['created_entries'][ $form_id ]['entry_id'] ) ) ? $frm_vars['created_entries'][ $form_id ]['entry_id'] : 0;
+	}
 
 	public static function front_head() {
 		$version = FrmAppHelper::plugin_version();
