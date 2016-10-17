@@ -141,7 +141,7 @@
   background-color: #0082b9;
   border-radius: 45px;
   width: 90px;
-  background-size: 40px 40px;
+  background-size: 45px 45px;
   &:hover{
     background-color: $light-blue;
   }
@@ -365,7 +365,7 @@
     label {
       font-size: .7rem;
       text-transform: capitalize;
-      margin-right: -15px;
+      margin-right: -20px;
     &::after {
       content: '';
       width: 0;
@@ -376,7 +376,7 @@
     }
   }
   @include desktop{
-    width: 175px;
+    width: 173px;
   }
   .show-labels{
     display: block;
