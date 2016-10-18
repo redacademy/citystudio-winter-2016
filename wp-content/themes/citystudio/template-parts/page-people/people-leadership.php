@@ -16,7 +16,7 @@ $citystudio_leadership = new WP_Query( $args ); ?>
 <?php /* Start the Loop */ ?>
 <div class="citystudio-teams">
 
-  <div class="citystudio-team team-container">
+  <div class="citystudio-teams team-container">
     <h2 class="section-titles">Leadership Council</h2>
 
     <ul class="people-list">
