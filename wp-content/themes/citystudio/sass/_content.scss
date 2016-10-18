@@ -19,10 +19,6 @@
   @include tablet {
     width: 780px;
   }
-
-  @include desktop {
-
-  }
 }
 
 .inner-column-wide {
@@ -42,9 +38,11 @@
   width: 90%;
 }
 
+/*
+took out for tags page
 #main {
   min-height: 700px;
-}
+}*/
 
 /* Posts and pages */
 

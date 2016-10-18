@@ -176,7 +176,7 @@
     right: 7em;
   }
   @include mid-break{
-    right: 13em;
+    right: 15em;
   }
 }
 
@@ -259,6 +259,13 @@
    &:hover{
       color: $city-blue;
     }
+    @include desktop{
+        width: 173px;
+        padding: .5em 1.4em 0;
+    }
+  }
+  @include tablet{
+    width: 165px;
   }
   @include desktop{
     width: 175px;
@@ -375,8 +382,9 @@
       position: absolute;
     }
   }
+
   @include desktop{
-    width: 173px;
+    width: 175px;
   }
   .show-labels{
     display: block;
@@ -441,7 +449,6 @@
     display: block;
   }
 }
-
 .no-projects{
   background-color: $dark-blue;
   text-align: center;
@@ -457,15 +464,15 @@
   }
 }
 .rotate {
-    -webkit-transform: rotate(360deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-    -o-transition:.5s;
-    -ms-transition:.5s;
-    -moz-transition:.5s;
-    -webkit-transition:.5s;
-    transition:.5s;
+    -webkit-transform: rotate(180deg) translate3d(0, 0, 0);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -o-transition:.2s;
+    -ms-transition:.2s;
+    -moz-transition:.2s;
+    -webkit-transition:.2s;
+    transition:.2s;
     filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 }

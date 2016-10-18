@@ -1138,9 +1138,11 @@ button.hamburger {
   margin: 2em auto 0;
   width: 90%; }
 
+/*
+took out for tags page
 #main {
-  min-height: 700px; }
-
+  min-height: 700px;
+}*/
 /* Posts and pages */
 .sticky {
   display: block; }
@@ -2451,6 +2453,9 @@ a {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
+  .description:hover {
+    opacity: 0;
+    transition: all 0.45s ease; }
 
 .description-title {
   font-size: 1.25rem;
@@ -2938,7 +2943,7 @@ a {
   background-color: #0082b9;
   border-radius: 45px;
   width: 90px;
-  background-size: 40px 40px; }
+  background-size: 45px 45px; }
   .refresh:hover {
     background-color: #2cb5e8; }
 
@@ -2973,7 +2978,7 @@ a {
       right: 7em; } }
   @media screen and (min-width: 1396px) {
     .refresh-hover {
-      right: 13em; } }
+      right: 15em; } }
 
 .nav-sub-menu input[type=checkbox] {
   display: none; }
@@ -3052,6 +3057,13 @@ a {
     width: 163px; }
     .toggle-menu-item p:hover {
       color: #0198d5; }
+    @media screen and (min-width: 1024px) {
+      .toggle-menu-item p {
+        width: 173px;
+        padding: .5em 1.4em 0; } }
+  @media screen and (min-width: 750px) {
+    .toggle-menu-item {
+      width: 165px; } }
   @media screen and (min-width: 1024px) {
     .toggle-menu-item {
       width: 175px; } }
@@ -3141,7 +3153,7 @@ a {
   .year-labels label {
     font-size: .7rem;
     text-transform: capitalize;
-    margin-right: -15px; }
+    margin-right: -20px; }
     .theme-labels label::after,
     .part-labels label::after,
     .year-labels label::after {
@@ -3234,8 +3246,8 @@ a {
     font-size: 24px; }
 
 .rotate {
-  transform: rotate(360deg);
-  transition: .5s;
+  transform: rotate(180deg);
+  transition: .2s;
   filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
 
 /*--------------------------------------------------------------
