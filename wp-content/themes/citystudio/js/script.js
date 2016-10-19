@@ -69,10 +69,10 @@ jQuery(document).ready(function($){
 jQuery(document).ready(function($){
 
   var menuIcon = $(".fa-bars", this);
-      hamburger = $('.hamburger'); 
+      hamburger = $('.hamburger');
 
   hamburger.toggle(function(e) {
-    
+
   $('.dropdown-content').css({"visibility": "visible"});
     menuIcon.removeClass("fa-bars");
     menuIcon.addClass("fa-times-circle");
@@ -88,7 +88,7 @@ jQuery(document).ready(function($){
     menuIcon.removeClass("fa-times-circle");
     menuIcon.addClass("fa-bars");
   });
-  
+
 });
 
 function showMenu() {
