@@ -106,6 +106,10 @@ function citystudio_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'citystudio_scripts' );
 
+
+
+// Localize API script
+
 function filter_scripts() {
 	$script_url = get_template_directory_uri(). '/build/js/script.min.js';
 
