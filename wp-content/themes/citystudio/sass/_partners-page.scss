@@ -164,29 +164,36 @@ margin: 0;
   justify-content: center;
   width: 100%;
   margin: 0 auto;
+
   @include tablet {
-    justify-content: space-between;
+    justify-content: space-around;
   }
+
   a,
   a:hover {
     text-decoration: none;
     outline: 0;
   }
+
   li {
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     border: 1px solid transparent;
-    flex: 0 0 30%;
     margin-bottom: 2em;
     flex-basis: 100%;
     list-style: none;
     height: 240px;
-    width: 330px;
+    max-width: 330px;
+    width: 100%;
+
     @include tablet {
       flex: 0 0 45%;
+      max-width: 330px;
     }
+
     @include desktop {
       flex: 0 0 30%;
     }
+
     &:hover {
       z-index: 1;
       cursor: pointer;
@@ -196,12 +203,14 @@ margin: 0;
     }
   }
 }
+
 .title-block-container {
   display: flex;
   justify-content: center;
   width: 90%;
   margin: 0 auto;
 }
+
 .title-block {
   background-color: #fff;
   border-radius: 5px;
@@ -212,17 +221,7 @@ margin: 0;
   height: auto;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   margin: 1em 0;
-  @include tablet {
-    // width: 85%;
-    // // min-height: 3rem;
-    // // height: auto;
-    // margin-top: 0;
-  }
-  @include desktop {
-    // height: 5rem;
-    // margin-bottom: 1rem;
-    // padding: 0 0.5em;
-  }
+
   h2 {
     font-family: $fontfamily,bold;
     font-size: 1.6em;
@@ -236,41 +235,51 @@ margin: 0;
     }
   }
 }
+
 .noshow {
   display: none;
 }
+
 .separate-white {
   border-top: 2px dashed white;
   background-color: transparent;
   width: 55%;
   margin-bottom: 2rem;
   margin-top: 1rem;
+
   @include tablet {
     margin-bottom: 3em;
     margin-top: 2em;
   }
+
   @include desktop {
     margin-bottom: 4em;
     margin-top: 3em;
   }
 }
+
 //MEDIA LINKS STYLES
+
 .media-links-title {
   font-size: 1rem;
   font-family: $fontfamily;
   font-weight: bold;
   color: white;
   margin: 0.5rem 0 0.75rem 2em;
+
   @include tablet {
     margin: 1em 0 1em 4em;
   }
+
   span {
     text-transform: uppercase;
   }
+
   @include desktop {
     margin: 1em 0 1em 6em;
   }
 }
+
 .media-links-container {
   display: flex;
   justify-content: center;
@@ -279,22 +288,28 @@ margin: 0;
   width: 90%;
   margin-top: 1.5em;
   margin-left: 2em;
+
   @include tablet {
     flex-direction: row;
   }
+
   @include desktop {
     margin: auto 4em;
     width: 90%;
   }
+
   .media-links {
     width: 90%;
+
     @include tablet {
       width: 35%;
       padding: 1em 2em;
     }
+
     @include desktop {
       width: 25%;
     }
+
     p,
     a {
       color: #ffffff;
@@ -308,6 +323,7 @@ margin: 0;
     }
   }
 }
+
 .no-media {
   text-align: center;
   padding: 1em 0 2.5em;

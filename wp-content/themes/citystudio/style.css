@@ -2655,8 +2655,8 @@ a {
   margin: 0 auto; }
   @media screen and (min-width: 750px) {
     .partner-projects-gallery {
-      -ms-flex-pack: justify;
-          justify-content: space-between; } }
+      -ms-flex-pack: distribute;
+          justify-content: space-around; } }
   .partner-projects-gallery a,
   .partner-projects-gallery a:hover {
     text-decoration: none;
@@ -2664,18 +2664,18 @@ a {
   .partner-projects-gallery li {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
-    -ms-flex: 0 0 30%;
-        flex: 0 0 30%;
     margin-bottom: 2em;
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     list-style: none;
     height: 240px;
-    width: 330px; }
+    max-width: 330px;
+    width: 100%; }
     @media screen and (min-width: 750px) {
       .partner-projects-gallery li {
         -ms-flex: 0 0 45%;
-            flex: 0 0 45%; } }
+            flex: 0 0 45%;
+        max-width: 330px; } }
     @media screen and (min-width: 1024px) {
       .partner-projects-gallery li {
         -ms-flex: 0 0 30%;
