@@ -1,5 +1,6 @@
 .team-citystudio-team {
   position: relative;
+  display: block;
 }
 .people-margin {
   margin-bottom: 1em;
@@ -40,7 +41,7 @@
     display: block;
     flex: 0 1 100%;
     text-align: center;
-        margin: 2em 0 1em;
+    margin: 2em 0 1em;
     font-size: 1.5em;
     @include desktop {
       font-size: 2em;
@@ -54,14 +55,13 @@
     margin: 1em 0 0.5em;
     font-size: 1.5em;
     @include tablet {
-      margin:0 0 1em;
+      margin: 0 0 1em;
     }
     @include desktop {
       font-size: 2em;
     }
   }
 }
-
 .team-ul-special {
   min-height: 350px !important;
 }
@@ -69,24 +69,24 @@
   display: block;
 }
 .citystudio-teams {
-display: block;
+  display: block;
   ul {
-  flex-direction: column;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    flex-direction: column;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
     min-height: 300px;
     @include tablet {
-    flex-direction: row;
+      flex-direction: row;
       display: flex;
       min-height: 200px;
       flex: 0 0 80%;
       padding: 1em;
     }
     @include desktop {
-    flex-direction: row;
+      flex-direction: row;
       display: flex;
       flex: 0 0 100%;
       min-height: 100px;
@@ -277,16 +277,13 @@ article.people {
     font-family: $fontfamily;
   }
 }
-
 .ppl-return {
   position: absolute;
   bottom: -46px;
   margin-left: 1em;
-
   @include tablet {
     margin-left: 2em;
   }
-
   @include desktop {
     margin-left: 3em;
   }
