@@ -2854,7 +2854,7 @@ a {
     padding-left: 40px;
     letter-spacing: 2px;
     font-weight: 500;
-    padding-top: 5px;
+    padding-top: 7px;
     font-size: 14px;
     width: 161px;
     height: 30px;
@@ -2943,9 +2943,17 @@ a {
   background-color: #0082b9;
   border-radius: 45px;
   width: 90px;
-  background-size: 45px 45px; }
+  background-size: 45px 45px;
+  box-shadow: 2px; }
   .refresh:hover {
-    background-color: #2cb5e8; }
+    background-color: #2cb5e8;
+    animation-name: rotate;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear; }
+  .refresh:active {
+    opacity: .4;
+    border: 2px dashed #2cb5e8; }
 
 #refresh.refresh.menu-item {
   width: 4.1em;
@@ -3024,7 +3032,7 @@ a {
 .sort-menu-item {
   position: relative;
   opacity: 0;
-  height: 30px; }
+  height: 35px; }
   .sort-menu-item:hover {
     background-color: white;
     transition: background .6s ease; }
@@ -3089,7 +3097,7 @@ a {
   color: #006493;
   border-radius: 5px;
   width: 165px;
-  margin: 1.8em  .4em;
+  margin: 1.4em  .4em;
   border: 1px solid #0198d5; }
   @media screen and (min-width: 1024px) {
     .open .sort-menu-item {
@@ -3142,11 +3150,10 @@ a {
   word-break: break-word;
   top: -1px;
   border-radius: 5px;
-  height: 1.90em;
+  height: 2.2em;
   width: 167px;
   text-align: center;
-  padding-top: 1px;
-  margin-right: 1x;
+  padding-top: 3px;
   left: -1px; }
   .theme-labels label,
   .part-labels label,
@@ -3205,7 +3212,7 @@ a {
       visibility: visible;
       display: -ms-flexbox;
       display: flex;
-      height: 6em; } }
+      height: 5em; } }
 
 .nav-div.fixed {
   margin: 23px 0px; }
@@ -3245,10 +3252,11 @@ a {
   .no-projects h2 {
     font-size: 24px; }
 
-.rotate {
-  transform: rotate(180deg);
-  transition: .2s;
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2); }
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*--------------------------------------------------------------
 # Single Project Page Styles
@@ -3952,7 +3960,6 @@ article.people {
   box-shadow: 0 0 8px #666666; }
   .connect:hover {
     box-shadow: 0 0 12px #666666;
-    transition: all 0.25s ease;
     background-color: #31b7e9; }
   .connect .become-involved {
     font-weight: bold;

@@ -58,7 +58,7 @@
       padding-left: 40px;
       letter-spacing: 2px;
       font-weight: 500;
-      padding-top: 5px;
+      padding-top: 7px;
       font-size: 14px;
       width: 161px;
       height: 30px;
@@ -142,8 +142,17 @@
   border-radius: 45px;
   width: 90px;
   background-size: 45px 45px;
+  box-shadow: 2px;
   &:hover{
     background-color: $light-blue;
+    animation-name: rotate; 
+    animation-duration: 2s; 
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+  &:active{
+   opacity: .4;
+   border: 2px dashed $light-blue;
   }
 }
 #refresh.refresh.menu-item{
@@ -178,6 +187,8 @@
   @include mid-break{
     right: 15em;
   }
+  
+
 }
 
 .nav-sub-menu input[type=checkbox] {
@@ -225,7 +236,7 @@
 .sort-menu-item {
   position: relative;
   opacity: 0;
-  height: 30px;
+  height: 35px;
   &:hover{
     background-color: white;
     transition: background .6s ease;
@@ -294,7 +305,7 @@
   color: #006493;
   border-radius: 5px;
   width: 165px;
-  margin: 1.8em  .4em;
+  margin: 1.4em  .4em;
   border: 1px solid $city-blue;
   @include desktop{
     width: 175px;
@@ -363,11 +374,10 @@
     word-break: break-word;
     top: -1px;
     border-radius: 5px;
-    height: 1.90em;
+    height: 2.2em;
     width: 167px;
     text-align: center;
-    padding-top: 1px;
-    margin-right: 1x;
+    padding-top: 3px;
     left: -1px;
     label {
       font-size: .7rem;
@@ -420,7 +430,7 @@
       transition: all .5s ease;
       visibility: visible;
       display: flex;
-      height: 6em;
+      height: 5em;
     }
  }
 .nav-div.fixed{
@@ -463,16 +473,8 @@
     font-size: 24px;
   }
 }
-.rotate {
-    -webkit-transform: rotate(180deg) translate3d(0, 0, 0);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-    -o-transition:.2s;
-    -ms-transition:.2s;
-    -moz-transition:.2s;
-    -webkit-transition:.2s;
-    transition:.2s;
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }
