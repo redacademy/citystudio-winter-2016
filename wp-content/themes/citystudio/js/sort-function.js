@@ -145,7 +145,7 @@ jQuery(document).ready(function($) {
             // create gallery method to append HTML to
             var $gallery = $('.grid');
             var galleryItems = '';
-              // Clear the Gallery after each sort data is added to repopulate the Gallery
+              // Clear the gallery after each sort data is added to repopulate the Gallery
               $gallery.empty();
             if ( projects.length > 0 ) {
                 $.each(projects, function(index, value) {
