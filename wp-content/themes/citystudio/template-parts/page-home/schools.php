@@ -10,9 +10,6 @@
           <li class="feat-logo" style="background-image: url( '<?php the_sub_field('school_logo'); ?>' )"></li>
         </a>
       <?php endwhile; ?>
-    <?php endif ?>
-
-
     </ul>
 
     <ul class="home-partners">
@@ -23,8 +20,6 @@
             <li class="feat-logo" style="background-image: url( '<?php the_sub_field('school_logo') ?>' )"></li>
           </a>
         <?php endwhile; ?>
-      <?php endif; ?>
-
     </ul>
 
     <ul class="home-partners">
@@ -35,7 +30,5 @@
             <li class="feat-logo" style="background-image: url( '<?php the_sub_field('school_logo') ?>' ) "></li>
           </a>
         <?php endwhile; ?>
-      <?php endif; ?>
-
     </ul>
 </div>
