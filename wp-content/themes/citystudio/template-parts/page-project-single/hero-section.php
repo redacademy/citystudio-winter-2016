@@ -5,7 +5,7 @@
 </header>
 
 <div class="project-hero"
-     style="background: url('<?php the_field('banner_image'); ?>') no-repeat center center;
+     style="background: url('<?php the_field('banner_image'); ?>') no-repeat center top;
             background-size: cover;
             display: block;">
 </div>

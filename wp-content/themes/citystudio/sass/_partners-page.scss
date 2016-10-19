@@ -158,48 +158,44 @@ margin: 0;
   margin: 1.5rem auto;
   max-width: 90%;
 }
+
 .partner-projects-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   width: 100%;
   margin: 0 auto;
 
-  @include tablet {
-    justify-content: space-around;
-  }
-
-  a,
-  a:hover {
+  a, a:hover {
     text-decoration: none;
     outline: 0;
-  }
-
-  li {
-    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-    border: 1px solid transparent;
+    display: inline-block;
+    height: 240px;
     margin-bottom: 2em;
     flex-basis: 100%;
-    list-style: none;
-    height: 240px;
-    max-width: 330px;
-    width: 100%;
 
     @include tablet {
-      flex: 0 0 45%;
+      max-height: 240px;
       max-width: 330px;
+      flex: 0 0 45%;
     }
 
     @include desktop {
       flex: 0 0 30%;
     }
+  }
+
+  li {
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    list-style: none;
+    height: 100%;
+    width: 100%;
 
     &:hover {
       z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
-      border: 1px solid #ffffff !important;
     }
   }
 }

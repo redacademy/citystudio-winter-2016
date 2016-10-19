@@ -2456,9 +2456,6 @@ a {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px; }
-  .description:hover {
-    opacity: 0;
-    transition: all 0.45s ease; }
 
 .description-title {
   font-size: 1.25rem;
@@ -2649,43 +2646,38 @@ a {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: center;
-      justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   width: 100%;
   margin: 0 auto; }
-  @media screen and (min-width: 750px) {
-    .partner-projects-gallery {
-      -ms-flex-pack: distribute;
-          justify-content: space-around; } }
-  .partner-projects-gallery a,
-  .partner-projects-gallery a:hover {
+  .partner-projects-gallery a, .partner-projects-gallery a:hover {
     text-decoration: none;
-    outline: 0; }
-  .partner-projects-gallery li {
-    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-    border: 1px solid transparent;
+    outline: 0;
+    display: inline-block;
+    height: 240px;
     margin-bottom: 2em;
     -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
-    list-style: none;
-    height: 240px;
-    max-width: 330px;
-    width: 100%; }
+        flex-basis: 100%; }
     @media screen and (min-width: 750px) {
-      .partner-projects-gallery li {
+      .partner-projects-gallery a, .partner-projects-gallery a:hover {
+        max-height: 240px;
+        max-width: 330px;
         -ms-flex: 0 0 45%;
-            flex: 0 0 45%;
-        max-width: 330px; } }
+            flex: 0 0 45%; } }
     @media screen and (min-width: 1024px) {
-      .partner-projects-gallery li {
+      .partner-projects-gallery a, .partner-projects-gallery a:hover {
         -ms-flex: 0 0 30%;
             flex: 0 0 30%; } }
+  .partner-projects-gallery li {
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    list-style: none;
+    height: 100%;
+    width: 100%; }
     .partner-projects-gallery li:hover {
       z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0, 0, 0, 0.35);
-      transition: all 0.25s ease;
-      border: 1px solid #ffffff !important; }
+      transition: all 0.25s ease; }
 
 .title-block-container {
   display: -ms-flexbox;
