@@ -57,11 +57,7 @@
 			<div class="year-labels"><i class="fa fa-times" aria-hidden="true"></i></div>
 		</div>
 
-<<<<<<< HEAD
-		<div class="refresh menu-item" id="refresh"" ></div>
-=======
 		<div class="refresh menu-item" id="refresh" ></div>
->>>>>>> load-more
 		<span class="refresh-hover">Refresh The Gallery</span>
 	</div>
 </div>
