@@ -11,7 +11,10 @@
 
 .tag-archives {
   background-color: $medium-blue;
-  padding-top: 2em;
+  padding-top: 1em;
+  @include tablet {
+padding-top: 2em;
+}
   main {
     display: flex;
     justify-content: center;
@@ -30,11 +33,11 @@
 
     @include tablet {
       width: 90vw;
-      height: 4rem;
+      min-height: 4rem;
       margin-top: 0;
     }
     @include desktop {
-      height: 5rem;
+      min-height: 5rem;
     }
     h2 {
       font-family: 'open_sans', bold;
@@ -58,34 +61,42 @@
     margin: 0;
   }
 }
+.section-archives {
+width: 94%;
+@include tablet {
+width: 92%;
+}
+}
 .tag-gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  width: 400px;
+  width: 100%;
+  margin-top: 1em;
   @include tablet {
     justify-content: space-around;
-    margin: 2em 3em 0em 0em;
+    margin: 2em auto;
     display: flex;
-    width: 100%;
   }
+  @include desktop {
+  margin: 2em auto;
+}
   li,
   a {
     border: 1px solid transparent;
-    flex: 0 0 100%;
+    flex: 0 0 93%;
     height: 240px;
-    max-height: 240px;
-    max-width: 330px;
+    min-height: 240px;
+    min-width: 330px;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 2em;
     @include tablet {
       flex: 0 0 47%;
-      min-height: 240px;
-      min-width: 330px;
       margin-bottom: 2em;
+      max-height: 240px;
+      max-width: 330px;
     }
     @include desktop {
       flex: 0 0 30%;

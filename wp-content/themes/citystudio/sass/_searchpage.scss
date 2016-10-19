@@ -76,7 +76,7 @@
   width: 100%;
 
   @include desktop {
-    margin-top: 2em;
+    margin-top: .75em;
     width: 100%;
   }
 }
@@ -85,11 +85,12 @@
   background-color: lighten($city-blue, 0.7);
   width: 100%;
   min-height: 700px;
-
+  height: 100%;
   fieldset {
     border: none;
     color: transparent;
     margin: 0 5%;
+    position: relative;
   }
 
   label {
@@ -130,10 +131,10 @@
   .fa {
     color: $light-blue;
     font-size: 1.5rem;
-    top: 0.2em;
-    right: 0.5em;
+    top: 1.43em;
+    right: .75em;
     position: absolute;
-
+    z-index: 99;
     &:hover {
       cursor: pointer;
       color: $dark-blue;
@@ -183,12 +184,13 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 0 auto;
+  margin: 2em auto;
   @include tablet {
     justify-content: space-between;
   }
   @include desktop {
     justify-content: space-around;
+  margin: 3em auto;
   }
 
   li, a {
@@ -224,9 +226,10 @@
 .alert-info {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   text-align: center;
-  margin: 1rem auto 5rem;
+  margin: 5em auto;
   border: 2px solid white;
   width: 65%;
   height: 250px;

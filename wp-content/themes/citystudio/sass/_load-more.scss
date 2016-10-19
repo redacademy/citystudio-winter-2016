@@ -1,6 +1,6 @@
 .js-page-numbers {
   width: 100%;
-  padding: 6%;
+  padding:0% 6% 6%;
   display: block;
   height: auto;
   text-align: center;
@@ -9,19 +9,16 @@
   }
 }
 a.js-load-more {
-  border: 1px solid white;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   box-sizing: border-box;
   color: #ffffff;
   display: inline-block;
   width: 55%;
-  /*padding: 2% 3%;*/
   letter-spacing: 2px;
   margin: 0 auto;
   border-radius: 10px;
-  background-color: #fff;
-  border: 1px solid $dark-blue;
-  color: $dark-blue;
+  background-color: transparent;
   display: inline-block;
   text-transform: uppercase;
   margin: 0 auto;
@@ -29,6 +26,7 @@ a.js-load-more {
   transition: background-color 0.5s ease;
   width: 200px;
   font-size: 1em;
+  font-weight: lighter;
   &:active,
   &:visited,
   &:focus {
@@ -37,10 +35,8 @@ a.js-load-more {
   }
   &:hover {
     background-color: #ffffff;
-    font-weight: lighter;
-    background-color: transparent;
-    border: 1px solid #ffffff;
-    color: #ffffff;
+    border: 1px solid $dark-blue;
+    color: $dark-blue;
   }
   @include tablet{
     width: 30%;

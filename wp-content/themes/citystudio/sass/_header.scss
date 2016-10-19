@@ -67,7 +67,7 @@
   position: relative;
   justify-content: space-between;
   @include tablet {
-    flex-basis: 10%;
+    flex-basis: 15%;
     margin-right: 1em;
   }
   @include desktop {
