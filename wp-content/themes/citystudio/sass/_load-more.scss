@@ -1,6 +1,6 @@
 .js-page-numbers {
   width: 100%;
-  padding: 6%;
+  padding:0% 6% 6%;
   display: block;
   height: auto;
   text-align: center;
@@ -27,7 +27,6 @@ a.js-load-more {
   width: 200px;
   font-size: 1em;
   font-weight: lighter;
-
   &:active,
   &:visited,
   &:focus {

@@ -186,8 +186,9 @@ iframe {
 .frm_other_input,
 #field_nmmsb {
   width: 100%!important;
+  margin: 0 0 0  5px;
   @include desktop {
-    width: 50%!important;
+    width: 55%!important;
   }
 }
 input[type='email']:focus {
@@ -197,13 +198,13 @@ input[type='email']:focus {
   color: $city-blue;
 }
 .frm_submit {
-  margin-top: 1em;
+  margin: 1em 0;
   display: flex;
   justify-content: center;
   @include desktop {
     margin-bottom: 1em;
     justify-content: flex-start;
-  }
+    }
   input[type=submit] {
     background-color: transparent !important;
     border-radius: 5px;
@@ -216,22 +217,22 @@ input[type='email']:focus {
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2) !important;
     transition: background-color 0.5s ease;
     font-weight: lighter;
+    margin: 1em 0;
       &:hover {
         background-color: #ffffff !important;
         border: 1px solid $dark-blue !important;
         color: $dark-blue !important;
         font-weight:normal;
       }
-  }
-  img {
-    display: none;
-  }
-  img {
-    display: none;
-  }
+    }
+    img {
+      display: none;
+    }
 }
+
 .frm_form_fields fieldset {
   border: none !important;
+  padding: 0 !important;
 }
 
 .frm_hidden {

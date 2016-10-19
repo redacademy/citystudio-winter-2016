@@ -56,7 +56,6 @@ h1.page-titles {
   padding: .5em 1em;
   border-radius: 10px;
   width: 100%;
-
   @include tablet {
     justify-content: space-around;
     flex-direction: row;
@@ -67,11 +66,9 @@ h1.page-titles {
 .col-two {
   width: 85%;
   padding-top: 1em;
-
-  @include tablet {
+@include tablet {
     width: 50%;
   }
-
   p {
     width: 85%;
   }
@@ -184,12 +181,12 @@ h1.page-titles {
 
   .tag-url {
     text-decoration: none;
-    transition: all, .5s, ease;
+    transition: all .5s ease;
 
     &:visited, &:active {
       color: $city-blue;
       text-decoration: none;
-      transition: all, .5s, ease;
+      transition: all .5s ease;
     }
   }
 
