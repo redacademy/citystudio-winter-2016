@@ -162,40 +162,41 @@ margin: 0;
 .partner-projects-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
   margin: 0 auto;
 
-  a, a:hover {
+  @include tablet {
+    justify-content: space-between;
+  }
+  a,
+  a:hover {
     text-decoration: none;
     outline: 0;
-    display: inline-block;
-    height: 240px;
+  }
+  li {
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    border: 1px solid transparent;
+    flex: 0 0 30%;
     margin-bottom: 2em;
     flex-basis: 100%;
+    list-style: none;
+    height: 240px;
+    width: 330px;
 
     @include tablet {
-      max-height: 240px;
-      max-width: 330px;
       flex: 0 0 45%;
     }
 
     @include desktop {
       flex: 0 0 30%;
     }
-  }
-
-  li {
-    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-    list-style: none;
-    height: 100%;
-    width: 100%;
-
     &:hover {
       z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
       transition: all 0.25s ease;
+      border: 1px solid #ffffff !important;
     }
   }
 }
@@ -218,6 +219,17 @@ margin: 0;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   margin: 1em 0;
 
+  @include tablet {
+    // width: 85%;
+    // // min-height: 3rem;
+    // // height: auto;
+    // margin-top: 0;
+  }
+  @include desktop {
+    // height: 5rem;
+    // margin-bottom: 1rem;
+    // padding: 0 0.5em;
+  }
   h2 {
     font-family: $fontfamily,bold;
     font-size: 1.6em;
@@ -288,7 +300,6 @@ margin: 0;
   @include tablet {
     flex-direction: row;
   }
-
   @include desktop {
     margin: auto 4em;
     width: 90%;

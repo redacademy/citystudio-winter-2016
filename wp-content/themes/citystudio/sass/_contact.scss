@@ -45,14 +45,18 @@ iframe {
   box-sizing: border-box;
   font-size: 1.25rem;
   width: 90%;
-  padding-top: -0.5em;
-  padding-left: 0.5em;
-  height: 2rem;
+  padding: 0.2em 0.75em;
+  height: 2.5rem;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  @include desktop {
+  @include tablet {
     height: 3rem;
     margin-bottom: 1rem;
-    padding: 0.25em 0.75em;
+    padding: 0.35em 0.75em;
+  }
+  @include desktop {
+    height: 4rem;
+    padding: 0.1em 0.75em;
+  font-size: 2em;
   }
   h2 {
     font-family: 'open_sans', bold;
@@ -211,13 +215,27 @@ input[type='email']:focus {
     letter-spacing: 2px !important;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2) !important;
     transition: background-color 0.5s ease;
-    &:hover {
-      background-color: lighten($city-blue, .5) !important;
-    }
+    font-weight: lighter;
+      &:hover {
+        background-color: #ffffff !important;
+        border: 1px solid $dark-blue !important;
+        color: $dark-blue !important;
+        font-weight:normal;
+      }
   }
   img {
     display: none;
   }
+  img {
+    display: none;
+  }
+}
+.frm_form_fields fieldset {
+  border: none !important;
+}
+
+.frm_hidden {
+display: none;
 }
 .frm_form_fields fieldset {
   border: none !important;

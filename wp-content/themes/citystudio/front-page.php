@@ -9,8 +9,6 @@ get_header(); ?>
 
   <?php get_template_part ('template-parts/page-home/hero-banner'); ?>
 
-  <?php get_template_part ('template-parts/page-home/intro'); ?>
-
   <?php get_template_part ('template-parts/page-home/sort-bar'); ?>
 
   <?php get_template_part ('template-parts/page-home/project-grid'); ?>

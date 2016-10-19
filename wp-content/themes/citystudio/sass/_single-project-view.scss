@@ -34,7 +34,7 @@ h1.page-titles {
 
 //SHORT DESCRIPTION
 .project-excerpt {
-  margin: 1em auto;
+  margin: .5em auto 2em;
   font-family: $fontfamily;
   text-align: center;
   width: 85%;
@@ -53,29 +53,30 @@ h1.page-titles {
   display: flex;
   flex-direction: column;
   background-color: $color__background-offwhite;
-  padding: .5em;
+  padding: .5em 1em;
   border-radius: 10px;
   width: 100%;
 
-  @include desktop {
+  @include tablet {
     justify-content: space-around;
     flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 .col-one,
 .col-two {
   width: 85%;
   padding-top: 1em;
-}
-@include desktop {
-  .col-one,
-  .col-two {
-    width: 40.5%;
+
+  @include tablet {
+    width: 50%;
+  }
+
   p {
     width: 85%;
-}
   }
 }
+
 .col-one {
   order: 1;
 }
@@ -87,11 +88,6 @@ h1.page-titles {
   }
 }
 
-@include desktop {
-  .col-two {
-    order: 2;
-  }
-}
 .proj-detail-wrap {
   display: block;
   margin: 0 0 1.5em;

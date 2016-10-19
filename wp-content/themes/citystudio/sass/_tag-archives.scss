@@ -11,7 +11,10 @@
 
 .tag-archives {
   background-color: $medium-blue;
-  padding-top: 2em;
+  padding-top: 1em;
+  @include tablet {
+padding-top: 2em;
+}
   main {
     display: flex;
     justify-content: center;
@@ -30,11 +33,19 @@
 
     @include tablet {
       width: 90vw;
+<<<<<<< HEAD
       height: 4rem;
       margin-top: 0;
     }
     @include desktop {
       height: 5rem;
+=======
+      min-height: 4rem;
+      margin-top: 0;
+    }
+    @include desktop {
+      min-height: 5rem;
+>>>>>>> load-more
     }
     h2 {
       font-family: 'open_sans', bold;
@@ -58,12 +69,19 @@
     margin: 0;
   }
 }
+.section-archives {
+width: 94%;
+@include tablet {
+width: 92%;
+}
+}
 .tag-gallery {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
   padding: 1rem;
   width: 400px;
   @include tablet {
@@ -79,13 +97,38 @@
     height: 240px;
     max-height: 240px;
     max-width: 330px;
+=======
+  width: 100%;
+  margin-top: 1em;
+  @include tablet {
+    justify-content: space-around;
+    margin: 2em auto;
+    display: flex;
+  }
+  @include desktop {
+  margin: 2em auto;
+}
+  li,
+  a {
+    border: 1px solid transparent;
+    flex: 0 0 93%;
+    height: 240px;
+    min-height: 240px;
+    min-width: 330px;
+>>>>>>> load-more
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 2em;
     @include tablet {
       flex: 0 0 47%;
+<<<<<<< HEAD
       min-height: 240px;
       min-width: 330px;
       margin-bottom: 2em;
+=======
+      margin-bottom: 2em;
+      max-height: 240px;
+      max-width: 330px;
+>>>>>>> load-more
     }
     @include desktop {
       flex: 0 0 30%;
