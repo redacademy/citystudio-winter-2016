@@ -116,15 +116,6 @@ p {
 
 // Banner Page Tiles
 
-// H2
-h2.page-titles {
-	color: #fff;
-	font-family: $fontfamily;
-	font-size: 3em;
-	font-weight: bold;
-}
-
-
 // Section Ttiles
 
 .section-titles {
@@ -143,5 +134,59 @@ h2.page-titles {
 
 	&:hover {
 		color: $dark-blue;
+	}
+}
+
+// Blog Post Feed Styles
+
+.blog-content {
+
+	h1, h2, h3, h4, h5 p {
+		text-align: left;
+		width: 100%;
+	}
+
+	h1 {
+		font-size: 2em;
+		font-weight: 300;
+	}
+
+	h2 {
+		font-size: 1.5em;
+		font-weight: 300;
+	}
+
+	h3 {
+		font-size: 1.2em;
+		font-weight: 600;
+		letter-spacing: 1px;
+	}
+
+	a, a:focus, a:visited, a:active {
+		text-decoration: none;
+		color: $city-blue;
+		font-weight: 600;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	blockquote {
+		text-align: left;
+    width: 100%;
+    padding: 2% 5%;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.2em;
+
+		p {
+			color: $dark-blue;
+		}
+	}
+
+	img {
+		margin-bottom: 2em;
+		margin-top: 2em;
 	}
 }

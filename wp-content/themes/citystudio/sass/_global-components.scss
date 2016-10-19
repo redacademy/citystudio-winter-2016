@@ -1,0 +1,144 @@
+
+
+.recent-news-block {
+  background-color: $color__background-offwhite;
+  padding: 4% 0;
+
+  h2 {
+    color: $city-blue;
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+    line-height: 2em;
+  }
+}
+
+.recent-post-image {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 5px
+  }
+}
+
+.recent-news-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0 0 10%;
+  // min-height: 750px;
+
+  @include tablet {
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 2% 0;
+  }
+
+  a {
+    flex-basis: 100%;
+    max-width: 100%;
+    width: 100%;
+    margin: 0.5em 0;
+
+    @include tablet {
+      flex-basis: 30%;
+      max-width: 30%;
+      width: 33%;
+      margin: 0;
+    }
+  }
+
+  li {
+    border-radius: 5px;
+    box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
+    display: block;
+    min-height: 250px;
+    position: relative;
+
+    &:hover {
+      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
+      transition: all 0.25s ease;
+      bottom: 2px;
+    }
+  }
+}
+
+// Recent Posts Title
+
+.title-div {
+  width: 80%;
+  height: 43% !important;
+  bottom: 12px !important;
+  color: white;
+  // position: absolute;
+  background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+
+  @include tablet {
+    height: 45%;
+    bottom: 12px;
+  }
+
+  @include desktop {
+    height: 30%;
+    bottom: 25px;
+  }
+
+  p {
+    color: white;
+    font-family: $fontfamily;
+    padding: 0.5em;
+    font-size: 1em;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+    @include tablet {
+      font-size: 0.9em;
+    }
+
+    @include desktop {
+      font-size: 1em;
+    }
+  }
+}
+
+// Return Links
+
+.return-wrapper {
+  margin: 4em 0 2em;
+}
+
+.static-return-button {
+
+  font-size: 1.1em;
+  font-family: $fontfamily;
+  color: $light-blue;
+  text-decoration: none !important;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+
+  &:visited, &:focus, &:active {
+    color: $light-blue;
+    text-decoration: none !important;
+  }
+
+  @include tablet {
+    font-size: 1.2em;
+  }
+
+  @include desktop {
+    font-size: 1.3em;
+  }
+
+  &:hover {
+    cursor: pointer;
+    text-decoration: underline !important;
+  }
+}

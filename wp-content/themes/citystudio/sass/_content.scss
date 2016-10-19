@@ -10,6 +10,40 @@
   }
 }
 
+/* Global Inner Wrapper Class */
+
+.inner-column {
+  width: 90%;
+  margin: 2em auto;
+
+  @include tablet {
+    width: 780px;
+  }
+}
+
+.inner-column-wide {
+  width: 90%;
+  margin: 0 auto;
+
+  @include desktop {
+    width: 920px;
+  }
+}
+
+.blog-content-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 2em auto 0 ;
+  width: 90%;
+}
+
+/*
+took out for tags page
+#main {
+  min-height: 700px;
+}*/
+
 /* Posts and pages */
 
 .sticky {
@@ -57,11 +91,7 @@
 }
 
 .container{
-	-webkit-box-align: center;
-	-webkit-align-items: center;
-	    -ms-flex-align: center;
-	            -ms-grid-row-align: center;
-	        align-items: center;
+  align-items: center;
 }
 
 .site-footer{
@@ -73,74 +103,58 @@
 	list-style: none;
 }
 
-
-// Page Headers
-
 .citystudio-banner {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   @include blue-to-blue;
-  margin-bottom: 0;
   opacity: 0.9;
   width: 100%;
-  min-height: 4em;
+  min-height: 2em;
   height: 100%;
-  overflow: hidden;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  padding: 0 4%;
-
-  @include desktop {
-  background-size: cover;
-  background-position: center center;
-  min-height: 6em;
-  height: 100%;
-  }
-}
-
-h2.page-titles {
+  font-weight: 700;
   color: white;
-  font-family: $fontfamily;
-  font-size: 1.5em;
-  box-shadow: none;
-  margin-left: 1.5em;
+  padding: 0% 4%;
+
+  @include tablet {
+    min-height: 5em;
+  }
+
   @include desktop {
-    font-size: 3em;
+    background-size: cover;
+    background-position: center center;
+    min-height: 6em;
+    height: 100%;
+  }
+
+  .page-titles {
+    font-size: 2.5em;
+
+    @include tablet {
+      font-size: 3em;
+    }
   }
 }
-
-// This should be in a more global place
-// .banner-inner {
-//   display: flex;
-//   // flex-direction: column-reverse;
-//   height: 0;
-//   justify-content: center;
-//   padding-left: 3.2%;
-//   margin-top: 2em;
-//   z-index: -999;
-//   max-width: 99%;
-//   width: 99%;
-//   @include tablet {
-//     padding: 1% 4%;
-//     margin-top: 1.5em;
-//   }
-//   @include desktop {
-//     padding: 2% 4%;
-//     margin-top: 1.5em;
-//   }
-// }
 
 .citystudio-banner-short {
+
   @include blue-to-blue;
-  width: 100%;
-  height: 4em;
-  overflow: hidden;
-  margin-bottom: 4em;
-@include desktop {
-  background: url("../../images/citystudio-logo-lighter.png"), $medium-blue;
-  background-size: cover;
-  background-position: center center;
-  height: 150px;
-  opacity: 0.9;
+    width: 100%;
+    height: 4em;
+    overflow: hidden;
+    margin-bottom: 4em;
+
+  @include desktop {
+    background: url("../../images/citystudio-logo-lighter.png"), $medium-blue;
+    background-size: cover;
+    background-position: center center;
+    height: 150px;
+    opacity: 0.9;
   }
 }
+
+/*.banner-inner {
+  margin: 0 auto;
+  width: 100%;
+}*/

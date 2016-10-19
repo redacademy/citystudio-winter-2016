@@ -16,24 +16,24 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 400px;
   width: 100%;
+
   @include tablet {
-    height: 60vh;
-  }
-   @include desktop {
-    height: 75vh;
+    height: 500px;
   }
 }
+
 .hero-blurb {
-    text-align: center;
-    font-weight: 700;
-    font-family: $fontfamily;
-    display: flex;
-    justify-content: center;
-    z-index: 1;
-    width: 80%;
-    padding: 8.5% 12%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family:$fontfamily;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  margin-top: 2em;
+  padding:8%;
   @include tablet {
     margin: 0 auto;
   }
@@ -48,32 +48,53 @@
       font-size: 2em;
     }
   }
+p {
+margin-bottom: 0;
+}
 }
 .orange-font {
   color: #ee7600;
 }
+
 .homepage-titles {
-  margin: 2em auto;
+  margin: 1em auto;
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
-  font-size: 1.7rem;
+  font-size: 2.2em;
   width: 80%;
-  font-weight: normal;
+  font-weight: bold;
+
   @include tablet {
     width: 99%;
     font-size: 2em;
   }
+
   @include desktop {
     font-size: 2.3em;
   }
+
   span {
     color: $city-blue;
     font-weight: bold;
   }
 }
+
+.home-recent-news {
+  display: block;
+  .homepage-titles {
+    font-family: $fontfamily;
+    font-size: 2.2em;
+    margin: 0.5em auto;
+    letter-spacing: 0.1rem;
+    color: $citystudio-black;
+    font-weight: bold;
+  }
+}
+
 .homepage-description {
   display: none;
+
   @include tablet {
     width: 70%;
     margin: 0 auto;
@@ -84,6 +105,7 @@
     width: 75%;
     display: block;
   }
+
   @include desktop {
     padding-bottom: 1em;
   }
@@ -93,12 +115,15 @@
   width: 100%;
   height: 800px;
   margin: 1em 0 0;
+
   @include tablet {
-    height: 300px;
+    height: 570px;
   }
+
   @include desktop {
     height: 400px;
   }
+
   h2 {
     color: $city-blue;
     text-align: center;
@@ -113,62 +138,58 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
+
   @include tablet {
-  margin: auto 2em;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
+
   @include desktop {
-  margin: auto 2em;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: flex-start;
+    align-items: center;
   }
+
   a {
     height: 200px;
     width: 250px;
     margin: 1em;
-    @include tablet {
-      height: 160px;
-      width: 210px;
-      margin: 0;
-    }
+
     @include desktop {
       height: 240px;
       width: 300px;
       margin: 0;
     }
   }
+
   li {
-  border-radius: 10px;
+    border-radius: 10px;
     position: relative;
     height: 200px;
     width: 250px;
     box-shadow: 3px 4px 8px 0 rgba(0,0,0,.25);
-    @include tablet {
-      height: 160px;
-      width: 210px;
-    }
+
     @include desktop {
       height: 240px;
       width: 300px;
     }
+
     &:hover {
-      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
+      box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.25);
       transition: all 0.25s ease;
-      top: 2px;
-      left: 2px;
+      bottom: 2px;
     }
+
     img {
-  border-radius: 10px;
+      border-radius: 10px;
       height: 100%;
       width: 100%;
     }
   }
 }
+
 .title-div {
   width: 80%;
   height: 43% !important;
@@ -176,125 +197,92 @@
   color: white;
   position: absolute;
   border-top-right-radius: 10px;
-border-bottom-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+
   @include tablet {
     height: 45%;
     bottom: 12px;
   }
+
   @include desktop {
     height: 30%;
     bottom: 25px;
   }
+
   p {
     color: white;
     font-family: $fontfamily;
     padding: 0.5em;
     overflow: hidden;
     font-size: 1em;
+
     @include tablet {
       font-size: 0.9em;
     }
+
     @include desktop {
       font-size: 1em;
     }
   }
 }
+
 // -------------- PARTNER SECTION STYLES  ----------------------*
 .homepage-partners-container {
-  background-color: $color__background-lightblue;
-  padding: 2em;
-  @include desktop {
-    padding: 4em;
-  }
-  ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5% 2%;
+
+  .home-partners {
+    flex-basis: 100%;
+    max-height: 150px;
+    min-height: 80px;
+    width: 90%;
+    margin: 2.5em auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    max-width: 100%;
-    margin-bottom: 0;
-    @include desktop {
-      margin-bottom: 5.5em;
-    }
-  }
-  li {
-    height: 110px;
-    &:hover {
-      cursor: pointer;
-    }
-  }
-  h1 {
-    margin: 2rem 0 1rem;
-  }
-  p {
-    width: 74vw;
-    margin: 0 auto;
-    padding-bottom: 1rem;
-    font-size: 21px;
-  }
-  .partner-buttons {
-    text-align: center;
-    padding: 3%;
-  }
-  button {
-    font-weight: bold;
-    background-color: rgba(1,152,213,.8);
-    color: white;
-    border-radius: 7px;
-    padding: 0.5% 2%;
-    margin: 1rem 1rem 2rem;
-  }
-}
-.featured {
-  li {
-    flex: 1 0 35%;
-    margin: 0.5em;
+
     @include tablet {
-      flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 1.5em;
+      flex-wrap: nowrap;
     }
-    @include desktop {
-      flex: 1 0 30%;
-      max-width: 300px;
-      max-height: 300px;
-      margin: 0;
+
+    .feat-logo-link {
+      display: inline-block;
+      flex-basis: 30%;
+      width: 30%;
+      height: 90px;
+      margin-bottom: 2em;
+
+      @include tablet {
+        flex-basis: 20%;
+        width: 20%;
+        margin: 0;
+      }
+
+      &:hover {
+        filter: opacity(0.7);
+      }
     }
-  }
-}
-.partners-title {
-  text-align: center;
-  color: white;
-  margin-top: 2.5rem;
-  text-transform: uppercase;
-}
-.featured-two {
-  ul {
-    margin-bottom: 1em;
-  }
-  li {
-    cursor: auto;
-    flex: 1 0 35%;
-    margin: 1em;
-    @include tablet {
-      flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 1.5em;
-    }
-    @include desktop {
-      flex: 1 0 25%;
-      max-width: 200px;
-      max-height: 200px;
-      margin: 0;
-    }
-    img {
-      max-width: 100px;
-      max-height: 100px;
+
+    .feat-logo {
+      width: 100%;
+      height: 100%;
+      background-size: contain;
+      display: inline-block;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      img {
+        max-width: 100px;
+        max-height: 100px;
+      }
     }
   }
 }
+
+
+
 // -------------- EXPLORE SECTION STYLES  ----------------------*
 .explore-section {
   width: 100%;

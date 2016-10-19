@@ -8,26 +8,27 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 175px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-  @include desktop {
-    height: 250px;
+  @include tablet {
+    height: 15em;
+    margin: 0;
   }
   h1 {
     font-size: 1.5rem;
-    font-family: $fontfamily;
-    color: white;
-    font-weight: normal;
+    color: #fff;
+    font-weight: 400;
     text-align: center;
-    width: 65%;
-    margin: 0 auto;
+    width: 85%;
+    margin: 1em auto;
     @include tablet {
-      font-size: 1.75em;
+      font-size: 1.8em;
+      margin: 0 2em;
     }
     @include desktop {
-      font-size: 2.25em;
+      font-size: 2.5em;
     }
     span {
       font-weight: bold;
@@ -40,36 +41,29 @@
   align-items: center;
   height: 100%;
   width: 100%;
-  z-index: 2;
-  @include desktop {
-    height: 250px;
-  }
+  z-index: 1;
 }
 .info-main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  margin: 1.5rem 0.25em;
-  @include desktop {
-    margin: 2em auto 4em;
-  }
+  margin: 2em auto;
 }
 .school-mission-container {
-  margin: auto 1em;
   font-family: $fontfamily;
   width: 90%;
+  flex-basis: 100%;
   text-align: center;
   @include tablet {
-    margin: auto 5em;
-    width: 75%;
+    width: 60%;
+    flex-basis: 60%;
+    text-align: left;
+    padding: 1em;
   }
   @include desktop {
-    margin: auto 1.5em;
-    width: 40%;
-    text-align: left;
-    padding-right: 2em;
+    padding: 2em 2em 2em 0;
   }
   h3 {
     font-size: 1.25em;
@@ -81,40 +75,47 @@
   }
   .school-mission {
     font-size: 0.9em;
-    line-height: 1.25rem;
-    width: 95%;
+    width: 90%;
+    margin: 0 auto;
     @include tablet {
       width: 100%;
+      font-size: 1em;
     }
-    @include desktop {
-      font-size: 0.9em;
-      line-height: 1.4rem;
-    }
+    @include desktop {}
   }
-}
-.logo img {
-  max-width: 400px;
-  max-height: 500px;
 }
 .campus-course-container {
-  margin: 1.5em auto 0;
-  @include desktop {
-    margin: 2rem 0 1rem 5rem;
+  flex-basis: 50%;
+  width: 100%;
+  margin: 0 auto;
+  @include tablet {
+    flex-basis: 25%;
+    width: 25%;
+    margin: 0;
   }
-  .logo {
-    display: none;
-    @include desktop {
-      display: block;
+  .school-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 2em;
+    @include tablet {
+      margin: 0;
+      justify-content: flex-start;
     }
   }
   .campus-course-div {
     font-family: $fontfamily;
     font-size: 1rem;
     text-align: center;
-    @include desktop {
+    margin-top: 1em;
+    @include tablet {
       text-align: left;
+      margin: 0 auto;
       padding-top: 1em;
     }
+  @include desktop {
+margin: 0;
+}
   }
   h3 {
     margin-bottom: 0.25rem;
@@ -141,10 +142,11 @@
 //PROJECT DISPLAY STYLES
 .projects-container {
   background-color: $medium-blue;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  @include desktop {
-    padding-top: 2rem;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  @include tablet {
+    padding-top: 2em;
+    padding-bottom: 0;
   }
 }
 // Project Gallery
@@ -159,59 +161,75 @@
 .partner-projects-gallery {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
   width: 100%;
-  li {
-    flex: 0 0 30%;
-    margin-bottom: 2em;
-    border: 1px solid transparent;
-    width: 300px;
-    height: 210px;
-    margin: 1em;
-    list-style: none;
-    @include tablet {
-      width: 300px;
-      height: 210px;
-    }
-    @include desktop {
-      width: 320px;
-      height: 230px;
-    }
+  margin: 0 auto;
+  @include tablet {
+    justify-content: space-between;
   }
+  a,
   a:hover {
     text-decoration: none;
+    outline: 0;
+  }
+  li {
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    border: 1px solid transparent;
+    flex: 0 0 30%;
+    margin-bottom: 2em;
+    flex-basis: 100%;
+    list-style: none;
+    height: 240px;
+    width: 330px;
+    @include tablet {
+      flex: 0 0 45%;
+    }
+    @include desktop {
+      flex: 0 0 30%;
+    }
+    &:hover {
+      z-index: 1;
+      cursor: pointer;
+      box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);
+      transition: all 0.25s ease;
+      border: 1px solid #ffffff !important;
+    }
   }
 }
 .title-block-container {
   display: flex;
   justify-content: center;
-  width: 99%;
-  max-width: 100%;
+  width: 90%;
+  margin: 0 auto;
 }
 .title-block {
   background-color: #fff;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 1.25rem;
-  width: 95%;
-  padding: 0 1em;
+  width: 100%;
+  padding: 1% 2%;
   height: auto;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  margin: 1em 0;
+  @include tablet {
+    // width: 85%;
+    // // min-height: 3rem;
+    // // height: auto;
+    // margin-top: 0;
+  }
   @include desktop {
-    height: 5rem;
-    margin-bottom: 1rem;
-    padding: 0 0.5em;
+    // height: 5rem;
+    // margin-bottom: 1rem;
+    // padding: 0 0.5em;
   }
   h2 {
-    font-family: open_sans,bold;
-    font-size: 1.25rem;
+    font-family: $fontfamily,bold;
+    font-size: 1.6em;
     color: #006493;
     font-weight: 900;
-    margin: 0.2rem;
-    padding: 0.1em;
-    line-height: 1.3em;
-    @include desktop {
-      font-size: 3rem;
+    @include tablet {
+      font-size: 2em;
     }
     span {
       color: $light-blue;
@@ -227,6 +245,14 @@
   width: 55%;
   margin-bottom: 2rem;
   margin-top: 1rem;
+  @include tablet {
+    margin-bottom: 3em;
+    margin-top: 2em;
+  }
+  @include desktop {
+    margin-bottom: 4em;
+    margin-top: 3em;
+  }
 }
 //MEDIA LINKS STYLES
 .media-links-title {
@@ -235,16 +261,14 @@
   font-weight: bold;
   color: white;
   margin: 0.5rem 0 0.75rem 2em;
-  width: 90%;
   @include tablet {
-    margin: 0.5em 0 0.75em 2em;
-    width: 90%;
+    margin: 1em 0 1em 4em;
   }
   span {
     text-transform: uppercase;
   }
   @include desktop {
-    margin: 0.5em 0 0.75em 3em;
+    margin: 1em 0 1em 6em;
   }
 }
 .media-links-container {
@@ -255,19 +279,18 @@
   width: 90%;
   margin-top: 1.5em;
   margin-left: 2em;
- @include tablet {
-  flex-direction: row;
-
-}
+  @include tablet {
+    flex-direction: row;
+  }
   @include desktop {
     margin: auto 4em;
     width: 90%;
   }
   .media-links {
-    width: 100%;
+    width: 90%;
     @include tablet {
       width: 35%;
-    margin: 1em 2em;
+      padding: 1em 2em;
     }
     @include desktop {
       width: 25%;
@@ -287,7 +310,7 @@
 }
 .no-media {
   text-align: center;
-  margin: 1.5em;
+  padding: 1em 0 2.5em;
   color: #ffffff;
   font-family: $fontfamily;
 }

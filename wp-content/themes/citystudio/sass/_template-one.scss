@@ -2,41 +2,38 @@
   display: block;
   justify-content: center;
   margin-top: 2em;
-}
-.template-hero {
-  margin-top: 2em;
-  width: 100%;
-  height: auto;
-}
-.section-header {
-  width: 75%;
-  margin: 2em auto;
-  @include tablet {
-    width: 75%;
-  }
-  @include desktop {
-    width: 65%;
-  }
+
   h3 {
     font-size: 1.25em;
     padding-bottom: 2%;
     width: 170px;
     font-family: $fontfamily;
+
     @include desktop {
       font-size: 1.5em;
       padding-bottom: 1%;
     }
   }
+
   p {
     font-size: 1em;
     line-height: 1.5rem;
     font-family: $fontfamily;
+
     @include desktop {
       font-size: 1em;
       line-height: 1.8rem;
     }
   }
 }
+.template-hero {
+  margin-top: 2em;
+  width: 100%;
+  height: auto;
+}
+
+
+
 //Call to action block
 .cta_blurb {
   display: none;
@@ -49,7 +46,7 @@
   display: flex;
   justify-content: center;
   position: relative;
-  background-color: $color__background-lightblue;
+  background-color: $color__background-offwhite;
   padding: 2em;
   font-size: 18px;
   align-items: center;
@@ -75,11 +72,14 @@
   }
 }
 .connect {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: $light_blue;
   border-radius: 5px;
   margin: 1em 0;
   height: 150px;
-  max-width: 16em;
+  width: 250px;
   padding: 0.9em 0;
   color: white;
   position: relative;
@@ -99,12 +99,12 @@
     color: white;
     font-weight: bold;
     font-size: 1em;
-    display: table-cell;
     letter-spacing: 3px;
-    padding-top: 1.6em;
+    margin-bottom: 0;
   }
   a {
     border-radius: 5px;
+    margin-top: 1em;
     color: white;
     padding: 5%;
     border: 3px solid white !important;

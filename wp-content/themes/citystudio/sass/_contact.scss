@@ -2,15 +2,18 @@
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   opacity: 0.9;
   background-size: cover;
-  height: 4em;
+  max-height: 6.6em;
   width: 100%;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+  padding: 2% 4%;
+  @include tablet {
+    height: 3em;
+  }
   @include desktop {
     min-height: 6em;
   }
   h1 {
     color: #fff;
-    margin-left: 5.2%;
     font-family: $fontfamily;
     font-size: 2em;
     @include desktop {
@@ -42,14 +45,18 @@ iframe {
   box-sizing: border-box;
   font-size: 1.25rem;
   width: 90%;
-  padding-top: -0.5em;
-  padding-left: 0.5em;
-  height: 2rem;
+  padding: 0.2em 0.75em;
+  height: 2.5rem;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  @include desktop {
+  @include tablet {
     height: 3rem;
     margin-bottom: 1rem;
-    padding: 0.25em 0.75em;
+    padding: 0.35em 0.75em;
+  }
+  @include desktop {
+    height: 4rem;
+    padding: 0.1em 0.75em;
+  font-size: 2em;
   }
   h2 {
     font-family: 'open_sans', bold;
@@ -83,7 +90,7 @@ iframe {
   margin: 0 auto 2.5em;
   @include tablet {
     width: 40%;
-  margin: 2em auto;
+    margin: 2em auto;
   }
   h3,
   p {
@@ -91,7 +98,7 @@ iframe {
     font-family: $fontfamily;
     font-size: 1em;
     @include desktop {
-        font-size: 1.25em;
+      font-size: 1.25em;
     }
   }
   p {
@@ -122,14 +129,13 @@ iframe {
   @include tablet {
     width: 50%;
     min-width: 40%;
-    margin:  2em 0 0 1em;
+    margin: 2em 0 0 1em;
   }
   @include desktop {
     width: 40%;
     margin: 2em 0 0 2em;
   }
 }
-
 .frm_primary_label {
   padding: 0 0 25px 2px !important;
 }
@@ -144,13 +150,35 @@ iframe {
   label {
     color: #ffffff !important;
     padding-bottom: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     width: 80%;
+    font-family: $fontfamily;
+    font-weight: lighter;
   }
 }
-#frm_field_68_container,
+#frm_field_64_container,
+#frm_field_65_container,
+#frm_field_66_container,
 #frm_field_67_container {
   box-shadow: none !important;
+  margin: 1em 0;
+  label {
+    display: none;
+  }
+  input,
+  textarea {
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    padding: 2%;
+  }
+}
+,
+#frm_field_68_container {
+  box-shadow: none !important;
+}
+#field_nmmsb-otext {
+  display: none;
 }
 #field_g5aab {
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
@@ -178,6 +206,8 @@ input[type='email']:focus {
   }
   input[type=submit] {
     background-color: transparent !important;
+    border-radius: 5px;
+    padding: 2%;
     border: 1px solid #ffffff !important;
     color: #ffffff !important;
     width: 150px !important;
@@ -185,8 +215,22 @@ input[type='email']:focus {
     letter-spacing: 2px !important;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2) !important;
     transition: background-color 0.5s ease;
-    &:hover {
-      background-color: lighten($city-blue, .5) !important;
-    }
+    font-weight: lighter;
+      &:hover {
+        background-color: #ffffff !important;
+        border: 1px solid $dark-blue !important;
+        color: $dark-blue !important;
+        font-weight:normal;
+      }
   }
+  img {
+    display: none;
+  }
+}
+.frm_form_fields fieldset {
+  border: none !important;
+}
+
+.frm_hidden {
+display: none;
 }

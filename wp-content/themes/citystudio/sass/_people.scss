@@ -1,45 +1,96 @@
 .team-citystudio-team {
   position: relative;
+  display: block;
 }
-
+.people-margin {
+  margin-bottom: 1em;
+}
+.team-height-wrap {
+  min-height: 600px;
+  margin: auto 0;
+  display: block;
+  @include tablet {
+    min-height: 500px;
+  }
+  @include desktop {
+    min-height: 500px;
+  }
+}
+.other-height-wrap {
+  min-height: 500px;
+  margin: auto 0;
+  display: block;
+  @include tablet {
+    min-height: 300px;
+  }
+  @include desktop {
+    min-height: 280px;
+  }
+}
 .team-container {
-  margin: 3em auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   flex-direction: column;
   width: 100%;
   align-items: center;
-  @include tablet {
-    margin: 3em auto;
-  }
-  @include desktop {
-    margin: 4em auto;
-  }
-  .section-titles {
+  .section-one-title {
+    font-weight: bold;
+    font-family: $fontfamily;
+    display: block;
     flex: 0 1 100%;
-    margin-bottom: 1.5em;
     text-align: center;
+    margin: 2em 0 1em;
     font-size: 1.5em;
     @include desktop {
       font-size: 2em;
-      margin-bottom: 2em;
+      margin: 2em 0;
+    }
+  }
+  .section-titles {
+    display: block;
+    flex: 0 1 100%;
+    text-align: center;
+    margin: 1em 0 0.5em;
+    font-size: 1.5em;
+    @include tablet {
+      margin: 0 0 1em;
+    }
+    @include desktop {
+      font-size: 2em;
     }
   }
 }
+.team-ul-special {
+  min-height: 350px !important;
+}
+.people-wrap {
+  display: block;
+}
 .citystudio-teams {
+  display: block;
   ul {
+    flex-direction: column;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex: 0 0 75%;
     max-width: 100%;
-    height: 300px;
+    min-height: 300px;
     @include tablet {
+      flex-direction: row;
+      display: flex;
+      min-height: 200px;
       flex: 0 0 80%;
+      padding: 1em;
     }
     @include desktop {
+      flex-direction: row;
+      display: flex;
       flex: 0 0 100%;
+      min-height: 100px;
+      padding: 0;
     }
   }
 }
@@ -53,7 +104,7 @@
   padding: 1em;
   text-align: center;
   @include desktop {
-    flex: 0 0 22%;
+    flex: 0 1 22%;
   }
   .team-pic {
     flex: 0 1 100%;
@@ -103,6 +154,7 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   @include tablet {
     flex-direction: row;
   }
@@ -118,6 +170,7 @@
   justify-content: center;
   padding: 1em;
   flex: 0 1 20%;
+  min-height: 100px;
   @include tablet {
     flex: 0 1 40%;
   }
@@ -141,7 +194,7 @@
     max-width: 200px;
   }
 }
-// Single Person Page
+/*Single Person Page*/
 article.people {
   max-width: 1130px;
   margin: 4em auto;
@@ -155,14 +208,14 @@ article.people {
 .person-left {
   display: none;
   @include tablet {
-display: block;
-flex: 0 1 30%;
-border-radius: 50%;
-overflow: hidden;
-max-width: 200px;
-max-height: 200px;
-margin: 1em 0 2em 4em;
-}
+    display: block;
+    flex: 0 1 30%;
+    border-radius: 50%;
+    overflow: hidden;
+    max-width: 200px;
+    max-height: 200px;
+    margin: 1em 0 2em 4em;
+  }
   @include desktop {
     display: block;
     flex: 0 1 30%;
@@ -170,7 +223,7 @@ margin: 1em 0 2em 4em;
     overflow: hidden;
     max-width: 250px;
     max-height: 250px;
-    margin-left:9%;
+    margin-left: 9%;
   }
 }
 .person-right {
@@ -181,23 +234,23 @@ margin: 1em 0 2em 4em;
   margin: auto 1.5em;
   height: auto;
   @include tablet {
-  flex: 0 0 55%;
-}
+    flex: 0 0 55%;
+  }
   @include desktop {
-  margin: auto 0;
-flex: 0 0 60%;
-}
+    margin: auto 0;
+    flex: 0 0 60%;
+  }
   p {
     margin-top: 1.5em;
     max-width: 90%;
     font-size: 1em;
     @include tablet {
-    font-size: .9em;
-  }
+      font-size: 0.9em;
+    }
     @include desktop {
-    max-width: 80%;
-  font-size: 1em;
-  }
+      max-width: 80%;
+      font-size: 1em;
+    }
   }
   .role {
     margin-top: 0;
@@ -208,52 +261,30 @@ flex: 0 0 60%;
   border-bottom: 2.5px dashed $light-blue;
   width: 95%;
   @include desktop {
-  width: 85%;
-}
+    width: 85%;
+  }
   h1 {
-    @include tablet{
-    font-size: 1.5em;
-  }
+    @include tablet {
+      font-size: 1.5em;
+    }
     @include desktop {
-    font-size: 1.75em;
+      font-size: 1.75em;
+    }
   }
-}
   h1,
   p {
     color: $light-blue;
     font-family: $fontfamily;
   }
 }
-
-
-  .static-return-button {
-    position: absolute;
-    bottom: -46px;
+.ppl-return {
+  position: absolute;
+  bottom: -46px;
+  margin-left: 1em;
+  @include tablet {
+    margin-left: 2em;
   }
-  .static-return-button {
-    a {
-      font-size: 1.1em;
-      font-family: $fontfamily;
-      color: $light-blue;
-      text-decoration: underline;
-      text-transform: uppercase;
-      padding: 0;
-      margin-left: 1em;
-      border: none;
-      outline: none;
-      @include tablet {
-        padding: 1em;
-        margin-left: 2em;
-        font-size: 1.2em;
-      }
-      @include desktop {
-        padding: 1em;
-        margin-left: 3em;
-        font-size: 1.3em;
-      }
-    }
-    a:hover {
-      cursor: pointer;
-      filter:opacity(0.8);
-    }
+  @include desktop {
+    margin-left: 3em;
   }
+}

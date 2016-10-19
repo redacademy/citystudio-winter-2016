@@ -1,6 +1,6 @@
 <!-- Project Details -->
 <div class="section-credits content-wrapper">
-  <div class="full-width-col">
+  <div class="inner-column-wide">
 
     <div class="scalability-wrap">
       <h3>Description:</h3>
@@ -38,12 +38,13 @@
       <?php endwhile; ?>
     </div>
 
+
     <div class="tags-wrapper">
       <h3>Tags:</h3>
 
       <div class="tags">
         <?php if(get_the_tag_list()) {
-          echo get_the_tag_list('<ul class="tag-list"><li>','</li><li>','</li></ul>');
+          echo get_the_tag_list('<ul class="tag-list"><li class="tag-li">','</li><li>','</li></ul>');
         } ?>
 
         <?php $id = get_the_id(); ?>

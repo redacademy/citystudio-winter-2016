@@ -26,10 +26,10 @@ $school_langara = new WP_Query( $args ); ?>
       "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
        background-size: cover;
        box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);">
-       
+
        <div class="tag-description">
          <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
-         <div class="tag-subtitle"><p><?php the_field( 'excerpt' ); ?></p></div>
+         
        </div>
     </li>
     </a>
