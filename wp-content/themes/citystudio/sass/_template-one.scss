@@ -87,7 +87,6 @@
   box-shadow: 0 0 8px #666666;
   &:hover {
     box-shadow: 0 0 12px #666666;
-    transition: all 0.25s ease;
     background-color: lighten($light-blue, 1);
   }
   .become-involved {

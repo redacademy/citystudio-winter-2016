@@ -70,13 +70,6 @@ jQuery(document).ready(function($) {
     reloadProjects();
 
   });
-
-  $('#refresh').hover(
-    function(){
-      $('.refresh-hover').css({"opacity": 1});
-  }, function () {
-     $('.refresh-hover').css({"opacity": 0});
-  });
   // Remove class current-menu if mouse isn't hovering over menu-item
   $('.themes').on('click', function(){
     $(this).children('.nav-sub-menu').children().addClass('current-menu');
@@ -140,7 +133,8 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          // url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          url: 'http://localhost:3000/citystudio-winter-2016/wp-js/v2/project?'+filters()+'&filter[posts_per_page]=16',
           success: function(response, data, status) {
             var projects = response;
             console.log("response", response);
