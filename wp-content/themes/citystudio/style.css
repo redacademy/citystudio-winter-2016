@@ -3013,11 +3013,9 @@ a {
   color: #2cb5e8;
   padding-top: 2em;
   opacity: 0;
-  position: absolute;
-  transition: all 1s ease-in; }
-  @media screen and (min-width: 750px) {
-    .refresh-hover {
-      display: none; } }
+  /*position: absolute;*/
+  transition: all 1s ease-in;
+  display: none; }
   @media screen and (min-width: 1024px) {
     .refresh-hover {
       display: block;

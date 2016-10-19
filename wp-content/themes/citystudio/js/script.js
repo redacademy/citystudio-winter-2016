@@ -44,6 +44,13 @@ jQuery(document).ready(function($){
     $('.sub-menu').hide();
   })
 
+  $('#refresh').hover(function(){
+    $('.refresh-hover').css('opacity', 1);
+
+  }, function(){
+    $('.refresh-hover').css('opacity', 0);
+  });
+
   // $(window).scroll(function(){
   //
   //   if ($('body').hasClass('blog') ) {
