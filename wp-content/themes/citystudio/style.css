@@ -2169,7 +2169,12 @@ object {
   font-weight: bold;
   font-family: "open_sans";
   color: #fff;
-  text-decoration: none; }
+  text-decoration: none;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
 
 .tag-subtitle {
   display: none; }
@@ -2501,9 +2506,11 @@ a {
   font-family: "open_sans";
   color: #fff;
   text-decoration: none;
-  text-overflow: ellipsis;
   overflow: hidden;
-  white-space: nowrap; }
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; }
 
 .subtitle {
   font-size: 1rem;
@@ -3678,7 +3685,7 @@ h1.page-titles {
         min-height: 200px;
         -ms-flex: 0 0 80%;
             flex: 0 0 80%;
-        padding: 1em; } }
+        padding: 0 1%; } }
     @media screen and (min-width: 1024px) {
       .citystudio-teams ul {
         -ms-flex-direction: row;
@@ -3687,8 +3694,7 @@ h1.page-titles {
         display: flex;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
-        min-height: 100px;
-        padding: 0; } }
+        min-height: 100px; } }
 
 .team {
   display: -ms-flexbox;
@@ -3776,6 +3782,10 @@ h1.page-titles {
       flex-wrap: wrap;
   -ms-flex-pack: center;
       justify-content: center;
+  -ms-flex-align: baseline;
+      align-items: baseline;
+  -ms-flex-item-align: baseline;
+      align-self: baseline;
   padding: 1em;
   -ms-flex: 0 1 20%;
       flex: 0 1 20%;
@@ -4190,11 +4200,9 @@ article.people {
   .blog-featured-image:hover {
     box-shadow: 4px 5px 20px 0 rgba(0, 0, 0, 0.35);
     transition: all 0.25s ease;
-    left: 3px; }
+    bottom: 3px; }
 
 .blog-credits {
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 80%;
   height: 55%;
   box-sizing: border-box;
@@ -4229,17 +4237,17 @@ article.people {
   .blog-credits p {
     display: block;
     width: 90%;
-    text-overflow: ellipsis;
-    overflow-y: hidden;
-    overflow-x: visible;
-    white-space: nowrap;
     font-size: 0.8em;
-    margin: 1em 0; }
+    margin: 1em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.15em; }
     @media screen and (min-width: 1024px) {
       .blog-credits p {
         font-weight: lighter;
-        line-height: 1em;
-        font-size: 0.8em;
         font-family: "open_sans"; } }
   .blog-credits a {
     color: white;
@@ -4261,7 +4269,7 @@ article.people {
 .category-links {
   display: none;
   position: absolute;
-  bottom: 13px; }
+  bottom: 10px; }
   @media screen and (min-width: 750px) {
     .category-links {
       display: block; } }

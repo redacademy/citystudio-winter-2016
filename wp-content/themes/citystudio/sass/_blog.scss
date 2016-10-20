@@ -150,12 +150,10 @@
   &:hover {
     box-shadow: 4px 5px 20px 0 rgba(0,0,0,0.35);
     transition: all 0.25s ease;
-    left: 3px;
+    bottom: 3px;
   }
 }
 .blog-credits {
-  overflow: hidden;
-  text-overflow: ellipsis;
   width: 80%;
   height: 55%;
   box-sizing: border-box;
@@ -193,17 +191,18 @@
   p {
     display: block;
     width: 90%;
-    text-overflow: ellipsis;
-    overflow-y: hidden;
-    overflow-x: visible;
-    white-space: nowrap;
     font-size: 0.8em;
     margin: 1em 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    line-height: 1.15em;
     @include tablet {}
     @include desktop {
       font-weight: lighter;
-      line-height: 1em;
-      font-size: 0.8em;
+
       font-family: $fontfamily;
     }
   }
@@ -228,7 +227,7 @@
 .category-links {
   display: none;
   position: absolute;
-  bottom: 13px;
+  bottom: 10px;
   @include tablet {
     display: block;
   }
