@@ -4,9 +4,7 @@
 /* Tag Archive Page */
 
 .tag-section-archives{
-  @include desktop {
-      width: 100%;
-  }
+    width: 95%;
 }
 
 .tag-archives {
@@ -139,9 +137,11 @@ width: 92%;
   font-family: $fontfamily;
   color: #fff;
   text-decoration: none;
-  // text-overflow: ellipsis;
-  // overflow: hidden;
-  // white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .tag-subtitle {
   display: none;
