@@ -872,9 +872,7 @@ a {
   .icon-menu .fa {
     color: #2cb5e8;
     font-size: 2rem; }
-    .icon-menu .fa:hover, .icon-menu .fa:visited {
-      color: #0082b9; }
-    .icon-menu .fa:active {
+    .icon-menu .fa:hover, .icon-menu .fa:visited, .icon-menu .fa:active {
       color: #0082b9; }
 
 /*----------- menu nav -------------*/

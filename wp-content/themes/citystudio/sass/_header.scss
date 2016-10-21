@@ -95,7 +95,7 @@
       font-size: 1em;
       margin: -0.5em 0;
     }
-    &:hover{
+    &:hover {
     color: $medium-blue;
     }
   }
@@ -128,10 +128,7 @@
   .fa {
     color: $light-blue;
     font-size: 2rem;
-    &:hover, &:visited {
-      color: $medium-blue;
-    }
-    &:active {
+    &:hover, &:visited, &:active{
       color: $medium-blue;
     }
   }
