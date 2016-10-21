@@ -6,7 +6,10 @@
   align-items: center;
   justify-content: space-between;
   background: $dark-blue;
+  padding: 5% 2% 0 2%;
+  @include tablet {
   padding: 2% 2% 0 2%;
+}
 }
 
 //Footer Branding----------------------
@@ -42,7 +45,7 @@
 }
 .social-icons-div {
   display: flex;
-  width: 95vw;
+  width: 100%;
   flex-basis: 100%;
   order: 2;
   justify-content: center;

@@ -56,7 +56,7 @@
 
 .searchform-container {
   width: 100%;
-  height: 70px;
+  height: 130px;
   margin-right: 1em;
 
   @include tablet {
@@ -66,7 +66,6 @@
 
   @include desktop {
     width: 70%;
-    height: 100px;
   }
 }
 
@@ -74,11 +73,13 @@
   margin-bottom: 0;
   padding-left: 1em;
   width: 100%;
-
-  @include desktop {
-    margin-top: .75em;
+  @include tablet {
+    margin-bottom: 15px;
     width: 100%;
   }
+  @include desktop {
+  margin-bottom: 0px;
+}
 }
 
 .searchpage {
@@ -89,7 +90,6 @@
   fieldset {
     border: none;
     color: transparent;
-    margin: 0 5%;
     position: relative;
   }
 

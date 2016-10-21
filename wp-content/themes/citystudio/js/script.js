@@ -11,33 +11,33 @@ jQuery(document).ready(function($){
       });
     };
 
-  $(window).scroll(function(){
-
-    if ($('body').hasClass('home page') ) {
-    var sticky = $('.sticky-navigation'),
-        grid = $('.homepage-titles'),
-        explore = $('.explore-section'),
-        scroll = $(window).scrollTop(),
-        bottomOffset = grid.offset().top,
-        topOffset = explore.offset().top;
-
-      if (scroll >= bottomOffset) {
-        sticky.addClass("fixed");
-        sticky.show();
-      }
-
-      if(scroll >= topOffset) {
-        sticky.removeClass("fixed");
-        sticky.hide();
-      }
-
-      else if (scroll <= (bottomOffset) )  {
-        sticky.removeClass("fixed");
-
-      }
-
-    }
-  });
+  // $(window).scroll(function(){
+  //
+  //   if ($('body').hasClass('home page') ) {
+  //   var sticky = $('.sticky-navigation'),
+  //       grid = $('.homepage-titles'),
+  //       explore = $('.explore-section'),
+  //       scroll = $(window).scrollTop(),
+  //       bottomOffset = grid.offset().top,
+  //       topOffset = explore.offset().top;
+  //
+  //     if (scroll >= bottomOffset) {
+  //       sticky.addClass("fixed");
+  //       sticky.show();
+  //     }
+  //
+  //     if(scroll >= topOffset) {
+  //       sticky.removeClass("fixed");
+  //       sticky.hide();
+  //     }
+  //
+  //     else if (scroll <= (bottomOffset) )  {
+  //       sticky.removeClass("fixed");
+  //
+  //     }
+  //
+  //   }
+  // });
 
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){

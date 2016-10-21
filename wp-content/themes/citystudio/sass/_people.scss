@@ -71,8 +71,8 @@
 .citystudio-teams {
   display: block;
   ul {
+    display: block;
     flex-direction: column;
-    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     flex: 0 0 75%;
@@ -86,8 +86,6 @@
       padding: 0 1%;
     }
     @include desktop {
-      flex-direction: row;
-      display: flex;
       flex: 0 0 100%;
       min-height: 100px;
     }
