@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
         scroll = $(window).scrollTop(),
         bottomOffset = grid.offset().top,
         topOffset = explore.offset().top;
-
+  
       if (scroll >= bottomOffset) {
         sticky.addClass("fixed");
         sticky.show();

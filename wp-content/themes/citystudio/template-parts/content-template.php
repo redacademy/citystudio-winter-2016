@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying the call to action 
+ * Template part for displaying the call to action
  *
  * @package RED_Starter_Theme
  */
@@ -23,6 +23,6 @@
 <div class="connect">
   <label class="become-involved">Become Involved!</label>
   <?php $urls = get_field('cta_link'); ?>
-  <a href="<?php echo $urls ?>" class="connect-button bounceIn"><p>Connect</p></a>
+  <a href="<?php echo $urls ?>" class="connect-button"><p>Connect</p></a>
 </div>
 <?php  endwhile; ?>

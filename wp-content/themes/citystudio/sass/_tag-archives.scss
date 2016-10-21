@@ -4,9 +4,7 @@
 /* Tag Archive Page */
 
 .tag-section-archives{
-  @include desktop {
-      width: 100%;
-  }
+    width: 95%;
 }
 
 .tag-archives {
@@ -79,7 +77,6 @@ width: 92%;
   @include tablet {
     justify-content: space-around;
     margin: 2em auto;
-    display: flex;
   }
   @include desktop {
   margin: 2em auto;
@@ -88,22 +85,24 @@ width: 92%;
   a {
     border: 1px solid transparent;
     flex: 0 0 93%;
-    height: 240px;
-    min-height: 240px;
+    height: 230px;
+    min-height: 230px;
     min-width: 330px;
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 2em;
     @include tablet {
       flex: 0 0 47%;
-      min-height: 240px;
+      min-height: 230px;
       min-width: 330px;
       margin-bottom: 2em;
-      max-height: 240px;
+      max-height: 230px;
       max-width: 330px;
     }
     @include desktop {
-      flex: 0 0 30%;
+      flex: 0 0 31%;
+      height: 200px;
+      width: 280px;
     }
     &:hover {
       border: 1px solid white;
@@ -139,9 +138,11 @@ width: 92%;
   font-family: $fontfamily;
   color: #fff;
   text-decoration: none;
-  // text-overflow: ellipsis;
-  // overflow: hidden;
-  // white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
 }
 .tag-subtitle {
   display: none;
