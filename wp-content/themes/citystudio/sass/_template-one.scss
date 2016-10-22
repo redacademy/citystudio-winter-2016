@@ -27,7 +27,6 @@
   }
 }
 .template-hero {
-  margin-top: 2em;
   width: 100%;
   height: auto;
 }
@@ -43,30 +42,37 @@
   }
 }
 .call-to-action {
-  display: flex;
-  justify-content: center;
-  position: relative;
   background-color: $color__background-offwhite;
   padding: 2em;
   font-size: 18px;
-  align-items: center;
+
+  .cta-inner {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
   .cta-heading {
     width: 90%;
     padding-bottom: 2%;
     font-family: $fontfamily;
   }
+
   .cta-content {
     width: 100%;
     margin: 1em 0;
+
     p {
       font-family: $fontfamily;
       font-size: 0.8em;
       width: 90%;
+
       @include tablet {
         display: block;
       }
     }
   }
+
   @include tablet {
     justify-content: space-around;
   }

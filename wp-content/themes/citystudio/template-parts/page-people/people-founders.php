@@ -16,7 +16,8 @@ $citystudio_founders = new WP_Query( $args ); ?>
 <?php /* Start the Loop */ ?>
 
 
-<div class="citystudio-teams team-container">
+<div class="team-container">
+
 
   <h2 class="section-titles">Founder's Circle</h2>
 
@@ -30,8 +31,10 @@ $citystudio_founders = new WP_Query( $args ); ?>
           </li>
 
       <?php endwhile; ?>
+
   </ul>
 </div>
 <?php else : ?>
+
 
 <?php endif; ?>

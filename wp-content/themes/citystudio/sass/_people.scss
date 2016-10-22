@@ -27,6 +27,11 @@
     min-height: 280px;
   }
 }
+
+.people-archive {
+  margin-bottom: 4em;
+}
+
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -35,6 +40,7 @@
   flex-direction: column;
   width: 100%;
   align-items: center;
+
   .section-one-title {
     font-weight: bold;
     font-family: $fontfamily;
@@ -43,20 +49,24 @@
     text-align: center;
     margin: 2em 0 1em;
     font-size: 1.5em;
+
     @include desktop {
       font-size: 2em;
       margin: 2em 0;
     }
   }
+
   .section-titles {
     display: block;
     flex: 0 1 100%;
     text-align: center;
-    margin: 1em 0 0.5em;
+    margin: 1em 0;
     font-size: 1.5em;
+
     @include tablet {
       margin: 0 0 1em;
     }
+
     @include desktop {
       font-size: 2em;
     }
@@ -65,26 +75,30 @@
 .team-ul-special {
   min-height: 350px !important;
 }
+
 .people-wrap {
   display: block;
 }
+
 .citystudio-teams {
   display: block;
+  margin-bottom: 4em;
+
   ul {
-    display: block;
-    flex-direction: column;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    flex: 0 0 75%;
+    flex: 0 0 50%;
     max-width: 100%;
     min-height: 300px;
+
     @include tablet {
       flex-direction: row;
-      display: flex;
       min-height: 200px;
       flex: 0 0 80%;
       padding: 0 1%;
     }
+
     @include desktop {
       flex: 0 0 100%;
       min-height: 100px;
@@ -93,16 +107,18 @@
 }
 .team {
   display: flex;
-  flex: 0 0 40%;
+  flex: 0 0 50%;
   flex-wrap: wrap;
   justify-content: center;
   max-height: 340px;
   align-items: center;
   padding: 1em;
   text-align: center;
+
   @include desktop {
-    flex: 0 1 22%;
+    flex: 0 1 33%;
   }
+
   .team-pic {
     flex: 0 1 100%;
     border-radius: 50%;
@@ -149,12 +165,16 @@
 }
 .people-list {
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: center;
+  margin-top: 3em;
+  max-width: 90%;
+
   @include tablet {
     flex-direction: row;
   }
+
   @include desktop {
     flex-direction: row;
   }
@@ -168,14 +188,17 @@
   align-items: baseline;
   align-self: baseline;
   padding: 1em;
-  flex: 0 1 20%;
+  flex: 0 1 45%;
   min-height: 100px;
+
   @include tablet {
-    flex: 0 1 40%;
+    flex: 0 1 33%;
   }
+
   @include desktop {
     flex: 0 1 20%;
   }
+
   h3 {
     text-decoration: none;
     text-align: center;

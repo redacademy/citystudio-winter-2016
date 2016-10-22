@@ -182,12 +182,15 @@
 }
 .dropdown-content {
   position: absolute;
-  right: 6px;
+  right: 0px;
+  top: 10px;
   width: 100vw;
   visibility: hidden;
   z-index: 999;
 
   @include tablet {
+    right: 30px;
+    top: 52px;
     width: 450px;
   }
 }

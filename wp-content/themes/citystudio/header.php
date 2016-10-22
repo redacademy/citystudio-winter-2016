@@ -40,13 +40,11 @@
 					<button onclick="showMenu()" class="hamburger" id="hamburgerMenu"><i class="fa fa-bars"></i>
 						<div class="header-menu-title">Menu</div>
 					</button>
-
-					<div class="dropdown-content">
-						<nav class="header-nav">
-		  				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-						</nav>
-					</div>
-
 				</div><!-- close search gallery -->
+				<div class="dropdown-content">
+					<nav class="header-nav">
+						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+					</nav>
+				</div>
 			</div> 	<!--close header container -->
 		</header><!-- #masthead -->
