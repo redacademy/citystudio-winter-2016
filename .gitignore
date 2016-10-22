@@ -31,6 +31,7 @@ access_log
 
 # Ignore npm packages #
 # =============== #
+
 wp-content/themes/citystudio/node_modules/
 wp-content/themes/citystudio/gulpfile.js
 
