@@ -101,6 +101,10 @@ function citystudio_scripts() {
 	wp_enqueue_script( 'script.js', get_template_directory_uri() . '/js/script.js', array( 'jquery' ), '2.2.0' );
 
 	wp_enqueue_script( 'sort-function.js', get_template_directory_uri() . '/js/sort-function.js', array('jquery'), '2.2.0'  );
+	
+	wp_localize_script( 'sort-function.js', 'api_vars', array(
+		'rest_url' => esc_url_raw( rest_url() )
+	) );
 
 }
 
@@ -110,17 +114,17 @@ add_action( 'wp_enqueue_scripts', 'citystudio_scripts' );
 
 // Localize API script
 
-function filter_scripts() {
-	$script_url = get_template_directory_uri(). '/build/js/script.min.js';
+// function filter_scripts() {
+// 	$script_url = get_template_directory_uri(). '/build/js/script.min.js';
 
-	wp_enqueue_script( 'filter_gallery', $script_url, array( 'jquery' ), false, true );
+// 	wp_enqueue_script( 'filter_gallery', $script_url, array( 'jquery' ), false, true );
 
-	wp_localize_script( 'filter_gallery', 'api_vars', array(
-		'rest_url' => esc_url_raw( rest_url() )
-	) );
+// 	wp_localize_script( 'filter_gallery', 'api_vars', array(
+// 		'rest_url' => esc_url_raw( rest_url() )
+// 	) );
 
-}
-add_action( 'wp_enqueue_scripts', 'filter_scripts' );
+// }
+// add_action( 'wp_enqueue_scripts', 'filter_scripts' );
 
 // Custom function to return image url in the API callback
 function slug_register_featured_image_url() {
