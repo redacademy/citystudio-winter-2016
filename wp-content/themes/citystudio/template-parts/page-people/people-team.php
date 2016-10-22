@@ -16,11 +16,11 @@ $citystudio_team = new WP_Query( $args ); ?>
 
 <?php /* Start the Loop */ ?>
 
-<div class="citystudio-teams team-container">
+<div class="team-container">
 
   <h2 class="section-one-title">CityStudio Vancouver Team</h2>
 
-  <ul>
+  <ul class="people-list">
 
   <?php while ( $citystudio_team->have_posts() ) : $citystudio_team->the_post(); ?>
 
@@ -44,8 +44,11 @@ $citystudio_team = new WP_Query( $args ); ?>
                 </li>
 
       <?php endwhile; ?>
+      <hr class="separate">
   </ul>
+
 </div>
+
 
 <?php else : ?>
 

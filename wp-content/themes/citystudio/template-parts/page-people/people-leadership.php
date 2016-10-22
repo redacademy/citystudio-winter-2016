@@ -14,10 +14,10 @@ $citystudio_leadership = new WP_Query( $args ); ?>
 <?php if (   $citystudio_leadership->have_posts() ) : ?>
 
 <?php /* Start the Loop */ ?>
-<div class="citystudio-teams">
 
-  <div class="citystudio-teams team-container">
+  <div class="team-container">
     <h2 class="section-titles">Leadership Council</h2>
+
 
     <ul class="people-list">
 
@@ -29,6 +29,7 @@ $citystudio_leadership = new WP_Query( $args ); ?>
       </li>
 
     <?php endwhile; ?>
+      <hr class="separate">
     </ul>
 </div>
 

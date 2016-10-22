@@ -16,13 +16,13 @@ get_header();
         </header>
 
 	      <?php get_template_part( 'template-parts/page-people/people', 'team' ); ?>
-					<hr class="separate">
+
 	      <?php get_template_part( 'template-parts/page-people/people', 'leadership' ); ?>
-					<hr class="separate">
+
 	      <?php get_template_part( 'template-parts/page-people/people', 'operations' ); ?>
-					<hr class="separate">
+
 	      <?php get_template_part( 'template-parts/page-people/people', 'founders' ); ?>
-					<hr class="separate">
+
       </div><!-- .people-archive -->
 	</main><!-- #main -->
 </div><!-- #primary -->
