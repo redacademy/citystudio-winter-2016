@@ -133,14 +133,10 @@ jQuery(document).ready(function($) {
       $.ajax({
           type: 'GET',
           dataType: 'json',
-          url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
+          url: 'http://citystudio.staging.wpengine.com/wp-json/'+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           // url: '-2016/wp-json/wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
             success: function(response, data, status) {
             var projects = response;
-            console.log("response", response);
-            console.log("data", data);
-            console.log("url", url);
-            console.log("status", status);
             // response.addHeader("Access-Control-Allow-Origin", "*");
             // create gallery method to append HTML to
             var $gallery = $('.grid');
