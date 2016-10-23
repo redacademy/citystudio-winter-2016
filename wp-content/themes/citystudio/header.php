@@ -37,8 +37,9 @@
 				  </a>
 				</div>
 				<div class="site-navigation">
-					<button onclick="showMenu()" class="hamburger" id="hamburgerMenu"><i class="fa fa-bars"></i>
-						<div class="header-menu-title">Menu</div>
+					<button onclick="showMenu()" class="hamburger" id="hamburgerMenu">
+
+						<p class="header-menu-title"><i id="menu-icon" class="fa fa-bars"></i> Menu</p>
 					</button>
 				</div><!-- close search gallery -->
 				<div class="dropdown-content">
