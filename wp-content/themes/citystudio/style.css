@@ -2881,6 +2881,7 @@ a {
   @media screen and (min-width: 750px) {
     .open {
       width: 100%;
+      height: 10%;
       display: -ms-flexbox;
       display: flex;
       -ms-flex-pack: center;
@@ -3210,7 +3211,7 @@ a {
   .year-labels label {
     font-size: .7rem;
     text-transform: capitalize;
-    margin-right: -20px; }
+    margin-right: -5px; }
     .theme-labels label::after,
     .part-labels label::after,
     .year-labels label::after {
