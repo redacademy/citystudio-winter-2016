@@ -861,7 +861,8 @@ a {
       margin-top: -4px; } }
 
 .header-menu-title {
-  display: none;
+  display: -ms-flexbox;
+  display: flex;
   text-transform: uppercase;
   color: #2cb5e8;
   -ms-flex-preferred-size: 100%;
@@ -871,8 +872,6 @@ a {
   margin: 0; }
   @media screen and (min-width: 750px) {
     .header-menu-title {
-      display: -ms-flexbox;
-      display: flex;
       -ms-flex-pack: end;
           justify-content: flex-end;
       -ms-flex-align: center;

@@ -132,7 +132,7 @@
 }
 
 .header-menu-title {
-  display: none;
+  display: flex;
   text-transform: uppercase;
   color: $light-blue;
   flex-basis: 100%;
@@ -140,8 +140,7 @@
   order: 2;
   margin: 0;
 
-  @include tablet{
-    display: flex;
+  @include tablet {
     justify-content: flex-end;
     align-items: center;
     // margin: -7px;
