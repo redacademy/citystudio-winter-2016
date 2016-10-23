@@ -7,7 +7,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 <!-- "info main top section -->
-<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full' );?>
+			<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($page->slug), 'full' );?>
       <header class="title-banner blog-banner" style="background-image: url( <?php echo $thumb['0'];?> ); ">
 				<div class="gradient-overlay">
 					<div class="title-container">
@@ -31,6 +31,7 @@ get_header(); ?>
 						'page_slug' => 'blog',
  						'post__not_in' => array('project','people','Partners')
 					);
+
 					$citystudio_blog = new WP_Query( $args ); ?>
 
 					<?php if (   $citystudio_blog->have_posts() ) : ?>
@@ -57,12 +58,17 @@ get_header(); ?>
 					      <?php endwhile; ?>
 
 					<div class="blog-pagination">
-						<?php echo paginate_links( $args ); ?>
+						<div class="newer-posts-link">
+							<?php previous_posts_link( '<< Newer posts' ); ?>
+						</div>
+						<div class="older-posts-link">
+							<?php next_posts_link( 'Older posts >>' ); ?>
+						</div>
 	  			</div>
 
 					<?php wp_reset_postdata(); ?>
 					<?php else:  ?>
-					  <p><?php _e( 'Sorry, no posts matched your criteria. You have reached the end of the blog! For more updates, check out our Twitter, Facebook, and other social media feeds!' ); ?></p>
+					  <p class="end-of-blog-msg"><?php _e( 'You have reached the end of the blog! Thank you for your interest in CityStudio Vancouver. For more updates, follow us on Twitter, Facebook, and Instagram!' ); ?></p>
 
 					<?php endif; ?>
 
