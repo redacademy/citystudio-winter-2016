@@ -5,7 +5,7 @@
 .search-archive-header {
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
   background-size: cover;
-  height: 8em;
+  height: auto;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -56,12 +56,13 @@
 
 .searchform-container {
   width: 100%;
-  height: 130px;
   margin-right: 1em;
+  margin-bottom: 1em;
 
   @include tablet {
     width: 100%;
     height: auto;
+    margin: 0;
   }
 
   @include desktop {
@@ -185,12 +186,14 @@
   align-items: center;
   width: 90%;
   margin: 2em auto;
+
   @include tablet {
     justify-content: space-between;
   }
+
   @include desktop {
     justify-content: space-around;
-  margin: 3em auto;
+    margin: 3em auto;
   }
 
   li, a {
@@ -199,10 +202,10 @@
     height: 240px;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 1.5em;
+
     @include tablet {
       flex: 0 0 47%;
       max-height: 240px;
-      max-width: 330px;
     }
 
     @include desktop {

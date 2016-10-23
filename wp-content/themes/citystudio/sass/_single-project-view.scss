@@ -4,6 +4,10 @@
 .section-credits {
   display: flex;
   justify-content: center;
+
+  img {
+    margin-top: 1em;
+  }
 }
 // HEADER
 h1.page-titles {
