@@ -19,7 +19,7 @@
             <?php if (have_rows('school_courses'));
               while (have_rows('school_courses')) : the_row(); ?>
                 <li>
-                  <a href ="<?php the_sub_field('course_link') ?>"><?php the_sub_field('course_name') ?> </a>
+                  <a target="_blank" href="<?php the_sub_field('course_link') ?>"><?php the_sub_field('course_name') ?> </a>
                 </li>
               <?php endwhile; ?>
 
