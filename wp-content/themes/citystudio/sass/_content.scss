@@ -107,11 +107,12 @@ took out for tags page
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding: 3% 4%;
 
   @include blue-to-blue;
   opacity: 0.9;
   width: 100%;
-  min-height: 2em;
+  // min-height: 2em;
   height: 100%;
   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
   font-weight: 700;
@@ -125,7 +126,7 @@ took out for tags page
   @include desktop {
     background-size: cover;
     background-position: center center;
-    min-height: 6em;
+    // min-height: 6em;
     height: 100%;
   }
 
