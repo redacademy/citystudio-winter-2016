@@ -402,6 +402,7 @@
   visibility: hidden;
   transition: height .3s ease;
   height: 5em;
+
   @include tablet{
     visibility: visible;
     display: block;
@@ -422,8 +423,9 @@
 }
 .sticky-navigation.fixed{
   visibility: hidden;
+
     @include tablet{
-      transition: all .5s ease;
+      transition: height .5s ease;
       visibility: visible;
       display: flex;
       height: 5em;

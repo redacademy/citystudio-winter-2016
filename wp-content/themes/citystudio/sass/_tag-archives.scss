@@ -10,47 +10,42 @@
 .tag-archives {
   background-color: $medium-blue;
   padding-top: 1em;
+
   @include tablet {
     padding-top: 2em;
   }
+
   main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
   }
+
   .archive-header {
     background-color: #fff;
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 1.5rem;
-    width: 88vw;
-    padding: 0 .5em;
-    min-height: 2.5rem;
+    width: 90%;
+    padding: 1% 2%;
+    // min-height: 2.5rem;
     text-transform: capitalize;
-    margin: .5em 0;
+    margin: 1em 0;
 
     @include tablet {
-      width: 90vw;
-      min-height: 4rem;
+      // min-height: 4rem;
       margin-top: 0;
     }
     @include desktop {
-      min-height: 5rem;
+      // min-height: 5rem;
     }
 
     h2 {
       font-family: 'open_sans', bold;
-      font-size: 1em;
+      font-size: 1.6em;
       color: $light-blue;
       font-weight: 900;
-      margin-top: 0.2rem;
-      @include tablet {
-        font-size: 2em;
-        margin-top: -0.25rem;
-      }
-      @include desktop {
-        font-size: 2.5em;
-      }
+
       span {
         color: $dark-blue;
       }
@@ -61,11 +56,9 @@
   }
 }
 .section-archives {
-width: 94%;
-@include tablet {
-width: 92%;
+width: 90%;
 }
-}
+
 .tag-gallery {
   display: flex;
   flex-direction: row;
@@ -74,35 +67,39 @@ width: 92%;
   align-items: center;
   width: 100%;
   margin-top: 1em;
+
   @include tablet {
     justify-content: space-around;
     margin: 2em auto;
   }
+
   @include desktop {
   margin: 2em auto;
-}
+  }
+
   li,
   a {
     border: 1px solid transparent;
     flex: 0 0 93%;
     height: 230px;
     min-height: 230px;
-    min-width: 330px;
+    // min-width: 330px;
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 2em;
+
     @include tablet {
       flex: 0 0 47%;
       min-height: 230px;
-      min-width: 330px;
+      // min-width: 330px;
       margin-bottom: 2em;
       max-height: 230px;
-      max-width: 330px;
+      // max-width: 330px;
     }
     @include desktop {
       flex: 0 0 31%;
       height: 200px;
-      width: 280px;
+      // width: 280px;
     }
     &:hover {
       border: 1px solid white;

@@ -44,7 +44,7 @@ get_header(); ?>
                             while (have_rows('media_links')) : the_row(); ?>
 							<p class="media-links">
 
-								<a href ="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
+								<a target="_blank" href="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
 							</p>
 							<?php endwhile; ?>
 							<div class="no-media">
