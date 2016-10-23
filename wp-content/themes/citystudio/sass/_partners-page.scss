@@ -166,6 +166,27 @@ margin: 0;
   width: 100%;
   margin: 0 auto;
 
+  a {
+    flex: 0 0 93%;
+    height: 230px;
+    min-height: 230px;
+    width: 100%;
+    box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+    margin-bottom: 2em;
+
+    @include tablet {
+      flex: 0 0 47%;
+      min-height: 230px;
+      margin-bottom: 2em;
+      max-height: 230px;
+    }
+
+    @include desktop {
+      flex: 0 0 31%;
+      height: 200px;
+    }
+  }
+
   a,
   a:hover {
     text-decoration: none;
@@ -176,26 +197,27 @@ margin: 0;
     justify-content: space-between;
 
     a {
+      flex-basis: 45%;
       width: 46%;
     }
   }
 
   @include desktop {
     a {
-      width: 30%;
+      flex-basis: 31%;
+      width: 31%;
     }
   }
-
-
 
   li {
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     border: 1px solid transparent;
-    flex: 0 0 100%;
+    display: block;
+    // flex: 0 0 100%;
     margin-bottom: 2em;
-    flex-basis: 100%;
+    // flex-basis: 100%;
     list-style: none;
-    height: 240px;
+    height: 230px;
     // width: 330px;
 
     @include tablet {
@@ -203,7 +225,7 @@ margin: 0;
     }
 
     @include desktop {
-      flex: 0 0 30%;
+      flex: 0 0 31%;
     }
 
     &:hover {

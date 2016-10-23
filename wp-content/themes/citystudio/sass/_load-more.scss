@@ -30,12 +30,12 @@ a.js-load-more {
   font-size: 1em;
   font-weight: lighter;
   &:active,
-  &:visited,
-  &:focus {
+  &:visited {
     color: #ffffff !important;
     outline: none;
   }
-  &:hover {
+
+  &:hover, &:focus {
     background-color: #ffffff;
     border: 1px solid $dark-blue;
     color: $dark-blue;

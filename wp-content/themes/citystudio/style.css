@@ -2071,42 +2071,25 @@ object {
     border-radius: 5px;
     box-sizing: border-box;
     font-size: 1.5rem;
-    width: 88vw;
-    padding: 0 .5em;
-    min-height: 2.5rem;
+    width: 90%;
+    padding: 1% 2%;
     text-transform: capitalize;
-    margin: .5em 0; }
+    margin: 1em 0; }
     @media screen and (min-width: 750px) {
       .tag-archives .archive-header {
-        width: 90vw;
-        min-height: 4rem;
         margin-top: 0; } }
-    @media screen and (min-width: 1024px) {
-      .tag-archives .archive-header {
-        min-height: 5rem; } }
     .tag-archives .archive-header h2 {
       font-family: 'open_sans', bold;
-      font-size: 1em;
+      font-size: 1.6em;
       color: #2cb5e8;
-      font-weight: 900;
-      margin-top: 0.2rem; }
-      @media screen and (min-width: 750px) {
-        .tag-archives .archive-header h2 {
-          font-size: 2em;
-          margin-top: -0.25rem; } }
-      @media screen and (min-width: 1024px) {
-        .tag-archives .archive-header h2 {
-          font-size: 2.5em; } }
+      font-weight: 900; }
       .tag-archives .archive-header h2 span {
         color: #006493; }
   .tag-archives h1 {
     margin: 0; }
 
 .section-archives {
-  width: 94%; }
-  @media screen and (min-width: 750px) {
-    .section-archives {
-      width: 92%; } }
+  width: 90%; }
 
 .tag-gallery {
   display: -ms-flexbox;
@@ -2136,7 +2119,6 @@ object {
         flex: 0 0 93%;
     height: 230px;
     min-height: 230px;
-    min-width: 330px;
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     margin-bottom: 2em; }
@@ -2146,17 +2128,14 @@ object {
         -ms-flex: 0 0 47%;
             flex: 0 0 47%;
         min-height: 230px;
-        min-width: 330px;
         margin-bottom: 2em;
-        max-height: 230px;
-        max-width: 330px; } }
+        max-height: 230px; } }
     @media screen and (min-width: 1024px) {
       .tag-gallery li,
       .tag-gallery a {
         -ms-flex: 0 0 31%;
             flex: 0 0 31%;
-        height: 200px;
-        width: 280px; } }
+        height: 200px; } }
     .tag-gallery li:hover,
     .tag-gallery a:hover {
       border: 1px solid white;
@@ -2713,6 +2692,26 @@ a {
       justify-content: center;
   width: 100%;
   margin: 0 auto; }
+  .partner-projects-gallery a {
+    -ms-flex: 0 0 93%;
+        flex: 0 0 93%;
+    height: 230px;
+    min-height: 230px;
+    width: 100%;
+    box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
+    margin-bottom: 2em; }
+    @media screen and (min-width: 750px) {
+      .partner-projects-gallery a {
+        -ms-flex: 0 0 47%;
+            flex: 0 0 47%;
+        min-height: 230px;
+        margin-bottom: 2em;
+        max-height: 230px; } }
+    @media screen and (min-width: 1024px) {
+      .partner-projects-gallery a {
+        -ms-flex: 0 0 31%;
+            flex: 0 0 31%;
+        height: 200px; } }
   .partner-projects-gallery a,
   .partner-projects-gallery a:hover {
     text-decoration: none;
@@ -2722,28 +2721,29 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between; }
       .partner-projects-gallery a {
+        -ms-flex-preferred-size: 45%;
+            flex-basis: 45%;
         width: 46%; } }
   @media screen and (min-width: 1024px) {
     .partner-projects-gallery a {
-      width: 30%; } }
+      -ms-flex-preferred-size: 31%;
+          flex-basis: 31%;
+      width: 31%; } }
   .partner-projects-gallery li {
     box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
     border: 1px solid transparent;
-    -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
+    display: block;
     margin-bottom: 2em;
-    -ms-flex-preferred-size: 100%;
-        flex-basis: 100%;
     list-style: none;
-    height: 240px; }
+    height: 230px; }
     @media screen and (min-width: 750px) {
       .partner-projects-gallery li {
         -ms-flex: 0 0 45%;
             flex: 0 0 45%; } }
     @media screen and (min-width: 1024px) {
       .partner-projects-gallery li {
-        -ms-flex: 0 0 30%;
-            flex: 0 0 30%; } }
+        -ms-flex: 0 0 31%;
+            flex: 0 0 31%; } }
     .partner-projects-gallery li:hover {
       z-index: 1;
       cursor: pointer;
@@ -4416,10 +4416,10 @@ a.js-load-more {
   width: 200px;
   font-size: 1em;
   font-weight: lighter; }
-  a.js-load-more:active, a.js-load-more:visited, a.js-load-more:focus {
+  a.js-load-more:active, a.js-load-more:visited {
     color: #ffffff !important;
     outline: none; }
-  a.js-load-more:hover {
+  a.js-load-more:hover, a.js-load-more:focus {
     background-color: #ffffff;
     border: 1px solid #006493;
     color: #006493; }
