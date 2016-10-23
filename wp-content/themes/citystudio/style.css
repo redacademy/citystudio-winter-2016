@@ -946,11 +946,11 @@ a {
   width: 100vw;
   visibility: hidden;
   z-index: 999;
-  top: 70px; }
+  top: 65px; }
   @media screen and (min-width: 750px) {
     .dropdown-content {
       right: 30px;
-      top: 80px;
+      top: 75px;
       width: 360px; } }
 
 .dropdown-content a {
@@ -1832,7 +1832,7 @@ input[type='email']:focus {
     .search-list {
       -ms-flex-pack: distribute;
           justify-content: space-around;
-      margin: 3em auto; } }
+      margin: 0 auto; } }
   .search-list li, .search-list a {
     border: 1px solid transparent;
     -ms-flex: 0 0 100%;

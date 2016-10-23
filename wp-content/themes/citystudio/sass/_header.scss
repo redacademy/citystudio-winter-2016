@@ -258,11 +258,11 @@
   width: 100vw;
   visibility: hidden;
   z-index: 999;
-  top: 70px;
+  top: 65px;
 
   @include tablet {
     right: 30px;
-    top: 80px;
+    top: 75px;
     width: 360px;
   }
 }
