@@ -29,11 +29,12 @@
     font-family: $fontfamily;
     font-size: 1.75em;
     color: #fff;
-    padding: 0.5em;
+    padding: 1em .5em 0;
     font-size: 1.75em;
     text-align: center;
 
     @include tablet {
+      padding: 0.5em;
       text-align: left;
       margin-left: 2.6%;
     }
@@ -55,25 +56,24 @@
 }
 
 .searchform-container {
-  width: 100%;
-  margin-right: 1em;
+  width: 90%;
   margin-bottom: 1em;
-
   @include tablet {
     width: 100%;
     height: auto;
-    margin: 0;
+    margin-bottom: 0;
+    padding-right: 1em;
   }
 
   @include desktop {
-    width: 70%;
+    width: 60%;
   }
 }
 
 .search-form {
   margin-bottom: 0;
-  padding-left: 1em;
   width: 100%;
+  margin: 0 auto;
   @include tablet {
     margin-bottom: 15px;
     width: 100%;
@@ -81,6 +81,27 @@
   @include desktop {
   margin-bottom: 0px;
 }
+fieldset {
+  border: none;
+  color: transparent;
+  position: relative;
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto !important;
+  width: 100%;
+  background-color: transparent;
+  border: $city-blue;
+  outline: $city-blue;
+  border-radius: 5px;
+  height: 2.2em;
+  position: relative;
+
+  @include desktop {
+    height: 2.25em;
+  }
 }
 
 .searchpage {
@@ -88,27 +109,6 @@
   width: 100%;
   min-height: 700px;
   height: 100%;
-  fieldset {
-    border: none;
-    color: transparent;
-    position: relative;
-  }
-
-  label {
-    display: flex;
-    flex-direction: row;
-    margin: 0 auto !important;
-    width: 100%;
-    background-color: transparent;
-    border: $city-blue;
-    outline: $city-blue;
-    border-radius: 5px;
-    height: 2.2em;
-    position: relative;
-
-    @include desktop {
-      height: 2.25em;
-    }
   }
 
   input {
@@ -185,15 +185,13 @@
   justify-content: center;
   align-items: center;
   width: 90%;
-  margin: 2em auto;
-
+  margin: 0 auto;
   @include tablet {
     justify-content: space-between;
   }
 
   @include desktop {
     justify-content: space-around;
-    margin: 3em auto;
   }
 
   li, a {
@@ -222,8 +220,13 @@
     }
   }
 }
+.search-list-container {
+  background-color: $city-blue;
+  padding-top: 3em;
+  padding-bottom: 3em;
+}
 .search-list-inner{
-  margin-top: 2em;
+  padding-top: 2em;
 }
 
 .alert-info {
