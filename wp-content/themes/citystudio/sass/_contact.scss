@@ -1,26 +1,27 @@
-.contact-header {
-  background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
-  opacity: 0.9;
-  background-size: cover;
-  max-height: 6.6em;
-  width: 100%;
-  box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
-  padding: 2% 4%;
-  @include tablet {
-    height: 3em;
-  }
-  @include desktop {
-    min-height: 6em;
-  }
-  h1 {
-    color: #fff;
-    font-family: $fontfamily;
-    font-size: 2em;
-    @include desktop {
-      font-size: 3em;
-    }
-  }
-}
+// .contact-header {
+//   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
+//   opacity: 0.9;
+//   background-size: cover;
+//   max-height: 6.6em;
+//   width: 100%;
+//   box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
+//   padding: 2% 4%;
+//
+//   @include tablet {
+//     height: 3em;
+//   }
+//   @include desktop {
+//     min-height: 6em;
+//   }
+//   h1 {
+//     color: #fff;
+//     font-family: $fontfamily;
+//     font-size: 2em;
+//     @include desktop {
+//       font-size: 3em;
+//     }
+//   }
+// }
 iframe {
   width: 100vw;
   height: 40vh;

@@ -760,7 +760,8 @@ a {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100; }
+  z-index: 100;
+  margin-bottom: -80px; }
   @media screen and (min-width: 750px) {
     .site-header {
       position: static; } }
@@ -780,10 +781,10 @@ a {
 
 #primary {
   position: relative;
-  margin-top: 3.5em; }
+  top: 68px; }
   @media screen and (min-width: 750px) {
     #primary {
-      margin-top: 0; } }
+      top: 80px; } }
 
 .site-branding {
   -ms-flex-preferred-size: 40%;
@@ -806,13 +807,14 @@ a {
     outline: none; }
 
 .site-branding img {
-  width: 250px;
+  width: 180px;
   height: 100%; }
   .site-branding img:hover {
     -webkit-filter: opacity(0.7);
             filter: opacity(0.7); }
   @media screen and (min-width: 750px) {
     .site-branding img {
+      width: 250px;
       width: 100%; } }
 
 .site-navigation {
@@ -881,6 +883,7 @@ a {
       flex-basis: 100%;
   -ms-flex-order: 2;
       order: 2;
+<<<<<<< HEAD
   margin: 0; }
   @media screen and (min-width: 750px) {
     .header-menu-title {
@@ -889,6 +892,13 @@ a {
       -ms-flex-align: center;
           align-items: center; } }
 >>>>>>> 7adc8e3c85270c5c4598d4a8b16060a63e3a3681
+=======
+  margin: 0;
+  -ms-flex-pack: end;
+      justify-content: flex-end;
+  -ms-flex-align: center;
+      align-items: center; }
+>>>>>>> dc8d127e4e8c586f413eafd62951411b66127e4d
 
 /*----------- menu nav -------------*/
 .dropdown-content a:hover .hamburger {
@@ -954,7 +964,8 @@ a {
   top: 10px;
   width: 100vw;
   visibility: hidden;
-  z-index: 999; }
+  z-index: 999;
+  top: 70px; }
   @media screen and (min-width: 750px) {
     .dropdown-content {
       right: 30px;
@@ -1191,10 +1202,10 @@ took out for tags page
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
   font-weight: 700;
   color: white;
-  padding: 0% 4%; }
+  padding: 3% 4%; }
   @media screen and (min-width: 750px) {
     .citystudio-banner {
-      min-height: 5em; } }
+      padding: 2% 4%; } }
   @media screen and (min-width: 1024px) {
     .citystudio-banner {
       background-size: cover;
@@ -1202,7 +1213,8 @@ took out for tags page
       min-height: 6em;
       height: 100%; } }
   .citystudio-banner .page-titles {
-    font-size: 2.5em; }
+    font-size: 2.5em;
+    line-height: 1.2em; }
     @media screen and (min-width: 750px) {
       .citystudio-banner .page-titles {
         font-size: 3em; } }
@@ -1225,28 +1237,6 @@ took out for tags page
   margin: 0 auto;
   width: 100%;
 }*/
-.contact-header {
-  background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
-  opacity: 0.9;
-  background-size: cover;
-  max-height: 6.6em;
-  width: 100%;
-  box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-  padding: 2% 4%; }
-  @media screen and (min-width: 750px) {
-    .contact-header {
-      height: 3em; } }
-  @media screen and (min-width: 1024px) {
-    .contact-header {
-      min-height: 6em; } }
-  .contact-header h1 {
-    color: #fff;
-    font-family: "open_sans";
-    font-size: 2em; }
-    @media screen and (min-width: 1024px) {
-      .contact-header h1 {
-        font-size: 3em; } }
-
 iframe {
   width: 100vw;
   height: 40vh;
@@ -1495,10 +1485,12 @@ input[type='email']:focus {
   -ms-flex-pack: justify;
       justify-content: space-between;
   background: #006493;
-  padding: 5% 2% 0 2%; }
+  padding: 5% 2% 0 2%;
+  margin-top: 60px; }
   @media screen and (min-width: 750px) {
     .site-footer {
-      padding: 2% 2% 0 2%; } }
+      padding: 2% 2% 0 2%;
+      margin-top: 80px; } }
 
 .footer-branding-container {
   -ms-flex-preferred-size: 100%;
@@ -2048,15 +2040,17 @@ object {
     box-sizing: border-box;
     font-size: 1.5rem;
     width: 90%;
-    padding: 1% 2%;
+    padding: 3% 2%;
     text-transform: capitalize;
     margin: 1em 0; }
     @media screen and (min-width: 750px) {
       .tag-archives .archive-header {
+        padding: 1% 2%;
         margin-top: 0; } }
     .tag-archives .archive-header h2 {
       font-family: 'open_sans', bold;
       font-size: 1.6em;
+      line-height: 1.2em;
       color: #2cb5e8;
       font-weight: 900; }
       .tag-archives .archive-header h2 span {
@@ -3509,8 +3503,9 @@ h1.page-titles {
     font-family: "open_sans";
     font-size: 2em;
     text-align: center;
-    margin: 0.5em 0 0;
-    width: 98%; }
+    margin: 0.5em 0 0.2em;
+    width: 98%;
+    line-height: 1.2em; }
     @media screen and (min-width: 750px) {
       .blog-post-banner h2 {
         font-size: 2.6em; } }
@@ -4082,9 +4077,11 @@ article.people {
       width: 82%; } }
   .title-container h1 {
     font-size: 2.5em;
+    line-height: 1.2em;
     text-align: left !important;
     font-family: "open_sans";
-    color: white; }
+    color: white;
+    margin-bottom: 0.3em; }
   .title-container h4 {
     font-size: 1em;
     font-weight: normal;
@@ -4196,7 +4193,6 @@ article.people {
 
 .blog-credits {
   width: 80%;
-  height: 55%;
   box-sizing: border-box;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;

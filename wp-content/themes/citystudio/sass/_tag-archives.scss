@@ -27,13 +27,13 @@
     box-sizing: border-box;
     font-size: 1.5rem;
     width: 90%;
-    padding: 1% 2%;
+    padding: 3% 2%;
     // min-height: 2.5rem;
     text-transform: capitalize;
     margin: 1em 0;
 
     @include tablet {
-      // min-height: 4rem;
+      padding: 1% 2%;
       margin-top: 0;
     }
     @include desktop {
@@ -43,6 +43,7 @@
     h2 {
       font-family: 'open_sans', bold;
       font-size: 1.6em;
+      line-height: 1.2em;
       color: $light-blue;
       font-weight: 900;
 
