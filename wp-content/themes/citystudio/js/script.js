@@ -26,7 +26,7 @@ jQuery(document).ready(function($){
         sticky.show();
       }
 
-      if(scroll >= topOffset) {
+      if(scroll >= topOffset - 80) {
         sticky.removeClass("fixed");
         sticky.hide();
       }
