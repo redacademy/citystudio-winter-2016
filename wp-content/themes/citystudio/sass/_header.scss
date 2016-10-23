@@ -1,9 +1,8 @@
 
 .home {
   .site-header {
-
     @include tablet{
-      margin-bottom: 0px;  
+      margin-bottom: 0px;
     }
   }
 }
@@ -155,11 +154,15 @@
   justify-content: flex-end;
   align-items: center;
 
+  span {
+    display: none;
+  }
+
   @include tablet {
 
-    // margin: -7px;
-    // width: 100%;
-    // padding: 0 .4em;
+    span {
+      display: block;
+    }
   }
 }
 

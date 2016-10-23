@@ -880,6 +880,11 @@ a {
       justify-content: flex-end;
   -ms-flex-align: center;
       align-items: center; }
+  .header-menu-title span {
+    display: none; }
+  @media screen and (min-width: 750px) {
+    .header-menu-title span {
+      display: block; } }
 
 /*----------- menu nav -------------*/
 .dropdown-content a:hover .hamburger {
@@ -3292,6 +3297,9 @@ a {
       justify-content: center; }
   .section-credits img {
     margin-top: 1em; }
+
+article.project {
+  margin-bottom: 80px; }
 
 h1.page-titles {
   color: white;
