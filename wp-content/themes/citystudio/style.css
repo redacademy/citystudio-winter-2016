@@ -803,24 +803,21 @@ a {
 .site-branding img {
   width: 250px;
   padding: .3em; }
+  .site-branding img:hover {
+    -webkit-filter: opacity(0.7);
+            filter: opacity(0.7); }
   @media screen and (min-width: 750px) {
     .site-branding img {
       width: 100%; } }
 
 .site-navigation {
-  width: 100%;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-preferred-size: 10%;
       flex-basis: 10%;
-  height: 100%;
   margin-right: 3%;
   -ms-flex-order: 2;
       order: 2;
   max-width: 250px;
-  position: relative;
-  -ms-flex-pack: justify;
-      justify-content: space-between; }
+  position: relative; }
   @media screen and (min-width: 750px) {
     .site-navigation {
       -ms-flex-preferred-size: 15%;
@@ -831,61 +828,66 @@ a {
       -ms-flex-preferred-size: 20%;
           flex-basis: 20%; } }
 
-.icon-search {
-  display: none; }
-  @media screen and (min-width: 750px) {
-    .icon-search {
-      position: relative;
-      display: block;
-      font-size: 2em;
-      margin-right: 3.5em; } }
-  @media screen and (min-width: 1024px) {
-    .icon-search {
-      margin-right: 7.5em; } }
-  .icon-search .fa {
-    color: #2cb5e8;
-    font-size: 1em;
-    position: absolute; }
-    @media screen and (min-width: 1024px) {
-      .icon-search .fa {
-        font-size: 1em;
-        margin: -0.5em 0; } }
-    .icon-search .fa:hover {
-      color: #0082b9; }
-  .icon-search a {
-    color: #03648c;
-    border: none;
-    outline: none; }
-
 .hamburger {
   color: #2cb5e8;
   font-weight: 400;
   font-size: 2em;
-  border: none;
-  display: -ms-flexbox;
-  display: flex; }
+  border: none; }
   .hamburger:hover {
     color: #0082b9; }
   .hamburger:active {
     color: #0082b9; }
 
-.icon-menu {
+.header-menu-title {
+  display: none;
+  text-transform: uppercase; }
+  @media screen and (min-width: 750px) {
+    .header-menu-title {
+      display: block;
+      margin: -7px;
+      padding: 0 .4em; } }
+
+button.hamburger {
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  right: .5em;
+  background: 0 0;
+  border: none;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
-      align-items: center;
-  margin: auto 0; }
-  .icon-menu:hover {
+  -ms-flex-direction: row;
+      flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; }
+  button.hamburger:hover {
     color: #0082b9; }
-  .icon-menu .fa {
-    color: #2cb5e8;
-    font-size: 2rem; }
-    .icon-menu .fa:hover, .icon-menu .fa:visited {
-      color: #0082b9; }
-    .icon-menu .fa:active {
-      color: #0082b9; }
+  @media screen and (min-width: 750px) {
+    button.hamburger {
+      top: 0; } }
+  @media screen and (min-width: 1024px) {
+    button.hamburger {
+      position: absolute;
+      margin: -0.5em 0; } }
 
 /*----------- menu nav -------------*/
+.dropdown-content a:hover .hamburger {
+  color: #2cb5e8;
+  font-weight: 400;
+  font-size: 2em;
+  position: absolute;
+  right: 0.5em;
+  background: 0 0;
+  border: none;
+  display: -ms-flexbox;
+  display: flex; }
+  .dropdown-content a:hover .hamburger:hover {
+    color: #0082b9; }
+  @media screen and (min-width: 750px) {
+    .dropdown-content a:hover .hamburger {
+      top: 1em;
+      right: 1em; } }
+
 .header-nav {
   border-top: 4px solid #2cb5e8;
   border-bottom: 4px solid #2cb5e8;
@@ -947,51 +949,6 @@ a {
   font-size: 22px; }
   .dropdown-content a ul li {
     border-left: 2px solid grey !important; }
-
-.dropdown-content a:hover .hamburger {
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  position: absolute;
-  right: 0.5em;
-  background: 0 0;
-  border: none;
-  display: -ms-flexbox;
-  display: flex; }
-  .dropdown-content a:hover .hamburger:hover {
-    color: #0082b9; }
-  @media screen and (min-width: 750px) {
-    .dropdown-content a:hover .hamburger {
-      top: 1em;
-      right: 1em; } }
-
-.header-menu-title {
-  display: none;
-  text-transform: uppercase; }
-  @media screen and (min-width: 750px) {
-    .header-menu-title {
-      display: block;
-      margin: -7px;
-      padding: 0 .4em; } }
-
-button.hamburger {
-  color: #2cb5e8;
-  font-weight: 400;
-  font-size: 2em;
-  right: .5em;
-  background: 0 0;
-  border: none;
-  display: -ms-flexbox;
-  display: flex; }
-  button.hamburger:hover {
-    color: #0082b9; }
-  @media screen and (min-width: 750px) {
-    button.hamburger {
-      top: 0; } }
-  @media screen and (min-width: 1024px) {
-    button.hamburger {
-      position: absolute;
-      margin: -0.5em 0; } }
 
 .header-nav a {
   display: block;
