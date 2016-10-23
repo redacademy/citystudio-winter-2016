@@ -1,3 +1,12 @@
+.home {
+  .site-header {
+
+    @include tablet{
+      margin-bottom: 0px;  
+    }
+  }
+}
+
 .site-header {
   display: block;
   background: white;

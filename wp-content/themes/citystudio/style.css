@@ -753,6 +753,10 @@ a {
   content: "";
   display: table; }
 
+@media screen and (min-width: 750px) {
+  .home .site-header {
+    margin-bottom: 0px; } }
+
 .site-header {
   display: block;
   background: white;
@@ -865,40 +869,17 @@ a {
 .header-menu-title {
   display: -ms-flexbox;
   display: flex;
-<<<<<<< HEAD
-  -ms-flex-align: center;
-      align-items: center;
-  margin: auto 0; }
-  .icon-menu:hover {
-    color: #0082b9; }
-  .icon-menu .fa {
-    color: #2cb5e8;
-    font-size: 2rem; }
-    .icon-menu .fa:hover, .icon-menu .fa:visited, .icon-menu .fa:active {
-      color: #0082b9; }
-=======
   text-transform: uppercase;
   color: #2cb5e8;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   -ms-flex-order: 2;
       order: 2;
-<<<<<<< HEAD
-  margin: 0; }
-  @media screen and (min-width: 750px) {
-    .header-menu-title {
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-      -ms-flex-align: center;
-          align-items: center; } }
->>>>>>> 7adc8e3c85270c5c4598d4a8b16060a63e3a3681
-=======
   margin: 0;
   -ms-flex-pack: end;
       justify-content: flex-end;
   -ms-flex-align: center;
       align-items: center; }
->>>>>>> dc8d127e4e8c586f413eafd62951411b66127e4d
 
 /*----------- menu nav -------------*/
 .dropdown-content a:hover .hamburger {
@@ -1194,10 +1175,10 @@ took out for tags page
       justify-content: flex-start;
   -ms-flex-align: center;
       align-items: center;
+  padding: 3% 4%;
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
   opacity: 0.9;
   width: 100%;
-  min-height: 2em;
   height: 100%;
   box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
   font-weight: 700;
@@ -1210,7 +1191,6 @@ took out for tags page
     .citystudio-banner {
       background-size: cover;
       background-position: center center;
-      min-height: 6em;
       height: 100%; } }
   .citystudio-banner .page-titles {
     font-size: 2.5em;
@@ -3596,7 +3576,8 @@ h1.page-titles {
 
 .team-citystudio-team {
   position: relative;
-  display: block; }
+  display: block;
+  margin-bottom: 80px; }
 
 .people-margin {
   margin-bottom: 1em; }
@@ -3703,8 +3684,8 @@ h1.page-titles {
 .team {
   display: -ms-flexbox;
   display: flex;
-  -ms-flex: 0 0 50%;
-      flex: 0 0 50%;
+  -ms-flex: 0 0 100%;
+      flex: 0 0 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   -ms-flex-pack: center;
@@ -3714,6 +3695,10 @@ h1.page-titles {
       align-items: center;
   padding: 1em;
   text-align: center; }
+  @media screen and (min-width: 750px) {
+    .team {
+      -ms-flex: 0 0 45%;
+          flex: 0 0 45%; } }
   @media screen and (min-width: 1024px) {
     .team {
       -ms-flex: 0 1 33%;
@@ -3831,7 +3816,7 @@ h1.page-titles {
 /*Single Person Page*/
 article.people {
   max-width: 1130px;
-  margin: 4em auto;
+  margin: 4em auto 12em;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
@@ -3919,14 +3904,14 @@ article.people {
 
 .ppl-return {
   position: absolute;
-  bottom: -46px;
-  margin-left: 1em; }
-  @media screen and (min-width: 750px) {
-    .ppl-return {
-      margin-left: 2em; } }
-  @media screen and (min-width: 1024px) {
-    .ppl-return {
-      margin-left: 3em; } }
+  bottom: -80px;
+  left: 34px; }
+  .ppl-return a, .ppl-return a:visited, .ppl-return a:focus, .ppl-return a:active {
+    text-decoration: none;
+    color: #0198d5; }
+    .ppl-return a:hover, .ppl-return a:visited:hover, .ppl-return a:focus:hover, .ppl-return a:active:hover {
+      opacity: 0.9;
+      text-decoration: none; }
 
 .wwd-content {
   display: block;
