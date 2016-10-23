@@ -8,6 +8,8 @@
   top: 0;
   width: 100%;
   z-index: 100;
+  margin-bottom: -80px;
+
   @include tablet{
     position: static;
   }
@@ -27,10 +29,12 @@
 
 #primary {
   position: relative;
-  margin-top: 3.5em;
+  top: 68px;
+
   @include tablet {
-    margin-top: 0;
+    top: 80px;
   }
+
 }
 
 .site-branding {
@@ -60,7 +64,7 @@
 }
 
 .site-branding img {
-  width: 250px;
+  width: 180px;
   height: 100%;
   // padding: .3em;
 
@@ -69,6 +73,7 @@
   }
 
   @include tablet{
+    width: 250px;
     width: 100%;
   }
 }
@@ -139,10 +144,11 @@
   // width: 30%;
   order: 2;
   margin: 0;
+  justify-content: flex-end;
+  align-items: center;
 
   @include tablet {
-    justify-content: flex-end;
-    align-items: center;
+
     // margin: -7px;
     // width: 100%;
     // padding: 0 .4em;
@@ -171,6 +177,7 @@
 /*----------- menu nav -------------*/
 
 .dropdown-content a:hover {
+
   .hamburger {
     color: #2cb5e8;
     font-weight: 400;
@@ -244,6 +251,7 @@
   width: 100vw;
   visibility: hidden;
   z-index: 999;
+  top: 70px;
 
   @include tablet {
     right: 30px;

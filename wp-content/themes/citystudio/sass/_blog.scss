@@ -26,15 +26,20 @@
   flex-direction: column;
   justify-content: center;
   width: 85%;
+
   @include desktop {
     width: 82%;
   }
+
   h1 {
     font-size: 2.5em;
+    line-height: 1.2em;
     text-align: left !important;
     font-family: $fontfamily;
     color: white;
+    margin-bottom: 0.3em;
   }
+
   h4 {
     font-size: 1em;
     font-weight: normal;
@@ -42,6 +47,7 @@
     font-family: $fontfamily;
     color: white;
     width: 80%;
+
     @include tablet {
       font-size: 1em;
       width:75%
@@ -155,7 +161,7 @@
 }
 .blog-credits {
   width: 80%;
-  height: 55%;
+  // height: 55%;
   box-sizing: border-box;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -164,6 +170,7 @@
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
+
   @include tablet {
     height: 68%;
     margin-top: 3em;

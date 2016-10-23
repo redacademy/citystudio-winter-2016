@@ -10,7 +10,7 @@ get_header(); ?>
 <div id="primary" class="content-area">
 	<main id="main" class="site-main" role="main">
 
-	<header class="contact-header citystudio-banner">
+	<header class="citystudio-banner">
 		<div class="banner-inner">
 			<h1 class="page-titles">Contact Us</h1>
 		</div>
