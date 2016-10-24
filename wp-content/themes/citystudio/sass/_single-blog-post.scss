@@ -9,7 +9,7 @@
     font-size: 2em;
     text-align: center;
     margin: 0.5em 0 0.2em;
-    width: 98%;
+    width: 95%;
     line-height: 1.2em;
 
     @include tablet {
@@ -82,7 +82,10 @@
   color: $city-blue;
   font-size: 1.2em;
   font-weight: bold;
-
+  font-size: 0.9em;
+  @include tablet {
+    font-size: 1em;
+  }
   a, &:focus, &:active, &:visited {
     color: $city-blue;
     text-decoration: none;
