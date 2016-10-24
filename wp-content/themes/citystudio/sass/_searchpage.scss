@@ -36,6 +36,7 @@
     @include tablet {
       padding: 0.5em;
       text-align: left;
+      font-size: 2.5em;
       margin-left: 2.6%;
     }
 
@@ -222,8 +223,8 @@ label {
 }
 .search-list-container {
   background-color: $city-blue;
-  padding-top: 3em;
-  padding-bottom: 3em;
+  padding-top: 2em;
+  padding-bottom: 1em;
 }
 .search-list-inner{
   padding-top: 2em;

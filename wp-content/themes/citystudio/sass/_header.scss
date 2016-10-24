@@ -45,11 +45,12 @@
 }
 
 .site-branding {
-  flex-basis: 32%;
+  flex-basis: 38%;
   width: 40%;
 
   @include desktop {
     margin-right: 0;
+  flex-basis: 32%;
   }
 
   a {
@@ -88,15 +89,13 @@
   margin-right: 3%;
   order: 2;
   height: 60px;
-  // max-width: 250px;
   position: relative;
-  // justify-content: space-between;
   @include tablet {
-    // flex-basis: 15%;
+    flex-basis: 50%;
     margin-right: 0em;
   }
   @include desktop {
-    // flex-basis: 20%;
+    flex-basis: 35%;
   }
 }
 
@@ -112,15 +111,7 @@
   height: 100%;
   display: flex;
   margin: 0;
-  padding: 2% 0 0 0;
   justify-content: flex-end;
-
-  @include tablet{
-  //  top: 0;
-  }
-  @include desktop{
-    // position: absolute;
-  }
 
   &:hover {
     color: $medium-blue;
@@ -243,16 +234,19 @@
 .dropdown-content {
   position: absolute;
   right: 0px;
-  top: 10px;
   width: 100vw;
   visibility: hidden;
   z-index: 999;
-  top: 70px;
+  top: 68px;
 
   @include tablet {
-    right: 30px;
-    top: 80px;
+    right: 17px;
+    top: 65px;
     width: 360px;
+  }
+  @include desktop {
+    right: 23px;
+    top: 90px;
   }
 }
 

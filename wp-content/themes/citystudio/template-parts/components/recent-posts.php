@@ -10,6 +10,7 @@
     <li class="recent-post-image" style="background-image: url( '<?php echo $thumb['0'];?> ' );">
       <div class="title-div">
         <p><?php the_title(); ?></p>
+        <p class="one-line-excerpt"><?php the_field('post_excerpt'); ?></p>
       </div>
     </li>
   </a>
