@@ -39,10 +39,7 @@ jQuery(document).ready(function($){
     }
   });
 
-  // for sub-menu delay
-  $('.sub-menu li a, a[href*=#]').on('click', function(){
-    $('.sub-menu').hide();
-  })
+
 
   $('#refresh').hover(function(){
     $('.refresh-hover').css('opacity', 1);
@@ -95,6 +92,13 @@ jQuery(document).ready(function($){
     menuIcon.removeClass("fa-times-circle");
     menuIcon.addClass("fa-bars");
   });
+
+  // for sub-menu delay
+  $('.sub-menu li a').on('click', function(){
+    $('.sub-menu').hide();
+  })
+
+
 
 });
 

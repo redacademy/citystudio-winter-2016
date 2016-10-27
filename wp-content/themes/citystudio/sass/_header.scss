@@ -235,7 +235,7 @@
 
 .header-nav li ul {
   background-color: #f9f9f9;
-  left: 160px;
+  left: 150px;
   top: 0;
   position: absolute;
   font-size: 10px;
@@ -262,7 +262,8 @@
   height: 100vh;
   visibility: hidden;
   z-index: 999;
-  top: 63px;
+  /* for menu top bar*/
+  top: 65px;
 
   @include tablet {
     right: 15px;

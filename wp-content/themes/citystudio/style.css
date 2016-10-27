@@ -927,7 +927,7 @@ a {
 
 .header-nav li ul {
   background-color: #f9f9f9;
-  left: 160px;
+  left: 150px;
   top: 0;
   position: absolute;
   font-size: 10px;
@@ -951,7 +951,8 @@ a {
   height: 100vh;
   visibility: hidden;
   z-index: 999;
-  top: 63px; }
+  /* for menu top bar*/
+  top: 65px; }
   @media screen and (min-width: 750px) {
     .dropdown-content {
       right: 15px;
@@ -3961,7 +3962,6 @@ article.people {
 
 .call-to-action {
   background-color: #f7f9f9;
-  padding: 2em;
   font-size: 18px; }
   .call-to-action .cta-inner {
     display: -ms-flexbox;
@@ -3986,7 +3986,8 @@ article.people {
   @media screen and (min-width: 750px) {
     .call-to-action {
       -ms-flex-pack: distribute;
-          justify-content: space-around; } }
+          justify-content: space-around;
+      padding: 1em 0em 0em 2em; } }
 
 .connect {
   display: -ms-flexbox;
@@ -3997,9 +3998,9 @@ article.people {
       align-items: center;
   background-color: #2cb5e8;
   border-radius: 10px;
-  margin: 1em 0;
-  height: 150px;
-  width: 250px;
+  margin: 2em 0;
+  height: 130px;
+  width: 240px;
   padding: 0.9em 0;
   color: white;
   position: relative;
@@ -4020,9 +4021,9 @@ article.people {
   .connect a {
     border: 3px solid white;
     border-radius: 10px;
-    margin-top: 1.25em;
+    margin-top: .8em;
     color: #ffffff;
-    padding: 8%;
+    padding: 4% 8%;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #2cb5e8;
