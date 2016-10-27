@@ -1,4 +1,4 @@
-<div class="sticky-navigation">
+<section class="sticky-navigation">
 	<div class="nav-div open" id="sort">
 		<div class="themes sort-menu-item" id="themes">
 			<p>Themes<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
@@ -60,4 +60,4 @@
 		<div class="refresh menu-item" id="refresh" ></div>
 		<span class="refresh-hover">Refresh The Gallery</span>
 	</div>
-</div>
+</section>

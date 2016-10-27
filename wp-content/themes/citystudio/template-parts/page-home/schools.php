@@ -20,7 +20,7 @@
           </a>
         <?php endwhile; ?>
     </ul>
-
+<!-- 
     <ul class="home-partners">
         <?php
           if( have_rows('partner_row_three') );
@@ -29,5 +29,5 @@
             <li class="feat-logo" style="background-image: url( '<?php the_sub_field('school_logo') ?>' ) "></li>
           </a>
         <?php endwhile; ?>
-    </ul>
+    </ul> -->
 </div>

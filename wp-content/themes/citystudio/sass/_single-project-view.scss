@@ -9,6 +9,11 @@
     margin-top: 1em;
   }
 }
+
+article.project {
+  margin-bottom: 80px;
+}
+
 // HEADER
 h1.page-titles {
     color: white;
@@ -125,7 +130,6 @@ h1.page-titles {
       // margin: 1em 10em;
     }
     .scalability-wrap {
-      margin-bottom: 1.5rem;
       flex-basis: 100%;
       width: 100%;
     }

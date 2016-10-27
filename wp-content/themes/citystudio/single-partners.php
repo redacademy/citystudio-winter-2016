@@ -42,14 +42,16 @@ get_header(); ?>
                             if (have_rows('media_links'));
                             // loop through the rows of data
                             while (have_rows('media_links')) : the_row(); ?>
-							<p class="media-links">
 
-								<a target="_blank" href="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
-							</p>
+								<p class="media-links">
+
+									<a target="_blank" href="<?php the_sub_field('media_link') ?>"><?php the_sub_field('media_text') ?> </a>
+								</p>
+								<div class="no-media">
+										<?php the_field('no_media_option'); ?>
+								</div>
 							<?php endwhile; ?>
-							<div class="no-media">
-									<?php the_field('no_media_option'); ?>
-							</div>
+
 				 </div> <!--end media links container -->
 
   	</div><!-- end projects-container -->

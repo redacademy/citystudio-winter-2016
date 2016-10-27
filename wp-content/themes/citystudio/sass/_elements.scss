@@ -109,7 +109,7 @@ button {
   border: 1px solid $medium-blue;
   color: #ffffff;
   display: inline-block;
-  padding: 3% 5%;
+  padding: 5% 9%;
   text-transform: uppercase;
   font-weight: lighter;
   letter-spacing: 2px;
@@ -129,7 +129,7 @@ padding: 1.2% 3%;
     background-color: transparent;
     border: 1px solid $medium-blue;
     color: $medium-blue;
-    padding: 3% 5%;
+      padding: 5% 9%;
     @include tablet {
       padding: 1.2% 3%;
     }

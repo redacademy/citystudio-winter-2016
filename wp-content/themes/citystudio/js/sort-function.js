@@ -36,9 +36,6 @@ jQuery(document).ready(function($) {
 
   }); // close refresh
 
-
-
-
   $('.themes.sort-menu-item').on('click', function(){
     $(this).toggleClass('toggle-menu-item');
     $(this).children().toggleClass('toggle-menu-item');
@@ -47,38 +44,18 @@ jQuery(document).ready(function($) {
 
   if (openTheme) {
     var themeSelected = '.themes.sort-menu-item';
-
     function removeThemeMenu(){
       $(themeSelected).removeClass('toggle-menu-item');
       $(themeSelected).children().removeClass('toggle-menu-item');
       $("i", themeSelected).removeClass("fa-sort-asc");
       $("i", themeSelected).addClass("fa-sort-desc");
     }
-    $('.partners.sort-menu-item').on('click', function(){
+
+    $('.partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
       removeThemeMenu()
     });
 
-    $('.years.sort-menu-item').on('click', function(){
-      removeThemeMenu()
-    });
-
-    $('.hero').on('click', function(){
-      removeThemeMenu()
-    });
-
-     $('.homepage-titles').on('click', function(){
-        removeThemeMenu()
-     });
-
-      $('.grid').on('click', function(){
-        removeThemeMenu()
-     });
-
-      $('.explore-section').on('click', function(){
-        removeThemeMenu()
-     });
-   
-   }
+  }
 
   });
 
@@ -98,31 +75,10 @@ jQuery(document).ready(function($) {
         $("i", partnerSelected).addClass("fa-sort-desc");
     }
 
-    $('.themes.sort-menu-item').on('click', function(){
+    $('.themes.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
       removePartnerMenu()
     });
-
-    $('.years.sort-menu-item').on('click', function(){
-      removePartnerMenu()
-    });
-
-    $('.hero').on('click', function(){
-      removePartnerMenu()
-    });
-
-    $('.homepage-titles').on('click', function(){
-      removePartnerMenu()
-    });
-
-    $('.grid').on('click', function(){
-      removePartnerMenu()
-    });
-
-    $('.explore-section').on('click', function(){
-      removePartnerMenu()
-    });
-
-   }
+  }
 
   });
 
@@ -142,44 +98,26 @@ jQuery(document).ready(function($) {
           $("i", yearSelected).addClass("fa-sort-desc");
       }
 
-      $('.themes.sort-menu-item').on('click', function(){
+      $('.themes.sort-menu-item, .partners.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
         removeYearMenu();
       });
-   
-      $('.partners.sort-menu-item').on('click', function(){
-        removeYearMenu();
-      });
-
-      $('.hero').on('click', function(){
-        removeYearMenu();
-      });
-
-      $('.homepage-titles').on('click', function(){
-        removeYearMenu();
-      });
-
-      $('.grid').on('click', function(){
-        removeYearMenu();
-      });
-
-      $('.explore-section').on('click', function(){
-        removeYearMenu();
-      });
-
     }
 
   });
 
   themeLabel.on('click', function(){
     $(this).empty().hide();
+    $(this).unbind('mouseenter mouseleave')
   });
 
   partLabel.on('click', function(){
     $(this).empty().hide();
+    $(this).unbind('mouseenter mouseleave')
   });
 
   yearLabel.on('click', function(){
     $(this).empty().hide();
+    $(this).unbind('mouseenter mouseleave')
   });
 
   // Remove class current-menu if mouse isn't hovering over menu-item
@@ -202,6 +140,7 @@ jQuery(document).ready(function($) {
       reloadProjects();
     }
   });
+
   $('.sub-menu-part').on('click', function() {
     if ($(this.checked)) {
       queryFilter.partners = $(this).find('input').val();
