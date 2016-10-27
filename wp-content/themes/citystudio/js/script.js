@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
    var callToAction = $(".call-to-action");
 
     if ($(window).width() <= 414){
-        $("a[href*=#]").toggle(function() {
+        $("a[href*=#]").toggle(function(e) {
           $(".sub-menu").css({"display": "block"});
         },
         function(){
@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
   });
 
   // for sub-menu delay
-  $('.sub-menu li a').on('click', function(){
+  $('.sub-menu li a, a[href*=#]').on('click', function(){
     $('.sub-menu').hide();
   })
 
@@ -90,7 +90,7 @@ jQuery(document).ready(function($){
     menuIcon.addClass("fa-bars");
   });
 
-  $('.header-container').on('click', function() {
+  $('.header-container, .hero').on('click', function() {
     $('.dropdown-content').css({"visibility": "hidden"});
     menuIcon.removeClass("fa-times-circle");
     menuIcon.addClass("fa-bars");
