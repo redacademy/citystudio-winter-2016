@@ -1,4 +1,3 @@
-
 .home {
   .site-header {
     @include tablet{
@@ -28,9 +27,12 @@
   justify-content: space-between;
   width: 100%;
   padding: 1%;
-
+  height: 55px;
   @include tablet{
     position: relative;
+  }
+  @include desktop{
+    height: 100%;
   }
 }
 
@@ -242,9 +244,12 @@
 
   @include tablet {
     right: 15px;
-    top: 70px;
     width: 360px;
     height: 100%;
+  }
+
+  @include desktop{
+    top: 80px;
   }
 }
 

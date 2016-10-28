@@ -778,10 +778,14 @@ a {
   -ms-flex-pack: justify;
       justify-content: space-between;
   width: 100%;
-  padding: 1%; }
+  padding: 1%;
+  height: 55px; }
   @media screen and (min-width: 750px) {
     .header-container {
       position: relative; } }
+  @media screen and (min-width: 1024px) {
+    .header-container {
+      height: 100%; } }
 
 #primary {
   position: relative;
@@ -934,9 +938,11 @@ a {
   @media screen and (min-width: 750px) {
     .dropdown-content {
       right: 15px;
-      top: 70px;
       width: 360px;
       height: 100%; } }
+  @media screen and (min-width: 1024px) {
+    .dropdown-content {
+      top: 80px; } }
 
 .dropdown-content a {
   transition: height 0.3s ease-in;
