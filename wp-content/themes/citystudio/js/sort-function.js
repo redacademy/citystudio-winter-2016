@@ -20,22 +20,6 @@ jQuery(document).ready(function($) {
       partLabel = $('.part-labels');
       yearLabel = $('.year-labels');
 
-  $('#refresh').on('click', function() {
-    checkedTheme = '';
-    checkedPart = '';
-    checkedYear = '';
-    queryFilter = {
-      themes: '',
-      partners: '',
-      year: ''
-    }
-    themeLabel.empty().hide();
-    partLabel.empty().hide();
-    yearLabel.empty().hide();
-    reloadProjects();
-
-  }); // close refresh
-
   $('.themes.sort-menu-item').on('click', function(){
     $(this).toggleClass('toggle-menu-item');
     $(this).children().toggleClass('toggle-menu-item');
@@ -51,8 +35,8 @@ jQuery(document).ready(function($) {
       $("i", themeSelected).addClass("fa-sort-desc");
     }
 
-    $('.clickoff, .refresh-hover, .partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
-      removeThemeMenu()
+    $('.refresh, .clickoff, .refresh-hover, .partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+      removeThemeMenu();
     });
 
   }
@@ -75,8 +59,8 @@ jQuery(document).ready(function($) {
         $("i", partnerSelected).addClass("fa-sort-desc");
     }
 
-    $('.clickoff, .refresh-hover, .themes.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
-      removePartnerMenu()
+    $('.refresh, .clickoff, .refresh-hover, .themes.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+      removePartnerMenu();
     });
   }
 
@@ -98,7 +82,7 @@ jQuery(document).ready(function($) {
           $("i", yearSelected).addClass("fa-sort-desc");
       }
 
-      $('.clickoff, .refresh-hover, .themes.sort-menu-item, .partners.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+      $('.refresh, .clickoff, .refresh-hover, .themes.sort-menu-item, .partners.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
         removeYearMenu();
       });
     }
@@ -126,6 +110,26 @@ jQuery(document).ready(function($) {
   });
   // Create an empty object to hold
   // the checked navigation values in the properties
+
+  $('#refresh').on('click', function() {
+    checkedTheme = '';
+    checkedPart = '';
+    checkedYear = '';
+    queryFilter = {
+      themes: '',
+      partners: '',
+      year: ''
+    }
+    themeLabel.empty().hide();
+    partLabel.empty().hide();
+    yearLabel.empty().hide();
+    reloadProjects();
+
+  
+
+
+  }); // close refresh
+
   $('.sub-menu-theme').on('click', function() {
     // debugger;
 
