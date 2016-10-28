@@ -937,10 +937,8 @@ a {
     .dropdown-content {
       right: 15px;
       width: 360px;
-      height: 100%; } }
-  @media screen and (min-width: 1024px) {
-    .dropdown-content {
-      top: 80px; } }
+      height: 100%;
+      top: 100%; } }
 
 .dropdown-content a {
   transition: height 0.3s ease-in;
