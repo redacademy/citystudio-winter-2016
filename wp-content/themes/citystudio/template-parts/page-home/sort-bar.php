@@ -1,5 +1,8 @@
 <section class="sticky-navigation">
+	<div class="clickoff">
+	</div>
 	<div class="nav-div open" id="sort">
+	
 		<div class="themes sort-menu-item" id="themes">
 			<p>Themes<i class="fa fa-sort-desc" aria-hidden="true"></i></p>
 			<?php $terms = get_terms( 'themes', array (

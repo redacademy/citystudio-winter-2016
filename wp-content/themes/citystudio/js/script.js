@@ -75,30 +75,36 @@ jQuery(document).ready(function($){
   var menuIcon = $(".fa-bars", this);
       hamburger = $('.hamburger');
 
-  hamburger.toggle(function(e) {
+  hamburger.on('click', function(e) {
 
-  $('.dropdown-content').css({"visibility": "visible"});
-    menuIcon.removeClass("fa-bars");
-    menuIcon.addClass("fa-times-circle");
-  }, function() {
 
-  $('.dropdown-content').css({"visibility": "hidden"});
-    menuIcon.removeClass("fa-times-circle");
-    menuIcon.addClass("fa-bars");
+    console.log($('.show').length > 0)
+
+    $('.dropdown-content').toggle();
+    menuIcon.toggleClass("fa-bars fa-times-circle");
+  
+  if ( $('.show').length > 0 ){
+    $('.hero, .site-branding, .homepage-titles').on('click', function(){
+        $('.dropdown-content').hide();
+        menuIcon.removeClass("fa-times-circle");
+        menuIcon.addClass("fa-bars");
+      });
+    }
   });
 
-  $('.header-container, .hero').on('click', function() {
-    $('.dropdown-content').css({"visibility": "hidden"});
-    menuIcon.removeClass("fa-times-circle");
-    menuIcon.addClass("fa-bars");
-  });
+
+
+
+
 
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){
     $('.sub-menu').hide();
   })
 
-
+  $('#menu-item-698').hover(function(){
+    $(this).css('color', 'red')
+  })
 
 });
 

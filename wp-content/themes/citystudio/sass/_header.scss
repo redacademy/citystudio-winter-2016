@@ -45,15 +45,14 @@
 }
 
 .site-branding {
-  flex-basis: 40%;
-  width: 40%;
-
+  width: 78vw;
   @include desktop {
     margin-right: 0;
   }
 
   a {
     display: flex;
+    width: 40%;
   }
 }
 
@@ -84,23 +83,7 @@
     width: 100%;
   }
 }
-.site-navigation {
-  flex-basis: 40%;
-  width: 40%;
-  margin-right: 3%;
-  order: 2;
-  height: 60px;
-  // max-width: 250px;
-  position: relative;
-  // justify-content: space-between;
-  @include tablet {
-    // flex-basis: 15%;
-    margin-right: 0em;
-  }
-  @include desktop {
-    // flex-basis: 20%;
-  }
-}
+
 
 .hamburger {
   color: $light-blue;
@@ -133,14 +116,8 @@
 }
 
 #menu-icon {
-  flex-basis: 20%;
-  width: 20%;
-  order: 1;
-  margin-top: -2px;
-
-    @include tablet {
-      margin-top: -4px;
-    }
+  width: 100%;
+  margin-right: .3em;
 }
 
 .header-menu-title {
@@ -218,7 +195,6 @@
   // margin-top: 2.9em;
   margin: 0;
   left: 0;
-
   @include tablet {
     width: 100%;
     height: 450px;
@@ -260,15 +236,15 @@
   right: 0px;
   width: 100vw;
   height: 100vh;
-  visibility: hidden;
+  display: none;
   z-index: 999;
-  /* for menu top bar*/
-  top: 65px;
+  top: 50px;
 
   @include tablet {
     right: 15px;
-    top: 80px;
+    top: 70px;
     width: 360px;
+    height: 100%;
   }
 }
 
@@ -399,6 +375,8 @@
     font-size: 16px;
   }
 }
+
+/* hover to show submenu */
 
 #menu-item-698 {
   &:hover {

@@ -51,7 +51,7 @@ jQuery(document).ready(function($) {
       $("i", themeSelected).addClass("fa-sort-desc");
     }
 
-    $('.partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+    $('.clickoff, .refresh-hover, .partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
       removeThemeMenu()
     });
 
@@ -75,7 +75,7 @@ jQuery(document).ready(function($) {
         $("i", partnerSelected).addClass("fa-sort-desc");
     }
 
-    $('.themes.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+    $('.clickoff, .refresh-hover, .themes.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
       removePartnerMenu()
     });
   }
@@ -98,7 +98,7 @@ jQuery(document).ready(function($) {
           $("i", yearSelected).addClass("fa-sort-desc");
       }
 
-      $('.themes.sort-menu-item, .partners.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
+      $('.clickoff, .refresh-hover, .themes.sort-menu-item, .partners.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
         removeYearMenu();
       });
     }
