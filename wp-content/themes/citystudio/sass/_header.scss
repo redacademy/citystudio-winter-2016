@@ -30,10 +30,9 @@
   height: 55px;
   @include tablet{
     position: relative;
-  }
-  @include desktop{
     height: 100%;
   }
+
 }
 
 #primary {
