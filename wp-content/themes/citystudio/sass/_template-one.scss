@@ -6,7 +6,7 @@
   h3 {
     font-size: 1.25em;
     padding-bottom: 2%;
-    width: 170px;
+    width: 50%;
     font-family: $fontfamily;
 
     @include desktop {
@@ -26,9 +26,15 @@
     }
   }
 }
+
+.hero-wrap{
+	display: flex;
+	justify-content: center;
+}
 .template-hero {
-  width: 100%;
-  height: auto;
+  width: 50%;
+  height: 50%;
+  display: block;
 }
 
 

@@ -1670,7 +1670,7 @@ input[type='email']:focus {
   color: #ffffff;
   font-weight: lighter;
   font-family: "open_sans";
-  margin: 1em auto; }
+  margin: 1.5em auto; }
 
 /*--------------------------------------------------------------
 # Search Page Styles
@@ -2131,11 +2131,10 @@ object {
   width: 100%; }
   @media screen and (min-width: 750px) {
     .hero {
-      height: 500px; } }
+      height: 600px; } }
 
 .hero-blurb {
   text-align: center;
-  font-size: 1rem;
   font-weight: 700;
   font-family: "open_sans";
   display: -ms-flexbox;
@@ -2157,7 +2156,8 @@ object {
         font-size: 1.5em; } }
     @media screen and (min-width: 1024px) {
       .hero-blurb h3 {
-        font-size: 2em; } }
+        font-size: 2.25em;
+        line-height: 1.6em; } }
   .hero-blurb p {
     margin-bottom: 0; }
 
@@ -2358,6 +2358,9 @@ object {
       .homepage-partners-container .home-partners .feat-logo img {
         max-width: 100px;
         max-height: 105px; }
+
+.home-partners-extra {
+  display: none; }
 
 .explore-section {
   width: 100%;
@@ -3933,7 +3936,7 @@ article.people {
   .wwd-content h3 {
     font-size: 1.25em;
     padding-bottom: 2%;
-    width: 170px;
+    width: 50%;
     font-family: "open_sans"; }
     @media screen and (min-width: 1024px) {
       .wwd-content h3 {

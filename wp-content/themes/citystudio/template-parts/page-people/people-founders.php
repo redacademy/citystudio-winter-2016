@@ -31,7 +31,7 @@ $citystudio_founders = new WP_Query( $args ); ?>
           </li>
 
       <?php endwhile; ?>
-
+	   <hr class="separate">
   </ul>
 </div>
 <?php else : ?>
