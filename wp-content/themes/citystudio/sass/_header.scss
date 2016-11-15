@@ -342,7 +342,7 @@
   min-height: 235px;
   padding: 2% 7%;
   width: 230px;
-  left: 115px;
+  left: 175px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -364,6 +364,10 @@
       visibility: visible !important;
     }
   }
+}
+
+#menu-item-1709 a {
+  width: 176px;
 }
 
 .toggle-menu {
