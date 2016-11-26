@@ -1,6 +1,6 @@
 
 <div class="homepage-partners-container">
-  <h1 class="homepage-titles">Partners</h1>
+  <h1 class="homepage-titles"><?php the_field('partners_title'); ?></h1>
     <ul class="home-partners">
       <?php
         if( have_rows('partner_row') );

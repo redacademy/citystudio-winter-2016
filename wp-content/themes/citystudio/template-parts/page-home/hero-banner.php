@@ -6,4 +6,4 @@
   </div>
 </div> <!-- end hero -->
 
-  <h1 class="homepage-titles"><span>Explore</span> CityStudio Projects</h1>
+  <h1 class="homepage-titles"><?php the_field('explore_citystudio_projects_title'); ?></h1>

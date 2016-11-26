@@ -15,7 +15,7 @@ get_header(); ?>
     	<div class="projects-container full-width">
 				<div class="title-block-container">
 	      	<div class="title-block">
-	        	<h2>Past Projects By: <span><?php the_field('school_abrev'); ?></span></h2>
+	        	<h2><?php the_field('past_projects_by'); ?> <span><?php the_field('school_abrev'); ?></span></h2>
 	      	</div>
 			</div>
 
@@ -35,7 +35,7 @@ get_header(); ?>
 	<hr class="separate-white">
 
 <!-- media links -->
-				<h3 class ="media-links-title"><span><?php echo the_field('school_abrev'); ?></span> in the media, publications, and press...</h3>
+				<h3 class ="media-links-title"><span><?php echo the_field('school_abrev'); ?></span>&nbsp;<?php echo the_field('media_publications_title'); ?></h3>
 					<div class="media-links-container">
 						<?php
                             // check if the repeater field has rows of data

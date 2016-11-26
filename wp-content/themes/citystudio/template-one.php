@@ -9,7 +9,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<header class="citystudio-banner">
-					<h1 class="page-titles">About Us</h1>
+					<h1 class="page-titles"><?php the_field('page_title'); ?></h1>
 			</header>
 			<div class="hero-wrap">
 				<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>

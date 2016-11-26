@@ -1026,7 +1026,7 @@ a {
   min-height: 235px;
   padding: 2% 7%;
   width: 230px;
-  left: 115px;
+  left: 175px;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-direction: column;
@@ -1043,6 +1043,9 @@ a {
 /* hover to show submenu */
 #menu-item-698:hover .sub-menu, #menu-item-1709:hover .sub-menu {
   visibility: visible !important; }
+
+#menu-item-1709 a {
+  width: 176px; }
 
 .toggle-menu {
   padding: 20px;
@@ -1182,11 +1185,10 @@ took out for tags page
       background-position: center center;
       height: 100%; } }
   .citystudio-banner .page-titles {
-    font-size: 2.5em;
-    line-height: 1.2em; }
-    @media screen and (min-width: 750px) {
-      .citystudio-banner .page-titles {
-        font-size: 3em; } }
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: "open_sans"; }
 
 .citystudio-banner-short {
   background: linear-gradient(to right, #0277a7 0, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%);
@@ -1202,10 +1204,6 @@ took out for tags page
       height: 150px;
       opacity: 0.9; } }
 
-/*.banner-inner {
-  margin: 0 auto;
-  width: 100%;
-}*/
 iframe {
   width: 100vw;
   height: 40vh;
@@ -2169,16 +2167,17 @@ object {
   letter-spacing: 0.1rem;
   font-family: "open_sans";
   text-align: center;
-  font-size: 2.2em;
+  font-size: 1em;
   width: 95%;
   font-weight: bold; }
   @media screen and (min-width: 750px) {
     .homepage-titles {
-      width: 100%;
-      font-size: 2em; } }
+      width: 100%; } }
   @media screen and (min-width: 1024px) {
     .homepage-titles {
-      font-size: 2.3em; } }
+      font-size: 1.5em;
+      font-weight: 100;
+      margin-top: 4em; } }
   .homepage-titles span {
     color: #0198d5;
     font-weight: bold; }
@@ -4086,14 +4085,14 @@ article.people {
     line-height: 1.2em;
     text-align: left !important;
     font-family: "open_sans";
-    color: white;
+    color: #ffffff;
     margin-bottom: 0.3em; }
   .title-container h4 {
     font-size: 1em;
     font-weight: normal;
     text-align: left;
     font-family: "open_sans";
-    color: white;
+    color: #ffffff !important;
     width: 80%; }
     @media screen and (min-width: 750px) {
       .title-container h4 {
@@ -4427,11 +4426,12 @@ a.js-load-more {
   background-color: #f7f9f9;
   padding: 2% 0 6%; }
   .recent-news-block h2 {
-    color: #0198d5;
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 2em; }
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: "open_sans";
+    padding: 1em 0; }
 
 .recent-post-image {
   background-size: cover;
