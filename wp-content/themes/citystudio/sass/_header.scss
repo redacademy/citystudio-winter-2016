@@ -73,7 +73,6 @@
 .site-branding img {
   width: 180px;
   height: 100%;
-  // padding: .3em;
 
   &:hover {
     filter: opacity(0.7);
@@ -101,13 +100,6 @@
   padding: 2% 0 0 0;
   justify-content: flex-end;
 
-  @include tablet{
-  //  top: 0;
-  }
-  @include desktop{
-    // position: absolute;
-  }
-
   &:hover {
     color: $medium-blue;
   }
@@ -126,7 +118,6 @@
   text-transform: uppercase;
   color: $light-blue;
   flex-basis: 100%;
-  // width: 30%;
   order: 2;
   margin: 0;
   justify-content: flex-end;
@@ -143,25 +134,6 @@
     }
   }
 }
-
-// .icon-menu {
-//   // display: flex;
-//   // align-items: center;
-//   margin: auto 0;
-//   &:hover {
-//     color: $medium-blue;
-//   }
-//   .fa {
-//     color: $light-blue;
-//     font-size: 2rem;
-//     &:hover, &:visited {
-//       color: $medium-blue;
-//     }
-//     &:active {
-//       color: $medium-blue;
-//     }
-//   }
-// }
 
 /*----------- menu nav -------------*/
 
@@ -193,13 +165,11 @@
   width: 100vw;
   height: 100vh;
   padding: 5% 4%;
-  // margin-top: 2.9em;
   margin: 0;
   left: 0;
   @include tablet {
     width: 100%;
-    height: 450px;
-    // margin-left: 6em;
+    height: 60%;
   }
 }
 
@@ -244,8 +214,8 @@
   @include tablet {
     right: 15px;
     width: 360px;
-    height: 100%;
     top:100%;
+    height: initial;
   }
 }
 
@@ -297,16 +267,8 @@
   list-style: none;
   margin: 0;
   padding: 0 0 0 0.9em;
-  // background: #f9f9f9;
 }
 
-// .header-nav ul:before,.header-nav ul:after {
-//   content:"";
-//   display:table;
-// }
-// .header-nav ul:after {
-//   clear:both;
-// }
 .header-nav ul > li {
   a {
     img {
@@ -325,11 +287,7 @@
   transition: height 300ms ease-in;
   border: none;
 }
-/* sub menu list item css*/
-// .header-nav ul > li:hover ul li {
-//   height: 2.5em;
-//   padding: .4em;
-// }
+
 .hamburger-menu {
   width: 70px;
   height: 70px;
@@ -343,8 +301,9 @@
 #primary-menu {
   z-index: 0;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
+  /*height: 50vh;*/
 }
 
 .menu-menu-container {

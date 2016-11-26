@@ -39,8 +39,6 @@ jQuery(document).ready(function($){
     }
   });
 
-
-
   $('#refresh').hover(function(){
     $('.refresh-hover').css('opacity', 1);
 
@@ -77,7 +75,6 @@ jQuery(document).ready(function($){
 
   hamburger.on('click', function(e) {
 
-
     console.log($('.show').length > 0)
 
     $('.dropdown-content').toggle();
@@ -92,18 +89,13 @@ jQuery(document).ready(function($){
     }
   });
 
-
-
-
-
-
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){
     $('.sub-menu').hide();
   })
 
-  $('#menu-item-698').hover(function(){
-    $(this).css('color', 'red')
+  $('.menu-item-has-children').hover(function(){
+    $('.sub-menu').show();
   })
 
 });

@@ -897,7 +897,7 @@ a {
   @media screen and (min-width: 750px) {
     .header-nav {
       width: 100%;
-      height: 450px; } }
+      height: 60%; } }
 
 .header-nav li a {
   display: -ms-flexbox;
@@ -937,8 +937,8 @@ a {
     .dropdown-content {
       right: 15px;
       width: 360px;
-      height: 100%;
-      top: 100%; } }
+      top: 100%;
+      height: initial; } }
 
 .dropdown-content a {
   transition: height 0.3s ease-in;
@@ -994,7 +994,6 @@ a {
   transition: height 300ms ease-in;
   border: none; }
 
-/* sub menu list item css*/
 .hamburger-menu {
   width: 70px;
   height: 70px; }
@@ -1007,10 +1006,11 @@ a {
   z-index: 0;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-direction: column;
+      flex-direction: column;
   -ms-flex-pack: justify;
       justify-content: space-between;
-  -ms-flex-direction: column;
-      flex-direction: column; }
+  /*height: 50vh;*/ }
 
 @media screen and (min-width: 375px) {
   .menu-menu-container {
@@ -3951,6 +3951,9 @@ article.people {
 .template-hero {
   width: 100%;
   height: auto; }
+  .template-hero:hover {
+    animation: heartbeat 3s infinite;
+    transition: all 1s ease-in; }
 
 .cta_blurb {
   display: none; }
@@ -4032,6 +4035,20 @@ article.people {
       background-color: #0198d5; }
     .connect a:active {
       box-shadow: 0 0 0 0 #BBB7AE; }
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1); }
+  60% {
+    transform: scale(0.75); }
+  80% {
+    transform: scale(1); }
+  87% {
+    transform: scale(0.75); }
+  95% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1); } }
 
 .blue-gradient {
   background: linear-gradient(to bottom, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%); }
