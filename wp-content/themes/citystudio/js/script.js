@@ -93,12 +93,6 @@ jQuery(document).ready(function($){
     $('.sub-menu').hide();
   })
 
-  $('.menu-item-has-children').hover(function(){
-    $(this).css('height', '6em')
-  }, function(){
-    $(this).css('height', 'initial')
-  })
-
 });
 
 function showMenu() {

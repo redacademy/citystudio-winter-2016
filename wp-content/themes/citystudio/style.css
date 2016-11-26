@@ -1033,6 +1033,9 @@ a {
   visibility: visible !important;
   display: block; }
 
+.menu-item-has-children:hover #primary-menu.menu, #menu-item-1709:hover #primary-menu.menu {
+  height: 25em; }
+
 #menu-item-1709 a {
   width: 176px; }
 
