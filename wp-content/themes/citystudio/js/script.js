@@ -26,14 +26,13 @@ jQuery(document).ready(function($){
         sticky.show();
       }
 
-      if(scroll >= topOffset - 80) {
+      if(scroll >= topOffset) {
         sticky.removeClass("fixed");
         sticky.hide();
       }
 
       else if (scroll <= (bottomOffset) )  {
         sticky.removeClass("fixed");
-
       }
 
     }
