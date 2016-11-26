@@ -73,7 +73,6 @@
 .site-branding img {
   width: 180px;
   height: 100%;
-  // padding: .3em;
 
   &:hover {
     filter: opacity(0.7);
@@ -101,13 +100,6 @@
   padding: 2% 0 0 0;
   justify-content: flex-end;
 
-  @include tablet{
-  //  top: 0;
-  }
-  @include desktop{
-    // position: absolute;
-  }
-
   &:hover {
     color: $medium-blue;
   }
@@ -126,7 +118,6 @@
   text-transform: uppercase;
   color: $light-blue;
   flex-basis: 100%;
-  // width: 30%;
   order: 2;
   margin: 0;
   justify-content: flex-end;
@@ -178,7 +169,7 @@
   left: 0;
   @include tablet {
     width: 100%;
-    height: 475px;
+    height: 60%;
   }
 }
 
@@ -223,8 +214,8 @@
   @include tablet {
     right: 5px;
     width: 360px;
-    height: 100%;
     top:100%;
+    height: initial;
   }
 }
 
@@ -241,8 +232,6 @@
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
-  /*background-color: #f9f9f9;*/
-  /*transition: height 300ms ease-in;*/
 }
 
 .header-nav ul li.menu-item-has-children {
@@ -276,16 +265,8 @@
   list-style: none;
   margin: 0;
   padding: 0 0 0 0.9em;
-  // background: #f9f9f9;
 }
 
-// .header-nav ul:before,.header-nav ul:after {
-//   content:"";
-//   display:table;
-// }
-// .header-nav ul:after {
-//   clear:both;
-// }
 .header-nav ul > li {
   a {
     img {
@@ -304,11 +285,7 @@
   transition: height 300ms ease-in;
   border: none;
 }
-/* sub menu list item css*/
-// .header-nav ul > li:hover ul li {
-//   height: 2.5em;
-//   padding: .4em;
-// }
+
 .hamburger-menu {
   width: 70px;
   height: 70px;
@@ -322,8 +299,9 @@
 #primary-menu {
   z-index: 0;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
+  justify-content: space-between;
+  /*height: 50vh;*/
 }
 
 .menu-menu-container {
