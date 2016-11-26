@@ -483,11 +483,6 @@ hr {
   border: 0;
   margin-bottom: 1.5em; }
 
-.separate {
-  border-bottom: 2.5px dashed #2cb5e8;
-  margin: 3em auto;
-  width: 100%; }
-
 ul,
 ol {
   margin: 0 0 1.5em 3em; }
@@ -912,7 +907,7 @@ a {
   top: 0;
   position: absolute;
   font-size: 10px;
-  width: 140px; }
+  width: 90%; }
 
 .menu-item {
   font-weight: 500;
@@ -1007,8 +1002,7 @@ a {
   -ms-flex-direction: column;
       flex-direction: column;
   -ms-flex-pack: justify;
-      justify-content: space-between;
-  /*height: 50vh;*/ }
+      justify-content: space-between; }
 
 @media screen and (min-width: 375px) {
   .menu-menu-container {
@@ -1018,10 +1012,8 @@ a {
 
 .sub-menu {
   visibility: hidden;
-  position: absolute;
   font-size: 12px;
   padding: 2% 7%;
-  width: 230px;
   left: 175px;
   display: -ms-flexbox;
   display: flex;
@@ -4041,6 +4033,14 @@ article.people {
       background-color: #0198d5; }
     .connect a:active {
       box-shadow: 0 0 0 0 #BBB7AE; }
+
+.separate {
+  border-bottom: 2.5px dashed #2cb5e8;
+  margin: 3em auto;
+  width: 100%; }
+
+.separate:last-child {
+  border: none; }
 
 .blue-gradient {
   background: linear-gradient(to bottom, #0277a7 0%, #0188bb 24%, rgba(0, 165, 220, 0.9) 63%, rgba(0, 177, 234, 0.9) 80%); }

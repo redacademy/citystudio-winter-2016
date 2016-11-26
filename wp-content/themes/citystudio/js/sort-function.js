@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+
   if ($('body').hasClass('single-project') || $('body').hasClass('archive') || $('body').hasClass('search') ) {
     $('#sort_nav').remove();
     $('.nav-div').addClass('notransition');
@@ -38,7 +39,6 @@ jQuery(document).ready(function($) {
     $('.refresh, .clickoff, .refresh-hover, .partners.sort-menu-item, .years.sort-menu-item, .hero, .homepage-titles, .grid, .explore-section').on('click', function(){
       removeThemeMenu();
     });
-
   }
 
   });
@@ -125,9 +125,6 @@ jQuery(document).ready(function($) {
     yearLabel.empty().hide();
     reloadProjects();
 
-  
-
-
   }); // close refresh
 
   $('.sub-menu-theme').on('click', function() {
@@ -157,6 +154,7 @@ jQuery(document).ready(function($) {
       reloadProjects();
     }
   });
+
   $('.sub-menu-year').on('click', function() {
     if ($(this.checked)) {
       queryFilter.years = parseInt($(this).find('input').val());

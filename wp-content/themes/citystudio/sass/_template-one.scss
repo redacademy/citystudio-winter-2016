@@ -130,3 +130,12 @@
   }
 }
 
+.separate {
+  border-bottom: 2.5px dashed $light-blue;
+  margin: 3em auto;
+  width: 100%;
+}
+
+.separate:last-child{
+  border: none;
+}

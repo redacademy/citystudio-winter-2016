@@ -94,7 +94,9 @@ jQuery(document).ready(function($){
   })
 
   $('.menu-item-has-children').hover(function(){
-    $('.sub-menu').show();
+    $(this).css('height', '6em')
+  }, function(){
+    $(this).css('height', 'initial')
   })
 
 });
