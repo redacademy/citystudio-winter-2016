@@ -45,7 +45,6 @@
     font-weight: normal;
     text-align: left;
     font-family: $fontfamily;
-    color: #ffffff !important;
     width: 80%;
 
     @include tablet {
@@ -58,6 +57,9 @@
     }
     span {
       font-weight: bold;
+    }
+    p{
+      color: white
     }
   }
 }

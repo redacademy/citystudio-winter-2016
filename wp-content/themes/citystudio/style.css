@@ -4092,7 +4092,6 @@ article.people {
     font-weight: normal;
     text-align: left;
     font-family: "open_sans";
-    color: #ffffff !important;
     width: 80%; }
     @media screen and (min-width: 750px) {
       .title-container h4 {
@@ -4104,6 +4103,8 @@ article.people {
         font-size: 1.15em; } }
     .title-container h4 span {
       font-weight: bold; }
+    .title-container h4 p {
+      color: white; }
 
 .inner-sidebar {
   display: -ms-flexbox;
