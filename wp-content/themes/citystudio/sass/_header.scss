@@ -110,18 +110,24 @@
 
 #menu-icon {
   width: 100%;
-  margin-right: .3em;
+  margin-left: .3em;
+  order: 2;
 }
 
 .header-menu-title {
   display: flex;
-  text-transform: uppercase;
   color: $light-blue;
   flex-basis: 100%;
   order: 2;
   margin: 0;
   justify-content: flex-end;
   align-items: center;
+  transition: all 0.5s ease;
+
+  &:hover {
+    color: $medium-blue;
+    transition: all 0.5s ease;
+  }
 
   span {
     display: none;
@@ -131,6 +137,7 @@
 
     span {
       display: block;
+      order: 1;
     }
   }
 }

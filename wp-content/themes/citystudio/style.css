@@ -839,12 +839,13 @@ a {
 
 #menu-icon {
   width: 100%;
-  margin-right: .3em; }
+  margin-left: .3em;
+  -ms-flex-order: 2;
+      order: 2; }
 
 .header-menu-title {
   display: -ms-flexbox;
   display: flex;
-  text-transform: uppercase;
   color: #2cb5e8;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
@@ -854,12 +855,18 @@ a {
   -ms-flex-pack: end;
       justify-content: flex-end;
   -ms-flex-align: center;
-      align-items: center; }
+      align-items: center;
+  transition: all 0.5s ease; }
+  .header-menu-title:hover {
+    color: #0082b9;
+    transition: all 0.5s ease; }
   .header-menu-title span {
     display: none; }
   @media screen and (min-width: 750px) {
     .header-menu-title span {
-      display: block; } }
+      display: block;
+      -ms-flex-order: 1;
+          order: 1; } }
 
 /*----------- menu nav -------------*/
 .dropdown-content a:hover .hamburger {
