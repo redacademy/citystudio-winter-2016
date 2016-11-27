@@ -1,24 +1,18 @@
 
 .single {
   .recent-news-block h2 {
-    color: $city-blue;
-    font-weight: 700;
+    font-weight:400;
     font-size: 2em;
+    text-align: center;
+    line-height: 1.2em;
+    font-family: $fontfamily;
+    padding: 1em 0
   }
 }
 
 .recent-news-block {
   background-color: $color__background-offwhite;
   padding: 2% 0 6%;
-
-  h2 {
-    text-align: center;
-    line-height: 1.2em;
-    font-size: 1.5em;
-    font-weight: normal;
-    font-family: $fontfamily;
-    padding: 1em 0
-  }
 }
 
 .recent-post-image {

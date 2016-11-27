@@ -238,6 +238,7 @@
   &:hover{
     background-color: white;
     transition: background .6s ease;
+    border: 1px solid $city-blue;
   }
 }
 .toggle-menu-item{
@@ -381,7 +382,7 @@
     label {
       font-size: .7rem;
       text-transform: capitalize;
-      margin-right: -5px;
+      margin-right: 16px;
     &::after {
       content: '';
       width: 0;

@@ -809,7 +809,8 @@ a {
   width: 180px;
   height: 100%; }
   .site-branding img:hover {
-    filter: opacity(0.7); }
+    -webkit-filter: opacity(0.7);
+            filter: opacity(0.7); }
   @media screen and (min-width: 750px) {
     .site-branding img {
       width: 250px;
@@ -1419,7 +1420,7 @@ input[type='email']:focus {
     margin: 1em 0; }
     .frm_submit input[type=submit]:hover {
       background-color: #ffffff !important;
-      border: 1px solid #006493 !important;
+      border: 2px solid #006493 !important;
       color: #006493 !important;
       font-weight: normal; }
   .frm_submit img {
@@ -2128,7 +2129,7 @@ object {
       justify-content: center;
   z-index: 1;
   margin-top: 2em;
-  padding: 10%; }
+  padding: 13%; }
   @media screen and (min-width: 750px) {
     .hero-blurb {
       margin: 0 auto; } }
@@ -2169,11 +2170,10 @@ object {
   display: block; }
   .home-recent-news .homepage-titles {
     font-family: "open_sans";
-    font-size: 2.2em;
+    font-size: 2em;
     margin: .5em auto;
     letter-spacing: .1rem;
-    color: #2D2D2D;
-    font-weight: 700; }
+    color: #2D2D2D; }
 
 .homepage-description {
   display: none; }
@@ -2328,7 +2328,8 @@ object {
           width: 20%;
           margin: .5em; } }
       .homepage-partners-container .home-partners .feat-logo-link:hover {
-        filter: opacity(0.7); }
+        -webkit-filter: opacity(0.7);
+                filter: opacity(0.7); }
     .homepage-partners-container .home-partners .feat-logo {
       width: 100%;
       height: 100%;
@@ -3020,7 +3021,8 @@ a {
   height: 35px; }
   .sort-menu-item:hover {
     background-color: white;
-    transition: background .6s ease; }
+    transition: background .6s ease;
+    border: 1px solid #0198d5; }
 
 .toggle-menu-item {
   display: -ms-flexbox;
@@ -3700,7 +3702,8 @@ h1.page-titles {
     border: none;
     outline: none; }
   .team:hover img {
-    filter: opacity(0.8); }
+    -webkit-filter: opacity(0.8);
+            filter: opacity(0.8); }
   .team:hover h3 {
     color: #76d6ff; }
 
@@ -4381,20 +4384,16 @@ a.js-load-more {
       outline: none; } }
 
 .single .recent-news-block h2 {
-  color: #0198d5;
-  font-weight: 700;
-  font-size: 2em; }
+  font-weight: 400;
+  font-size: 2em;
+  text-align: center;
+  line-height: 1.2em;
+  font-family: "open_sans";
+  padding: 1em 0; }
 
 .recent-news-block {
   background-color: #f7f9f9;
   padding: 2% 0 6%; }
-  .recent-news-block h2 {
-    text-align: center;
-    line-height: 1.2em;
-    font-size: 1.5em;
-    font-weight: normal;
-    font-family: "open_sans";
-    padding: 1em 0; }
 
 .recent-post-image {
   background-size: cover;
