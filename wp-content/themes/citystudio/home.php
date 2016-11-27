@@ -11,8 +11,8 @@ get_header(); ?>
       <header class="title-banner blog-banner" style="background-image: url( <?php echo $thumb['0'];?> ); ">
 				<div class="gradient-overlay">
 					<div class="title-container">
-		        <h1>CityStudio Blog</h1>
-	          <h4><span>Keep your finger on the pulse.</span> CityStudio news, upcoming opportunities to get involved and find out what we are up to.</h4>
+		        <h1><?php the_field('blog_title', get_option('page_for_posts')); ?></h1>
+	          <h4><?php the_field('blog_description', get_option('page_for_posts')); ?></h4>
 					</div>
 				</div>
       </header>

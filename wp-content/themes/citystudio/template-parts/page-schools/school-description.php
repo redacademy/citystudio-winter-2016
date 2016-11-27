@@ -1,7 +1,7 @@
 <div class="full-width">
   <div class="info-main inner-column-wide">
     <div class="school-mission-container">
-      <h3>School's mission or vision</h3>
+      <h3><?php the_field('school_mission_title'); ?></h3>
 
       <div class="school-mission">
         <?php the_field('school_mission'); ?>

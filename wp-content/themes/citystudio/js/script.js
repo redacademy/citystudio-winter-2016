@@ -26,14 +26,13 @@ jQuery(document).ready(function($){
         sticky.show();
       }
 
-      if(scroll >= topOffset - 80) {
+      if(scroll >= topOffset) {
         sticky.removeClass("fixed");
         sticky.hide();
       }
 
       else if (scroll <= (bottomOffset) )  {
         sticky.removeClass("fixed");
-
       }
 
     }
@@ -92,10 +91,6 @@ jQuery(document).ready(function($){
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){
     $('.sub-menu').hide();
-  })
-
-  $('.menu-item-has-children').hover(function(){
-    $('.sub-menu').show();
   })
 
 });

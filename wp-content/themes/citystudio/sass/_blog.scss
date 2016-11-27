@@ -36,7 +36,7 @@
     line-height: 1.2em;
     text-align: left !important;
     font-family: $fontfamily;
-    color: white;
+    color: #ffffff;
     margin-bottom: 0.3em;
   }
 
@@ -45,7 +45,6 @@
     font-weight: normal;
     text-align: left;
     font-family: $fontfamily;
-    color: white;
     width: 80%;
 
     @include tablet {
@@ -58,6 +57,9 @@
     }
     span {
       font-weight: bold;
+    }
+    p{
+      color: white
     }
   }
 }

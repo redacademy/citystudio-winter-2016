@@ -5,11 +5,12 @@
   padding: 2% 0 6%;
 
   h2 {
-    color: $city-blue;
     text-align: center;
-    font-size: 2em;
-    font-weight: bold;
-    line-height: 2em;
+    line-height: 1.2em;
+    font-size: 1.5em;
+    font-weight: normal;
+    font-family: $fontfamily;
+    padding: 1em 0
   }
 }
 

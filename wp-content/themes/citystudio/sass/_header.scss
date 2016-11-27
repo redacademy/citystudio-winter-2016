@@ -186,7 +186,7 @@
   top: 0;
   position: absolute;
   font-size: 10px;
-  width: 140px;
+  width: 90%;
 }
 
 .menu-item {
@@ -301,7 +301,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /*height: 50vh;*/
 }
 
 .menu-menu-container {
@@ -314,12 +313,8 @@
 
 .sub-menu {
   visibility: hidden;
-  display: inline-block;
-  position: absolute;
   font-size: 12px;
-  min-height: 235px;
   padding: 2% 7%;
-  width: 230px;
   left: 175px;
   display: flex;
   flex-direction: column;
@@ -336,10 +331,15 @@
 
 /* hover to show submenu */
 
-#menu-item-698, #menu-item-1709 {
+.menu-item-has-children, #menu-item-1709 {
   &:hover {
     .sub-menu {
       visibility: visible !important;
+      display: block;
+
+    }
+    #primary-menu.menu{
+      height: 25em;
     }
   }
 }
