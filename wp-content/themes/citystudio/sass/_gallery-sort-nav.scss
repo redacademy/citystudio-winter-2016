@@ -382,7 +382,7 @@
     label {
       font-size: .7rem;
       text-transform: capitalize;
-      margin-right: 16px;
+      margin-right: 16px !important;
     &::after {
       content: '';
       width: 0;

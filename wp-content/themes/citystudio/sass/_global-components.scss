@@ -28,7 +28,7 @@
 }
 
 .recent-news-list {
-display: block;
+  display: block;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -36,7 +36,7 @@ display: block;
   padding: 0 0 10%;
 
   @include tablet {
-  display: flex;
+    display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
@@ -125,10 +125,10 @@ display: block;
 
 .static-return-button {
   font-size: 1.1em;
-  letter-spacing: .2rem;
+  letter-spacing: .2em;
   font-family: $fontfamily;
   color: #000;
-  text-decoration: none !important;
+  text-decoration: underline;
   border: none;
   outline: none;
 
