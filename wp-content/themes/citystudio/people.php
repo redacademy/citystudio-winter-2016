@@ -11,22 +11,8 @@ get_header();
 
         <header class="contact-header citystudio-banner">
         	<div class="banner-inner">
-						<?php
-							$page_id = get_the_title();
-
-
-							echo $page_id;
-
-							if ( is_page() && ! is_archive() ) {
-								$page_title = get_the_title( $page_id->ID ) ?>
-								<!-- <h1 class="hero-title center col"><?php // echo $page_title; ?></h1> -->
-								<h2 class="page-titles"><?php echo $page_title; ?></h2>
-							<?php
-								} else {
-
-								}
-						?>
-            </div>
+						<h2 class="page-titles"><?php the_title(); ?></h2>
+          </div>
         </header>
 
 	      <?php get_template_part( 'template-parts/page-people/people', 'team' ); ?>

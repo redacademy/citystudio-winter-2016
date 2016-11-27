@@ -1,3 +1,4 @@
+
 .home {
   .site-header {
     @include tablet{
@@ -27,12 +28,10 @@
   justify-content: space-between;
   width: 100%;
   padding: 1%;
-  height: 55px;
+
   @include tablet{
     position: relative;
-    height: 100%;
   }
-
 }
 
 #primary {
@@ -46,22 +45,23 @@
 }
 
 .site-branding {
-  width: 78vw;
+  flex-basis: 32%;
+  width: 40%;
+
   @include desktop {
     margin-right: 0;
   }
 
   a {
     display: flex;
-    width: 40%;
   }
 }
 
 .logo {
-    max-width: 200px;
+    min-width: 200px;
 
     @include tablet {
-      max-width: 300px;
+      min-width: 300px;
     }
 
   a {
@@ -73,7 +73,6 @@
 .site-branding img {
   width: 180px;
   height: 100%;
-
   &:hover {
     filter: opacity(0.7);
   }
@@ -83,7 +82,23 @@
     width: 100%;
   }
 }
-
+.site-navigation {
+  flex-basis: 40%;
+  width: 40%;
+  margin-right: 3%;
+  order: 2;
+  height: 60px;
+  // max-width: 250px;
+  position: relative;
+  // justify-content: space-between;
+  @include tablet {
+    // flex-basis: 15%;
+    margin-right: 0em;
+  }
+  @include desktop {
+    // flex-basis: 20%;
+  }
+}
 
 .hamburger {
   color: $light-blue;
@@ -100,6 +115,13 @@
   padding: 2% 0 0 0;
   justify-content: flex-end;
 
+  @include tablet{
+  //  top: 0;
+  }
+  @include desktop{
+    // position: absolute;
+  }
+
   &:hover {
     color: $medium-blue;
   }
@@ -109,8 +131,17 @@
 }
 
 #menu-icon {
-  width: 100%;
-  margin-right: .3em;
+  flex-basis: 20%;
+  width: 20%;
+  order: 1;
+
+    @include tablet {
+      flex-basis: 10%;
+    }
+
+    @include desktop {
+      margin-top: 0px;
+    }
 }
 
 .header-menu-title {
@@ -118,6 +149,7 @@
   text-transform: uppercase;
   color: $light-blue;
   flex-basis: 100%;
+  // width: 30%;
   order: 2;
   margin: 0;
   justify-content: flex-end;
@@ -133,6 +165,9 @@
       display: block;
     }
   }
+  &:hover {
+  color: $city-blue;
+}
 }
 
 /*----------- menu nav -------------*/
@@ -165,11 +200,14 @@
   width: 100vw;
   height: 100vh;
   padding: 5% 4%;
+  // margin-top: 2.9em;
   margin: 0;
   left: 0;
+
   @include tablet {
     width: 100%;
-    height: 60%;
+    height: 450px;
+    // margin-left: 6em;
   }
 }
 
@@ -182,11 +220,11 @@
 
 .header-nav li ul {
   background-color: #f9f9f9;
-  left: 150px;
+  left: 160px;
   top: 0;
   position: absolute;
   font-size: 10px;
-  width: 140px;
+  width: 130px;
 }
 
 .menu-item {
@@ -205,17 +243,16 @@
 .dropdown-content {
   position: absolute;
   right: 0px;
+  top: 10px;
   width: 100vw;
-  height: 100vh;
-  display: none;
+  visibility: hidden;
   z-index: 999;
-  top: 50px;
+  top: 70px;
 
   @include tablet {
-    right: 5px;
+    right: 30px;
+    top: 80px;
     width: 360px;
-    top:100%;
-    height: initial;
   }
 }
 
@@ -232,6 +269,8 @@
 .header-nav a {
   display: block;
   color: #2cb5e8 !important;
+  /*background-color: #f9f9f9;*/
+  /*transition: height 300ms ease-in;*/
 }
 
 .header-nav ul li.menu-item-has-children {
@@ -265,8 +304,16 @@
   list-style: none;
   margin: 0;
   padding: 0 0 0 0.9em;
+  // background: #f9f9f9;
 }
 
+// .header-nav ul:before,.header-nav ul:after {
+//   content:"";
+//   display:table;
+// }
+// .header-nav ul:after {
+//   clear:both;
+// }
 .header-nav ul > li {
   a {
     img {
@@ -285,7 +332,11 @@
   transition: height 300ms ease-in;
   border: none;
 }
-
+/* sub menu list item css*/
+// .header-nav ul > li:hover ul li {
+//   height: 2.5em;
+//   padding: .4em;
+// }
 .hamburger-menu {
   width: 70px;
   height: 70px;
@@ -299,9 +350,8 @@
 #primary-menu {
   z-index: 0;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  /*height: 50vh;*/
+  flex-direction: column;
 }
 
 .menu-menu-container {
@@ -320,12 +370,11 @@
   min-height: 235px;
   padding: 2% 7%;
   width: 230px;
-  left: 175px;
+  left: 115px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   border-left: 2px solid $city-blue;
-  box-shadow: 10px 6px 18px #f5f5f5;
   li {
     display: inline-block;
   }
@@ -334,18 +383,12 @@
   }
 }
 
-/* hover to show submenu */
-
-#menu-item-698, #menu-item-1709 {
+#menu-item-698 {
   &:hover {
     .sub-menu {
       visibility: visible !important;
     }
   }
-}
-
-#menu-item-1709 a {
-  width: 176px;
 }
 
 .toggle-menu {
