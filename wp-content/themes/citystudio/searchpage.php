@@ -129,7 +129,7 @@ get_header(); ?>
 								<li style=
 				            "background: url('<?php the_field('banner_image'); ?>') no-repeat center;
 				             background-size: cover; height: 100%; width: 100%;
-									list-style: none;">
+										">
 									<div class="tag-description">
 								 	 <?php the_title( '<h2 class="tag-description-title">', '</h2>'); ?>
 

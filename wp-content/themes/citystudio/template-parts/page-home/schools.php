@@ -21,7 +21,7 @@
         <?php endwhile; ?>
     </ul>
 
-    <ul class="home-partners-extra">
+    <ul class="home-partners">
         <?php
           if( have_rows('partner_row_three') );
           while ( have_rows('partner_row_three') ) : the_row(); ?>

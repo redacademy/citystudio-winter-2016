@@ -3,7 +3,7 @@ jQuery(document).ready(function($){
    var callToAction = $(".call-to-action");
 
     if ($(window).width() <= 414){
-        $("a[href*=#]").toggle(function(e) {
+        $("a[href*=#]").toggle(function() {
           $(".sub-menu").css({"display": "block"});
         },
         function(){
@@ -37,6 +37,11 @@ jQuery(document).ready(function($){
 
     }
   });
+
+  // for sub-menu delay
+  $('.sub-menu li a').on('click', function(){
+    $('.sub-menu').hide();
+  })
 
   $('#refresh').hover(function(){
     $('.refresh-hover').css('opacity', 1);
@@ -72,26 +77,30 @@ jQuery(document).ready(function($){
   var menuIcon = $(".fa-bars", this);
       hamburger = $('.hamburger');
 
-  hamburger.on('click', function(e) {
+  hamburger.toggle(function(e) {
 
-    console.log($('.show').length > 0)
+  $('.dropdown-content').css({"visibility": "visible"});
+    menuIcon.removeClass("fa-bars");
+    menuIcon.addClass("fa-times-circle");
+  }, function() {
 
-    $('.dropdown-content').toggle();
-    menuIcon.toggleClass("fa-bars fa-times-circle");
-  
-  if ( $('.show').length > 0 ){
-    $('.hero, .site-branding, .homepage-titles').on('click', function(){
-        $('.dropdown-content').hide();
-        menuIcon.removeClass("fa-times-circle");
-        menuIcon.addClass("fa-bars");
-      });
-    }
+  $('.dropdown-content').css({"visibility": "hidden"});
+    menuIcon.removeClass("fa-times-circle");
+    menuIcon.addClass("fa-bars");
   });
 
+<<<<<<< HEAD
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){
     $('.sub-menu').hide();
   })
+=======
+  $('.header-container').on('click', function() {
+    $('.dropdown-content').css({"visibility": "hidden"});
+    menuIcon.removeClass("fa-times-circle");
+    menuIcon.addClass("fa-bars");
+  });
+>>>>>>> people-age
 
 });
 

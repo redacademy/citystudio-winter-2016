@@ -47,7 +47,7 @@ jQuery(document).ready(function($) {
       $(this).toggleClass('toggle-menu-item');
       $(this).children().toggleClass('toggle-menu-item');
       $("i", this).toggleClass("fa-sort-desc fa-sort-asc");
-  
+
       var openPartner = ($(this).hasClass('toggle-menu-item'));
 
   if (openPartner) {
@@ -74,7 +74,7 @@ jQuery(document).ready(function($) {
 
   if (openYear) {
       var yearSelected = '.years.sort-menu-item';
-      
+
       function removeYearMenu(){
           $(yearSelected).removeClass('toggle-menu-item');
           $(yearSelected).children().removeClass('toggle-menu-item');
@@ -193,7 +193,7 @@ jQuery(document).ready(function($) {
           dataType: 'json',
           // url: api_vars.rest_url+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
           url: 'http://citystudio.staging.wpengine.com/wp-json/'+'wp/v2/project?'+filters()+'&filter[posts_per_page]=16',
-      
+
             success: function(response, data, status) {
             var projects = response;
             // response.addHeader("Access-Control-Allow-Origin", "*");
