@@ -52,16 +52,14 @@ a {
 .description {
   position: relative;
   height: 38%;
-  width: 90%;
+  width: 100%;
   color: #fff;
   font-family: $fontfamily;
   padding: 0.75em 1em;
   box-sizing: border-box;
   transition: all 0.45s ease;
-  top: 50%;
+  top: 62%;
   background: linear-gradient(to right,#0277a7 0,#0188bb 24%,rgba(0,165,220,.9) 63%,rgba(0,177,234,.9) 80%);
-  border-top-right-radius: 10px;
-  border-bottom-right-radius: 10px;
 }
 
 .description-title {

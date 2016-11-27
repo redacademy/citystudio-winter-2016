@@ -13,10 +13,9 @@ button {
   font-weight: lighter;
   letter-spacing: 2px;
   margin: 0 auto;
-  border-radius: 10px;
   box-sizing: border-box;
   transition: background-color 0.5s ease;
-  
+
   &:active,
   &:visited {
     color: #ffffff;
