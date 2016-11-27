@@ -79,4 +79,3 @@ wp-content/plugins/formidable/*
 # =============== #
 wp-content/themes/*
 !wp-content/themes/citystudio/
-wp-content/themes/citystudio/gulpfile.js
