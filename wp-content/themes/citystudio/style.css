@@ -3918,9 +3918,12 @@ article.people {
   display: none; }
   @media screen and (min-width: 750px) {
     .cta_blurb {
+      -ms-flex-preferred-size: 60%;
+          flex-basis: 60%;
       margin: 1em;
       display: block;
-      width: 30em; } }
+      width: 100%;
+      padding: 0 2%; } }
 
 .call-to-action {
   background-color: #f7f9f9;
@@ -3956,13 +3959,15 @@ article.people {
   display: flex;
   -ms-flex-direction: column;
       flex-direction: column;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
   -ms-flex-align: center;
       align-items: center;
   background-color: #2cb5e8;
   border-radius: 10px;
   margin: 2em 0;
   height: 125px;
-  width: 245px;
+  max-width: 350px;
   padding: 0.9em 0;
   color: white;
   position: relative;
@@ -3981,13 +3986,13 @@ article.people {
     letter-spacing: 3px;
     margin-bottom: 0; }
   .connect a {
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 10px;
-    margin-top: 1.25em;
+    margin-top: 1em;
     color: #ffffff;
-    padding: 8%;
+    padding: 7px 30px;
     text-transform: uppercase;
-    font-weight: bold;
+    font-weight: 500;
     background-color: #2cb5e8;
     text-align: center;
     transition: background-color 0.5s ease; }
@@ -4168,7 +4173,7 @@ article.people {
   padding: 2%;
   color: white;
   position: absolute;
-  background: linear-gradient(to right, #0076a5 0%, #00b1ea 80%, #0076a5 99%, #0076a5 100%); }
+  background: linear-gradient(to right, rgba(0, 118, 165, 0.8) 0%, rgba(0, 177, 234, 0.8) 80%, rgba(0, 118, 165, 0.8) 99%, rgba(0, 118, 165, 0.8) 100%); }
   .blog-credits h2,
   .blog-credits p {
     color: white;
