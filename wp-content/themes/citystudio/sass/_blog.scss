@@ -162,21 +162,14 @@
   }
 }
 .blog-credits {
-  width: 80%;
-  min-height: 55%;
+  width: 50%;
+  height: 100%;
   box-sizing: border-box;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
-  margin-top: 5em;
   padding: 2%;
   color: white;
   position: absolute;
   background: linear-gradient(to right, rgba(0,118,165,0.75) 0%,rgba(0,177,234,0.75) 80%,rgba(0,118,165,0.75) 99%,rgba(0,118,165,0.75) 100% );
 
-  @include tablet {
-    height: 68%;
-    margin-top: 3em;
-  }
   h2,
   p {
     color: white;
@@ -200,18 +193,17 @@
   p {
     display: block;
     width: 90%;
-    font-size: 0.8em;
+    font-size: 0.9em;
     margin: 1em 0;
     overflow: hidden;
     text-overflow: ellipsis;
     -webkit-line-clamp: 2;
     display: -webkit-box;
     -webkit-box-orient: vertical;
-    line-height: 1.15em;
-    @include tablet {}
+    line-height: 1.5em;
+
     @include desktop {
       font-weight: lighter;
-
       font-family: $fontfamily;
     }
   }

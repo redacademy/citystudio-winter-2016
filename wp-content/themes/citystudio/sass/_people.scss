@@ -314,6 +314,8 @@ article.people {
   a, a:visited, a:focus, a:active {
     text-decoration: none;
     color: $city-blue;
+    font-size: 1rem;
+    letter-spacing: .2rem;
 
     &:hover {
       opacity: 0.9;

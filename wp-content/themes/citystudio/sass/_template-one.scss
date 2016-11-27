@@ -25,6 +25,23 @@
       line-height: 1.8rem;
     }
   }
+
+  ul {
+    list-style: disc;
+    margin: 0 0 1.5em 3em;
+    font-weight: 100;
+    font-size: 1em;
+    line-height: 1.5rem;
+    font-family: $fontfamily;
+
+    li {
+      margin-bottom: 0.5em;
+
+      ul {
+        margin-top: 0.5em;
+      }
+    }
+  }
 }
 .template-hero {
   width: 100%;
@@ -131,6 +148,6 @@
   width: 100%;
 }
 
-.separate:last-child{
+.page-template-template-one .separate:last-child{
   border: none;
 }

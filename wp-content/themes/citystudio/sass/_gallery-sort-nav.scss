@@ -35,6 +35,7 @@
     margin: 0 -6px;
   }
 }
+
 .open {
   display: none;
   @include tablet{
@@ -97,24 +98,24 @@
   }
 }
 .themes {
-  background: url(../../assets/neighbourhood-icon.png) 7px 6px no-repeat #03648c;
+  background: url('../../assets/neighbourhood-icon.png') 7px 6px no-repeat #03648c;
   background-size: 15px 20px;
   p{
     margin: -6px;
   }
   &:hover{
-    background: url(../../assets/neighbourhood-icon-blue.png) 7px 6px no-repeat white;
+    background: url('../../assets/neighbourhood-icon-blue.png') 7px 6px no-repeat white;
     background-size: 15px 20px;
   }
 }
 .partners {
-  background: url("../../assets/icon-building-white.png") 7px 1px  no-repeat #03648c;
+  background: url('../../assets/icon-building-white.png') 7px 1px  no-repeat #03648c;
   background-size: 27px 28px;
   p{
     margin: -6px;
   }
    &:hover{
-    background: url(../../assets/icon-building-blue.png) 7px 1px no-repeat white;
+    background: url('../../assets/icon-building-blue.png') 7px 1px no-repeat white;
     background-size: 27px 28px;
   }
   .fa-sort-desc{
@@ -122,13 +123,13 @@
   }
 }
 .years {
-  background: url(../../assets/years-icon-white.png) 7px 5px no-repeat #03648c;
+  background: url('../../assets/years-icon-white.png') 7px 5px no-repeat #03648c;
   background-size: 21px 20px;
   p{
     margin: -6px;
   }
    &:hover{
-    background: url(../../assets/years-icon-blue.png) 7px 5px no-repeat white;
+    background: url('../../assets/years-icon-blue.png') 7px 5px no-repeat white;
     background-size: 21px 20px;
   }
   .fa-sort-desc{
@@ -136,7 +137,7 @@
   }
 }
 .refresh {
-  background: url("../../assets/refresh.png") no-repeat center;
+  background: url('../../assets/refresh.png') no-repeat center;
   background-size: 35px 35px;
   border: 3px solid white;
   background-color: #0082b9;
@@ -376,6 +377,8 @@
     text-align: center;
     padding-top: 3px;
     left: -1px;
+    background: url('../../assets/x-mark.png') 150px 10px no-repeat #fff;
+    background-size: 12px 12px;
     label {
       font-size: .7rem;
       text-transform: capitalize;

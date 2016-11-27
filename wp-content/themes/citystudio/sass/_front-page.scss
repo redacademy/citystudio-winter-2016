@@ -1,4 +1,4 @@
-// -------------- HOME PAGE STYLES  ----------------------*
+.tag-description// -------------- HOME PAGE STYLES  ----------------------*
 .container {
   display: block;
   width: 100vw;
@@ -25,31 +25,30 @@
 
 .hero-blurb {
   text-align: center;
-  font-size: 1rem;
+  font-size: .7rem;
   font-weight: 700;
   font-family:$fontfamily;
   display: flex;
   justify-content: center;
   z-index: 1;
   margin-top: 2em;
-  padding:8%;
+  padding: 10%;
+
   @include tablet {
     margin: 0 auto;
   }
-  h3 {
-    font-size: 1.1em;
+  h3, h3 span, h3 p span {
+    font-size: 1.3em;
     font-weight: 300;
     color: #fff;
+
     @include tablet {
       font-size: 1.5em;
     }
-    @include desktop {
-      font-size: 2em;
-    }
   }
-p {
-margin-bottom: 0;
-}
+  p {
+  margin-bottom: 0;
+  }
 }
 .orange-font {
   color: #ee7600;
@@ -60,16 +59,16 @@ margin-bottom: 0;
   letter-spacing: 0.1rem;
   font-family: $fontfamily;
   text-align: center;
-  font-size: 1em;
+  font-size: 1.5em;
   width: 95%;
-  font-weight: bold;
+  font-weight: 100;
 
   @include tablet {
+    font-size: 2em;
     width: 100%;
   }
 
   @include desktop {
-    font-size: 1.5em;
     font-weight: 100;
     margin-top: 4em;
   }
@@ -82,13 +81,14 @@ margin-bottom: 0;
 
 .home-recent-news {
   display: block;
+
   .homepage-titles {
     font-family: $fontfamily;
     font-size: 2.2em;
-    margin: 0.5em auto;
-    letter-spacing: 0.1rem;
-    color: $citystudio-black;
-    font-weight: bold;
+    margin: .5em auto;
+    letter-spacing: .1rem;
+    color: #2D2D2D;
+    font-weight: 700;
   }
 }
 

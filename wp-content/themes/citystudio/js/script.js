@@ -20,7 +20,7 @@ jQuery(document).ready(function($){
         scroll = $(window).scrollTop(),
         bottomOffset = grid.offset().top,
         topOffset = explore.offset().top;
-  
+
       if (scroll >= bottomOffset) {
         sticky.addClass("fixed");
         sticky.show();
@@ -89,18 +89,11 @@ jQuery(document).ready(function($){
     menuIcon.addClass("fa-bars");
   });
 
-<<<<<<< HEAD
   // for sub-menu delay
   $('.sub-menu li a').on('click', function(){
     $('.sub-menu').hide();
   })
-=======
-  $('.header-container').on('click', function() {
-    $('.dropdown-content').css({"visibility": "hidden"});
-    menuIcon.removeClass("fa-times-circle");
-    menuIcon.addClass("fa-bars");
-  });
->>>>>>> people-age
+
 
 });
 

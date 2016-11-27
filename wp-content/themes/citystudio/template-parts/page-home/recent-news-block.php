@@ -1,6 +1,6 @@
 <div class="home-recent-news recent-news-block">
   <div class="inner-column-wide">
-    <h2 class="page-titles"><?php the_field('recent_news_title'); ?></h2>
+    <h2 class="homepage-titles"><?php the_field('recent_news_title'); ?></h2>
 
     <ul class="recent-news-list">
       <?php $the_query = new WP_Query( 'posts_per_page=3' ); ?>

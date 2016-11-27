@@ -1,4 +1,11 @@
 
+.single {
+  .recent-news-block h2 {
+    color: $city-blue;
+    font-weight: 700;
+    font-size: 2em;
+  }
+}
 
 .recent-news-block {
   background-color: $color__background-offwhite;
@@ -116,20 +123,23 @@ display: block;
 
 .return-wrapper {
   margin: 4em 0 2em;
+  text-align: right;
+  padding-bottom: 2rem;
+  font-weight: 100;
+  font-size: .7rem;
 }
 
 .static-return-button {
-
   font-size: 1.1em;
+  letter-spacing: .2rem;
   font-family: $fontfamily;
-  color: $light-blue;
+  color: #000;
   text-decoration: none !important;
-  text-transform: uppercase;
   border: none;
   outline: none;
 
   &:visited, &:focus, &:active {
-    color: $light-blue;
+    color: #000;
     text-decoration: none !important;
   }
 
@@ -142,6 +152,7 @@ display: block;
   }
 
   &:hover {
+    color: $light-blue;
     cursor: pointer;
     text-decoration: underline !important;
   }

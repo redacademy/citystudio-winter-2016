@@ -19,14 +19,8 @@ h1.page-titles {
     color: white;
     font-family: $fontfamily;
     font-size: 1.5em;
+    font-weight: 100;
     box-shadow: none;
-
-    @include tablet {
-      font-size: 2.5em;
-    }
-    @include desktop{
-      font-size: 3em;
-    }
 }
 //HEROBANNER
 
@@ -126,8 +120,9 @@ h1.page-titles {
     margin: 2em auto;
     font-family: $fontfamily;
 
-    @include desktop {
-      // margin: 1em 10em;
+    @include tablet {
+      width: 920px;
+      margin: 0 auto;
     }
     .scalability-wrap {
       margin-bottom: 1.5rem;

@@ -9,23 +9,22 @@
   }
 }
 a.js-load-more {
-  border: 1px solid #ffffff;
-  border-radius: 10px;
+  border: 1px solid $light-blue;
   box-sizing: border-box;
+  background-color: $light-blue;
   color: #ffffff;
   display: inline-block;
   width: 55%;
   letter-spacing: 2px;
   margin: 0 auto;
-  border-radius: 10px;
-  background-color: transparent;
   text-transform: uppercase;
   margin: 0 auto;
   padding: 2.2% 0;
-  transition: background-color 0.5s ease;
+  transition: all 0.5s ease;
   width: 200px;
   font-size: 1em;
   font-weight: lighter;
+
   &:active,
   &:visited {
     color: #ffffff !important;
@@ -33,9 +32,10 @@ a.js-load-more {
   }
 
   &:hover, &:focus {
-    background-color: #ffffff;
-    border: 1px solid $dark-blue;
-    color: $dark-blue;
+    background-color: transparent;
+    border: 1px solid $light-blue;
+    color: $light-blue !important;
+    transition: all 0.5s ease;
   }
   @include tablet{
     width: 30%;
