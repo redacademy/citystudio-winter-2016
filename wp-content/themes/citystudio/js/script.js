@@ -69,7 +69,6 @@ jQuery(document).ready(function($){
   //       }
   //   }
   // });
-
 });
 
 jQuery(document).ready(function($){
@@ -79,12 +78,12 @@ jQuery(document).ready(function($){
 
   hamburger.toggle(function(e) {
 
-  $('.dropdown-content').css({"visibility": "visible"});
+  $('.dropdown-content').css({"display": "block"});
     menuIcon.removeClass("fa-bars");
     menuIcon.addClass("fa-times-circle");
   }, function() {
 
-  $('.dropdown-content').css({"visibility": "hidden"});
+  $('.dropdown-content').css({"display": "none"});
     menuIcon.removeClass("fa-times-circle");
     menuIcon.addClass("fa-bars");
   });
