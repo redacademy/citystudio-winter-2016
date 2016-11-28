@@ -11,10 +11,11 @@ get_header(); ?>
 			<header class="citystudio-banner">
 					<h1 class="page-titles"><?php the_field('page_title'); ?></h1>
 			</header>
+
 			<div class="hero-wrap">
-			<?php if( get_field('banner_image') ): ?>
-				<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>
-			<?php endif; ?>
+				<?php if( get_field('banner_image') ): ?>
+					<img class="template-hero" src="<?php the_field( 'banner_image' ); ?>" alt="banner image"/>
+				<?php endif; ?>
 			</div>
 			<div class="wwd-content">
 				<div class="inner-column">
@@ -29,9 +30,9 @@ get_header(); ?>
                      <?php  endwhile; ?>
 				</div>
 			</div>
-			<div class="call-to-action">
 
-				<div class="cta-inner">
+			<div class="call-to-action">
+				<div class="cta-inner inner-column-wide">
 					<?php if(get_field('activate_cta') ): ?>
 								<?php get_template_part('template-parts/content', 'template'); ?>
 					<?php endif; ?>
