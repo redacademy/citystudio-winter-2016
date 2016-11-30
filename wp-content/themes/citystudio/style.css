@@ -2132,13 +2132,13 @@ object {
   @media screen and (min-width: 750px) {
     .hero-blurb {
       margin: 0 auto; } }
-  .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span, .hero-blurb h3 p {
-    font-size: 1.3em;
+  .hero-blurb span, .hero-blurb p span, .hero-blurb p {
+    font-size: 1.4em;
     font-weight: 300;
     color: #fff; }
     @media screen and (min-width: 750px) {
-      .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span, .hero-blurb h3 p {
-        font-size: 1.5em; } }
+      .hero-blurb span, .hero-blurb p span, .hero-blurb p {
+        font-size: 2em; } }
   .hero-blurb p {
     margin-bottom: 0; }
 

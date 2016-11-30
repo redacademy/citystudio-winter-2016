@@ -37,13 +37,13 @@
   @include tablet {
     margin: 0 auto;
   }
-  h3, h3 span, h3 p span, h3 p {
-    font-size: 1.3em;
+  span, p span, p {
+    font-size: 1.4em;
     font-weight: 300;
     color: #fff;
 
     @include tablet {
-      font-size: 1.5em;
+      font-size: 2em;
     }
   }
   p {

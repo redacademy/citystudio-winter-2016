@@ -2,7 +2,7 @@
 
 <div class="hero" style="background-image: url('<?php echo $thumb['0'];?>')">
   <div class="hero-blurb">
-    <h3><?php the_field('hero_blurb'); ?></h3>
+    <?php the_field('hero_blurb'); ?>
   </div>
 </div> <!-- end hero -->
 
