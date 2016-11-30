@@ -2132,12 +2132,12 @@ object {
   @media screen and (min-width: 750px) {
     .hero-blurb {
       margin: 0 auto; } }
-  .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span {
+  .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span, .hero-blurb h3 p {
     font-size: 1.3em;
     font-weight: 300;
     color: #fff; }
     @media screen and (min-width: 750px) {
-      .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span {
+      .hero-blurb h3, .hero-blurb h3 span, .hero-blurb h3 p span, .hero-blurb h3 p {
         font-size: 1.5em; } }
   .hero-blurb p {
     margin-bottom: 0; }
@@ -2160,8 +2160,8 @@ object {
   @media screen and (min-width: 1024px) {
     .homepage-titles {
       font-weight: 100;
-      margin-top: 4em; } }
-  .homepage-titles span {
+      margin-top: 2em; } }
+  .homepage-titles strong {
     color: #0198d5;
     font-weight: bold; }
 
@@ -3175,8 +3175,7 @@ a {
   height: 5em; }
   @media screen and (min-width: 750px) {
     .sticky-navigation {
-      visibility: visible;
-      display: block; } }
+      visibility: visible; } }
 
 .fixed {
   position: fixed;

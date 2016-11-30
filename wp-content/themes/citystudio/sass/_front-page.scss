@@ -37,7 +37,7 @@
   @include tablet {
     margin: 0 auto;
   }
-  h3, h3 span, h3 p span {
+  h3, h3 span, h3 p span, h3 p {
     font-size: 1.3em;
     font-weight: 300;
     color: #fff;
@@ -70,10 +70,10 @@
 
   @include desktop {
     font-weight: 100;
-    margin-top: 4em;
+    margin-top: 2em;
   }
 
-  span {
+  strong {
     color: $city-blue;
     font-weight: bold;
   }
