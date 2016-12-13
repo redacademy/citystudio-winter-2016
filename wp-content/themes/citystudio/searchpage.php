@@ -7,7 +7,7 @@ get_header(); ?>
 	<section id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<div class="searchpage">
-				<header class="search-archive-header">
+				<header class="citystudio-banner">
 					<div class="searchform-title">
 						<h1 class="page-titles">Project Archive</h1>
 					</div>

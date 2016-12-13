@@ -23,9 +23,20 @@
  * ╚══════╝╚══════╝╚═╝  ╚═╝  ╚═══╝  ╚═╝     ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝
  */
 
-class Ai1wm_Http_Stream {
+class Ai1wm_Http_Stream extends Ai1wm_Http_Abstract {
 
-	public function get( $url, $headers = array() ) {
+	public function get( $url, $blocking = false ) {
+
+		$headers = array();
+
+		// Set headers
+		foreach ( $this->headers as $key => $value ) {
+			$headers[] = "{$key}: {$value}";
+		}
+
+		// Set scheme
+		$scheme = parse_url( $url, PHP_URL_SCHEME );
+
 		// Set host
 		$host = parse_url( $url, PHP_URL_HOST );
 
@@ -40,7 +51,7 @@ class Ai1wm_Http_Stream {
 
 		// Set port
 		if ( empty( $port ) ) {
-			if ( parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
+			if ( $scheme === 'https' ) {
 				$port = 443;
 			} else {
 				$port = 80;
@@ -54,12 +65,14 @@ class Ai1wm_Http_Stream {
 				'verify_peer_name'  => false,
 				'capture_peer_cert' => false,
 				'allow_self_signed' => true,
-			)
+			),
 		) );
 
 		// Set stream client
-		if ( parse_url( $url, PHP_URL_SCHEME ) === 'https' ) {
-			$handle = stream_socket_client( "ssl://{$host}:{$port}", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context );
+		if ( $scheme === 'https' ) {
+			if ( ! ( $handle = stream_socket_client( "ssl://{$host}:{$port}", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context ) ) ) {
+				$handle = stream_socket_client( "tcp://{$host}:{$port}", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context );
+			}
 		} else {
 			$handle = stream_socket_client( "tcp://{$host}:{$port}", $errno, $errstr, 5, STREAM_CLIENT_CONNECT, $context );
 		}
@@ -80,11 +93,18 @@ class Ai1wm_Http_Stream {
 			trigger_error( sprintf( 'fwrite wrote only %d instead of %d' , $length, strlen( $request ) ) );
 		}
 
-		// Set non blocking
-		stream_set_blocking( $handle, 0 );
+		// Set blocking/non-blocking mode on a stream
+		if ( $blocking ) {
+			fread( $handle, 1024 );
+		} else {
+			stream_set_blocking( $handle, 0 );
+			// What we observed is that when the stream is non-blocking, it takes time for the webserver to start a new php thread.
+			// By sleeping for 3s, we give some time for the webserver to start a new php process to process the request.
+			// This is a temporary solution and a new one will be addressed in WM-651
+			sleep( 3 );
+		}
 
 		// Close stream handle
 		fclose( $handle );
 	}
-
 }

@@ -28,16 +28,12 @@
     font-size: 1.5rem;
     width: 90%;
     padding: 3% 2%;
-    // min-height: 2.5rem;
     text-transform: capitalize;
     margin: 1em 0;
 
     @include tablet {
       padding: 1% 2%;
       margin-top: 0;
-    }
-    @include desktop {
-      // min-height: 5rem;
     }
 
     h2 {
@@ -80,11 +76,9 @@ width: 90%;
 
   li,
   a {
-    border: 1px solid transparent;
     flex: 0 0 93%;
     height: 230px;
     min-height: 230px;
-    // min-width: 330px;
     width: 100%;
     box-shadow: 0 4px 12px 0 rgba(0,0,0,.2);
     margin-bottom: 2em;
@@ -92,18 +86,14 @@ width: 90%;
     @include tablet {
       flex: 0 0 47%;
       min-height: 230px;
-      // min-width: 330px;
       margin-bottom: 2em;
       max-height: 230px;
-      // max-width: 330px;
     }
     @include desktop {
       flex: 0 0 31%;
       height: 200px;
-      // width: 280px;
     }
     &:hover {
-      border: 1px solid white;
       z-index: 1;
       cursor: pointer;
       box-shadow: 3px 5px 20px 0 rgba(0,0,0,0.35);

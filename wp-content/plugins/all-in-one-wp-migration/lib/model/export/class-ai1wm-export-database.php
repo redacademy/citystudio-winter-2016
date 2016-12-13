@@ -63,9 +63,9 @@ class Ai1wm_Export_Database {
 		// Find and replace
 		if ( isset( $params['options']['replace'] ) && ( $replace = $params['options']['replace'] ) ) {
 			for ( $i = 0; $i < count( $replace['old_value'] ); $i++ ) {
-				if ( ! empty( $replace['old_value'][$i] ) && ! empty( $replace['new_value'][$i] ) ) {
-					$old_table_values[] = $replace['old_value'][$i];
-					$new_table_values[] = $replace['new_value'][$i];
+				if ( ! empty( $replace['old_value'][ $i ] ) && ! empty( $replace['new_value'][ $i ] ) ) {
+					$old_table_values[] = $replace['old_value'][ $i ];
+					$new_table_values[] = $replace['new_value'][ $i ];
 				}
 			}
 		}
@@ -78,9 +78,16 @@ class Ai1wm_Export_Database {
 			$old_table_prefixes[] = ai1wm_table_prefix();
 			$new_table_prefixes[] = ai1wm_servmask_prefix();
 		} else {
+			// Set table prefixes based on table name
 			foreach ( $client->get_tables() as $table_name ) {
 				$old_table_prefixes[] = $table_name;
 				$new_table_prefixes[] = ai1wm_servmask_prefix() . $table_name;
+			}
+
+			// Set table prefixes based on user meta
+			foreach ( array( 'capabilities', 'user_level', 'user_roles' ) as $user_meta ) {
+				$old_table_prefixes[] = $user_meta;
+				$new_table_prefixes[] = ai1wm_servmask_prefix() . $user_meta;
 			}
 		}
 
@@ -110,7 +117,7 @@ class Ai1wm_Export_Database {
 		// Set current table index
 		if ( isset( $params['current_table_index'] ) ) {
 			$current_table_index = (int) $params['current_table_index'];
- 		} else {
+		} else {
 			$current_table_index = 0;
 		}
 

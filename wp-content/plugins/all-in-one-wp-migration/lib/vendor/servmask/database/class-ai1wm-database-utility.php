@@ -35,7 +35,7 @@ class Ai1wm_Database_Utility {
 	 * @return mixed        The original string with all elements replaced as needed.
 	 */
 	public static function replace_values( $from = array(), $to = array(), $data = '' ) {
-		return str_ireplace( $from, $to, $data );
+		return strtr( $data, array_combine( $from, $to ) );
 	}
 
 	/**
@@ -74,7 +74,7 @@ class Ai1wm_Database_Utility {
 				unset( $tmp );
 			} else {
 				if ( is_string( $data ) ) {
-					$data = str_ireplace( $from, $to, $data );
+					$data = strtr( $data, array_combine( $from, $to ) );
 				}
 			}
 
@@ -101,14 +101,5 @@ class Ai1wm_Database_Utility {
 			array( '\\', '\0', "\n", "\r", "\x1a", "'", '"', "\0" ),
 			$data
 		);
-	}
-	/**
-	 * Unescape quote characters
-	 *
-	 * @param  string $data Data to replace.
-	 * @return string
-	 */
-	public static function unescape_quotes( $data ) {
-		return str_ireplace( '\"', '"', $data );
 	}
 }

@@ -17,8 +17,12 @@
   align-items: center;
   height: 400px;
   width: 100%;
+  margin-top: 55px;
   @include tablet {
     height: 500px;
+  }
+  @include desktop {
+    margin-top: 10px;
   }
 }
 
@@ -49,9 +53,6 @@
   margin-bottom: 0;
   }
 }
-.orange-font {
-  color: #ee7600;
-}
 
 .homepage-titles {
   margin: 1.5em auto;
@@ -76,6 +77,11 @@
     color: $city-blue;
     font-weight: bold;
   }
+}
+
+h1.homepage-titles{
+  width: 75%;
+  font-size: 1.75em;
 }
 
 .home-recent-news {

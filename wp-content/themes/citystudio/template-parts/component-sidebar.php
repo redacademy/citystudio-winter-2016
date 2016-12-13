@@ -10,8 +10,4 @@
     <p><a target="_blank" href="https://www.instagram.com/citystudiovan/?hl=en">INSTAGRAM</a></p>
   </div>
 
-  <div class="sidebar-item">
-    <h4>Newsboard</h4>
-    <p>Check back soon :)</p>
-  </div>
 </div>

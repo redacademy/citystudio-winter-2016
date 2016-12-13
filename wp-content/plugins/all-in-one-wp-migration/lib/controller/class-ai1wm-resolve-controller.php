@@ -51,7 +51,7 @@ class Ai1wm_Resolve_Controller {
 		}
 
 		// Set IP address
-		if ( isset( $params['url_ip'] ) && ( $ip = $params['url_ip' ] ) ) {
+		if ( isset( $params['url_ip'] ) && ( $ip = $params['url_ip'] ) ) {
 			update_option( AI1WM_URL_IP, $ip );
 		}
 

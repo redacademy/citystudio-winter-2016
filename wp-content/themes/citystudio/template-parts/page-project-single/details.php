@@ -34,7 +34,7 @@
     <div class="image-bar">
       <?php if (have_rows('image_bar'));
         while (have_rows('image_bar')) : the_row(); ?>
-          <img src ="<?php the_sub_field('additional_image') ?>" />
+          <a href="<?php the_sub_field('link_to_full_size_image') ?>"><img src ="<?php the_sub_field('additional_image') ?>" /></a>
       <?php endwhile; ?>
     </div>
 

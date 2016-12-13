@@ -35,7 +35,7 @@ class Ai1wm_Import_Content {
 
 		// Parse blogs.json file
 		$blogs = fread( $handle, filesize( ai1wm_blogs_path( $params ) ) );
-		$blogs = json_decode( $blogs );
+		$blogs = json_decode( $blogs, true );
 
 		// Close handle
 		fclose( $handle );
@@ -48,7 +48,7 @@ class Ai1wm_Import_Content {
 		}
 
 		// Set archive offset
-		if ( isset( $params['archive_offset']) ) {
+		if ( isset( $params['archive_offset'] ) ) {
 			$archive_offset = (int) $params['archive_offset'];
 		} else {
 			$archive_offset = 0;
@@ -100,32 +100,32 @@ class Ai1wm_Import_Content {
 
 		// Set extract paths
 		foreach ( $blogs as $blog ) {
-			if ( ai1wm_main_site( $blog->Old->Id ) === false ) {
+			if ( ai1wm_main_site( $blog['Old']['BlogID'] ) === false ) {
 				if ( defined( 'UPLOADBLOGSDIR' ) ) {
 					// Old sites dir style
-					$old_paths[] = ai1wm_files_path( $blog->Old->Id );
-					$new_paths[] = ai1wm_files_path( $blogs->New->Id );
+					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
-					$old_paths[] = ai1wm_sites_path( $blog->Old->Id );
-					$new_paths[] = ai1wm_files_path( $blog->New->Id );
+					$old_paths[] = ai1wm_sites_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_files_path( $blog['New']['BlogID'] );
 				} else {
 					// Old sites dir style
-					$old_paths[] = ai1wm_files_path( $blog->Old->Id );
-					$new_paths[] = ai1wm_sites_path( $blog->New->Id );
+					$old_paths[] = ai1wm_files_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
 
 					// New sites dir style
-					$old_paths[] = ai1wm_sites_path( $blog->Old->Id );
-					$new_paths[] = ai1wm_sites_path( $blog->New->Id );
+					$old_paths[] = ai1wm_sites_path( $blog['Old']['BlogID'] );
+					$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
 				}
 			}
 		}
 
 		// Set base site extract paths (should be added at the end of arrays)
 		foreach ( $blogs as $blog ) {
-			if ( ai1wm_main_site( $blog->Old->Id ) === true ) {
-				$old_paths[] = ai1wm_sites_path( $blog->Old->Id );
-				$new_paths[] = ai1wm_sites_path( $blog->New->Id );
+			if ( ai1wm_main_site( $blog['Old']['BlogID'] ) === true ) {
+				$old_paths[] = ai1wm_sites_path( $blog['Old']['BlogID'] );
+				$new_paths[] = ai1wm_sites_path( $blog['New']['BlogID'] );
 			}
 		}
 
